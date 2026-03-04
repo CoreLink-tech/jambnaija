@@ -325,6 +325,7 @@ router.post("/login", async (req, res, next) => {
     }
 
     let activeUser = user;
+    let studentAccess = null;
     if (user.role === "STUDENT") {
       if (supportsDeviceBinding && !payload.deviceId) {
         return res.status(400).json({ message: "Device ID is required for student login." });
@@ -343,8 +344,8 @@ router.post("/login", async (req, res, next) => {
       }
 
       if (supportsAccountAccess) {
-        const access = resolveUserAccess(activeUser);
-        if (!access.canAccess) {
+        studentAccess = resolveUserAccess(activeUser);
+        if (studentAccess.status === "DEACTIVATED") {
           const blocked = activationBlockedResponse(activeUser);
           return res.status(blocked.status).json({
             message: blocked.message,
@@ -362,6 +363,13 @@ router.post("/login", async (req, res, next) => {
     });
 
     return res.json({
+      ...(user.role === "STUDENT" && supportsAccountAccess && studentAccess && !studentAccess.canAccess
+        ? {
+            needsActivation: true,
+            message: "Account locked. Redeem a valid activation code to continue.",
+            access: studentAccess,
+          }
+        : {}),
       token,
       user: serializeUser(activeUser),
     });
@@ -382,18 +390,6 @@ router.get("/me", requireAuth, async (req, res, next) => {
 
     if (!user) {
       return res.status(404).json({ message: "User not found." });
-    }
-
-    if (user.role === "STUDENT" && supportsAccountAccess) {
-      const access = resolveUserAccess(user);
-      if (!access.canAccess) {
-        const blocked = activationBlockedResponse(user);
-        return res.status(blocked.status).json({
-          message: blocked.message,
-          needsActivation: blocked.needsActivation,
-          access: blocked.access,
-        });
-      }
     }
 
     return res.json({ user: serializeUser(user) });

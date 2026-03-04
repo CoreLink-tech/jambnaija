@@ -518,14 +518,7 @@
       if (result.status === 401) {
         clearAuth();
       } else if (result.status === 403 && result.data && result.data.needsActivation) {
-        const pendingEmail = auth.email || "";
-        clearAuth();
-        return {
-          loggedIn: false,
-          role: "student",
-          needsActivation: true,
-          email: pendingEmail
-        };
+        return Object.assign({}, auth, { needsActivation: true });
       }
       return null;
     }
@@ -783,7 +776,6 @@
       return null;
     }
     if (role === "student" && !hasStudentAccess(auth)) {
-      clearAuth();
       window.location.href = buildActivationUrl(auth.email);
       return null;
     }
@@ -826,6 +818,10 @@
         return;
       }
       setAuth(authPayload);
+      if (result && result.data && result.data.needsActivation) {
+        window.location.href = buildActivationUrl(payload.email);
+        return;
+      }
       window.location.href = "student.html";
     });
   }
@@ -919,30 +915,41 @@
   function initActivationPage() {
     const form = document.getElementById("activationForm");
     if (!form) return;
-    const emailInput = document.getElementById("activationEmail");
-    const passwordInput = document.getElementById("activationPassword");
     const codeInput = document.getElementById("activationCode");
+    const referralInput = document.getElementById("activationReferralCode");
     const message = document.getElementById("activationMessage");
+    const status = document.getElementById("activationStatus");
     const getCodeBtn = document.getElementById("getActivationCodeBtn");
-
-    const params = new URLSearchParams(window.location.search || "");
-    const emailFromQuery = String(params.get("email") || "").trim().toLowerCase();
-    if (emailFromQuery && emailInput) {
-      emailInput.value = emailFromQuery;
-    }
     if (getCodeBtn) {
       getCodeBtn.setAttribute("href", getWhatsAppActivationUrl());
+    }
+    const auth = getAuth();
+    const canRedeem = !!(auth && auth.role === "student" && auth.token);
+    if (status && canRedeem) {
+      status.textContent = getStudentAccessMessage(auth);
+    }
+    if (!canRedeem) {
+      if (status) {
+        status.textContent = "Login to your student account first, then redeem activation code.";
+      }
+      if (message) {
+        message.textContent = "Login to your student account first, then redeem activation code.";
+        message.className = "message message-error";
+      }
+      form.querySelectorAll("input, button").forEach((node) => {
+        if (node && node.id !== "getActivationCodeBtn") node.disabled = true;
+      });
+      return;
     }
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const payload = {
-        email: String((emailInput && emailInput.value) || "").trim().toLowerCase(),
-        password: String((passwordInput && passwordInput.value) || ""),
         code: String((codeInput && codeInput.value) || "").trim().toLowerCase(),
+        referralCode: String((referralInput && referralInput.value) || "").trim() || undefined,
         deviceId: getDeviceId()
       };
-      const result = await apiRequest("/api/auth/activate", {
+      const result = await apiRequest("/api/auth/activate/me", {
         method: "POST",
         body: payload
       });
