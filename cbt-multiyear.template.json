@@ -1,0 +1,71 @@
+{
+  "exam": "JAMB",
+  "topic": "General",
+  "years": {
+    "2021": [
+      {
+        "topic": "Algebra",
+        "question": "Replace this with your question text for 2021.",
+        "options": [
+          "Option A",
+          "Option B",
+          "Option C",
+          "Option D"
+        ],
+        "answerIndex": 1
+      }
+    ],
+    "2022": [
+      {
+        "topic": "Algebra",
+        "question": "Replace this with your question text for 2022.",
+        "options": [
+          "Option A",
+          "Option B",
+          "Option C",
+          "Option D"
+        ],
+        "answerIndex": 2
+      }
+    ],
+    "2023": [
+      {
+        "topic": "Algebra",
+        "question": "Replace this with your question text for 2023.",
+        "options": [
+          "Option A",
+          "Option B",
+          "Option C",
+          "Option D"
+        ],
+        "answerIndex": 0
+      }
+    ],
+    "2024": [
+      {
+        "topic": "Algebra",
+        "question": "Replace this with your question text for 2024.",
+        "options": [
+          "Option A",
+          "Option B",
+          "Option C",
+          "Option D"
+        ],
+        "answerIndex": 3
+      }
+    ],
+    "2025": [
+      {
+        "topic": "Algebra",
+        "question": "Replace this with your question text for 2025.",
+        "options": [
+          "Option A",
+          "Option B",
+          "Option C",
+          "Option D"
+        ],
+        "answerIndex": 1
+      }
+    ]
+  }
+}

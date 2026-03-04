@@ -1,0 +1,53 @@
+{
+  "exam": "JAMB",
+  "years": {
+    "2020": [
+      {
+        "topic": "Cell Biology",
+        "question": "Which organelle is known as the powerhouse of the cell?",
+        "options": ["Nucleus", "Mitochondrion", "Ribosome", "Golgi apparatus"],
+        "answerIndex": 1
+      }
+    ],
+    "2021": [
+      {
+        "topic": "Ecology",
+        "question": "The role of decomposers in an ecosystem is to",
+        "options": ["produce food", "break down dead organic matter", "consume only producers", "fix nitrogen directly from air"],
+        "answerIndex": 1
+      }
+    ],
+    "2022": [
+      {
+        "topic": "Genetics",
+        "question": "A cross between two heterozygous tall plants (Tt x Tt) gives a phenotypic ratio of",
+        "options": ["1:1", "3:1", "1:2:1", "9:3:3:1"],
+        "answerIndex": 1
+      }
+    ],
+    "2023": [
+      {
+        "topic": "Nutrition",
+        "question": "The main end product of protein digestion is",
+        "options": ["fatty acids", "glucose", "amino acids", "glycerol"],
+        "answerIndex": 2
+      }
+    ],
+    "2024": [
+      {
+        "topic": "Human Physiology",
+        "question": "Which blood vessel carries oxygenated blood from the lungs to the heart?",
+        "options": ["Pulmonary artery", "Aorta", "Pulmonary vein", "Vena cava"],
+        "answerIndex": 2
+      }
+    ],
+    "2025": [
+      {
+        "topic": "Evolution",
+        "question": "Natural selection was proposed by",
+        "options": ["Gregor Mendel", "Charles Darwin", "Louis Pasteur", "Robert Hooke"],
+        "answerIndex": 1
+      }
+    ]
+  }
+}

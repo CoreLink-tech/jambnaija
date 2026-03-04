@@ -1,0 +1,19 @@
+# Environment secrets
+.env
+backend/.env
+
+# Dependencies
+node_modules/
+backend/node_modules/
+
+# Logs
+backend-start.out.log
+backend-start.err.log
+*.log
+
+# Editor
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

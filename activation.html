@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testify | Activation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="activation">
+  <div class="shell shell-narrow">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">TF</div>
+        <div>
+          <h1>Testify Activation</h1>
+          <p>Redeem your code to unlock your account.</p>
+        </div>
+      </div>
+      <div class="toolbar">
+        <span class="chip"><span class="pulse-dot"></span>Activation</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="card hero tilt">
+        <div class="hero-top">
+          <div>
+            <p>Activation required</p>
+            <div class="score">Redeem Code</div>
+            <p>Enter your account details and activation code.</p>
+          </div>
+          <div class="ring"><span>CODE</span></div>
+        </div>
+      </section>
+
+      <section class="auth-single">
+        <article class="card login-card">
+          <div class="section-head">
+            <h3>Activate Account</h3>
+            <small>Email + password + code</small>
+          </div>
+          <form id="activationForm" class="form-grid" novalidate>
+            <label class="field">
+              <span>Email</span>
+              <input id="activationEmail" type="email" autocomplete="username" required placeholder="you@testify.ng">
+            </label>
+            <label class="field">
+              <span>Password</span>
+              <input id="activationPassword" type="password" autocomplete="current-password" required placeholder="Enter password">
+            </label>
+            <label class="field">
+              <span>Activation code</span>
+              <input id="activationCode" type="text" required placeholder="activate-std-22200001">
+            </label>
+            <button class="btn btn-primary interactive" type="submit">Redeem</button>
+            <p id="activationMessage" class="message" aria-live="polite"></p>
+          </form>
+          <div class="auth-switch">
+            <p>Need a code from admin?</p>
+            <a id="getActivationCodeBtn" class="btn btn-soft interactive" href="#" target="_blank" rel="noopener noreferrer">Get Activation Code</a>
+            <a id="activateNowBtn" class="btn btn-soft interactive" href="#" target="_blank" rel="noopener noreferrer">Activate Now (WhatsApp)</a>
+            <a class="btn btn-soft interactive" href="hi.html">Back to Login</a>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js?v=20260304a"></script>
+</body>
+</html>

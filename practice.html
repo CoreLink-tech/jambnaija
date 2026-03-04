@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testify | Exam Session</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 16px;
+    }
+
+    .practice-nav {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+      display: grid;
+      gap: 8px;
+      padding: 12px;
+    }
+
+    .practice-nav a,
+    .practice-nav button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      padding: 10px 12px;
+      text-align: left;
+      cursor: pointer;
+      font: 700 0.78rem/1.2 "Space Grotesk", sans-serif;
+      letter-spacing: 0.03em;
+      transition: border-color 0.16s ease, background 0.16s ease;
+    }
+
+    .practice-nav .nav-active {
+      border-color: rgba(29, 78, 216, 0.44);
+      background: #eef5ff;
+      color: var(--primary-strong);
+    }
+
+    .practice-main {
+      display: grid;
+      gap: 16px;
+    }
+
+    .setup-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .setup-progress {
+      width: min(280px, 100%);
+    }
+
+    .setup-progress p {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    .setup-progress .bar {
+      height: 10px;
+      border-radius: 999px;
+      background: #e8edf7;
+      overflow: hidden;
+    }
+
+    .setup-progress .bar > span {
+      display: block;
+      height: 100%;
+      width: 33.333%;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+
+    .setup-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .setup-block h4 {
+      margin: 0 0 8px;
+      font: 700 1rem/1.2 "Space Grotesk", sans-serif;
+      color: var(--ink);
+    }
+
+    .setup-block p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    #setupYearButtons {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .year-btn {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--ink);
+      padding: 12px 10px;
+      font: 700 0.86rem/1.1 "Space Grotesk", sans-serif;
+      cursor: pointer;
+      transition: border-color 0.16s ease, background 0.16s ease;
+    }
+
+    .year-btn:hover {
+      border-color: rgba(29, 78, 216, 0.38);
+      background: #f7fbff;
+    }
+
+    .year-btn-active {
+      border-color: rgba(29, 78, 216, 0.62);
+      background: #eef5ff;
+      color: var(--primary-strong);
+    }
+
+    .setup-controls {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .setup-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .session-info {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .session-info .mini {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 10px;
+    }
+
+    .session-info .mini small {
+      display: block;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.66rem;
+      font-weight: 800;
+    }
+
+    .session-info .mini strong {
+      display: block;
+      margin-top: 4px;
+      font: 700 0.92rem/1.2 "Space Grotesk", sans-serif;
+      color: var(--primary-strong);
+    }
+
+    .quiz-shell {
+      display: grid;
+      gap: 10px;
+    }
+
+    @media (max-width: 1040px) {
+      .practice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .practice-nav {
+        position: static;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      #setupYearButtons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .setup-controls,
+      .setup-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .practice-nav {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body data-page="practice">
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">TF</div>
+        <div>
+          <h1 id="practiceHeading">Testify Session Setup</h1>
+          <p id="practiceSubtitle">Customize your setup before launching the exam.</p>
+        </div>
+      </div>
+      <div class="toolbar">
+        <span id="practiceModeTag" class="chip">Mode: Study</span>
+        <span id="quizTimer" class="chip">00:00</span>
+        <button id="submitExamTopBtn" class="btn btn-primary hidden" type="button">Submit Exam</button>
+      </div>
+    </header>
+
+    <main class="practice-grid">
+      <aside class="card practice-nav">
+        <a href="student.html" class="nav-active"><span class="material-symbols-outlined">dashboard</span>Dashboard</a>
+        <a href="practice.html?mode=study"><span class="material-symbols-outlined">auto_stories</span>Study Mode</a>
+        <a href="practice.html?mode=cbt"><span class="material-symbols-outlined">assignment</span>CBT Mode</a>
+        <a href="result.html"><span class="material-symbols-outlined">bar_chart</span>Results</a>
+        <button id="practiceBackBtn" type="button"><span class="material-symbols-outlined">arrow_back</span>Back</button>
+        <button id="practiceLogoutBtn" type="button"><span class="material-symbols-outlined">logout</span>Logout</button>
+        <div class="session-info">
+          <div class="mini"><small>Session</small><strong id="setupSelectedCount">0/4 Selected</strong></div>
+          <div class="mini"><small>Status</small><strong>Ready to Configure</strong></div>
+        </div>
+      </aside>
+
+      <div class="practice-main">
+        <section id="setupCard" class="card interactive">
+          <div class="setup-head">
+            <div>
+              <h3 style="margin:0; font:700 1.2rem/1.2 'Space Grotesk',sans-serif;">Exam Setup</h3>
+              <p style="margin:6px 0 0; color:var(--muted); font-size:0.82rem;">Configure year, subjects, and timing. Then start your session.</p>
+            </div>
+            <div class="setup-progress">
+              <p>Step 1 of 3</p>
+              <div class="bar"><span></span></div>
+            </div>
+          </div>
+
+          <div class="setup-stack">
+            <div id="setupYearSection" class="setup-block hidden">
+              <h4>Select Exam Year</h4>
+              <div id="setupYearButtons"></div>
+            </div>
+
+            <div class="setup-block">
+              <h4>Select Subjects (up to 4)</h4>
+              <div id="setupSubjectChecks" class="subject-check-grid"></div>
+            </div>
+
+            <div class="setup-controls">
+              <label class="field">
+                <span id="setupCountLabel">Questions per subject (1-100)</span>
+                <input id="setupQuestionPerSubject" type="number" min="1" max="100" value="20">
+              </label>
+              <label class="field">
+                <span id="setupTimeLabel">Total exam time (minutes, 10-240)</span>
+                <input id="setupTotalMinutes" type="number" min="10" max="240" value="60">
+              </label>
+            </div>
+
+            <div class="setup-actions">
+              <button id="endQuizBtn" class="btn btn-soft interactive" type="button">Back to Setup</button>
+              <button id="beginPracticeBtn" class="btn btn-primary interactive" type="button">Start Exam</button>
+            </div>
+
+            <p id="setupMessage" class="message" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="card interactive">
+          <div class="section-head">
+            <h3>Live Exam Panel</h3>
+            <small>Step 3</small>
+          </div>
+
+          <div id="quizEmpty" class="empty-state">Select your setup and click <strong>Start Exam</strong>.</div>
+
+          <div id="quizPanel" class="quiz-shell hidden">
+            <p class="quiz-meta"><span id="quizSubject"></span><span id="quizProgress"></span></p>
+            <p id="quizYear" class="quiz-year"></p>
+            <h4 id="quizQuestion" class="quiz-question"></h4>
+            <div id="quizOptions" class="option-list"></div>
+            <p id="quizFeedback" class="message" aria-live="polite"></p>
+            <div class="button-row button-row-inline">
+              <button id="prevQuestionBtn" class="btn btn-soft" type="button">Previous</button>
+              <button id="nextQuestionBtn" class="btn btn-primary" type="button">Next Question</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <nav id="questionNavBar" class="question-nav hidden" aria-label="Question navigation"></nav>
+
+  <script src="app.js?v=20260304a"></script>
+</body>
+</html>
+
+

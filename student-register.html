@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExamForge | Student Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="student-register">
+  <div class="shell shell-narrow">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">TF</div>
+        <div>
+          <h1>ExamForge Student Register</h1>
+          <p>Create your student account to begin JAMB prep.</p>
+        </div>
+      </div>
+      <div class="toolbar">
+        <span class="chip"><span class="pulse-dot"></span>Student Signup</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="card hero tilt">
+        <div class="hero-top">
+          <div>
+            <p>Get started</p>
+            <div class="score">Create Student Account</div>
+            <p>Use username, email and password.</p>
+          </div>
+          <div class="ring"><span>TF</span></div>
+        </div>
+      </section>
+
+      <section class="auth-single">
+        <article class="card login-card">
+          <div class="section-head">
+            <h3>Student Registration</h3>
+            <small>Username + email + password</small>
+          </div>
+          <form id="studentRegisterForm" class="form-grid" novalidate>
+            <label class="field">
+              <span>Username</span>
+              <input id="studentRegisterUsername" type="text" autocomplete="username" required placeholder="e.g. chidi_01">
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input id="studentRegisterEmail" type="email" autocomplete="email" required placeholder="new@student.ng">
+            </label>
+            <label class="field">
+              <span>Password</span>
+              <input id="studentRegisterPassword" type="password" autocomplete="new-password" required placeholder="At least 6 characters">
+            </label>
+            <p class="note no-top">Each device can register only one account. New accounts get 3 days premium trial, then activation is required.</p>
+            <button class="btn btn-primary interactive" type="submit">Create Account</button>
+            <p id="studentRegisterMessage" class="message" aria-live="polite"></p>
+          </form>
+          <div class="auth-switch">
+            <p>Already have an account?</p>
+            <a class="btn btn-soft interactive" href="hi.html">Back to Login</a>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js?v=20260304a"></script>
+</body>
+</html>
+
+

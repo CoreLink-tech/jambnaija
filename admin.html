@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testify | Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="admin">
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">TF</div>
+        <div>
+          <h1>Testify Admin</h1>
+          <p>Manage subjects, question sets, and student preparation content.</p>
+        </div>
+      </div>
+      <div class="toolbar">
+        <span class="chip"><span class="pulse-dot"></span>Admin Session</span>
+        <button id="logoutBtn" class="btn btn-soft interactive" type="button">Logout</button>
+      </div>
+    </header>
+
+    <main class="layout-page">
+      <section class="card hero interactive">
+        <div class="hero-top">
+          <div>
+            <p>Dashboard</p>
+            <div class="score">Subject Management</div>
+            <p>Everything here updates the student panel automatically.</p>
+          </div>
+          <div class="ring"><span>OPS</span></div>
+        </div>
+        <div class="hero-grid">
+          <div>
+            <small>Total subjects</small>
+            <strong id="kpiSubjects" data-count-to="0">0</strong>
+          </div>
+          <div>
+            <small>Total questions</small>
+            <strong id="kpiQuestions" data-count-to="0">0</strong>
+          </div>
+          <div>
+            <small>Updated today</small>
+            <strong id="kpiUpdated" data-count-to="0">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <div class="admin-grid">
+        <section class="card interactive">
+          <div class="section-head">
+            <h3>Create Subject</h3>
+            <small>Step 1</small>
+          </div>
+          <form id="adminSubjectForm" class="form-grid" novalidate>
+            <label class="field">
+              <span>Subject name</span>
+              <input id="adminSubjectName" type="text" required placeholder="e.g. Physics">
+            </label>
+            <label class="field">
+              <span>Description</span>
+              <textarea id="adminSubjectDescription" rows="3" required placeholder="Brief description for students"></textarea>
+            </label>
+            <button class="btn btn-primary interactive" type="submit">Create Subject</button>
+            <p id="adminSubjectMessage" class="message" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="card interactive">
+          <div class="section-head">
+            <h3>Create Topic</h3>
+            <small>Step 2</small>
+          </div>
+          <form id="topicForm" class="form-grid" novalidate>
+            <label class="field">
+              <span>Subject</span>
+              <select id="topicSubjectSelect"></select>
+            </label>
+            <label class="field">
+              <span>Topic name</span>
+              <input id="topicName" type="text" required placeholder="e.g. Genetics">
+            </label>
+            <button class="btn btn-primary interactive" type="submit">Add Topic</button>
+            <p id="topicMessage" class="message" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="card interactive">
+          <div class="section-head">
+            <h3>Add Study Question</h3>
+            <small>Step 3A</small>
+          </div>
+          <form id="studyQuestionForm" class="form-grid" novalidate>
+            <label class="field">
+              <span>Subject</span>
+              <select id="studySubjectSelect"></select>
+            </label>
+            <label class="field">
+              <span>Topic</span>
+              <select id="studyTopicSelect"></select>
+            </label>
+            <label class="field">
+              <span>Question</span>
+              <textarea id="studyQuestionText" rows="3" required placeholder="Enter study question"></textarea>
+            </label>
+            <label class="field">
+              <span>Option A</span>
+              <input id="studyOptionA" type="text" required>
+            </label>
+            <label class="field">
+              <span>Option B</span>
+              <input id="studyOptionB" type="text" required>
+            </label>
+            <label class="field">
+              <span>Option C</span>
+              <input id="studyOptionC" type="text" required>
+            </label>
+            <label class="field">
+              <span>Option D</span>
+              <input id="studyOptionD" type="text" required>
+            </label>
+            <label class="field">
+              <span>Correct option</span>
+              <select id="studyAnswerIndex">
+                <option value="0">Option A</option>
+                <option value="1">Option B</option>
+                <option value="2">Option C</option>
+                <option value="3">Option D</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Explanation</span>
+              <textarea id="studyExplanation" rows="3" required placeholder="Simple, detailed explanation"></textarea>
+            </label>
+            <button class="btn btn-primary interactive" type="submit">Save Study Question</button>
+            <p id="studyQuestionMessage" class="message" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="card interactive">
+          <div class="section-head">
+            <h3>Add JAMB Question</h3>
+            <small>Step 3B</small>
+          </div>
+          <form id="jambQuestionForm" class="form-grid" novalidate>
+            <label class="field">
+              <span>Subject</span>
+              <select id="jambSubjectSelect"></select>
+            </label>
+            <label class="field">
+              <span>Topic</span>
+              <input id="jambTopic" type="text" required placeholder="e.g. Ecology">
+            </label>
+            <label class="field">
+              <span>Year</span>
+              <input id="jambYear" type="number" min="1980" max="2100" required placeholder="2023">
+            </label>
+            <label class="field">
+              <span>Exam</span>
+              <input id="jambExam" type="text" value="JAMB">
+            </label>
+            <label class="field">
+              <span>Question</span>
+              <textarea id="jambQuestionText" rows="3" required placeholder="Enter CBT question"></textarea>
+            </label>
+            <label class="field">
+              <span>Option A</span>
+              <input id="jambOptionA" type="text" required>
+            </label>
+            <label class="field">
+              <span>Option B</span>
+              <input id="jambOptionB" type="text" required>
+            </label>
+            <label class="field">
+              <span>Option C</span>
+              <input id="jambOptionC" type="text" required>
+            </label>
+            <label class="field">
+              <span>Option D</span>
+              <input id="jambOptionD" type="text" required>
+            </label>
+            <label class="field">
+              <span>Correct option</span>
+              <select id="jambAnswerIndex">
+                <option value="0">Option A</option>
+                <option value="1">Option B</option>
+                <option value="2">Option C</option>
+                <option value="3">Option D</option>
+              </select>
+            </label>
+            <button class="btn btn-primary interactive" type="submit">Save JAMB Question</button>
+            <p id="jambQuestionMessage" class="message" aria-live="polite"></p>
+          </form>
+        </section>
+      </div>
+
+      <section class="card interactive">
+        <div class="section-head">
+          <h3>Activation Codes</h3>
+          <small>Generate + track</small>
+        </div>
+        <form id="activationCodeForm" class="form-grid" novalidate>
+          <label class="field">
+            <span>Package</span>
+            <select id="activationCodeTier">
+              <option value="STANDARD">Standard (CBT only)</option>
+              <option value="PREMIUM">Premium (Full access)</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>How many codes?</span>
+            <input id="activationCodeCount" type="number" min="1" max="200" value="1">
+          </label>
+          <button class="btn btn-primary interactive" type="submit">Generate Code(s)</button>
+          <p id="activationCodeMessage" class="message" aria-live="polite"></p>
+        </form>
+        <div class="table-wrap" style="margin-top:12px;">
+          <table>
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Package</th>
+                <th>Status</th>
+                <th>Used By</th>
+                <th>Created At</th>
+                <th>Used At</th>
+              </tr>
+            </thead>
+            <tbody id="activationCodeTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card interactive">
+        <div class="section-head">
+          <h3>User Access Control</h3>
+          <small>Search + manage</small>
+        </div>
+        <form id="adminUserSearchForm" class="form-grid" novalidate>
+          <label class="field">
+            <span>Search users (username or email)</span>
+            <input id="adminUserSearchQuery" type="search" placeholder="e.g. chidi or student@email.com">
+          </label>
+          <button class="btn btn-primary interactive" type="submit">Search Users</button>
+          <p id="adminUserSearchMessage" class="message" aria-live="polite"></p>
+        </form>
+        <div class="table-wrap" style="margin-top:12px;">
+          <table>
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Tier</th>
+                <th>Device</th>
+                <th>Trial Ends</th>
+                <th>Created</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="adminUserTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card interactive">
+        <div class="section-head">
+          <h3>Bulk Upload</h3>
+          <small>Separated by mode</small>
+        </div>
+        <div class="form-grid">
+          <div class="demo-box">
+            <p><strong>Bulk Study Questions</strong></p>
+            <p class="note no-top">JSON array format: question/options/answerIndex/topic/explanation</p>
+            <label class="field">
+              <span>Subject</span>
+              <select id="bulkStudySubjectSelect"></select>
+            </label>
+            <label class="field">
+              <span>Study questions JSON file</span>
+              <input id="bulkStudyFile" type="file" accept="application/json">
+            </label>
+            <button id="bulkStudyImportBtn" class="btn btn-primary interactive" type="button">Import Study Questions</button>
+            <p id="bulkStudyMessage" class="message" aria-live="polite"></p>
+          </div>
+
+          <div class="demo-box">
+            <p><strong>Bulk CBT Questions</strong></p>
+            <p class="note no-top">Upload one JSON for many years (e.g. 2020-2025). Supports: [{"year":2020,"questions":[...]}] and {"exam":"JAMB","years":{"2020":[...],"2021":[...]}}</p>
+            <label class="field">
+              <span>Subject</span>
+              <select id="bulkCbtSubjectSelect"></select>
+            </label>
+            <label class="field">
+              <span>CBT questions JSON file</span>
+              <input id="bulkCbtFile" type="file" accept="application/json">
+            </label>
+            <button id="bulkCbtImportBtn" class="btn btn-primary interactive" type="button">Import CBT Questions</button>
+            <p id="bulkCbtMessage" class="message" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card interactive">
+        <div class="section-head">
+          <h3>Delete Controls</h3>
+          <small>Separate actions</small>
+        </div>
+        <div class="button-row">
+          <button id="clearSubjectsBtn" class="btn btn-soft interactive" type="button">Delete All Subjects</button>
+          <button id="clearTopicsBtn" class="btn btn-soft interactive" type="button">Delete All Topics</button>
+          <button id="clearStudyQuestionsBtn" class="btn btn-soft interactive" type="button">Delete All Study Questions</button>
+          <button id="clearCbtQuestionsBtn" class="btn btn-soft interactive" type="button">Delete All CBT Questions</button>
+          <button id="clearBatchQuestionsBtn" class="btn btn-soft interactive" type="button">Delete All Batch Questions</button>
+          <button id="clearBatchLogBtn" class="btn btn-soft interactive" type="button">Clear Batch Log Only</button>
+        </div>
+        <p id="adminCleanupMessage" class="message" aria-live="polite"></p>
+      </section>
+
+      <section class="card interactive">
+        <div class="section-head">
+          <h3>JSON Upload Batches</h3>
+          <small>Track + delete</small>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Subject</th>
+                <th>Count</th>
+                <th>File</th>
+                <th>Uploaded At</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="batchTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card interactive">
+        <div class="section-head">
+          <h3>Current Subjects</h3>
+          <small>Live data store</small>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Topics</th>
+                <th>Study Questions</th>
+                <th>CBT Questions</th>
+                <th>Last Updated</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="subjectTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js?v=20260304a"></script>
+</body>
+</html>
+
+
+

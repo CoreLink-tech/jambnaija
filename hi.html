@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testify | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="login">
+  <div class="shell shell-narrow">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">TF</div>
+        <div>
+          <h1>Testify</h1>
+          <p>JAMB prep platform for secondary school students in Nigeria</p>
+        </div>
+      </div>
+      <div class="toolbar">
+        <span class="chip"><span class="pulse-dot"></span>Student Access</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="card hero tilt">
+        <div class="hero-top">
+          <div>
+            <p>Welcome back</p>
+            <div class="score">Login to continue</div>
+            <p>Student authentication only.</p>
+          </div>
+          <div class="ring"><span>TF</span></div>
+        </div>
+      </section>
+
+      <section class="auth-single">
+        <article class="card login-card">
+          <div class="section-head">
+            <h3>Student Login</h3>
+            <small>Email + password</small>
+          </div>
+          <form id="loginForm" class="form-grid" novalidate>
+            <label class="field">
+              <span>Email</span>
+              <input id="loginEmail" type="email" autocomplete="username" required placeholder="you@Testify.ng">
+            </label>
+            <label class="field">
+              <span>Password</span>
+              <input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Enter password">
+            </label>
+            <button class="btn btn-primary interactive" type="submit">Login</button>
+            <p id="loginMessage" class="message" aria-live="polite"></p>
+          </form>
+          <div class="auth-switch">
+            <p>New user?</p>
+            <a class="btn btn-soft interactive" href="student-register.html">Create Account</a>
+            <a class="btn btn-soft interactive" href="activation.html">Activate Account</a>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js?v=20260304a"></script>
+</body>
+</html>
+
+
+

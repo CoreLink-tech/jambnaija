@@ -1,0 +1,130 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "binary"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  STUDENT
+  ADMIN
+}
+
+enum AccountStatus {
+  PENDING
+  ACTIVE
+  DEACTIVATED
+}
+
+enum PlanTier {
+  STANDARD
+  PREMIUM
+}
+
+enum QuestionMode {
+  STUDY
+  CBT
+}
+
+model User {
+  id                       String           @id @default(cuid())
+  email                    String           @unique
+  username                 String?          @unique
+  passwordHash             String
+  role                     Role             @default(STUDENT)
+  status                   AccountStatus    @default(PENDING)
+  planTier                 PlanTier?
+  trialPremiumEndsAt       DateTime?
+  deviceId                 String?          @unique
+  attempts                 Attempt[]
+  generatedActivationCodes ActivationCode[] @relation("ActivationCodeCreatedBy")
+  redeemedActivationCodes  ActivationCode[] @relation("ActivationCodeUsedBy")
+  createdAt                DateTime         @default(now())
+  updatedAt                DateTime         @updatedAt
+}
+
+model ActivationCode {
+  id          Int       @id @default(autoincrement())
+  code        String    @unique
+  tier        PlanTier
+  isActive    Boolean   @default(true)
+  createdById String?
+  usedById    String?
+  createdBy   User?     @relation("ActivationCodeCreatedBy", fields: [createdById], references: [id], onDelete: SetNull)
+  usedBy      User?     @relation("ActivationCodeUsedBy", fields: [usedById], references: [id], onDelete: SetNull)
+  createdAt   DateTime  @default(now())
+  usedAt      DateTime?
+
+  @@index([tier, isActive, createdAt])
+  @@index([usedById])
+  @@index([createdById])
+}
+
+model Subject {
+  id          String     @id @default(cuid())
+  name        String     @unique
+  description String
+  topics      Topic[]
+  questions   Question[]
+  attempts    Attempt[]
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+}
+
+model Topic {
+  id        String     @id @default(cuid())
+  subjectId String
+  name      String
+  subject   Subject    @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  questions Question[]
+  createdAt DateTime   @default(now())
+
+  @@unique([subjectId, name])
+  @@index([subjectId])
+}
+
+model Question {
+  id          String       @id @default(cuid())
+  subjectId   String
+  topicId     String?
+  mode        QuestionMode
+  prompt      String
+  options     Json
+  answerIndex Int
+  explanation String?
+  year        Int?
+  exam        String?
+  subject     Subject      @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  topic       Topic?       @relation(fields: [topicId], references: [id], onDelete: SetNull)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@index([subjectId, mode])
+  @@index([mode, year, exam])
+  @@index([topicId])
+}
+
+model Attempt {
+  id        String       @id @default(cuid())
+  userId    String
+  subjectId String
+  mode      QuestionMode
+  focusLabel String?
+  score     Int
+  total     Int
+  percent   Int
+  user      User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subject   Subject      @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  createdAt DateTime     @default(now())
+
+  @@index([userId, createdAt])
+  @@index([subjectId, createdAt])
+}
