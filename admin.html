@@ -153,8 +153,8 @@
               <select id="jambSubjectSelect"></select>
             </label>
             <label class="field">
-              <span>Topic</span>
-              <input id="jambTopic" type="text" required placeholder="e.g. Ecology">
+              <span>Topic (optional)</span>
+              <input id="jambTopic" type="text" placeholder="Optional for CBT">
             </label>
             <label class="field">
               <span>Year</span>
@@ -278,12 +278,12 @@
       <section class="card interactive">
         <div class="section-head">
           <h3>Bulk Upload</h3>
-          <small>Separated by mode</small>
+          <small>Bulk create + import</small>
         </div>
         <div class="form-grid">
           <div class="demo-box">
-            <p><strong>Bulk Subjects (Study + CBT)</strong></p>
-            <p class="note no-top">Upload JSON array of subjects. Each item should include: name, description, optional topics[], optional questions[].</p>
+            <p><strong>Bulk Subjects</strong></p>
+            <p class="note no-top">Upload JSON array of subjects. Each item must include only: name and description.</p>
             <label class="field">
               <span>Subjects JSON file</span>
               <input id="bulkSubjectFile" type="file" accept="application/json">
@@ -323,8 +323,8 @@
           </div>
 
           <div class="demo-box">
-            <p><strong>Bulk CBT Topics</strong></p>
-            <p class="note no-top">Pick subject, then upload JSON topics. Supports: ["topic 1","topic 2"] or {"topics":["topic 1","topic 2"]}.</p>
+            <p><strong>Bulk Study Topics</strong></p>
+            <p class="note no-top">Pick subject, then upload study-mode topics. Supports: ["topic 1","topic 2"] or {"topics":["topic 1","topic 2"]}.</p>
             <label class="field">
               <span>Subject</span>
               <select id="bulkTopicSubjectSelect"></select>
@@ -333,7 +333,7 @@
               <span>Topics JSON file</span>
               <input id="bulkTopicFile" type="file" accept="application/json">
             </label>
-            <button id="bulkTopicImportBtn" class="btn btn-primary interactive" type="button">Import CBT Topics</button>
+            <button id="bulkTopicImportBtn" class="btn btn-primary interactive" type="button">Import Study Topics</button>
             <p id="bulkTopicMessage" class="message" aria-live="polite"></p>
           </div>
         </div>

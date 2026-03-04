@@ -439,7 +439,9 @@
       : [];
     const mode = backendModeValue(question && question.mode);
     const topicId = safeText(question && question.topicId).trim();
-    const topic = topicNameById[topicId] || (mode === MODE_STUDY ? "General" : "");
+    const topic = mode === MODE_STUDY
+      ? (topicNameById[topicId] || "General")
+      : "";
     const normalized = normalizeQuestion({
       id: safeText(question && question.id).trim(),
       question: safeText(question && question.prompt).trim(),
@@ -477,6 +479,7 @@
 
     questions.forEach((question) => {
       if (!question.topic) return;
+      if (questionMode(question) !== MODE_STUDY) return;
       const exists = topics.some((item) => item.toLowerCase() === question.topic.toLowerCase());
       if (!exists) topics.push(question.topic);
     });
@@ -1219,7 +1222,6 @@
       return { mode: MODE_STUDY, payload, question };
     }
 
-    payload.topicName = question.topic || undefined;
     payload.year = Number(question.year);
     payload.exam = question.exam || "JAMB";
     return { mode: MODE_CBT, payload, question };
@@ -1312,7 +1314,12 @@
     let skipped = 0;
 
     rows.forEach((raw) => {
-      const subject = normalizeSubject(raw);
+      const subject = normalizeSubject({
+        name: raw && raw.name,
+        description: raw && raw.description,
+        topics: [],
+        questions: []
+      });
       if (!subject) {
         skipped += 1;
         return;
@@ -1612,6 +1619,7 @@
     subject.questions = (subject.questions || []).concat(validQuestions);
     validQuestions.forEach((question) => {
       if (!question.topic) return;
+      if (questionMode(question) !== MODE_STUDY) return;
       const exists = (subject.topics || []).some((item) => item.toLowerCase() === question.topic.toLowerCase());
       if (!exists) {
         subject.topics = (subject.topics || []).concat(question.topic);
@@ -2651,6 +2659,7 @@
   }
 
   function subjectTopics(subject, mode) {
+    if (mode !== MODE_STUDY) return [];
     const seen = new Set();
     const list = [];
     function push(value) {
@@ -2662,8 +2671,8 @@
       list.push(topic);
     }
 
-    if (mode === MODE_STUDY) (subject.topics || []).forEach(push);
-    subjectQuestionsByMode(subject, mode).forEach((q) => push(q.topic));
+    (subject.topics || []).forEach(push);
+    subjectQuestionsByMode(subject, MODE_STUDY).forEach((q) => push(q.topic));
     return list;
   }
 

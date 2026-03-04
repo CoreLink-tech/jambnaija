@@ -273,8 +273,6 @@ router.post("/subjects/bulk", async (req, res, next) => {
       : [req.body];
 
     let addedSubjects = 0;
-    let addedTopics = 0;
-    let addedQuestions = 0;
     let skipped = 0;
 
     for (const rawSubject of input) {
@@ -297,35 +295,11 @@ router.post("/subjects/bulk", async (req, res, next) => {
         skipped += 1;
         continue;
       }
-
-      const topics = Array.isArray(rawSubject.topics) ? rawSubject.topics : [];
-      for (const topicName of topics) {
-        try {
-          await resolveTopic(createdSubject.id, undefined, String(topicName || "").trim());
-          addedTopics += 1;
-        } catch (error) {
-          skipped += 1;
-        }
-      }
-
-      const questions = Array.isArray(rawSubject.questions) ? rawSubject.questions : [];
-      for (const question of questions) {
-        try {
-          if (String(question?.mode || "").toUpperCase() === "CBT" || Number.isInteger(Number(question?.year))) {
-            await createCbtQuestion({ ...question, subjectId: createdSubject.id });
-          } else {
-            await createStudyQuestion({ ...question, subjectId: createdSubject.id });
-          }
-          addedQuestions += 1;
-        } catch (error) {
-          skipped += 1;
-        }
-      }
     }
 
     return res.status(201).json({
-      message: "Bulk subject import completed.",
-      stats: { addedSubjects, addedTopics, addedQuestions, skipped },
+      message: "Bulk subject creation completed.",
+      stats: { addedSubjects, skipped },
     });
   } catch (error) {
     return next(error);
