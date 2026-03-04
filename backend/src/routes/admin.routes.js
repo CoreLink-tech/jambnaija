@@ -24,7 +24,7 @@ const supportsActivationSystem = supportsAccountAccess && supportsDeviceBinding 
 
 const subjectSchema = z.object({
   name: z.string().trim().min(2),
-  description: z.string().trim().min(5),
+  description: z.string().trim().min(1),
 });
 
 const topicSchema = z.object({

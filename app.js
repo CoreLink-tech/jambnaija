@@ -1275,37 +1275,104 @@
   }
 
   function parseSubjectBulkPayload(rawParsed) {
-    if (Array.isArray(rawParsed)) return rawParsed;
-    if (rawParsed && typeof rawParsed === "object") {
-      if (Array.isArray(rawParsed.subjects)) return rawParsed.subjects;
-      if (Array.isArray(rawParsed.items)) return rawParsed.items;
-      if (Array.isArray(rawParsed.data)) return rawParsed.data;
-      return [rawParsed];
+    function extract(value) {
+      if (Array.isArray(value)) return value;
+      if (!value || typeof value !== "object") return [];
+
+      const directLists = [value.subjects, value.items, value.data, value.payload, value.rows, value.list];
+      for (const item of directLists) {
+        if (Array.isArray(item)) return item;
+      }
+
+      const namedMap = value.bySubject || value.subjectMap;
+      if (namedMap && typeof namedMap === "object") {
+        return Object.keys(namedMap).map((name) => {
+          const row = namedMap[name];
+          return Object.assign({}, row || {}, { name });
+        });
+      }
+
+      for (const key of ["data", "payload", "result"]) {
+        const nested = value[key];
+        if (nested && nested !== value) {
+          const rows = extract(nested);
+          if (rows.length) return rows;
+        }
+      }
+      return [value];
     }
-    return [];
+    return extract(rawParsed);
+  }
+
+  function normalizeBulkSubjectRow(raw) {
+    if (!raw || typeof raw !== "object") return null;
+    const name = safeText(raw.name || raw.subject || raw.subjectName || raw.title).trim();
+    const fallbackDesc = name ? (name + " subject preparation") : "";
+    const description = safeText(raw.description || raw.desc || raw.details || raw.summary || fallbackDesc).trim();
+    return normalizeSubject({
+      name,
+      description,
+      topics: [],
+      questions: []
+    });
+  }
+
+  function prepareBulkSubjectRows(rawSubjects) {
+    const rows = parseSubjectBulkPayload(rawSubjects);
+    if (!rows.length) return [];
+    const list = [];
+    const seen = new Set();
+    rows.forEach((item) => {
+      const normalized = normalizeBulkSubjectRow(item);
+      if (!normalized) return;
+      const key = normalized.name.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+      list.push({
+        name: normalized.name,
+        description: normalized.description
+      });
+    });
+    return list;
   }
 
   async function addSubjectsBulk(rawSubjects) {
-    const rows = parseSubjectBulkPayload(rawSubjects);
+    const rows = prepareBulkSubjectRows(rawSubjects);
     if (!rows.length) return { added: 0, skipped: 0 };
 
     if (hasAdminApiSession()) {
-      const result = await apiRequest("/api/admin/subjects/bulk", {
+      const primary = await apiRequest("/api/admin/subjects/bulk", {
         method: "POST",
-        body: {
-          subjects: rows
-        }
+        body: { subjects: rows }
       });
-      if (!result.ok) {
-        throw new Error(result.message || "Subject bulk import failed.");
+
+      if (primary.ok) {
+        const stats = primary && primary.data && primary.data.stats ? primary.data.stats : {};
+        const addedRaw = Number(stats.addedSubjects);
+        const skippedRaw = Number(stats.skipped);
+        const added = Number.isFinite(addedRaw) ? addedRaw : 0;
+        const skipped = Number.isFinite(skippedRaw) ? skippedRaw : Math.max(rows.length - added, 0);
+        if (added > 0) await syncSubjectsFromBackend();
+        return { added, skipped };
       }
-      const stats = result && result.data && result.data.stats ? result.data.stats : {};
-      const addedRaw = Number(stats.addedSubjects);
-      const skippedRaw = Number(stats.skipped);
-      const added = Number.isFinite(addedRaw) ? addedRaw : 0;
-      const skipped = Number.isFinite(skippedRaw) ? skippedRaw : Math.max(rows.length - added, 0);
-      if (added > 0) await syncSubjectsFromBackend();
-      return { added, skipped };
+
+      // Fallback for servers that don't have /subjects/bulk yet.
+      let added = 0;
+      let skipped = 0;
+      for (const row of rows) {
+        // eslint-disable-next-line no-await-in-loop
+        const one = await apiRequest("/api/admin/subjects", {
+          method: "POST",
+          body: row
+        });
+        if (one.ok) added += 1;
+        else skipped += 1;
+      }
+      if (added > 0) {
+        await syncSubjectsFromBackend();
+        return { added, skipped };
+      }
+      throw new Error(primary.message || "Subject bulk import failed.");
     }
 
     const current = getSubjects();
@@ -1313,10 +1380,10 @@
     let added = 0;
     let skipped = 0;
 
-    rows.forEach((raw) => {
+    rows.forEach((row) => {
       const subject = normalizeSubject({
-        name: raw && raw.name,
-        description: raw && raw.description,
+        name: row.name,
+        description: row.description,
         topics: [],
         questions: []
       });
@@ -1339,18 +1406,22 @@
   }
 
   function parseTopicBulkPayload(rawParsed) {
-    let source = [];
-    if (Array.isArray(rawParsed)) {
-      source = rawParsed;
-    } else if (rawParsed && typeof rawParsed === "object") {
-      if (Array.isArray(rawParsed.topics)) source = rawParsed.topics;
-      else if (Array.isArray(rawParsed.items)) source = rawParsed.items;
-      else if (Array.isArray(rawParsed.data)) source = rawParsed.data;
-      else source = [rawParsed];
-    } else if (typeof rawParsed === "string") {
-      source = [rawParsed];
+    function extract(value) {
+      if (Array.isArray(value)) return value;
+      if (typeof value === "string") return [value];
+      if (!value || typeof value !== "object") return [];
+      if (Array.isArray(value.topics)) return value.topics;
+      if (Array.isArray(value.items)) return value.items;
+      if (Array.isArray(value.data)) return value.data;
+      if (Array.isArray(value.payload)) return value.payload;
+      if (value.data && value.data !== value) {
+        const nested = extract(value.data);
+        if (nested.length) return nested;
+      }
+      return [value];
     }
 
+    const source = extract(rawParsed);
     const topics = [];
     const seen = new Set();
     source.forEach((item) => {
@@ -1374,23 +1445,44 @@
     if (!subjectId || !rows.length) return { added: 0, skipped: 0 };
 
     if (hasAdminApiSession()) {
-      const result = await apiRequest("/api/admin/topics/bulk", {
+      const primary = await apiRequest("/api/admin/topics/bulk", {
         method: "POST",
         body: {
           subjectId,
           topics: rows
         }
       });
-      if (!result.ok) {
-        throw new Error(result.message || "Could not import topics.");
+
+      if (primary.ok) {
+        const stats = primary && primary.data && primary.data.stats ? primary.data.stats : {};
+        const addedRaw = Number(stats.added);
+        const skippedRaw = Number(stats.skipped);
+        const added = Number.isFinite(addedRaw) ? addedRaw : 0;
+        const skipped = Number.isFinite(skippedRaw) ? skippedRaw : Math.max(rows.length - added, 0);
+        if (added > 0) await syncSubjectsFromBackend();
+        return { added, skipped };
       }
-      const stats = result && result.data && result.data.stats ? result.data.stats : {};
-      const addedRaw = Number(stats.added);
-      const skippedRaw = Number(stats.skipped);
-      const added = Number.isFinite(addedRaw) ? addedRaw : 0;
-      const skipped = Number.isFinite(skippedRaw) ? skippedRaw : Math.max(rows.length - added, 0);
-      if (added > 0) await syncSubjectsFromBackend();
-      return { added, skipped };
+
+      // Fallback for servers that don't have /topics/bulk yet.
+      let added = 0;
+      let skipped = 0;
+      for (const topicName of rows) {
+        // eslint-disable-next-line no-await-in-loop
+        const one = await apiRequest("/api/admin/topics", {
+          method: "POST",
+          body: {
+            subjectId,
+            name: topicName
+          }
+        });
+        if (one.ok) added += 1;
+        else skipped += 1;
+      }
+      if (added > 0) {
+        await syncSubjectsFromBackend();
+        return { added, skipped };
+      }
+      throw new Error(primary.message || "Could not import topics.");
     }
 
     const subjects = getSubjects();
@@ -2197,11 +2289,15 @@
           try {
             const parsed = JSON.parse(String(reader.result || ""));
             const result = await addSubjectsBulk(parsed);
-            if (!result.added) {
-              throw new Error("No new subjects were added. Check file format and duplicate names.");
-            }
             renderAdminTable();
             refreshAdminSelectors();
+            if (!result.added) {
+              bulkSubjectMessage.textContent = result.skipped
+                ? ("No new subjects were added. Skipped " + result.skipped + " invalid/duplicate item(s).")
+                : "No subject row was found in this JSON file.";
+              bulkSubjectMessage.className = "message message-error";
+              return;
+            }
             bulkSubjectMessage.textContent = "Imported " + result.added + " subject(s)." +
               (result.skipped ? (" Skipped " + result.skipped + " invalid/duplicate item(s).") : "");
             bulkSubjectMessage.className = result.skipped ? "message message-error" : "message message-success";
