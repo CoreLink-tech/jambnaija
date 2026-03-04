@@ -32,6 +32,11 @@ const topicSchema = z.object({
   name: z.string().trim().min(1),
 });
 
+const bulkTopicSchema = z.object({
+  subjectId: z.string().trim().min(1),
+  topics: z.array(z.string().trim().min(1)).min(1).max(1000),
+});
+
 const baseQuestionSchema = z.object({
   subjectId: z.string().trim().min(1),
   topicId: z.string().trim().optional(),
@@ -354,6 +359,66 @@ router.post("/topics", async (req, res, next) => {
   }
 });
 
+router.post("/topics/bulk", async (req, res, next) => {
+  try {
+    const payload = bulkTopicSchema.parse(req.body || {});
+    const subject = await prisma.subject.findUnique({
+      where: { id: payload.subjectId },
+      select: { id: true },
+    });
+    if (!subject) {
+      return res.status(404).json({ message: "Subject not found." });
+    }
+
+    const existingTopics = await prisma.topic.findMany({
+      where: { subjectId: payload.subjectId },
+      select: { name: true },
+    });
+    const seen = new Set(existingTopics.map((topic) => String(topic.name || "").trim().toLowerCase()));
+    let added = 0;
+    let skipped = 0;
+    const topics = [];
+
+    for (const rawName of payload.topics) {
+      const name = String(rawName || "").trim();
+      if (!name) {
+        skipped += 1;
+        continue;
+      }
+      const key = name.toLowerCase();
+      if (seen.has(key)) {
+        skipped += 1;
+        continue;
+      }
+      // eslint-disable-next-line no-await-in-loop
+      const created = await prisma.topic.create({
+        data: {
+          subjectId: payload.subjectId,
+          name,
+        },
+        select: {
+          id: true,
+          name: true,
+        },
+      });
+      seen.add(key);
+      topics.push(created);
+      added += 1;
+    }
+
+    return res.status(201).json({
+      message: "Bulk topic import completed.",
+      stats: { added, skipped },
+      topics,
+    });
+  } catch (error) {
+    if (error instanceof z.ZodError) {
+      return res.status(400).json({ message: "Invalid payload.", issues: error.flatten() });
+    }
+    return next(error);
+  }
+});
+
 router.post("/questions/study", async (req, res, next) => {
   try {
     const question = await createStudyQuestion(req.body);
@@ -582,10 +647,11 @@ router.get("/users", async (req, res, next) => {
       where.OR = clauses;
     }
 
+    const take = parsed.limit || (query ? undefined : 10);
     const users = await prisma.user.findMany({
       where,
       orderBy: { createdAt: "desc" },
-      take: parsed.limit || 50,
+      ...(take ? { take } : {}),
       select: {
         id: true,
         email: true,

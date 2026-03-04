@@ -132,7 +132,7 @@
   }
 
   function getWhatsAppActivationUrl() {
-    return "https://wa.me/" + ADMIN_WHATSAPP_NUMBER + "?text=" + encodeURIComponent("Hello Admin, I need an activation code for my Testify account.");
+    return "https://wa.me/" + ADMIN_WHATSAPP_NUMBER + "?text=" + encodeURIComponent("Hello Admin, I need an activation code for my Jambnaija account.");
   }
 
   function isPremiumAccess(auth) {
@@ -710,9 +710,12 @@
 
   function applyHapticsAndMotion() {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+    const narrowScreen = window.matchMedia("(max-width: 900px)").matches;
     const supportsVibrate = typeof navigator.vibrate === "function";
     const page = document.body ? document.body.getAttribute("data-page") : "";
-    const disableTilt = page === "admin" || page === "practice";
+    const disableLiteEffects = reducedMotion || coarsePointer || narrowScreen;
+    const disableTilt = page === "admin" || page === "practice" || disableLiteEffects;
     const disableAllMotion = page === "practice";
 
     if (disableAllMotion) return;
@@ -734,14 +737,16 @@
     document.querySelectorAll(".interactive").forEach((element) => {
       if (element.dataset.interactiveBound === "1") return;
       element.dataset.interactiveBound = "1";
-      element.style.position = "relative";
-      element.style.overflow = "hidden";
 
-      element.addEventListener("click", (event) => {
-        ripple(event, element);
-        vibrate(10);
-      });
-      element.addEventListener("touchstart", () => vibrate(8), { passive: true });
+      if (!disableLiteEffects) {
+        element.style.position = "relative";
+        element.style.overflow = "hidden";
+        element.addEventListener("click", (event) => {
+          ripple(event, element);
+          vibrate(10);
+        });
+        element.addEventListener("touchstart", () => vibrate(8), { passive: true });
+      }
     });
 
     if (!reducedMotion && !disableTilt) {
@@ -920,10 +925,14 @@
     const message = document.getElementById("activationMessage");
     const status = document.getElementById("activationStatus");
     const getCodeBtn = document.getElementById("getActivationCodeBtn");
+    const backBtn = document.getElementById("activationBackBtn");
     if (getCodeBtn) {
       getCodeBtn.setAttribute("href", getWhatsAppActivationUrl());
     }
     const auth = getAuth();
+    if (backBtn) {
+      backBtn.setAttribute("href", auth && auth.role === "student" ? "student.html" : "hi.html");
+    }
     const canRedeem = !!(auth && auth.role === "student" && auth.token);
     if (status && canRedeem) {
       status.textContent = getStudentAccessMessage(auth);
@@ -1057,7 +1066,8 @@
       document.getElementById("studySubjectSelect"),
       document.getElementById("jambSubjectSelect"),
       document.getElementById("bulkStudySubjectSelect"),
-      document.getElementById("bulkCbtSubjectSelect")
+      document.getElementById("bulkCbtSubjectSelect"),
+      document.getElementById("bulkTopicSubjectSelect")
     ].filter(Boolean);
 
     if (!selects.length) return;
@@ -1260,6 +1270,140 @@
       return [rawParsed];
     }
     return [];
+  }
+
+  function parseSubjectBulkPayload(rawParsed) {
+    if (Array.isArray(rawParsed)) return rawParsed;
+    if (rawParsed && typeof rawParsed === "object") {
+      if (Array.isArray(rawParsed.subjects)) return rawParsed.subjects;
+      if (Array.isArray(rawParsed.items)) return rawParsed.items;
+      if (Array.isArray(rawParsed.data)) return rawParsed.data;
+      return [rawParsed];
+    }
+    return [];
+  }
+
+  async function addSubjectsBulk(rawSubjects) {
+    const rows = parseSubjectBulkPayload(rawSubjects);
+    if (!rows.length) return { added: 0, skipped: 0 };
+
+    if (hasAdminApiSession()) {
+      const result = await apiRequest("/api/admin/subjects/bulk", {
+        method: "POST",
+        body: {
+          subjects: rows
+        }
+      });
+      if (!result.ok) {
+        throw new Error(result.message || "Subject bulk import failed.");
+      }
+      const stats = result && result.data && result.data.stats ? result.data.stats : {};
+      const addedRaw = Number(stats.addedSubjects);
+      const skippedRaw = Number(stats.skipped);
+      const added = Number.isFinite(addedRaw) ? addedRaw : 0;
+      const skipped = Number.isFinite(skippedRaw) ? skippedRaw : Math.max(rows.length - added, 0);
+      if (added > 0) await syncSubjectsFromBackend();
+      return { added, skipped };
+    }
+
+    const current = getSubjects();
+    const nameSet = new Set(current.map((subject) => safeText(subject && subject.name).trim().toLowerCase()));
+    let added = 0;
+    let skipped = 0;
+
+    rows.forEach((raw) => {
+      const subject = normalizeSubject(raw);
+      if (!subject) {
+        skipped += 1;
+        return;
+      }
+      const key = subject.name.toLowerCase();
+      if (nameSet.has(key)) {
+        skipped += 1;
+        return;
+      }
+      nameSet.add(key);
+      current.push(subject);
+      added += 1;
+    });
+
+    if (added > 0) setSubjects(current);
+    return { added, skipped };
+  }
+
+  function parseTopicBulkPayload(rawParsed) {
+    let source = [];
+    if (Array.isArray(rawParsed)) {
+      source = rawParsed;
+    } else if (rawParsed && typeof rawParsed === "object") {
+      if (Array.isArray(rawParsed.topics)) source = rawParsed.topics;
+      else if (Array.isArray(rawParsed.items)) source = rawParsed.items;
+      else if (Array.isArray(rawParsed.data)) source = rawParsed.data;
+      else source = [rawParsed];
+    } else if (typeof rawParsed === "string") {
+      source = [rawParsed];
+    }
+
+    const topics = [];
+    const seen = new Set();
+    source.forEach((item) => {
+      const raw = typeof item === "string"
+        ? item
+        : (item && typeof item === "object"
+          ? (item.name || item.topic || item.title || "")
+          : "");
+      const topic = safeText(raw).trim();
+      if (!topic) return;
+      const key = topic.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+      topics.push(topic);
+    });
+    return topics;
+  }
+
+  async function addTopicsToSubjectBulk(subjectId, rawTopics) {
+    const rows = parseTopicBulkPayload(rawTopics);
+    if (!subjectId || !rows.length) return { added: 0, skipped: 0 };
+
+    if (hasAdminApiSession()) {
+      const result = await apiRequest("/api/admin/topics/bulk", {
+        method: "POST",
+        body: {
+          subjectId,
+          topics: rows
+        }
+      });
+      if (!result.ok) {
+        throw new Error(result.message || "Could not import topics.");
+      }
+      const stats = result && result.data && result.data.stats ? result.data.stats : {};
+      const addedRaw = Number(stats.added);
+      const skippedRaw = Number(stats.skipped);
+      const added = Number.isFinite(addedRaw) ? addedRaw : 0;
+      const skipped = Number.isFinite(skippedRaw) ? skippedRaw : Math.max(rows.length - added, 0);
+      if (added > 0) await syncSubjectsFromBackend();
+      return { added, skipped };
+    }
+
+    const subjects = getSubjects();
+    const index = subjects.findIndex((subject) => subject.id === subjectId);
+    if (index < 0) return { added: 0, skipped: rows.length };
+
+    const subject = subjects[index];
+    const existing = new Set((subject.topics || []).map((topic) => safeText(topic).toLowerCase()));
+    let added = 0;
+    rows.forEach((topic) => {
+      const key = topic.toLowerCase();
+      if (existing.has(key)) return;
+      existing.add(key);
+      subject.topics = (subject.topics || []).concat(topic);
+      added += 1;
+    });
+    subject.updatedAt = new Date().toISOString();
+    subjects[index] = subject;
+    setSubjects(subjects);
+    return { added, skipped: Math.max(rows.length - added, 0) };
   }
 
   function parseCbtQuestionBulkPayload(rawParsed) {
@@ -1720,8 +1864,8 @@
   async function loadAdminUsers(query) {
     const cleanQuery = String(query || "").trim();
     const path = cleanQuery
-      ? "/api/admin/users?query=" + encodeURIComponent(cleanQuery) + "&limit=100"
-      : "/api/admin/users?limit=100";
+      ? "/api/admin/users?query=" + encodeURIComponent(cleanQuery)
+      : "/api/admin/users?limit=10";
     const result = await apiRequest(path);
     if (!result.ok) return { ok: false, message: result.message, users: [] };
     const users = Array.isArray(result && result.data && result.data.users) ? result.data.users : [];
@@ -1847,7 +1991,16 @@
     }
 
     loadActivationCodes(100);
-    loadAdminUsers("");
+    loadAdminUsers("").then((result) => {
+      if (!userSearchMessage) return;
+      if (!result.ok) {
+        userSearchMessage.textContent = result.message;
+        userSearchMessage.className = "message message-error";
+        return;
+      }
+      userSearchMessage.textContent = "Showing 10 newest users. Use search to find any user.";
+      userSearchMessage.className = "message message-success";
+    });
   }
 
   function initAdminPage() {
@@ -2019,6 +2172,43 @@
       });
     }
 
+    const bulkSubjectBtn = document.getElementById("bulkSubjectImportBtn");
+    const bulkSubjectFile = document.getElementById("bulkSubjectFile");
+    const bulkSubjectMessage = document.getElementById("bulkSubjectMessage");
+    if (bulkSubjectBtn && bulkSubjectFile && bulkSubjectMessage) {
+      bulkSubjectBtn.addEventListener("click", () => {
+        const file = bulkSubjectFile.files && bulkSubjectFile.files[0];
+        if (!file) {
+          bulkSubjectMessage.textContent = "Select a subjects JSON file.";
+          bulkSubjectMessage.className = "message message-error";
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = async () => {
+          try {
+            const parsed = JSON.parse(String(reader.result || ""));
+            const result = await addSubjectsBulk(parsed);
+            if (!result.added) {
+              throw new Error("No new subjects were added. Check file format and duplicate names.");
+            }
+            renderAdminTable();
+            refreshAdminSelectors();
+            bulkSubjectMessage.textContent = "Imported " + result.added + " subject(s)." +
+              (result.skipped ? (" Skipped " + result.skipped + " invalid/duplicate item(s).") : "");
+            bulkSubjectMessage.className = result.skipped ? "message message-error" : "message message-success";
+            bulkSubjectFile.value = "";
+          } catch (error) {
+            bulkSubjectMessage.textContent = safeText(error && error.message).trim() ||
+              "Subject import failed. Use valid JSON with name and description.";
+            bulkSubjectMessage.className = "message message-error";
+          }
+        };
+
+        reader.readAsText(file);
+      });
+    }
+
     const bulkStudyBtn = document.getElementById("bulkStudyImportBtn");
     const bulkStudyFile = document.getElementById("bulkStudyFile");
     const bulkStudySubject = document.getElementById("bulkStudySubjectSelect");
@@ -2120,6 +2310,50 @@
           } catch (error) {
             bulkCbtMessage.textContent = safeText(error && error.message).trim() || "CBT import failed. Use valid JSON with year data (array or multi-year years{} format).";
             bulkCbtMessage.className = "message message-error";
+          }
+        };
+
+        reader.readAsText(file);
+      });
+    }
+
+    const bulkTopicBtn = document.getElementById("bulkTopicImportBtn");
+    const bulkTopicFile = document.getElementById("bulkTopicFile");
+    const bulkTopicSubject = document.getElementById("bulkTopicSubjectSelect");
+    const bulkTopicMessage = document.getElementById("bulkTopicMessage");
+    if (bulkTopicBtn && bulkTopicFile && bulkTopicSubject && bulkTopicMessage) {
+      bulkTopicBtn.addEventListener("click", () => {
+        const file = bulkTopicFile.files && bulkTopicFile.files[0];
+        const subjectId = bulkTopicSubject.value;
+
+        if (!subjectId) {
+          bulkTopicMessage.textContent = "Select a subject first.";
+          bulkTopicMessage.className = "message message-error";
+          return;
+        }
+        if (!file) {
+          bulkTopicMessage.textContent = "Select a topics JSON file.";
+          bulkTopicMessage.className = "message message-error";
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = async () => {
+          try {
+            const parsed = JSON.parse(String(reader.result || ""));
+            const result = await addTopicsToSubjectBulk(subjectId, parsed);
+            if (!result.added) {
+              throw new Error("No new topics were added. Check file format or duplicates.");
+            }
+            renderAdminTable();
+            let message = "Imported " + result.added + " topic(s).";
+            if (result.skipped) message += " Skipped " + result.skipped + " duplicate/invalid item(s).";
+            bulkTopicMessage.textContent = message;
+            bulkTopicMessage.className = result.skipped ? "message message-error" : "message message-success";
+            bulkTopicFile.value = "";
+          } catch (error) {
+            bulkTopicMessage.textContent = safeText(error && error.message).trim() || "Topic import failed. Use valid topics JSON.";
+            bulkTopicMessage.className = "message message-error";
           }
         };
 
@@ -3093,10 +3327,7 @@
     const allSubjects = getSubjects();
 
     const availableSubjects = allSubjects.filter((subject) => subjectQuestionsByMode(subject, mode).length > 0);
-    if (!availableSubjects.length) {
-      window.location.href = "student.html";
-      return;
-    }
+    const hasAvailableSubjects = availableSubjects.length > 0;
 
     const validSubjectIds = new Set(availableSubjects.map((s) => s.id));
     const defaultSelected = (selectedFromQuery.length ? selectedFromQuery : preselect).filter((id) => validSubjectIds.has(id));
@@ -3131,6 +3362,19 @@
     if (timeLabel) timeLabel.textContent = "Total exam time (minutes, 10-240)";
     if (submitTopBtn) submitTopBtn.classList.add("hidden");
     if (setupCard) setupCard.classList.remove("hidden");
+    if (!hasAvailableSubjects) {
+      if (setupSubjectChecks) {
+        setupSubjectChecks.innerHTML = "<div class=\"empty-state\">No " + (mode === MODE_CBT ? "CBT" : "study") + " questions available yet. Contact admin.</div>";
+      }
+      if (setupSelectedCount) {
+        setupSelectedCount.textContent = mode === MODE_CBT ? "0/4 Selected" : "0 Selected";
+      }
+      if (setupMessage) {
+        setupMessage.textContent = "No " + (mode === MODE_CBT ? "CBT" : "study") + " question bank is available right now.";
+        setupMessage.className = "message message-error";
+      }
+      if (beginBtn) beginBtn.disabled = true;
+    }
 
     const countStorageKey = mode === MODE_CBT ? "testify_qps_cbt" : "testify_qps_study";
     const minutesStorageKey = mode === MODE_CBT ? "testify_minutes_cbt" : "testify_minutes_study";

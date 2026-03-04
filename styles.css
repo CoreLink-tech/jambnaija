@@ -455,6 +455,39 @@ textarea:focus {
   background: #fff;
 }
 
+.dropdown-box {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #f9fbff;
+  padding: 10px 12px;
+}
+
+.dropdown-box > summary {
+  cursor: pointer;
+  list-style: none;
+  font: 700 0.82rem/1.2 "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-box > summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown-box > summary::after {
+  content: "+";
+  font: 700 1rem/1 "Space Grotesk", sans-serif;
+  color: var(--accent-600);
+}
+
+.dropdown-box[open] > summary::after {
+  content: "-";
+}
+
 table {
   width: 100%;
   min-width: 630px;
@@ -1126,4 +1159,22 @@ body[data-page="practice"] .interactive:active {
     animation: none !important;
   }
 
+}
+
+@media (pointer: coarse) {
+  .tilt,
+  .interactive,
+  .btn,
+  .pulse-dot {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .interactive:active {
+    transform: none;
+  }
+
+  .ripple {
+    display: none !important;
+  }
 }
