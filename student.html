@@ -183,6 +183,11 @@
       max-width: 390px;
     }
 
+    body[data-page="student"].student-booting .student-content {
+      opacity: 0;
+      pointer-events: none;
+    }
+
     @media (max-width: 1080px) {
       .student-layout {
         grid-template-columns: 1fr;
@@ -217,7 +222,7 @@
     }
   </style>
 </head>
-<body data-page="student">
+<body data-page="student" class="student-booting">
   <div class="shell">
     <header class="topbar">
       <div class="brand">
@@ -243,6 +248,7 @@
     <main class="student-layout">
       <aside class="card student-nav">
         <button type="button" data-section-link="dashboardSection" class="interactive nav-active"><span class="material-symbols-outlined">dashboard</span>Overview</button>
+        <button type="button" data-section-link="activationSection" class="interactive"><span class="material-symbols-outlined">key</span>Activation</button>
         <button type="button" data-section-link="subjectsSection" class="interactive"><span class="material-symbols-outlined">auto_stories</span>Study Library</button>
         <button type="button" data-section-link="activitySection" class="interactive"><span class="material-symbols-outlined">history</span>Recent Activity</button>
         <a href="practice.html?mode=cbt" class="interactive"><span class="material-symbols-outlined">assignment</span>Mock Exam</a>
@@ -272,6 +278,31 @@
         </section>
 
         <div id="dashboardMessage" class="message hidden"></div>
+
+        <section id="activationSection" class="card interactive">
+          <div class="section-head">
+            <h3>Activation Center</h3>
+            <small>Redeem code here</small>
+          </div>
+          <p id="dashboardActivationStatus" class="note no-top">Check account access status and redeem activation code.</p>
+          <form id="dashboardActivationForm" class="form-grid" novalidate>
+            <label class="field">
+              <span>Password</span>
+              <input id="dashboardActivationPassword" type="password" autocomplete="current-password" required placeholder="Enter your password">
+            </label>
+            <label class="field">
+              <span>Activation code</span>
+              <input id="dashboardActivationCode" type="text" required placeholder="activate-std-22200001">
+            </label>
+            <button id="dashboardActivationRedeemBtn" class="btn btn-primary interactive" type="submit">Redeem Activation Code</button>
+            <p id="dashboardActivationMessage" class="message" aria-live="polite"></p>
+          </form>
+          <div class="auth-switch">
+            <p>Need a code from admin?</p>
+            <a id="dashboardGetCodeBtn" class="btn btn-soft interactive" href="#" target="_blank" rel="noopener noreferrer">Get Activation Code</a>
+            <a class="btn btn-soft interactive" href="activation.html">Open Full Activation Page</a>
+          </div>
+        </section>
 
         <section class="dash-grid">
           <article class="card">

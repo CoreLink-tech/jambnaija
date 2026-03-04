@@ -2450,6 +2450,73 @@
     return !!(auth && auth.role === "student" && isPremiumAccess(auth));
   }
 
+  function getStudentAccessMessage(auth) {
+    if (!auth || auth.role !== "student") {
+      return "Account access is locked. Redeem an activation code to continue.";
+    }
+    if (auth.trialActive && auth.trialPremiumEndsAt) {
+      return "Free premium trial is active until " + formatDate(auth.trialPremiumEndsAt) + ".";
+    }
+    if (isPremiumAccess(auth)) {
+      return "Premium package active. You have access to all features.";
+    }
+    if (isStandardAccess(auth)) {
+      return "Standard package active. You can use CBT mode only.";
+    }
+    return "Account access is locked. Redeem an activation code to continue.";
+  }
+
+  function initStudentActivationPanel(auth) {
+    const form = document.getElementById("dashboardActivationForm");
+    const passwordInput = document.getElementById("dashboardActivationPassword");
+    const codeInput = document.getElementById("dashboardActivationCode");
+    const redeemBtn = document.getElementById("dashboardActivationRedeemBtn");
+    const message = document.getElementById("dashboardActivationMessage");
+    const status = document.getElementById("dashboardActivationStatus");
+    const getCodeBtn = document.getElementById("dashboardGetCodeBtn");
+
+    if (status) status.textContent = getStudentAccessMessage(auth);
+    if (getCodeBtn) getCodeBtn.setAttribute("href", getWhatsAppActivationUrl());
+    if (!form || !passwordInput || !codeInput || !message) return;
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const password = String(passwordInput.value || "");
+      const code = String(codeInput.value || "").trim().toLowerCase();
+      if (!password || !code) {
+        message.textContent = "Enter your password and activation code.";
+        message.className = "message message-error";
+        return;
+      }
+
+      if (redeemBtn) redeemBtn.disabled = true;
+      const result = await apiRequest("/api/auth/activate", {
+        method: "POST",
+        body: {
+          email: auth.email,
+          password,
+          code,
+          deviceId: getDeviceId()
+        }
+      });
+      const authPayload = toAuthFromBackend(result);
+
+      if (!result.ok || !authPayload || authPayload.role !== "student") {
+        message.textContent = result.message || "Invalid activation code.";
+        message.className = "message message-error";
+        if (redeemBtn) redeemBtn.disabled = false;
+        return;
+      }
+
+      setAuth(authPayload);
+      message.textContent = "Activation successful. Refreshing dashboard...";
+      message.className = "message message-success";
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
+    });
+  }
+
   function renderModeHeader(mode) {
     const title = document.getElementById("modeTitle");
     const hint = document.getElementById("modeHint");
@@ -2965,20 +3032,11 @@
 
     const dashboardMessage = document.getElementById("dashboardMessage");
     if (dashboardMessage) {
-      let accessMessage = "";
-      if (auth.trialActive && auth.trialPremiumEndsAt) {
-        accessMessage = "Free premium trial is active until " + formatDate(auth.trialPremiumEndsAt) + ".";
-      } else if (isPremiumAccess(auth)) {
-        accessMessage = "Premium package active. You have access to all features.";
-      } else if (isStandardAccess(auth)) {
-        accessMessage = "Standard package active. You can use CBT mode only.";
-      } else {
-        accessMessage = "Account access is locked. Redeem an activation code to continue.";
-      }
-      dashboardMessage.textContent = accessMessage;
+      dashboardMessage.textContent = getStudentAccessMessage(auth);
       dashboardMessage.className = "message";
       dashboardMessage.classList.remove("hidden");
     }
+    initStudentActivationPanel(auth);
 
     const subjects = getSubjects();
     renderStudentSummary(subjects);
@@ -3069,6 +3127,8 @@
     const logoutBtnMobile = document.getElementById("logoutBtnMobile");
     if (logoutBtn) logoutBtn.addEventListener("click", logout);
     if (logoutBtnMobile) logoutBtnMobile.addEventListener("click", logout);
+
+    document.body.classList.remove("student-booting");
   }
 
   function initPracticePage() {
@@ -3514,5 +3574,8 @@
     // Keep app usable with local data when backend bootstrap fails.
     ensureSeedData();
     ensureQuestionIds();
+    if (document.body.getAttribute("data-page") === "student") {
+      document.body.classList.remove("student-booting");
+    }
   });
 })();
