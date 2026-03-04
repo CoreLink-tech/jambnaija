@@ -8,6 +8,7 @@
   const BATCHES_KEY = "testify_import_batches";
   const API_BASE_KEY = "testify_api_base";
   const ATTEMPT_SYNC_QUEUE_KEY = "testify_attempt_sync_queue";
+  const SUBJECTS_CHANGED_EVENT = "testify:subjects-changed";
   const DEVICE_ID_KEY = "testify_device_id";
   const LOCAL_ADMIN_KEY = "testify_local_admin";
   const LOCAL_STUDENTS_KEY = "testify_local_students";
@@ -221,11 +222,50 @@
 
   function clearAuth() { localStorage.removeItem(AUTH_KEY); }
   function getSubjects() { return getJSON(SUBJECTS_KEY, []); }
-  function setSubjects(v) { setJSON(SUBJECTS_KEY, v); }
+  function emitSubjectsChanged() {
+    try {
+      window.dispatchEvent(new CustomEvent(SUBJECTS_CHANGED_EVENT, {
+        detail: { at: Date.now() }
+      }));
+    } catch (error) {
+      // ignore event dispatch errors in constrained environments
+    }
+  }
+  function setSubjects(v) {
+    setJSON(SUBJECTS_KEY, v);
+    emitSubjectsChanged();
+  }
   function getAttempts() { return getJSON(ATTEMPTS_KEY, []); }
   function setAttempts(v) { setJSON(ATTEMPTS_KEY, v); }
   function getBatches() { return getJSON(BATCHES_KEY, []); }
   function setBatches(v) { setJSON(BATCHES_KEY, v); }
+
+  function observeSubjectStoreChanges(onChange) {
+    if (typeof onChange !== "function") return function noop() {};
+    let queued = false;
+
+    function schedule() {
+      if (queued) return;
+      queued = true;
+      window.requestAnimationFrame(() => {
+        queued = false;
+        onChange();
+      });
+    }
+
+    function onStorage(event) {
+      if (!event || (event.key && event.key !== SUBJECTS_KEY)) return;
+      schedule();
+    }
+
+    window.addEventListener("storage", onStorage);
+    window.addEventListener(SUBJECTS_CHANGED_EVENT, schedule);
+
+    return () => {
+      window.removeEventListener("storage", onStorage);
+      window.removeEventListener(SUBJECTS_CHANGED_EVENT, schedule);
+    };
+  }
 
   function ensureSeedData() {
     const subjects = getSubjects();
@@ -354,6 +394,7 @@
     const attemptedUrls = baseCandidates.map((base) => base + path);
     const requestOptions = Object.assign({}, options || {});
     const requestHeaders = Object.assign({}, requestOptions.headers || {});
+    const method = String(requestOptions.method || "GET").trim().toUpperCase();
     const auth = getAuth();
 
     if (!requestHeaders.Accept) requestHeaders.Accept = "application/json";
@@ -365,6 +406,9 @@
     }
 
     requestOptions.headers = requestHeaders;
+    if (!requestOptions.cache && method === "GET") {
+      requestOptions.cache = "no-store";
+    }
     if (requestOptions.body !== undefined && typeof requestOptions.body !== "string") {
       requestOptions.body = JSON.stringify(requestOptions.body);
     }
@@ -2140,6 +2184,11 @@
     const auth = requireRole("admin");
     if (!auth) return;
     ensureBatchesData();
+    const stopObserveSubjects = observeSubjectStoreChanges(() => {
+      renderAdminTable();
+      refreshAdminSelectors();
+    });
+    window.addEventListener("beforeunload", stopObserveSubjects, { once: true });
 
     const logoutBtn = document.getElementById("logoutBtn");
     if (logoutBtn) logoutBtn.addEventListener("click", () => { clearAuth(); window.location.href = "admin-login.html"; });
@@ -3388,6 +3437,15 @@
     const subjects = getSubjects();
     renderStudentSummary(subjects);
     renderAttemptHistory();
+
+    const syncStudentView = () => {
+      const latestSubjects = getSubjects();
+      renderStudentSummary(latestSubjects);
+      const searchInput = document.getElementById("subjectSearch");
+      renderSubjectCards(latestSubjects, searchInput ? searchInput.value : "", studentMode);
+    };
+    const stopObserveSubjects = observeSubjectStoreChanges(syncStudentView);
+    window.addEventListener("beforeunload", stopObserveSubjects, { once: true });
 
     const search = document.getElementById("subjectSearch");
     if (search) search.addEventListener("input", () => renderSubjectCards(getSubjects(), search.value, studentMode));
