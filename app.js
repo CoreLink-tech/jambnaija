@@ -68,6 +68,39 @@
     return String(value || "").replace(/[<>]/g, "");
   }
 
+  function ensureToastStack() {
+    const existing = document.getElementById("toastStack");
+    if (existing) return existing;
+    if (!document.body) return null;
+    const stack = document.createElement("div");
+    stack.id = "toastStack";
+    stack.className = "toast-stack";
+    stack.setAttribute("aria-live", "polite");
+    stack.setAttribute("aria-atomic", "false");
+    document.body.appendChild(stack);
+    return stack;
+  }
+
+  function showToast(message, type) {
+    const text = safeText(message).trim();
+    if (!text) return;
+    const stack = ensureToastStack();
+    if (!stack) return;
+    const tone = type === "error" ? "error" : (type === "warn" ? "warn" : "success");
+    const toast = document.createElement("div");
+    toast.className = "toast toast-" + tone;
+    toast.setAttribute("role", "status");
+    toast.textContent = text;
+    stack.appendChild(toast);
+
+    window.setTimeout(() => {
+      toast.classList.add("toast-out");
+      window.setTimeout(() => {
+        if (toast.parentNode) toast.parentNode.removeChild(toast);
+      }, 260);
+    }, 3200);
+  }
+
   function formatDate(iso) {
     const date = new Date(iso);
     return Number.isNaN(date.getTime()) ? "-" : date.toLocaleString();
@@ -2296,16 +2329,23 @@
                 ? ("No new subjects were added. Skipped " + result.skipped + " invalid/duplicate item(s).")
                 : "No subject row was found in this JSON file.";
               bulkSubjectMessage.className = "message message-error";
+              showToast(bulkSubjectMessage.textContent, "error");
               return;
             }
             bulkSubjectMessage.textContent = "Imported " + result.added + " subject(s)." +
               (result.skipped ? (" Skipped " + result.skipped + " invalid/duplicate item(s).") : "");
             bulkSubjectMessage.className = result.skipped ? "message message-error" : "message message-success";
+            showToast(
+              "Subject import successful: " + result.added + " added" +
+              (result.skipped ? (", " + result.skipped + " skipped") : ""),
+              result.skipped ? "warn" : "success"
+            );
             bulkSubjectFile.value = "";
           } catch (error) {
             bulkSubjectMessage.textContent = safeText(error && error.message).trim() ||
               "Subject import failed. Use valid JSON with name and description.";
             bulkSubjectMessage.className = "message message-error";
+            showToast(bulkSubjectMessage.textContent, "error");
           }
         };
 
@@ -2356,10 +2396,16 @@
             }
             bulkStudyMessage.textContent = message;
             bulkStudyMessage.className = result.skipped ? "message message-error" : "message message-success";
+            showToast(
+              "Study questions import successful: " + result.added + " added" +
+              (result.skipped ? (", " + result.skipped + " skipped") : ""),
+              result.skipped ? "warn" : "success"
+            );
             bulkStudyFile.value = "";
           } catch (error) {
             bulkStudyMessage.textContent = safeText(error && error.message).trim() || "Study import failed. Ensure JSON contains valid study questions.";
             bulkStudyMessage.className = "message message-error";
+            showToast(bulkStudyMessage.textContent, "error");
           }
         };
 
@@ -2410,10 +2456,16 @@
             }
             bulkCbtMessage.textContent = message;
             bulkCbtMessage.className = result.skipped ? "message message-error" : "message message-success";
+            showToast(
+              "CBT questions import successful: " + result.added + " added" +
+              (result.skipped ? (", " + result.skipped + " skipped") : ""),
+              result.skipped ? "warn" : "success"
+            );
             bulkCbtFile.value = "";
           } catch (error) {
             bulkCbtMessage.textContent = safeText(error && error.message).trim() || "CBT import failed. Use valid JSON with year data (array or multi-year years{} format).";
             bulkCbtMessage.className = "message message-error";
+            showToast(bulkCbtMessage.textContent, "error");
           }
         };
 
@@ -2454,10 +2506,16 @@
             if (result.skipped) message += " Skipped " + result.skipped + " duplicate/invalid item(s).";
             bulkTopicMessage.textContent = message;
             bulkTopicMessage.className = result.skipped ? "message message-error" : "message message-success";
+            showToast(
+              "Study topics import successful: " + result.added + " added" +
+              (result.skipped ? (", " + result.skipped + " skipped") : ""),
+              result.skipped ? "warn" : "success"
+            );
             bulkTopicFile.value = "";
           } catch (error) {
             bulkTopicMessage.textContent = safeText(error && error.message).trim() || "Topic import failed. Use valid topics JSON.";
             bulkTopicMessage.className = "message message-error";
+            showToast(bulkTopicMessage.textContent, "error");
           }
         };
 

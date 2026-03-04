@@ -417,6 +417,63 @@ textarea:focus {
   font-weight: 700;
 }
 
+.toast-stack {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 1200;
+  display: grid;
+  gap: 8px;
+  width: min(360px, calc(100% - 24px));
+}
+
+.toast {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.16);
+  padding: 11px 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  animation: toast-in 0.22s ease-out;
+}
+
+.toast-success {
+  border-color: rgba(22, 163, 74, 0.32);
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.toast-warn {
+  border-color: rgba(217, 119, 6, 0.32);
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.toast-error {
+  border-color: rgba(220, 38, 38, 0.32);
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.toast-out {
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .login-card {
   max-width: 640px;
   margin: 0 auto;
@@ -1154,7 +1211,8 @@ body[data-page="practice"] .interactive:active {
   .tilt,
   .interactive,
   .btn,
-  .pulse-dot {
+  .pulse-dot,
+  .toast {
     transition: none !important;
     animation: none !important;
   }
