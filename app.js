@@ -924,7 +924,6 @@
     const codeInput = document.getElementById("activationCode");
     const message = document.getElementById("activationMessage");
     const getCodeBtn = document.getElementById("getActivationCodeBtn");
-    const activateNowBtn = document.getElementById("activateNowBtn");
 
     const params = new URLSearchParams(window.location.search || "");
     const emailFromQuery = String(params.get("email") || "").trim().toLowerCase();
@@ -933,9 +932,6 @@
     }
     if (getCodeBtn) {
       getCodeBtn.setAttribute("href", getWhatsAppActivationUrl());
-    }
-    if (activateNowBtn) {
-      activateNowBtn.setAttribute("href", getWhatsAppActivationUrl());
     }
 
     form.addEventListener("submit", async (event) => {
@@ -2466,63 +2462,6 @@
     return "Account access is locked. Redeem an activation code to continue.";
   }
 
-  function initStudentActivationPanel(auth) {
-    const form = document.getElementById("dashboardActivationForm");
-    const codeInput = document.getElementById("dashboardActivationCode");
-    const referralInput = document.getElementById("dashboardActivationReferral");
-    const redeemBtn = document.getElementById("dashboardActivationRedeemBtn");
-    const message = document.getElementById("dashboardActivationMessage");
-    const status = document.getElementById("dashboardActivationStatus");
-    const getCodeBtn = document.getElementById("dashboardGetCodeBtn");
-    const dashboardMessage = document.getElementById("dashboardMessage");
-
-    if (status) status.textContent = getStudentAccessMessage(auth);
-    if (getCodeBtn) getCodeBtn.setAttribute("href", getWhatsAppActivationUrl());
-    if (!form || !codeInput || !message) return;
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const code = String(codeInput.value || "").trim().toLowerCase();
-      const referralCode = String((referralInput && referralInput.value) || "").trim();
-      if (!code) {
-        message.textContent = "Enter your activation code.";
-        message.className = "message message-error";
-        return;
-      }
-
-      if (redeemBtn) redeemBtn.disabled = true;
-      const result = await apiRequest("/api/auth/activate/me", {
-        method: "POST",
-        body: {
-          code,
-          referralCode: referralCode || undefined,
-          deviceId: getDeviceId()
-        }
-      });
-      const authPayload = toAuthFromBackend(result);
-
-      if (!result.ok || !authPayload || authPayload.role !== "student") {
-        message.textContent = result.message || "Invalid activation code.";
-        message.className = "message message-error";
-        if (redeemBtn) redeemBtn.disabled = false;
-        return;
-      }
-
-      setAuth(authPayload);
-      if (status) status.textContent = getStudentAccessMessage(authPayload);
-      if (dashboardMessage) {
-        dashboardMessage.textContent = getStudentAccessMessage(authPayload);
-        dashboardMessage.className = "message";
-        dashboardMessage.classList.remove("hidden");
-      }
-      message.textContent = "Activation successful.";
-      message.className = "message message-success";
-      form.reset();
-      if (redeemBtn) redeemBtn.disabled = false;
-      setStudentMode(canUseStudyMode(authPayload) ? MODE_STUDY : MODE_CBT);
-    });
-  }
-
   function renderModeHeader(mode) {
     const title = document.getElementById("modeTitle");
     const hint = document.getElementById("modeHint");
@@ -3042,8 +2981,6 @@
       dashboardMessage.className = "message";
       dashboardMessage.classList.remove("hidden");
     }
-    initStudentActivationPanel(auth);
-
     const subjects = getSubjects();
     renderStudentSummary(subjects);
     renderAttemptHistory();
@@ -3115,13 +3052,6 @@
     if (performanceRange) {
       performanceRange.addEventListener("change", () => {
         renderSubjectPerformance(getSubjects(), getAttempts());
-      });
-    }
-
-    const renewPlanBtn = document.getElementById("renewPlanBtn");
-    if (renewPlanBtn && dashboardMessage) {
-      renewPlanBtn.addEventListener("click", () => {
-        window.location.href = buildActivationUrl(auth.email);
       });
     }
 

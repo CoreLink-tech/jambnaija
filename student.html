@@ -204,6 +204,10 @@
     }
 
     @media (max-width: 760px) {
+      .search-wrap {
+        max-width: none;
+      }
+
       .student-nav {
         grid-template-columns: 1fr;
       }
@@ -248,11 +252,10 @@
     <main class="student-layout">
       <aside class="card student-nav">
         <button type="button" data-section-link="dashboardSection" class="interactive nav-active"><span class="material-symbols-outlined">dashboard</span>Overview</button>
-        <button type="button" data-section-link="activationSection" class="interactive"><span class="material-symbols-outlined">key</span>Activation</button>
+        <a href="activation.html" class="interactive"><span class="material-symbols-outlined">key</span>Activation</a>
         <button type="button" data-section-link="subjectsSection" class="interactive"><span class="material-symbols-outlined">auto_stories</span>Study Library</button>
         <button type="button" data-section-link="activitySection" class="interactive"><span class="material-symbols-outlined">history</span>Recent Activity</button>
         <a href="practice.html?mode=cbt" class="interactive"><span class="material-symbols-outlined">assignment</span>Mock Exam</a>
-        <button id="renewPlanBtn" class="interactive"><span class="material-symbols-outlined">star</span>Renew Plan</button>
         <button id="logoutBtn" class="interactive"><span class="material-symbols-outlined">logout</span>Logout</button>
       </aside>
 
@@ -278,31 +281,6 @@
         </section>
 
         <div id="dashboardMessage" class="message hidden"></div>
-
-        <section id="activationSection" class="card interactive">
-          <div class="section-head">
-            <h3>Activation Center</h3>
-            <small>Redeem code here</small>
-          </div>
-          <p id="dashboardActivationStatus" class="note no-top">Check account access status and redeem activation code.</p>
-          <form id="dashboardActivationForm" class="form-grid" novalidate>
-            <label class="field">
-              <span>Activation key</span>
-              <input id="dashboardActivationCode" type="text" required placeholder="activate-std-22200001">
-            </label>
-            <label class="field">
-              <span>Referral code (optional)</span>
-              <input id="dashboardActivationReferral" type="text" placeholder="TESTIFY-REF...">
-            </label>
-            <button id="dashboardActivationRedeemBtn" class="btn btn-primary interactive" type="submit">Redeem</button>
-            <p id="dashboardActivationMessage" class="message" aria-live="polite"></p>
-          </form>
-          <div class="auth-switch">
-            <p>Need a code from admin?</p>
-            <a id="dashboardGetCodeBtn" class="btn btn-soft interactive" href="#" target="_blank" rel="noopener noreferrer">Get Activated Code for 2500</a>
-            <a class="btn btn-soft interactive" href="activation.html">Open Full Activation Page</a>
-          </div>
-        </section>
 
         <section class="dash-grid">
           <article class="card">
