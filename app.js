@@ -2468,34 +2468,34 @@
 
   function initStudentActivationPanel(auth) {
     const form = document.getElementById("dashboardActivationForm");
-    const passwordInput = document.getElementById("dashboardActivationPassword");
     const codeInput = document.getElementById("dashboardActivationCode");
+    const referralInput = document.getElementById("dashboardActivationReferral");
     const redeemBtn = document.getElementById("dashboardActivationRedeemBtn");
     const message = document.getElementById("dashboardActivationMessage");
     const status = document.getElementById("dashboardActivationStatus");
     const getCodeBtn = document.getElementById("dashboardGetCodeBtn");
+    const dashboardMessage = document.getElementById("dashboardMessage");
 
     if (status) status.textContent = getStudentAccessMessage(auth);
     if (getCodeBtn) getCodeBtn.setAttribute("href", getWhatsAppActivationUrl());
-    if (!form || !passwordInput || !codeInput || !message) return;
+    if (!form || !codeInput || !message) return;
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-      const password = String(passwordInput.value || "");
       const code = String(codeInput.value || "").trim().toLowerCase();
-      if (!password || !code) {
-        message.textContent = "Enter your password and activation code.";
+      const referralCode = String((referralInput && referralInput.value) || "").trim();
+      if (!code) {
+        message.textContent = "Enter your activation code.";
         message.className = "message message-error";
         return;
       }
 
       if (redeemBtn) redeemBtn.disabled = true;
-      const result = await apiRequest("/api/auth/activate", {
+      const result = await apiRequest("/api/auth/activate/me", {
         method: "POST",
         body: {
-          email: auth.email,
-          password,
           code,
+          referralCode: referralCode || undefined,
           deviceId: getDeviceId()
         }
       });
@@ -2509,11 +2509,17 @@
       }
 
       setAuth(authPayload);
-      message.textContent = "Activation successful. Refreshing dashboard...";
+      if (status) status.textContent = getStudentAccessMessage(authPayload);
+      if (dashboardMessage) {
+        dashboardMessage.textContent = getStudentAccessMessage(authPayload);
+        dashboardMessage.className = "message";
+        dashboardMessage.classList.remove("hidden");
+      }
+      message.textContent = "Activation successful.";
       message.className = "message message-success";
-      setTimeout(() => {
-        window.location.reload();
-      }, 500);
+      form.reset();
+      if (redeemBtn) redeemBtn.disabled = false;
+      setStudentMode(canUseStudyMode(authPayload) ? MODE_STUDY : MODE_CBT);
     });
   }
 

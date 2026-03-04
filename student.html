@@ -287,19 +287,19 @@
           <p id="dashboardActivationStatus" class="note no-top">Check account access status and redeem activation code.</p>
           <form id="dashboardActivationForm" class="form-grid" novalidate>
             <label class="field">
-              <span>Password</span>
-              <input id="dashboardActivationPassword" type="password" autocomplete="current-password" required placeholder="Enter your password">
-            </label>
-            <label class="field">
-              <span>Activation code</span>
+              <span>Activation key</span>
               <input id="dashboardActivationCode" type="text" required placeholder="activate-std-22200001">
             </label>
-            <button id="dashboardActivationRedeemBtn" class="btn btn-primary interactive" type="submit">Redeem Activation Code</button>
+            <label class="field">
+              <span>Referral code (optional)</span>
+              <input id="dashboardActivationReferral" type="text" placeholder="TESTIFY-REF...">
+            </label>
+            <button id="dashboardActivationRedeemBtn" class="btn btn-primary interactive" type="submit">Redeem</button>
             <p id="dashboardActivationMessage" class="message" aria-live="polite"></p>
           </form>
           <div class="auth-switch">
             <p>Need a code from admin?</p>
-            <a id="dashboardGetCodeBtn" class="btn btn-soft interactive" href="#" target="_blank" rel="noopener noreferrer">Get Activation Code</a>
+            <a id="dashboardGetCodeBtn" class="btn btn-soft interactive" href="#" target="_blank" rel="noopener noreferrer">Get Activated Code for 2500</a>
             <a class="btn btn-soft interactive" href="activation.html">Open Full Activation Page</a>
           </div>
         </section>

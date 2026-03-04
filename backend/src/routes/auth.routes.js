@@ -35,6 +35,11 @@ const activationPayloadSchema = authPayloadSchema.extend({
   code: activationCodeSchema,
   deviceId: deviceIdSchema,
 });
+const activationSelfPayloadSchema = z.object({
+  code: activationCodeSchema,
+  referralCode: z.string().trim().max(80).optional(),
+  deviceId: deviceIdSchema.optional(),
+});
 
 const runtimeModels = prisma?._runtimeDataModel?.models || {};
 const runtimeUserFieldNames = new Set(
@@ -120,6 +125,66 @@ function activationBlockedResponse(user) {
     needsActivation: true,
     access,
   };
+}
+
+async function redeemActivationCodeForStudent(user, codeValue, deviceId) {
+  if (user.status === "DEACTIVATED") {
+    const error = new Error("Account is deactivated. Contact admin support.");
+    error.name = "ActivationForbiddenError";
+    throw error;
+  }
+
+  if (user.deviceId && deviceId && user.deviceId !== deviceId) {
+    const error = new Error("This account can only be used on the original device.");
+    error.name = "ActivationForbiddenError";
+    throw error;
+  }
+
+  const code = await prisma.activationCode.findUnique({
+    where: { code: codeValue },
+    select: { id: true, code: true, tier: true, isActive: true, usedById: true },
+  });
+
+  if (!code || !code.isActive || code.usedById) {
+    const error = new Error("Invalid activation code.");
+    error.name = "ActivationCodeError";
+    throw error;
+  }
+
+  const now = new Date();
+  return prisma.$transaction(async (tx) => {
+    const freshCode = await tx.activationCode.findUnique({
+      where: { id: code.id },
+      select: { id: true, tier: true, isActive: true, usedById: true },
+    });
+
+    if (!freshCode || !freshCode.isActive || freshCode.usedById) {
+      const error = new Error("Invalid activation code.");
+      error.name = "ActivationCodeError";
+      throw error;
+    }
+
+    const updated = await tx.user.update({
+      where: { id: user.id },
+      data: {
+        status: "ACTIVE",
+        planTier: freshCode.tier,
+        deviceId: user.deviceId || deviceId || null,
+      },
+      select: authUserSelect,
+    });
+
+    await tx.activationCode.update({
+      where: { id: freshCode.id },
+      data: {
+        isActive: false,
+        usedById: user.id,
+        usedAt: now,
+      },
+    });
+
+    return updated;
+  });
 }
 
 router.post("/register/student", async (req, res, next) => {
@@ -337,6 +402,61 @@ router.get("/me", requireAuth, async (req, res, next) => {
   }
 });
 
+router.post("/activate/me", requireAuth, async (req, res, next) => {
+  try {
+    if (!supportsActivationSystem) {
+      return res.status(503).json({
+        message: "Activation system is not ready. Run Prisma migrate and Prisma generate on the backend first.",
+      });
+    }
+
+    const payload = activationSelfPayloadSchema.parse(req.body || {});
+    const user = await prisma.user.findUnique({
+      where: { id: req.user.id },
+      select: authUserSelect,
+    });
+
+    if (!user || user.role !== "STUDENT") {
+      return res.status(403).json({ message: "Student access required." });
+    }
+
+    let activatedUser;
+    try {
+      activatedUser = await redeemActivationCodeForStudent(user, payload.code, payload.deviceId || user.deviceId || null);
+    } catch (error) {
+      if (error && error.name === "ActivationCodeError") {
+        return res.status(400).json({ message: "Invalid activation code." });
+      }
+      if (error && error.name === "ActivationForbiddenError") {
+        return res.status(403).json({ message: error.message });
+      }
+      throw error;
+    }
+
+    const access = resolveUserAccess(activatedUser);
+    if (!access.canAccess) {
+      return res.status(403).json({ message: "Account could not be activated." });
+    }
+
+    const token = signToken({
+      sub: activatedUser.id,
+      role: activatedUser.role,
+      email: activatedUser.email,
+    });
+
+    return res.json({
+      message: "Activation successful.",
+      token,
+      user: serializeUser(activatedUser),
+    });
+  } catch (error) {
+    if (error instanceof z.ZodError) {
+      return res.status(400).json({ message: "Invalid payload.", issues: error.flatten() });
+    }
+    return next(error);
+  }
+});
+
 router.post("/activate", async (req, res, next) => {
   try {
     if (!supportsActivationSystem) {
@@ -361,62 +481,15 @@ router.post("/activate", async (req, res, next) => {
       return res.status(401).json({ message: "Invalid credentials." });
     }
 
-    if (user.status === "DEACTIVATED") {
-      return res.status(403).json({ message: "Account is deactivated. Contact admin support." });
-    }
-
-    if (user.deviceId && user.deviceId !== payload.deviceId) {
-      return res.status(403).json({ message: "This account can only be used on the original device." });
-    }
-
-    const code = await prisma.activationCode.findUnique({
-      where: { code: payload.code },
-      select: { id: true, code: true, tier: true, isActive: true, usedById: true },
-    });
-
-    if (!code || !code.isActive || code.usedById) {
-      return res.status(400).json({ message: "Invalid activation code." });
-    }
-
-    const now = new Date();
     let activatedUser;
     try {
-      activatedUser = await prisma.$transaction(async (tx) => {
-        const freshCode = await tx.activationCode.findUnique({
-          where: { id: code.id },
-          select: { id: true, tier: true, isActive: true, usedById: true },
-        });
-
-        if (!freshCode || !freshCode.isActive || freshCode.usedById) {
-          const error = new Error("Invalid activation code.");
-          error.name = "ActivationCodeError";
-          throw error;
-        }
-
-        const updated = await tx.user.update({
-          where: { id: user.id },
-          data: {
-            status: "ACTIVE",
-            planTier: freshCode.tier,
-            deviceId: user.deviceId || payload.deviceId,
-          },
-          select: authUserSelect,
-        });
-
-        await tx.activationCode.update({
-          where: { id: freshCode.id },
-          data: {
-            isActive: false,
-            usedById: user.id,
-            usedAt: now,
-          },
-        });
-
-        return updated;
-      });
+      activatedUser = await redeemActivationCodeForStudent(user, payload.code, payload.deviceId);
     } catch (error) {
       if (error && error.name === "ActivationCodeError") {
         return res.status(400).json({ message: "Invalid activation code." });
+      }
+      if (error && error.name === "ActivationForbiddenError") {
+        return res.status(403).json({ message: error.message });
       }
       throw error;
     }
