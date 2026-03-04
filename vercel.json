@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm install && npm --prefix backend run prisma:generate",
+  "buildCommand": "npm install && npm --prefix backend run prisma:migrate:deploy && npm --prefix backend run prisma:generate",
   "functions": {
     "api/index.mjs": {
       "runtime": "nodejs22.x",

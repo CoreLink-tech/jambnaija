@@ -40,15 +40,12 @@ If you deploy on Vercel:
    - `ADMIN_PASSWORD`
 4. Redeploy so `vercel.json` and `api/index.mjs` are used.
 
-## 3. Run migrations in production
-After first deploy, run:
+## 3. Prisma migration and client generation
+This repo now runs both automatically during build:
+- `npm --prefix backend run prisma:migrate:deploy`
+- `npm --prefix backend run prisma:generate`
 
-```bash
-npm --prefix backend run prisma:migrate:deploy
-npm --prefix backend run prisma:generate
-```
-
-If your provider has a shell/console, run them there.
+So after pushing, a fresh Vercel/Render deploy will apply pending migrations and regenerate Prisma client online.
 
 ## 4. Verify online
 Open:
@@ -60,4 +57,6 @@ Open:
 Attach domain in host dashboard and set DNS.
 
 ---
-If `Unexpected server error` appears after deployment, it usually means migrations/generate were not run on the deployed backend yet.
+If `Unexpected server error` appears after deployment, verify:
+- build logs show `prisma:migrate:deploy` and `prisma:generate` succeeded
+- `DATABASE_URL` and `DIRECT_DATABASE_URL` are set correctly in your host

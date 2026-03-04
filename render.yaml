@@ -3,7 +3,7 @@ services:
     name: testify-app
     env: node
     plan: free
-    buildCommand: npm install && npm --prefix backend run prisma:generate
+    buildCommand: npm install && npm --prefix backend run prisma:migrate:deploy && npm --prefix backend run prisma:generate
     startCommand: npm start
     healthCheckPath: /api/health
     autoDeploy: true
