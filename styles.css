@@ -803,6 +803,15 @@ tr:last-child td {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  align-items: center;
+}
+
+.quiz-subject-label {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .quiz-subject-btn {
@@ -813,6 +822,11 @@ tr:last-child td {
   padding: 6px 10px;
   font: 700 0.72rem/1 "Space Grotesk", sans-serif;
   cursor: pointer;
+}
+
+.quiz-subject-btn small {
+  font-weight: 700;
+  opacity: 0.82;
 }
 
 .quiz-subject-btn:hover {

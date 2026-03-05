@@ -3263,10 +3263,20 @@
     }
 
     const subjectMap = new Map();
-    activeQuiz.questions.forEach((question) => {
+    activeQuiz.questions.forEach((question, index) => {
       const id = safeText(question && question.subjectId).trim();
-      if (!id || subjectMap.has(id)) return;
-      subjectMap.set(id, safeText(question.subjectName) || "Subject");
+      if (!id) return;
+      if (!subjectMap.has(id)) {
+        subjectMap.set(id, {
+          name: safeText(question.subjectName) || "Subject",
+          total: 0,
+          answered: 0,
+          firstIndex: index
+        });
+      }
+      const row = subjectMap.get(id);
+      row.total += 1;
+      if (activeQuiz.answers[index] !== null) row.answered += 1;
     });
     if (subjectMap.size <= 1) {
       switchEl.classList.add("hidden");
@@ -3276,24 +3286,32 @@
     const current = activeQuiz.questions[activeQuiz.index];
     const currentSubjectId = safeText(current && current.subjectId).trim();
     switchEl.classList.remove("hidden");
-    switchEl.innerHTML = Array.from(subjectMap.entries()).map(([subjectId, subjectName]) => {
+    switchEl.innerHTML = "<span class=\"quiz-subject-label\">Switch Subject:</span>" +
+      Array.from(subjectMap.entries()).map(([subjectId, meta]) => {
       const classes = ["quiz-subject-btn"];
       if (subjectId === currentSubjectId) classes.push("quiz-subject-btn-active");
-      return "<button type=\"button\" class=\"" + classes.join(" ") + "\" data-switch-subject=\"" + safeText(subjectId) + "\">" + safeText(subjectName) + "</button>";
+      return "<button type=\"button\" class=\"" + classes.join(" ") + "\" data-switch-subject=\"" + safeText(subjectId) + "\">" +
+        safeText(meta.name) + " <small>(" + meta.answered + "/" + meta.total + ")</small>" +
+      "</button>";
     }).join("");
+
+    function nextIndexForSubject(subjectId) {
+      let firstIndex = -1;
+      let firstUnanswered = -1;
+      activeQuiz.questions.forEach((question, idx) => {
+        if (String(question.subjectId || "") !== subjectId) return;
+        if (firstIndex < 0) firstIndex = idx;
+        if (firstUnanswered < 0 && activeQuiz.answers[idx] === null) firstUnanswered = idx;
+      });
+      return firstUnanswered >= 0 ? firstUnanswered : firstIndex;
+    }
 
     switchEl.querySelectorAll("[data-switch-subject]").forEach((button) => {
       button.addEventListener("click", () => {
         if (!activeQuiz || activeQuiz.completed) return;
         const subjectId = button.getAttribute("data-switch-subject") || "";
         if (!subjectId) return;
-        const from = activeQuiz.index + 1;
-        let nextIndex = activeQuiz.questions.findIndex((question, idx) => {
-          return idx >= from && String(question.subjectId || "") === subjectId;
-        });
-        if (nextIndex < 0) {
-          nextIndex = activeQuiz.questions.findIndex((question) => String(question.subjectId || "") === subjectId);
-        }
+        const nextIndex = nextIndexForSubject(subjectId);
         if (nextIndex < 0) return;
         activeQuiz.index = nextIndex;
         showQuizQuestion();
@@ -3351,6 +3369,7 @@
         button.classList.add("option-selected");
         feedbackEl.textContent = "Answer saved.";
         renderQuestionNavigator();
+        renderQuizSubjectSwitch();
       });
     });
 
