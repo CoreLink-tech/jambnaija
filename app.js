@@ -2067,6 +2067,7 @@
     if (!ids.size) {
       batches.splice(index, 1);
       setBatches(batches);
+      clearImportLocksForBatch(batch);
       return 0;
     }
 
@@ -2081,6 +2082,7 @@
       const deleted = Number(result && result.data && result.data.deleted);
       batches.splice(index, 1);
       setBatches(batches);
+      clearImportLocksForBatch(batch);
       await syncSubjectsFromBackend();
       return Number.isFinite(deleted) ? deleted : ids.size;
     }
@@ -2097,6 +2099,7 @@
     setSubjects(subjects);
     batches.splice(index, 1);
     setBatches(batches);
+    clearImportLocksForBatch(batch);
     return removed;
   }
 
@@ -2184,12 +2187,31 @@
     return removed;
   }
 
+  function clearImportLocksForBatch(batch) {
+    if (!batch || typeof batch !== "object") return;
+    const type = safeText(batch.type).trim().toLowerCase();
+    const subjectId = safeText(batch.subjectId).trim().toLowerCase();
+    const fileName = safeText(batch.fileName).trim().toLowerCase();
+    if (!type) return;
+    const locked = getImportedFiles();
+    Object.keys(locked).forEach((key) => {
+      const row = locked[key];
+      if (!row || row.type !== type) return;
+      const sameSubject = (safeText(row.subjectId).trim().toLowerCase() || "") === (subjectId || "");
+      const sameFile = fileName && (safeText(row.fileName).trim().toLowerCase() === fileName);
+      if (sameSubject && (sameFile || !fileName)) {
+        delete locked[key];
+      }
+    });
+    setImportedFiles(locked);
+  }
+
   function renderBatchTable() {
     const tbody = document.getElementById("batchTableBody");
     if (!tbody) return;
     const batches = getBatches().slice().reverse();
     if (!batches.length) {
-      tbody.innerHTML = "<tr><td colspan=\"6\">No upload batches yet.</td></tr>";
+      tbody.innerHTML = "<tr><td colspan=\"7\">No upload batches yet.</td></tr>";
       return;
     }
 
@@ -2205,6 +2227,7 @@
     tbody.innerHTML = batches.map((batch) => {
       const canDeleteQuestions = Array.isArray(batch.questionIds) && batch.questionIds.length > 0;
       return "<tr>" +
+        "<td><input type=\"checkbox\" data-select-batch=\"" + safeText(batch.id) + "\"></td>" +
         "<td>" + formatBatchType(batch.type) + "</td>" +
         "<td>" + safeText(batch.subjectName) + "</td>" +
         "<td>" + Number(batch.count || 0) + "</td>" +
@@ -2908,6 +2931,7 @@
     const clearCbtQuestionsBtn = document.getElementById("clearCbtQuestionsBtn");
     const clearBatchQuestionsBtn = document.getElementById("clearBatchQuestionsBtn");
     const clearBatchLogBtn = document.getElementById("clearBatchLogBtn");
+    const deleteSelectedBatchesBtn = document.getElementById("deleteSelectedBatchesBtn");
     const cleanupMessage = document.getElementById("adminCleanupMessage");
 
     if (clearSubjectsBtn) {
@@ -2977,6 +3001,32 @@
           cleanupMessage.className = "message message-success";
         }
         renderBatchTable();
+      });
+    }
+
+    if (deleteSelectedBatchesBtn) {
+      deleteSelectedBatchesBtn.addEventListener("click", async () => {
+        const picks = Array.from(document.querySelectorAll("[data-select-batch]:checked"))
+          .map((input) => String(input.getAttribute("data-select-batch") || "").trim())
+          .filter(Boolean);
+        if (!picks.length) {
+          if (cleanupMessage) {
+            cleanupMessage.textContent = "Select at least one JSON batch to delete.";
+            cleanupMessage.className = "message message-error";
+          }
+          return;
+        }
+        let removedQuestions = 0;
+        for (const id of picks) {
+          // eslint-disable-next-line no-await-in-loop
+          removedQuestions += await deleteBatchQuestions(id);
+        }
+        if (cleanupMessage) {
+          cleanupMessage.textContent = "Deleted " + picks.length + " JSON batch(es). Removed " + removedQuestions + " question(s).";
+          cleanupMessage.className = "message message-success";
+        }
+        renderBatchTable();
+        renderAdminTable();
       });
     }
 
@@ -3267,18 +3317,51 @@
     }, false);
   }
 
+  function parseSubjectQuestionMap(raw) {
+    const map = {};
+    const text = String(raw || "").trim();
+    if (!text) return map;
+    text.split(",").forEach((pair) => {
+      const parts = pair.split(":");
+      if (parts.length < 2) return;
+      const subjectId = safeText(parts[0]).trim();
+      const count = Number(parts[1]);
+      if (!subjectId || !Number.isInteger(count) || count < 1 || count > 100) return;
+      map[subjectId] = count;
+    });
+    return map;
+  }
+
+  function serializeSubjectQuestionMap(map, subjectIds) {
+    if (!map || typeof map !== "object") return "";
+    const pickedIds = Array.isArray(subjectIds) ? subjectIds.filter(Boolean) : Object.keys(map);
+    const rows = pickedIds.map((subjectId) => {
+      const count = Number(map[subjectId]);
+      if (!subjectId || !Number.isInteger(count) || count < 1 || count > 100) return "";
+      return subjectId + ":" + count;
+    }).filter(Boolean);
+    return rows.join(",");
+  }
+
   function buildPracticeUrl(mode, config, runNow) {
     const pickedMode = mode === MODE_CBT ? MODE_CBT : MODE_STUDY;
     const params = new URLSearchParams({ mode: pickedMode });
     const preselect = Array.isArray(config && config.preselect) ? config.preselect.filter(Boolean) : [];
     const selected = Array.isArray(config && config.subjects) ? config.subjects.filter(Boolean) : [];
     const questionCount = Number(config && config.questionCount);
+    const questionCountBySubject = config && config.questionCountBySubject && typeof config.questionCountBySubject === "object"
+      ? config.questionCountBySubject
+      : null;
     const totalMinutes = Number(config && config.totalMinutes);
     const examYear = Number(config && config.examYear);
     const topicName = safeText(config && config.topicName).trim();
     if (preselect.length) params.set("preselect", preselect.join(","));
     if (selected.length) params.set("subjects", selected.join(","));
     if (Number.isInteger(questionCount) && questionCount > 0) params.set("qps", String(questionCount));
+    if (pickedMode === MODE_CBT && questionCountBySubject) {
+      const packed = serializeSubjectQuestionMap(questionCountBySubject, selected.length ? selected : preselect);
+      if (packed) params.set("qpsmap", packed);
+    }
     if (Number.isInteger(totalMinutes) && totalMinutes > 0) params.set("mins", String(totalMinutes));
     if (pickedMode === MODE_CBT && Number.isInteger(examYear) && examYear > 0) params.set("year", String(examYear));
     if (pickedMode === MODE_STUDY && topicName) params.set("topic", topicName);
@@ -3429,6 +3512,7 @@
     const panel = document.getElementById("quizPanel");
     const feedback = document.getElementById("quizFeedback");
     const submitTopBtn = document.getElementById("submitExamTopBtn");
+    const quitTopBtn = document.getElementById("quitExamTopBtn");
     const navBar = document.getElementById("questionNavBar");
     const subjectSwitch = document.getElementById("quizSubjectSwitch");
     const timerEl = document.getElementById("quizTimer");
@@ -3437,6 +3521,7 @@
     if (panel) panel.classList.add("hidden");
     if (empty) empty.classList.remove("hidden");
     if (submitTopBtn) submitTopBtn.classList.add("hidden");
+    if (quitTopBtn) quitTopBtn.classList.add("hidden");
     if (navBar) navBar.classList.add("hidden");
     if (subjectSwitch) subjectSwitch.classList.add("hidden");
     if (timerEl) timerEl.textContent = "";
@@ -3761,6 +3846,10 @@
     const hasYearFilter = mode === MODE_CBT && Number.isInteger(examYear) && examYear > 0;
     const topicName = safeText(options && options.topicName).trim().toLowerCase();
     const hasTopicFilter = mode === MODE_STUDY && !!topicName;
+    const countMap = questionCountPerSubject && typeof questionCountPerSubject === "object"
+      ? questionCountPerSubject
+      : null;
+    const fallbackCount = Number(questionCountPerSubject);
     const questions = [];
 
     subjects.forEach((subject) => {
@@ -3770,7 +3859,13 @@
         if (hasTopicFilter && safeText(question.topic).trim().toLowerCase() !== topicName) return false;
         return true;
       });
-      const selected = shuffle(pool).slice(0, Math.min(questionCountPerSubject, pool.length));
+      const perSubjectCount = countMap
+        ? Number(countMap[subject.id])
+        : fallbackCount;
+      const safeCount = Number.isInteger(perSubjectCount) && perSubjectCount > 0
+        ? perSubjectCount
+        : 1;
+      const selected = shuffle(pool).slice(0, Math.min(safeCount, pool.length));
       selected.forEach((question) => {
         questions.push({
           question: question.question,
@@ -3816,9 +3911,11 @@
     const empty = document.getElementById("quizEmpty");
     const panel = document.getElementById("quizPanel");
     const submitTopBtn = document.getElementById("submitExamTopBtn");
+    const quitTopBtn = document.getElementById("quitExamTopBtn");
     if (empty) empty.classList.add("hidden");
     if (panel) panel.classList.remove("hidden");
     if (submitTopBtn) submitTopBtn.classList.remove("hidden");
+    if (quitTopBtn) quitTopBtn.classList.remove("hidden");
     if (setupMessage) {
       setupMessage.textContent = "Loaded " + questions.length + " question(s).";
       setupMessage.className = "message message-success";
@@ -3994,6 +4091,7 @@
     const preselect = String(params.get("preselect") || "").split(",").map((x) => x.trim()).filter(Boolean);
     const selectedFromQuery = String(params.get("subjects") || "").split(",").map((x) => x.trim()).filter(Boolean);
     const countParam = Number(params.get("qps"));
+    const countMapParam = parseSubjectQuestionMap(params.get("qpsmap"));
     const minutesParam = Number(params.get("mins"));
     const yearParam = Number(params.get("year"));
     const topicParam = safeText(params.get("topic")).trim();
@@ -4025,6 +4123,7 @@
     const prevBtn = document.getElementById("prevQuestionBtn");
     const endBtn = document.getElementById("endQuizBtn");
     const submitTopBtn = document.getElementById("submitExamTopBtn");
+    const quitTopBtn = document.getElementById("quitExamTopBtn");
     const setupCard = document.getElementById("setupCard");
     const setupMessage = document.getElementById("setupMessage");
     const backBtn = document.getElementById("practiceBackBtn");
@@ -4036,9 +4135,12 @@
     if (subtitle) subtitle.textContent = mode === MODE_CBT
       ? "Select up to 4 subjects, choose question/time settings, then start exam."
       : "Pick one subject, choose a topic, then start a focused study session.";
-    if (countLabel) countLabel.textContent = "Questions per subject (1-100)";
+    if (countLabel) countLabel.textContent = mode === MODE_CBT
+      ? "Default questions per subject (1-100)"
+      : "Questions per subject (1-100)";
     if (timeLabel) timeLabel.textContent = "Total exam time (hours, 0.5-4)";
     if (submitTopBtn) submitTopBtn.classList.add("hidden");
+    if (quitTopBtn) quitTopBtn.classList.add("hidden");
     if (setupCard) setupCard.classList.remove("hidden");
     if (setupSubjectTitle) {
       setupSubjectTitle.textContent = mode === MODE_CBT ? "Select Subjects (up to 4)" : "Select One Subject";
@@ -4065,13 +4167,33 @@
     }
 
     const countStorageKey = mode === MODE_CBT ? "testify_qps_cbt" : "testify_qps_study";
+    const countMapStorageKey = "testify_qps_map_cbt";
     const minutesStorageKey = mode === MODE_CBT ? "testify_minutes_cbt" : "testify_minutes_study";
     const yearStorageKey = "testify_year_cbt";
+    const storedQuestionCount = Number(localStorage.getItem(countStorageKey));
+    const fallbackCount = mode === MODE_CBT ? 40 : 20;
+    const initialDefaultQuestionCount = Number.isInteger(countParam) && countParam > 0
+      ? Math.min(countParam, 100)
+      : (Number.isInteger(storedQuestionCount) && storedQuestionCount > 0 ? Math.min(storedQuestionCount, 100) : fallbackCount);
+    const safeDefaultQuestionCount = Math.max(1, initialDefaultQuestionCount);
 
     const maxSelectableSubjects = mode === MODE_CBT ? 4 : 1;
     let selectedSubjectIds = defaultSelected.slice(0, maxSelectableSubjects);
     if (!selectedSubjectIds.length && availableSubjects.length) {
       selectedSubjectIds = [availableSubjects[0].id];
+    }
+    const storedCountMapRaw = mode === MODE_CBT ? getJSON(countMapStorageKey, {}) : {};
+    const storedCountMap = storedCountMapRaw && typeof storedCountMapRaw === "object" ? storedCountMapRaw : {};
+    let subjectQuestionCounts = {};
+    if (mode === MODE_CBT) {
+      selectedSubjectIds.forEach((subjectId) => {
+        const fromParam = Number(countMapParam[subjectId]);
+        const fromStored = Number(storedCountMap[subjectId]);
+        const picked = Number.isInteger(fromParam) && fromParam > 0
+          ? fromParam
+          : (Number.isInteger(fromStored) && fromStored > 0 ? fromStored : safeDefaultQuestionCount);
+        subjectQuestionCounts[subjectId] = Math.max(1, Math.min(100, picked));
+      });
     }
 
     function selectedIds() {
@@ -4141,16 +4263,45 @@
         const subject = getAvailableSubject(subjectId);
         if (!subject) return "";
         const count = subjectQuestionsByMode(subject, mode).length;
+        const pickedCount = mode === MODE_CBT
+          ? (Number(subjectQuestionCounts[subject.id]) || safeDefaultQuestionCount)
+          : 0;
         return "<div class=\"selected-subject-chip\">" +
-          "<div><strong>" + safeText(subject.name) + "</strong><small>" + count + " questions</small></div>" +
+          "<div><strong>" + safeText(subject.name) + "</strong><small>" + count + " questions</small>" +
+            (mode === MODE_CBT
+              ? ("<label class=\"subject-qps-inline\"><span>QTY</span><input type=\"number\" min=\"1\" max=\"100\" step=\"1\" value=\"" + pickedCount + "\" data-subject-qps=\"" + safeText(subject.id) + "\"></label>")
+              : "") +
+          "</div>" +
           "<button type=\"button\" class=\"selected-subject-remove\" data-remove-subject=\"" + safeText(subject.id) + "\">Remove</button>" +
         "</div>";
       }).join("");
+
+      if (mode === MODE_CBT) {
+        setupSelectedSubjects.querySelectorAll("[data-subject-qps]").forEach((input) => {
+          input.addEventListener("input", () => {
+            const subjectId = input.getAttribute("data-subject-qps") || "";
+            const value = Number(input.value);
+            if (!subjectId) return;
+            if (!Number.isInteger(value) || value < 1 || value > 100) return;
+            subjectQuestionCounts[subjectId] = value;
+          });
+          input.addEventListener("blur", () => {
+            const subjectId = input.getAttribute("data-subject-qps") || "";
+            const value = Number(input.value);
+            const safeValue = Number.isInteger(value) && value >= 1 && value <= 100
+              ? value
+              : (Number(subjectQuestionCounts[subjectId]) || safeDefaultQuestionCount);
+            input.value = String(safeValue);
+            if (subjectId) subjectQuestionCounts[subjectId] = safeValue;
+          });
+        });
+      }
 
       setupSelectedSubjects.querySelectorAll("[data-remove-subject]").forEach((button) => {
         button.addEventListener("click", () => {
           const id = button.getAttribute("data-remove-subject") || "";
           selectedSubjectIds = selectedSubjectIds.filter((item) => item !== id);
+          if (mode === MODE_CBT && id) delete subjectQuestionCounts[id];
           updateSelectedCount();
           renderSelectedSubjects();
           renderStudyTopicOptions();
@@ -4213,6 +4364,9 @@
             return;
           }
           selectedSubjectIds.push(id);
+          if (mode === MODE_CBT) {
+            subjectQuestionCounts[id] = Number(subjectQuestionCounts[id]) || safeDefaultQuestionCount;
+          }
           if (mode === MODE_STUDY && selectedSubjectIds.length > 1) {
             selectedSubjectIds = [id];
           }
@@ -4290,12 +4444,17 @@
     renderStudyTopicOptions();
 
     if (countInput) {
-      const stored = Number(localStorage.getItem(countStorageKey));
-      const fallbackCount = mode === MODE_CBT ? 40 : 20;
-      const pickedCount = Number.isInteger(countParam) && countParam > 0
-        ? Math.min(countParam, 100)
-        : (Number.isInteger(stored) && stored > 0 ? Math.min(stored, 100) : fallbackCount);
-      countInput.value = String(Math.max(1, pickedCount));
+      countInput.value = String(safeDefaultQuestionCount);
+      if (mode === MODE_CBT) {
+        countInput.addEventListener("input", () => {
+          const value = Number(countInput.value);
+          if (!Number.isInteger(value) || value < 1 || value > 100) return;
+          selectedSubjectIds.forEach((subjectId) => {
+            if (!subjectQuestionCounts[subjectId]) subjectQuestionCounts[subjectId] = value;
+          });
+          renderSelectedSubjects();
+        });
+      }
     }
     if (minutesInput) {
       const stored = Number(localStorage.getItem(minutesStorageKey));
@@ -4320,7 +4479,7 @@
     if (beginBtn) {
       beginBtn.addEventListener("click", () => {
         let subjectIds = selectedIds();
-        const questionCount = Number(countInput ? countInput.value : 0);
+        const questionCount = Number(countInput ? countInput.value : safeDefaultQuestionCount);
         const totalHours = Number(minutesInput ? minutesInput.value : 0);
         const totalMinutes = Math.round(totalHours * 60);
 
@@ -4358,6 +4517,22 @@
           }
           return;
         }
+        let questionCountBySubject = null;
+        if (mode === MODE_CBT) {
+          questionCountBySubject = {};
+          for (const subjectId of subjectIds) {
+            const countValue = Number(subjectQuestionCounts[subjectId] || questionCount);
+            if (!Number.isInteger(countValue) || countValue < 1 || countValue > 100) {
+              if (setupMessage) {
+                const subject = getAvailableSubject(subjectId);
+                setupMessage.textContent = (subject ? subject.name : "A subject") + " question count must be between 1 and 100.";
+                setupMessage.className = "message message-error";
+              }
+              return;
+            }
+            questionCountBySubject[subjectId] = countValue;
+          }
+        }
         if (!Number.isFinite(totalHours) || totalHours < 0.5 || totalHours > 4) {
           if (setupMessage) {
             setupMessage.textContent = "Total exam time must be between 0.5 and 4 hours.";
@@ -4374,6 +4549,7 @@
         }
 
         localStorage.setItem(countStorageKey, String(questionCount));
+        if (mode === MODE_CBT) setJSON(countMapStorageKey, questionCountBySubject || {});
         localStorage.setItem(minutesStorageKey, String(totalMinutes));
         if (mode === MODE_CBT) localStorage.setItem(yearStorageKey, String(selectedYear));
 
@@ -4381,6 +4557,7 @@
           preselect: subjectIds,
           subjects: subjectIds,
           questionCount,
+          questionCountBySubject: mode === MODE_CBT ? questionCountBySubject : null,
           totalMinutes,
           examYear: mode === MODE_CBT ? selectedYear : null,
           topicName: mode === MODE_STUDY ? selectedTopic : ""
@@ -4392,6 +4569,7 @@
     if (runNow) {
       if (modeTag) modeTag.textContent = "Mode: " + label + " (Running)";
       if (subtitle) subtitle.textContent = "Exam started. Submit from the top-right button when done.";
+      if (quitTopBtn) quitTopBtn.classList.remove("hidden");
 
       const runSubjectIds = selectedFromQuery.filter((id) => validSubjectIds.has(id)).slice(0, 4);
       if (mode === MODE_STUDY && runSubjectIds.length > 1) runSubjectIds.splice(1);
@@ -4407,6 +4585,18 @@
       const runTopic = mode === MODE_STUDY && setupTopicSelect
         ? safeText(setupTopicSelect.value || topicParam).trim()
         : "";
+      const runQuestionCountMap = mode === MODE_CBT
+        ? runSubjectIds.reduce((map, subjectId) => {
+          const fromParam = Number(countMapParam[subjectId]);
+          const fromState = Number(subjectQuestionCounts[subjectId]);
+          const fallback = Number.isInteger(questionCount) && questionCount > 0 ? questionCount : safeDefaultQuestionCount;
+          const chosen = Number.isInteger(fromParam) && fromParam > 0
+            ? fromParam
+            : (Number.isInteger(fromState) && fromState > 0 ? fromState : fallback);
+          map[subjectId] = Math.max(1, Math.min(100, chosen));
+          return map;
+        }, {})
+        : null;
 
       if (!runSubjectIds.length) {
         if (setupMessage) {
@@ -4418,7 +4608,7 @@
           setupMessage.textContent = "Select a study topic.";
           setupMessage.className = "message message-error";
         }
-      } else if (startQuiz(mode, runSubjectIds, questionCount, Math.max(30, totalMinutes), {
+      } else if (startQuiz(mode, runSubjectIds, mode === MODE_CBT ? runQuestionCountMap : questionCount, Math.max(30, totalMinutes), {
         examYear: runExamYear,
         topicName: runTopic
       }) && setupCard) {
@@ -4461,16 +4651,36 @@
     }
 
     if (submitTopBtn) submitTopBtn.addEventListener("click", finishQuiz);
+    if (quitTopBtn) {
+      quitTopBtn.addEventListener("click", () => {
+        if (!activeQuiz || activeQuiz.completed) {
+          window.location.href = "student.html";
+          return;
+        }
+        const ok = window.confirm("Quit this exam now? Your current progress will not be submitted.");
+        if (!ok) return;
+        endQuiz(true);
+        window.location.href = "student.html";
+      });
+    }
 
     if (endBtn) {
       endBtn.addEventListener("click", () => {
         if (runNow) {
           const selectedIds = selectedFromQuery.filter((id) => validSubjectIds.has(id));
           if (mode === MODE_STUDY && selectedIds.length > 1) selectedIds.splice(1);
+          const returnCountMap = mode === MODE_CBT
+            ? selectedIds.reduce((map, subjectId) => {
+              const value = Number(subjectQuestionCounts[subjectId] || Number(countInput ? countInput.value : safeDefaultQuestionCount));
+              map[subjectId] = Number.isInteger(value) && value > 0 ? Math.min(value, 100) : safeDefaultQuestionCount;
+              return map;
+            }, {})
+            : null;
           window.location.href = buildPracticeUrl(mode, {
             preselect: selectedIds,
             subjects: [],
             questionCount: Number(countInput ? countInput.value : 40),
+            questionCountBySubject: returnCountMap,
             totalMinutes: Math.round(Number(minutesInput ? minutesInput.value : 1) * 60),
             examYear: mode === MODE_CBT ? selectedYear : null,
             topicName: mode === MODE_STUDY && setupTopicSelect ? safeText(setupTopicSelect.value).trim() : ""

@@ -149,6 +149,28 @@
       gap: 10px;
     }
 
+    .subject-qps-inline {
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .subject-qps-inline span {
+      color: var(--muted);
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .subject-qps-inline input {
+      width: 84px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+    }
+
     @media (max-width: 760px) {
       #setupYearButtons {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -174,6 +196,7 @@
       <div class="toolbar">
         <span id="practiceModeTag" class="chip">Mode: Study</span>
         <span id="quizTimer" class="chip">00:00</span>
+        <button id="quitExamTopBtn" class="btn btn-soft hidden" type="button">Quit Exam</button>
         <button id="submitExamTopBtn" class="btn btn-primary hidden" type="button">Submit Exam</button>
       </div>
     </header>
@@ -267,7 +290,7 @@
 
   <nav id="questionNavBar" class="question-nav hidden" aria-label="Question navigation"></nav>
 
-  <script src="app.js?v=20260305g"></script>
+  <script src="app.js?v=20260305h"></script>
 </body>
 </html>
 
