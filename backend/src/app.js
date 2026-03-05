@@ -53,6 +53,7 @@ const allowedFrontendFiles = new Set([
   "admin-login.html",
   "admin.html",
   "activation.html",
+  "study.html",
   "practice.html",
   "result.html",
   "styles.css",

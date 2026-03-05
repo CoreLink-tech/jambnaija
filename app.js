@@ -2929,25 +2929,31 @@
   }
 
   function openPractice(mode, subjectId) {
-    const params = new URLSearchParams({ mode: mode === MODE_CBT ? MODE_CBT : MODE_STUDY });
-    if (subjectId) params.set("preselect", subjectId);
-    window.location.href = "practice.html?" + params.toString();
+    window.location.href = buildPracticeUrl(mode, {
+      preselect: subjectId ? [subjectId] : [],
+      subjects: [],
+      questionCount: Number(localStorage.getItem(mode === MODE_CBT ? "testify_qps_cbt" : "testify_qps_study") || (mode === MODE_CBT ? 40 : 20)),
+      totalMinutes: Number(localStorage.getItem(mode === MODE_CBT ? "testify_minutes_cbt" : "testify_minutes_study") || (mode === MODE_CBT ? 120 : 60))
+    }, false);
   }
 
   function buildPracticeUrl(mode, config, runNow) {
-    const params = new URLSearchParams({ mode: mode === MODE_CBT ? MODE_CBT : MODE_STUDY });
+    const pickedMode = mode === MODE_CBT ? MODE_CBT : MODE_STUDY;
+    const params = new URLSearchParams({ mode: pickedMode });
     const preselect = Array.isArray(config && config.preselect) ? config.preselect.filter(Boolean) : [];
     const selected = Array.isArray(config && config.subjects) ? config.subjects.filter(Boolean) : [];
     const questionCount = Number(config && config.questionCount);
     const totalMinutes = Number(config && config.totalMinutes);
     const examYear = Number(config && config.examYear);
+    const topicName = safeText(config && config.topicName).trim();
     if (preselect.length) params.set("preselect", preselect.join(","));
     if (selected.length) params.set("subjects", selected.join(","));
     if (Number.isInteger(questionCount) && questionCount > 0) params.set("qps", String(questionCount));
     if (Number.isInteger(totalMinutes) && totalMinutes > 0) params.set("mins", String(totalMinutes));
-    if (mode === MODE_CBT && Number.isInteger(examYear) && examYear > 0) params.set("year", String(examYear));
+    if (pickedMode === MODE_CBT && Number.isInteger(examYear) && examYear > 0) params.set("year", String(examYear));
+    if (pickedMode === MODE_STUDY && topicName) params.set("topic", topicName);
     if (runNow) params.set("run", "1");
-    return "practice.html?" + params.toString();
+    return (pickedMode === MODE_CBT ? "practice.html?" : "study.html?") + params.toString();
   }
 
   function renderSubjectCards(subjects, query, mode) {
@@ -3339,12 +3345,15 @@
     const subjects = getSubjects().filter((subject) => selectedIds.includes(subject.id));
     const examYear = Number(options && options.examYear);
     const hasYearFilter = mode === MODE_CBT && Number.isInteger(examYear) && examYear > 0;
+    const topicName = safeText(options && options.topicName).trim().toLowerCase();
+    const hasTopicFilter = mode === MODE_STUDY && !!topicName;
     const questions = [];
 
     subjects.forEach((subject) => {
       const modePool = subjectQuestionsByMode(subject, mode);
       const pool = modePool.filter((question) => {
         if (hasYearFilter && Number(question.year) !== examYear) return false;
+        if (hasTopicFilter && safeText(question.topic).trim().toLowerCase() !== topicName) return false;
         return true;
       });
       const selected = shuffle(pool).slice(0, Math.min(questionCountPerSubject, pool.length));
@@ -3368,6 +3377,7 @@
       if (setupMessage) {
         let message = "No questions found for selected filters.";
         if (hasYearFilter) message = "No questions found for selected subjects in " + examYear + ".";
+        if (hasTopicFilter) message = "No study questions found for topic '" + safeText(topicName) + "'.";
         setupMessage.textContent = message;
         setupMessage.className = "message message-error";
       }
@@ -3385,6 +3395,7 @@
       totalSeconds: totalMinutes * 60,
       remainingSeconds: totalMinutes * 60,
       examYear: hasYearFilter ? examYear : null,
+      topicName: hasTopicFilter ? topicName : "",
       timerId: null
     };
 
@@ -3451,7 +3462,32 @@
     if (search) search.addEventListener("input", () => renderSubjectCards(getSubjects(), search.value, studentMode));
 
     document.querySelectorAll("[data-mode]").forEach((button) => {
-      button.addEventListener("click", () => setStudentMode(button.getAttribute("data-mode") || MODE_STUDY));
+      button.addEventListener("click", () => {
+        const mode = button.getAttribute("data-mode") === MODE_CBT ? MODE_CBT : MODE_STUDY;
+        if (mode === MODE_STUDY) {
+          if (!canUseStudyMode(getAuth())) {
+            if (dashboardMessage) {
+              dashboardMessage.textContent = "Study mode is available on premium package only.";
+              dashboardMessage.className = "message message-error";
+              dashboardMessage.classList.remove("hidden");
+            }
+            return;
+          }
+          window.location.href = buildPracticeUrl(MODE_STUDY, {
+            preselect: [],
+            subjects: [],
+            questionCount: Number(localStorage.getItem("testify_qps_study") || 20),
+            totalMinutes: Number(localStorage.getItem("testify_minutes_study") || 60)
+          }, false);
+          return;
+        }
+        window.location.href = buildPracticeUrl(MODE_CBT, {
+          preselect: [],
+          subjects: [],
+          questionCount: Number(localStorage.getItem("testify_qps_cbt") || 40),
+          totalMinutes: Number(localStorage.getItem("testify_minutes_cbt") || 120)
+        }, false);
+      });
     });
     const modeStudyBtn = document.getElementById("modeStudyBtn");
     if (modeStudyBtn && !premiumAccess) {
@@ -3533,8 +3569,9 @@
     const auth = requireRole("student");
     if (!auth) return;
 
+    const pageType = String(document.body.getAttribute("data-page") || "").trim().toLowerCase();
     const params = new URLSearchParams(window.location.search || "");
-    const mode = params.get("mode") === MODE_CBT ? MODE_CBT : MODE_STUDY;
+    const mode = pageType === "study" ? MODE_STUDY : MODE_CBT;
     if (mode === MODE_STUDY && !canUseStudyMode(auth)) {
       window.location.href = "student.html";
       return;
@@ -3545,6 +3582,7 @@
     const countParam = Number(params.get("qps"));
     const minutesParam = Number(params.get("mins"));
     const yearParam = Number(params.get("year"));
+    const topicParam = safeText(params.get("topic")).trim();
     const allSubjects = getSubjects();
 
     const availableSubjects = allSubjects.filter((subject) => subjectQuestionsByMode(subject, mode).length > 0);
@@ -3558,6 +3596,8 @@
     const setupSubjectChecks = document.getElementById("setupSubjectChecks");
     const setupYearSection = document.getElementById("setupYearSection");
     const setupYearButtons = document.getElementById("setupYearButtons");
+    const setupTopicSection = document.getElementById("setupTopicSection");
+    const setupTopicSelect = document.getElementById("setupTopicSelect");
     const setupSelectedCount = document.getElementById("setupSelectedCount");
     const countInput = document.getElementById("setupQuestionPerSubject");
     const minutesInput = document.getElementById("setupTotalMinutes");
@@ -3578,7 +3618,7 @@
     if (modeTag) modeTag.textContent = "Mode: " + label;
     if (subtitle) subtitle.textContent = mode === MODE_CBT
       ? "Select up to 4 subjects, choose question/time settings, then start exam."
-      : "Pick a subject and launch a focused practice session.";
+      : "Pick one subject, choose a topic, then start a focused study session.";
     if (countLabel) countLabel.textContent = "Questions per subject (1-100)";
     if (timeLabel) timeLabel.textContent = "Total exam time (minutes, 10-240)";
     if (submitTopBtn) submitTopBtn.classList.add("hidden");
@@ -3617,12 +3657,42 @@
       return Array.from(setupSubjectChecks.querySelectorAll("[data-subject-check]:checked")).map((node) => node.getAttribute("data-subject-check") || "");
     }
 
+    function selectedStudySubject() {
+      if (mode !== MODE_STUDY) return null;
+      const id = selectedIds()[0];
+      if (!id) return null;
+      return availableSubjects.find((subject) => subject.id === id) || null;
+    }
+
     function updateSelectedCount() {
       if (!setupSelectedCount) return;
       const current = selectedIds().length;
       setupSelectedCount.textContent = mode === MODE_CBT
         ? String(current) + "/4 Selected"
         : String(current) + " Selected";
+    }
+
+    function renderStudyTopicOptions() {
+      if (!setupTopicSection || !setupTopicSelect) return;
+      setupTopicSection.classList.toggle("hidden", mode !== MODE_STUDY);
+      if (mode !== MODE_STUDY) return;
+
+      const picked = selectedStudySubject();
+      const topics = picked ? subjectTopics(picked, MODE_STUDY) : [];
+
+      if (!picked || !topics.length) {
+        setupTopicSelect.innerHTML = "<option value=\"\">No topic available</option>";
+        setupTopicSelect.disabled = true;
+        return;
+      }
+
+      const initialTopic = topicParam && topics.includes(topicParam) ? topicParam : topics[0];
+      const previous = setupTopicSelect.value || initialTopic;
+      const selectedTopic = topics.includes(previous) ? previous : initialTopic;
+      setupTopicSelect.innerHTML = topics.map((topic) => {
+        return "<option value=\"" + safeText(topic) + "\"" + (topic === selectedTopic ? " selected" : "") + ">" + safeText(topic) + "</option>";
+      }).join("");
+      setupTopicSelect.disabled = false;
     }
 
     const availableYears = Array.from(new Set(
@@ -3681,10 +3751,12 @@
               if (other !== input) other.checked = false;
             });
             updateSelectedCount();
+            renderStudyTopicOptions();
             return;
           }
           if (checked.length <= 4) {
             updateSelectedCount();
+            renderStudyTopicOptions();
             return;
           }
           input.checked = false;
@@ -3693,9 +3765,11 @@
             setupMessage.className = "message message-error";
           }
           updateSelectedCount();
+          renderStudyTopicOptions();
         });
       });
       updateSelectedCount();
+      renderStudyTopicOptions();
     }
 
     if (countInput) {
@@ -3748,6 +3822,16 @@
           }
           return;
         }
+        const selectedTopic = mode === MODE_STUDY && setupTopicSelect
+          ? safeText(setupTopicSelect.value).trim()
+          : "";
+        if (mode === MODE_STUDY && !selectedTopic) {
+          if (setupMessage) {
+            setupMessage.textContent = "Select a study topic.";
+            setupMessage.className = "message message-error";
+          }
+          return;
+        }
         if (!Number.isInteger(questionCount) || questionCount < 1 || questionCount > 100) {
           if (setupMessage) {
             setupMessage.textContent = "Questions per subject must be between 1 and 100.";
@@ -3779,7 +3863,8 @@
           subjects: subjectIds,
           questionCount,
           totalMinutes,
-          examYear: mode === MODE_CBT ? selectedYear : null
+          examYear: mode === MODE_CBT ? selectedYear : null,
+          topicName: mode === MODE_STUDY ? selectedTopic : ""
         }, true);
         window.location.href = nextUrl;
       });
@@ -3800,13 +3885,24 @@
       const runExamYear = mode === MODE_CBT && Number.isInteger(yearParam) && yearParam > 0
         ? yearParam
         : (mode === MODE_CBT ? selectedYear : null);
+      const runTopic = mode === MODE_STUDY && setupTopicSelect
+        ? safeText(setupTopicSelect.value || topicParam).trim()
+        : "";
 
       if (!runSubjectIds.length) {
         if (setupMessage) {
           setupMessage.textContent = "No valid subject selected for this exam.";
           setupMessage.className = "message message-error";
         }
-      } else if (startQuiz(mode, runSubjectIds, questionCount, Math.max(10, totalMinutes), { examYear: runExamYear }) && setupCard) {
+      } else if (mode === MODE_STUDY && !runTopic) {
+        if (setupMessage) {
+          setupMessage.textContent = "Select a study topic.";
+          setupMessage.className = "message message-error";
+        }
+      } else if (startQuiz(mode, runSubjectIds, questionCount, Math.max(10, totalMinutes), {
+        examYear: runExamYear,
+        topicName: runTopic
+      }) && setupCard) {
         setupCard.classList.add("hidden");
       }
     }
@@ -3841,7 +3937,8 @@
             subjects: [],
             questionCount: Number(countInput ? countInput.value : 40),
             totalMinutes: Number(minutesInput ? minutesInput.value : 60),
-            examYear: mode === MODE_CBT ? selectedYear : null
+            examYear: mode === MODE_CBT ? selectedYear : null,
+            topicName: mode === MODE_STUDY && setupTopicSelect ? safeText(setupTopicSelect.value).trim() : ""
           }, false);
           return;
         }
@@ -3946,12 +4043,12 @@
     applyHapticsAndMotion();
 
     const auth = await refreshAuthFromBackend();
-    if (auth && auth.needsActivation && (page === "student" || page === "practice" || page === "result")) {
+    if (auth && auth.needsActivation && (page === "student" || page === "practice" || page === "study" || page === "result")) {
       window.location.href = buildActivationUrl(auth.email);
       return;
     }
 
-    if (page === "admin" || page === "student" || page === "practice") {
+    if (page === "admin" || page === "student" || page === "practice" || page === "study") {
       if (auth && auth.source === "backend") {
         const subjectSync = await syncSubjectsFromBackend();
         if (!subjectSync.ok) ensureSeedData();
@@ -3961,7 +4058,7 @@
       ensureQuestionIds();
     }
 
-    if (page === "student" || page === "practice" || page === "result") {
+    if (page === "student" || page === "practice" || page === "study" || page === "result") {
       if (auth && auth.source === "backend" && auth.role === "student") {
         await flushAttemptSyncQueue();
         await syncAttemptsFromBackend();
@@ -3975,6 +4072,7 @@
     if (page === "admin") initAdminPage();
     if (page === "student") initStudentPage();
     if (page === "practice") initPracticePage();
+    if (page === "study") initPracticePage();
     if (page === "result") initResultPage();
   }
 
