@@ -45,6 +45,10 @@ body[data-page="practice"] {
   padding-bottom: 120px;
 }
 
+body[data-page="study"] {
+  padding-bottom: 120px;
+}
+
 body[data-page="result"] {
   padding-bottom: 22px;
 }
@@ -672,87 +676,99 @@ tr:last-child td {
   gap: 10px;
 }
 
-.subject-check-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.subject-check-item {
+.subject-picker {
   position: relative;
-  display: block;
-  cursor: pointer;
 }
 
-.subject-check-item input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.subject-check-item > span {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.subject-picker-dropdown {
+  margin-top: 8px;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(19, 33, 61, 0.1);
+  overflow: auto;
+  max-height: 240px;
+}
+
+.subject-picker-option {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(19, 33, 61, 0.08);
   background: #fff;
   padding: 10px 12px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.subject-picker-option:last-child {
+  border-bottom: 0;
+}
+
+.subject-picker-option:hover {
+  background: #f6f9ff;
+}
+
+.subject-picker-option strong {
+  display: block;
+  font: 700 0.86rem/1.2 "Space Grotesk", sans-serif;
   color: var(--ink);
-  font-size: 0.84rem;
-  font-weight: 700;
-  transition: border-color 0.16s ease, background 0.16s ease;
 }
 
-.subject-check-item > span:hover {
-  border-color: rgba(29, 78, 216, 0.32);
-  background: #f8fbff;
+.subject-picker-option small {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-.subject-check-item:has(input:checked) > span {
-  border-color: rgba(29, 78, 216, 0.62);
-  background: #eef5ff;
-}
-
-.subject-check-item > span > span {
-  font-size: 0.84rem;
-  font-weight: 700;
-  color: var(--ink);
-}
-
-.subject-check-body {
-  width: 100%;
-  justify-content: flex-start;
-}
-
-.subject-check-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
+.selected-subjects {
+  margin-top: 10px;
   display: grid;
-  place-items: center;
-  background: #f1f5f9;
-  color: #5f6f89;
-  font-size: 1.45rem;
-  flex-shrink: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
 }
 
-.subject-check-main {
-  display: grid;
-  gap: 2px;
+.selected-subject-chip {
+  border: 1px solid rgba(29, 78, 216, 0.24);
+  border-radius: 12px;
+  background: #f7faff;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
-.subject-check-main strong {
+.selected-subject-chip strong {
   font: 700 0.84rem/1.2 "Space Grotesk", sans-serif;
   color: var(--ink);
 }
 
-.subject-check-main small {
+.selected-subject-chip small {
+  display: block;
+  margin-top: 2px;
   color: var(--muted);
-  font-size: 0.66rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  font-weight: 800;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.selected-subject-remove {
+  border: 1px solid rgba(220, 38, 38, 0.24);
+  border-radius: 9px;
+  background: #fff;
+  color: #b91c1c;
+  padding: 4px 8px;
+  font: 700 0.72rem/1 "Space Grotesk", sans-serif;
+  cursor: pointer;
+}
+
+.selected-subject-remove:hover {
+  background: #fff1f1;
 }
 
 .empty-state {
@@ -781,6 +797,33 @@ tr:last-child td {
   color: var(--muted);
   font-size: 0.78rem;
   font-weight: 700;
+}
+
+.quiz-subject-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.quiz-subject-btn {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  padding: 6px 10px;
+  font: 700 0.72rem/1 "Space Grotesk", sans-serif;
+  cursor: pointer;
+}
+
+.quiz-subject-btn:hover {
+  border-color: rgba(29, 78, 216, 0.44);
+  background: #f5f8ff;
+}
+
+.quiz-subject-btn-active {
+  border-color: rgba(29, 78, 216, 0.62);
+  background: #eaf1ff;
+  color: var(--primary-strong);
 }
 
 .quiz-question {
@@ -1157,7 +1200,7 @@ body[data-page="practice"] .interactive:active {
     grid-template-columns: 1fr;
   }
 
-  .subject-check-grid {
+  .selected-subjects {
     grid-template-columns: 1fr;
   }
 

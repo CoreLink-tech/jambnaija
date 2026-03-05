@@ -2986,16 +2986,10 @@
 
     if (mode === MODE_CBT) {
       container.innerHTML = "<article class=\"subject-card\">" +
-        "<h4>Select CBT Subjects</h4>" +
-        "<p>Choose up to 4 subjects for JAMB CBT setup.</p>" +
-        "<div class=\"subject-check-grid\">" +
-          available.map((subject, idx) => {
-            const questionCount = subjectQuestionsByMode(subject, mode).length;
-            return "<label class=\"subject-check-item\">" +
-              "<input type=\"checkbox\" data-cbt-select=\"" + safeText(subject.id) + "\"" + (idx < 4 ? " checked" : "") + ">" +
-              "<span>" + safeText(subject.name) + " (" + questionCount + ")</span>" +
-            "</label>";
-          }).join("") +
+        "<h4>CBT Setup</h4>" +
+        "<p>Use the setup page to search and pick up to 4 subjects, choose year, then start your simulation.</p>" +
+        "<div class=\"chips\">" +
+          available.slice(0, 10).map((subject) => "<span class=\"chip chip-inline\">" + safeText(subject.name) + "</span>").join("") +
         "</div>" +
         "<div class=\"button-row\">" +
           "<button id=\"openCbtSetupBtn\" type=\"button\" class=\"btn btn-primary\">Open CBT Setup</button>" +
@@ -3004,30 +2998,10 @@
       "</article>";
 
       const setupBtn = document.getElementById("openCbtSetupBtn");
-      const cbtMessage = document.getElementById("cbtSubjectMessage");
       if (setupBtn) {
         setupBtn.addEventListener("click", () => {
-          const selectedIds = Array.from(container.querySelectorAll("[data-cbt-select]:checked")).map((node) => node.getAttribute("data-cbt-select") || "");
-          if (!selectedIds.length) {
-            if (cbtMessage) {
-              cbtMessage.textContent = "Select at least one subject.";
-              cbtMessage.className = "message message-error";
-            }
-            return;
-          }
-          if (selectedIds.length > 4) {
-            if (cbtMessage) {
-              cbtMessage.textContent = "Maximum of 4 subjects allowed.";
-              cbtMessage.className = "message message-error";
-            }
-            return;
-          }
-          if (cbtMessage) {
-            cbtMessage.textContent = "";
-            cbtMessage.className = "message";
-          }
           window.location.href = buildPracticeUrl(MODE_CBT, {
-            preselect: selectedIds,
+            preselect: [],
             subjects: [],
             questionCount: Number(localStorage.getItem("testify_qps_cbt") || 40),
             totalMinutes: Number(localStorage.getItem("testify_minutes_cbt") || 120)
@@ -3126,6 +3100,7 @@
     const feedback = document.getElementById("quizFeedback");
     const submitTopBtn = document.getElementById("submitExamTopBtn");
     const navBar = document.getElementById("questionNavBar");
+    const subjectSwitch = document.getElementById("quizSubjectSwitch");
     const timerEl = document.getElementById("quizTimer");
     stopQuizTimer();
     activeQuiz = null;
@@ -3133,6 +3108,7 @@
     if (empty) empty.classList.remove("hidden");
     if (submitTopBtn) submitTopBtn.classList.add("hidden");
     if (navBar) navBar.classList.add("hidden");
+    if (subjectSwitch) subjectSwitch.classList.add("hidden");
     if (timerEl) timerEl.textContent = "";
     if (!silent && feedback) {
       feedback.textContent = "Session ended.";
@@ -3159,6 +3135,52 @@
       button.addEventListener("click", () => {
         if (!activeQuiz || activeQuiz.completed) return;
         activeQuiz.index = Number(button.getAttribute("data-nav-index"));
+        showQuizQuestion();
+      });
+    });
+  }
+
+  function renderQuizSubjectSwitch() {
+    const switchEl = document.getElementById("quizSubjectSwitch");
+    if (!switchEl || !activeQuiz || activeQuiz.completed || activeQuiz.mode !== MODE_CBT) {
+      if (switchEl) switchEl.classList.add("hidden");
+      return;
+    }
+
+    const subjectMap = new Map();
+    activeQuiz.questions.forEach((question) => {
+      const id = safeText(question && question.subjectId).trim();
+      if (!id || subjectMap.has(id)) return;
+      subjectMap.set(id, safeText(question.subjectName) || "Subject");
+    });
+    if (subjectMap.size <= 1) {
+      switchEl.classList.add("hidden");
+      return;
+    }
+
+    const current = activeQuiz.questions[activeQuiz.index];
+    const currentSubjectId = safeText(current && current.subjectId).trim();
+    switchEl.classList.remove("hidden");
+    switchEl.innerHTML = Array.from(subjectMap.entries()).map(([subjectId, subjectName]) => {
+      const classes = ["quiz-subject-btn"];
+      if (subjectId === currentSubjectId) classes.push("quiz-subject-btn-active");
+      return "<button type=\"button\" class=\"" + classes.join(" ") + "\" data-switch-subject=\"" + safeText(subjectId) + "\">" + safeText(subjectName) + "</button>";
+    }).join("");
+
+    switchEl.querySelectorAll("[data-switch-subject]").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (!activeQuiz || activeQuiz.completed) return;
+        const subjectId = button.getAttribute("data-switch-subject") || "";
+        if (!subjectId) return;
+        const from = activeQuiz.index + 1;
+        let nextIndex = activeQuiz.questions.findIndex((question, idx) => {
+          return idx >= from && String(question.subjectId || "") === subjectId;
+        });
+        if (nextIndex < 0) {
+          nextIndex = activeQuiz.questions.findIndex((question) => String(question.subjectId || "") === subjectId);
+        }
+        if (nextIndex < 0) return;
+        activeQuiz.index = nextIndex;
         showQuizQuestion();
       });
     });
@@ -3218,6 +3240,7 @@
     });
 
     renderQuestionNavigator();
+    renderQuizSubjectSwitch();
     renderQuizTimer();
   }
 
@@ -3593,7 +3616,10 @@
     const heading = document.getElementById("practiceHeading");
     const modeTag = document.getElementById("practiceModeTag");
     const subtitle = document.getElementById("practiceSubtitle");
-    const setupSubjectChecks = document.getElementById("setupSubjectChecks");
+    const setupSubjectTitle = document.getElementById("setupSubjectTitle");
+    const setupSubjectSearch = document.getElementById("setupSubjectSearch");
+    const setupSubjectDropdown = document.getElementById("setupSubjectDropdown");
+    const setupSelectedSubjects = document.getElementById("setupSelectedSubjects");
     const setupYearSection = document.getElementById("setupYearSection");
     const setupYearButtons = document.getElementById("setupYearButtons");
     const setupTopicSection = document.getElementById("setupTopicSection");
@@ -3623,9 +3649,19 @@
     if (timeLabel) timeLabel.textContent = "Total exam time (minutes, 10-240)";
     if (submitTopBtn) submitTopBtn.classList.add("hidden");
     if (setupCard) setupCard.classList.remove("hidden");
+    if (setupSubjectTitle) {
+      setupSubjectTitle.textContent = mode === MODE_CBT ? "Select Subjects (up to 4)" : "Select One Subject";
+    }
     if (!hasAvailableSubjects) {
-      if (setupSubjectChecks) {
-        setupSubjectChecks.innerHTML = "<div class=\"empty-state\">No " + (mode === MODE_CBT ? "CBT" : "study") + " questions available yet. Contact admin.</div>";
+      if (setupSubjectDropdown) {
+        setupSubjectDropdown.classList.add("hidden");
+      }
+      if (setupSelectedSubjects) {
+        setupSelectedSubjects.innerHTML = "<div class=\"empty-state\">No " + (mode === MODE_CBT ? "CBT" : "study") + " questions available yet. Contact admin.</div>";
+      }
+      if (setupSubjectSearch) {
+        setupSubjectSearch.disabled = true;
+        setupSubjectSearch.placeholder = "No subjects available";
       }
       if (setupSelectedCount) {
         setupSelectedCount.textContent = mode === MODE_CBT ? "0/4 Selected" : "0 Selected";
@@ -3641,35 +3677,37 @@
     const minutesStorageKey = mode === MODE_CBT ? "testify_minutes_cbt" : "testify_minutes_study";
     const yearStorageKey = "testify_year_cbt";
 
-    function subjectIcon(name) {
-      const key = String(name || "").toLowerCase();
-      if (key.includes("english")) return "language";
-      if (key.includes("mathematics") || key.includes("math")) return "function";
-      if (key.includes("physics")) return "science";
-      if (key.includes("chemistry")) return "experiment";
-      if (key.includes("biology")) return "biotech";
-      if (key.includes("economics")) return "payments";
-      return "auto_stories";
+    const maxSelectableSubjects = mode === MODE_CBT ? 4 : 1;
+    let selectedSubjectIds = defaultSelected.slice(0, maxSelectableSubjects);
+    if (!selectedSubjectIds.length && availableSubjects.length) {
+      selectedSubjectIds = [availableSubjects[0].id];
     }
 
     function selectedIds() {
-      if (!setupSubjectChecks) return [];
-      return Array.from(setupSubjectChecks.querySelectorAll("[data-subject-check]:checked")).map((node) => node.getAttribute("data-subject-check") || "");
+      return selectedSubjectIds.slice();
+    }
+
+    function getAvailableSubject(subjectId) {
+      return availableSubjects.find((subject) => subject.id === subjectId) || null;
     }
 
     function selectedStudySubject() {
       if (mode !== MODE_STUDY) return null;
-      const id = selectedIds()[0];
-      if (!id) return null;
-      return availableSubjects.find((subject) => subject.id === id) || null;
+      const id = selectedSubjectIds[0];
+      return id ? getAvailableSubject(id) : null;
     }
 
     function updateSelectedCount() {
       if (!setupSelectedCount) return;
-      const current = selectedIds().length;
+      const current = selectedSubjectIds.length;
       setupSelectedCount.textContent = mode === MODE_CBT
         ? String(current) + "/4 Selected"
         : String(current) + " Selected";
+    }
+
+    function closeSubjectDropdown() {
+      if (!setupSubjectDropdown) return;
+      setupSubjectDropdown.classList.add("hidden");
     }
 
     function renderStudyTopicOptions() {
@@ -3680,7 +3718,13 @@
       const picked = selectedStudySubject();
       const topics = picked ? subjectTopics(picked, MODE_STUDY) : [];
 
-      if (!picked || !topics.length) {
+      if (!picked) {
+        setupTopicSelect.innerHTML = "<option value=\"\">Select a subject first</option>";
+        setupTopicSelect.disabled = true;
+        return;
+      }
+
+      if (!topics.length) {
         setupTopicSelect.innerHTML = "<option value=\"\">No topic available</option>";
         setupTopicSelect.disabled = true;
         return;
@@ -3693,6 +3737,114 @@
         return "<option value=\"" + safeText(topic) + "\"" + (topic === selectedTopic ? " selected" : "") + ">" + safeText(topic) + "</option>";
       }).join("");
       setupTopicSelect.disabled = false;
+    }
+
+    function renderSelectedSubjects() {
+      if (!setupSelectedSubjects) return;
+      if (!selectedSubjectIds.length) {
+        setupSelectedSubjects.innerHTML = "<div class=\"empty-state\">No subject selected yet. Use search above.</div>";
+        return;
+      }
+
+      setupSelectedSubjects.innerHTML = selectedSubjectIds.map((subjectId) => {
+        const subject = getAvailableSubject(subjectId);
+        if (!subject) return "";
+        const count = subjectQuestionsByMode(subject, mode).length;
+        return "<div class=\"selected-subject-chip\">" +
+          "<div><strong>" + safeText(subject.name) + "</strong><small>" + count + " questions</small></div>" +
+          "<button type=\"button\" class=\"selected-subject-remove\" data-remove-subject=\"" + safeText(subject.id) + "\">Remove</button>" +
+        "</div>";
+      }).join("");
+
+      setupSelectedSubjects.querySelectorAll("[data-remove-subject]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const id = button.getAttribute("data-remove-subject") || "";
+          selectedSubjectIds = selectedSubjectIds.filter((item) => item !== id);
+          updateSelectedCount();
+          renderSelectedSubjects();
+          renderStudyTopicOptions();
+          renderSubjectDropdown(setupSubjectSearch ? setupSubjectSearch.value : "");
+        });
+      });
+    }
+
+    function renderSubjectDropdown(searchValue) {
+      if (!setupSubjectDropdown || !setupSubjectSearch) return;
+
+      const term = safeText(searchValue).trim().toLowerCase();
+      const selectedSet = new Set(selectedSubjectIds);
+      const availableRows = availableSubjects.filter((subject) => {
+        if (selectedSet.has(subject.id)) return false;
+        if (!term) return true;
+        return subject.name.toLowerCase().includes(term);
+      });
+
+      if (!availableRows.length) {
+        setupSubjectDropdown.innerHTML = "<div class=\"empty-state\" style=\"margin:8px;\">No matching subjects.</div>";
+        setupSubjectDropdown.classList.remove("hidden");
+        return;
+      }
+
+      setupSubjectDropdown.innerHTML = availableRows.map((subject) => {
+        const count = subjectQuestionsByMode(subject, mode).length;
+        return "<button type=\"button\" class=\"subject-picker-option\" data-add-subject=\"" + safeText(subject.id) + "\">" +
+          "<span><strong>" + safeText(subject.name) + "</strong><small>" + count + " questions</small></span>" +
+          "<span class=\"material-symbols-outlined\" style=\"font-size:1rem;color:#1e40af;\">add</span>" +
+        "</button>";
+      }).join("");
+      setupSubjectDropdown.classList.remove("hidden");
+
+      setupSubjectDropdown.querySelectorAll("[data-add-subject]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const id = button.getAttribute("data-add-subject") || "";
+          if (!id) return;
+          if (selectedSubjectIds.includes(id)) return;
+          if (selectedSubjectIds.length >= maxSelectableSubjects) {
+            if (setupMessage) {
+              setupMessage.textContent = mode === MODE_CBT
+                ? "Maximum of 4 subjects allowed."
+                : "Study mode allows one subject at a time.";
+              setupMessage.className = "message message-error";
+            }
+            return;
+          }
+          selectedSubjectIds.push(id);
+          if (mode === MODE_STUDY && selectedSubjectIds.length > 1) {
+            selectedSubjectIds = [id];
+          }
+          if (setupMessage) {
+            setupMessage.textContent = "";
+            setupMessage.className = "message";
+          }
+          updateSelectedCount();
+          renderSelectedSubjects();
+          renderStudyTopicOptions();
+          if (setupSubjectSearch) setupSubjectSearch.value = "";
+          renderSubjectDropdown("");
+        });
+      });
+    }
+
+    if (setupSubjectSearch && setupSubjectDropdown) {
+      setupSubjectSearch.addEventListener("focus", () => {
+        renderSubjectDropdown(setupSubjectSearch.value);
+      });
+      setupSubjectSearch.addEventListener("click", () => {
+        renderSubjectDropdown(setupSubjectSearch.value);
+      });
+      setupSubjectSearch.addEventListener("input", () => {
+        renderSubjectDropdown(setupSubjectSearch.value);
+      });
+      setupSubjectSearch.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeSubjectDropdown();
+      });
+      document.addEventListener("click", (event) => {
+        const target = event.target;
+        if (!target) return;
+        const insideSearch = setupSubjectSearch.contains(target);
+        const insideDropdown = setupSubjectDropdown.contains(target);
+        if (!insideSearch && !insideDropdown) closeSubjectDropdown();
+      });
     }
 
     const availableYears = Array.from(new Set(
@@ -3729,48 +3881,9 @@
       renderYearButtons();
     }
 
-    if (setupSubjectChecks) {
-      const preselectedSet = new Set(defaultSelected);
-      setupSubjectChecks.innerHTML = availableSubjects.map((subject, index) => {
-        const checked = preselectedSet.has(subject.id) || (!preselectedSet.size && index === 0);
-        const count = subjectQuestionsByMode(subject, mode).length;
-        return "<label class=\"subject-check-item group\">" +
-          "<input type=\"checkbox\" data-subject-check=\"" + safeText(subject.id) + "\"" + (checked ? " checked" : "") + ">" +
-          "<span class=\"subject-check-body\">" +
-            "<span class=\"subject-check-icon material-symbols-outlined\">" + subjectIcon(subject.name) + "</span>" +
-            "<span class=\"subject-check-main\"><strong>" + safeText(subject.name) + "</strong><small>" + count + " questions</small></span>" +
-          "</span>" +
-        "</label>";
-      }).join("");
-
-      setupSubjectChecks.querySelectorAll("[data-subject-check]").forEach((input) => {
-        input.addEventListener("change", () => {
-          const checked = selectedIds();
-          if (mode === MODE_STUDY && checked.length > 1) {
-            setupSubjectChecks.querySelectorAll("[data-subject-check]").forEach((other) => {
-              if (other !== input) other.checked = false;
-            });
-            updateSelectedCount();
-            renderStudyTopicOptions();
-            return;
-          }
-          if (checked.length <= 4) {
-            updateSelectedCount();
-            renderStudyTopicOptions();
-            return;
-          }
-          input.checked = false;
-          if (setupMessage) {
-            setupMessage.textContent = "Maximum of 4 subjects allowed.";
-            setupMessage.className = "message message-error";
-          }
-          updateSelectedCount();
-          renderStudyTopicOptions();
-        });
-      });
-      updateSelectedCount();
-      renderStudyTopicOptions();
-    }
+    updateSelectedCount();
+    renderSelectedSubjects();
+    renderStudyTopicOptions();
 
     if (countInput) {
       const stored = Number(localStorage.getItem(countStorageKey));
@@ -3800,7 +3913,6 @@
 
     if (beginBtn) {
       beginBtn.addEventListener("click", () => {
-        if (!setupSubjectChecks) return;
         let subjectIds = selectedIds();
         const questionCount = Number(countInput ? countInput.value : 0);
         const totalMinutes = Number(minutesInput ? minutesInput.value : 0);

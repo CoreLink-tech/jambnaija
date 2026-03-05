@@ -259,8 +259,15 @@
             </div>
 
             <div class="setup-block">
-              <h4>Select Subjects (up to 4)</h4>
-              <div id="setupSubjectChecks" class="subject-check-grid"></div>
+              <h4 id="setupSubjectTitle">Select Subjects (up to 4)</h4>
+              <div class="subject-picker">
+                <label class="field">
+                  <span>Search and add subjects</span>
+                  <input id="setupSubjectSearch" type="search" placeholder="Type subject name..." autocomplete="off">
+                </label>
+                <div id="setupSubjectDropdown" class="subject-picker-dropdown hidden" role="listbox" aria-label="Subject options"></div>
+              </div>
+              <div id="setupSelectedSubjects" class="selected-subjects"></div>
             </div>
 
             <div id="setupTopicSection" class="setup-block hidden">
@@ -303,6 +310,7 @@
 
           <div id="quizPanel" class="quiz-shell hidden">
             <p class="quiz-meta"><span id="quizSubject"></span><span id="quizProgress"></span></p>
+            <div id="quizSubjectSwitch" class="quiz-subject-switch hidden"></div>
             <p id="quizYear" class="quiz-year"></p>
             <h4 id="quizQuestion" class="quiz-question"></h4>
             <div id="quizOptions" class="option-list"></div>
@@ -319,7 +327,7 @@
 
   <nav id="questionNavBar" class="question-nav hidden" aria-label="Question navigation"></nav>
 
-  <script src="app.js?v=20260305a"></script>
+  <script src="app.js?v=20260305b"></script>
 </body>
 </html>
 
