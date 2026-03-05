@@ -3241,6 +3241,15 @@
     return (subject.questions || []).filter((q) => questionMode(q) === mode);
   }
 
+  function cbtSubjectQuestionCap(subjectOrName) {
+    const rawName = typeof subjectOrName === "string"
+      ? subjectOrName
+      : safeText(subjectOrName && subjectOrName.name);
+    const name = safeText(rawName).trim().toLowerCase();
+    if (name.includes("english")) return 60;
+    return 40;
+  }
+
   function subjectTopics(subject, mode) {
     if (mode !== MODE_STUDY) return [];
     const seen = new Set();
@@ -3862,10 +3871,11 @@
       const perSubjectCount = countMap
         ? Number(countMap[subject.id])
         : fallbackCount;
+      const cap = mode === MODE_CBT ? cbtSubjectQuestionCap(subject) : 100;
       const safeCount = Number.isInteger(perSubjectCount) && perSubjectCount > 0
         ? perSubjectCount
         : 1;
-      const selected = shuffle(pool).slice(0, Math.min(safeCount, pool.length));
+      const selected = shuffle(pool).slice(0, Math.min(safeCount, cap, pool.length));
       selected.forEach((question) => {
         questions.push({
           question: question.question,
@@ -4136,7 +4146,7 @@
       ? "Select up to 4 subjects, choose question/time settings, then start exam."
       : "Pick one subject, choose a topic, then start a focused study session.";
     if (countLabel) countLabel.textContent = mode === MODE_CBT
-      ? "Default questions per subject (1-100)"
+      ? "Default questions per subject (1-40, English 1-60)"
       : "Questions per subject (1-100)";
     if (timeLabel) timeLabel.textContent = "Total exam time (hours, 0.5-4)";
     if (submitTopBtn) submitTopBtn.classList.add("hidden");
@@ -4172,9 +4182,10 @@
     const yearStorageKey = "testify_year_cbt";
     const storedQuestionCount = Number(localStorage.getItem(countStorageKey));
     const fallbackCount = mode === MODE_CBT ? 40 : 20;
+    const defaultQuestionCap = mode === MODE_CBT ? 40 : 100;
     const initialDefaultQuestionCount = Number.isInteger(countParam) && countParam > 0
-      ? Math.min(countParam, 100)
-      : (Number.isInteger(storedQuestionCount) && storedQuestionCount > 0 ? Math.min(storedQuestionCount, 100) : fallbackCount);
+      ? Math.min(countParam, defaultQuestionCap)
+      : (Number.isInteger(storedQuestionCount) && storedQuestionCount > 0 ? Math.min(storedQuestionCount, defaultQuestionCap) : fallbackCount);
     const safeDefaultQuestionCount = Math.max(1, initialDefaultQuestionCount);
 
     const maxSelectableSubjects = mode === MODE_CBT ? 4 : 1;
@@ -4187,12 +4198,14 @@
     let subjectQuestionCounts = {};
     if (mode === MODE_CBT) {
       selectedSubjectIds.forEach((subjectId) => {
+        const subject = availableSubjects.find((row) => row.id === subjectId);
+        const subjectCap = cbtSubjectQuestionCap(subject);
         const fromParam = Number(countMapParam[subjectId]);
         const fromStored = Number(storedCountMap[subjectId]);
         const picked = Number.isInteger(fromParam) && fromParam > 0
           ? fromParam
           : (Number.isInteger(fromStored) && fromStored > 0 ? fromStored : safeDefaultQuestionCount);
-        subjectQuestionCounts[subjectId] = Math.max(1, Math.min(100, picked));
+        subjectQuestionCounts[subjectId] = Math.max(1, Math.min(subjectCap, picked));
       });
     }
 
@@ -4263,13 +4276,14 @@
         const subject = getAvailableSubject(subjectId);
         if (!subject) return "";
         const count = subjectQuestionsByMode(subject, mode).length;
+        const subjectCap = mode === MODE_CBT ? cbtSubjectQuestionCap(subject) : 100;
         const pickedCount = mode === MODE_CBT
-          ? (Number(subjectQuestionCounts[subject.id]) || safeDefaultQuestionCount)
+          ? Math.max(1, Math.min(subjectCap, Number(subjectQuestionCounts[subject.id]) || safeDefaultQuestionCount))
           : 0;
         return "<div class=\"selected-subject-chip\">" +
           "<div><strong>" + safeText(subject.name) + "</strong><small>" + count + " questions</small>" +
             (mode === MODE_CBT
-              ? ("<label class=\"subject-qps-inline\"><span>QTY</span><input type=\"number\" min=\"1\" max=\"100\" step=\"1\" value=\"" + pickedCount + "\" data-subject-qps=\"" + safeText(subject.id) + "\"></label>")
+              ? ("<label class=\"subject-qps-inline\"><span>QTY</span><input type=\"number\" min=\"1\" max=\"" + subjectCap + "\" step=\"1\" value=\"" + pickedCount + "\" data-subject-qps=\"" + safeText(subject.id) + "\" data-subject-max=\"" + subjectCap + "\"></label>")
               : "") +
           "</div>" +
           "<button type=\"button\" class=\"selected-subject-remove\" data-remove-subject=\"" + safeText(subject.id) + "\">Remove</button>" +
@@ -4280,17 +4294,19 @@
         setupSelectedSubjects.querySelectorAll("[data-subject-qps]").forEach((input) => {
           input.addEventListener("input", () => {
             const subjectId = input.getAttribute("data-subject-qps") || "";
+            const maxValue = Number(input.getAttribute("data-subject-max")) || 40;
             const value = Number(input.value);
             if (!subjectId) return;
-            if (!Number.isInteger(value) || value < 1 || value > 100) return;
+            if (!Number.isInteger(value) || value < 1 || value > maxValue) return;
             subjectQuestionCounts[subjectId] = value;
           });
           input.addEventListener("blur", () => {
             const subjectId = input.getAttribute("data-subject-qps") || "";
+            const maxValue = Number(input.getAttribute("data-subject-max")) || 40;
             const value = Number(input.value);
-            const safeValue = Number.isInteger(value) && value >= 1 && value <= 100
+            const safeValue = Number.isInteger(value) && value >= 1 && value <= maxValue
               ? value
-              : (Number(subjectQuestionCounts[subjectId]) || safeDefaultQuestionCount);
+              : Math.max(1, Math.min(maxValue, Number(subjectQuestionCounts[subjectId]) || safeDefaultQuestionCount));
             input.value = String(safeValue);
             if (subjectId) subjectQuestionCounts[subjectId] = safeValue;
           });
@@ -4365,7 +4381,10 @@
           }
           selectedSubjectIds.push(id);
           if (mode === MODE_CBT) {
-            subjectQuestionCounts[id] = Number(subjectQuestionCounts[id]) || safeDefaultQuestionCount;
+            const subject = getAvailableSubject(id);
+            const cap = cbtSubjectQuestionCap(subject);
+            const current = Number(subjectQuestionCounts[id]) || safeDefaultQuestionCount;
+            subjectQuestionCounts[id] = Math.max(1, Math.min(cap, current));
           }
           if (mode === MODE_STUDY && selectedSubjectIds.length > 1) {
             selectedSubjectIds = [id];
@@ -4444,13 +4463,17 @@
     renderStudyTopicOptions();
 
     if (countInput) {
+      countInput.min = "1";
+      countInput.max = String(defaultQuestionCap);
       countInput.value = String(safeDefaultQuestionCount);
       if (mode === MODE_CBT) {
         countInput.addEventListener("input", () => {
           const value = Number(countInput.value);
-          if (!Number.isInteger(value) || value < 1 || value > 100) return;
+          if (!Number.isInteger(value) || value < 1 || value > defaultQuestionCap) return;
           selectedSubjectIds.forEach((subjectId) => {
-            if (!subjectQuestionCounts[subjectId]) subjectQuestionCounts[subjectId] = value;
+            const subject = getAvailableSubject(subjectId);
+            const cap = cbtSubjectQuestionCap(subject);
+            subjectQuestionCounts[subjectId] = Math.max(1, Math.min(cap, value));
           });
           renderSelectedSubjects();
         });
@@ -4510,9 +4533,11 @@
           }
           return;
         }
-        if (!Number.isInteger(questionCount) || questionCount < 1 || questionCount > 100) {
+        if (!Number.isInteger(questionCount) || questionCount < 1 || questionCount > defaultQuestionCap) {
           if (setupMessage) {
-            setupMessage.textContent = "Questions per subject must be between 1 and 100.";
+            setupMessage.textContent = mode === MODE_CBT
+              ? "Default questions per subject must be between 1 and 40."
+              : "Questions per subject must be between 1 and 100.";
             setupMessage.className = "message message-error";
           }
           return;
@@ -4522,10 +4547,11 @@
           questionCountBySubject = {};
           for (const subjectId of subjectIds) {
             const countValue = Number(subjectQuestionCounts[subjectId] || questionCount);
-            if (!Number.isInteger(countValue) || countValue < 1 || countValue > 100) {
+            const subject = getAvailableSubject(subjectId);
+            const subjectCap = cbtSubjectQuestionCap(subject);
+            if (!Number.isInteger(countValue) || countValue < 1 || countValue > subjectCap) {
               if (setupMessage) {
-                const subject = getAvailableSubject(subjectId);
-                setupMessage.textContent = (subject ? subject.name : "A subject") + " question count must be between 1 and 100.";
+                setupMessage.textContent = (subject ? subject.name : "A subject") + " question count must be between 1 and " + subjectCap + ".";
                 setupMessage.className = "message message-error";
               }
               return;
@@ -4587,13 +4613,15 @@
         : "";
       const runQuestionCountMap = mode === MODE_CBT
         ? runSubjectIds.reduce((map, subjectId) => {
+          const subject = getAvailableSubject(subjectId);
+          const subjectCap = cbtSubjectQuestionCap(subject);
           const fromParam = Number(countMapParam[subjectId]);
           const fromState = Number(subjectQuestionCounts[subjectId]);
           const fallback = Number.isInteger(questionCount) && questionCount > 0 ? questionCount : safeDefaultQuestionCount;
           const chosen = Number.isInteger(fromParam) && fromParam > 0
             ? fromParam
             : (Number.isInteger(fromState) && fromState > 0 ? fromState : fallback);
-          map[subjectId] = Math.max(1, Math.min(100, chosen));
+          map[subjectId] = Math.max(1, Math.min(subjectCap, chosen));
           return map;
         }, {})
         : null;
@@ -4671,8 +4699,12 @@
           if (mode === MODE_STUDY && selectedIds.length > 1) selectedIds.splice(1);
           const returnCountMap = mode === MODE_CBT
             ? selectedIds.reduce((map, subjectId) => {
+              const subject = getAvailableSubject(subjectId);
+              const subjectCap = cbtSubjectQuestionCap(subject);
               const value = Number(subjectQuestionCounts[subjectId] || Number(countInput ? countInput.value : safeDefaultQuestionCount));
-              map[subjectId] = Number.isInteger(value) && value > 0 ? Math.min(value, 100) : safeDefaultQuestionCount;
+              map[subjectId] = Number.isInteger(value) && value > 0
+                ? Math.min(value, subjectCap)
+                : Math.min(safeDefaultQuestionCount, subjectCap);
               return map;
             }, {})
             : null;
