@@ -1204,6 +1204,16 @@ body[data-page="practice"] .interactive:active {
     grid-template-columns: 1fr;
   }
 
+  .subject-picker-dropdown {
+    max-height: 190px;
+  }
+
+  .quiz-subject-switch {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 2px;
+  }
+
   .subject-filter-grid {
     grid-template-columns: 1fr;
   }

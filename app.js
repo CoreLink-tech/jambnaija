@@ -6,6 +6,7 @@
   const ATTEMPTS_KEY = "testify_attempts";
   const RESULT_KEY = "testify_exam_result";
   const BATCHES_KEY = "testify_import_batches";
+  const IMPORTED_FILES_KEY = "testify_imported_files";
   const API_BASE_KEY = "testify_api_base";
   const ATTEMPT_SYNC_QUEUE_KEY = "testify_attempt_sync_queue";
   const SUBJECTS_CHANGED_EVENT = "testify:subjects-changed";
@@ -239,6 +240,52 @@
   function setAttempts(v) { setJSON(ATTEMPTS_KEY, v); }
   function getBatches() { return getJSON(BATCHES_KEY, []); }
   function setBatches(v) { setJSON(BATCHES_KEY, v); }
+  function getImportedFiles() {
+    const value = getJSON(IMPORTED_FILES_KEY, {});
+    return value && typeof value === "object" ? value : {};
+  }
+  function setImportedFiles(value) {
+    setJSON(IMPORTED_FILES_KEY, value && typeof value === "object" ? value : {});
+  }
+  function importFileLockKey(type, subjectId, file) {
+    const cleanType = safeText(type).trim().toLowerCase() || "generic";
+    const cleanSubject = safeText(subjectId).trim().toLowerCase() || "all";
+    const cleanName = safeText(file && file.name).trim().toLowerCase();
+    return [cleanType, cleanSubject, cleanName].join("|");
+  }
+  function isImportFileLocked(type, subjectId, file) {
+    const key = importFileLockKey(type, subjectId, file);
+    if (!key.endsWith("|")) {
+      const locked = getImportedFiles();
+      return !!locked[key];
+    }
+    return false;
+  }
+  function lockImportFile(type, subjectId, file) {
+    const key = importFileLockKey(type, subjectId, file);
+    if (key.endsWith("|")) return;
+    const locked = getImportedFiles();
+    locked[key] = {
+      type: safeText(type).trim().toLowerCase() || "generic",
+      subjectId: safeText(subjectId).trim().toLowerCase() || "",
+      fileName: safeText(file && file.name).trim(),
+      at: new Date().toISOString()
+    };
+    setImportedFiles(locked);
+  }
+  function clearImportLocksByType(type) {
+    const cleanType = safeText(type).trim().toLowerCase();
+    if (!cleanType) return;
+    const locked = getImportedFiles();
+    Object.keys(locked).forEach((key) => {
+      const row = locked[key];
+      if (row && row.type === cleanType) delete locked[key];
+    });
+    setImportedFiles(locked);
+  }
+  function clearAllImportLocks() {
+    setImportedFiles({});
+  }
 
   function observeSubjectStoreChanges(onChange) {
     if (typeof onChange !== "function") return function noop() {};
@@ -1882,11 +1929,13 @@
         setSubjects([]);
       }
       setBatches([]);
+      clearAllImportLocks();
       return;
     }
 
     setSubjects([]);
     setBatches([]);
+    clearAllImportLocks();
   }
 
   async function clearTopicsData() {
@@ -1894,6 +1943,7 @@
       const result = await apiRequest("/api/admin/topics", { method: "DELETE" });
       if (!result.ok) return;
       await syncSubjectsFromBackend();
+      clearImportLocksByType("study-topic");
       return;
     }
 
@@ -1903,6 +1953,7 @@
       subject.updatedAt = new Date().toISOString();
     });
     setSubjects(subjects);
+    clearImportLocksByType("study-topic");
   }
 
   async function clearQuestionsByMode(mode) {
@@ -1919,6 +1970,7 @@
       if (mode === MODE_STUDY || mode === MODE_CBT) {
         setBatches(getBatches().filter((batch) => batch.type !== mode));
       }
+      clearImportLocksByType(mode === MODE_CBT ? "cbt-question" : "study-question");
       return;
     }
 
@@ -1931,6 +1983,7 @@
     if (mode === MODE_STUDY || mode === MODE_CBT) {
       setBatches(getBatches().filter((batch) => batch.type !== mode));
     }
+    clearImportLocksByType(mode === MODE_CBT ? "cbt-question" : "study-question");
   }
 
   async function clearAllBatchQuestions() {
@@ -2189,6 +2242,20 @@
       refreshAdminSelectors();
     });
     window.addEventListener("beforeunload", stopObserveSubjects, { once: true });
+    let adminSyncTimer = null;
+    if (hasAdminApiSession()) {
+      const runAdminSync = async () => {
+        const synced = await syncSubjectsFromBackend();
+        if (!synced.ok) return;
+        renderAdminTable();
+        refreshAdminSelectors();
+      };
+      runAdminSync();
+      adminSyncTimer = window.setInterval(runAdminSync, 12000);
+      window.addEventListener("beforeunload", () => {
+        if (adminSyncTimer) window.clearInterval(adminSyncTimer);
+      }, { once: true });
+    }
 
     const logoutBtn = document.getElementById("logoutBtn");
     if (logoutBtn) logoutBtn.addEventListener("click", () => { clearAuth(); window.location.href = "admin-login.html"; });
@@ -2365,6 +2432,12 @@
           bulkSubjectMessage.className = "message message-error";
           return;
         }
+        if (isImportFileLocked("subject-bulk", "", file)) {
+          bulkSubjectMessage.textContent = "This subject file has already been imported.";
+          bulkSubjectMessage.className = "message message-error";
+          showToast(bulkSubjectMessage.textContent, "warn");
+          return;
+        }
 
         const reader = new FileReader();
         reader.onload = async () => {
@@ -2381,6 +2454,11 @@
               showToast(bulkSubjectMessage.textContent, "error");
               return;
             }
+            if (hasAdminApiSession()) {
+              await syncSubjectsFromBackend();
+              renderAdminTable();
+              refreshAdminSelectors();
+            }
             bulkSubjectMessage.textContent = "Imported " + result.added + " subject(s)." +
               (result.skipped ? (" Skipped " + result.skipped + " invalid/duplicate item(s).") : "");
             bulkSubjectMessage.className = result.skipped ? "message message-error" : "message message-success";
@@ -2389,6 +2467,7 @@
               (result.skipped ? (", " + result.skipped + " skipped") : ""),
               result.skipped ? "warn" : "success"
             );
+            lockImportFile("subject-bulk", "", file);
             bulkSubjectFile.value = "";
           } catch (error) {
             bulkSubjectMessage.textContent = safeText(error && error.message).trim() ||
@@ -2421,6 +2500,12 @@
           bulkStudyMessage.className = "message message-error";
           return;
         }
+        if (isImportFileLocked("study-question", subjectId, file)) {
+          bulkStudyMessage.textContent = "This study file has already been imported for the selected subject.";
+          bulkStudyMessage.className = "message message-error";
+          showToast(bulkStudyMessage.textContent, "warn");
+          return;
+        }
 
         const reader = new FileReader();
         reader.onload = async () => {
@@ -2434,6 +2519,11 @@
               throw new Error(details ? "No valid study questions. " + details : "No valid study questions.");
             }
 
+            if (hasAdminApiSession()) {
+              await syncSubjectsFromBackend();
+              renderAdminTable();
+              refreshAdminSelectors();
+            }
             renderAdminTable();
             recordImportBatch(MODE_STUDY, subjectId, result.addedIds, file.name);
             renderBatchTable();
@@ -2450,6 +2540,7 @@
               (result.skipped ? (", " + result.skipped + " skipped") : ""),
               result.skipped ? "warn" : "success"
             );
+            lockImportFile("study-question", subjectId, file);
             bulkStudyFile.value = "";
           } catch (error) {
             bulkStudyMessage.textContent = safeText(error && error.message).trim() || "Study import failed. Ensure JSON contains valid study questions.";
@@ -2481,6 +2572,12 @@
           bulkCbtMessage.className = "message message-error";
           return;
         }
+        if (isImportFileLocked("cbt-question", subjectId, file)) {
+          bulkCbtMessage.textContent = "This CBT file has already been imported for the selected subject.";
+          bulkCbtMessage.className = "message message-error";
+          showToast(bulkCbtMessage.textContent, "warn");
+          return;
+        }
 
         const reader = new FileReader();
         reader.onload = async () => {
@@ -2494,6 +2591,11 @@
               throw new Error(details ? "No valid CBT questions. " + details : "No valid CBT questions.");
             }
 
+            if (hasAdminApiSession()) {
+              await syncSubjectsFromBackend();
+              renderAdminTable();
+              refreshAdminSelectors();
+            }
             renderAdminTable();
             recordImportBatch(MODE_CBT, subjectId, result.addedIds, file.name);
             renderBatchTable();
@@ -2510,6 +2612,7 @@
               (result.skipped ? (", " + result.skipped + " skipped") : ""),
               result.skipped ? "warn" : "success"
             );
+            lockImportFile("cbt-question", subjectId, file);
             bulkCbtFile.value = "";
           } catch (error) {
             bulkCbtMessage.textContent = safeText(error && error.message).trim() || "CBT import failed. Use valid JSON with year data (array or multi-year years{} format).";
@@ -2541,6 +2644,12 @@
           bulkTopicMessage.className = "message message-error";
           return;
         }
+        if (isImportFileLocked("study-topic", subjectId, file)) {
+          bulkTopicMessage.textContent = "This topic file has already been imported for the selected subject.";
+          bulkTopicMessage.className = "message message-error";
+          showToast(bulkTopicMessage.textContent, "warn");
+          return;
+        }
 
         const reader = new FileReader();
         reader.onload = async () => {
@@ -2549,6 +2658,11 @@
             const result = await addTopicsToSubjectBulk(subjectId, parsed);
             if (!result.added) {
               throw new Error("No new topics were added. Check file format or duplicates.");
+            }
+            if (hasAdminApiSession()) {
+              await syncSubjectsFromBackend();
+              renderAdminTable();
+              refreshAdminSelectors();
             }
             renderAdminTable();
             let message = "Imported " + result.added + " topic(s).";
@@ -2560,6 +2674,7 @@
               (result.skipped ? (", " + result.skipped + " skipped") : ""),
               result.skipped ? "warn" : "success"
             );
+            lockImportFile("study-topic", subjectId, file);
             bulkTopicFile.value = "";
           } catch (error) {
             bulkTopicMessage.textContent = safeText(error && error.message).trim() || "Topic import failed. Use valid topics JSON.";
@@ -3646,7 +3761,7 @@
       ? "Select up to 4 subjects, choose question/time settings, then start exam."
       : "Pick one subject, choose a topic, then start a focused study session.";
     if (countLabel) countLabel.textContent = "Questions per subject (1-100)";
-    if (timeLabel) timeLabel.textContent = "Total exam time (minutes, 10-240)";
+    if (timeLabel) timeLabel.textContent = "Total exam time (hours, 0.5-4)";
     if (submitTopBtn) submitTopBtn.classList.add("hidden");
     if (setupCard) setupCard.classList.remove("hidden");
     if (setupSubjectTitle) {
@@ -3799,6 +3914,19 @@
           const id = button.getAttribute("data-add-subject") || "";
           if (!id) return;
           if (selectedSubjectIds.includes(id)) return;
+          if (mode === MODE_STUDY) {
+            selectedSubjectIds = [id];
+            if (setupMessage) {
+              setupMessage.textContent = "";
+              setupMessage.className = "message";
+            }
+            updateSelectedCount();
+            renderSelectedSubjects();
+            renderStudyTopicOptions();
+            if (setupSubjectSearch) setupSubjectSearch.value = "";
+            renderSubjectDropdown("");
+            return;
+          }
           if (selectedSubjectIds.length >= maxSelectableSubjects) {
             if (setupMessage) {
               setupMessage.textContent = mode === MODE_CBT
@@ -3899,7 +4027,9 @@
       const pickedMinutes = Number.isInteger(minutesParam) && minutesParam > 0
         ? Math.min(minutesParam, 240)
         : (Number.isInteger(stored) && stored > 0 ? Math.min(stored, 240) : fallbackMinutes);
-      minutesInput.value = String(Math.max(10, pickedMinutes));
+      const safeMinutes = Math.max(30, Math.min(pickedMinutes, 240));
+      const hours = Math.round((safeMinutes / 60) * 2) / 2;
+      minutesInput.value = String(hours);
     }
 
     if (beginBtn) beginBtn.textContent = mode === MODE_CBT ? "Start Exam" : "Start Study Exam";
@@ -3915,7 +4045,8 @@
       beginBtn.addEventListener("click", () => {
         let subjectIds = selectedIds();
         const questionCount = Number(countInput ? countInput.value : 0);
-        const totalMinutes = Number(minutesInput ? minutesInput.value : 0);
+        const totalHours = Number(minutesInput ? minutesInput.value : 0);
+        const totalMinutes = Math.round(totalHours * 60);
 
         if (!subjectIds.length) {
           if (setupMessage) {
@@ -3951,9 +4082,9 @@
           }
           return;
         }
-        if (!Number.isInteger(totalMinutes) || totalMinutes < 10 || totalMinutes > 240) {
+        if (!Number.isFinite(totalHours) || totalHours < 0.5 || totalHours > 4) {
           if (setupMessage) {
-            setupMessage.textContent = "Total exam time must be between 10 and 240 minutes.";
+            setupMessage.textContent = "Total exam time must be between 0.5 and 4 hours.";
             setupMessage.className = "message message-error";
           }
           return;
@@ -4011,7 +4142,7 @@
           setupMessage.textContent = "Select a study topic.";
           setupMessage.className = "message message-error";
         }
-      } else if (startQuiz(mode, runSubjectIds, questionCount, Math.max(10, totalMinutes), {
+      } else if (startQuiz(mode, runSubjectIds, questionCount, Math.max(30, totalMinutes), {
         examYear: runExamYear,
         topicName: runTopic
       }) && setupCard) {
@@ -4048,7 +4179,7 @@
             preselect: selectedIds,
             subjects: [],
             questionCount: Number(countInput ? countInput.value : 40),
-            totalMinutes: Number(minutesInput ? minutesInput.value : 60),
+            totalMinutes: Math.round(Number(minutesInput ? minutesInput.value : 1) * 60),
             examYear: mode === MODE_CBT ? selectedYear : null,
             topicName: mode === MODE_STUDY && setupTopicSelect ? safeText(setupTopicSelect.value).trim() : ""
           }, false);
