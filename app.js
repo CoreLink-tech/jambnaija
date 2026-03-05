@@ -27,6 +27,7 @@
 
   let studentMode = MODE_STUDY;
   let activeQuiz = null;
+  let pendingSubjectsSyncTimer = null;
 
   const DEFAULT_SUBJECTS = [
     {
@@ -247,11 +248,48 @@
   function setImportedFiles(value) {
     setJSON(IMPORTED_FILES_KEY, value && typeof value === "object" ? value : {});
   }
+  function stableSerializeForHash(value) {
+    if (value === null || value === undefined) return "null";
+    const kind = typeof value;
+    if (kind === "number" || kind === "boolean") return JSON.stringify(value);
+    if (kind === "string") return JSON.stringify(value);
+    if (Array.isArray(value)) {
+      return "[" + value.map((item) => stableSerializeForHash(item)).join(",") + "]";
+    }
+    if (kind === "object") {
+      const keys = Object.keys(value).sort();
+      return "{" + keys.map((key) => JSON.stringify(key) + ":" + stableSerializeForHash(value[key])).join(",") + "}";
+    }
+    return JSON.stringify(String(value));
+  }
+  function hashString(input) {
+    let hash = 2166136261;
+    for (let i = 0; i < input.length; i += 1) {
+      hash ^= input.charCodeAt(i);
+      hash += (hash << 1) + (hash << 4) + (hash << 7) + (hash << 8) + (hash << 24);
+    }
+    return (hash >>> 0).toString(16).padStart(8, "0");
+  }
+  function importPayloadSignature(payload) {
+    try {
+      const serialized = stableSerializeForHash(payload);
+      return hashString(serialized) + ":" + String(serialized.length);
+    } catch (error) {
+      return "";
+    }
+  }
   function importFileLockKey(type, subjectId, file) {
     const cleanType = safeText(type).trim().toLowerCase() || "generic";
     const cleanSubject = safeText(subjectId).trim().toLowerCase() || "all";
     const cleanName = safeText(file && file.name).trim().toLowerCase();
     return [cleanType, cleanSubject, cleanName].join("|");
+  }
+  function importPayloadLockKey(type, subjectId, signature) {
+    const cleanType = safeText(type).trim().toLowerCase() || "generic";
+    const cleanSubject = safeText(subjectId).trim().toLowerCase() || "all";
+    const cleanSignature = safeText(signature).trim().toLowerCase();
+    if (!cleanSignature) return "";
+    return [cleanType, cleanSubject, "sig", cleanSignature].join("|");
   }
   function isImportFileLocked(type, subjectId, file) {
     const key = importFileLockKey(type, subjectId, file);
@@ -261,16 +299,33 @@
     }
     return false;
   }
-  function lockImportFile(type, subjectId, file) {
-    const key = importFileLockKey(type, subjectId, file);
-    if (key.endsWith("|")) return;
+  function isImportPayloadLocked(type, subjectId, payload) {
+    const signature = importPayloadSignature(payload);
+    const key = importPayloadLockKey(type, subjectId, signature);
+    if (!key) return false;
     const locked = getImportedFiles();
-    locked[key] = {
+    return !!locked[key];
+  }
+  function lockImportFile(type, subjectId, file, payload) {
+    const key = importFileLockKey(type, subjectId, file);
+    const signature = importPayloadSignature(payload);
+    const signatureKey = importPayloadLockKey(type, subjectId, signature);
+    if (key.endsWith("|") && !signatureKey) return;
+    const locked = getImportedFiles();
+    const entry = {
       type: safeText(type).trim().toLowerCase() || "generic",
       subjectId: safeText(subjectId).trim().toLowerCase() || "",
       fileName: safeText(file && file.name).trim(),
+      signature,
       at: new Date().toISOString()
     };
+    if (!key.endsWith("|")) locked[key] = entry;
+    if (signatureKey) {
+      locked[signatureKey] = Object.assign({}, entry, {
+        fileName: entry.fileName || "-",
+        by: "payload-signature"
+      });
+    }
     setImportedFiles(locked);
   }
   function clearImportLocksByType(type) {
@@ -285,6 +340,18 @@
   }
   function clearAllImportLocks() {
     setImportedFiles({});
+  }
+  function scheduleSubjectsSync(delayMs) {
+    if (!hasAdminApiSession()) return;
+    if (pendingSubjectsSyncTimer) {
+      window.clearTimeout(pendingSubjectsSyncTimer);
+      pendingSubjectsSyncTimer = null;
+    }
+    const wait = Math.max(0, Number(delayMs) || 0);
+    pendingSubjectsSyncTimer = window.setTimeout(async () => {
+      pendingSubjectsSyncTimer = null;
+      await syncSubjectsFromBackend();
+    }, wait);
   }
 
   function observeSubjectStoreChanges(onChange) {
@@ -843,7 +910,7 @@
     const page = document.body ? document.body.getAttribute("data-page") : "";
     const disableLiteEffects = reducedMotion || coarsePointer || narrowScreen;
     const disableTilt = page === "admin" || page === "practice" || disableLiteEffects;
-    const disableAllMotion = page === "practice";
+    const disableAllMotion = page === "practice" || page === "admin";
 
     if (disableAllMotion) return;
 
@@ -1319,7 +1386,8 @@
       prepared.push({
         index,
         mode: payload.mode,
-        payload: payload.payload
+        payload: payload.payload,
+        question: payload.question
       });
     });
 
@@ -1349,6 +1417,100 @@
     payload.year = Number(question.year);
     payload.exam = question.exam || "JAMB";
     return { mode: MODE_CBT, payload, question };
+  }
+
+  function optimisticAddSubjects(rows) {
+    const subjects = getSubjects();
+    if (!Array.isArray(subjects)) return 0;
+    const nameSet = new Set(subjects.map((item) => safeText(item && item.name).trim().toLowerCase()));
+    let added = 0;
+    rows.forEach((row) => {
+      const subject = normalizeSubject({
+        name: row && row.name,
+        description: row && row.description,
+        topics: [],
+        questions: []
+      });
+      if (!subject) return;
+      const key = subject.name.toLowerCase();
+      if (nameSet.has(key)) return;
+      nameSet.add(key);
+      subjects.push(subject);
+      added += 1;
+    });
+    if (added > 0) setSubjects(subjects);
+    return added;
+  }
+
+  function optimisticAddTopics(subjectId, topics) {
+    if (!subjectId || !Array.isArray(topics) || !topics.length) return 0;
+    const subjects = getSubjects();
+    const index = subjects.findIndex((item) => item.id === subjectId);
+    if (index < 0) return 0;
+    const subject = subjects[index];
+    const seen = new Set((subject.topics || []).map((item) => safeText(item).trim().toLowerCase()));
+    let added = 0;
+    topics.forEach((topic) => {
+      const clean = safeText(topic).trim();
+      if (!clean) return;
+      const key = clean.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+      subject.topics = (subject.topics || []).concat(clean);
+      added += 1;
+    });
+    if (added > 0) {
+      subject.updatedAt = new Date().toISOString();
+      subjects[index] = subject;
+      setSubjects(subjects);
+    }
+    return added;
+  }
+
+  function optimisticAddQuestions(subjectId, normalizedRows, mode, maxAddCount) {
+    if (!subjectId || !Array.isArray(normalizedRows) || !normalizedRows.length) return [];
+    const subjects = getSubjects();
+    const index = subjects.findIndex((item) => item.id === subjectId);
+    if (index < 0) return [];
+    const subject = subjects[index];
+    const existing = new Set((subject.questions || []).map((question) => {
+      const cleanMode = questionMode(question);
+      const text = safeText(question && question.question).trim().toLowerCase();
+      const topic = safeText(question && question.topic).trim().toLowerCase();
+      const year = Number(question && question.year) || 0;
+      return [cleanMode, text, topic, year].join("|");
+    }));
+    const addedIds = [];
+    const maxCount = Number.isFinite(maxAddCount) ? Math.max(0, Number(maxAddCount)) : normalizedRows.length;
+    let added = 0;
+    normalizedRows.forEach((row) => {
+      if (added >= maxCount) return;
+      const question = normalizeQuestion(Object.assign({}, row || {}, {
+        mode: mode === MODE_CBT ? MODE_CBT : MODE_STUDY
+      }));
+      if (!question) return;
+      const key = [
+        questionMode(question),
+        safeText(question.question).trim().toLowerCase(),
+        safeText(question.topic).trim().toLowerCase(),
+        Number(question.year) || 0
+      ].join("|");
+      if (existing.has(key)) return;
+      existing.add(key);
+      subject.questions = (subject.questions || []).concat(question);
+      if (questionMode(question) === MODE_STUDY && question.topic) {
+        const hasTopic = (subject.topics || []).some((item) => item.toLowerCase() === question.topic.toLowerCase());
+        if (!hasTopic) subject.topics = (subject.topics || []).concat(question.topic);
+      }
+      addedIds.push(question.id);
+      added += 1;
+    });
+    if (added > 0) {
+      subject.updatedAt = new Date().toISOString();
+      subjects[index] = subject;
+      setSubjects(subjects);
+    }
+    return addedIds;
   }
 
   async function addTopicToSubject(subjectId, topicName) {
@@ -1476,7 +1638,10 @@
         const skippedRaw = Number(stats.skipped);
         const added = Number.isFinite(addedRaw) ? addedRaw : 0;
         const skipped = Number.isFinite(skippedRaw) ? skippedRaw : Math.max(rows.length - added, 0);
-        if (added > 0) await syncSubjectsFromBackend();
+        if (added > 0) {
+          optimisticAddSubjects(rows);
+          scheduleSubjectsSync(120);
+        }
         return { added, skipped };
       }
 
@@ -1493,7 +1658,8 @@
         else skipped += 1;
       }
       if (added > 0) {
-        await syncSubjectsFromBackend();
+        optimisticAddSubjects(rows);
+        scheduleSubjectsSync(120);
         return { added, skipped };
       }
       throw new Error(primary.message || "Subject bulk import failed.");
@@ -1583,7 +1749,10 @@
         const skippedRaw = Number(stats.skipped);
         const added = Number.isFinite(addedRaw) ? addedRaw : 0;
         const skipped = Number.isFinite(skippedRaw) ? skippedRaw : Math.max(rows.length - added, 0);
-        if (added > 0) await syncSubjectsFromBackend();
+        if (added > 0) {
+          optimisticAddTopics(subjectId, rows);
+          scheduleSubjectsSync(120);
+        }
         return { added, skipped };
       }
 
@@ -1603,7 +1772,8 @@
         else skipped += 1;
       }
       if (added > 0) {
-        await syncSubjectsFromBackend();
+        optimisticAddTopics(subjectId, rows);
+        scheduleSubjectsSync(120);
         return { added, skipped };
       }
       throw new Error(primary.message || "Could not import topics.");
@@ -1793,7 +1963,18 @@
         }
       }
 
-      if (added > 0) await syncSubjectsFromBackend();
+      if (added > 0) {
+        const optimisticIds = optimisticAddQuestions(
+          subjectId,
+          rows.map((item) => item.question).filter(Boolean),
+          mode,
+          added
+        );
+        if (!addedIds.length && optimisticIds.length) {
+          addedIds.push.apply(addedIds, optimisticIds);
+        }
+        scheduleSubjectsSync(180);
+      }
       return { added, skipped, addedIds, invalidEntries };
     }
 
@@ -1853,17 +2034,24 @@
     };
   }
 
-  function recordImportBatch(type, subjectId, addedIds, fileName) {
-    if (!subjectId || !Array.isArray(addedIds) || !addedIds.length) return;
-    const subject = getSubjects().find((item) => item.id === subjectId);
+  function recordImportBatch(type, subjectId, addedIds, fileName, countValue, subjectNameOverride) {
+    const ids = Array.isArray(addedIds)
+      ? addedIds.map((id) => String(id || "").trim()).filter(Boolean)
+      : [];
+    const explicitCount = Number(countValue);
+    const count = Number.isFinite(explicitCount) ? Math.max(0, explicitCount) : ids.length;
+    if (!count && !ids.length) return;
+    const cleanType = safeText(type).trim().toLowerCase() || "study";
+    const subject = subjectId ? getSubjects().find((item) => item.id === subjectId) : null;
+    const subjectName = safeText(subjectNameOverride).trim() || (subject ? subject.name : (subjectId || "All Subjects"));
     const batches = getBatches();
     batches.push({
       id: makeId("batch"),
-      type: type === MODE_CBT ? MODE_CBT : MODE_STUDY,
-      subjectId,
-      subjectName: subject ? subject.name : subjectId,
-      questionIds: addedIds.slice(),
-      count: addedIds.length,
+      type: cleanType,
+      subjectId: subjectId || "",
+      subjectName,
+      questionIds: ids,
+      count: count || ids.length,
       fileName: safeText(fileName).trim() || "upload.json",
       createdAt: new Date().toISOString()
     });
@@ -2005,14 +2193,26 @@
       return;
     }
 
+    function formatBatchType(type) {
+      const clean = safeText(type).trim().toLowerCase();
+      if (clean === MODE_CBT) return "CBT Questions";
+      if (clean === MODE_STUDY) return "Study Questions";
+      if (clean === "subject-bulk") return "Subjects";
+      if (clean === "study-topic") return "Study Topics";
+      return safeText(type).trim() || "Upload";
+    }
+
     tbody.innerHTML = batches.map((batch) => {
+      const canDeleteQuestions = Array.isArray(batch.questionIds) && batch.questionIds.length > 0;
       return "<tr>" +
-        "<td>" + (batch.type === MODE_CBT ? "CBT" : "Study") + "</td>" +
+        "<td>" + formatBatchType(batch.type) + "</td>" +
         "<td>" + safeText(batch.subjectName) + "</td>" +
         "<td>" + Number(batch.count || 0) + "</td>" +
         "<td>" + safeText(batch.fileName) + "</td>" +
         "<td>" + formatDate(batch.createdAt) + "</td>" +
-        "<td><button type=\"button\" class=\"btn btn-soft btn-mini\" data-delete-batch=\"" + safeText(batch.id) + "\">Delete Batch Questions</button></td>" +
+        "<td><button type=\"button\" class=\"btn btn-soft btn-mini\" data-delete-batch=\"" + safeText(batch.id) + "\">" +
+          (canDeleteQuestions ? "Delete Batch Questions" : "Remove Log") +
+        "</button></td>" +
       "</tr>";
     }).join("");
 
@@ -2443,6 +2643,12 @@
         reader.onload = async () => {
           try {
             const parsed = JSON.parse(String(reader.result || ""));
+            if (isImportPayloadLocked("subject-bulk", "", parsed)) {
+              bulkSubjectMessage.textContent = "This JSON was already uploaded before.";
+              bulkSubjectMessage.className = "message message-error";
+              showToast(bulkSubjectMessage.textContent, "warn");
+              return;
+            }
             const result = await addSubjectsBulk(parsed);
             renderAdminTable();
             refreshAdminSelectors();
@@ -2454,20 +2660,18 @@
               showToast(bulkSubjectMessage.textContent, "error");
               return;
             }
-            if (hasAdminApiSession()) {
-              await syncSubjectsFromBackend();
-              renderAdminTable();
-              refreshAdminSelectors();
-            }
+            if (hasAdminApiSession()) scheduleSubjectsSync(200);
             bulkSubjectMessage.textContent = "Imported " + result.added + " subject(s)." +
               (result.skipped ? (" Skipped " + result.skipped + " invalid/duplicate item(s).") : "");
             bulkSubjectMessage.className = result.skipped ? "message message-error" : "message message-success";
+            recordImportBatch("subject-bulk", "", [], file.name, result.added, "All Subjects");
+            renderBatchTable();
             showToast(
               "Subject import successful: " + result.added + " added" +
               (result.skipped ? (", " + result.skipped + " skipped") : ""),
               result.skipped ? "warn" : "success"
             );
-            lockImportFile("subject-bulk", "", file);
+            lockImportFile("subject-bulk", "", file, parsed);
             bulkSubjectFile.value = "";
           } catch (error) {
             bulkSubjectMessage.textContent = safeText(error && error.message).trim() ||
@@ -2511,6 +2715,12 @@
         reader.onload = async () => {
           try {
             const parsed = JSON.parse(String(reader.result || ""));
+            if (isImportPayloadLocked("study-question", subjectId, parsed)) {
+              bulkStudyMessage.textContent = "This JSON was already uploaded for the selected subject.";
+              bulkStudyMessage.className = "message message-error";
+              showToast(bulkStudyMessage.textContent, "warn");
+              return;
+            }
             const rows = parseQuestionBulkPayload(parsed);
             const result = await addQuestionsToSubjectBulk(subjectId, rows, MODE_STUDY);
 
@@ -2519,13 +2729,10 @@
               throw new Error(details ? "No valid study questions. " + details : "No valid study questions.");
             }
 
-            if (hasAdminApiSession()) {
-              await syncSubjectsFromBackend();
-              renderAdminTable();
-              refreshAdminSelectors();
-            }
             renderAdminTable();
-            recordImportBatch(MODE_STUDY, subjectId, result.addedIds, file.name);
+            refreshAdminSelectors();
+            if (hasAdminApiSession()) scheduleSubjectsSync(220);
+            recordImportBatch(MODE_STUDY, subjectId, result.addedIds, file.name, result.added);
             renderBatchTable();
             let message = "Imported " + result.added + " study question(s).";
             if (result.skipped) {
@@ -2540,7 +2747,7 @@
               (result.skipped ? (", " + result.skipped + " skipped") : ""),
               result.skipped ? "warn" : "success"
             );
-            lockImportFile("study-question", subjectId, file);
+            lockImportFile("study-question", subjectId, file, parsed);
             bulkStudyFile.value = "";
           } catch (error) {
             bulkStudyMessage.textContent = safeText(error && error.message).trim() || "Study import failed. Ensure JSON contains valid study questions.";
@@ -2583,6 +2790,12 @@
         reader.onload = async () => {
           try {
             const parsed = JSON.parse(String(reader.result || ""));
+            if (isImportPayloadLocked("cbt-question", subjectId, parsed)) {
+              bulkCbtMessage.textContent = "This JSON was already uploaded for the selected subject.";
+              bulkCbtMessage.className = "message message-error";
+              showToast(bulkCbtMessage.textContent, "warn");
+              return;
+            }
             const rows = parseCbtQuestionBulkPayload(parsed);
             const result = await addQuestionsToSubjectBulk(subjectId, rows, MODE_CBT);
 
@@ -2591,13 +2804,10 @@
               throw new Error(details ? "No valid CBT questions. " + details : "No valid CBT questions.");
             }
 
-            if (hasAdminApiSession()) {
-              await syncSubjectsFromBackend();
-              renderAdminTable();
-              refreshAdminSelectors();
-            }
             renderAdminTable();
-            recordImportBatch(MODE_CBT, subjectId, result.addedIds, file.name);
+            refreshAdminSelectors();
+            if (hasAdminApiSession()) scheduleSubjectsSync(220);
+            recordImportBatch(MODE_CBT, subjectId, result.addedIds, file.name, result.added);
             renderBatchTable();
             let message = "Imported " + result.added + " CBT question(s).";
             if (result.skipped) {
@@ -2612,7 +2822,7 @@
               (result.skipped ? (", " + result.skipped + " skipped") : ""),
               result.skipped ? "warn" : "success"
             );
-            lockImportFile("cbt-question", subjectId, file);
+            lockImportFile("cbt-question", subjectId, file, parsed);
             bulkCbtFile.value = "";
           } catch (error) {
             bulkCbtMessage.textContent = safeText(error && error.message).trim() || "CBT import failed. Use valid JSON with year data (array or multi-year years{} format).";
@@ -2655,26 +2865,31 @@
         reader.onload = async () => {
           try {
             const parsed = JSON.parse(String(reader.result || ""));
+            if (isImportPayloadLocked("study-topic", subjectId, parsed)) {
+              bulkTopicMessage.textContent = "This JSON was already uploaded for the selected subject.";
+              bulkTopicMessage.className = "message message-error";
+              showToast(bulkTopicMessage.textContent, "warn");
+              return;
+            }
             const result = await addTopicsToSubjectBulk(subjectId, parsed);
             if (!result.added) {
               throw new Error("No new topics were added. Check file format or duplicates.");
             }
-            if (hasAdminApiSession()) {
-              await syncSubjectsFromBackend();
-              renderAdminTable();
-              refreshAdminSelectors();
-            }
             renderAdminTable();
+            refreshAdminSelectors();
+            if (hasAdminApiSession()) scheduleSubjectsSync(220);
             let message = "Imported " + result.added + " topic(s).";
             if (result.skipped) message += " Skipped " + result.skipped + " duplicate/invalid item(s).";
             bulkTopicMessage.textContent = message;
             bulkTopicMessage.className = result.skipped ? "message message-error" : "message message-success";
+            recordImportBatch("study-topic", subjectId, [], file.name, result.added);
+            renderBatchTable();
             showToast(
               "Study topics import successful: " + result.added + " added" +
               (result.skipped ? (", " + result.skipped + " skipped") : ""),
               result.skipped ? "warn" : "success"
             );
-            lockImportFile("study-topic", subjectId, file);
+            lockImportFile("study-topic", subjectId, file, parsed);
             bulkTopicFile.value = "";
           } catch (error) {
             bulkTopicMessage.textContent = safeText(error && error.message).trim() || "Topic import failed. Use valid topics JSON.";
@@ -3231,6 +3446,27 @@
     }
   }
 
+  function quizSubjectQuestionIndexes(subjectId) {
+    if (!activeQuiz || !subjectId) return [];
+    const target = String(subjectId);
+    const indexes = [];
+    activeQuiz.questions.forEach((question, idx) => {
+      if (String(question && question.subjectId || "") === target) indexes.push(idx);
+    });
+    return indexes;
+  }
+
+  function quizSubjectPosition(subjectId, questionIndex) {
+    const indexes = quizSubjectQuestionIndexes(subjectId);
+    const localIndex = indexes.indexOf(questionIndex);
+    return {
+      indexes,
+      localIndex,
+      position: localIndex >= 0 ? (localIndex + 1) : 0,
+      total: indexes.length
+    };
+  }
+
   function renderQuestionNavigator() {
     const navBar = document.getElementById("questionNavBar");
     if (!navBar || !activeQuiz || activeQuiz.completed) {
@@ -3238,12 +3474,20 @@
       return;
     }
 
+    let renderIndexes = activeQuiz.questions.map((_, idx) => idx);
+    if (activeQuiz.mode === MODE_CBT) {
+      const current = activeQuiz.questions[activeQuiz.index];
+      const currentSubjectId = safeText(current && current.subjectId).trim();
+      const currentSubjectIndexes = quizSubjectQuestionIndexes(currentSubjectId);
+      if (currentSubjectIndexes.length) renderIndexes = currentSubjectIndexes;
+    }
+
     navBar.classList.remove("hidden");
-    navBar.innerHTML = activeQuiz.questions.map((_, idx) => {
+    navBar.innerHTML = renderIndexes.map((questionIndex, localIdx) => {
       const classes = ["question-nav-btn"];
-      if (idx === activeQuiz.index) classes.push("question-nav-btn-current");
-      if (activeQuiz.answers[idx] !== null) classes.push("question-nav-btn-answered");
-      return "<button type=\"button\" class=\"" + classes.join(" ") + "\" data-nav-index=\"" + idx + "\">" + (idx + 1) + "</button>";
+      if (questionIndex === activeQuiz.index) classes.push("question-nav-btn-current");
+      if (activeQuiz.answers[questionIndex] !== null) classes.push("question-nav-btn-answered");
+      return "<button type=\"button\" class=\"" + classes.join(" ") + "\" data-nav-index=\"" + questionIndex + "\">" + (localIdx + 1) + "</button>";
     }).join("");
 
     navBar.querySelectorAll("[data-nav-index]").forEach((button) => {
@@ -3338,7 +3582,13 @@
     const exam = safeText(current.exam).trim();
 
     subjectEl.textContent = "Subject: " + safeText(current.subjectName);
-    progressEl.textContent = "Question " + (activeQuiz.index + 1) + " of " + activeQuiz.questions.length;
+    if (activeQuiz.mode === MODE_CBT) {
+      const currentSubjectId = safeText(current.subjectId).trim();
+      const subjectMeta = quizSubjectPosition(currentSubjectId, activeQuiz.index);
+      progressEl.textContent = "Question " + subjectMeta.position + " of " + subjectMeta.total;
+    } else {
+      progressEl.textContent = "Question " + (activeQuiz.index + 1) + " of " + activeQuiz.questions.length;
+    }
     if (yearEl) {
       if (Number.isInteger(year)) {
         yearEl.textContent = "Source: " + year + (exam ? " " + exam : "");
@@ -3351,8 +3601,15 @@
     questionEl.textContent = current.question;
     feedbackEl.textContent = "";
     feedbackEl.className = "message";
-    prevBtn.disabled = activeQuiz.index === 0 || activeQuiz.completed;
-    nextBtn.disabled = activeQuiz.index >= activeQuiz.questions.length - 1 || activeQuiz.completed;
+    if (activeQuiz.mode === MODE_CBT) {
+      const currentSubjectId = safeText(current.subjectId).trim();
+      const subjectMeta = quizSubjectPosition(currentSubjectId, activeQuiz.index);
+      prevBtn.disabled = activeQuiz.completed || subjectMeta.localIndex <= 0;
+      nextBtn.disabled = activeQuiz.completed || subjectMeta.localIndex < 0 || subjectMeta.localIndex >= (subjectMeta.total - 1);
+    } else {
+      prevBtn.disabled = activeQuiz.index === 0 || activeQuiz.completed;
+      nextBtn.disabled = activeQuiz.index >= activeQuiz.questions.length - 1 || activeQuiz.completed;
+    }
 
     optionsEl.innerHTML = current.options.map((option, idx) => {
       const classes = ["option-btn"];
@@ -4172,8 +4429,16 @@
     if (nextBtn) {
       nextBtn.addEventListener("click", () => {
         if (!activeQuiz || activeQuiz.completed) return;
-        if (activeQuiz.index >= activeQuiz.questions.length - 1) return;
-        activeQuiz.index += 1;
+        if (activeQuiz.mode === MODE_CBT) {
+          const current = activeQuiz.questions[activeQuiz.index];
+          const currentSubjectId = safeText(current && current.subjectId).trim();
+          const subjectMeta = quizSubjectPosition(currentSubjectId, activeQuiz.index);
+          if (subjectMeta.localIndex < 0 || subjectMeta.localIndex >= (subjectMeta.total - 1)) return;
+          activeQuiz.index = subjectMeta.indexes[subjectMeta.localIndex + 1];
+        } else {
+          if (activeQuiz.index >= activeQuiz.questions.length - 1) return;
+          activeQuiz.index += 1;
+        }
         showQuizQuestion();
       });
     }
@@ -4181,8 +4446,16 @@
     if (prevBtn) {
       prevBtn.addEventListener("click", () => {
         if (!activeQuiz || activeQuiz.completed) return;
-        if (activeQuiz.index <= 0) return;
-        activeQuiz.index -= 1;
+        if (activeQuiz.mode === MODE_CBT) {
+          const current = activeQuiz.questions[activeQuiz.index];
+          const currentSubjectId = safeText(current && current.subjectId).trim();
+          const subjectMeta = quizSubjectPosition(currentSubjectId, activeQuiz.index);
+          if (subjectMeta.localIndex <= 0) return;
+          activeQuiz.index = subjectMeta.indexes[subjectMeta.localIndex - 1];
+        } else {
+          if (activeQuiz.index <= 0) return;
+          activeQuiz.index -= 1;
+        }
         showQuizQuestion();
       });
     }

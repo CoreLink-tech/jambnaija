@@ -301,6 +301,10 @@ main {
   gap: 16px;
 }
 
+.admin-grid > * {
+  min-width: 0;
+}
+
 .form-grid {
   display: grid;
   gap: 10px;
@@ -511,6 +515,8 @@ textarea:focus {
 
 .table-wrap {
   overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
   border-radius: 14px;
   border: 1px solid var(--line);
   background: #fff;
@@ -583,6 +589,24 @@ tr:last-child td {
 
 .admin-actions .btn {
   width: 100%;
+}
+
+body[data-page="admin"] .card {
+  overflow: visible;
+}
+
+body[data-page="admin"] .dropdown-box > summary {
+  gap: 8px;
+  line-height: 1.35;
+}
+
+body[data-page="admin"] td,
+body[data-page="admin"] th {
+  vertical-align: top;
+}
+
+body[data-page="admin"] td {
+  word-break: break-word;
 }
 
 .note {
@@ -1243,6 +1267,36 @@ body[data-page="practice"] .interactive:active {
 
   .table-wrap table {
     min-width: 560px;
+  }
+
+  body[data-page="admin"] {
+    padding: 10px;
+  }
+
+  body[data-page="admin"] .topbar {
+    position: static;
+    border-radius: 16px;
+    padding: 12px;
+  }
+
+  body[data-page="admin"] .chip {
+    display: none;
+  }
+
+  body[data-page="admin"] .card {
+    padding: 14px;
+  }
+
+  body[data-page="admin"] .admin-actions {
+    min-width: 170px;
+  }
+
+  body[data-page="admin"] .dropdown-box {
+    padding: 10px;
+  }
+
+  body[data-page="admin"] .table-wrap table {
+    min-width: 680px;
   }
 
   .auth-switch .btn {
