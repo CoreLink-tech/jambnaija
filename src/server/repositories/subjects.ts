@@ -1,5 +1,5 @@
-import { eq, sql, desc } from "drizzle-orm";
-import { getDb, subjects, topics, questions } from "@/lib/db";
+import { eq, sql } from "drizzle-orm";
+import { getDb, subjects, topics } from "@/lib/db";
 
 export async function listSubjectsWithCounts() {
   const db = getDb();

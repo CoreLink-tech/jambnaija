@@ -1,5 +1,5 @@
 import { and, eq, like, sql, desc, count } from "drizzle-orm";
-import { getDb, questions, topics } from "@/lib/db";
+import { getDb, questions } from "@/lib/db";
 import type { QuestionListQuery } from "@/lib/validation/questions";
 
 export type QuestionRow = typeof questions.$inferSelect;

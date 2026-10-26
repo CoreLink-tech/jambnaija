@@ -6,7 +6,6 @@ import {
   questionListQuerySchema,
   type StudyQuestionCreateInput,
   type CbtQuestionCreateInput,
-  type QuestionListQuery,
 } from "@/lib/validation/questions";
 import * as questionRepo from "@/server/repositories/questions";
 import * as subjectRepo from "@/server/repositories/subjects";
