@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { api } from "@/lib/client/api";
+import { LoadingState, EmptyState, ErrorState } from "@/components/ui/feedback";
 
 type AttemptRow = {
   id: string;
@@ -38,17 +39,14 @@ export function AttemptHistory() {
         Recent attempts
       </h2>
       {loading ? (
-        <p className="text-sm text-muted">Loading history…</p>
+        <LoadingState label="Loading history…" />
       ) : error ? (
-        <Card>
-          <p className="text-sm text-danger">{error}</p>
-        </Card>
+        <ErrorState message={error} />
       ) : items.length === 0 ? (
-        <Card>
-          <p className="text-sm text-muted">
-            No attempts yet. Complete a CBT session to see your history here.
-          </p>
-        </Card>
+        <EmptyState
+          title="No attempts yet"
+          description="Complete a CBT session to see your history here."
+        />
       ) : (
         <div className="space-y-2">
           {items.map((a) => {

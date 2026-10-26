@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { api } from "@/lib/client/api";
 import { AttemptHistory } from "@/components/student/attempt-history";
+import { LoadingState, EmptyState, ErrorState, PageHeader } from "@/components/ui/feedback";
 
 type Access = {
   canAccess: boolean;
@@ -73,14 +74,10 @@ export function DashboardView({ user }: { user: User }) {
 
   return (
     <div className="space-y-6">
-      <section className="space-y-2">
-        <h1 className="font-[family-name:var(--font-display)] text-2xl font-bold text-primary-strong sm:text-3xl">
-          Welcome{user.username ? `, ${user.username}` : ""}
-        </h1>
-        <p className="text-sm text-muted">
-          Prepare for JAMB with study mode and timed CBT practice.
-        </p>
-      </section>
+      <PageHeader
+        title={`Welcome${user.username ? `, ${user.username}` : ""}`}
+        description="Prepare for JAMB with study mode and timed CBT practice."
+      />
 
       <Card className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="space-y-1">
@@ -138,18 +135,14 @@ export function DashboardView({ user }: { user: User }) {
           Subjects
         </h2>
         {loading ? (
-          <p className="text-sm text-muted">Loading subjects…</p>
+          <LoadingState label="Loading subjects…" />
         ) : error ? (
-          <Card>
-            <p className="text-sm text-danger">{error}</p>
-          </Card>
+          <ErrorState message={error} onRetry={() => window.location.reload()} />
         ) : subjects.length === 0 ? (
-          <Card>
-            <p className="text-sm text-muted">
-              No subjects yet. An administrator can add subjects and seed
-              questions.
-            </p>
-          </Card>
+          <EmptyState
+            title="No subjects yet"
+            description="An administrator can add subjects and seed questions from the admin dashboard."
+          />
         ) : (
           <div className="grid gap-3 sm:grid-cols-2">
             {subjects.map((s) => (

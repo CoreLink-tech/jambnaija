@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { api } from "@/lib/client/api";
+import { PageHeader, ErrorState } from "@/components/ui/feedback";
 
 type Subject = { id: string; name: string; cbtCount: number };
 
@@ -264,22 +265,17 @@ export function CbtView() {
           ))}
         </div>
 
-        {error ? <p className="text-sm text-danger">{error}</p> : null}
+        {error ? <ErrorState message={error} /> : null}
       </div>
     );
   }
 
   return (
     <div className="mx-auto max-w-xl space-y-4">
-      <div className="space-y-1">
-        <h1 className="font-[family-name:var(--font-display)] text-2xl font-bold text-primary-strong">
-          CBT practice
-        </h1>
-        <p className="text-sm text-muted">
-          Timed exam. Answers are scored on the server. Refresh resumes your
-          in-progress attempt.
-        </p>
-      </div>
+      <PageHeader
+        title="CBT practice"
+        description="Timed exam. Answers are scored on the server. Refresh resumes your in-progress attempt."
+      />
       <Card className="space-y-4">
         <label className="block space-y-1.5">
           <span className="text-sm font-semibold">Subject</span>
@@ -308,7 +304,7 @@ export function CbtView() {
             onChange={(e) => setYear(e.target.value)}
           />
         </label>
-        {error ? <p className="text-sm text-danger">{error}</p> : null}
+        {error ? <ErrorState message={error} /> : null}
         <Button onClick={startExam} disabled={loading || !subjectId}>
           {loading ? "Starting…" : "Start CBT"}
         </Button>

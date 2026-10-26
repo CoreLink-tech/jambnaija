@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { api } from "@/lib/client/api";
+import { PageHeader, ErrorState, LoadingState } from "@/components/ui/feedback";
 
 type Stats = {
   users: number;
@@ -27,16 +28,13 @@ export function AdminOverview() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="font-[family-name:var(--font-display)] text-2xl font-bold text-primary-strong">
-          Admin overview
-        </h1>
-        <p className="text-sm text-muted">
-          Manage subjects, questions, users, and activation codes.
-        </p>
-      </div>
+      <PageHeader
+        title="Admin overview"
+        description="Manage subjects, questions, users, and activation codes."
+      />
 
-      {error ? <p className="text-sm text-danger">{error}</p> : null}
+      {error ? <ErrorState message={error} /> : null}
+      {!stats && !error ? <LoadingState label="Loading stats…" /> : null}
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {[

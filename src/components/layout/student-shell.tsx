@@ -68,17 +68,22 @@ export function StudentShell({
         </div>
       </header>
       <main className="mx-auto max-w-5xl px-4 py-6 pb-24">{children}</main>
-      <nav className="fixed bottom-0 left-0 right-0 border-t border-line bg-white sm:hidden">
+      <nav className="fixed bottom-0 left-0 right-0 border-t border-line bg-white/95 backdrop-blur sm:hidden safe-bottom">
         <div className="mx-auto flex max-w-5xl justify-around px-2 py-2">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="px-3 py-2 text-xs font-semibold text-muted"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) => {
+            const active = pathname.startsWith(item.href.split("#")[0]);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`min-h-11 min-w-16 rounded-lg px-3 py-2 text-center text-xs font-semibold ${
+                  active ? "bg-blue-50 text-primary" : "text-muted"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
       </nav>
     </div>

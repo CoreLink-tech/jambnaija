@@ -17,30 +17,10 @@ import * as attemptRepo from "@/server/repositories/attempts";
 import * as questionRepo from "@/server/repositories/questions";
 import * as subjectRepo from "@/server/repositories/subjects";
 import { requireStudentAccess } from "@/server/policies/auth";
+import { scoreAnswers, subjectQuestionCap } from "@/lib/cbt/scoring";
 import { getQuestionById } from "@/server/repositories/questions";
 
 const DEFAULT_DURATION_MINUTES = 60;
-
-function subjectCap(name: string): number {
-  return name.toLowerCase().includes("english") ? 60 : 40;
-}
-
-function scoreAnswers(
-  items: { correctIndex: number; selectedIndex: number | null }[],
-): { score: number; total: number; percent: number } {
-  const total = items.length;
-  let score = 0;
-  for (const item of items) {
-    if (
-      item.selectedIndex != null &&
-      item.selectedIndex === item.correctIndex
-    ) {
-      score += 1;
-    }
-  }
-  const percent = total > 0 ? Math.round((score / total) * 100) : 0;
-  return { score, total, percent };
-}
 
 /**
  * Start or resume a CBT attempt.
@@ -97,7 +77,7 @@ export async function startCbtAttempt(raw: StartCbtInput) {
     }
   }
 
-  const cap = subjectCap(subject.name);
+  const cap = subjectQuestionCap(subject.name);
   const count = Math.min(input.count ?? cap, cap);
   const durationMinutes = input.durationMinutes ?? DEFAULT_DURATION_MINUTES;
 

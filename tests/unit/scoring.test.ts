@@ -1,21 +1,5 @@
 import { describe, it, expect } from "vitest";
-
-function scoreAnswers(
-  items: { correctIndex: number; selectedIndex: number | null }[],
-): { score: number; total: number; percent: number } {
-  const total = items.length;
-  let score = 0;
-  for (const item of items) {
-    if (
-      item.selectedIndex != null &&
-      item.selectedIndex === item.correctIndex
-    ) {
-      score += 1;
-    }
-  }
-  const percent = total > 0 ? Math.round((score / total) * 100) : 0;
-  return { score, total, percent };
-}
+import { scoreAnswers, subjectQuestionCap } from "@/lib/cbt/scoring";
 
 describe("CBT scoring", () => {
   it("scores correct answers only", () => {
@@ -31,5 +15,24 @@ describe("CBT scoring", () => {
 
   it("handles empty set", () => {
     expect(scoreAnswers([])).toEqual({ score: 0, total: 0, percent: 0 });
+  });
+
+  it("scores full marks", () => {
+    const result = scoreAnswers([
+      { correctIndex: 0, selectedIndex: 0 },
+      { correctIndex: 2, selectedIndex: 2 },
+    ]);
+    expect(result).toEqual({ score: 2, total: 2, percent: 100 });
+  });
+});
+
+describe("subjectQuestionCap", () => {
+  it("caps English at 60", () => {
+    expect(subjectQuestionCap("English Language")).toBe(60);
+  });
+
+  it("caps other subjects at 40", () => {
+    expect(subjectQuestionCap("Biology")).toBe(40);
+    expect(subjectQuestionCap("Mathematics")).toBe(40);
   });
 });

@@ -179,3 +179,16 @@ APIs: `/api/admin/stats`, `/api/admin/users`, `/api/admin/activation-codes`, plu
 - `/activation` — student redemption UI
 - Dashboard shows recent CBT attempts via `GET /api/cbt/attempts`
 - Entitlements continue to use `resolveUserAccess` (trial → plan → activation required)
+
+## UI polish (Phase 10)
+
+- Shared `LoadingState`, `EmptyState`, `ErrorState`, `PageHeader`
+- Route-level loading UI for student and admin segments
+- Improved mobile bottom nav (active state, larger tap targets)
+- Focus-visible styles, reduced-motion support, refined landing page
+
+## Release readiness (Phase 11)
+
+See [RELEASE.md](./RELEASE.md) for environment variables, verification commands, security checklist, and deploy notes.
+
+Health probe: `GET /api/health`

@@ -17,7 +17,8 @@
     "db:check": "drizzle-kit check",
     "content:validate": "vitest run tests/unit/content-validation.test.ts",
     "content:seed": "tsx src/lib/db/seed-content.ts",
-    "content:seed:dry": "tsx src/lib/db/seed-content.ts --dry-run"
+    "content:seed:dry": "tsx src/lib/db/seed-content.ts --dry-run",
+    "verify": "npm run typecheck && npm test"
   },
   "dependencies": {
     "@libsql/client": "^0.14.0",

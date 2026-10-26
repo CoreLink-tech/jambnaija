@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { api } from "@/lib/client/api";
+import { PageHeader, ErrorState } from "@/components/ui/feedback";
 
 type Subject = {
   id: string;
@@ -187,15 +188,10 @@ export function StudyView() {
 
   return (
     <div className="mx-auto max-w-xl space-y-4">
-      <div className="space-y-1">
-        <h1 className="font-[family-name:var(--font-display)] text-2xl font-bold text-primary-strong">
-          Study mode
-        </h1>
-        <p className="text-sm text-muted">
-          Choose a subject and optional topic. Explanations appear after each
-          answer. Premium access required.
-        </p>
-      </div>
+      <PageHeader
+        title="Study mode"
+        description="Choose a subject and optional topic. Explanations appear after each answer. Premium access required."
+      />
 
       <Card className="space-y-4">
         <label className="block space-y-1.5">
@@ -231,7 +227,7 @@ export function StudyView() {
           </select>
         </label>
 
-        {error ? <p className="text-sm text-danger">{error}</p> : null}
+        {error ? <ErrorState message={error} /> : null}
 
         <Button onClick={startSession} disabled={loading || !subjectId}>
           {loading ? "Loading…" : "Start study session"}
