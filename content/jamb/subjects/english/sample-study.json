@@ -1,0 +1,35 @@
+{
+  "subjectSlug": "english",
+  "exam": "JAMB",
+  "source": "sample",
+  "verificationStatus": "unverified",
+  "notes": "Illustrative study items only.",
+  "questions": [
+    {
+      "contentId": "eng-study-lexis-rapid",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "STUDY",
+      "prompt": "Choose the word nearest in meaning to rapid.",
+      "options": ["Slow", "Swift", "Calm", "Quiet"],
+      "answerIndex": 1,
+      "explanation": "Rapid means very fast; swift is the nearest meaning.",
+      "source": "sample",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-study-comprehension-expository",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "STUDY",
+      "prompt": "A passage mainly explains causes and effects. It is what type?",
+      "options": ["Narrative", "Descriptive", "Expository", "Poetic"],
+      "answerIndex": 2,
+      "explanation": "Expository writing explains ideas and relationships clearly.",
+      "source": "sample",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    }
+  ]
+}

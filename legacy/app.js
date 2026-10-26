@@ -1,0 +1,4864 @@
+(function () {
+  "use strict";
+
+  const AUTH_KEY = "testify_auth";
+  const SUBJECTS_KEY = "testify_subjects";
+  const ATTEMPTS_KEY = "testify_attempts";
+  const RESULT_KEY = "testify_exam_result";
+  const BATCHES_KEY = "testify_import_batches";
+  const IMPORTED_FILES_KEY = "testify_imported_files";
+  const API_BASE_KEY = "testify_api_base";
+  const ATTEMPT_SYNC_QUEUE_KEY = "testify_attempt_sync_queue";
+  const SUBJECTS_CHANGED_EVENT = "testify:subjects-changed";
+  const DEVICE_ID_KEY = "testify_device_id";
+  const LOCAL_ADMIN_KEY = "testify_local_admin";
+  const LOCAL_STUDENTS_KEY = "testify_local_students";
+  const DEFAULT_API_BASE = "http://localhost:4000";
+  const DEFAULT_LOCAL_ADMIN_EMAIL = "admin@examforge.com";
+  const DEFAULT_LOCAL_ADMIN_PASSWORD = "Admin12345";
+  const TIER_STANDARD = "standard";
+  const TIER_PREMIUM = "premium";
+  const STATUS_PENDING = "pending";
+  const STATUS_ACTIVE = "active";
+  const STATUS_DEACTIVATED = "deactivated";
+  const ADMIN_WHATSAPP_NUMBER = "2349168311809";
+  const MODE_STUDY = "study";
+  const MODE_CBT = "cbt";
+
+  let studentMode = MODE_STUDY;
+  let activeQuiz = null;
+  let pendingSubjectsSyncTimer = null;
+
+  const DEFAULT_SUBJECTS = [
+    {
+      id: "english",
+      name: "English Language",
+      description: "Comprehension, lexis, and sentence interpretation.",
+      topics: ["Comprehension", "Lexis"],
+      questions: [
+        { question: "Choose the word nearest in meaning to rapid.", options: ["Slow", "Swift", "Calm", "Quiet"], answerIndex: 1, mode: MODE_STUDY, topic: "Lexis", explanation: "Rapid means very fast. Swift is the nearest meaning." },
+        { question: "A passage mainly explains causes and effects. It is what type?", options: ["Narrative", "Descriptive", "Expository", "Poetic"], answerIndex: 2, mode: MODE_CBT, topic: "Comprehension", year: 2023, exam: "JAMB", explanation: "Expository writing explains ideas and relationships clearly." }
+      ],
+      updatedAt: new Date().toISOString()
+    },
+    {
+      id: "math",
+      name: "Mathematics",
+      description: "Algebra, geometry, and arithmetic speed drills.",
+      topics: ["Algebra", "Arithmetic"],
+      questions: [
+        { question: "If x + 5 = 13, what is x?", options: ["5", "6", "7", "8"], answerIndex: 3, mode: MODE_STUDY, topic: "Algebra", explanation: "Subtract 5 from both sides, giving x = 8." },
+        { question: "What is 15% of 200?", options: ["25", "30", "35", "40"], answerIndex: 1, mode: MODE_CBT, topic: "Arithmetic", year: 2022, exam: "JAMB", explanation: "15% of 200 is 30." }
+      ],
+      updatedAt: new Date().toISOString()
+    }
+  ];
+
+  function getJSON(key, fallback) {
+    try {
+      const raw = localStorage.getItem(key);
+      return raw ? JSON.parse(raw) : fallback;
+    } catch (error) {
+      return fallback;
+    }
+  }
+
+  function setJSON(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+  }
+
+  function safeText(value) {
+    return String(value || "").replace(/[<>]/g, "");
+  }
+
+  function ensureToastStack() {
+    const existing = document.getElementById("toastStack");
+    if (existing) return existing;
+    if (!document.body) return null;
+    const stack = document.createElement("div");
+    stack.id = "toastStack";
+    stack.className = "toast-stack";
+    stack.setAttribute("aria-live", "polite");
+    stack.setAttribute("aria-atomic", "false");
+    document.body.appendChild(stack);
+    return stack;
+  }
+
+  function showToast(message, type) {
+    const text = safeText(message).trim();
+    if (!text) return;
+    const stack = ensureToastStack();
+    if (!stack) return;
+    const tone = type === "error" ? "error" : (type === "warn" ? "warn" : "success");
+    const toast = document.createElement("div");
+    toast.className = "toast toast-" + tone;
+    toast.setAttribute("role", "status");
+    toast.textContent = text;
+    stack.appendChild(toast);
+
+    window.setTimeout(() => {
+      toast.classList.add("toast-out");
+      window.setTimeout(() => {
+        if (toast.parentNode) toast.parentNode.removeChild(toast);
+      }, 260);
+    }, 3200);
+  }
+
+  function formatDate(iso) {
+    const date = new Date(iso);
+    return Number.isNaN(date.getTime()) ? "-" : date.toLocaleString();
+  }
+
+  function makeId(prefix) {
+    return prefix + "-" + Date.now() + "-" + Math.random().toString(36).slice(2, 8);
+  }
+
+  function formatDuration(totalSeconds) {
+    const value = Math.max(0, Number(totalSeconds) || 0);
+    const hours = Math.floor(value / 3600);
+    const minutes = Math.floor((value % 3600) / 60);
+    const seconds = value % 60;
+    if (hours > 0) {
+      return String(hours).padStart(2, "0") + ":" +
+        String(minutes).padStart(2, "0") + ":" +
+        String(seconds).padStart(2, "0");
+    }
+    return String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
+  }
+
+  function normalizeRole(role) {
+    const cleanRole = String(role || "").trim().toLowerCase();
+    if (cleanRole === "student" || cleanRole === "admin") return cleanRole;
+    return "";
+  }
+
+  function normalizeAuthSource(source) {
+    const cleanSource = String(source || "").trim().toLowerCase();
+    return cleanSource === "local" ? "local" : "backend";
+  }
+
+  function normalizeTier(tier) {
+    const cleanTier = String(tier || "").trim().toLowerCase();
+    if (cleanTier === TIER_STANDARD || cleanTier === TIER_PREMIUM) return cleanTier;
+    return "";
+  }
+
+  function normalizeAccountStatus(status) {
+    const cleanStatus = String(status || "").trim().toLowerCase();
+    if (cleanStatus === STATUS_PENDING || cleanStatus === STATUS_ACTIVE || cleanStatus === STATUS_DEACTIVATED) {
+      return cleanStatus;
+    }
+    return STATUS_PENDING;
+  }
+
+  function getDeviceId() {
+    const existing = String(localStorage.getItem(DEVICE_ID_KEY) || "").trim();
+    if (existing && existing.length >= 8) return existing;
+    const generated = (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function")
+      ? crypto.randomUUID()
+      : ("device-" + Date.now() + "-" + Math.random().toString(36).slice(2, 12));
+    localStorage.setItem(DEVICE_ID_KEY, generated);
+    return generated;
+  }
+
+  function buildActivationUrl(email) {
+    const cleanEmail = String(email || "").trim().toLowerCase();
+    if (!cleanEmail) return "activation.html";
+    return "activation.html?email=" + encodeURIComponent(cleanEmail);
+  }
+
+  function getWhatsAppActivationUrl() {
+    return "https://wa.me/" + ADMIN_WHATSAPP_NUMBER + "?text=" + encodeURIComponent("Hello Admin, I need an activation code for my Jambnaija account.");
+  }
+
+  function isPremiumAccess(auth) {
+    return normalizeTier(auth && auth.effectiveTier) === TIER_PREMIUM;
+  }
+
+  function isStandardAccess(auth) {
+    return normalizeTier(auth && auth.effectiveTier) === TIER_STANDARD;
+  }
+
+  function hasStudentAccess(auth) {
+    if (!auth || auth.role !== "student") return false;
+    if (auth.status === STATUS_DEACTIVATED) return false;
+    return isPremiumAccess(auth) || isStandardAccess(auth);
+  }
+
+  function normalizeAuthPayload(auth) {
+    if (!auth || typeof auth !== "object") return null;
+    const role = normalizeRole(auth.role);
+    const email = String(auth.email || "").trim().toLowerCase();
+    if (!role || !isValidEmail(email)) return null;
+    return {
+      loggedIn: auth.loggedIn !== false,
+      role,
+      source: normalizeAuthSource(auth.source),
+      name: role === "admin" ? "Admin" : "Student",
+      email,
+      username: auth.username ? String(auth.username).trim().toLowerCase() : "",
+      userId: auth.userId ? String(auth.userId) : "",
+      token: auth.token ? String(auth.token) : "",
+      status: normalizeAccountStatus(auth.status),
+      planTier: normalizeTier(auth.planTier),
+      effectiveTier: normalizeTier(auth.effectiveTier),
+      accessSource: String(auth.accessSource || "").trim().toLowerCase(),
+      trialPremiumEndsAt: auth.trialPremiumEndsAt ? String(auth.trialPremiumEndsAt) : "",
+      trialActive: !!auth.trialActive,
+      loginAt: auth.loginAt ? String(auth.loginAt) : new Date().toISOString()
+    };
+  }
+
+  function getAuth() {
+    return normalizeAuthPayload(getJSON(AUTH_KEY, null));
+  }
+
+  function setAuth(auth) {
+    const payload = normalizeAuthPayload(auth);
+    if (!payload) {
+      clearAuth();
+      return;
+    }
+    setJSON(AUTH_KEY, payload);
+  }
+
+  function clearAuth() { localStorage.removeItem(AUTH_KEY); }
+  function getSubjects() { return getJSON(SUBJECTS_KEY, []); }
+  function emitSubjectsChanged() {
+    try {
+      window.dispatchEvent(new CustomEvent(SUBJECTS_CHANGED_EVENT, {
+        detail: { at: Date.now() }
+      }));
+    } catch (error) {
+      // ignore event dispatch errors in constrained environments
+    }
+  }
+  function setSubjects(v) {
+    setJSON(SUBJECTS_KEY, v);
+    emitSubjectsChanged();
+  }
+  function getAttempts() { return getJSON(ATTEMPTS_KEY, []); }
+  function setAttempts(v) { setJSON(ATTEMPTS_KEY, v); }
+  function getBatches() { return getJSON(BATCHES_KEY, []); }
+  function setBatches(v) { setJSON(BATCHES_KEY, v); }
+  function getImportedFiles() {
+    const value = getJSON(IMPORTED_FILES_KEY, {});
+    return value && typeof value === "object" ? value : {};
+  }
+  function setImportedFiles(value) {
+    setJSON(IMPORTED_FILES_KEY, value && typeof value === "object" ? value : {});
+  }
+  function stableSerializeForHash(value) {
+    if (value === null || value === undefined) return "null";
+    const kind = typeof value;
+    if (kind === "number" || kind === "boolean") return JSON.stringify(value);
+    if (kind === "string") return JSON.stringify(value);
+    if (Array.isArray(value)) {
+      return "[" + value.map((item) => stableSerializeForHash(item)).join(",") + "]";
+    }
+    if (kind === "object") {
+      const keys = Object.keys(value).sort();
+      return "{" + keys.map((key) => JSON.stringify(key) + ":" + stableSerializeForHash(value[key])).join(",") + "}";
+    }
+    return JSON.stringify(String(value));
+  }
+  function hashString(input) {
+    let hash = 2166136261;
+    for (let i = 0; i < input.length; i += 1) {
+      hash ^= input.charCodeAt(i);
+      hash += (hash << 1) + (hash << 4) + (hash << 7) + (hash << 8) + (hash << 24);
+    }
+    return (hash >>> 0).toString(16).padStart(8, "0");
+  }
+  function importPayloadSignature(payload) {
+    try {
+      const serialized = stableSerializeForHash(payload);
+      return hashString(serialized) + ":" + String(serialized.length);
+    } catch (error) {
+      return "";
+    }
+  }
+  function importFileLockKey(type, subjectId, file) {
+    const cleanType = safeText(type).trim().toLowerCase() || "generic";
+    const cleanSubject = safeText(subjectId).trim().toLowerCase() || "all";
+    const cleanName = safeText(file && file.name).trim().toLowerCase();
+    return [cleanType, cleanSubject, cleanName].join("|");
+  }
+  function importPayloadLockKey(type, subjectId, signature) {
+    const cleanType = safeText(type).trim().toLowerCase() || "generic";
+    const cleanSubject = safeText(subjectId).trim().toLowerCase() || "all";
+    const cleanSignature = safeText(signature).trim().toLowerCase();
+    if (!cleanSignature) return "";
+    return [cleanType, cleanSubject, "sig", cleanSignature].join("|");
+  }
+  function isImportFileLocked(type, subjectId, file) {
+    const key = importFileLockKey(type, subjectId, file);
+    if (!key.endsWith("|")) {
+      const locked = getImportedFiles();
+      return !!locked[key];
+    }
+    return false;
+  }
+  function isImportPayloadLocked(type, subjectId, payload) {
+    const signature = importPayloadSignature(payload);
+    const key = importPayloadLockKey(type, subjectId, signature);
+    if (!key) return false;
+    const locked = getImportedFiles();
+    return !!locked[key];
+  }
+  function lockImportFile(type, subjectId, file, payload) {
+    const key = importFileLockKey(type, subjectId, file);
+    const signature = importPayloadSignature(payload);
+    const signatureKey = importPayloadLockKey(type, subjectId, signature);
+    if (key.endsWith("|") && !signatureKey) return;
+    const locked = getImportedFiles();
+    const entry = {
+      type: safeText(type).trim().toLowerCase() || "generic",
+      subjectId: safeText(subjectId).trim().toLowerCase() || "",
+      fileName: safeText(file && file.name).trim(),
+      signature,
+      at: new Date().toISOString()
+    };
+    if (!key.endsWith("|")) locked[key] = entry;
+    if (signatureKey) {
+      locked[signatureKey] = Object.assign({}, entry, {
+        fileName: entry.fileName || "-",
+        by: "payload-signature"
+      });
+    }
+    setImportedFiles(locked);
+  }
+  function clearImportLocksByType(type) {
+    const cleanType = safeText(type).trim().toLowerCase();
+    if (!cleanType) return;
+    const locked = getImportedFiles();
+    Object.keys(locked).forEach((key) => {
+      const row = locked[key];
+      if (row && row.type === cleanType) delete locked[key];
+    });
+    setImportedFiles(locked);
+  }
+  function clearAllImportLocks() {
+    setImportedFiles({});
+  }
+  function scheduleSubjectsSync(delayMs) {
+    if (!hasAdminApiSession()) return;
+    if (pendingSubjectsSyncTimer) {
+      window.clearTimeout(pendingSubjectsSyncTimer);
+      pendingSubjectsSyncTimer = null;
+    }
+    const wait = Math.max(0, Number(delayMs) || 0);
+    pendingSubjectsSyncTimer = window.setTimeout(async () => {
+      pendingSubjectsSyncTimer = null;
+      await syncSubjectsFromBackend();
+    }, wait);
+  }
+
+  function observeSubjectStoreChanges(onChange) {
+    if (typeof onChange !== "function") return function noop() {};
+    let queued = false;
+
+    function schedule() {
+      if (queued) return;
+      queued = true;
+      window.requestAnimationFrame(() => {
+        queued = false;
+        onChange();
+      });
+    }
+
+    function onStorage(event) {
+      if (!event || (event.key && event.key !== SUBJECTS_KEY)) return;
+      schedule();
+    }
+
+    window.addEventListener("storage", onStorage);
+    window.addEventListener(SUBJECTS_CHANGED_EVENT, schedule);
+
+    return () => {
+      window.removeEventListener("storage", onStorage);
+      window.removeEventListener(SUBJECTS_CHANGED_EVENT, schedule);
+    };
+  }
+
+  function ensureSeedData() {
+    const subjects = getSubjects();
+    if (!Array.isArray(subjects) || !subjects.length) setSubjects(DEFAULT_SUBJECTS);
+  }
+
+  function ensureBatchesData() {
+    if (!Array.isArray(getBatches())) setBatches([]);
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function getLocalAdminCredentials() {
+    const stored = getJSON(LOCAL_ADMIN_KEY, null);
+    const email = String(stored && stored.email ? stored.email : DEFAULT_LOCAL_ADMIN_EMAIL).trim().toLowerCase();
+    const password = String(stored && stored.password ? stored.password : DEFAULT_LOCAL_ADMIN_PASSWORD);
+    return { email, password };
+  }
+
+  function getLocalStudents() {
+    const stored = getJSON(LOCAL_STUDENTS_KEY, []);
+    if (!Array.isArray(stored)) return [];
+    return stored
+      .map((item) => {
+        const email = String(item && item.email ? item.email : "").trim().toLowerCase();
+        const password = String(item && item.password ? item.password : "");
+        if (!isValidEmail(email) || !password) return null;
+        return { email, password };
+      })
+      .filter(Boolean);
+  }
+
+  function setLocalStudents(students) {
+    const safeList = Array.isArray(students) ? students : [];
+    setJSON(LOCAL_STUDENTS_KEY, safeList);
+  }
+
+  function registerLocalStudent(email, password) {
+    const cleanEmail = String(email || "").trim().toLowerCase();
+    const cleanPassword = String(password || "");
+    if (!isValidEmail(cleanEmail) || cleanPassword.length < 6) {
+      return { ok: false, message: "Provide valid email and password (min 6 characters)." };
+    }
+
+    const students = getLocalStudents();
+    const exists = students.some((item) => item.email === cleanEmail);
+    if (exists) {
+      return { ok: false, message: "Email already exists (local mode)." };
+    }
+
+    students.push({ email: cleanEmail, password: cleanPassword });
+    setLocalStudents(students);
+    return { ok: true, message: "Student registered in local mode." };
+  }
+
+  function verifyLocalStudentCredentials(email, password) {
+    const cleanEmail = String(email || "").trim().toLowerCase();
+    const cleanPassword = String(password || "");
+    return getLocalStudents().some((item) => item.email === cleanEmail && item.password === cleanPassword);
+  }
+
+  function verifyLocalAdminCredentials(email, password) {
+    const creds = getLocalAdminCredentials();
+    const cleanEmail = String(email || "").trim().toLowerCase();
+    const cleanPassword = String(password || "");
+    return cleanEmail === creds.email && cleanPassword === creds.password;
+  }
+
+  function createLocalAuth(role, email) {
+    const normalizedRole = normalizeRole(role);
+    const cleanEmail = String(email || "").trim().toLowerCase();
+    if (!normalizedRole || !isValidEmail(cleanEmail)) return null;
+    return {
+      loggedIn: true,
+      role: normalizedRole,
+      source: "local",
+      name: normalizedRole === "admin" ? "Admin" : "Student",
+      email: cleanEmail,
+      userId: "local-" + normalizedRole,
+      token: "local-token-" + normalizedRole,
+      status: normalizedRole === "admin" ? STATUS_ACTIVE : STATUS_PENDING,
+      planTier: "",
+      effectiveTier: "",
+      accessSource: "local",
+      trialPremiumEndsAt: "",
+      trialActive: false,
+      loginAt: new Date().toISOString()
+    };
+  }
+
+  function getApiBase() {
+    const runtimeBaseExamForge = typeof window.EXAMFORGE_API_BASE === "string" ? window.EXAMFORGE_API_BASE : "";
+    const runtimeBaseLegacy = typeof window.TESTIFY_API_BASE === "string" ? window.TESTIFY_API_BASE : "";
+    const storedBase = localStorage.getItem(API_BASE_KEY) || "";
+    const sameOrigin = (window.location && /^https?:$/i.test(String(window.location.protocol || "")))
+      ? String(window.location.origin || "").trim()
+      : "";
+    const chosen = String(runtimeBaseExamForge || runtimeBaseLegacy || storedBase || sameOrigin || DEFAULT_API_BASE).trim();
+    return chosen.replace(/\/+$/, "");
+  }
+
+  function getApiBaseCandidates() {
+    const list = [];
+    const primary = getApiBase();
+    if (primary) list.push(primary);
+
+    if (window.location && /^https?:$/i.test(String(window.location.protocol || ""))) {
+      const sameOrigin = String(window.location.origin || "").trim().replace(/\/+$/, "");
+      if (sameOrigin && !list.includes(sameOrigin)) {
+        list.push(sameOrigin);
+      }
+    }
+
+    const fallback = String(DEFAULT_API_BASE || "").trim().replace(/\/+$/, "");
+    if (fallback && !list.includes(fallback)) {
+      list.push(fallback);
+    }
+
+    return list;
+  }
+
+  async function apiRequest(path, options) {
+    const baseCandidates = getApiBaseCandidates();
+    const attemptedUrls = baseCandidates.map((base) => base + path);
+    const requestOptions = Object.assign({}, options || {});
+    const requestHeaders = Object.assign({}, requestOptions.headers || {});
+    const method = String(requestOptions.method || "GET").trim().toUpperCase();
+    const auth = getAuth();
+
+    if (!requestHeaders.Accept) requestHeaders.Accept = "application/json";
+    if (!requestHeaders.Authorization && auth && auth.token) {
+      requestHeaders.Authorization = "Bearer " + auth.token;
+    }
+    if (requestOptions.body !== undefined && !requestHeaders["Content-Type"]) {
+      requestHeaders["Content-Type"] = "application/json";
+    }
+
+    requestOptions.headers = requestHeaders;
+    if (!requestOptions.cache && method === "GET") {
+      requestOptions.cache = "no-store";
+    }
+    if (requestOptions.body !== undefined && typeof requestOptions.body !== "string") {
+      requestOptions.body = JSON.stringify(requestOptions.body);
+    }
+
+    const attemptNotes = [];
+    for (const url of attemptedUrls) {
+      let response = null;
+      try {
+        // eslint-disable-next-line no-await-in-loop
+        response = await fetch(url, requestOptions);
+      } catch (error) {
+        attemptNotes.push(url + " (network error)");
+      }
+
+      if (!response) continue;
+
+      const contentType = String((response.headers && response.headers.get("content-type")) || "").toLowerCase();
+      let payload = null;
+
+      if (contentType.includes("application/json")) {
+        try {
+          // eslint-disable-next-line no-await-in-loop
+          payload = await response.json();
+        } catch (error) {
+          payload = null;
+        }
+      } else {
+        try {
+          // Consume body to release stream. No parsing needed for non-JSON responses.
+          // eslint-disable-next-line no-await-in-loop
+          await response.text();
+        } catch (error) {
+          // ignore body read failure
+        }
+      }
+
+      const isLikelyFrontendFallback =
+        !response.ok &&
+        (response.status === 404 || response.status === 405) &&
+        /^\/api\//.test(path) &&
+        !contentType.includes("application/json");
+
+      const isLikelyFrontendApiMiss =
+        response.ok &&
+        /^\/api\//.test(path) &&
+        !contentType.includes("application/json");
+
+      if (isLikelyFrontendFallback || isLikelyFrontendApiMiss) {
+        attemptNotes.push(url + " (non-API " + response.status + ")");
+        continue;
+      }
+
+      const message = payload && payload.message
+        ? String(payload.message)
+        : (response.ok ? "Request successful." : ("Request failed (" + response.status + ")."));
+
+      return {
+        ok: response.ok,
+        status: response.status,
+        data: payload,
+        message
+      };
+    }
+
+    return {
+      ok: false,
+      status: 0,
+      message: "Cannot reach backend API. Tried: " + (attemptNotes.length ? attemptNotes.join(", ") : attemptedUrls.join(", ")) + ". Make sure the backend server is running."
+    };
+  }
+
+  function toAuthFromBackend(result) {
+    const data = result && result.data ? result.data : {};
+    const user = data && data.user ? data.user : {};
+    const role = normalizeRole(user.role);
+    const email = String(user.email || "").trim().toLowerCase();
+    const token = String(data.token || "").trim();
+    if (!role || !isValidEmail(email) || !token) return null;
+    return {
+      loggedIn: true,
+      role,
+      source: "backend",
+      name: role === "admin" ? "Admin" : "Student",
+      email,
+      username: String(user.username || "").trim().toLowerCase(),
+      userId: String(user.id || ""),
+      token,
+      status: normalizeAccountStatus(user.status),
+      planTier: normalizeTier(user.planTier),
+      effectiveTier: normalizeTier(user.effectiveTier),
+      accessSource: String(user.accessSource || "").trim().toLowerCase(),
+      trialPremiumEndsAt: user.trialPremiumEndsAt ? String(user.trialPremiumEndsAt) : "",
+      trialActive: !!user.trialActive,
+      loginAt: new Date().toISOString()
+    };
+  }
+
+  function backendModeValue(mode) {
+    return String(mode || "").trim().toUpperCase() === "CBT" ? MODE_CBT : MODE_STUDY;
+  }
+
+  function normalizeBackendQuestion(question, topicNameById) {
+    const options = Array.isArray(question && question.options)
+      ? question.options.map((option) => safeText(option)).filter(Boolean)
+      : [];
+    const mode = backendModeValue(question && question.mode);
+    const topicId = safeText(question && question.topicId).trim();
+    const topic = mode === MODE_STUDY
+      ? (topicNameById[topicId] || "General")
+      : "";
+    const normalized = normalizeQuestion({
+      id: safeText(question && question.id).trim(),
+      question: safeText(question && question.prompt).trim(),
+      options,
+      answerIndex: Number(question && question.answerIndex),
+      mode,
+      topic,
+      year: Number(question && question.year),
+      exam: safeText(question && question.exam).trim() || "JAMB",
+      explanation: safeText(question && question.explanation).trim()
+    });
+    return normalized;
+  }
+
+  function normalizeBackendSubject(subject) {
+    if (!subject || typeof subject !== "object") return null;
+    const name = safeText(subject.name).trim();
+    const description = safeText(subject.description).trim();
+    if (!name || !description) return null;
+
+    const topicsRaw = Array.isArray(subject.topics) ? subject.topics : [];
+    const topicNameById = {};
+    const topics = [];
+    topicsRaw.forEach((topic) => {
+      const id = safeText(topic && topic.id).trim();
+      const label = safeText(topic && topic.name).trim();
+      if (!id || !label) return;
+      topicNameById[id] = label;
+      topics.push(label);
+    });
+
+    const questions = (Array.isArray(subject.questions) ? subject.questions : [])
+      .map((question) => normalizeBackendQuestion(question, topicNameById))
+      .filter(Boolean);
+
+    questions.forEach((question) => {
+      if (!question.topic) return;
+      if (questionMode(question) !== MODE_STUDY) return;
+      const exists = topics.some((item) => item.toLowerCase() === question.topic.toLowerCase());
+      if (!exists) topics.push(question.topic);
+    });
+
+    return {
+      id: safeText(subject.id).trim() || makeId("subject"),
+      name,
+      description,
+      topics,
+      questions,
+      updatedAt: subject.updatedAt ? String(subject.updatedAt) : new Date().toISOString()
+    };
+  }
+
+  function normalizeBackendAttempt(attempt) {
+    if (!attempt || typeof attempt !== "object") return null;
+    const score = Number(attempt.score);
+    const total = Number(attempt.total);
+    const percent = Number(attempt.percent);
+    if (!Number.isFinite(score) || !Number.isFinite(total) || total <= 0) return null;
+    const fallbackName = attempt.subject && attempt.subject.name ? attempt.subject.name : "Practice Session";
+    return {
+      subjectId: safeText(attempt.subject && attempt.subject.id).trim() || safeText(attempt.subjectId).trim() || "",
+      subjectName: safeText(attempt.focusLabel).trim() || safeText(fallbackName).trim() || "Practice Session",
+      score: Math.round(score),
+      total: Math.round(total),
+      scorePercent: Number.isFinite(percent) ? Math.max(0, Math.min(100, Math.round(percent))) : Math.round((score / total) * 100),
+      createdAt: attempt.createdAt ? String(attempt.createdAt) : new Date().toISOString()
+    };
+  }
+
+  async function refreshAuthFromBackend() {
+    const auth = getAuth();
+    if (!auth || !auth.token) return auth;
+    if (auth.source === "local") return auth;
+
+    const result = await apiRequest("/api/auth/me");
+    if (!result.ok) {
+      if (result.status === 401) {
+        clearAuth();
+      } else if (result.status === 403 && result.data && result.data.needsActivation) {
+        return Object.assign({}, auth, { needsActivation: true });
+      }
+      return null;
+    }
+
+    const user = result && result.data && result.data.user ? result.data.user : null;
+    if (!user) return auth;
+
+    const role = normalizeRole(user.role);
+    const email = String(user.email || "").trim().toLowerCase();
+    if (!role || !isValidEmail(email)) return auth;
+
+    const merged = {
+      loggedIn: true,
+      role,
+      source: "backend",
+      name: role === "admin" ? "Admin" : "Student",
+      email,
+      username: String(user.username || "").trim().toLowerCase(),
+      userId: String(user.id || auth.userId || ""),
+      token: auth.token,
+      status: normalizeAccountStatus(user.status),
+      planTier: normalizeTier(user.planTier),
+      effectiveTier: normalizeTier(user.effectiveTier),
+      accessSource: String(user.accessSource || "").trim().toLowerCase(),
+      trialPremiumEndsAt: user.trialPremiumEndsAt ? String(user.trialPremiumEndsAt) : "",
+      trialActive: !!user.trialActive,
+      loginAt: auth.loginAt || new Date().toISOString()
+    };
+    setAuth(merged);
+    return merged;
+  }
+
+  async function syncSubjectsFromBackend() {
+    const result = await apiRequest("/api/subjects?includeQuestions=1");
+    if (!result.ok) {
+      return { ok: false, message: result.message };
+    }
+
+    const list = Array.isArray(result && result.data && result.data.subjects) ? result.data.subjects : [];
+    const subjects = list.map(normalizeBackendSubject).filter(Boolean);
+    setSubjects(subjects);
+    return { ok: true, count: subjects.length };
+  }
+
+  function getAttemptSyncQueue() {
+    const queue = getJSON(ATTEMPT_SYNC_QUEUE_KEY, []);
+    return Array.isArray(queue) ? queue : [];
+  }
+
+  function setAttemptSyncQueue(queue) {
+    setJSON(ATTEMPT_SYNC_QUEUE_KEY, Array.isArray(queue) ? queue : []);
+  }
+
+  function queueAttemptSyncItems(items) {
+    const valid = Array.isArray(items) ? items.filter(Boolean) : [];
+    if (!valid.length) return;
+    const queue = getAttemptSyncQueue();
+    setAttemptSyncQueue(queue.concat(valid));
+  }
+
+  async function flushAttemptSyncQueue() {
+    const auth = getAuth();
+    if (!auth || auth.role !== "student" || auth.source !== "backend" || !auth.token) return;
+
+    const queue = getAttemptSyncQueue();
+    if (!queue.length) return;
+
+    const remaining = [];
+    for (const item of queue) {
+      if (!item || typeof item !== "object") continue;
+      const subjectId = safeText(item.subjectId).trim();
+      const mode = String(item.mode || "").trim().toUpperCase() === "CBT" ? "CBT" : "STUDY";
+      const score = Number(item.score);
+      const total = Number(item.total);
+      const percent = Number(item.percent);
+      if (!subjectId || !Number.isFinite(score) || !Number.isFinite(total) || total <= 0 || !Number.isFinite(percent)) {
+        continue;
+      }
+
+      const payload = {
+        subjectId,
+        mode,
+        focusLabel: safeText(item.focusLabel).trim() || undefined,
+        score: Math.max(0, Math.round(score)),
+        total: Math.max(1, Math.round(total)),
+        percent: Math.max(0, Math.min(100, Math.round(percent)))
+      };
+      const result = await apiRequest("/api/attempts", {
+        method: "POST",
+        body: payload
+      });
+
+      if (!result.ok) {
+        remaining.push(item);
+        if (result.status === 401) {
+          clearAuth();
+          break;
+        }
+      }
+    }
+
+    setAttemptSyncQueue(remaining);
+  }
+
+  async function syncAttemptsFromBackend() {
+    const auth = getAuth();
+    if (!auth || auth.role !== "student") {
+      setAttempts([]);
+      return { ok: true, count: 0 };
+    }
+    if (auth.source !== "backend" || !auth.token) {
+      const localAttempts = getAttempts();
+      return { ok: true, count: Array.isArray(localAttempts) ? localAttempts.length : 0 };
+    }
+
+    const result = await apiRequest("/api/attempts/me?limit=100");
+    if (!result.ok) {
+      if (result.status === 401) clearAuth();
+      return { ok: false, message: result.message };
+    }
+
+    const list = Array.isArray(result && result.data && result.data.attempts) ? result.data.attempts : [];
+    const attempts = list.map(normalizeBackendAttempt).filter(Boolean).reverse();
+    setAttempts(attempts);
+    return { ok: true, count: attempts.length };
+  }
+
+  function questionMode(q) {
+    const m = safeText(q && q.mode).trim().toLowerCase();
+    if (m === MODE_STUDY || m === MODE_CBT) return m;
+    return Number.isInteger(Number(q && q.year)) ? MODE_CBT : MODE_STUDY;
+  }
+
+  function normalizeQuestion(raw) {
+    if (!raw || typeof raw !== "object") return null;
+    const question = safeText(raw.question);
+    const options = Array.isArray(raw.options) ? raw.options.map((x) => safeText(x)).filter(Boolean) : [];
+    const answerIndex = Number(raw.answerIndex);
+    const topic = safeText(raw.topic).trim();
+    const yearNum = Number(raw.year);
+    const year = Number.isInteger(yearNum) && yearNum >= 1980 && yearNum <= 2100 ? yearNum : null;
+    const modeRaw = safeText(raw.mode).trim().toLowerCase();
+    const mode = modeRaw === MODE_STUDY || modeRaw === MODE_CBT ? modeRaw : (year !== null ? MODE_CBT : MODE_STUDY);
+    if (mode === MODE_CBT && year === null) return null;
+    if (mode === MODE_STUDY && !topic) return null;
+    if (!question || options.length < 2 || !Number.isInteger(answerIndex) || answerIndex < 0 || answerIndex >= options.length) return null;
+    return {
+      id: safeText(raw.id).trim() || makeId("q"),
+      question,
+      options,
+      answerIndex,
+      mode,
+      topic,
+      year,
+      exam: safeText(raw.exam || raw.source).trim() || (year !== null ? "JAMB" : ""),
+      explanation: safeText(raw.explanation).trim()
+    };
+  }
+
+  function normalizeSubject(raw) {
+    if (!raw || typeof raw !== "object") return null;
+    const name = safeText(raw.name);
+    const description = safeText(raw.description);
+    if (!name || !description) return null;
+    return {
+      id: raw.id || (name.toLowerCase().replace(/[^a-z0-9]+/g, "-") + "-" + Date.now()),
+      name,
+      description,
+      topics: Array.isArray(raw.topics) ? raw.topics.map((t) => safeText(t)).filter(Boolean) : [],
+      questions: (Array.isArray(raw.questions) ? raw.questions : []).map(normalizeQuestion).filter(Boolean),
+      updatedAt: new Date().toISOString()
+    };
+  }
+
+  function ensureQuestionIds() {
+    const subjects = getSubjects();
+    if (!Array.isArray(subjects) || !subjects.length) return;
+    let changed = false;
+    subjects.forEach((subject) => {
+      if (!Array.isArray(subject.questions)) return;
+      subject.questions = subject.questions.map((question) => {
+        if (question && question.id) return question;
+        changed = true;
+        return Object.assign({}, question, { id: makeId("q") });
+      });
+    });
+    if (changed) setSubjects(subjects);
+  }
+
+  function applyHapticsAndMotion() {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+    const narrowScreen = window.matchMedia("(max-width: 900px)").matches;
+    const supportsVibrate = typeof navigator.vibrate === "function";
+    const page = document.body ? document.body.getAttribute("data-page") : "";
+    const disableLiteEffects = reducedMotion || coarsePointer || narrowScreen;
+    const disableTilt = page === "admin" || page === "practice" || disableLiteEffects;
+    const disableAllMotion = page === "practice" || page === "admin";
+
+    if (disableAllMotion) return;
+
+    function vibrate(duration) {
+      if (supportsVibrate) navigator.vibrate(duration);
+    }
+
+    function ripple(event, element) {
+      const rect = element.getBoundingClientRect();
+      const span = document.createElement("span");
+      span.className = "ripple";
+      span.style.left = event.clientX - rect.left + "px";
+      span.style.top = event.clientY - rect.top + "px";
+      element.appendChild(span);
+      setTimeout(() => span.remove(), 620);
+    }
+
+    document.querySelectorAll(".interactive").forEach((element) => {
+      if (element.dataset.interactiveBound === "1") return;
+      element.dataset.interactiveBound = "1";
+
+      if (!disableLiteEffects) {
+        element.style.position = "relative";
+        element.style.overflow = "hidden";
+        element.addEventListener("click", (event) => {
+          ripple(event, element);
+          vibrate(10);
+        });
+        element.addEventListener("touchstart", () => vibrate(8), { passive: true });
+      }
+    });
+
+    if (!reducedMotion && !disableTilt) {
+      document.querySelectorAll(".tilt").forEach((card) => {
+        if (card.dataset.tiltBound === "1") return;
+        card.dataset.tiltBound = "1";
+
+        card.addEventListener("pointermove", (event) => {
+          const rect = card.getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
+          const rx = ((y / rect.height) - 0.5) * -7;
+          const ry = ((x / rect.width) - 0.5) * 7;
+          card.style.transform = "perspective(900px) rotateX(" + rx.toFixed(2) + "deg) rotateY(" + ry.toFixed(2) + "deg)";
+        });
+
+        card.addEventListener("pointerleave", () => {
+          card.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg)";
+        });
+      });
+    }
+  }
+
+  function requireRole(role) {
+    const auth = getAuth();
+    if (!auth || !auth.loggedIn || !auth.token) {
+      window.location.href = role === "admin" ? "admin-login.html" : "hi.html";
+      return null;
+    }
+    if (auth.role !== role) {
+      window.location.href = auth.role === "admin" ? "admin.html" : "student.html";
+      return null;
+    }
+    if (role === "student" && !hasStudentAccess(auth)) {
+      window.location.href = buildActivationUrl(auth.email);
+      return null;
+    }
+    return auth;
+  }
+
+  function initStudentLoginPage() {
+    const form = document.getElementById("loginForm");
+    if (!form) return;
+    const email = document.getElementById("loginEmail");
+    const password = document.getElementById("loginPassword");
+    const message = document.getElementById("loginMessage");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const payload = {
+        email: String(email.value || "").trim().toLowerCase(),
+        password: String(password.value || ""),
+        deviceId: getDeviceId()
+      };
+      const result = await apiRequest("/api/auth/login", {
+        method: "POST",
+        body: payload
+      });
+      const authPayload = toAuthFromBackend(result);
+
+      if (!result.ok || !authPayload || authPayload.role !== "student") {
+        const needsActivation = !!(result && result.data && result.data.needsActivation);
+        if (needsActivation) {
+          message.textContent = result.message || "Activation is required for this account.";
+          message.className = "message message-error";
+          setTimeout(() => {
+            window.location.href = buildActivationUrl(payload.email);
+          }, 700);
+          return;
+        }
+
+        message.textContent = result.message || "Invalid student credentials.";
+        message.className = "message message-error";
+        return;
+      }
+      setAuth(authPayload);
+      if (result && result.data && result.data.needsActivation) {
+        window.location.href = buildActivationUrl(payload.email);
+        return;
+      }
+      window.location.href = "student.html";
+    });
+  }
+
+  function initAdminLoginPage() {
+    const form = document.getElementById("adminLoginForm");
+    if (!form) return;
+    const email = document.getElementById("adminLoginEmail");
+    const password = document.getElementById("adminLoginPassword");
+    const message = document.getElementById("adminLoginMessage");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const cleanEmail = String(email.value || "").trim().toLowerCase();
+      const cleanPassword = String(password.value || "").trim();
+      const result = await apiRequest("/api/auth/login", {
+        method: "POST",
+        body: {
+          email: cleanEmail,
+          password: cleanPassword,
+          deviceId: getDeviceId()
+        }
+      });
+      const authPayload = toAuthFromBackend(result);
+
+      if (!result.ok || !authPayload || authPayload.role !== "admin") {
+        const backendUnreachable = !result.ok && result.status === 0;
+        if (backendUnreachable && verifyLocalAdminCredentials(cleanEmail, cleanPassword)) {
+          const localAuth = createLocalAuth("admin", cleanEmail);
+          if (localAuth) {
+            setAuth(localAuth);
+            window.location.href = "admin.html";
+            return;
+          }
+        }
+
+        message.textContent = !result.ok
+          ? result.message
+          : "This account is not an admin.";
+        if (backendUnreachable) {
+          message.textContent += " Offline fallback requires local admin credentials.";
+        }
+        message.className = "message message-error";
+        return;
+      }
+      setAuth(authPayload);
+      window.location.href = "admin.html";
+    });
+  }
+
+  function initStudentRegisterPage() {
+    const form = document.getElementById("studentRegisterForm");
+    if (!form) return;
+    const username = document.getElementById("studentRegisterUsername");
+    const email = document.getElementById("studentRegisterEmail");
+    const password = document.getElementById("studentRegisterPassword");
+    const message = document.getElementById("studentRegisterMessage");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const cleanUsername = String((username && username.value) || "").trim().toLowerCase();
+      const cleanEmail = String(email.value || "").trim().toLowerCase();
+      const cleanPassword = String(password.value || "");
+      if (!cleanUsername) {
+        message.textContent = "Username is required.";
+        message.className = "message message-error";
+        return;
+      }
+      const result = await apiRequest("/api/auth/register/student", {
+        method: "POST",
+        body: {
+          username: cleanUsername,
+          email: cleanEmail,
+          password: cleanPassword,
+          deviceId: getDeviceId()
+        }
+      });
+      if (result.ok) {
+        message.textContent = (result.message || "Registration successful.") + " Login to continue.";
+        message.className = "message message-success";
+        form.reset();
+        setTimeout(() => { window.location.href = "hi.html"; }, 900);
+        return;
+      }
+
+      message.textContent = result.message;
+      message.className = "message message-error";
+    });
+  }
+
+  function initActivationPage() {
+    const form = document.getElementById("activationForm");
+    if (!form) return;
+    const codeInput = document.getElementById("activationCode");
+    const referralInput = document.getElementById("activationReferralCode");
+    const message = document.getElementById("activationMessage");
+    const status = document.getElementById("activationStatus");
+    const getCodeBtn = document.getElementById("getActivationCodeBtn");
+    const backBtn = document.getElementById("activationBackBtn");
+    if (getCodeBtn) {
+      getCodeBtn.setAttribute("href", getWhatsAppActivationUrl());
+    }
+    const auth = getAuth();
+    if (backBtn) {
+      backBtn.setAttribute("href", auth && auth.role === "student" ? "student.html" : "hi.html");
+    }
+    const canRedeem = !!(auth && auth.role === "student" && auth.token);
+    if (status && canRedeem) {
+      status.textContent = getStudentAccessMessage(auth);
+    }
+    if (!canRedeem) {
+      if (status) {
+        status.textContent = "Login to your student account first, then redeem activation code.";
+      }
+      if (message) {
+        message.textContent = "Login to your student account first, then redeem activation code.";
+        message.className = "message message-error";
+      }
+      form.querySelectorAll("input, button").forEach((node) => {
+        if (node && node.id !== "getActivationCodeBtn") node.disabled = true;
+      });
+      return;
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const payload = {
+        code: String((codeInput && codeInput.value) || "").trim().toLowerCase(),
+        referralCode: String((referralInput && referralInput.value) || "").trim() || undefined,
+        deviceId: getDeviceId()
+      };
+      const result = await apiRequest("/api/auth/activate/me", {
+        method: "POST",
+        body: payload
+      });
+      const authPayload = toAuthFromBackend(result);
+      if (!result.ok || !authPayload || authPayload.role !== "student") {
+        message.textContent = result.message || "Invalid activation code.";
+        message.className = "message message-error";
+        return;
+      }
+
+      setAuth(authPayload);
+      message.textContent = "Activation successful. Redirecting...";
+      message.className = "message message-success";
+      setTimeout(() => {
+        window.location.href = "student.html";
+      }, 600);
+    });
+  }
+
+  function renderAdminTable() {
+    const tbody = document.getElementById("subjectTableBody");
+    if (!tbody) return;
+    const subjects = getSubjects();
+    const totalQuestions = subjects.reduce((sum, s) => sum + (s.questions ? s.questions.length : 0), 0);
+    const now = new Date().toDateString();
+    const updatedToday = subjects.filter((s) => new Date(s.updatedAt).toDateString() === now).length;
+
+    const kpiSubjects = document.getElementById("kpiSubjects");
+    const kpiQuestions = document.getElementById("kpiQuestions");
+    const kpiUpdated = document.getElementById("kpiUpdated");
+    if (kpiSubjects) kpiSubjects.textContent = String(subjects.length);
+    if (kpiQuestions) kpiQuestions.textContent = String(totalQuestions);
+    if (kpiUpdated) kpiUpdated.textContent = String(updatedToday);
+
+    if (!subjects.length) {
+      tbody.innerHTML = "<tr><td colspan=\"6\">No subjects yet. Create one above.</td></tr>";
+      return;
+    }
+
+    tbody.innerHTML = subjects.map((subject) => {
+      const studyCount = (subject.questions || []).filter((question) => questionMode(question) === MODE_STUDY).length;
+      const cbtCount = (subject.questions || []).filter((question) => questionMode(question) === MODE_CBT).length;
+      return "<tr>" +
+        "<td>" + safeText(subject.name) + "</td>" +
+        "<td>" + (subject.topics ? subject.topics.length : 0) + "</td>" +
+        "<td>" + studyCount + "</td>" +
+        "<td>" + cbtCount + "</td>" +
+        "<td>" + formatDate(subject.updatedAt) + "</td>" +
+        "<td><button class=\"btn btn-soft btn-mini interactive\" type=\"button\" data-delete-id=\"" + safeText(subject.id) + "\">Delete</button></td>" +
+      "</tr>";
+    }).join("");
+
+    tbody.querySelectorAll("[data-delete-id]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const id = button.getAttribute("data-delete-id");
+        if (hasAdminApiSession()) {
+          const result = await apiRequest("/api/admin/subjects/" + encodeURIComponent(String(id || "")), {
+            method: "DELETE"
+          });
+          if (!result.ok && result.status !== 204) return;
+          await syncSubjectsFromBackend();
+        } else {
+          setSubjects(getSubjects().filter((s) => s.id !== id));
+        }
+        setBatches(getBatches().filter((batch) => batch.subjectId !== id));
+        renderAdminTable();
+        renderBatchTable();
+      });
+    });
+
+    refreshAdminSelectors();
+    applyHapticsAndMotion();
+  }
+
+  function refreshStudyTopicOptions() {
+    const subjectSelect = document.getElementById("studySubjectSelect");
+    const topicSelect = document.getElementById("studyTopicSelect");
+    if (!subjectSelect || !topicSelect) return;
+
+    const subjectId = subjectSelect.value;
+    const subject = getSubjects().find((item) => item.id === subjectId);
+    if (!subject) {
+      topicSelect.innerHTML = "<option value=\"\">No topics yet</option>";
+      topicSelect.disabled = true;
+      return;
+    }
+
+    const topics = subjectTopics(subject, MODE_STUDY);
+    if (!topics.length) {
+      topicSelect.innerHTML = "<option value=\"\">No topics yet</option>";
+      topicSelect.disabled = true;
+      return;
+    }
+
+    topicSelect.innerHTML = topics.map((topic) => {
+      return "<option value=\"" + safeText(topic) + "\">" + safeText(topic) + "</option>";
+    }).join("");
+    topicSelect.disabled = false;
+  }
+
+  function refreshAdminSelectors() {
+    const subjects = getSubjects();
+    const selects = [
+      document.getElementById("topicSubjectSelect"),
+      document.getElementById("studySubjectSelect"),
+      document.getElementById("jambSubjectSelect"),
+      document.getElementById("bulkStudySubjectSelect"),
+      document.getElementById("bulkCbtSubjectSelect"),
+      document.getElementById("bulkTopicSubjectSelect")
+    ].filter(Boolean);
+
+    if (!selects.length) return;
+
+    if (!subjects.length) {
+      selects.forEach((select) => {
+        select.innerHTML = "<option value=\"\">Create a subject first</option>";
+        select.disabled = true;
+      });
+      refreshStudyTopicOptions();
+      return;
+    }
+
+    const options = subjects.map((subject) => {
+      return "<option value=\"" + safeText(subject.id) + "\">" + safeText(subject.name) + "</option>";
+    }).join("");
+
+    selects.forEach((select) => {
+      const previous = select.value;
+      select.innerHTML = options;
+      const exists = subjects.some((subject) => subject.id === previous);
+      if (exists) select.value = previous;
+      select.disabled = false;
+    });
+
+    refreshStudyTopicOptions();
+  }
+
+  function hasAdminApiSession() {
+    const auth = getAuth();
+    return !!(auth && auth.role === "admin" && auth.source === "backend" && auth.token);
+  }
+
+  function resolveQuestionMode(rawQuestion, forcedMode) {
+    if (forcedMode === MODE_STUDY || forcedMode === MODE_CBT) return forcedMode;
+    const modeRaw = safeText(rawQuestion && rawQuestion.mode).trim().toLowerCase();
+    if (modeRaw === MODE_STUDY || modeRaw === MODE_CBT) return modeRaw;
+    const yearNum = Number(rawQuestion && rawQuestion.year);
+    const hasYear = Number.isInteger(yearNum) && yearNum >= 1980 && yearNum <= 2100;
+    return hasYear ? MODE_CBT : MODE_STUDY;
+  }
+
+  function describeQuestionValidationError(rawQuestion, forcedMode) {
+    if (!rawQuestion || typeof rawQuestion !== "object") {
+      return "Question item must be an object.";
+    }
+
+    const mode = resolveQuestionMode(rawQuestion, forcedMode);
+    const questionText = safeText(rawQuestion.question).trim();
+    if (!questionText) return "Missing 'question' text.";
+
+    const options = Array.isArray(rawQuestion.options)
+      ? rawQuestion.options.map((item) => safeText(item).trim()).filter(Boolean)
+      : [];
+    if (options.length < 2) return "Provide at least 2 non-empty options.";
+
+    const answerIndex = Number(rawQuestion.answerIndex);
+    if (!Number.isInteger(answerIndex)) return "'answerIndex' must be an integer.";
+    if (answerIndex < 0 || answerIndex >= options.length) {
+      return "'answerIndex' is out of range for the provided options.";
+    }
+
+    if (mode === MODE_CBT) {
+      const year = Number(rawQuestion.year);
+      if (!Number.isInteger(year) || year < 1980 || year > 2100) {
+        return "CBT question requires 'year' between 1980 and 2100.";
+      }
+    }
+
+    if (mode === MODE_STUDY) {
+      const topic = safeText(rawQuestion.topic).trim();
+      if (!topic) return "Study question requires a 'topic'.";
+    }
+
+    return "";
+  }
+
+  function extractQuestionYear(rawQuestion) {
+    const yearNum = Number(rawQuestion && rawQuestion.year);
+    if (Number.isInteger(yearNum) && yearNum >= 1980 && yearNum <= 2100) return yearNum;
+    return null;
+  }
+
+  function makeInvalidEntry(rawQuestion, index, reason) {
+    return {
+      index,
+      year: extractQuestionYear(rawQuestion),
+      reason: safeText(reason).trim() || "Invalid question payload."
+    };
+  }
+
+  function summarizeInvalidEntries(invalidEntries, limit) {
+    if (!Array.isArray(invalidEntries) || !invalidEntries.length) return "";
+    const safeLimit = Number.isInteger(limit) && limit > 0 ? limit : 5;
+    const parts = invalidEntries.slice(0, safeLimit).map((item) => {
+      const rowText = "Row " + (Number(item.index) + 1);
+      const yearText = Number.isInteger(Number(item.year)) ? " (year " + Number(item.year) + ")" : "";
+      const reason = safeText(item.reason).trim() || "Invalid question payload.";
+      return rowText + yearText + ": " + reason;
+    });
+    const remaining = Math.max(invalidEntries.length - safeLimit, 0);
+    return parts.join(" ") + (remaining ? " +" + remaining + " more." : "");
+  }
+
+  function prepareBulkBackendQuestions(rawQuestions, forcedMode) {
+    const prepared = [];
+    const invalidEntries = [];
+
+    rawQuestions.forEach((rawQuestion, index) => {
+      const reason = describeQuestionValidationError(rawQuestion, forcedMode);
+      if (reason) {
+        invalidEntries.push(makeInvalidEntry(rawQuestion, index, reason));
+        return;
+      }
+
+      const payload = toBackendQuestionPayload(rawQuestion, forcedMode);
+      if (!payload) {
+        invalidEntries.push(makeInvalidEntry(rawQuestion, index, "Question could not be normalized."));
+        return;
+      }
+
+      prepared.push({
+        index,
+        mode: payload.mode,
+        payload: payload.payload,
+        question: payload.question
+      });
+    });
+
+    return { prepared, invalidEntries };
+  }
+
+  function toBackendQuestionPayload(rawQuestion, forcedMode) {
+    const input = Object.assign({}, rawQuestion || {});
+    if (forcedMode === MODE_STUDY || forcedMode === MODE_CBT) input.mode = forcedMode;
+    if (input.mode === MODE_CBT && !input.exam) input.exam = "JAMB";
+
+    const question = normalizeQuestion(input);
+    if (!question) return null;
+
+    const payload = {
+      question: question.question,
+      options: question.options,
+      answerIndex: question.answerIndex
+    };
+
+    if (questionMode(question) === MODE_STUDY) {
+      payload.topicName = question.topic || "General";
+      if (question.explanation) payload.explanation = question.explanation;
+      return { mode: MODE_STUDY, payload, question };
+    }
+
+    payload.year = Number(question.year);
+    payload.exam = question.exam || "JAMB";
+    return { mode: MODE_CBT, payload, question };
+  }
+
+  function optimisticAddSubjects(rows) {
+    const subjects = getSubjects();
+    if (!Array.isArray(subjects)) return 0;
+    const nameSet = new Set(subjects.map((item) => safeText(item && item.name).trim().toLowerCase()));
+    let added = 0;
+    rows.forEach((row) => {
+      const subject = normalizeSubject({
+        name: row && row.name,
+        description: row && row.description,
+        topics: [],
+        questions: []
+      });
+      if (!subject) return;
+      const key = subject.name.toLowerCase();
+      if (nameSet.has(key)) return;
+      nameSet.add(key);
+      subjects.push(subject);
+      added += 1;
+    });
+    if (added > 0) setSubjects(subjects);
+    return added;
+  }
+
+  function optimisticAddTopics(subjectId, topics) {
+    if (!subjectId || !Array.isArray(topics) || !topics.length) return 0;
+    const subjects = getSubjects();
+    const index = subjects.findIndex((item) => item.id === subjectId);
+    if (index < 0) return 0;
+    const subject = subjects[index];
+    const seen = new Set((subject.topics || []).map((item) => safeText(item).trim().toLowerCase()));
+    let added = 0;
+    topics.forEach((topic) => {
+      const clean = safeText(topic).trim();
+      if (!clean) return;
+      const key = clean.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+      subject.topics = (subject.topics || []).concat(clean);
+      added += 1;
+    });
+    if (added > 0) {
+      subject.updatedAt = new Date().toISOString();
+      subjects[index] = subject;
+      setSubjects(subjects);
+    }
+    return added;
+  }
+
+  function optimisticAddQuestions(subjectId, normalizedRows, mode, maxAddCount) {
+    if (!subjectId || !Array.isArray(normalizedRows) || !normalizedRows.length) return [];
+    const subjects = getSubjects();
+    const index = subjects.findIndex((item) => item.id === subjectId);
+    if (index < 0) return [];
+    const subject = subjects[index];
+    const existing = new Set((subject.questions || []).map((question) => {
+      const cleanMode = questionMode(question);
+      const text = safeText(question && question.question).trim().toLowerCase();
+      const topic = safeText(question && question.topic).trim().toLowerCase();
+      const year = Number(question && question.year) || 0;
+      return [cleanMode, text, topic, year].join("|");
+    }));
+    const addedIds = [];
+    const maxCount = Number.isFinite(maxAddCount) ? Math.max(0, Number(maxAddCount)) : normalizedRows.length;
+    let added = 0;
+    normalizedRows.forEach((row) => {
+      if (added >= maxCount) return;
+      const question = normalizeQuestion(Object.assign({}, row || {}, {
+        mode: mode === MODE_CBT ? MODE_CBT : MODE_STUDY
+      }));
+      if (!question) return;
+      const key = [
+        questionMode(question),
+        safeText(question.question).trim().toLowerCase(),
+        safeText(question.topic).trim().toLowerCase(),
+        Number(question.year) || 0
+      ].join("|");
+      if (existing.has(key)) return;
+      existing.add(key);
+      subject.questions = (subject.questions || []).concat(question);
+      if (questionMode(question) === MODE_STUDY && question.topic) {
+        const hasTopic = (subject.topics || []).some((item) => item.toLowerCase() === question.topic.toLowerCase());
+        if (!hasTopic) subject.topics = (subject.topics || []).concat(question.topic);
+      }
+      addedIds.push(question.id);
+      added += 1;
+    });
+    if (added > 0) {
+      subject.updatedAt = new Date().toISOString();
+      subjects[index] = subject;
+      setSubjects(subjects);
+    }
+    return addedIds;
+  }
+
+  async function addTopicToSubject(subjectId, topicName) {
+    const topic = safeText(topicName).trim();
+    if (!subjectId || !topic) return false;
+
+    if (hasAdminApiSession()) {
+      const result = await apiRequest("/api/admin/topics", {
+        method: "POST",
+        body: {
+          subjectId,
+          name: topic
+        }
+      });
+      if (!result.ok) return false;
+      await syncSubjectsFromBackend();
+      return true;
+    }
+
+    const subjects = getSubjects();
+    const index = subjects.findIndex((subject) => subject.id === subjectId);
+    if (index < 0) return false;
+
+    const subject = subjects[index];
+    const existing = (subject.topics || []).some((item) => item.toLowerCase() === topic.toLowerCase());
+    if (!existing) {
+      subject.topics = (subject.topics || []).concat(topic);
+    }
+    subject.updatedAt = new Date().toISOString();
+    subjects[index] = subject;
+    setSubjects(subjects);
+    return true;
+  }
+
+  async function addQuestionToSubject(subjectId, rawQuestion) {
+    const result = await addQuestionsToSubjectBulk(subjectId, [rawQuestion], rawQuestion && rawQuestion.mode ? rawQuestion.mode : null);
+    return { ok: result.added > 0 };
+  }
+
+  function parseQuestionBulkPayload(rawParsed) {
+    if (Array.isArray(rawParsed)) return rawParsed;
+    if (rawParsed && typeof rawParsed === "object") {
+      if (Array.isArray(rawParsed.questions)) return rawParsed.questions;
+      if (Array.isArray(rawParsed.items)) return rawParsed.items;
+      return [rawParsed];
+    }
+    return [];
+  }
+
+  function parseSubjectBulkPayload(rawParsed) {
+    function extract(value) {
+      if (Array.isArray(value)) return value;
+      if (!value || typeof value !== "object") return [];
+
+      const directLists = [value.subjects, value.items, value.data, value.payload, value.rows, value.list];
+      for (const item of directLists) {
+        if (Array.isArray(item)) return item;
+      }
+
+      const namedMap = value.bySubject || value.subjectMap;
+      if (namedMap && typeof namedMap === "object") {
+        return Object.keys(namedMap).map((name) => {
+          const row = namedMap[name];
+          return Object.assign({}, row || {}, { name });
+        });
+      }
+
+      for (const key of ["data", "payload", "result"]) {
+        const nested = value[key];
+        if (nested && nested !== value) {
+          const rows = extract(nested);
+          if (rows.length) return rows;
+        }
+      }
+      return [value];
+    }
+    return extract(rawParsed);
+  }
+
+  function normalizeBulkSubjectRow(raw) {
+    if (!raw || typeof raw !== "object") return null;
+    const name = safeText(raw.name || raw.subject || raw.subjectName || raw.title).trim();
+    const fallbackDesc = name ? (name + " subject preparation") : "";
+    const description = safeText(raw.description || raw.desc || raw.details || raw.summary || fallbackDesc).trim();
+    return normalizeSubject({
+      name,
+      description,
+      topics: [],
+      questions: []
+    });
+  }
+
+  function prepareBulkSubjectRows(rawSubjects) {
+    const rows = parseSubjectBulkPayload(rawSubjects);
+    if (!rows.length) return [];
+    const list = [];
+    const seen = new Set();
+    rows.forEach((item) => {
+      const normalized = normalizeBulkSubjectRow(item);
+      if (!normalized) return;
+      const key = normalized.name.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+      list.push({
+        name: normalized.name,
+        description: normalized.description
+      });
+    });
+    return list;
+  }
+
+  async function addSubjectsBulk(rawSubjects) {
+    const rows = prepareBulkSubjectRows(rawSubjects);
+    if (!rows.length) return { added: 0, skipped: 0 };
+
+    if (hasAdminApiSession()) {
+      const primary = await apiRequest("/api/admin/subjects/bulk", {
+        method: "POST",
+        body: { subjects: rows }
+      });
+
+      if (primary.ok) {
+        const stats = primary && primary.data && primary.data.stats ? primary.data.stats : {};
+        const addedRaw = Number(stats.addedSubjects);
+        const skippedRaw = Number(stats.skipped);
+        const added = Number.isFinite(addedRaw) ? addedRaw : 0;
+        const skipped = Number.isFinite(skippedRaw) ? skippedRaw : Math.max(rows.length - added, 0);
+        if (added > 0) {
+          optimisticAddSubjects(rows);
+          scheduleSubjectsSync(120);
+        }
+        return { added, skipped };
+      }
+
+      // Fallback for servers that don't have /subjects/bulk yet.
+      let added = 0;
+      let skipped = 0;
+      for (const row of rows) {
+        // eslint-disable-next-line no-await-in-loop
+        const one = await apiRequest("/api/admin/subjects", {
+          method: "POST",
+          body: row
+        });
+        if (one.ok) added += 1;
+        else skipped += 1;
+      }
+      if (added > 0) {
+        optimisticAddSubjects(rows);
+        scheduleSubjectsSync(120);
+        return { added, skipped };
+      }
+      throw new Error(primary.message || "Subject bulk import failed.");
+    }
+
+    const current = getSubjects();
+    const nameSet = new Set(current.map((subject) => safeText(subject && subject.name).trim().toLowerCase()));
+    let added = 0;
+    let skipped = 0;
+
+    rows.forEach((row) => {
+      const subject = normalizeSubject({
+        name: row.name,
+        description: row.description,
+        topics: [],
+        questions: []
+      });
+      if (!subject) {
+        skipped += 1;
+        return;
+      }
+      const key = subject.name.toLowerCase();
+      if (nameSet.has(key)) {
+        skipped += 1;
+        return;
+      }
+      nameSet.add(key);
+      current.push(subject);
+      added += 1;
+    });
+
+    if (added > 0) setSubjects(current);
+    return { added, skipped };
+  }
+
+  function parseTopicBulkPayload(rawParsed) {
+    function extract(value) {
+      if (Array.isArray(value)) return value;
+      if (typeof value === "string") return [value];
+      if (!value || typeof value !== "object") return [];
+      if (Array.isArray(value.topics)) return value.topics;
+      if (Array.isArray(value.items)) return value.items;
+      if (Array.isArray(value.data)) return value.data;
+      if (Array.isArray(value.payload)) return value.payload;
+      if (value.data && value.data !== value) {
+        const nested = extract(value.data);
+        if (nested.length) return nested;
+      }
+      return [value];
+    }
+
+    const source = extract(rawParsed);
+    const topics = [];
+    const seen = new Set();
+    source.forEach((item) => {
+      const raw = typeof item === "string"
+        ? item
+        : (item && typeof item === "object"
+          ? (item.name || item.topic || item.title || "")
+          : "");
+      const topic = safeText(raw).trim();
+      if (!topic) return;
+      const key = topic.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+      topics.push(topic);
+    });
+    return topics;
+  }
+
+  async function addTopicsToSubjectBulk(subjectId, rawTopics) {
+    const rows = parseTopicBulkPayload(rawTopics);
+    if (!subjectId || !rows.length) return { added: 0, skipped: 0 };
+
+    if (hasAdminApiSession()) {
+      const primary = await apiRequest("/api/admin/topics/bulk", {
+        method: "POST",
+        body: {
+          subjectId,
+          topics: rows
+        }
+      });
+
+      if (primary.ok) {
+        const stats = primary && primary.data && primary.data.stats ? primary.data.stats : {};
+        const addedRaw = Number(stats.added);
+        const skippedRaw = Number(stats.skipped);
+        const added = Number.isFinite(addedRaw) ? addedRaw : 0;
+        const skipped = Number.isFinite(skippedRaw) ? skippedRaw : Math.max(rows.length - added, 0);
+        if (added > 0) {
+          optimisticAddTopics(subjectId, rows);
+          scheduleSubjectsSync(120);
+        }
+        return { added, skipped };
+      }
+
+      // Fallback for servers that don't have /topics/bulk yet.
+      let added = 0;
+      let skipped = 0;
+      for (const topicName of rows) {
+        // eslint-disable-next-line no-await-in-loop
+        const one = await apiRequest("/api/admin/topics", {
+          method: "POST",
+          body: {
+            subjectId,
+            name: topicName
+          }
+        });
+        if (one.ok) added += 1;
+        else skipped += 1;
+      }
+      if (added > 0) {
+        optimisticAddTopics(subjectId, rows);
+        scheduleSubjectsSync(120);
+        return { added, skipped };
+      }
+      throw new Error(primary.message || "Could not import topics.");
+    }
+
+    const subjects = getSubjects();
+    const index = subjects.findIndex((subject) => subject.id === subjectId);
+    if (index < 0) return { added: 0, skipped: rows.length };
+
+    const subject = subjects[index];
+    const existing = new Set((subject.topics || []).map((topic) => safeText(topic).toLowerCase()));
+    let added = 0;
+    rows.forEach((topic) => {
+      const key = topic.toLowerCase();
+      if (existing.has(key)) return;
+      existing.add(key);
+      subject.topics = (subject.topics || []).concat(topic);
+      added += 1;
+    });
+    subject.updatedAt = new Date().toISOString();
+    subjects[index] = subject;
+    setSubjects(subjects);
+    return { added, skipped: Math.max(rows.length - added, 0) };
+  }
+
+  function parseCbtQuestionBulkPayload(rawParsed) {
+    function toYear(value) {
+      const year = Number(value);
+      return Number.isInteger(year) && year >= 1980 && year <= 2100 ? year : null;
+    }
+
+    function withDefaults(rawQuestion, forcedYear, forcedExam, forcedTopic) {
+      if (!rawQuestion || typeof rawQuestion !== "object") return null;
+      const question = Object.assign({}, rawQuestion);
+      if ((question.year === undefined || question.year === null || question.year === "") && forcedYear !== null) {
+        question.year = forcedYear;
+      }
+      if (!question.exam) question.exam = forcedExam || "JAMB";
+      if (!question.topic && forcedTopic) question.topic = forcedTopic;
+      return question;
+    }
+
+    function parseQuestionsWithContext(list, forcedYear, forcedExam, forcedTopic) {
+      const rows = [];
+      parseQuestionBulkPayload(list).forEach((question) => {
+        const normalized = withDefaults(question, forcedYear, forcedExam, forcedTopic);
+        if (normalized) rows.push(normalized);
+      });
+      return rows;
+    }
+
+    function parseMultiYearBlocks(multiYear, baseExam, baseTopic) {
+      const rows = [];
+      if (Array.isArray(multiYear)) {
+        multiYear.forEach((block) => {
+          if (!block || typeof block !== "object") return;
+          const year = toYear(block.year || block.examYear);
+          const exam = safeText(block.exam).trim() || baseExam;
+          const topic = safeText(block.topic).trim() || baseTopic;
+          rows.push.apply(rows, parseQuestionsWithContext(block, year, exam, topic));
+        });
+        return rows;
+      }
+
+      if (multiYear && typeof multiYear === "object") {
+        Object.keys(multiYear).forEach((key) => {
+          const year = toYear(key);
+          const block = multiYear[key];
+          if (Array.isArray(block)) {
+            rows.push.apply(rows, parseQuestionsWithContext(block, year, baseExam, baseTopic));
+            return;
+          }
+          if (block && typeof block === "object") {
+            const exam = safeText(block.exam).trim() || baseExam;
+            const topic = safeText(block.topic).trim() || baseTopic;
+            rows.push.apply(rows, parseQuestionsWithContext(block, year, exam, topic));
+          }
+        });
+      }
+      return rows;
+    }
+
+    function parseByShape(value, baseExam, baseTopic) {
+      if (Array.isArray(value)) {
+        const arrayRows = parseMultiYearBlocks(value, baseExam, baseTopic);
+        if (arrayRows.length) return arrayRows;
+        return parseQuestionsWithContext(value, null, baseExam, baseTopic);
+      }
+
+      if (!value || typeof value !== "object") {
+        return parseQuestionsWithContext(value, null, baseExam, baseTopic);
+      }
+
+      const exam = safeText(value.exam).trim() || baseExam || "JAMB";
+      const topic = safeText(value.topic).trim() || baseTopic;
+      const multiYear = value.years || value.byYear || value.questionsByYear;
+      const multiYearRows = parseMultiYearBlocks(multiYear, exam, topic);
+      if (multiYearRows.length) return multiYearRows;
+
+      // Handle wrapped payloads such as { data: {...} }, { payload: {...} }, { cbtQuestions: {...} }.
+      const wrappers = [value.payload, value.data, value.cbt, value.cbtQuestions, value.questionsData];
+      for (const wrapper of wrappers) {
+        if (!wrapper || wrapper === value) continue;
+        const wrapperRows = parseByShape(wrapper, exam, topic);
+        if (wrapperRows.length) return wrapperRows;
+      }
+
+      return parseQuestionsWithContext(value, null, exam, topic);
+    }
+
+    return parseByShape(rawParsed, "JAMB", "");
+  }
+
+  async function addQuestionsToSubjectBulk(subjectId, rawQuestions, forcedMode) {
+    if (!subjectId || !Array.isArray(rawQuestions)) return { added: 0, skipped: 0, addedIds: [], invalidEntries: [] };
+
+    if (hasAdminApiSession()) {
+      const prep = prepareBulkBackendQuestions(rawQuestions, forcedMode);
+      const prepared = prep.prepared;
+      const invalidEntries = prep.invalidEntries.slice();
+
+      if (!prepared.length) {
+        return { added: 0, skipped: rawQuestions.length, addedIds: [], invalidEntries };
+      }
+
+      const mode = forcedMode === MODE_CBT ? MODE_CBT : forcedMode === MODE_STUDY ? MODE_STUDY : prepared[0].mode;
+      const rows = prepared.filter((item) => item.mode === mode);
+      if (!rows.length) {
+        return { added: 0, skipped: rawQuestions.length, addedIds: [], invalidEntries };
+      }
+
+      const path = mode === MODE_CBT ? "/api/admin/questions/bulk/cbt" : "/api/admin/questions/bulk/study";
+      const chunkSize = 120;
+      let added = 0;
+      let skipped = invalidEntries.length;
+      const addedIds = [];
+
+      for (let index = 0; index < rows.length; index += chunkSize) {
+        const chunk = rows.slice(index, index + chunkSize);
+        // eslint-disable-next-line no-await-in-loop
+        const result = await apiRequest(path, {
+          method: "POST",
+          body: {
+            subjectId,
+            questions: chunk.map((item) => item.payload)
+          }
+        });
+
+        if (!result.ok) {
+          skipped += chunk.length;
+          chunk.forEach((item) => {
+            invalidEntries.push(makeInvalidEntry(rawQuestions[item.index], item.index, result.message || "Server rejected this question."));
+          });
+          continue;
+        }
+
+        const stats = result && result.data && result.data.stats ? result.data.stats : {};
+        const chunkAddedRaw = Number(stats.added);
+        const chunkAdded = Number.isFinite(chunkAddedRaw) ? chunkAddedRaw : chunk.length;
+        const chunkSkippedRaw = Number(stats.skipped);
+        const chunkSkipped = Number.isFinite(chunkSkippedRaw)
+          ? chunkSkippedRaw
+          : Math.max(chunk.length - chunkAdded, 0);
+        added += chunkAdded;
+        skipped += chunkSkipped;
+
+        if (Array.isArray(result && result.data && result.data.errors)) {
+          result.data.errors.forEach((serverError) => {
+            const localIndex = Number(serverError && serverError.index);
+            if (!Number.isInteger(localIndex) || localIndex < 0 || localIndex >= chunk.length) return;
+            const row = chunk[localIndex];
+            invalidEntries.push(makeInvalidEntry(
+              rawQuestions[row.index],
+              row.index,
+              serverError && serverError.message
+                ? serverError.message
+                : "Server rejected this question."
+            ));
+          });
+        }
+
+        if (Array.isArray(result && result.data && result.data.ids)) {
+          result.data.ids.forEach((id) => {
+            const text = String(id || "").trim();
+            if (text) addedIds.push(text);
+          });
+        }
+      }
+
+      if (added > 0) {
+        const optimisticIds = optimisticAddQuestions(
+          subjectId,
+          rows.map((item) => item.question).filter(Boolean),
+          mode,
+          added
+        );
+        if (!addedIds.length && optimisticIds.length) {
+          addedIds.push.apply(addedIds, optimisticIds);
+        }
+        scheduleSubjectsSync(180);
+      }
+      return { added, skipped, addedIds, invalidEntries };
+    }
+
+    const subjects = getSubjects();
+    const index = subjects.findIndex((subject) => subject.id === subjectId);
+    if (index < 0) return { added: 0, skipped: rawQuestions.length, addedIds: [], invalidEntries: [] };
+
+    const subject = subjects[index];
+    const validQuestions = [];
+    const invalidEntries = [];
+
+    rawQuestions.forEach((rawQuestion, rowIndex) => {
+      const input = Object.assign({}, rawQuestion || {});
+      if (forcedMode === MODE_STUDY || forcedMode === MODE_CBT) {
+        input.mode = forcedMode;
+      }
+      if (input.mode === MODE_CBT && !input.exam) {
+        input.exam = "JAMB";
+      }
+
+      const reason = describeQuestionValidationError(input, forcedMode);
+      if (reason) {
+        invalidEntries.push(makeInvalidEntry(rawQuestion, rowIndex, reason));
+        return;
+      }
+
+      const question = normalizeQuestion(input);
+      if (question) {
+        validQuestions.push(question);
+      } else {
+        invalidEntries.push(makeInvalidEntry(rawQuestion, rowIndex, "Question could not be normalized."));
+      }
+    });
+
+    if (!validQuestions.length) {
+      return { added: 0, skipped: rawQuestions.length, addedIds: [], invalidEntries };
+    }
+
+    subject.questions = (subject.questions || []).concat(validQuestions);
+    validQuestions.forEach((question) => {
+      if (!question.topic) return;
+      if (questionMode(question) !== MODE_STUDY) return;
+      const exists = (subject.topics || []).some((item) => item.toLowerCase() === question.topic.toLowerCase());
+      if (!exists) {
+        subject.topics = (subject.topics || []).concat(question.topic);
+      }
+    });
+    subject.updatedAt = new Date().toISOString();
+    subjects[index] = subject;
+    setSubjects(subjects);
+
+    return {
+      added: validQuestions.length,
+      skipped: Math.max(rawQuestions.length - validQuestions.length, 0),
+      addedIds: validQuestions.map((question) => question.id),
+      invalidEntries
+    };
+  }
+
+  function recordImportBatch(type, subjectId, addedIds, fileName, countValue, subjectNameOverride) {
+    const ids = Array.isArray(addedIds)
+      ? addedIds.map((id) => String(id || "").trim()).filter(Boolean)
+      : [];
+    const explicitCount = Number(countValue);
+    const count = Number.isFinite(explicitCount) ? Math.max(0, explicitCount) : ids.length;
+    if (!count && !ids.length) return;
+    const cleanType = safeText(type).trim().toLowerCase() || "study";
+    const subject = subjectId ? getSubjects().find((item) => item.id === subjectId) : null;
+    const subjectName = safeText(subjectNameOverride).trim() || (subject ? subject.name : (subjectId || "All Subjects"));
+    const batches = getBatches();
+    batches.push({
+      id: makeId("batch"),
+      type: cleanType,
+      subjectId: subjectId || "",
+      subjectName,
+      questionIds: ids,
+      count: count || ids.length,
+      fileName: safeText(fileName).trim() || "upload.json",
+      createdAt: new Date().toISOString()
+    });
+    setBatches(batches);
+  }
+
+  async function deleteBatchQuestions(batchId) {
+    const batches = getBatches();
+    const index = batches.findIndex((batch) => batch.id === batchId);
+    if (index < 0) return 0;
+    const batch = batches[index];
+    const ids = new Set(Array.isArray(batch.questionIds) ? batch.questionIds : []);
+    if (!ids.size) {
+      batches.splice(index, 1);
+      setBatches(batches);
+      clearImportLocksForBatch(batch);
+      return 0;
+    }
+
+    if (hasAdminApiSession()) {
+      const result = await apiRequest("/api/admin/questions", {
+        method: "DELETE",
+        body: {
+          ids: Array.from(ids)
+        }
+      });
+      if (!result.ok) return 0;
+      const deleted = Number(result && result.data && result.data.deleted);
+      batches.splice(index, 1);
+      setBatches(batches);
+      clearImportLocksForBatch(batch);
+      await syncSubjectsFromBackend();
+      return Number.isFinite(deleted) ? deleted : ids.size;
+    }
+
+    const subjects = getSubjects();
+    let removed = 0;
+    subjects.forEach((subject) => {
+      const before = Array.isArray(subject.questions) ? subject.questions.length : 0;
+      subject.questions = (subject.questions || []).filter((question) => !ids.has(question.id));
+      const diff = Math.max(before - subject.questions.length, 0);
+      if (diff > 0) subject.updatedAt = new Date().toISOString();
+      removed += diff;
+    });
+    setSubjects(subjects);
+    batches.splice(index, 1);
+    setBatches(batches);
+    clearImportLocksForBatch(batch);
+    return removed;
+  }
+
+  async function clearSubjectsData() {
+    if (hasAdminApiSession()) {
+      const subjects = getSubjects();
+      let failed = 0;
+      for (const subject of subjects) {
+        // eslint-disable-next-line no-await-in-loop
+        const result = await apiRequest("/api/admin/subjects/" + encodeURIComponent(subject.id), {
+          method: "DELETE"
+        });
+        if (!result.ok && result.status !== 204) failed += 1;
+      }
+      if (failed > 0) {
+        await syncSubjectsFromBackend();
+      } else {
+        setSubjects([]);
+      }
+      setBatches([]);
+      clearAllImportLocks();
+      return;
+    }
+
+    setSubjects([]);
+    setBatches([]);
+    clearAllImportLocks();
+  }
+
+  async function clearTopicsData() {
+    if (hasAdminApiSession()) {
+      const result = await apiRequest("/api/admin/topics", { method: "DELETE" });
+      if (!result.ok) return;
+      await syncSubjectsFromBackend();
+      clearImportLocksByType("study-topic");
+      return;
+    }
+
+    const subjects = getSubjects();
+    subjects.forEach((subject) => {
+      subject.topics = [];
+      subject.updatedAt = new Date().toISOString();
+    });
+    setSubjects(subjects);
+    clearImportLocksByType("study-topic");
+  }
+
+  async function clearQuestionsByMode(mode) {
+    if (hasAdminApiSession()) {
+      const modeValue = mode === MODE_CBT ? "CBT" : "STUDY";
+      const result = await apiRequest("/api/admin/questions", {
+        method: "DELETE",
+        body: {
+          mode: modeValue
+        }
+      });
+      if (!result.ok) return;
+      await syncSubjectsFromBackend();
+      if (mode === MODE_STUDY || mode === MODE_CBT) {
+        setBatches(getBatches().filter((batch) => batch.type !== mode));
+      }
+      clearImportLocksByType(mode === MODE_CBT ? "cbt-question" : "study-question");
+      return;
+    }
+
+    const subjects = getSubjects();
+    subjects.forEach((subject) => {
+      subject.questions = (subject.questions || []).filter((question) => questionMode(question) !== mode);
+      subject.updatedAt = new Date().toISOString();
+    });
+    setSubjects(subjects);
+    if (mode === MODE_STUDY || mode === MODE_CBT) {
+      setBatches(getBatches().filter((batch) => batch.type !== mode));
+    }
+    clearImportLocksByType(mode === MODE_CBT ? "cbt-question" : "study-question");
+  }
+
+  async function clearAllBatchQuestions() {
+    const batchIds = getBatches().map((batch) => batch.id);
+    let removed = 0;
+    for (const id of batchIds) {
+      // eslint-disable-next-line no-await-in-loop
+      removed += await deleteBatchQuestions(id);
+    }
+    return removed;
+  }
+
+  function clearImportLocksForBatch(batch) {
+    if (!batch || typeof batch !== "object") return;
+    const type = safeText(batch.type).trim().toLowerCase();
+    const subjectId = safeText(batch.subjectId).trim().toLowerCase();
+    const fileName = safeText(batch.fileName).trim().toLowerCase();
+    if (!type) return;
+    const locked = getImportedFiles();
+    Object.keys(locked).forEach((key) => {
+      const row = locked[key];
+      if (!row || row.type !== type) return;
+      const sameSubject = (safeText(row.subjectId).trim().toLowerCase() || "") === (subjectId || "");
+      const sameFile = fileName && (safeText(row.fileName).trim().toLowerCase() === fileName);
+      if (sameSubject && (sameFile || !fileName)) {
+        delete locked[key];
+      }
+    });
+    setImportedFiles(locked);
+  }
+
+  function renderBatchTable() {
+    const tbody = document.getElementById("batchTableBody");
+    if (!tbody) return;
+    const batches = getBatches().slice().reverse();
+    if (!batches.length) {
+      tbody.innerHTML = "<tr><td colspan=\"7\">No upload batches yet.</td></tr>";
+      return;
+    }
+
+    function formatBatchType(type) {
+      const clean = safeText(type).trim().toLowerCase();
+      if (clean === MODE_CBT) return "CBT Questions";
+      if (clean === MODE_STUDY) return "Study Questions";
+      if (clean === "subject-bulk") return "Subjects";
+      if (clean === "study-topic") return "Study Topics";
+      return safeText(type).trim() || "Upload";
+    }
+
+    tbody.innerHTML = batches.map((batch) => {
+      const canDeleteQuestions = Array.isArray(batch.questionIds) && batch.questionIds.length > 0;
+      return "<tr>" +
+        "<td><input type=\"checkbox\" data-select-batch=\"" + safeText(batch.id) + "\"></td>" +
+        "<td>" + formatBatchType(batch.type) + "</td>" +
+        "<td>" + safeText(batch.subjectName) + "</td>" +
+        "<td>" + Number(batch.count || 0) + "</td>" +
+        "<td>" + safeText(batch.fileName) + "</td>" +
+        "<td>" + formatDate(batch.createdAt) + "</td>" +
+        "<td><button type=\"button\" class=\"btn btn-soft btn-mini\" data-delete-batch=\"" + safeText(batch.id) + "\">" +
+          (canDeleteQuestions ? "Delete Batch Questions" : "Remove Log") +
+        "</button></td>" +
+      "</tr>";
+    }).join("");
+
+    tbody.querySelectorAll("[data-delete-batch]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const id = button.getAttribute("data-delete-batch");
+        const removed = await deleteBatchQuestions(id);
+        const message = document.getElementById("adminCleanupMessage");
+        if (message) {
+          message.textContent = "Batch removed. Deleted " + removed + " question(s).";
+          message.className = "message message-success";
+        }
+        renderBatchTable();
+        renderAdminTable();
+      });
+    });
+  }
+
+  function renderActivationCodeTable(codes) {
+    const tbody = document.getElementById("activationCodeTableBody");
+    if (!tbody) return;
+    const rows = Array.isArray(codes) ? codes : [];
+    if (!rows.length) {
+      tbody.innerHTML = "<tr><td colspan=\"6\">No activation codes generated yet.</td></tr>";
+      return;
+    }
+
+    tbody.innerHTML = rows.map((item) => {
+      const usedBy = item.usedBy
+        ? (safeText(item.usedBy.username || "") || safeText(item.usedBy.email || ""))
+        : "-";
+      return "<tr>" +
+        "<td>" + safeText(item.code) + "</td>" +
+        "<td>" + safeText(String(item.tier || "").toUpperCase()) + "</td>" +
+        "<td>" + (item.isActive ? "Unused" : "Used") + "</td>" +
+        "<td>" + usedBy + "</td>" +
+        "<td>" + formatDate(item.createdAt) + "</td>" +
+        "<td>" + (item.usedAt ? formatDate(item.usedAt) : "-") + "</td>" +
+      "</tr>";
+    }).join("");
+  }
+
+  async function loadActivationCodes(limit) {
+    const result = await apiRequest("/api/admin/activation-codes?limit=" + encodeURIComponent(String(limit || 50)));
+    if (!result.ok) return { ok: false, message: result.message, codes: [] };
+    const codes = Array.isArray(result && result.data && result.data.codes) ? result.data.codes : [];
+    renderActivationCodeTable(codes);
+    return { ok: true, codes };
+  }
+
+  function renderAdminUserTable(users) {
+    const tbody = document.getElementById("adminUserTableBody");
+    if (!tbody) return;
+    const rows = Array.isArray(users) ? users : [];
+    if (!rows.length) {
+      tbody.innerHTML = "<tr><td colspan=\"8\">No users found.</td></tr>";
+      return;
+    }
+
+    tbody.innerHTML = rows.map((user) => {
+      return "<tr>" +
+        "<td>" + safeText(user.username || "-") + "</td>" +
+        "<td>" + safeText(user.email) + "</td>" +
+        "<td>" + safeText(user.status || "-") + "</td>" +
+        "<td>" + safeText(user.effectiveTier || user.planTier || "-") + "</td>" +
+        "<td>" + safeText(user.deviceId || "-") + "</td>" +
+        "<td>" + (user.trialPremiumEndsAt ? formatDate(user.trialPremiumEndsAt) : "-") + "</td>" +
+        "<td>" + formatDate(user.createdAt) + "</td>" +
+        "<td class=\"admin-actions\">" +
+          "<button type=\"button\" class=\"btn btn-soft btn-mini\" data-user-action=\"activate-standard\" data-user-id=\"" + safeText(user.id) + "\">Activate Standard</button>" +
+          "<button type=\"button\" class=\"btn btn-soft btn-mini\" data-user-action=\"activate-premium\" data-user-id=\"" + safeText(user.id) + "\">Activate Premium</button>" +
+          "<button type=\"button\" class=\"btn btn-soft btn-mini\" data-user-action=\"deactivate\" data-user-id=\"" + safeText(user.id) + "\">Deactivate</button>" +
+          "<button type=\"button\" class=\"btn btn-soft btn-mini\" data-user-action=\"delete\" data-user-id=\"" + safeText(user.id) + "\">Delete</button>" +
+        "</td>" +
+      "</tr>";
+    }).join("");
+  }
+
+  async function loadAdminUsers(query) {
+    const cleanQuery = String(query || "").trim();
+    const path = cleanQuery
+      ? "/api/admin/users?query=" + encodeURIComponent(cleanQuery)
+      : "/api/admin/users?limit=10";
+    const result = await apiRequest(path);
+    if (!result.ok) return { ok: false, message: result.message, users: [] };
+    const users = Array.isArray(result && result.data && result.data.users) ? result.data.users : [];
+    renderAdminUserTable(users);
+    return { ok: true, users };
+  }
+
+  function initAdminAccessTools() {
+    const codeForm = document.getElementById("activationCodeForm");
+    const codeTier = document.getElementById("activationCodeTier");
+    const codeCount = document.getElementById("activationCodeCount");
+    const codeMessage = document.getElementById("activationCodeMessage");
+    const userSearchForm = document.getElementById("adminUserSearchForm");
+    const userSearchQuery = document.getElementById("adminUserSearchQuery");
+    const userSearchMessage = document.getElementById("adminUserSearchMessage");
+    const userTable = document.getElementById("adminUserTableBody");
+
+    if (!codeForm && !userSearchForm && !userTable) return;
+
+    if (!hasAdminApiSession()) {
+      if (codeMessage) {
+        codeMessage.textContent = "Activation tools require backend admin login.";
+        codeMessage.className = "message message-error";
+      }
+      if (userSearchMessage) {
+        userSearchMessage.textContent = "User management requires backend admin login.";
+        userSearchMessage.className = "message message-error";
+      }
+      return;
+    }
+
+    if (codeForm && codeTier && codeCount) {
+      codeForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const tierValue = String(codeTier.value || "").trim().toUpperCase() === "PREMIUM" ? "PREMIUM" : "STANDARD";
+        const countValue = Number(codeCount.value);
+        const result = await apiRequest("/api/admin/activation-codes", {
+          method: "POST",
+          body: {
+            tier: tierValue,
+            count: Number.isInteger(countValue) ? countValue : 1
+          }
+        });
+
+        if (!result.ok) {
+          if (codeMessage) {
+            codeMessage.textContent = result.message || "Could not generate activation code(s).";
+            codeMessage.className = "message message-error";
+          }
+          return;
+        }
+
+        const codes = Array.isArray(result && result.data && result.data.codes) ? result.data.codes : [];
+        if (codeMessage) {
+          codeMessage.textContent = "Generated " + codes.length + " code(s).";
+          codeMessage.className = "message message-success";
+        }
+        await loadActivationCodes(100);
+      });
+    }
+
+    if (userSearchForm && userSearchQuery) {
+      userSearchForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const result = await loadAdminUsers(userSearchQuery.value);
+        if (userSearchMessage) {
+          userSearchMessage.textContent = result.ok ? ("Found " + result.users.length + " user(s).") : result.message;
+          userSearchMessage.className = result.ok ? "message message-success" : "message message-error";
+        }
+      });
+    }
+
+    if (userTable) {
+      userTable.addEventListener("click", async (event) => {
+        const target = event.target;
+        if (!target || !target.getAttribute) return;
+        const action = target.getAttribute("data-user-action");
+        const userId = target.getAttribute("data-user-id");
+        if (!action || !userId) return;
+
+        if (action === "delete") {
+          const result = await apiRequest("/api/admin/users/" + encodeURIComponent(userId), { method: "DELETE" });
+          if (!result.ok && result.status !== 204) {
+            if (userSearchMessage) {
+              userSearchMessage.textContent = result.message || "Could not delete user.";
+              userSearchMessage.className = "message message-error";
+            }
+            return;
+          }
+        } else if (action === "deactivate") {
+          const result = await apiRequest("/api/admin/users/" + encodeURIComponent(userId) + "/state", {
+            method: "PATCH",
+            body: { action: "deactivate" }
+          });
+          if (!result.ok) {
+            if (userSearchMessage) {
+              userSearchMessage.textContent = result.message || "Could not deactivate user.";
+              userSearchMessage.className = "message message-error";
+            }
+            return;
+          }
+        } else {
+          const tier = action === "activate-premium" ? "PREMIUM" : "STANDARD";
+          const result = await apiRequest("/api/admin/users/" + encodeURIComponent(userId) + "/state", {
+            method: "PATCH",
+            body: { action: "activate", tier }
+          });
+          if (!result.ok) {
+            if (userSearchMessage) {
+              userSearchMessage.textContent = result.message || "Could not activate user.";
+              userSearchMessage.className = "message message-error";
+            }
+            return;
+          }
+        }
+
+        const refreshed = await loadAdminUsers(userSearchQuery ? userSearchQuery.value : "");
+        if (userSearchMessage) {
+          userSearchMessage.textContent = refreshed.ok ? "User updated successfully." : refreshed.message;
+          userSearchMessage.className = refreshed.ok ? "message message-success" : "message message-error";
+        }
+      });
+    }
+
+    loadActivationCodes(100);
+    loadAdminUsers("").then((result) => {
+      if (!userSearchMessage) return;
+      if (!result.ok) {
+        userSearchMessage.textContent = result.message;
+        userSearchMessage.className = "message message-error";
+        return;
+      }
+      userSearchMessage.textContent = "Showing 10 newest users. Use search to find any user.";
+      userSearchMessage.className = "message message-success";
+    });
+  }
+
+  function initAdminPage() {
+    const auth = requireRole("admin");
+    if (!auth) return;
+    ensureBatchesData();
+    const stopObserveSubjects = observeSubjectStoreChanges(() => {
+      renderAdminTable();
+      refreshAdminSelectors();
+    });
+    window.addEventListener("beforeunload", stopObserveSubjects, { once: true });
+    let adminSyncTimer = null;
+    if (hasAdminApiSession()) {
+      const runAdminSync = async () => {
+        const synced = await syncSubjectsFromBackend();
+        if (!synced.ok) return;
+        renderAdminTable();
+        refreshAdminSelectors();
+      };
+      runAdminSync();
+      adminSyncTimer = window.setInterval(runAdminSync, 12000);
+      window.addEventListener("beforeunload", () => {
+        if (adminSyncTimer) window.clearInterval(adminSyncTimer);
+      }, { once: true });
+    }
+
+    const logoutBtn = document.getElementById("logoutBtn");
+    if (logoutBtn) logoutBtn.addEventListener("click", () => { clearAuth(); window.location.href = "admin-login.html"; });
+
+    const subjectForm = document.getElementById("adminSubjectForm");
+    const subjectMessage = document.getElementById("adminSubjectMessage");
+    if (subjectForm) {
+      subjectForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const name = document.getElementById("adminSubjectName").value.trim();
+        const description = document.getElementById("adminSubjectDescription").value.trim();
+        const subject = normalizeSubject({ name, description, topics: [], questions: [] });
+
+        if (!subject) {
+          subjectMessage.textContent = "Subject name and description are required.";
+          subjectMessage.className = "message message-error";
+          return;
+        }
+
+        const subjects = getSubjects();
+        const exists = subjects.some((item) => item.name.toLowerCase() === subject.name.toLowerCase());
+        if (exists) {
+          subjectMessage.textContent = "A subject with this name already exists.";
+          subjectMessage.className = "message message-error";
+          return;
+        }
+
+        if (hasAdminApiSession()) {
+          const result = await apiRequest("/api/admin/subjects", {
+            method: "POST",
+            body: {
+              name: subject.name,
+              description: subject.description
+            }
+          });
+          if (!result.ok) {
+            subjectMessage.textContent = result.message || "Could not create subject.";
+            subjectMessage.className = "message message-error";
+            return;
+          }
+          await syncSubjectsFromBackend();
+        } else {
+          subjects.push(subject);
+          setSubjects(subjects);
+        }
+        subjectForm.reset();
+        subjectMessage.textContent = "Subject created successfully.";
+        subjectMessage.className = "message message-success";
+        renderAdminTable();
+      });
+    }
+
+    const topicForm = document.getElementById("topicForm");
+    const topicMessage = document.getElementById("topicMessage");
+    if (topicForm) {
+      topicForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const subjectId = document.getElementById("topicSubjectSelect").value;
+        const topicName = document.getElementById("topicName").value.trim();
+        const ok = await addTopicToSubject(subjectId, topicName);
+        if (!ok) {
+          topicMessage.textContent = "Select a subject and enter a valid topic.";
+          topicMessage.className = "message message-error";
+          return;
+        }
+
+        topicForm.reset();
+        topicMessage.textContent = "Topic added successfully.";
+        topicMessage.className = "message message-success";
+        renderAdminTable();
+      });
+    }
+
+    const studySubjectSelect = document.getElementById("studySubjectSelect");
+    if (studySubjectSelect) {
+      studySubjectSelect.addEventListener("change", refreshStudyTopicOptions);
+    }
+
+    const studyForm = document.getElementById("studyQuestionForm");
+    const studyMessage = document.getElementById("studyQuestionMessage");
+    if (studyForm) {
+      studyForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const subjectId = document.getElementById("studySubjectSelect").value;
+        const topic = document.getElementById("studyTopicSelect").value;
+        const question = document.getElementById("studyQuestionText").value.trim();
+        const options = [
+          document.getElementById("studyOptionA").value.trim(),
+          document.getElementById("studyOptionB").value.trim(),
+          document.getElementById("studyOptionC").value.trim(),
+          document.getElementById("studyOptionD").value.trim()
+        ];
+        const answerIndex = Number(document.getElementById("studyAnswerIndex").value);
+        const explanation = document.getElementById("studyExplanation").value.trim();
+
+        if (!topic) {
+          studyMessage.textContent = "Create/select a topic before adding study questions.";
+          studyMessage.className = "message message-error";
+          return;
+        }
+
+        const result = await addQuestionToSubject(subjectId, {
+          question,
+          options,
+          answerIndex,
+          mode: MODE_STUDY,
+          topic,
+          explanation
+        });
+
+        if (!result.ok) {
+          studyMessage.textContent = "Invalid study question data.";
+          studyMessage.className = "message message-error";
+          return;
+        }
+
+        studyForm.reset();
+        studyMessage.textContent = "Study question added.";
+        studyMessage.className = "message message-success";
+        renderAdminTable();
+      });
+    }
+
+    const jambForm = document.getElementById("jambQuestionForm");
+    const jambMessage = document.getElementById("jambQuestionMessage");
+    if (jambForm) {
+      jambForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const subjectId = document.getElementById("jambSubjectSelect").value;
+        const topic = document.getElementById("jambTopic").value.trim();
+        const year = Number(document.getElementById("jambYear").value);
+        const exam = document.getElementById("jambExam").value.trim() || "JAMB";
+        const question = document.getElementById("jambQuestionText").value.trim();
+        const options = [
+          document.getElementById("jambOptionA").value.trim(),
+          document.getElementById("jambOptionB").value.trim(),
+          document.getElementById("jambOptionC").value.trim(),
+          document.getElementById("jambOptionD").value.trim()
+        ];
+        const answerIndex = Number(document.getElementById("jambAnswerIndex").value);
+
+        const result = await addQuestionToSubject(subjectId, {
+          question,
+          options,
+          answerIndex,
+          mode: MODE_CBT,
+          topic,
+          year,
+          exam
+        });
+
+        if (!result.ok) {
+          jambMessage.textContent = "Invalid JAMB question data.";
+          jambMessage.className = "message message-error";
+          return;
+        }
+
+        jambForm.reset();
+        document.getElementById("jambExam").value = "JAMB";
+        jambMessage.textContent = "JAMB question added.";
+        jambMessage.className = "message message-success";
+        renderAdminTable();
+      });
+    }
+
+    const bulkSubjectBtn = document.getElementById("bulkSubjectImportBtn");
+    const bulkSubjectFile = document.getElementById("bulkSubjectFile");
+    const bulkSubjectMessage = document.getElementById("bulkSubjectMessage");
+    if (bulkSubjectBtn && bulkSubjectFile && bulkSubjectMessage) {
+      bulkSubjectBtn.addEventListener("click", () => {
+        const file = bulkSubjectFile.files && bulkSubjectFile.files[0];
+        if (!file) {
+          bulkSubjectMessage.textContent = "Select a subjects JSON file.";
+          bulkSubjectMessage.className = "message message-error";
+          return;
+        }
+        if (isImportFileLocked("subject-bulk", "", file)) {
+          bulkSubjectMessage.textContent = "This subject file has already been imported.";
+          bulkSubjectMessage.className = "message message-error";
+          showToast(bulkSubjectMessage.textContent, "warn");
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = async () => {
+          try {
+            const parsed = JSON.parse(String(reader.result || ""));
+            if (isImportPayloadLocked("subject-bulk", "", parsed)) {
+              bulkSubjectMessage.textContent = "This JSON was already uploaded before.";
+              bulkSubjectMessage.className = "message message-error";
+              showToast(bulkSubjectMessage.textContent, "warn");
+              return;
+            }
+            const result = await addSubjectsBulk(parsed);
+            renderAdminTable();
+            refreshAdminSelectors();
+            if (!result.added) {
+              bulkSubjectMessage.textContent = result.skipped
+                ? ("No new subjects were added. Skipped " + result.skipped + " invalid/duplicate item(s).")
+                : "No subject row was found in this JSON file.";
+              bulkSubjectMessage.className = "message message-error";
+              showToast(bulkSubjectMessage.textContent, "error");
+              return;
+            }
+            if (hasAdminApiSession()) scheduleSubjectsSync(200);
+            bulkSubjectMessage.textContent = "Imported " + result.added + " subject(s)." +
+              (result.skipped ? (" Skipped " + result.skipped + " invalid/duplicate item(s).") : "");
+            bulkSubjectMessage.className = result.skipped ? "message message-error" : "message message-success";
+            recordImportBatch("subject-bulk", "", [], file.name, result.added, "All Subjects");
+            renderBatchTable();
+            showToast(
+              "Subject import successful: " + result.added + " added" +
+              (result.skipped ? (", " + result.skipped + " skipped") : ""),
+              result.skipped ? "warn" : "success"
+            );
+            lockImportFile("subject-bulk", "", file, parsed);
+            bulkSubjectFile.value = "";
+          } catch (error) {
+            bulkSubjectMessage.textContent = safeText(error && error.message).trim() ||
+              "Subject import failed. Use valid JSON with name and description.";
+            bulkSubjectMessage.className = "message message-error";
+            showToast(bulkSubjectMessage.textContent, "error");
+          }
+        };
+
+        reader.readAsText(file);
+      });
+    }
+
+    const bulkStudyBtn = document.getElementById("bulkStudyImportBtn");
+    const bulkStudyFile = document.getElementById("bulkStudyFile");
+    const bulkStudySubject = document.getElementById("bulkStudySubjectSelect");
+    const bulkStudyMessage = document.getElementById("bulkStudyMessage");
+    if (bulkStudyBtn && bulkStudyFile && bulkStudySubject && bulkStudyMessage) {
+      bulkStudyBtn.addEventListener("click", () => {
+        const file = bulkStudyFile.files && bulkStudyFile.files[0];
+        const subjectId = bulkStudySubject.value;
+
+        if (!subjectId) {
+          bulkStudyMessage.textContent = "Select a subject first.";
+          bulkStudyMessage.className = "message message-error";
+          return;
+        }
+        if (!file) {
+          bulkStudyMessage.textContent = "Select a study questions JSON file.";
+          bulkStudyMessage.className = "message message-error";
+          return;
+        }
+        if (isImportFileLocked("study-question", subjectId, file)) {
+          bulkStudyMessage.textContent = "This study file has already been imported for the selected subject.";
+          bulkStudyMessage.className = "message message-error";
+          showToast(bulkStudyMessage.textContent, "warn");
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = async () => {
+          try {
+            const parsed = JSON.parse(String(reader.result || ""));
+            if (isImportPayloadLocked("study-question", subjectId, parsed)) {
+              bulkStudyMessage.textContent = "This JSON was already uploaded for the selected subject.";
+              bulkStudyMessage.className = "message message-error";
+              showToast(bulkStudyMessage.textContent, "warn");
+              return;
+            }
+            const rows = parseQuestionBulkPayload(parsed);
+            const result = await addQuestionsToSubjectBulk(subjectId, rows, MODE_STUDY);
+
+            if (!result.added) {
+              const details = summarizeInvalidEntries(result.invalidEntries, 5);
+              throw new Error(details ? "No valid study questions. " + details : "No valid study questions.");
+            }
+
+            renderAdminTable();
+            refreshAdminSelectors();
+            if (hasAdminApiSession()) scheduleSubjectsSync(220);
+            recordImportBatch(MODE_STUDY, subjectId, result.addedIds, file.name, result.added);
+            renderBatchTable();
+            let message = "Imported " + result.added + " study question(s).";
+            if (result.skipped) {
+              message += " Skipped " + result.skipped + " invalid item(s).";
+              const details = summarizeInvalidEntries(result.invalidEntries, 4);
+              if (details) message += " " + details;
+            }
+            bulkStudyMessage.textContent = message;
+            bulkStudyMessage.className = result.skipped ? "message message-error" : "message message-success";
+            showToast(
+              "Study questions import successful: " + result.added + " added" +
+              (result.skipped ? (", " + result.skipped + " skipped") : ""),
+              result.skipped ? "warn" : "success"
+            );
+            lockImportFile("study-question", subjectId, file, parsed);
+            bulkStudyFile.value = "";
+          } catch (error) {
+            bulkStudyMessage.textContent = safeText(error && error.message).trim() || "Study import failed. Ensure JSON contains valid study questions.";
+            bulkStudyMessage.className = "message message-error";
+            showToast(bulkStudyMessage.textContent, "error");
+          }
+        };
+
+        reader.readAsText(file);
+      });
+    }
+
+    const bulkCbtBtn = document.getElementById("bulkCbtImportBtn");
+    const bulkCbtFile = document.getElementById("bulkCbtFile");
+    const bulkCbtSubject = document.getElementById("bulkCbtSubjectSelect");
+    const bulkCbtMessage = document.getElementById("bulkCbtMessage");
+    if (bulkCbtBtn && bulkCbtFile && bulkCbtSubject && bulkCbtMessage) {
+      bulkCbtBtn.addEventListener("click", () => {
+        const file = bulkCbtFile.files && bulkCbtFile.files[0];
+        const subjectId = bulkCbtSubject.value;
+
+        if (!subjectId) {
+          bulkCbtMessage.textContent = "Select a subject first.";
+          bulkCbtMessage.className = "message message-error";
+          return;
+        }
+        if (!file) {
+          bulkCbtMessage.textContent = "Select a CBT questions JSON file.";
+          bulkCbtMessage.className = "message message-error";
+          return;
+        }
+        if (isImportFileLocked("cbt-question", subjectId, file)) {
+          bulkCbtMessage.textContent = "This CBT file has already been imported for the selected subject.";
+          bulkCbtMessage.className = "message message-error";
+          showToast(bulkCbtMessage.textContent, "warn");
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = async () => {
+          try {
+            const parsed = JSON.parse(String(reader.result || ""));
+            if (isImportPayloadLocked("cbt-question", subjectId, parsed)) {
+              bulkCbtMessage.textContent = "This JSON was already uploaded for the selected subject.";
+              bulkCbtMessage.className = "message message-error";
+              showToast(bulkCbtMessage.textContent, "warn");
+              return;
+            }
+            const rows = parseCbtQuestionBulkPayload(parsed);
+            const result = await addQuestionsToSubjectBulk(subjectId, rows, MODE_CBT);
+
+            if (!result.added) {
+              const details = summarizeInvalidEntries(result.invalidEntries, 6);
+              throw new Error(details ? "No valid CBT questions. " + details : "No valid CBT questions.");
+            }
+
+            renderAdminTable();
+            refreshAdminSelectors();
+            if (hasAdminApiSession()) scheduleSubjectsSync(220);
+            recordImportBatch(MODE_CBT, subjectId, result.addedIds, file.name, result.added);
+            renderBatchTable();
+            let message = "Imported " + result.added + " CBT question(s).";
+            if (result.skipped) {
+              message += " Skipped " + result.skipped + " invalid item(s).";
+              const details = summarizeInvalidEntries(result.invalidEntries, 6);
+              if (details) message += " " + details;
+            }
+            bulkCbtMessage.textContent = message;
+            bulkCbtMessage.className = result.skipped ? "message message-error" : "message message-success";
+            showToast(
+              "CBT questions import successful: " + result.added + " added" +
+              (result.skipped ? (", " + result.skipped + " skipped") : ""),
+              result.skipped ? "warn" : "success"
+            );
+            lockImportFile("cbt-question", subjectId, file, parsed);
+            bulkCbtFile.value = "";
+          } catch (error) {
+            bulkCbtMessage.textContent = safeText(error && error.message).trim() || "CBT import failed. Use valid JSON with year data (array or multi-year years{} format).";
+            bulkCbtMessage.className = "message message-error";
+            showToast(bulkCbtMessage.textContent, "error");
+          }
+        };
+
+        reader.readAsText(file);
+      });
+    }
+
+    const bulkTopicBtn = document.getElementById("bulkTopicImportBtn");
+    const bulkTopicFile = document.getElementById("bulkTopicFile");
+    const bulkTopicSubject = document.getElementById("bulkTopicSubjectSelect");
+    const bulkTopicMessage = document.getElementById("bulkTopicMessage");
+    if (bulkTopicBtn && bulkTopicFile && bulkTopicSubject && bulkTopicMessage) {
+      bulkTopicBtn.addEventListener("click", () => {
+        const file = bulkTopicFile.files && bulkTopicFile.files[0];
+        const subjectId = bulkTopicSubject.value;
+
+        if (!subjectId) {
+          bulkTopicMessage.textContent = "Select a subject first.";
+          bulkTopicMessage.className = "message message-error";
+          return;
+        }
+        if (!file) {
+          bulkTopicMessage.textContent = "Select a topics JSON file.";
+          bulkTopicMessage.className = "message message-error";
+          return;
+        }
+        if (isImportFileLocked("study-topic", subjectId, file)) {
+          bulkTopicMessage.textContent = "This topic file has already been imported for the selected subject.";
+          bulkTopicMessage.className = "message message-error";
+          showToast(bulkTopicMessage.textContent, "warn");
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = async () => {
+          try {
+            const parsed = JSON.parse(String(reader.result || ""));
+            if (isImportPayloadLocked("study-topic", subjectId, parsed)) {
+              bulkTopicMessage.textContent = "This JSON was already uploaded for the selected subject.";
+              bulkTopicMessage.className = "message message-error";
+              showToast(bulkTopicMessage.textContent, "warn");
+              return;
+            }
+            const result = await addTopicsToSubjectBulk(subjectId, parsed);
+            if (!result.added) {
+              throw new Error("No new topics were added. Check file format or duplicates.");
+            }
+            renderAdminTable();
+            refreshAdminSelectors();
+            if (hasAdminApiSession()) scheduleSubjectsSync(220);
+            let message = "Imported " + result.added + " topic(s).";
+            if (result.skipped) message += " Skipped " + result.skipped + " duplicate/invalid item(s).";
+            bulkTopicMessage.textContent = message;
+            bulkTopicMessage.className = result.skipped ? "message message-error" : "message message-success";
+            recordImportBatch("study-topic", subjectId, [], file.name, result.added);
+            renderBatchTable();
+            showToast(
+              "Study topics import successful: " + result.added + " added" +
+              (result.skipped ? (", " + result.skipped + " skipped") : ""),
+              result.skipped ? "warn" : "success"
+            );
+            lockImportFile("study-topic", subjectId, file, parsed);
+            bulkTopicFile.value = "";
+          } catch (error) {
+            bulkTopicMessage.textContent = safeText(error && error.message).trim() || "Topic import failed. Use valid topics JSON.";
+            bulkTopicMessage.className = "message message-error";
+            showToast(bulkTopicMessage.textContent, "error");
+          }
+        };
+
+        reader.readAsText(file);
+      });
+    }
+
+    const clearSubjectsBtn = document.getElementById("clearSubjectsBtn");
+    const clearTopicsBtn = document.getElementById("clearTopicsBtn");
+    const clearStudyQuestionsBtn = document.getElementById("clearStudyQuestionsBtn");
+    const clearCbtQuestionsBtn = document.getElementById("clearCbtQuestionsBtn");
+    const clearBatchQuestionsBtn = document.getElementById("clearBatchQuestionsBtn");
+    const clearBatchLogBtn = document.getElementById("clearBatchLogBtn");
+    const deleteSelectedBatchesBtn = document.getElementById("deleteSelectedBatchesBtn");
+    const cleanupMessage = document.getElementById("adminCleanupMessage");
+
+    if (clearSubjectsBtn) {
+      clearSubjectsBtn.addEventListener("click", async () => {
+        await clearSubjectsData();
+        if (cleanupMessage) {
+          cleanupMessage.textContent = "All subjects deleted.";
+          cleanupMessage.className = "message message-success";
+        }
+        renderAdminTable();
+        renderBatchTable();
+      });
+    }
+
+    if (clearTopicsBtn) {
+      clearTopicsBtn.addEventListener("click", async () => {
+        await clearTopicsData();
+        if (cleanupMessage) {
+          cleanupMessage.textContent = "All topics deleted.";
+          cleanupMessage.className = "message message-success";
+        }
+        renderAdminTable();
+      });
+    }
+
+    if (clearStudyQuestionsBtn) {
+      clearStudyQuestionsBtn.addEventListener("click", async () => {
+        await clearQuestionsByMode(MODE_STUDY);
+        if (cleanupMessage) {
+          cleanupMessage.textContent = "All study questions deleted.";
+          cleanupMessage.className = "message message-success";
+        }
+        renderAdminTable();
+        renderBatchTable();
+      });
+    }
+
+    if (clearCbtQuestionsBtn) {
+      clearCbtQuestionsBtn.addEventListener("click", async () => {
+        await clearQuestionsByMode(MODE_CBT);
+        if (cleanupMessage) {
+          cleanupMessage.textContent = "All CBT questions deleted.";
+          cleanupMessage.className = "message message-success";
+        }
+        renderAdminTable();
+        renderBatchTable();
+      });
+    }
+
+    if (clearBatchQuestionsBtn) {
+      clearBatchQuestionsBtn.addEventListener("click", async () => {
+        const removed = await clearAllBatchQuestions();
+        if (cleanupMessage) {
+          cleanupMessage.textContent = "All batch-linked questions deleted (" + removed + ").";
+          cleanupMessage.className = "message message-success";
+        }
+        renderAdminTable();
+        renderBatchTable();
+      });
+    }
+
+    if (clearBatchLogBtn) {
+      clearBatchLogBtn.addEventListener("click", () => {
+        setBatches([]);
+        if (cleanupMessage) {
+          cleanupMessage.textContent = "Batch log cleared.";
+          cleanupMessage.className = "message message-success";
+        }
+        renderBatchTable();
+      });
+    }
+
+    if (deleteSelectedBatchesBtn) {
+      deleteSelectedBatchesBtn.addEventListener("click", async () => {
+        const picks = Array.from(document.querySelectorAll("[data-select-batch]:checked"))
+          .map((input) => String(input.getAttribute("data-select-batch") || "").trim())
+          .filter(Boolean);
+        if (!picks.length) {
+          if (cleanupMessage) {
+            cleanupMessage.textContent = "Select at least one JSON batch to delete.";
+            cleanupMessage.className = "message message-error";
+          }
+          return;
+        }
+        let removedQuestions = 0;
+        for (const id of picks) {
+          // eslint-disable-next-line no-await-in-loop
+          removedQuestions += await deleteBatchQuestions(id);
+        }
+        if (cleanupMessage) {
+          cleanupMessage.textContent = "Deleted " + picks.length + " JSON batch(es). Removed " + removedQuestions + " question(s).";
+          cleanupMessage.className = "message message-success";
+        }
+        renderBatchTable();
+        renderAdminTable();
+      });
+    }
+
+    refreshAdminSelectors();
+    renderAdminTable();
+    renderBatchTable();
+    initAdminAccessTools();
+  }
+
+  function attemptPercent(attempt) {
+    const value = Number(attempt && attempt.scorePercent);
+    if (!Number.isFinite(value)) return 0;
+    return Math.max(0, Math.min(100, Math.round(value)));
+  }
+
+  function formatRelativeTime(iso) {
+    const date = new Date(iso);
+    if (Number.isNaN(date.getTime())) return "Unknown time";
+    const diffSeconds = Math.round((date.getTime() - Date.now()) / 1000);
+    const abs = Math.abs(diffSeconds);
+    const scales = [
+      { unit: "year", seconds: 31536000 },
+      { unit: "month", seconds: 2592000 },
+      { unit: "week", seconds: 604800 },
+      { unit: "day", seconds: 86400 },
+      { unit: "hour", seconds: 3600 },
+      { unit: "minute", seconds: 60 },
+      { unit: "second", seconds: 1 }
+    ];
+    const scale = scales.find((item) => abs >= item.seconds) || scales[scales.length - 1];
+    const value = Math.round(diffSeconds / scale.seconds);
+    try {
+      return new Intl.RelativeTimeFormat("en", { numeric: "auto" }).format(value, scale.unit);
+    } catch (error) {
+      const label = Math.abs(value) + " " + scale.unit + (Math.abs(value) === 1 ? "" : "s");
+      return value < 0 ? label + " ago" : "in " + label;
+    }
+  }
+
+  function computeActivityStreak(attempts) {
+    const uniqueDays = Array.from(new Set(
+      attempts.map((attempt) => {
+        const date = new Date(attempt.createdAt);
+        if (Number.isNaN(date.getTime())) return null;
+        return Math.floor(date.getTime() / 86400000);
+      }).filter((value) => value !== null)
+    )).sort((a, b) => b - a);
+
+    if (!uniqueDays.length) return 0;
+    const today = Math.floor(Date.now() / 86400000);
+    if (today - uniqueDays[0] > 1) return 0;
+
+    let streak = 1;
+    for (let i = 1; i < uniqueDays.length; i += 1) {
+      if (uniqueDays[i - 1] - uniqueDays[i] !== 1) break;
+      streak += 1;
+    }
+    return streak;
+  }
+
+  function readinessLabel(percent) {
+    if (percent >= 85) return "Excellent";
+    if (percent >= 70) return "Ready";
+    if (percent >= 55) return "Progressing";
+    return "Building";
+  }
+
+  function computeDashboardInsights(subjects, attempts) {
+    const avgScore = attempts.length
+      ? Math.round(attempts.reduce((sum, attempt) => sum + attemptPercent(attempt), 0) / attempts.length)
+      : 0;
+    const activityBase = Math.max(subjects.length * 3, 1);
+    const activity = Math.min(100, Math.round((attempts.length / activityBase) * 100));
+    const readiness = Math.max(0, Math.min(100, Math.round((avgScore * 0.7) + (activity * 0.3))));
+    const goalAverage = Math.round((avgScore / 100) * 400);
+    const goalProgress = Math.max(0, Math.min(100, Math.round((goalAverage / 320) * 100)));
+    const streak = computeActivityStreak(attempts);
+    const rank = Math.max(1, 500 - Math.round(readiness * 3.1) - attempts.length);
+
+    return {
+      readiness,
+      goalAverage,
+      goalProgress,
+      streak,
+      rank
+    };
+  }
+
+  function resolvePerformanceRows(subjects, attempts, source) {
+    const result = getJSON(RESULT_KEY, null);
+    const useBank = source === "bank";
+
+    if (!useBank && result && Array.isArray(result.subjectResults) && result.subjectResults.length) {
+      return result.subjectResults
+        .map((item) => ({
+          name: safeText(item.subjectName),
+          score: Math.max(0, Math.min(100, Number(item.score) || 0))
+        }))
+        .filter((item) => item.name)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 6);
+    }
+
+    if (!useBank && attempts.length) {
+      const grouped = {};
+      attempts.forEach((attempt) => {
+        const key = safeText(attempt.subjectName).trim() || "General";
+        if (!grouped[key]) grouped[key] = [];
+        grouped[key].push(attemptPercent(attempt));
+      });
+      return Object.keys(grouped).map((name) => {
+        const values = grouped[name];
+        const avg = values.length ? Math.round(values.reduce((sum, score) => sum + score, 0) / values.length) : 0;
+        return { name, score: avg };
+      }).sort((a, b) => b.score - a.score).slice(0, 6);
+    }
+
+    const counts = subjects.map((subject) => ({
+      name: safeText(subject.name),
+      count: Array.isArray(subject.questions) ? subject.questions.length : 0
+    }));
+    const max = counts.reduce((highest, item) => Math.max(highest, item.count), 1);
+    return counts.map((item) => ({
+      name: item.name,
+      score: max ? Math.round((item.count / max) * 100) : 0
+    })).sort((a, b) => b.score - a.score).slice(0, 6);
+  }
+
+  function renderSubjectPerformance(subjects, attempts) {
+    const container = document.getElementById("subjectPerformanceBars");
+    if (!container) return;
+
+    const range = document.getElementById("performanceRange");
+    const rows = resolvePerformanceRows(subjects, attempts, range ? String(range.value || "latest") : "latest");
+    if (!rows.length) {
+      container.innerHTML = "<div class=\"empty-state\">No performance data yet. Complete at least one exam.</div>";
+      return;
+    }
+
+    const topScore = rows.reduce((best, item) => Math.max(best, item.score), 0);
+    container.innerHTML = rows.map((item) => {
+      const score = Math.max(6, Math.min(100, Math.round(item.score)));
+      const shortName = safeText(item.name).length > 13 ? safeText(item.name).slice(0, 12) + "..." : safeText(item.name);
+      return "<article class=\"perf-item\">" +
+        "<div class=\"perf-bar-track\">" +
+          "<div class=\"perf-bar-fill" + (score === topScore ? " perf-bar-fill-top" : "") + "\" style=\"height:" + score + "%;\"></div>" +
+        "</div>" +
+        "<p class=\"perf-label\">" + shortName + "</p>" +
+        "<p class=\"perf-score\">" + score + "%</p>" +
+      "</article>";
+    }).join("");
+  }
+
+  function renderDashboardInsights(subjects, attempts) {
+    const data = computeDashboardInsights(subjects, attempts);
+    const streakEl = document.getElementById("streakValue");
+    const rankEl = document.getElementById("rankValue");
+    const readinessEl = document.getElementById("readinessPercent");
+    const labelEl = document.getElementById("readinessLabel");
+    const goalTextEl = document.getElementById("goalAverageText");
+    const goalBarEl = document.getElementById("goalProgressBar");
+    const readinessCircle = document.getElementById("readinessCircle");
+
+    if (streakEl) streakEl.textContent = String(data.streak);
+    if (rankEl) rankEl.textContent = "#" + String(data.rank);
+    if (readinessEl) readinessEl.textContent = String(data.readiness) + "%";
+    if (labelEl) labelEl.textContent = readinessLabel(data.readiness);
+    if (goalTextEl) goalTextEl.textContent = String(data.goalAverage) + " Avg.";
+    if (goalBarEl) goalBarEl.style.width = String(data.goalProgress) + "%";
+    if (readinessCircle) {
+      const circumference = 440;
+      const dashOffset = circumference - ((data.readiness / 100) * circumference);
+      readinessCircle.setAttribute("stroke-dashoffset", String(dashOffset));
+    }
+
+    renderSubjectPerformance(subjects, attempts);
+  }
+
+  function renderStudentSummary(subjects) {
+    const subjectCount = document.getElementById("subjectCount");
+    const questionCount = document.getElementById("questionCount");
+    const attemptCount = document.getElementById("attemptCount");
+    const attempts = getAttempts();
+    const totalQuestions = subjects.reduce((sum, s) => sum + (s.questions ? s.questions.length : 0), 0);
+    if (subjectCount) subjectCount.textContent = String(subjects.length);
+    if (questionCount) questionCount.textContent = String(totalQuestions);
+    if (attemptCount) attemptCount.textContent = String(attempts.length);
+    renderDashboardInsights(subjects, attempts);
+  }
+
+  function renderAttemptHistory() {
+    const container = document.getElementById("attemptList");
+    if (!container) return;
+    const attempts = getAttempts().slice().reverse();
+    if (!attempts.length) {
+      container.innerHTML = "<div class=\"empty-state\">No attempts yet. Start a study or CBT session to see activity here.</div>";
+      return;
+    }
+
+    container.innerHTML = attempts.slice(0, 8).map((attempt) => {
+      const score = attemptPercent(attempt);
+      const passed = score >= 60;
+      const statusLabel = passed ? "Completed" : "Needs Review";
+      return "<div class=\"row\">" +
+        "<div><strong>" + safeText(attempt.subjectName) + "</strong><small>" + safeText(formatRelativeTime(attempt.createdAt)) + " | Score: " + score + "%</small></div>" +
+        "<span class=\"pill " + (passed ? "ok" : "alert") + "\">" + statusLabel + "</span>" +
+      "</div>";
+    }).join("");
+  }
+
+  function subjectQuestionsByMode(subject, mode) {
+    return (subject.questions || []).filter((q) => questionMode(q) === mode);
+  }
+
+  function cbtSubjectQuestionCap(subjectOrName) {
+    const rawName = typeof subjectOrName === "string"
+      ? subjectOrName
+      : safeText(subjectOrName && subjectOrName.name);
+    const name = safeText(rawName).trim().toLowerCase();
+    if (name.includes("english")) return 60;
+    return 40;
+  }
+
+  function subjectTopics(subject, mode) {
+    if (mode !== MODE_STUDY) return [];
+    const seen = new Set();
+    const list = [];
+    function push(value) {
+      const topic = safeText(value).trim();
+      if (!topic) return;
+      const key = topic.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+      list.push(topic);
+    }
+
+    (subject.topics || []).forEach(push);
+    subjectQuestionsByMode(subject, MODE_STUDY).forEach((q) => push(q.topic));
+    return list;
+  }
+
+  function subjectPastSets(subject, mode) {
+    const seen = new Set();
+    const list = [];
+    subjectQuestionsByMode(subject, mode).forEach((q) => {
+      const year = Number(q.year);
+      if (!Number.isInteger(year)) return;
+      const exam = safeText(q.exam).trim() || "JAMB";
+      const key = year + "|" + exam.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+      list.push({ value: year + "|" + exam, label: year + " " + exam });
+    });
+    list.sort((a, b) => b.value.localeCompare(a.value));
+    return list;
+  }
+
+  function canUseStudyMode(auth) {
+    return !!(auth && auth.role === "student" && isPremiumAccess(auth));
+  }
+
+  function getStudentAccessMessage(auth) {
+    if (!auth || auth.role !== "student") {
+      return "Account access is locked. Redeem an activation code to continue.";
+    }
+    if (auth.trialActive && auth.trialPremiumEndsAt) {
+      return "Free premium trial is active until " + formatDate(auth.trialPremiumEndsAt) + ".";
+    }
+    if (isPremiumAccess(auth)) {
+      return "Premium package active. You have access to all features.";
+    }
+    if (isStandardAccess(auth)) {
+      return "Standard package active. You can use CBT mode only.";
+    }
+    return "Account access is locked. Redeem an activation code to continue.";
+  }
+
+  function renderModeHeader(mode) {
+    const title = document.getElementById("modeTitle");
+    const hint = document.getElementById("modeHint");
+    if (!title || !hint) return;
+    if (mode === MODE_CBT) {
+      title.textContent = "JAMB CBT Simulation Subjects";
+      hint.textContent = "Choose up to 4 subjects, then open CBT setup.";
+    } else {
+      title.textContent = "Study Mode Subjects";
+      hint.textContent = "Open a subject to launch a focused study exam setup.";
+    }
+  }
+
+  function openPractice(mode, subjectId) {
+    window.location.href = buildPracticeUrl(mode, {
+      preselect: subjectId ? [subjectId] : [],
+      subjects: [],
+      questionCount: Number(localStorage.getItem(mode === MODE_CBT ? "testify_qps_cbt" : "testify_qps_study") || (mode === MODE_CBT ? 40 : 20)),
+      totalMinutes: Number(localStorage.getItem(mode === MODE_CBT ? "testify_minutes_cbt" : "testify_minutes_study") || (mode === MODE_CBT ? 120 : 60))
+    }, false);
+  }
+
+  function parseSubjectQuestionMap(raw) {
+    const map = {};
+    const text = String(raw || "").trim();
+    if (!text) return map;
+    text.split(",").forEach((pair) => {
+      const parts = pair.split(":");
+      if (parts.length < 2) return;
+      const subjectId = safeText(parts[0]).trim();
+      const count = Number(parts[1]);
+      if (!subjectId || !Number.isInteger(count) || count < 1 || count > 100) return;
+      map[subjectId] = count;
+    });
+    return map;
+  }
+
+  function serializeSubjectQuestionMap(map, subjectIds) {
+    if (!map || typeof map !== "object") return "";
+    const pickedIds = Array.isArray(subjectIds) ? subjectIds.filter(Boolean) : Object.keys(map);
+    const rows = pickedIds.map((subjectId) => {
+      const count = Number(map[subjectId]);
+      if (!subjectId || !Number.isInteger(count) || count < 1 || count > 100) return "";
+      return subjectId + ":" + count;
+    }).filter(Boolean);
+    return rows.join(",");
+  }
+
+  function buildPracticeUrl(mode, config, runNow) {
+    const pickedMode = mode === MODE_CBT ? MODE_CBT : MODE_STUDY;
+    const params = new URLSearchParams({ mode: pickedMode });
+    const preselect = Array.isArray(config && config.preselect) ? config.preselect.filter(Boolean) : [];
+    const selected = Array.isArray(config && config.subjects) ? config.subjects.filter(Boolean) : [];
+    const questionCount = Number(config && config.questionCount);
+    const questionCountBySubject = config && config.questionCountBySubject && typeof config.questionCountBySubject === "object"
+      ? config.questionCountBySubject
+      : null;
+    const totalMinutes = Number(config && config.totalMinutes);
+    const examYear = Number(config && config.examYear);
+    const topicName = safeText(config && config.topicName).trim();
+    if (preselect.length) params.set("preselect", preselect.join(","));
+    if (selected.length) params.set("subjects", selected.join(","));
+    if (Number.isInteger(questionCount) && questionCount > 0) params.set("qps", String(questionCount));
+    if (pickedMode === MODE_CBT && questionCountBySubject) {
+      const packed = serializeSubjectQuestionMap(questionCountBySubject, selected.length ? selected : preselect);
+      if (packed) params.set("qpsmap", packed);
+    }
+    if (Number.isInteger(totalMinutes) && totalMinutes > 0) params.set("mins", String(totalMinutes));
+    if (pickedMode === MODE_CBT && Number.isInteger(examYear) && examYear > 0) params.set("year", String(examYear));
+    if (pickedMode === MODE_STUDY && topicName) params.set("topic", topicName);
+    if (runNow) params.set("run", "1");
+    return (pickedMode === MODE_CBT ? "practice.html?" : "study.html?") + params.toString();
+  }
+
+  function renderSubjectCards(subjects, query, mode) {
+    const container = document.getElementById("subjectList");
+    if (!container) return;
+    const auth = getAuth();
+    if (mode === MODE_STUDY && !canUseStudyMode(auth)) {
+      container.innerHTML = "<div class=\"empty-state\">" +
+        "Study mode is available on premium package only. " +
+        "<a href=\"" + buildActivationUrl(auth && auth.email) + "\">Activate premium access</a>." +
+      "</div>";
+      return;
+    }
+
+    const term = String(query || "").trim().toLowerCase();
+    const searched = !term ? subjects : subjects.filter((subject) => {
+      return (
+        subject.name.toLowerCase().includes(term) ||
+        subject.description.toLowerCase().includes(term) ||
+        (subject.topics || []).some((topic) => topic.toLowerCase().includes(term)) ||
+        (subject.questions || []).some((q) => safeText(q.topic).toLowerCase().includes(term))
+      );
+    });
+
+    const available = searched.filter((subject) => subjectQuestionsByMode(subject, mode).length > 0);
+    if (!available.length) {
+      container.innerHTML = "<div class=\"empty-state\">No subject has " + (mode === MODE_CBT ? "CBT" : "study") + " questions for this filter.</div>";
+      return;
+    }
+
+    if (mode === MODE_CBT) {
+      container.innerHTML = "<article class=\"subject-card\">" +
+        "<h4>CBT Setup</h4>" +
+        "<p>Use the setup page to search and pick up to 4 subjects, choose year, then start your simulation.</p>" +
+        "<div class=\"chips\">" +
+          available.slice(0, 10).map((subject) => "<span class=\"chip chip-inline\">" + safeText(subject.name) + "</span>").join("") +
+        "</div>" +
+        "<div class=\"button-row\">" +
+          "<button id=\"openCbtSetupBtn\" type=\"button\" class=\"btn btn-primary\">Open CBT Setup</button>" +
+        "</div>" +
+        "<p id=\"cbtSubjectMessage\" class=\"message\"></p>" +
+      "</article>";
+
+      const setupBtn = document.getElementById("openCbtSetupBtn");
+      if (setupBtn) {
+        setupBtn.addEventListener("click", () => {
+          window.location.href = buildPracticeUrl(MODE_CBT, {
+            preselect: [],
+            subjects: [],
+            questionCount: Number(localStorage.getItem("testify_qps_cbt") || 40),
+            totalMinutes: Number(localStorage.getItem("testify_minutes_cbt") || 120)
+          }, false);
+        });
+      }
+      applyHapticsAndMotion();
+      return;
+    }
+
+    container.innerHTML = available.map((subject) => {
+      const questions = subjectQuestionsByMode(subject, mode);
+      const topics = subjectTopics(subject, mode);
+      const sets = subjectPastSets(subject, mode);
+      const meta = "Topics: " + topics.length + " | Past sets: " + sets.length;
+      const chips = topics.length
+        ? topics.slice(0, 4).map((topic) => "<span class=\"chip chip-inline\">" + safeText(topic) + "</span>").join(" ")
+        : "<span class=\"chip chip-inline\">General</span>";
+
+      return "<article class=\"subject-card interactive tilt\">" +
+        "<h4>" + safeText(subject.name) + "</h4>" +
+        "<p>" + safeText(subject.description) + "</p>" +
+        "<div class=\"chips\">" + chips + "</div>" +
+        "<div class=\"subject-meta\">" +
+          "<small>Questions: " + questions.length + " | " + meta + "</small>" +
+          "<button type=\"button\" class=\"btn btn-primary btn-mini interactive\" data-open-subject=\"" + safeText(subject.id) + "\" data-open-mode=\"" + safeText(mode) + "\">Open Study Exam</button>" +
+        "</div>" +
+      "</article>";
+    }).join("");
+
+    container.querySelectorAll("[data-open-subject]").forEach((button) => {
+      button.addEventListener("click", () => {
+        openPractice(button.getAttribute("data-open-mode") || MODE_STUDY, button.getAttribute("data-open-subject") || "");
+      });
+    });
+
+    applyHapticsAndMotion();
+  }
+
+  function setStudentMode(mode) {
+    const auth = getAuth();
+    const premium = canUseStudyMode(auth);
+    const requestedMode = mode === MODE_CBT ? MODE_CBT : MODE_STUDY;
+    studentMode = requestedMode === MODE_STUDY && !premium ? MODE_CBT : requestedMode;
+    document.querySelectorAll("[data-mode]").forEach((button) => {
+      button.classList.toggle("mode-tab-active", button.getAttribute("data-mode") === studentMode);
+    });
+    renderModeHeader(studentMode);
+    const search = document.getElementById("subjectSearch");
+    renderSubjectCards(getSubjects(), search ? search.value : "", studentMode);
+  }
+
+  function shuffle(items) {
+    const list = items.slice();
+    for (let i = list.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = list[i];
+      list[i] = list[j];
+      list[j] = t;
+    }
+    return list;
+  }
+
+  function stopQuizTimer() {
+    if (!activeQuiz || !activeQuiz.timerId) return;
+    clearInterval(activeQuiz.timerId);
+    activeQuiz.timerId = null;
+  }
+
+  function renderQuizTimer() {
+    const timerEl = document.getElementById("quizTimer");
+    if (!timerEl || !activeQuiz) return;
+    timerEl.textContent = "Time Left: " + formatDuration(activeQuiz.remainingSeconds);
+  }
+
+  function startQuizTimer() {
+    stopQuizTimer();
+    if (!activeQuiz) return;
+    renderQuizTimer();
+    activeQuiz.timerId = window.setInterval(() => {
+      if (!activeQuiz || activeQuiz.completed) return;
+      activeQuiz.remainingSeconds -= 1;
+      if (activeQuiz.remainingSeconds <= 0) {
+        activeQuiz.remainingSeconds = 0;
+        renderQuizTimer();
+        finishQuiz(true);
+        return;
+      }
+      renderQuizTimer();
+    }, 1000);
+  }
+
+  function endQuiz(silent) {
+    const empty = document.getElementById("quizEmpty");
+    const panel = document.getElementById("quizPanel");
+    const feedback = document.getElementById("quizFeedback");
+    const submitTopBtn = document.getElementById("submitExamTopBtn");
+    const quitTopBtn = document.getElementById("quitExamTopBtn");
+    const navBar = document.getElementById("questionNavBar");
+    const subjectSwitch = document.getElementById("quizSubjectSwitch");
+    const timerEl = document.getElementById("quizTimer");
+    stopQuizTimer();
+    activeQuiz = null;
+    if (panel) panel.classList.add("hidden");
+    if (empty) empty.classList.remove("hidden");
+    if (submitTopBtn) submitTopBtn.classList.add("hidden");
+    if (quitTopBtn) quitTopBtn.classList.add("hidden");
+    if (navBar) navBar.classList.add("hidden");
+    if (subjectSwitch) subjectSwitch.classList.add("hidden");
+    if (timerEl) timerEl.textContent = "";
+    if (!silent && feedback) {
+      feedback.textContent = "Session ended.";
+      feedback.className = "message";
+    }
+  }
+
+  function quizSubjectQuestionIndexes(subjectId) {
+    if (!activeQuiz || !subjectId) return [];
+    const target = String(subjectId);
+    const indexes = [];
+    activeQuiz.questions.forEach((question, idx) => {
+      if (String(question && question.subjectId || "") === target) indexes.push(idx);
+    });
+    return indexes;
+  }
+
+  function quizSubjectPosition(subjectId, questionIndex) {
+    const indexes = quizSubjectQuestionIndexes(subjectId);
+    const localIndex = indexes.indexOf(questionIndex);
+    return {
+      indexes,
+      localIndex,
+      position: localIndex >= 0 ? (localIndex + 1) : 0,
+      total: indexes.length
+    };
+  }
+
+  function renderQuestionNavigator() {
+    const navBar = document.getElementById("questionNavBar");
+    if (!navBar || !activeQuiz || activeQuiz.completed) {
+      if (navBar) navBar.classList.add("hidden");
+      return;
+    }
+
+    let renderIndexes = activeQuiz.questions.map((_, idx) => idx);
+    if (activeQuiz.mode === MODE_CBT) {
+      const current = activeQuiz.questions[activeQuiz.index];
+      const currentSubjectId = safeText(current && current.subjectId).trim();
+      const currentSubjectIndexes = quizSubjectQuestionIndexes(currentSubjectId);
+      if (currentSubjectIndexes.length) renderIndexes = currentSubjectIndexes;
+    }
+
+    navBar.classList.remove("hidden");
+    navBar.innerHTML = renderIndexes.map((questionIndex, localIdx) => {
+      const classes = ["question-nav-btn"];
+      if (questionIndex === activeQuiz.index) classes.push("question-nav-btn-current");
+      if (activeQuiz.answers[questionIndex] !== null) classes.push("question-nav-btn-answered");
+      return "<button type=\"button\" class=\"" + classes.join(" ") + "\" data-nav-index=\"" + questionIndex + "\">" + (localIdx + 1) + "</button>";
+    }).join("");
+
+    navBar.querySelectorAll("[data-nav-index]").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (!activeQuiz || activeQuiz.completed) return;
+        activeQuiz.index = Number(button.getAttribute("data-nav-index"));
+        showQuizQuestion();
+      });
+    });
+  }
+
+  function renderQuizSubjectSwitch() {
+    const switchEl = document.getElementById("quizSubjectSwitch");
+    if (!switchEl || !activeQuiz || activeQuiz.completed || activeQuiz.mode !== MODE_CBT) {
+      if (switchEl) switchEl.classList.add("hidden");
+      return;
+    }
+
+    const subjectMap = new Map();
+    activeQuiz.questions.forEach((question, index) => {
+      const id = safeText(question && question.subjectId).trim();
+      if (!id) return;
+      if (!subjectMap.has(id)) {
+        subjectMap.set(id, {
+          name: safeText(question.subjectName) || "Subject",
+          total: 0,
+          answered: 0,
+          firstIndex: index
+        });
+      }
+      const row = subjectMap.get(id);
+      row.total += 1;
+      if (activeQuiz.answers[index] !== null) row.answered += 1;
+    });
+    if (subjectMap.size <= 1) {
+      switchEl.classList.add("hidden");
+      return;
+    }
+
+    const current = activeQuiz.questions[activeQuiz.index];
+    const currentSubjectId = safeText(current && current.subjectId).trim();
+    switchEl.classList.remove("hidden");
+    switchEl.innerHTML = "<span class=\"quiz-subject-label\">Switch Subject:</span>" +
+      Array.from(subjectMap.entries()).map(([subjectId, meta]) => {
+      const classes = ["quiz-subject-btn"];
+      if (subjectId === currentSubjectId) classes.push("quiz-subject-btn-active");
+      return "<button type=\"button\" class=\"" + classes.join(" ") + "\" data-switch-subject=\"" + safeText(subjectId) + "\">" +
+        safeText(meta.name) + " <small>(" + meta.answered + "/" + meta.total + ")</small>" +
+      "</button>";
+    }).join("");
+
+    function nextIndexForSubject(subjectId) {
+      let firstIndex = -1;
+      let firstUnanswered = -1;
+      activeQuiz.questions.forEach((question, idx) => {
+        if (String(question.subjectId || "") !== subjectId) return;
+        if (firstIndex < 0) firstIndex = idx;
+        if (firstUnanswered < 0 && activeQuiz.answers[idx] === null) firstUnanswered = idx;
+      });
+      return firstUnanswered >= 0 ? firstUnanswered : firstIndex;
+    }
+
+    switchEl.querySelectorAll("[data-switch-subject]").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (!activeQuiz || activeQuiz.completed) return;
+        const subjectId = button.getAttribute("data-switch-subject") || "";
+        if (!subjectId) return;
+        const nextIndex = nextIndexForSubject(subjectId);
+        if (nextIndex < 0) return;
+        activeQuiz.index = nextIndex;
+        showQuizQuestion();
+      });
+    });
+  }
+
+  function showQuizQuestion() {
+    if (!activeQuiz) return;
+    const subjectEl = document.getElementById("quizSubject");
+    const progressEl = document.getElementById("quizProgress");
+    const yearEl = document.getElementById("quizYear");
+    const questionEl = document.getElementById("quizQuestion");
+    const optionsEl = document.getElementById("quizOptions");
+    const feedbackEl = document.getElementById("quizFeedback");
+    const nextBtn = document.getElementById("nextQuestionBtn");
+    const prevBtn = document.getElementById("prevQuestionBtn");
+    if (!subjectEl || !progressEl || !questionEl || !optionsEl || !feedbackEl || !nextBtn || !prevBtn) return;
+
+    const current = activeQuiz.questions[activeQuiz.index];
+    if (!current) return;
+    const chosen = activeQuiz.answers[activeQuiz.index];
+    const year = Number(current.year);
+    const exam = safeText(current.exam).trim();
+
+    subjectEl.textContent = "Subject: " + safeText(current.subjectName);
+    if (activeQuiz.mode === MODE_CBT) {
+      const currentSubjectId = safeText(current.subjectId).trim();
+      const subjectMeta = quizSubjectPosition(currentSubjectId, activeQuiz.index);
+      progressEl.textContent = "Question " + subjectMeta.position + " of " + subjectMeta.total;
+    } else {
+      progressEl.textContent = "Question " + (activeQuiz.index + 1) + " of " + activeQuiz.questions.length;
+    }
+    if (yearEl) {
+      if (Number.isInteger(year)) {
+        yearEl.textContent = "Source: " + year + (exam ? " " + exam : "");
+      } else if (exam) {
+        yearEl.textContent = "Source: " + exam;
+      } else {
+        yearEl.textContent = "Source: Year not specified";
+      }
+    }
+    questionEl.textContent = current.question;
+    feedbackEl.textContent = "";
+    feedbackEl.className = "message";
+    if (activeQuiz.mode === MODE_CBT) {
+      const currentSubjectId = safeText(current.subjectId).trim();
+      const subjectMeta = quizSubjectPosition(currentSubjectId, activeQuiz.index);
+      prevBtn.disabled = activeQuiz.completed || subjectMeta.localIndex <= 0;
+      nextBtn.disabled = activeQuiz.completed || subjectMeta.localIndex < 0 || subjectMeta.localIndex >= (subjectMeta.total - 1);
+    } else {
+      prevBtn.disabled = activeQuiz.index === 0 || activeQuiz.completed;
+      nextBtn.disabled = activeQuiz.index >= activeQuiz.questions.length - 1 || activeQuiz.completed;
+    }
+
+    optionsEl.innerHTML = current.options.map((option, idx) => {
+      const classes = ["option-btn"];
+      if (chosen === idx) classes.push("option-selected");
+      return "<button type=\"button\" class=\"" + classes.join(" ") + "\" data-option-index=\"" + idx + "\"" + (activeQuiz.completed ? " disabled" : "") + ">" + safeText(option) + "</button>";
+    }).join("");
+
+    optionsEl.querySelectorAll("[data-option-index]").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (!activeQuiz || activeQuiz.completed) return;
+        const picked = Number(button.getAttribute("data-option-index"));
+        activeQuiz.answers[activeQuiz.index] = picked;
+        optionsEl.querySelectorAll("button").forEach((item) => item.classList.remove("option-selected"));
+        button.classList.add("option-selected");
+        feedbackEl.textContent = "Answer saved.";
+        renderQuestionNavigator();
+        renderQuizSubjectSwitch();
+      });
+    });
+
+    renderQuestionNavigator();
+    renderQuizSubjectSwitch();
+    renderQuizTimer();
+  }
+
+  function computeQuizResult(quiz) {
+    const answers = Array.isArray(quiz.answers) ? quiz.answers : [];
+    const buckets = {};
+    let answered = 0;
+    let correct = 0;
+
+    quiz.questions.forEach((question, idx) => {
+      const subjectId = question.subjectId;
+      if (!buckets[subjectId]) {
+        buckets[subjectId] = {
+          subjectId,
+          subjectName: question.subjectName,
+          total: 0,
+          correct: 0
+        };
+      }
+      buckets[subjectId].total += 1;
+
+      const picked = answers[idx];
+      if (picked === null || picked === undefined || Number.isNaN(Number(picked))) return;
+      answered += 1;
+      if (Number(picked) === question.answerIndex) {
+        correct += 1;
+        buckets[subjectId].correct += 1;
+      }
+    });
+
+    const subjectResults = Object.keys(buckets).map((key) => {
+      const item = buckets[key];
+      const score = item.total ? Math.round((item.correct / item.total) * 100) : 0;
+      return {
+        subjectId: item.subjectId,
+        subjectName: item.subjectName,
+        correct: item.correct,
+        total: item.total,
+        score
+      };
+    });
+
+    const overallScore = subjectResults.reduce((sum, item) => sum + item.score, 0);
+    const maxOverall = subjectResults.length * 100;
+    const overallPercent = maxOverall ? Math.round((overallScore / maxOverall) * 100) : 0;
+    const wrong = answered - correct;
+    const unanswered = quiz.questions.length - answered;
+
+    return {
+      answered,
+      correct,
+      wrong,
+      unanswered,
+      totalQuestions: quiz.questions.length,
+      overallScore,
+      maxOverall,
+      overallPercent,
+      subjectResults
+    };
+  }
+
+  function finishQuiz(autoSubmitted) {
+    if (!activeQuiz || activeQuiz.completed) return;
+    stopQuizTimer();
+    activeQuiz.completed = true;
+
+    const result = computeQuizResult(activeQuiz);
+    const attempts = getAttempts();
+    let attemptLabel = (activeQuiz.mode === MODE_CBT ? "CBT" : "Study") + " Multi-Subject (" + activeQuiz.subjectIds.length + " subject" + (activeQuiz.subjectIds.length > 1 ? "s" : "") + ")";
+    if (activeQuiz.mode === MODE_STUDY && activeQuiz.subjectIds.length === 1) {
+      const subject = getSubjects().find((item) => item.id === activeQuiz.subjectIds[0]);
+      const subjectName = subject ? safeText(subject.name) : "Study";
+      attemptLabel = subjectName;
+    } else if (activeQuiz.mode === MODE_CBT && activeQuiz.examYear) {
+      attemptLabel += " (" + activeQuiz.examYear + ")";
+    }
+    attempts.push({
+      subjectId: activeQuiz.subjectIds.join(","),
+      subjectName: attemptLabel,
+      score: result.overallScore,
+      total: result.maxOverall,
+      scorePercent: result.overallPercent,
+      createdAt: new Date().toISOString()
+    });
+    setAttempts(attempts);
+
+    const backendAttemptItems = result.subjectResults.map((item) => {
+      return {
+        subjectId: item.subjectId,
+        mode: activeQuiz.mode === MODE_CBT ? "CBT" : "STUDY",
+        focusLabel: attemptLabel,
+        score: item.correct,
+        total: item.total,
+        percent: item.score
+      };
+    });
+    queueAttemptSyncItems(backendAttemptItems);
+    flushAttemptSyncQueue();
+
+    const payload = {
+      createdAt: new Date().toISOString(),
+      mode: activeQuiz.mode,
+      autoSubmitted: !!autoSubmitted,
+      examYear: activeQuiz.examYear || null,
+      totalMinutes: activeQuiz.totalMinutes,
+      totalSeconds: activeQuiz.totalSeconds,
+      remainingSeconds: activeQuiz.remainingSeconds,
+      timeSpentSeconds: Math.max(activeQuiz.totalSeconds - activeQuiz.remainingSeconds, 0),
+      totalQuestions: result.totalQuestions,
+      answered: result.answered,
+      correct: result.correct,
+      wrong: result.wrong,
+      unanswered: result.unanswered,
+      overallScore: result.overallScore,
+      maxOverall: result.maxOverall,
+      overallPercent: result.overallPercent,
+      subjectResults: result.subjectResults
+    };
+    setJSON(RESULT_KEY, payload);
+    window.location.href = "result.html";
+  }
+
+  function startQuiz(mode, subjectIds, questionCountPerSubject, totalMinutes, options) {
+    const selectedIds = Array.isArray(subjectIds) ? subjectIds.filter(Boolean) : [];
+    const subjects = getSubjects().filter((subject) => selectedIds.includes(subject.id));
+    const examYear = Number(options && options.examYear);
+    const hasYearFilter = mode === MODE_CBT && Number.isInteger(examYear) && examYear > 0;
+    const topicName = safeText(options && options.topicName).trim().toLowerCase();
+    const hasTopicFilter = mode === MODE_STUDY && !!topicName;
+    const countMap = questionCountPerSubject && typeof questionCountPerSubject === "object"
+      ? questionCountPerSubject
+      : null;
+    const fallbackCount = Number(questionCountPerSubject);
+    const questions = [];
+
+    subjects.forEach((subject) => {
+      const modePool = subjectQuestionsByMode(subject, mode);
+      const pool = modePool.filter((question) => {
+        if (hasYearFilter && Number(question.year) !== examYear) return false;
+        if (hasTopicFilter && safeText(question.topic).trim().toLowerCase() !== topicName) return false;
+        return true;
+      });
+      const perSubjectCount = countMap
+        ? Number(countMap[subject.id])
+        : fallbackCount;
+      const cap = mode === MODE_CBT ? cbtSubjectQuestionCap(subject) : 100;
+      const safeCount = Number.isInteger(perSubjectCount) && perSubjectCount > 0
+        ? perSubjectCount
+        : 1;
+      const selected = shuffle(pool).slice(0, Math.min(safeCount, cap, pool.length));
+      selected.forEach((question) => {
+        questions.push({
+          question: question.question,
+          options: question.options,
+          answerIndex: question.answerIndex,
+          explanation: question.explanation,
+          topic: question.topic,
+          year: question.year,
+          exam: question.exam,
+          subjectId: subject.id,
+          subjectName: subject.name
+        });
+      });
+    });
+
+    const setupMessage = document.getElementById("setupMessage");
+    if (!questions.length) {
+      if (setupMessage) {
+        let message = "No questions found for selected filters.";
+        if (hasYearFilter) message = "No questions found for selected subjects in " + examYear + ".";
+        if (hasTopicFilter) message = "No study questions found for topic '" + safeText(topicName) + "'.";
+        setupMessage.textContent = message;
+        setupMessage.className = "message message-error";
+      }
+      return false;
+    }
+
+    activeQuiz = {
+      mode,
+      subjectIds: subjects.map((s) => s.id),
+      index: 0,
+      completed: false,
+      questions,
+      answers: questions.map(() => null),
+      totalMinutes,
+      totalSeconds: totalMinutes * 60,
+      remainingSeconds: totalMinutes * 60,
+      examYear: hasYearFilter ? examYear : null,
+      topicName: hasTopicFilter ? topicName : "",
+      timerId: null
+    };
+
+    const empty = document.getElementById("quizEmpty");
+    const panel = document.getElementById("quizPanel");
+    const submitTopBtn = document.getElementById("submitExamTopBtn");
+    const quitTopBtn = document.getElementById("quitExamTopBtn");
+    if (empty) empty.classList.add("hidden");
+    if (panel) panel.classList.remove("hidden");
+    if (submitTopBtn) submitTopBtn.classList.remove("hidden");
+    if (quitTopBtn) quitTopBtn.classList.remove("hidden");
+    if (setupMessage) {
+      setupMessage.textContent = "Loaded " + questions.length + " question(s).";
+      setupMessage.className = "message message-success";
+    }
+
+    showQuizQuestion();
+    startQuizTimer();
+    return true;
+  }
+
+  function initStudentPage() {
+    const auth = requireRole("student");
+    if (!auth) return;
+    const premiumAccess = canUseStudyMode(auth);
+
+    const rawName = (auth.name && auth.name !== "Student")
+      ? auth.name
+      : String(auth.email || "student").split("@")[0];
+    const displayName = safeText(rawName)
+      .replace(/[._-]+/g, " ")
+      .split(" ")
+      .filter(Boolean)
+      .map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+      .join(" ") || "Student";
+
+    const hour = new Date().getHours();
+    const greeting = hour < 12 ? "Good morning" : (hour < 17 ? "Good afternoon" : "Good evening");
+    const greetingTitle = document.getElementById("greetingTitle");
+    const welcomeText = document.getElementById("welcomeText");
+    const profileName = document.getElementById("profileName");
+    if (greetingTitle) greetingTitle.textContent = greeting + ", " + displayName;
+    if (welcomeText) welcomeText.textContent = "Your dashboard is live. Continue your JAMB preparation with focused daily sessions.";
+    if (profileName) profileName.textContent = displayName;
+
+    const dashboardMessage = document.getElementById("dashboardMessage");
+    if (dashboardMessage) {
+      dashboardMessage.textContent = getStudentAccessMessage(auth);
+      dashboardMessage.className = "message";
+      dashboardMessage.classList.remove("hidden");
+    }
+    const subjects = getSubjects();
+    renderStudentSummary(subjects);
+    renderAttemptHistory();
+
+    const syncStudentView = () => {
+      const latestSubjects = getSubjects();
+      renderStudentSummary(latestSubjects);
+      const searchInput = document.getElementById("subjectSearch");
+      renderSubjectCards(latestSubjects, searchInput ? searchInput.value : "", studentMode);
+    };
+    const stopObserveSubjects = observeSubjectStoreChanges(syncStudentView);
+    window.addEventListener("beforeunload", stopObserveSubjects, { once: true });
+
+    const search = document.getElementById("subjectSearch");
+    if (search) search.addEventListener("input", () => renderSubjectCards(getSubjects(), search.value, studentMode));
+
+    document.querySelectorAll("[data-mode]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const mode = button.getAttribute("data-mode") === MODE_CBT ? MODE_CBT : MODE_STUDY;
+        if (mode === MODE_STUDY) {
+          if (!canUseStudyMode(getAuth())) {
+            if (dashboardMessage) {
+              dashboardMessage.textContent = "Study mode is available on premium package only.";
+              dashboardMessage.className = "message message-error";
+              dashboardMessage.classList.remove("hidden");
+            }
+            return;
+          }
+          window.location.href = buildPracticeUrl(MODE_STUDY, {
+            preselect: [],
+            subjects: [],
+            questionCount: Number(localStorage.getItem("testify_qps_study") || 20),
+            totalMinutes: Number(localStorage.getItem("testify_minutes_study") || 60)
+          }, false);
+          return;
+        }
+        window.location.href = buildPracticeUrl(MODE_CBT, {
+          preselect: [],
+          subjects: [],
+          questionCount: Number(localStorage.getItem("testify_qps_cbt") || 40),
+          totalMinutes: Number(localStorage.getItem("testify_minutes_cbt") || 120)
+        }, false);
+      });
+    });
+    const modeStudyBtn = document.getElementById("modeStudyBtn");
+    if (modeStudyBtn && !premiumAccess) {
+      modeStudyBtn.disabled = true;
+      modeStudyBtn.classList.add("mode-tab-disabled");
+    }
+    setStudentMode(premiumAccess ? MODE_STUDY : MODE_CBT);
+
+    document.querySelectorAll("[data-section-link]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-section-link");
+        const target = targetId ? document.getElementById(targetId) : null;
+        if (target && typeof target.scrollIntoView === "function") {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+
+    const startSimulationBtn = document.getElementById("startSimulationBtn");
+    if (startSimulationBtn) {
+      startSimulationBtn.addEventListener("click", () => {
+        window.location.href = buildPracticeUrl(MODE_CBT, {
+          preselect: [],
+          subjects: [],
+          questionCount: Number(localStorage.getItem("testify_qps_cbt") || 40),
+          totalMinutes: Number(localStorage.getItem("testify_minutes_cbt") || 120)
+        }, false);
+      });
+    }
+
+    const openLibraryBtn = document.getElementById("openLibraryBtn");
+    if (openLibraryBtn) {
+      if (!premiumAccess) {
+        openLibraryBtn.disabled = true;
+      }
+      openLibraryBtn.addEventListener("click", () => {
+        if (!premiumAccess) {
+          window.location.href = buildActivationUrl(auth.email);
+          return;
+        }
+        setStudentMode(MODE_STUDY);
+        const target = document.getElementById("subjectsSection");
+        if (target && typeof target.scrollIntoView === "function") {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    }
+
+    const viewHistoryBtn = document.getElementById("viewHistoryBtn");
+    if (viewHistoryBtn) {
+      viewHistoryBtn.addEventListener("click", () => {
+        const target = document.getElementById("activitySection");
+        if (target && typeof target.scrollIntoView === "function") {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    }
+
+    const performanceRange = document.getElementById("performanceRange");
+    if (performanceRange) {
+      performanceRange.addEventListener("change", () => {
+        renderSubjectPerformance(getSubjects(), getAttempts());
+      });
+    }
+
+    const logout = () => {
+      clearAuth();
+      window.location.href = "hi.html";
+    };
+    const logoutBtn = document.getElementById("logoutBtn");
+    const logoutBtnMobile = document.getElementById("logoutBtnMobile");
+    if (logoutBtn) logoutBtn.addEventListener("click", logout);
+    if (logoutBtnMobile) logoutBtnMobile.addEventListener("click", logout);
+
+    document.body.classList.remove("student-booting");
+  }
+
+  function initPracticePage() {
+    const auth = requireRole("student");
+    if (!auth) return;
+
+    const pageType = String(document.body.getAttribute("data-page") || "").trim().toLowerCase();
+    const params = new URLSearchParams(window.location.search || "");
+    const mode = pageType === "study" ? MODE_STUDY : MODE_CBT;
+    if (mode === MODE_STUDY && !canUseStudyMode(auth)) {
+      window.location.href = "student.html";
+      return;
+    }
+    const runNow = params.get("run") === "1";
+    const preselect = String(params.get("preselect") || "").split(",").map((x) => x.trim()).filter(Boolean);
+    const selectedFromQuery = String(params.get("subjects") || "").split(",").map((x) => x.trim()).filter(Boolean);
+    const countParam = Number(params.get("qps"));
+    const countMapParam = parseSubjectQuestionMap(params.get("qpsmap"));
+    const minutesParam = Number(params.get("mins"));
+    const yearParam = Number(params.get("year"));
+    const topicParam = safeText(params.get("topic")).trim();
+    const allSubjects = getSubjects();
+
+    const availableSubjects = allSubjects.filter((subject) => subjectQuestionsByMode(subject, mode).length > 0);
+    const hasAvailableSubjects = availableSubjects.length > 0;
+
+    const validSubjectIds = new Set(availableSubjects.map((s) => s.id));
+    const defaultSelected = (selectedFromQuery.length ? selectedFromQuery : preselect).filter((id) => validSubjectIds.has(id));
+    const heading = document.getElementById("practiceHeading");
+    const modeTag = document.getElementById("practiceModeTag");
+    const subtitle = document.getElementById("practiceSubtitle");
+    const setupSubjectTitle = document.getElementById("setupSubjectTitle");
+    const setupSubjectSearch = document.getElementById("setupSubjectSearch");
+    const setupSubjectDropdown = document.getElementById("setupSubjectDropdown");
+    const setupSelectedSubjects = document.getElementById("setupSelectedSubjects");
+    const setupYearSection = document.getElementById("setupYearSection");
+    const setupYearButtons = document.getElementById("setupYearButtons");
+    const setupTopicSection = document.getElementById("setupTopicSection");
+    const setupTopicSelect = document.getElementById("setupTopicSelect");
+    const setupSelectedCount = document.getElementById("setupSelectedCount");
+    const countInput = document.getElementById("setupQuestionPerSubject");
+    const minutesInput = document.getElementById("setupTotalMinutes");
+    const countLabel = document.getElementById("setupCountLabel");
+    const timeLabel = document.getElementById("setupTimeLabel");
+    const beginBtn = document.getElementById("beginPracticeBtn");
+    const nextBtn = document.getElementById("nextQuestionBtn");
+    const prevBtn = document.getElementById("prevQuestionBtn");
+    const endBtn = document.getElementById("endQuizBtn");
+    const submitTopBtn = document.getElementById("submitExamTopBtn");
+    const quitTopBtn = document.getElementById("quitExamTopBtn");
+    const setupCard = document.getElementById("setupCard");
+    const setupMessage = document.getElementById("setupMessage");
+    const backBtn = document.getElementById("practiceBackBtn");
+    const logoutBtn = document.getElementById("practiceLogoutBtn");
+
+    const label = mode === MODE_CBT ? "JAMB CBT Simulation" : "Study Mode";
+    if (heading) heading.textContent = label + " Setup";
+    if (modeTag) modeTag.textContent = "Mode: " + label;
+    if (subtitle) subtitle.textContent = mode === MODE_CBT
+      ? "Select up to 4 subjects, choose question/time settings, then start exam."
+      : "Pick one subject, choose a topic, then start a focused study session.";
+    if (countLabel) countLabel.textContent = mode === MODE_CBT
+      ? "Default questions per subject (1-40, English 1-60)"
+      : "Questions per subject (1-100)";
+    if (timeLabel) timeLabel.textContent = "Total exam time (hours, 0.5-4)";
+    if (submitTopBtn) submitTopBtn.classList.add("hidden");
+    if (quitTopBtn) quitTopBtn.classList.add("hidden");
+    if (setupCard) setupCard.classList.remove("hidden");
+    if (setupSubjectTitle) {
+      setupSubjectTitle.textContent = mode === MODE_CBT ? "Select Subjects (up to 4)" : "Select One Subject";
+    }
+    if (!hasAvailableSubjects) {
+      if (setupSubjectDropdown) {
+        setupSubjectDropdown.classList.add("hidden");
+      }
+      if (setupSelectedSubjects) {
+        setupSelectedSubjects.innerHTML = "<div class=\"empty-state\">No " + (mode === MODE_CBT ? "CBT" : "study") + " questions available yet. Contact admin.</div>";
+      }
+      if (setupSubjectSearch) {
+        setupSubjectSearch.disabled = true;
+        setupSubjectSearch.placeholder = "No subjects available";
+      }
+      if (setupSelectedCount) {
+        setupSelectedCount.textContent = mode === MODE_CBT ? "0/4 Selected" : "0 Selected";
+      }
+      if (setupMessage) {
+        setupMessage.textContent = "No " + (mode === MODE_CBT ? "CBT" : "study") + " question bank is available right now.";
+        setupMessage.className = "message message-error";
+      }
+      if (beginBtn) beginBtn.disabled = true;
+    }
+
+    const countStorageKey = mode === MODE_CBT ? "testify_qps_cbt" : "testify_qps_study";
+    const countMapStorageKey = "testify_qps_map_cbt";
+    const minutesStorageKey = mode === MODE_CBT ? "testify_minutes_cbt" : "testify_minutes_study";
+    const yearStorageKey = "testify_year_cbt";
+    const storedQuestionCount = Number(localStorage.getItem(countStorageKey));
+    const fallbackCount = mode === MODE_CBT ? 40 : 20;
+    const defaultQuestionCap = mode === MODE_CBT ? 40 : 100;
+    const initialDefaultQuestionCount = Number.isInteger(countParam) && countParam > 0
+      ? Math.min(countParam, defaultQuestionCap)
+      : (Number.isInteger(storedQuestionCount) && storedQuestionCount > 0 ? Math.min(storedQuestionCount, defaultQuestionCap) : fallbackCount);
+    const safeDefaultQuestionCount = Math.max(1, initialDefaultQuestionCount);
+
+    const maxSelectableSubjects = mode === MODE_CBT ? 4 : 1;
+    let selectedSubjectIds = defaultSelected.slice(0, maxSelectableSubjects);
+    if (!selectedSubjectIds.length && availableSubjects.length) {
+      selectedSubjectIds = [availableSubjects[0].id];
+    }
+    const storedCountMapRaw = mode === MODE_CBT ? getJSON(countMapStorageKey, {}) : {};
+    const storedCountMap = storedCountMapRaw && typeof storedCountMapRaw === "object" ? storedCountMapRaw : {};
+    let subjectQuestionCounts = {};
+    if (mode === MODE_CBT) {
+      selectedSubjectIds.forEach((subjectId) => {
+        const subject = availableSubjects.find((row) => row.id === subjectId);
+        const subjectCap = cbtSubjectQuestionCap(subject);
+        const fromParam = Number(countMapParam[subjectId]);
+        const fromStored = Number(storedCountMap[subjectId]);
+        const picked = Number.isInteger(fromParam) && fromParam > 0
+          ? fromParam
+          : (Number.isInteger(fromStored) && fromStored > 0 ? fromStored : safeDefaultQuestionCount);
+        subjectQuestionCounts[subjectId] = Math.max(1, Math.min(subjectCap, picked));
+      });
+    }
+
+    function selectedIds() {
+      return selectedSubjectIds.slice();
+    }
+
+    function getAvailableSubject(subjectId) {
+      return availableSubjects.find((subject) => subject.id === subjectId) || null;
+    }
+
+    function selectedStudySubject() {
+      if (mode !== MODE_STUDY) return null;
+      const id = selectedSubjectIds[0];
+      return id ? getAvailableSubject(id) : null;
+    }
+
+    function updateSelectedCount() {
+      if (!setupSelectedCount) return;
+      const current = selectedSubjectIds.length;
+      setupSelectedCount.textContent = mode === MODE_CBT
+        ? String(current) + "/4 Selected"
+        : String(current) + " Selected";
+    }
+
+    function closeSubjectDropdown() {
+      if (!setupSubjectDropdown) return;
+      setupSubjectDropdown.classList.add("hidden");
+    }
+
+    function renderStudyTopicOptions() {
+      if (!setupTopicSection || !setupTopicSelect) return;
+      setupTopicSection.classList.toggle("hidden", mode !== MODE_STUDY);
+      if (mode !== MODE_STUDY) return;
+
+      const picked = selectedStudySubject();
+      const topics = picked ? subjectTopics(picked, MODE_STUDY) : [];
+
+      if (!picked) {
+        setupTopicSelect.innerHTML = "<option value=\"\">Select a subject first</option>";
+        setupTopicSelect.disabled = true;
+        return;
+      }
+
+      if (!topics.length) {
+        setupTopicSelect.innerHTML = "<option value=\"\">No topic available</option>";
+        setupTopicSelect.disabled = true;
+        return;
+      }
+
+      const initialTopic = topicParam && topics.includes(topicParam) ? topicParam : topics[0];
+      const previous = setupTopicSelect.value || initialTopic;
+      const selectedTopic = topics.includes(previous) ? previous : initialTopic;
+      setupTopicSelect.innerHTML = topics.map((topic) => {
+        return "<option value=\"" + safeText(topic) + "\"" + (topic === selectedTopic ? " selected" : "") + ">" + safeText(topic) + "</option>";
+      }).join("");
+      setupTopicSelect.disabled = false;
+    }
+
+    function renderSelectedSubjects() {
+      if (!setupSelectedSubjects) return;
+      if (!selectedSubjectIds.length) {
+        setupSelectedSubjects.innerHTML = "<div class=\"empty-state\">No subject selected yet. Use search above.</div>";
+        return;
+      }
+
+      setupSelectedSubjects.innerHTML = selectedSubjectIds.map((subjectId) => {
+        const subject = getAvailableSubject(subjectId);
+        if (!subject) return "";
+        const count = subjectQuestionsByMode(subject, mode).length;
+        const subjectCap = mode === MODE_CBT ? cbtSubjectQuestionCap(subject) : 100;
+        const pickedCount = mode === MODE_CBT
+          ? Math.max(1, Math.min(subjectCap, Number(subjectQuestionCounts[subject.id]) || safeDefaultQuestionCount))
+          : 0;
+        return "<div class=\"selected-subject-chip\">" +
+          "<div><strong>" + safeText(subject.name) + "</strong><small>" + count + " questions</small>" +
+            (mode === MODE_CBT
+              ? ("<label class=\"subject-qps-inline\"><span>QTY</span><input type=\"number\" min=\"1\" max=\"" + subjectCap + "\" step=\"1\" value=\"" + pickedCount + "\" data-subject-qps=\"" + safeText(subject.id) + "\" data-subject-max=\"" + subjectCap + "\"></label>")
+              : "") +
+          "</div>" +
+          "<button type=\"button\" class=\"selected-subject-remove\" data-remove-subject=\"" + safeText(subject.id) + "\">Remove</button>" +
+        "</div>";
+      }).join("");
+
+      if (mode === MODE_CBT) {
+        setupSelectedSubjects.querySelectorAll("[data-subject-qps]").forEach((input) => {
+          input.addEventListener("input", () => {
+            const subjectId = input.getAttribute("data-subject-qps") || "";
+            const maxValue = Number(input.getAttribute("data-subject-max")) || 40;
+            const value = Number(input.value);
+            if (!subjectId) return;
+            if (!Number.isInteger(value) || value < 1 || value > maxValue) return;
+            subjectQuestionCounts[subjectId] = value;
+          });
+          input.addEventListener("blur", () => {
+            const subjectId = input.getAttribute("data-subject-qps") || "";
+            const maxValue = Number(input.getAttribute("data-subject-max")) || 40;
+            const value = Number(input.value);
+            const safeValue = Number.isInteger(value) && value >= 1 && value <= maxValue
+              ? value
+              : Math.max(1, Math.min(maxValue, Number(subjectQuestionCounts[subjectId]) || safeDefaultQuestionCount));
+            input.value = String(safeValue);
+            if (subjectId) subjectQuestionCounts[subjectId] = safeValue;
+          });
+        });
+      }
+
+      setupSelectedSubjects.querySelectorAll("[data-remove-subject]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const id = button.getAttribute("data-remove-subject") || "";
+          selectedSubjectIds = selectedSubjectIds.filter((item) => item !== id);
+          if (mode === MODE_CBT && id) delete subjectQuestionCounts[id];
+          updateSelectedCount();
+          renderSelectedSubjects();
+          renderStudyTopicOptions();
+          renderSubjectDropdown(setupSubjectSearch ? setupSubjectSearch.value : "");
+        });
+      });
+    }
+
+    function renderSubjectDropdown(searchValue) {
+      if (!setupSubjectDropdown || !setupSubjectSearch) return;
+
+      const term = safeText(searchValue).trim().toLowerCase();
+      const selectedSet = new Set(selectedSubjectIds);
+      const availableRows = availableSubjects.filter((subject) => {
+        if (selectedSet.has(subject.id)) return false;
+        if (!term) return true;
+        return subject.name.toLowerCase().includes(term);
+      });
+
+      if (!availableRows.length) {
+        setupSubjectDropdown.innerHTML = "<div class=\"empty-state\" style=\"margin:8px;\">No matching subjects.</div>";
+        setupSubjectDropdown.classList.remove("hidden");
+        return;
+      }
+
+      setupSubjectDropdown.innerHTML = availableRows.map((subject) => {
+        const count = subjectQuestionsByMode(subject, mode).length;
+        return "<button type=\"button\" class=\"subject-picker-option\" data-add-subject=\"" + safeText(subject.id) + "\">" +
+          "<span><strong>" + safeText(subject.name) + "</strong><small>" + count + " questions</small></span>" +
+          "<span class=\"material-symbols-outlined\" style=\"font-size:1rem;color:#1e40af;\">add</span>" +
+        "</button>";
+      }).join("");
+      setupSubjectDropdown.classList.remove("hidden");
+
+      setupSubjectDropdown.querySelectorAll("[data-add-subject]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const id = button.getAttribute("data-add-subject") || "";
+          if (!id) return;
+          if (selectedSubjectIds.includes(id)) return;
+          if (mode === MODE_STUDY) {
+            selectedSubjectIds = [id];
+            if (setupMessage) {
+              setupMessage.textContent = "";
+              setupMessage.className = "message";
+            }
+            updateSelectedCount();
+            renderSelectedSubjects();
+            renderStudyTopicOptions();
+            if (setupSubjectSearch) setupSubjectSearch.value = "";
+            renderSubjectDropdown("");
+            return;
+          }
+          if (selectedSubjectIds.length >= maxSelectableSubjects) {
+            if (setupMessage) {
+              setupMessage.textContent = mode === MODE_CBT
+                ? "Maximum of 4 subjects allowed."
+                : "Study mode allows one subject at a time.";
+              setupMessage.className = "message message-error";
+            }
+            return;
+          }
+          selectedSubjectIds.push(id);
+          if (mode === MODE_CBT) {
+            const subject = getAvailableSubject(id);
+            const cap = cbtSubjectQuestionCap(subject);
+            const current = Number(subjectQuestionCounts[id]) || safeDefaultQuestionCount;
+            subjectQuestionCounts[id] = Math.max(1, Math.min(cap, current));
+          }
+          if (mode === MODE_STUDY && selectedSubjectIds.length > 1) {
+            selectedSubjectIds = [id];
+          }
+          if (setupMessage) {
+            setupMessage.textContent = "";
+            setupMessage.className = "message";
+          }
+          updateSelectedCount();
+          renderSelectedSubjects();
+          renderStudyTopicOptions();
+          if (setupSubjectSearch) setupSubjectSearch.value = "";
+          renderSubjectDropdown("");
+        });
+      });
+    }
+
+    if (setupSubjectSearch && setupSubjectDropdown) {
+      setupSubjectSearch.addEventListener("focus", () => {
+        renderSubjectDropdown(setupSubjectSearch.value);
+      });
+      setupSubjectSearch.addEventListener("click", () => {
+        renderSubjectDropdown(setupSubjectSearch.value);
+      });
+      setupSubjectSearch.addEventListener("input", () => {
+        renderSubjectDropdown(setupSubjectSearch.value);
+      });
+      setupSubjectSearch.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeSubjectDropdown();
+      });
+      document.addEventListener("click", (event) => {
+        const target = event.target;
+        if (!target) return;
+        const insideSearch = setupSubjectSearch.contains(target);
+        const insideDropdown = setupSubjectDropdown.contains(target);
+        if (!insideSearch && !insideDropdown) closeSubjectDropdown();
+      });
+    }
+
+    const availableYears = Array.from(new Set(
+      availableSubjects.flatMap((subject) => subjectQuestionsByMode(subject, MODE_CBT))
+        .map((question) => Number(question.year))
+        .filter((year) => Number.isInteger(year) && year > 0)
+    )).sort((a, b) => b - a);
+    const fallbackYear = new Date().getFullYear();
+    const storedYear = Number(localStorage.getItem(yearStorageKey));
+    let selectedYear = Number.isInteger(yearParam) && yearParam > 0
+      ? yearParam
+      : (Number.isInteger(storedYear) && storedYear > 0 ? storedYear : (availableYears[0] || fallbackYear));
+    if (availableYears.length && !availableYears.includes(selectedYear)) selectedYear = availableYears[0];
+
+    if (setupYearSection) setupYearSection.classList.toggle("hidden", mode !== MODE_CBT);
+    if (setupYearButtons && mode === MODE_CBT) {
+      const yearsToShow = availableYears.length ? availableYears.slice(0, 6) : [selectedYear];
+      const renderYearButtons = () => {
+        setupYearButtons.innerHTML = yearsToShow.map((year) => {
+          const active = year === selectedYear;
+          return "<button type=\"button\" data-exam-year=\"" + year + "\" class=\"" +
+            (active
+              ? "year-btn year-btn-active"
+              : "year-btn") +
+            "\">" + year + "</button>";
+        }).join("");
+        setupYearButtons.querySelectorAll("[data-exam-year]").forEach((button) => {
+          button.addEventListener("click", () => {
+            selectedYear = Number(button.getAttribute("data-exam-year")) || selectedYear;
+            renderYearButtons();
+          });
+        });
+      };
+      renderYearButtons();
+    }
+
+    updateSelectedCount();
+    renderSelectedSubjects();
+    renderStudyTopicOptions();
+
+    if (countInput) {
+      countInput.min = "1";
+      countInput.max = String(defaultQuestionCap);
+      countInput.value = String(safeDefaultQuestionCount);
+      if (mode === MODE_CBT) {
+        countInput.addEventListener("input", () => {
+          const value = Number(countInput.value);
+          if (!Number.isInteger(value) || value < 1 || value > defaultQuestionCap) return;
+          selectedSubjectIds.forEach((subjectId) => {
+            const subject = getAvailableSubject(subjectId);
+            const cap = cbtSubjectQuestionCap(subject);
+            subjectQuestionCounts[subjectId] = Math.max(1, Math.min(cap, value));
+          });
+          renderSelectedSubjects();
+        });
+      }
+    }
+    if (minutesInput) {
+      const stored = Number(localStorage.getItem(minutesStorageKey));
+      const fallbackMinutes = mode === MODE_CBT ? 120 : 60;
+      const pickedMinutes = Number.isInteger(minutesParam) && minutesParam > 0
+        ? Math.min(minutesParam, 240)
+        : (Number.isInteger(stored) && stored > 0 ? Math.min(stored, 240) : fallbackMinutes);
+      const safeMinutes = Math.max(30, Math.min(pickedMinutes, 240));
+      const hours = Math.round((safeMinutes / 60) * 2) / 2;
+      minutesInput.value = String(hours);
+    }
+
+    if (beginBtn) beginBtn.textContent = mode === MODE_CBT ? "Start Exam" : "Start Study Exam";
+    if (endBtn) endBtn.textContent = "Back to Setup";
+    if (backBtn) {
+      backBtn.addEventListener("click", () => {
+        if (window.history.length > 1) window.history.back();
+        else window.location.href = "student.html";
+      });
+    }
+
+    if (beginBtn) {
+      beginBtn.addEventListener("click", () => {
+        let subjectIds = selectedIds();
+        const questionCount = Number(countInput ? countInput.value : safeDefaultQuestionCount);
+        const totalHours = Number(minutesInput ? minutesInput.value : 0);
+        const totalMinutes = Math.round(totalHours * 60);
+
+        if (!subjectIds.length) {
+          if (setupMessage) {
+            setupMessage.textContent = "Select at least one subject.";
+            setupMessage.className = "message message-error";
+          }
+          return;
+        }
+        if (mode === MODE_STUDY && subjectIds.length > 1) {
+          subjectIds = subjectIds.slice(0, 1);
+        }
+        if (mode === MODE_CBT && subjectIds.length > 4) {
+          if (setupMessage) {
+            setupMessage.textContent = "Maximum of 4 subjects allowed.";
+            setupMessage.className = "message message-error";
+          }
+          return;
+        }
+        const selectedTopic = mode === MODE_STUDY && setupTopicSelect
+          ? safeText(setupTopicSelect.value).trim()
+          : "";
+        if (mode === MODE_STUDY && !selectedTopic) {
+          if (setupMessage) {
+            setupMessage.textContent = "Select a study topic.";
+            setupMessage.className = "message message-error";
+          }
+          return;
+        }
+        if (!Number.isInteger(questionCount) || questionCount < 1 || questionCount > defaultQuestionCap) {
+          if (setupMessage) {
+            setupMessage.textContent = mode === MODE_CBT
+              ? "Default questions per subject must be between 1 and 40."
+              : "Questions per subject must be between 1 and 100.";
+            setupMessage.className = "message message-error";
+          }
+          return;
+        }
+        let questionCountBySubject = null;
+        if (mode === MODE_CBT) {
+          questionCountBySubject = {};
+          for (const subjectId of subjectIds) {
+            const countValue = Number(subjectQuestionCounts[subjectId] || questionCount);
+            const subject = getAvailableSubject(subjectId);
+            const subjectCap = cbtSubjectQuestionCap(subject);
+            if (!Number.isInteger(countValue) || countValue < 1 || countValue > subjectCap) {
+              if (setupMessage) {
+                setupMessage.textContent = (subject ? subject.name : "A subject") + " question count must be between 1 and " + subjectCap + ".";
+                setupMessage.className = "message message-error";
+              }
+              return;
+            }
+            questionCountBySubject[subjectId] = countValue;
+          }
+        }
+        if (!Number.isFinite(totalHours) || totalHours < 0.5 || totalHours > 4) {
+          if (setupMessage) {
+            setupMessage.textContent = "Total exam time must be between 0.5 and 4 hours.";
+            setupMessage.className = "message message-error";
+          }
+          return;
+        }
+        if (mode === MODE_CBT && (!Number.isInteger(selectedYear) || selectedYear < 1990)) {
+          if (setupMessage) {
+            setupMessage.textContent = "Select a valid exam year.";
+            setupMessage.className = "message message-error";
+          }
+          return;
+        }
+
+        localStorage.setItem(countStorageKey, String(questionCount));
+        if (mode === MODE_CBT) setJSON(countMapStorageKey, questionCountBySubject || {});
+        localStorage.setItem(minutesStorageKey, String(totalMinutes));
+        if (mode === MODE_CBT) localStorage.setItem(yearStorageKey, String(selectedYear));
+
+        const nextUrl = buildPracticeUrl(mode, {
+          preselect: subjectIds,
+          subjects: subjectIds,
+          questionCount,
+          questionCountBySubject: mode === MODE_CBT ? questionCountBySubject : null,
+          totalMinutes,
+          examYear: mode === MODE_CBT ? selectedYear : null,
+          topicName: mode === MODE_STUDY ? selectedTopic : ""
+        }, true);
+        window.location.href = nextUrl;
+      });
+    }
+
+    if (runNow) {
+      if (modeTag) modeTag.textContent = "Mode: " + label + " (Running)";
+      if (subtitle) subtitle.textContent = "Exam started. Submit from the top-right button when done.";
+      if (quitTopBtn) quitTopBtn.classList.remove("hidden");
+
+      const runSubjectIds = selectedFromQuery.filter((id) => validSubjectIds.has(id)).slice(0, 4);
+      if (mode === MODE_STUDY && runSubjectIds.length > 1) runSubjectIds.splice(1);
+      const questionCount = Number.isInteger(countParam) && countParam > 0
+        ? Math.min(countParam, 100)
+        : Number(localStorage.getItem(countStorageKey) || (mode === MODE_CBT ? 40 : 20));
+      const totalMinutes = Number.isInteger(minutesParam) && minutesParam > 0
+        ? Math.min(minutesParam, 240)
+        : Number(localStorage.getItem(minutesStorageKey) || (mode === MODE_CBT ? 120 : 60));
+      const runExamYear = mode === MODE_CBT && Number.isInteger(yearParam) && yearParam > 0
+        ? yearParam
+        : (mode === MODE_CBT ? selectedYear : null);
+      const runTopic = mode === MODE_STUDY && setupTopicSelect
+        ? safeText(setupTopicSelect.value || topicParam).trim()
+        : "";
+      const runQuestionCountMap = mode === MODE_CBT
+        ? runSubjectIds.reduce((map, subjectId) => {
+          const subject = getAvailableSubject(subjectId);
+          const subjectCap = cbtSubjectQuestionCap(subject);
+          const fromParam = Number(countMapParam[subjectId]);
+          const fromState = Number(subjectQuestionCounts[subjectId]);
+          const fallback = Number.isInteger(questionCount) && questionCount > 0 ? questionCount : safeDefaultQuestionCount;
+          const chosen = Number.isInteger(fromParam) && fromParam > 0
+            ? fromParam
+            : (Number.isInteger(fromState) && fromState > 0 ? fromState : fallback);
+          map[subjectId] = Math.max(1, Math.min(subjectCap, chosen));
+          return map;
+        }, {})
+        : null;
+
+      if (!runSubjectIds.length) {
+        if (setupMessage) {
+          setupMessage.textContent = "No valid subject selected for this exam.";
+          setupMessage.className = "message message-error";
+        }
+      } else if (mode === MODE_STUDY && !runTopic) {
+        if (setupMessage) {
+          setupMessage.textContent = "Select a study topic.";
+          setupMessage.className = "message message-error";
+        }
+      } else if (startQuiz(mode, runSubjectIds, mode === MODE_CBT ? runQuestionCountMap : questionCount, Math.max(30, totalMinutes), {
+        examYear: runExamYear,
+        topicName: runTopic
+      }) && setupCard) {
+        setupCard.classList.add("hidden");
+      }
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        if (!activeQuiz || activeQuiz.completed) return;
+        if (activeQuiz.mode === MODE_CBT) {
+          const current = activeQuiz.questions[activeQuiz.index];
+          const currentSubjectId = safeText(current && current.subjectId).trim();
+          const subjectMeta = quizSubjectPosition(currentSubjectId, activeQuiz.index);
+          if (subjectMeta.localIndex < 0 || subjectMeta.localIndex >= (subjectMeta.total - 1)) return;
+          activeQuiz.index = subjectMeta.indexes[subjectMeta.localIndex + 1];
+        } else {
+          if (activeQuiz.index >= activeQuiz.questions.length - 1) return;
+          activeQuiz.index += 1;
+        }
+        showQuizQuestion();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        if (!activeQuiz || activeQuiz.completed) return;
+        if (activeQuiz.mode === MODE_CBT) {
+          const current = activeQuiz.questions[activeQuiz.index];
+          const currentSubjectId = safeText(current && current.subjectId).trim();
+          const subjectMeta = quizSubjectPosition(currentSubjectId, activeQuiz.index);
+          if (subjectMeta.localIndex <= 0) return;
+          activeQuiz.index = subjectMeta.indexes[subjectMeta.localIndex - 1];
+        } else {
+          if (activeQuiz.index <= 0) return;
+          activeQuiz.index -= 1;
+        }
+        showQuizQuestion();
+      });
+    }
+
+    if (submitTopBtn) submitTopBtn.addEventListener("click", finishQuiz);
+    if (quitTopBtn) {
+      quitTopBtn.addEventListener("click", () => {
+        if (!activeQuiz || activeQuiz.completed) {
+          window.location.href = "student.html";
+          return;
+        }
+        const ok = window.confirm("Quit this exam now? Your current progress will not be submitted.");
+        if (!ok) return;
+        endQuiz(true);
+        window.location.href = "student.html";
+      });
+    }
+
+    if (endBtn) {
+      endBtn.addEventListener("click", () => {
+        if (runNow) {
+          const selectedIds = selectedFromQuery.filter((id) => validSubjectIds.has(id));
+          if (mode === MODE_STUDY && selectedIds.length > 1) selectedIds.splice(1);
+          const returnCountMap = mode === MODE_CBT
+            ? selectedIds.reduce((map, subjectId) => {
+              const subject = getAvailableSubject(subjectId);
+              const subjectCap = cbtSubjectQuestionCap(subject);
+              const value = Number(subjectQuestionCounts[subjectId] || Number(countInput ? countInput.value : safeDefaultQuestionCount));
+              map[subjectId] = Number.isInteger(value) && value > 0
+                ? Math.min(value, subjectCap)
+                : Math.min(safeDefaultQuestionCount, subjectCap);
+              return map;
+            }, {})
+            : null;
+          window.location.href = buildPracticeUrl(mode, {
+            preselect: selectedIds,
+            subjects: [],
+            questionCount: Number(countInput ? countInput.value : 40),
+            questionCountBySubject: returnCountMap,
+            totalMinutes: Math.round(Number(minutesInput ? minutesInput.value : 1) * 60),
+            examYear: mode === MODE_CBT ? selectedYear : null,
+            topicName: mode === MODE_STUDY && setupTopicSelect ? safeText(setupTopicSelect.value).trim() : ""
+          }, false);
+          return;
+        }
+        endQuiz(false);
+      });
+    }
+    if (logoutBtn) logoutBtn.addEventListener("click", () => { clearAuth(); window.location.href = "hi.html"; });
+  }
+
+  function initResultPage() {
+    const auth = requireRole("student");
+    if (!auth) return;
+    const payload = getJSON(RESULT_KEY, null);
+    const modeEl = document.getElementById("resultMode");
+    const overallEl = document.getElementById("resultOverall");
+    const metaEl = document.getElementById("resultMeta");
+    const tableBody = document.getElementById("resultTableBody");
+    const canvas = document.getElementById("resultPie");
+    const answeredEl = document.getElementById("resultAnswered");
+    const correctEl = document.getElementById("resultCorrect");
+    const wrongEl = document.getElementById("resultWrong");
+    const unansweredEl = document.getElementById("resultUnanswered");
+    const weakTopicsEl = document.getElementById("resultWeakTopics");
+    const backBtn = document.getElementById("resultBackBtn");
+    const logoutBtn = document.getElementById("resultLogoutBtn");
+
+    if (backBtn) {
+      backBtn.addEventListener("click", () => {
+        if (window.history.length > 1) window.history.back();
+        else window.location.href = "student.html";
+      });
+    }
+    if (logoutBtn) logoutBtn.addEventListener("click", () => { clearAuth(); window.location.href = "hi.html"; });
+
+    if (!payload || !Array.isArray(payload.subjectResults)) {
+      if (overallEl) overallEl.textContent = "No result found.";
+      if (metaEl) metaEl.textContent = "Run an exam first.";
+      if (tableBody) tableBody.innerHTML = "<tr><td colspan=\"4\">No data.</td></tr>";
+      if (weakTopicsEl) weakTopicsEl.innerHTML = "<div class=\"empty-state\">No topic insight yet.</div>";
+      return;
+    }
+
+    if (modeEl) {
+      let modeText = payload.mode === MODE_CBT ? "CBT Exam Result" : "Study Exam Result";
+      if (payload.examYear) modeText += " | Year " + payload.examYear;
+      modeEl.textContent = modeText;
+    }
+    if (overallEl) overallEl.textContent = payload.overallScore + "/" + payload.maxOverall + " (" + payload.overallPercent + "%)";
+    if (metaEl) {
+      metaEl.textContent = "Answered " + payload.answered + "/" + payload.totalQuestions +
+        " | Correct: " + payload.correct +
+        " | Wrong: " + payload.wrong +
+        " | Unanswered: " + payload.unanswered +
+        " | Time Used: " + formatDuration(payload.timeSpentSeconds || 0);
+    }
+    if (answeredEl) answeredEl.textContent = payload.answered + "/" + payload.totalQuestions;
+    if (correctEl) correctEl.textContent = String(payload.correct);
+    if (wrongEl) wrongEl.textContent = String(payload.wrong);
+    if (unansweredEl) unansweredEl.textContent = String(payload.unanswered);
+    if (tableBody) {
+      tableBody.innerHTML = payload.subjectResults.map((item) => {
+        return "<tr>" +
+          "<td>" + safeText(item.subjectName) + "</td>" +
+          "<td>" + item.correct + "/" + item.total + "</td>" +
+          "<td>" + item.score + "/100</td>" +
+          "<td>" + item.score + "%</td>" +
+        "</tr>";
+      }).join("");
+    }
+    if (weakTopicsEl) {
+      weakTopicsEl.innerHTML = "<div class=\"empty-state\">Topic insight is not available in this version.</div>";
+    }
+
+    if (canvas && typeof canvas.getContext === "function") {
+      const ctx = canvas.getContext("2d");
+      if (ctx) {
+        const values = [payload.correct, payload.wrong, payload.unanswered];
+        const colors = ["#15803d", "#dc2626", "#1d4ed8"];
+        const total = values.reduce((sum, value) => sum + value, 0) || 1;
+        const cx = canvas.width / 2;
+        const cy = canvas.height / 2;
+        const radius = Math.min(cx, cy) - 10;
+        let start = -Math.PI / 2;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        values.forEach((value, index) => {
+          const slice = (value / total) * Math.PI * 2;
+          ctx.beginPath();
+          ctx.moveTo(cx, cy);
+          ctx.arc(cx, cy, radius, start, start + slice);
+          ctx.closePath();
+          ctx.fillStyle = colors[index];
+          ctx.fill();
+          start += slice;
+        });
+      }
+    }
+  }
+
+  async function init() {
+    const page = document.body.getAttribute("data-page");
+    ensureBatchesData();
+    applyHapticsAndMotion();
+
+    const auth = await refreshAuthFromBackend();
+    if (auth && auth.needsActivation && (page === "student" || page === "practice" || page === "study" || page === "result")) {
+      window.location.href = buildActivationUrl(auth.email);
+      return;
+    }
+
+    if (page === "admin" || page === "student" || page === "practice" || page === "study") {
+      if (auth && auth.source === "backend") {
+        const subjectSync = await syncSubjectsFromBackend();
+        if (!subjectSync.ok) ensureSeedData();
+      } else {
+        ensureSeedData();
+      }
+      ensureQuestionIds();
+    }
+
+    if (page === "student" || page === "practice" || page === "study" || page === "result") {
+      if (auth && auth.source === "backend" && auth.role === "student") {
+        await flushAttemptSyncQueue();
+        await syncAttemptsFromBackend();
+      }
+    }
+
+    if (page === "login") initStudentLoginPage();
+    if (page === "student-register") initStudentRegisterPage();
+    if (page === "activation") initActivationPage();
+    if (page === "admin-login") initAdminLoginPage();
+    if (page === "admin") initAdminPage();
+    if (page === "student") initStudentPage();
+    if (page === "practice") initPracticePage();
+    if (page === "study") initPracticePage();
+    if (page === "result") initResultPage();
+  }
+
+  init().catch(() => {
+    // Keep app usable with local data when backend bootstrap fails.
+    ensureSeedData();
+    ensureQuestionIds();
+    if (document.body.getAttribute("data-page") === "student") {
+      document.body.classList.remove("student-booting");
+    }
+  });
+})();

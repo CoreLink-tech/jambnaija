@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "installCommand": "npm install && npm --prefix backend run prisma:migrate:deploy && npm --prefix backend run prisma:generate",
+  "functions": {
+    "api/index.mjs": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.mjs"
+    },
+    {
+      "source": "/",
+      "destination": "/hi.html"
+    }
+  ]
+}
