@@ -19,7 +19,7 @@ import {
   type BundledQuestion,
   type ContentManifest,
 } from "@/lib/validation/content";
-import { contentManifest } from "../../../content/jamb/manifest";
+import { contentManifest } from "@/lib/content/manifest";
 
 const CONTENT_ROOT = path.join(process.cwd(), "content", "jamb");
 

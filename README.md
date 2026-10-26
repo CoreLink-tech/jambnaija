@@ -6,7 +6,7 @@ Professional JAMB UTME preparation and computer-based testing platform.
 
 **Phase 1 complete** — Next.js App Router foundation is in place.
 
-The previous Express + static HTML application is preserved under `legacy/` and remains fully intact for reference and gradual migration.
+The previous Express + static HTML application is preserved under `` and remains fully intact for reference and gradual migration.
 
 ## Stack (target)
 
@@ -46,7 +46,7 @@ src/
 content/jamb/          # Version-controlled question content (Phase 4+)
 drizzle/               # Database migrations (Phase 2+)
 tests/
-legacy/                # Original application (read-only reference)
+                # Original application (read-only reference)
 ```
 
 ## Migration phases

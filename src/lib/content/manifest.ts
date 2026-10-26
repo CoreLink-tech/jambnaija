@@ -2,8 +2,7 @@ import type { ContentManifest } from "@/lib/validation/content";
 
 /**
  * Manifest of version-controlled question packs.
- * Add new subject files here when expanding the bank.
- * Do not invent official past-question claims without provenance.
+ * JSON packs live under content/jamb/subjects/.
  */
 export const contentManifest: ContentManifest = {
   version: 1,
@@ -11,7 +10,8 @@ export const contentManifest: ContentManifest = {
     {
       slug: "biology",
       name: "Biology",
-      description: "Cell biology, ecology, genetics, physiology, and evolution practice.",
+      description:
+        "Cell biology, ecology, genetics, physiology, and evolution practice.",
       files: ["subjects/biology/sample-2020-2025.json"],
     },
     {

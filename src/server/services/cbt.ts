@@ -18,7 +18,6 @@ import * as questionRepo from "@/server/repositories/questions";
 import * as subjectRepo from "@/server/repositories/subjects";
 import { requireStudentAccess } from "@/server/policies/auth";
 import { scoreAnswers, subjectQuestionCap } from "@/lib/cbt/scoring";
-import { getQuestionById } from "@/server/repositories/questions";
 
 const DEFAULT_DURATION_MINUTES = 60;
 
@@ -344,5 +343,3 @@ export async function listMyAttempts() {
   }));
 }
 
-// silence unused import lint if any
-void getQuestionById;

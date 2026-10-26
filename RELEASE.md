@@ -79,7 +79,7 @@ Then **unset** `ADMIN_BOOTSTRAP_KEY`.
 - Set env vars in the host dashboard  
 - Health check: `GET /api/health`  
 - Content seeding is **manual** (`npm run content:seed`), never on every request  
-- Legacy application remains under `legacy/` for reference only and is not served by Next.js  
+- Legacy application remains removed  
 
 ## Known limitations (accepted for v1)
 

@@ -3,7 +3,7 @@ import {
   validateBundledQuestion,
   validateManifest,
 } from "@/lib/validation/content";
-import { contentManifest } from "../../content/jamb/manifest";
+import { contentManifest } from "@/lib/content/manifest";
 
 describe("content validation", () => {
   it("accepts a valid bundled question", () => {
