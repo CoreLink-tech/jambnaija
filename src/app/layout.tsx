@@ -1,26 +1,26 @@
 import type { Metadata } from "next";
-import { Manrope, Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Jambnaija",
-    template: "%s | Jambnaija",
+    default: "JAMB Naija — UTME Practice & CBT",
+    template: "%s | JAMB Naija",
   },
   description:
-    "Professional JAMB UTME preparation and computer-based testing platform for Nigerian students.",
+    "Prepare for JAMB UTME with timed CBT practice, subject drills, and clear answer reviews. Practice Use of English, Mathematics, Physics, Chemistry, and Biology.",
+  openGraph: {
+    title: "JAMB Naija — UTME Practice & CBT",
+    description:
+      "Timed computer-based practice for JAMB UTME with subject selection and detailed review.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -30,9 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${manrope.variable} ${spaceGrotesk.variable} antialiased min-h-screen`}
-      >
+      <body className={`${inter.variable} antialiased min-h-screen`}>
         {children}
       </body>
     </html>

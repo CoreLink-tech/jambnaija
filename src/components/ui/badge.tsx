@@ -10,7 +10,7 @@ export function Badge({
     ok: "bg-green-50 text-ok border-green-200",
     warn: "bg-orange-50 text-accent border-orange-200",
     danger: "bg-red-50 text-danger border-red-200",
-    primary: "bg-blue-50 text-primary border-blue-200",
+    primary: "bg-primary-soft text-primary border-primary/20",
   };
   return (
     <span

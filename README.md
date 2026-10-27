@@ -192,3 +192,13 @@ APIs: `/api/admin/stats`, `/api/admin/users`, `/api/admin/activation-codes`, plu
 See [RELEASE.md](./RELEASE.md) for environment variables, verification commands, security checklist, and deploy notes.
 
 Health probe: `GET /api/health`
+
+
+## Question bank & exams
+
+- Hardcoded bank under `src/data/questions/` (5 subjects × 2020–2026)
+- All current items are `original_practice` (not claimed as official JAMB papers)
+- Exam setup: `/exams/setup`
+- Active exam: `/exams/[sessionId]`
+- Results / review: `/exams/[sessionId]/result` and `/review`
+- Validate bank: unit test `tests/unit/question-bank.test.ts`

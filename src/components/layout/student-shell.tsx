@@ -7,8 +7,9 @@ import { api } from "@/lib/client/api";
 
 const nav = [
   { href: "/dashboard", label: "Dashboard" },
+  { href: "/exams/setup", label: "Exams" },
+  { href: "/subjects", label: "Subjects" },
   { href: "/study", label: "Study" },
-  { href: "/cbt", label: "CBT" },
 ];
 
 export function StudentShell({
