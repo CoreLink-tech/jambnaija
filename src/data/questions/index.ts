@@ -159,7 +159,24 @@ export function selectQuestions(options: {
       ? `Only ${picked.length} of ${options.count} requested questions are available for this filter.`
       : null;
 
-  return { questions: shuffle(picked).slice(0, options.count), shortage };
+  // Keep subject order (as selected); shuffle only within each subject section
+  const bySubject = new Map<JambSubject, JambQuestion[]>();
+  for (const s of options.subjects) bySubject.set(s, []);
+  for (const q of picked) {
+    const list = bySubject.get(q.subject);
+    if (list) list.push(q);
+    else {
+      // leftover subject not in original list — append at end
+      const extra = bySubject.get(options.subjects[0]);
+      if (extra) extra.push(q);
+    }
+  }
+  const ordered: JambQuestion[] = [];
+  for (const s of options.subjects) {
+    ordered.push(...shuffle(bySubject.get(s) || []));
+  }
+
+  return { questions: ordered.slice(0, options.count), shortage };
 }
 
 export function bankStats() {
