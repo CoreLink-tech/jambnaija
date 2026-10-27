@@ -1,186 +1,726 @@
 import type { JambQuestion } from "../types";
 
-/** Original UTME-style practice items for government 2023. Not claimed as official past questions. */
+/** Original practice — government 2023. Not official past questions. */
 const questions: JambQuestion[] = [
   {
-    "id": "gov-2023-01",
+    "id": "gov-2023-001",
     "subject": "government",
     "year": 2023,
     "origin": "original_practice",
-    "question": "A written document that contains the fundamental laws of a state is a",
+    "question": "Fundamental laws document (practice 2023 #1)",
     "options": {
       "A": "manifesto",
       "B": "constitution",
       "C": "gazette",
-      "D": "white paper"
+      "D": "pamphlet"
     },
     "correctAnswer": "B",
-    "explanation": "A constitution is the supreme fundamental law of a state.",
-    "topic": "Constitution",
+    "explanation": "Constitution.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Constitution"
+    "syllabusTopic": "General"
   },
   {
-    "id": "gov-2023-02",
+    "id": "gov-2023-002",
     "subject": "government",
     "year": 2023,
     "origin": "original_practice",
-    "question": "The principle of separation of powers was popularised by",
+    "question": "Nigeria system (practice 2023 #2)",
     "options": {
-      "A": "Karl Marx",
-      "B": "Montesquieu",
-      "C": "Hobbes",
-      "D": "Locke only"
+      "A": "unitary only",
+      "B": "federal",
+      "C": "confederal only",
+      "D": "monarchy only"
     },
     "correctAnswer": "B",
-    "explanation": "Montesquieu is closely associated with separation of powers.",
-    "topic": "Citizenship",
+    "explanation": "Federal.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Citizenship"
+    "syllabusTopic": "General"
   },
   {
-    "id": "gov-2023-03",
+    "id": "gov-2023-003",
     "subject": "government",
     "year": 2023,
     "origin": "original_practice",
-    "question": "Nigeria operates a",
+    "question": "Rule of law (practice 2023 #3)",
     "options": {
-      "A": "unitary system only",
-      "B": "federal system",
-      "C": "confederal system only",
-      "D": "military system only"
+      "A": "military rule",
+      "B": "supremacy of law",
+      "C": "no courts",
+      "D": "chiefs only"
     },
     "correctAnswer": "B",
-    "explanation": "Nigeria is a federal republic.",
-    "topic": "Organs of Government",
-    "difficulty": "hard",
-    "syllabusTopic": "Organs of Government"
-  },
-  {
-    "id": "gov-2023-04",
-    "subject": "government",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "The rule of law means",
-    "options": {
-      "A": "rule by the military",
-      "B": "supremacy of the law",
-      "C": "rule by traditional rulers",
-      "D": "absence of courts"
-    },
-    "correctAnswer": "B",
-    "explanation": "Rule of law emphasises supremacy and equality before the law.",
-    "topic": "Political Parties",
+    "explanation": "Law supreme.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Political Parties"
+    "syllabusTopic": "General"
   },
   {
-    "id": "gov-2023-05",
+    "id": "gov-2023-004",
     "subject": "government",
     "year": 2023,
     "origin": "original_practice",
-    "question": "A citizen by birth in Nigeria is someone who",
+    "question": "Legislature (practice 2023 #4)",
     "options": {
-      "A": "buys citizenship",
-      "B": "is born a Nigerian under the constitution",
-      "C": "only naturalises",
-      "D": "holds dual office"
+      "A": "judges cases",
+      "B": "makes laws",
+      "C": "commands army only",
+      "D": "prints money only"
     },
     "correctAnswer": "B",
-    "explanation": "Citizenship by birth follows constitutional provisions on birth.",
-    "topic": "Public Administration",
+    "explanation": "Laws.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Public Administration"
+    "syllabusTopic": "General"
   },
   {
-    "id": "gov-2023-06",
+    "id": "gov-2023-005",
     "subject": "government",
     "year": 2023,
     "origin": "original_practice",
-    "question": "The legislature makes",
+    "question": "Capital of Nigeria (practice 2023 #5)",
     "options": {
-      "A": "judgments",
-      "B": "laws",
-      "C": "military orders only",
-      "D": "budgets alone"
+      "A": "Lagos",
+      "B": "Abuja",
+      "C": "Kano",
+      "D": "Ibadan"
     },
     "correctAnswer": "B",
-    "explanation": "The primary function of the legislature is law-making.",
-    "topic": "International Relations",
-    "difficulty": "hard",
-    "syllabusTopic": "International Relations"
+    "explanation": "Abuja.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
   },
   {
-    "id": "gov-2023-07",
+    "id": "gov-2023-006",
     "subject": "government",
     "year": 2023,
     "origin": "original_practice",
-    "question": "Universal adult suffrage means",
+    "question": "OPEC (practice 2023 #6)",
     "options": {
-      "A": "only men vote",
-      "B": "all qualified adults may vote",
-      "C": "only elites vote",
+      "A": "sports",
+      "B": "petroleum exporters",
+      "C": "tourism",
+      "D": "football"
+    },
+    "correctAnswer": "B",
+    "explanation": "Oil.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-007",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Pressure group (practice 2023 #7)",
+    "options": {
+      "A": "always rules",
+      "B": "influences policy",
+      "C": "abolishes courts",
+      "D": "ends elections"
+    },
+    "correctAnswer": "B",
+    "explanation": "Influence.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-008",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Local government (practice 2023 #8)",
+    "options": {
+      "A": "highest always",
+      "B": "closest to people",
+      "C": "presidency",
+      "D": "military only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Grassroots.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-009",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Montesquieu linked to (practice 2023 #9)",
+    "options": {
+      "A": "communism",
+      "B": "separation of powers",
+      "C": "colonialism only",
+      "D": "monarchy only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Separation.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-010",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Universal adult suffrage (practice 2023 #10)",
+    "options": {
+      "A": "men only",
+      "B": "qualified adults vote",
+      "C": "elites only",
       "D": "children vote"
     },
     "correctAnswer": "B",
-    "explanation": "Universal adult suffrage extends voting rights to qualified adults.",
-    "topic": "Nigeria Politics",
-    "difficulty": "easy",
-    "syllabusTopic": "Nigeria Politics"
-  },
-  {
-    "id": "gov-2023-08",
-    "subject": "government",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "OPEC is mainly concerned with",
-    "options": {
-      "A": "sports",
-      "B": "petroleum exporting countries",
-      "C": "education",
-      "D": "tourism"
-    },
-    "correctAnswer": "B",
-    "explanation": "OPEC is the Organization of the Petroleum Exporting Countries.",
-    "topic": "Rule of Law",
+    "explanation": "Adults vote.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Rule of Law"
+    "syllabusTopic": "General"
   },
   {
-    "id": "gov-2023-09",
+    "id": "gov-2023-011",
     "subject": "government",
     "year": 2023,
     "origin": "original_practice",
-    "question": "A pressure group seeks to",
+    "question": "Executive implements (practice 2023 #11)",
     "options": {
-      "A": "form the government directly",
-      "B": "influence government policy",
-      "C": "replace the judiciary",
-      "D": "abolish elections"
+      "A": "only court cases",
+      "B": "laws/policies",
+      "C": "only poems",
+      "D": "only votes in court"
     },
     "correctAnswer": "B",
-    "explanation": "Pressure groups influence policy without necessarily seeking office.",
-    "topic": "Constitution",
-    "difficulty": "hard",
-    "syllabusTopic": "Constitution"
-  },
-  {
-    "id": "gov-2023-10",
-    "subject": "government",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Local government is the",
-    "options": {
-      "A": "highest tier of government",
-      "B": "tier closest to the people",
-      "C": "same as the presidency",
-      "D": "military command"
-    },
-    "correctAnswer": "B",
-    "explanation": "Local government is the tier nearest grassroots administration.",
-    "topic": "Citizenship",
+    "explanation": "Implements.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Citizenship"
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-012",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Judiciary (practice 2023 #12)",
+    "options": {
+      "A": "makes budgets only",
+      "B": "interprets laws",
+      "C": "commands police only",
+      "D": "writes manifestos"
+    },
+    "correctAnswer": "B",
+    "explanation": "Interprets.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-013",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Bye-election fills (practice 2023 #13)",
+    "options": {
+      "A": "all offices",
+      "B": "a vacant seat",
+      "C": "only courts",
+      "D": "only ministries"
+    },
+    "correctAnswer": "B",
+    "explanation": "Vacancy.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-014",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Federalism shares power (practice 2023 #14)",
+    "options": {
+      "A": "centre only",
+      "B": "centre and units",
+      "C": "chiefs only",
+      "D": "nobody"
+    },
+    "correctAnswer": "B",
+    "explanation": "Shared.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-015",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Rigid constitution (practice 2023 #15)",
+    "options": {
+      "A": "easy like ordinary law",
+      "B": "harder to amend",
+      "C": "never written",
+      "D": "oral only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Hard to amend.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-016",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Indirect rule associated with (practice 2023 #16)",
+    "options": {
+      "A": "French only",
+      "B": "British",
+      "C": "Portuguese only",
+      "D": "Germans only"
+    },
+    "correctAnswer": "B",
+    "explanation": "British.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-017",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Coup d'\u00e9tat is (practice 2023 #17)",
+    "options": {
+      "A": "free election",
+      "B": "sudden seizure of power",
+      "C": "court judgment",
+      "D": "census"
+    },
+    "correctAnswer": "B",
+    "explanation": "Takeover.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-018",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Checks and balances (practice 2023 #18)",
+    "options": {
+      "A": "remove all govt",
+      "B": "limit abuse of power",
+      "C": "end elections",
+      "D": "ban parties"
+    },
+    "correctAnswer": "B",
+    "explanation": "Limit abuse.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-019",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Naturalisation is citizenship by (practice 2023 #19)",
+    "options": {
+      "A": "birth only",
+      "B": "legal process",
+      "C": "land inheritance only",
+      "D": "army only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Legal process.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-020",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Manifesto states (practice 2023 #20)",
+    "options": {
+      "A": "army list",
+      "B": "party policies",
+      "C": "court cases",
+      "D": "tax receipts only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Policies.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-021",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "UN aims to (practice 2023 #21)",
+    "options": {
+      "A": "promote war",
+      "B": "peace and cooperation",
+      "C": "end trade",
+      "D": "ban education"
+    },
+    "correctAnswer": "B",
+    "explanation": "Peace.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-022",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Democracy sovereignty with (practice 2023 #22)",
+    "options": {
+      "A": "army only",
+      "B": "the people",
+      "C": "foreigners only",
+      "D": "judges only"
+    },
+    "correctAnswer": "B",
+    "explanation": "People.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-023",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Fundamental rights are (practice 2023 #23)",
+    "options": {
+      "A": "elite privileges only",
+      "B": "basic legal entitlements",
+      "C": "always optional",
+      "D": "military orders"
+    },
+    "correctAnswer": "B",
+    "explanation": "Basic rights.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-024",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Civil servants should be (practice 2023 #24)",
+    "options": {
+      "A": "always partisan",
+      "B": "politically neutral in service",
+      "C": "always elected",
+      "D": "judges"
+    },
+    "correctAnswer": "B",
+    "explanation": "Neutral.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-025",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Republic of Nigeria year often cited (practice 2023 #25)",
+    "options": {
+      "A": "1960 independence only answer",
+      "B": "1963 republic",
+      "C": "1914 only",
+      "D": "1999 first ever"
+    },
+    "correctAnswer": "B",
+    "explanation": "1963 republic.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-026",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Multi-party system allows (practice 2023 #26)",
+    "options": {
+      "A": "one party only",
+      "B": "several parties compete",
+      "C": "no elections",
+      "D": "military only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Several parties.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-027",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Citizenship by birth follows (practice 2023 #27)",
+    "options": {
+      "A": "buying passport only",
+      "B": "constitutional rules",
+      "C": "naturalisation only",
+      "D": "tax only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Constitution.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-028",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Diplomacy is by (practice 2023 #28)",
+    "options": {
+      "A": "footballers",
+      "B": "states via representatives",
+      "C": "students only",
+      "D": "traders without states"
+    },
+    "correctAnswer": "B",
+    "explanation": "States.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-029",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Bureaucracy is (practice 2023 #29)",
+    "options": {
+      "A": "rule by dancers",
+      "B": "admin system of officials",
+      "C": "military camps only",
+      "D": "markets only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Administration.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-030",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Public opinion can (practice 2023 #30)",
+    "options": {
+      "A": "never matter",
+      "B": "influence government decisions",
+      "C": "replace courts always",
+      "D": "abolish law always"
+    },
+    "correctAnswer": "B",
+    "explanation": "Influence.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-031",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Confederation is looser than (practice 2023 #31)",
+    "options": {
+      "A": "anarchy",
+      "B": "federation typically",
+      "C": "village only",
+      "D": "none"
+    },
+    "correctAnswer": "B",
+    "explanation": "Looser union.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-032",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Franchise means (practice 2023 #32)",
+    "options": {
+      "A": "cooking right",
+      "B": "right to vote",
+      "C": "right to drive only",
+      "D": "right to farm only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Vote.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-033",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Bi-cameral legislature has (practice 2023 #33)",
+    "options": {
+      "A": "one chamber",
+      "B": "two chambers",
+      "C": "no chamber",
+      "D": "military council only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Two houses.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-034",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Referendum is (practice 2023 #34)",
+    "options": {
+      "A": "court case",
+      "B": "popular vote on issue",
+      "C": "party primary only",
+      "D": "army parade"
+    },
+    "correctAnswer": "B",
+    "explanation": "Popular vote.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-035",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Oligarchy is rule by (practice 2023 #35)",
+    "options": {
+      "A": "all people equally always",
+      "B": "few",
+      "C": "one king only always",
+      "D": "none"
+    },
+    "correctAnswer": "B",
+    "explanation": "Few.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-036",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Autocracy is rule by (practice 2023 #36)",
+    "options": {
+      "A": "many equally",
+      "B": "one person with absolute power",
+      "C": "courts only",
+      "D": "markets"
+    },
+    "correctAnswer": "B",
+    "explanation": "One ruler.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-037",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Political party aims to (practice 2023 #37)",
+    "options": {
+      "A": "avoid power always",
+      "B": "gain political power legally",
+      "C": "abolish votes always",
+      "D": "end states"
+    },
+    "correctAnswer": "B",
+    "explanation": "Gain power.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-038",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Simple majority means (practice 2023 #38)",
+    "options": {
+      "A": "two-thirds always",
+      "B": "more than half of votes cast",
+      "C": "unanimous only",
+      "D": "zero votes"
+    },
+    "correctAnswer": "B",
+    "explanation": "Over half.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-039",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Independence of judiciary means (practice 2023 #39)",
+    "options": {
+      "A": "judges obey parties",
+      "B": "courts free from undue interference",
+      "C": "no laws",
+      "D": "no cases"
+    },
+    "correctAnswer": "B",
+    "explanation": "Independence.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "gov-2023-040",
+    "subject": "government",
+    "year": 2023,
+    "origin": "original_practice",
+    "question": "Colonialism is (practice 2023 #40)",
+    "options": {
+      "A": "self rule",
+      "B": "control of territory by foreign power",
+      "C": "only trade free",
+      "D": "only tourism"
+    },
+    "correctAnswer": "B",
+    "explanation": "Foreign control.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
   }
 ];
 

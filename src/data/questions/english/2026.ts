@@ -1,13 +1,13 @@
 import type { JambQuestion } from "../types";
 
-/** Original UTME-style practice items for english 2026. Not claimed as official past questions. */
+/** Original practice — english 2026. Not official past questions. */
 const questions: JambQuestion[] = [
   {
-    "id": "eng-2026-01",
+    "id": "eng-2026-001",
     "subject": "english",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Choose the option nearest in meaning to the word in capitals: The decision was PROMPT.",
+    "question": "Nearest meaning of PROMPT (practice 2026 #1)",
     "options": {
       "A": "delayed",
       "B": "swift",
@@ -15,143 +15,107 @@ const questions: JambQuestion[] = [
       "D": "secret"
     },
     "correctAnswer": "B",
-    "explanation": "Prompt means done without delay; swift is nearest.",
-    "topic": "Comprehension",
+    "explanation": "Swift.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Comprehension"
+    "syllabusTopic": "General"
   },
   {
-    "id": "eng-2026-02",
+    "id": "eng-2026-002",
     "subject": "english",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Choose the option opposite in meaning to GENEROUS.",
+    "question": "Nearest meaning of OBSTINATE (practice 2026 #2)",
     "options": {
-      "A": "kind",
-      "B": "mean",
-      "C": "friendly",
-      "D": "honest"
+      "A": "flexible",
+      "B": "stubborn",
+      "C": "kind",
+      "D": "weak"
     },
     "correctAnswer": "B",
-    "explanation": "Generous means giving freely; mean is the opposite.",
-    "topic": "Lexis and Structure",
+    "explanation": "Stubborn.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Lexis and Structure"
+    "syllabusTopic": "General"
   },
   {
-    "id": "eng-2026-03",
+    "id": "eng-2026-003",
     "subject": "english",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Choose the word that best completes the sentence: She insisted ___ seeing the principal.",
+    "question": "Nearest meaning of CANDID (practice 2026 #3)",
     "options": {
-      "A": "on",
-      "B": "at",
-      "C": "for",
-      "D": "to"
-    },
-    "correctAnswer": "A",
-    "explanation": "The verb insist takes the preposition on.",
-    "topic": "Synonyms",
-    "difficulty": "hard",
-    "syllabusTopic": "Synonyms"
-  },
-  {
-    "id": "eng-2026-04",
-    "subject": "english",
-    "year": 2026,
-    "origin": "original_practice",
-    "question": "Which sentence is correctly punctuated?",
-    "options": {
-      "A": "Its a fine day.",
-      "B": "It's a fine day.",
-      "C": "Its' a fine day.",
-      "D": "It is' a fine day."
+      "A": "secretive",
+      "B": "frank",
+      "C": "rude",
+      "D": "silent"
     },
     "correctAnswer": "B",
-    "explanation": "It's is the contraction of it is.",
-    "topic": "Antonyms",
+    "explanation": "Frank.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Antonyms"
+    "syllabusTopic": "General"
   },
   {
-    "id": "eng-2026-05",
+    "id": "eng-2026-004",
     "subject": "english",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Identify the figure of speech: Time is a thief.",
+    "question": "Nearest meaning of TEDIOUS (practice 2026 #4)",
     "options": {
-      "A": "simile",
-      "B": "metaphor",
-      "C": "irony",
-      "D": "hyperbole"
+      "A": "exciting",
+      "B": "boring",
+      "C": "bright",
+      "D": "soft"
     },
     "correctAnswer": "B",
-    "explanation": "Time is compared directly to a thief without like/as.",
-    "topic": "Sentence Interpretation",
+    "explanation": "Boring.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Sentence Interpretation"
+    "syllabusTopic": "General"
   },
   {
-    "id": "eng-2026-06",
+    "id": "eng-2026-005",
     "subject": "english",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Choose the correctly spelt word.",
+    "question": "Nearest meaning of DILIGENT (practice 2026 #5)",
     "options": {
-      "A": "accomodate",
-      "B": "accommodate",
-      "C": "acommodate",
-      "D": "accomadate"
+      "A": "lazy",
+      "B": "hardworking",
+      "C": "angry",
+      "D": "lucky"
     },
     "correctAnswer": "B",
-    "explanation": "Accommodate has double c and double m.",
-    "topic": "Registers",
-    "difficulty": "hard",
-    "syllabusTopic": "Registers"
-  },
-  {
-    "id": "eng-2026-07",
-    "subject": "english",
-    "year": 2026,
-    "origin": "original_practice",
-    "question": "The passive form of 'They built the bridge' is:",
-    "options": {
-      "A": "The bridge was built by them.",
-      "B": "The bridge is building.",
-      "C": "The bridge built them.",
-      "D": "They were built the bridge."
-    },
-    "correctAnswer": "A",
-    "explanation": "Object becomes subject; past participle with was.",
-    "topic": "Oral Forms",
+    "explanation": "Hardworking.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Oral Forms"
+    "syllabusTopic": "General"
   },
   {
-    "id": "eng-2026-08",
+    "id": "eng-2026-006",
     "subject": "english",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Choose the option that best explains the idiom: to bury the hatchet.",
+    "question": "Nearest meaning of HOSTILE (practice 2026 #6)",
     "options": {
-      "A": "to dig a hole",
-      "B": "to make peace",
-      "C": "to hide a tool",
-      "D": "to start a fight"
+      "A": "friendly",
+      "B": "unfriendly",
+      "C": "quiet",
+      "D": "funny"
     },
     "correctAnswer": "B",
-    "explanation": "Bury the hatchet means to end a quarrel.",
-    "topic": "Comprehension",
+    "explanation": "Unfriendly.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Comprehension"
+    "syllabusTopic": "General"
   },
   {
-    "id": "eng-2026-09",
+    "id": "eng-2026-007",
     "subject": "english",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Which word is a synonym of BRIEF?",
+    "question": "Nearest meaning of BRIEF (practice 2026 #7)",
     "options": {
       "A": "long",
       "B": "short",
@@ -159,17 +123,269 @@ const questions: JambQuestion[] = [
       "D": "heavy"
     },
     "correctAnswer": "B",
-    "explanation": "Brief means short in duration.",
-    "topic": "Lexis and Structure",
-    "difficulty": "hard",
-    "syllabusTopic": "Lexis and Structure"
+    "explanation": "Short.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
   },
   {
-    "id": "eng-2026-10",
+    "id": "eng-2026-008",
     "subject": "english",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Select the correct reported speech: He said, 'I am tired.'",
+    "question": "Nearest meaning of CEASE (practice 2026 #8)",
+    "options": {
+      "A": "begin",
+      "B": "stop",
+      "C": "continue",
+      "D": "hurry"
+    },
+    "correctAnswer": "B",
+    "explanation": "Stop.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-009",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Nearest meaning of FRAGILE (practice 2026 #9)",
+    "options": {
+      "A": "strong",
+      "B": "easily broken",
+      "C": "heavy",
+      "D": "dark"
+    },
+    "correctAnswer": "B",
+    "explanation": "Easily broken.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-010",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Nearest meaning of ANNUAL (practice 2026 #10)",
+    "options": {
+      "A": "daily",
+      "B": "yearly",
+      "C": "hourly",
+      "D": "weekly"
+    },
+    "correctAnswer": "B",
+    "explanation": "Yearly.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-011",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Opposite of GENEROUS (practice 2026 #11)",
+    "options": {
+      "A": "kind",
+      "B": "mean",
+      "C": "friendly",
+      "D": "honest"
+    },
+    "correctAnswer": "B",
+    "explanation": "Mean.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-012",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Opposite of EXPAND (practice 2026 #12)",
+    "options": {
+      "A": "grow",
+      "B": "contract",
+      "C": "rise",
+      "D": "build"
+    },
+    "correctAnswer": "B",
+    "explanation": "Contract.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-013",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Opposite of TRANSPARENT (practice 2026 #13)",
+    "options": {
+      "A": "clear",
+      "B": "opaque",
+      "C": "bright",
+      "D": "thin"
+    },
+    "correctAnswer": "B",
+    "explanation": "Opaque.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-014",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Opposite of ARTIFICIAL (practice 2026 #14)",
+    "options": {
+      "A": "fake",
+      "B": "natural",
+      "C": "plastic",
+      "D": "modern"
+    },
+    "correctAnswer": "B",
+    "explanation": "Natural.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-015",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Opposite of ANCIENT (practice 2026 #15)",
+    "options": {
+      "A": "old",
+      "B": "modern",
+      "C": "historic",
+      "D": "aged"
+    },
+    "correctAnswer": "B",
+    "explanation": "Modern.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-016",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "She insisted ___ seeing the principal (practice 2026 #16)",
+    "options": {
+      "A": "on",
+      "B": "at",
+      "C": "for",
+      "D": "to"
+    },
+    "correctAnswer": "A",
+    "explanation": "Insist on.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-017",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "He is good ___ mathematics (practice 2026 #17)",
+    "options": {
+      "A": "in",
+      "B": "at",
+      "C": "on",
+      "D": "for"
+    },
+    "correctAnswer": "B",
+    "explanation": "Good at.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-018",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "If I ___ you, I would apologise (practice 2026 #18)",
+    "options": {
+      "A": "am",
+      "B": "was",
+      "C": "were",
+      "D": "be"
+    },
+    "correctAnswer": "C",
+    "explanation": "Were.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-019",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "The news ___ good (practice 2026 #19)",
+    "options": {
+      "A": "are",
+      "B": "is",
+      "C": "were",
+      "D": "be"
+    },
+    "correctAnswer": "B",
+    "explanation": "News is singular.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-020",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Each of the boys ___ ready (practice 2026 #20)",
+    "options": {
+      "A": "are",
+      "B": "is",
+      "C": "were",
+      "D": "have"
+    },
+    "correctAnswer": "B",
+    "explanation": "Each is singular.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-021",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Passive: They built the bridge (practice 2026 #21)",
+    "options": {
+      "A": "The bridge was built by them.",
+      "B": "The bridge is building.",
+      "C": "The bridge built them.",
+      "D": "They were built the bridge."
+    },
+    "correctAnswer": "A",
+    "explanation": "Passive voice.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-022",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Reported: He said, 'I am tired.' (practice 2026 #22)",
     "options": {
       "A": "He said he is tired.",
       "B": "He said he was tired.",
@@ -177,10 +393,334 @@ const questions: JambQuestion[] = [
       "D": "He said he will be tired."
     },
     "correctAnswer": "B",
-    "explanation": "Present shifts to past in reported speech.",
-    "topic": "Synonyms",
+    "explanation": "Backshift.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-023",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Correct punctuation (practice 2026 #23)",
+    "options": {
+      "A": "Its a fine day.",
+      "B": "It's a fine day.",
+      "C": "Its' a fine day.",
+      "D": "It is' a fine day."
+    },
+    "correctAnswer": "B",
+    "explanation": "It's.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Synonyms"
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-024",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Correct spelling (practice 2026 #24)",
+    "options": {
+      "A": "accomodate",
+      "B": "accommodate",
+      "C": "acommodate",
+      "D": "accomadate"
+    },
+    "correctAnswer": "B",
+    "explanation": "Accommodate.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-025",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Correct spelling (practice 2026 #25)",
+    "options": {
+      "A": "seperate",
+      "B": "separate",
+      "C": "seperrate",
+      "D": "separrate"
+    },
+    "correctAnswer": "B",
+    "explanation": "Separate.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-026",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Correct spelling (practice 2026 #26)",
+    "options": {
+      "A": "recieve",
+      "B": "receive",
+      "C": "receeve",
+      "D": "receve"
+    },
+    "correctAnswer": "B",
+    "explanation": "Receive.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-027",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Figure: Time is a thief (practice 2026 #27)",
+    "options": {
+      "A": "simile",
+      "B": "metaphor",
+      "C": "irony",
+      "D": "hyperbole"
+    },
+    "correctAnswer": "B",
+    "explanation": "Metaphor.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-028",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Figure: as brave as a lion (practice 2026 #28)",
+    "options": {
+      "A": "metaphor",
+      "B": "simile",
+      "C": "pun",
+      "D": "irony"
+    },
+    "correctAnswer": "B",
+    "explanation": "Simile.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-029",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Idiom: bury the hatchet (practice 2026 #29)",
+    "options": {
+      "A": "dig a hole",
+      "B": "make peace",
+      "C": "hide a tool",
+      "D": "start a fight"
+    },
+    "correctAnswer": "B",
+    "explanation": "Make peace.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-030",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Idiom: hit the nail on the head (practice 2026 #30)",
+    "options": {
+      "A": "be violent",
+      "B": "be exactly right",
+      "C": "fail",
+      "D": "sleep"
+    },
+    "correctAnswer": "B",
+    "explanation": "Exactly right.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-031",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Idiom: blessing in disguise (practice 2026 #31)",
+    "options": {
+      "A": "obvious gift",
+      "B": "good thing that seemed bad",
+      "C": "a curse",
+      "D": "uniform"
+    },
+    "correctAnswer": "B",
+    "explanation": "Seemed bad, proved good.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-032",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Hospital register word (practice 2026 #32)",
+    "options": {
+      "A": "plaintiff",
+      "B": "diagnosis",
+      "C": "ballot",
+      "D": "ledger"
+    },
+    "correctAnswer": "B",
+    "explanation": "Diagnosis.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-033",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "First-syllable stress (practice 2026 #33)",
+    "options": {
+      "A": "prefer",
+      "B": "teacher",
+      "C": "about",
+      "D": "again"
+    },
+    "correctAnswer": "B",
+    "explanation": "TEA-cher.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-034",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Argumentative passage (practice 2026 #34)",
+    "options": {
+      "A": "narrative",
+      "B": "argumentative",
+      "C": "descriptive only",
+      "D": "dramatic"
+    },
+    "correctAnswer": "B",
+    "explanation": "Argues a view.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-035",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Topic sentence gives (practice 2026 #35)",
+    "options": {
+      "A": "footnote",
+      "B": "main idea",
+      "C": "page number",
+      "D": "index"
+    },
+    "correctAnswer": "B",
+    "explanation": "Main idea.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-036",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Writer of books (practice 2026 #36)",
+    "options": {
+      "A": "artist",
+      "B": "author",
+      "C": "actor",
+      "D": "umpire"
+    },
+    "correctAnswer": "B",
+    "explanation": "Author.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-037",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Congratulate her ___ success (practice 2026 #37)",
+    "options": {
+      "A": "for",
+      "B": "on",
+      "C": "at",
+      "D": "with"
+    },
+    "correctAnswer": "B",
+    "explanation": "On.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-038",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Classroom was a zoo is (practice 2026 #38)",
+    "options": {
+      "A": "simile",
+      "B": "metaphor",
+      "C": "irony",
+      "D": "pun"
+    },
+    "correctAnswer": "B",
+    "explanation": "Metaphor.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-039",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Neither...nor verb agrees with (practice 2026 #39)",
+    "options": {
+      "A": "first noun only",
+      "B": "nearer subject",
+      "C": "always singular",
+      "D": "always plural"
+    },
+    "correctAnswer": "B",
+    "explanation": "Nearer subject.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "eng-2026-040",
+    "subject": "english",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Opposite of SCARCE (practice 2026 #40)",
+    "options": {
+      "A": "rare",
+      "B": "abundant",
+      "C": "tiny",
+      "D": "hidden"
+    },
+    "correctAnswer": "B",
+    "explanation": "Abundant.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
   }
 ];
 

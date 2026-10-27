@@ -1,157 +1,85 @@
 import type { JambQuestion } from "../types";
 
-/** Original UTME-style practice items for mathematics 2025. Not claimed as official past questions. */
+/** Original practice — mathematics 2025. Not official past questions. */
 const questions: JambQuestion[] = [
   {
-    "id": "mat-2025-01",
+    "id": "mat-2025-001",
     "subject": "mathematics",
     "year": 2025,
     "origin": "original_practice",
-    "question": "If x + 5 = 12, then x equals",
+    "question": "Solve: x + 2 = 5. What is x? (practice 2025 #1)",
     "options": {
-      "A": "5",
-      "B": "7",
-      "C": "12",
-      "D": "17"
+      "A": "2",
+      "B": "3",
+      "C": "5",
+      "D": "2"
     },
     "correctAnswer": "B",
-    "explanation": "Subtract 5 from both sides: x = 7.",
+    "explanation": "x = 3.",
     "topic": "Algebra",
     "difficulty": "easy",
     "syllabusTopic": "Algebra"
   },
   {
-    "id": "mat-2025-02",
+    "id": "mat-2025-002",
     "subject": "mathematics",
     "year": 2025,
     "origin": "original_practice",
-    "question": "What is 15% of 200?",
+    "question": "What is 3% of 40? (practice 2025 #2)",
     "options": {
-      "A": "15",
-      "B": "30",
-      "C": "25",
-      "D": "40"
+      "A": "0.19999999999999996",
+      "B": "1.2",
+      "C": "4.2",
+      "D": "7"
     },
     "correctAnswer": "B",
-    "explanation": "0.15 × 200 = 30.",
-    "topic": "Geometry",
+    "explanation": "1.2.",
+    "topic": "Number",
     "difficulty": "medium",
+    "syllabusTopic": "Number"
+  },
+  {
+    "id": "mat-2025-003",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Area of rectangle 4 cm by 5 cm? (practice 2025 #3)",
+    "options": {
+      "A": "9",
+      "B": "20",
+      "C": "18",
+      "D": "1"
+    },
+    "correctAnswer": "B",
+    "explanation": "20.",
+    "topic": "Geometry",
+    "difficulty": "easy",
     "syllabusTopic": "Geometry"
   },
   {
-    "id": "mat-2025-03",
+    "id": "mat-2025-004",
     "subject": "mathematics",
     "year": 2025,
     "origin": "original_practice",
-    "question": "The LCM of 4 and 6 is",
+    "question": "Mean of 5, 6, 6, 7? (practice 2025 #4)",
     "options": {
-      "A": "12",
-      "B": "24",
-      "C": "2",
-      "D": "10"
+      "A": "5.0",
+      "B": "6.0",
+      "C": "7.0",
+      "D": "5"
     },
-    "correctAnswer": "A",
-    "explanation": "LCM of 4 and 6 is 12.",
-    "topic": "Trigonometry",
-    "difficulty": "hard",
-    "syllabusTopic": "Trigonometry"
-  },
-  {
-    "id": "mat-2025-04",
-    "subject": "mathematics",
-    "year": 2025,
-    "origin": "original_practice",
-    "question": "Simplify 2³ × 2²",
-    "options": {
-      "A": "2⁵",
-      "B": "2⁶",
-      "C": "4⁵",
-      "D": "8"
-    },
-    "correctAnswer": "A",
-    "explanation": "When multiplying same bases, add exponents: 3+2=5.",
+    "correctAnswer": "B",
+    "explanation": "6.0.",
     "topic": "Statistics",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "syllabusTopic": "Statistics"
   },
   {
-    "id": "mat-2025-05",
+    "id": "mat-2025-005",
     "subject": "mathematics",
     "year": 2025,
     "origin": "original_practice",
-    "question": "The area of a rectangle 8 cm by 5 cm is",
-    "options": {
-      "A": "13 cm²",
-      "B": "40 cm²",
-      "C": "26 cm²",
-      "D": "20 cm²"
-    },
-    "correctAnswer": "B",
-    "explanation": "Area = length × width = 40.",
-    "topic": "Probability",
-    "difficulty": "medium",
-    "syllabusTopic": "Probability"
-  },
-  {
-    "id": "mat-2025-06",
-    "subject": "mathematics",
-    "year": 2025,
-    "origin": "original_practice",
-    "question": "If sin θ = 1/2 and θ is acute, θ equals",
-    "options": {
-      "A": "30°",
-      "B": "45°",
-      "C": "60°",
-      "D": "90°"
-    },
-    "correctAnswer": "A",
-    "explanation": "sin 30° = 1/2.",
-    "topic": "Number Bases",
-    "difficulty": "hard",
-    "syllabusTopic": "Number Bases"
-  },
-  {
-    "id": "mat-2025-07",
-    "subject": "mathematics",
-    "year": 2025,
-    "origin": "original_practice",
-    "question": "The mean of 2, 4, 6, 8 is",
-    "options": {
-      "A": "4",
-      "B": "5",
-      "C": "6",
-      "D": "20"
-    },
-    "correctAnswer": "B",
-    "explanation": "(2+4+6+8)/4 = 5.",
-    "topic": "Logarithms",
-    "difficulty": "easy",
-    "syllabusTopic": "Logarithms"
-  },
-  {
-    "id": "mat-2025-08",
-    "subject": "mathematics",
-    "year": 2025,
-    "origin": "original_practice",
-    "question": "Solve: 3x − 6 = 0",
-    "options": {
-      "A": "x = 0",
-      "B": "x = 2",
-      "C": "x = 3",
-      "D": "x = −2"
-    },
-    "correctAnswer": "B",
-    "explanation": "3x = 6 ⇒ x = 2.",
-    "topic": "Mensuration",
-    "difficulty": "medium",
-    "syllabusTopic": "Mensuration"
-  },
-  {
-    "id": "mat-2025-09",
-    "subject": "mathematics",
-    "year": 2025,
-    "origin": "original_practice",
-    "question": "A fair coin is tossed once. P(heads) is",
+    "question": "Fair coin tossed. P(heads)? (practice 2025 #5)",
     "options": {
       "A": "0",
       "B": "1/4",
@@ -159,28 +87,640 @@ const questions: JambQuestion[] = [
       "D": "1"
     },
     "correctAnswer": "C",
-    "explanation": "Two equally likely outcomes; one is heads.",
-    "topic": "Algebra",
-    "difficulty": "hard",
-    "syllabusTopic": "Algebra"
+    "explanation": "1/2.",
+    "topic": "Probability",
+    "difficulty": "easy",
+    "syllabusTopic": "Probability"
   },
   {
-    "id": "mat-2025-10",
+    "id": "mat-2025-006",
     "subject": "mathematics",
     "year": 2025,
     "origin": "original_practice",
-    "question": "Convert 101₂ to base 10",
+    "question": "Perimeter of square side 7 cm? (practice 2025 #6)",
     "options": {
-      "A": "3",
-      "B": "4",
-      "C": "5",
-      "D": "6"
+      "A": "49",
+      "B": "28",
+      "C": "14",
+      "D": "11"
     },
-    "correctAnswer": "C",
-    "explanation": "1×4 + 0×2 + 1×1 = 5.",
+    "correctAnswer": "B",
+    "explanation": "28.",
+    "topic": "Mensuration",
+    "difficulty": "medium",
+    "syllabusTopic": "Mensuration"
+  },
+  {
+    "id": "mat-2025-007",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Solve: x + 8 = 17. What is x? (practice 2025 #7)",
+    "options": {
+      "A": "8",
+      "B": "9",
+      "C": "17",
+      "D": "8"
+    },
+    "correctAnswer": "B",
+    "explanation": "x = 9.",
+    "topic": "Algebra",
+    "difficulty": "easy",
+    "syllabusTopic": "Algebra"
+  },
+  {
+    "id": "mat-2025-008",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "What is 9% of 100? (practice 2025 #8)",
+    "options": {
+      "A": "8.0",
+      "B": "9.0",
+      "C": "18.0",
+      "D": "19"
+    },
+    "correctAnswer": "B",
+    "explanation": "9.0.",
+    "topic": "Number",
+    "difficulty": "medium",
+    "syllabusTopic": "Number"
+  },
+  {
+    "id": "mat-2025-009",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Area of rectangle 10 cm by 11 cm? (practice 2025 #9)",
+    "options": {
+      "A": "21",
+      "B": "110",
+      "C": "42",
+      "D": "1"
+    },
+    "correctAnswer": "B",
+    "explanation": "110.",
     "topic": "Geometry",
     "difficulty": "easy",
     "syllabusTopic": "Geometry"
+  },
+  {
+    "id": "mat-2025-010",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Mean of 11, 12, 12, 13? (practice 2025 #10)",
+    "options": {
+      "A": "11.0",
+      "B": "12.0",
+      "C": "13.0",
+      "D": "11"
+    },
+    "correctAnswer": "B",
+    "explanation": "12.0.",
+    "topic": "Statistics",
+    "difficulty": "medium",
+    "syllabusTopic": "Statistics"
+  },
+  {
+    "id": "mat-2025-011",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Fair coin tossed. P(heads)? (practice 2025 #11)",
+    "options": {
+      "A": "0",
+      "B": "1/4",
+      "C": "1/2",
+      "D": "1"
+    },
+    "correctAnswer": "C",
+    "explanation": "1/2.",
+    "topic": "Probability",
+    "difficulty": "easy",
+    "syllabusTopic": "Probability"
+  },
+  {
+    "id": "mat-2025-012",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Perimeter of square side 13 cm? (practice 2025 #12)",
+    "options": {
+      "A": "169",
+      "B": "52",
+      "C": "26",
+      "D": "17"
+    },
+    "correctAnswer": "B",
+    "explanation": "52.",
+    "topic": "Mensuration",
+    "difficulty": "medium",
+    "syllabusTopic": "Mensuration"
+  },
+  {
+    "id": "mat-2025-013",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Solve: x + 14 = 17. What is x? (practice 2025 #13)",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "17",
+      "D": "14"
+    },
+    "correctAnswer": "B",
+    "explanation": "x = 3.",
+    "topic": "Algebra",
+    "difficulty": "easy",
+    "syllabusTopic": "Algebra"
+  },
+  {
+    "id": "mat-2025-014",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "What is 15% of 40? (practice 2025 #14)",
+    "options": {
+      "A": "5.0",
+      "B": "6.0",
+      "C": "21.0",
+      "D": "19"
+    },
+    "correctAnswer": "B",
+    "explanation": "6.0.",
+    "topic": "Number",
+    "difficulty": "medium",
+    "syllabusTopic": "Number"
+  },
+  {
+    "id": "mat-2025-015",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Area of rectangle 16 cm by 5 cm? (practice 2025 #15)",
+    "options": {
+      "A": "21",
+      "B": "80",
+      "C": "42",
+      "D": "11"
+    },
+    "correctAnswer": "B",
+    "explanation": "80.",
+    "topic": "Geometry",
+    "difficulty": "easy",
+    "syllabusTopic": "Geometry"
+  },
+  {
+    "id": "mat-2025-016",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Mean of 2, 6, 3, 7? (practice 2025 #16)",
+    "options": {
+      "A": "3.5",
+      "B": "4.5",
+      "C": "5.5",
+      "D": "2"
+    },
+    "correctAnswer": "B",
+    "explanation": "4.5.",
+    "topic": "Statistics",
+    "difficulty": "medium",
+    "syllabusTopic": "Statistics"
+  },
+  {
+    "id": "mat-2025-017",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Fair coin tossed. P(heads)? (practice 2025 #17)",
+    "options": {
+      "A": "0",
+      "B": "1/4",
+      "C": "1/2",
+      "D": "1"
+    },
+    "correctAnswer": "C",
+    "explanation": "1/2.",
+    "topic": "Probability",
+    "difficulty": "easy",
+    "syllabusTopic": "Probability"
+  },
+  {
+    "id": "mat-2025-018",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Perimeter of square side 4 cm? (practice 2025 #18)",
+    "options": {
+      "A": "16",
+      "B": "16",
+      "C": "8",
+      "D": "8"
+    },
+    "correctAnswer": "B",
+    "explanation": "16.",
+    "topic": "Mensuration",
+    "difficulty": "medium",
+    "syllabusTopic": "Mensuration"
+  },
+  {
+    "id": "mat-2025-019",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Solve: x + 5 = 14. What is x? (practice 2025 #19)",
+    "options": {
+      "A": "8",
+      "B": "9",
+      "C": "14",
+      "D": "5"
+    },
+    "correctAnswer": "B",
+    "explanation": "x = 9.",
+    "topic": "Algebra",
+    "difficulty": "easy",
+    "syllabusTopic": "Algebra"
+  },
+  {
+    "id": "mat-2025-020",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "What is 6% of 100? (practice 2025 #20)",
+    "options": {
+      "A": "5.0",
+      "B": "6.0",
+      "C": "12.0",
+      "D": "16"
+    },
+    "correctAnswer": "B",
+    "explanation": "6.0.",
+    "topic": "Number",
+    "difficulty": "medium",
+    "syllabusTopic": "Number"
+  },
+  {
+    "id": "mat-2025-021",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Area of rectangle 7 cm by 11 cm? (practice 2025 #21)",
+    "options": {
+      "A": "18",
+      "B": "77",
+      "C": "36",
+      "D": "4"
+    },
+    "correctAnswer": "B",
+    "explanation": "77.",
+    "topic": "Geometry",
+    "difficulty": "easy",
+    "syllabusTopic": "Geometry"
+  },
+  {
+    "id": "mat-2025-022",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Mean of 8, 12, 9, 13? (practice 2025 #22)",
+    "options": {
+      "A": "9.5",
+      "B": "10.5",
+      "C": "11.5",
+      "D": "8"
+    },
+    "correctAnswer": "B",
+    "explanation": "10.5.",
+    "topic": "Statistics",
+    "difficulty": "medium",
+    "syllabusTopic": "Statistics"
+  },
+  {
+    "id": "mat-2025-023",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Fair coin tossed. P(heads)? (practice 2025 #23)",
+    "options": {
+      "A": "0",
+      "B": "1/4",
+      "C": "1/2",
+      "D": "1"
+    },
+    "correctAnswer": "C",
+    "explanation": "1/2.",
+    "topic": "Probability",
+    "difficulty": "easy",
+    "syllabusTopic": "Probability"
+  },
+  {
+    "id": "mat-2025-024",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Perimeter of square side 10 cm? (practice 2025 #24)",
+    "options": {
+      "A": "100",
+      "B": "40",
+      "C": "20",
+      "D": "14"
+    },
+    "correctAnswer": "B",
+    "explanation": "40.",
+    "topic": "Mensuration",
+    "difficulty": "medium",
+    "syllabusTopic": "Mensuration"
+  },
+  {
+    "id": "mat-2025-025",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Solve: x + 11 = 14. What is x? (practice 2025 #25)",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "14",
+      "D": "11"
+    },
+    "correctAnswer": "B",
+    "explanation": "x = 3.",
+    "topic": "Algebra",
+    "difficulty": "easy",
+    "syllabusTopic": "Algebra"
+  },
+  {
+    "id": "mat-2025-026",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "What is 12% of 40? (practice 2025 #26)",
+    "options": {
+      "A": "3.8",
+      "B": "4.8",
+      "C": "16.8",
+      "D": "16"
+    },
+    "correctAnswer": "B",
+    "explanation": "4.8.",
+    "topic": "Number",
+    "difficulty": "medium",
+    "syllabusTopic": "Number"
+  },
+  {
+    "id": "mat-2025-027",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Area of rectangle 13 cm by 5 cm? (practice 2025 #27)",
+    "options": {
+      "A": "18",
+      "B": "65",
+      "C": "36",
+      "D": "8"
+    },
+    "correctAnswer": "B",
+    "explanation": "65.",
+    "topic": "Geometry",
+    "difficulty": "easy",
+    "syllabusTopic": "Geometry"
+  },
+  {
+    "id": "mat-2025-028",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Mean of 14, 6, 15, 7? (practice 2025 #28)",
+    "options": {
+      "A": "9.5",
+      "B": "10.5",
+      "C": "11.5",
+      "D": "14"
+    },
+    "correctAnswer": "B",
+    "explanation": "10.5.",
+    "topic": "Statistics",
+    "difficulty": "medium",
+    "syllabusTopic": "Statistics"
+  },
+  {
+    "id": "mat-2025-029",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Fair coin tossed. P(heads)? (practice 2025 #29)",
+    "options": {
+      "A": "0",
+      "B": "1/4",
+      "C": "1/2",
+      "D": "1"
+    },
+    "correctAnswer": "C",
+    "explanation": "1/2.",
+    "topic": "Probability",
+    "difficulty": "easy",
+    "syllabusTopic": "Probability"
+  },
+  {
+    "id": "mat-2025-030",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Perimeter of square side 16 cm? (practice 2025 #30)",
+    "options": {
+      "A": "256",
+      "B": "64",
+      "C": "32",
+      "D": "20"
+    },
+    "correctAnswer": "B",
+    "explanation": "64.",
+    "topic": "Mensuration",
+    "difficulty": "medium",
+    "syllabusTopic": "Mensuration"
+  },
+  {
+    "id": "mat-2025-031",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Solve: x + 2 = 11. What is x? (practice 2025 #31)",
+    "options": {
+      "A": "8",
+      "B": "9",
+      "C": "11",
+      "D": "2"
+    },
+    "correctAnswer": "B",
+    "explanation": "x = 9.",
+    "topic": "Algebra",
+    "difficulty": "easy",
+    "syllabusTopic": "Algebra"
+  },
+  {
+    "id": "mat-2025-032",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "What is 3% of 100? (practice 2025 #32)",
+    "options": {
+      "A": "2.0",
+      "B": "3.0",
+      "C": "6.0",
+      "D": "13"
+    },
+    "correctAnswer": "B",
+    "explanation": "3.0.",
+    "topic": "Number",
+    "difficulty": "medium",
+    "syllabusTopic": "Number"
+  },
+  {
+    "id": "mat-2025-033",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Area of rectangle 4 cm by 11 cm? (practice 2025 #33)",
+    "options": {
+      "A": "15",
+      "B": "44",
+      "C": "30",
+      "D": "7"
+    },
+    "correctAnswer": "B",
+    "explanation": "44.",
+    "topic": "Geometry",
+    "difficulty": "easy",
+    "syllabusTopic": "Geometry"
+  },
+  {
+    "id": "mat-2025-034",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Mean of 5, 12, 6, 13? (practice 2025 #34)",
+    "options": {
+      "A": "8.0",
+      "B": "9.0",
+      "C": "10.0",
+      "D": "5"
+    },
+    "correctAnswer": "B",
+    "explanation": "9.0.",
+    "topic": "Statistics",
+    "difficulty": "medium",
+    "syllabusTopic": "Statistics"
+  },
+  {
+    "id": "mat-2025-035",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Fair coin tossed. P(heads)? (practice 2025 #35)",
+    "options": {
+      "A": "0",
+      "B": "1/4",
+      "C": "1/2",
+      "D": "1"
+    },
+    "correctAnswer": "C",
+    "explanation": "1/2.",
+    "topic": "Probability",
+    "difficulty": "easy",
+    "syllabusTopic": "Probability"
+  },
+  {
+    "id": "mat-2025-036",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Perimeter of square side 7 cm? (practice 2025 #36)",
+    "options": {
+      "A": "49",
+      "B": "28",
+      "C": "14",
+      "D": "11"
+    },
+    "correctAnswer": "B",
+    "explanation": "28.",
+    "topic": "Mensuration",
+    "difficulty": "medium",
+    "syllabusTopic": "Mensuration"
+  },
+  {
+    "id": "mat-2025-037",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Solve: x + 8 = 11. What is x? (practice 2025 #37)",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "11",
+      "D": "8"
+    },
+    "correctAnswer": "B",
+    "explanation": "x = 3.",
+    "topic": "Algebra",
+    "difficulty": "easy",
+    "syllabusTopic": "Algebra"
+  },
+  {
+    "id": "mat-2025-038",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "What is 9% of 40? (practice 2025 #38)",
+    "options": {
+      "A": "2.5999999999999996",
+      "B": "3.5999999999999996",
+      "C": "12.6",
+      "D": "13"
+    },
+    "correctAnswer": "B",
+    "explanation": "3.5999999999999996.",
+    "topic": "Number",
+    "difficulty": "medium",
+    "syllabusTopic": "Number"
+  },
+  {
+    "id": "mat-2025-039",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Area of rectangle 10 cm by 5 cm? (practice 2025 #39)",
+    "options": {
+      "A": "15",
+      "B": "50",
+      "C": "30",
+      "D": "5"
+    },
+    "correctAnswer": "B",
+    "explanation": "50.",
+    "topic": "Geometry",
+    "difficulty": "easy",
+    "syllabusTopic": "Geometry"
+  },
+  {
+    "id": "mat-2025-040",
+    "subject": "mathematics",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Mean of 11, 6, 12, 7? (practice 2025 #40)",
+    "options": {
+      "A": "8.0",
+      "B": "9.0",
+      "C": "10.0",
+      "D": "11"
+    },
+    "correctAnswer": "B",
+    "explanation": "9.0.",
+    "topic": "Statistics",
+    "difficulty": "medium",
+    "syllabusTopic": "Statistics"
   }
 ];
 

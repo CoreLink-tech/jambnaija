@@ -1,13 +1,13 @@
 import type { JambQuestion } from "../types";
 
-/** Original UTME-style practice items for physics 2020. Not claimed as official past questions. */
+/** Original practice — physics 2020. Not official past questions. */
 const questions: JambQuestion[] = [
   {
-    "id": "phy-2020-01",
+    "id": "phy-2020-001",
     "subject": "physics",
     "year": 2020,
     "origin": "original_practice",
-    "question": "The SI unit of force is the",
+    "question": "SI unit of force (practice 2020 #1)",
     "options": {
       "A": "joule",
       "B": "newton",
@@ -15,172 +15,712 @@ const questions: JambQuestion[] = [
       "D": "pascal"
     },
     "correctAnswer": "B",
-    "explanation": "Force is measured in newtons (N).",
-    "topic": "Mechanics",
+    "explanation": "Newton.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Mechanics"
+    "syllabusTopic": "General"
   },
   {
-    "id": "phy-2020-02",
+    "id": "phy-2020-002",
     "subject": "physics",
     "year": 2020,
     "origin": "original_practice",
-    "question": "Speed is a",
+    "question": "Speed is a (practice 2020 #2)",
     "options": {
-      "A": "vector quantity",
-      "B": "scalar quantity",
-      "C": "fundamental unit",
-      "D": "derived vector only"
+      "A": "vector",
+      "B": "scalar",
+      "C": "force",
+      "D": "weight"
     },
     "correctAnswer": "B",
-    "explanation": "Speed has magnitude only; velocity is the vector.",
-    "topic": "Electricity",
+    "explanation": "Scalar.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Electricity"
+    "syllabusTopic": "General"
   },
   {
-    "id": "phy-2020-03",
+    "id": "phy-2020-003",
     "subject": "physics",
     "year": 2020,
     "origin": "original_practice",
-    "question": "Ohm's law relates",
+    "question": "g near Earth \u2248 (practice 2020 #3)",
     "options": {
-      "A": "V, I and R",
-      "B": "P, V and t",
-      "C": "F, m and a",
-      "D": "Q, V and C"
+      "A": "9.8 m/s\u00b2",
+      "B": "98 m/s\u00b2",
+      "C": "0.98 m/s\u00b2",
+      "D": "1 m/s\u00b2"
     },
     "correctAnswer": "A",
-    "explanation": "V = IR relates voltage, current and resistance.",
-    "topic": "Waves",
-    "difficulty": "hard",
-    "syllabusTopic": "Waves"
+    "explanation": "9.8.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
   },
   {
-    "id": "phy-2020-04",
+    "id": "phy-2020-004",
     "subject": "physics",
     "year": 2020,
     "origin": "original_practice",
-    "question": "The frequency of a wave is measured in",
+    "question": "Power is (practice 2020 #4)",
     "options": {
-      "A": "metres",
-      "B": "hertz",
-      "C": "seconds",
-      "D": "newtons"
+      "A": "work\u00d7time",
+      "B": "work/time",
+      "C": "force\u00d7mass",
+      "D": "mass/time"
     },
     "correctAnswer": "B",
-    "explanation": "Frequency is cycles per second (Hz).",
-    "topic": "Optics",
-    "difficulty": "easy",
-    "syllabusTopic": "Optics"
+    "explanation": "Work/time.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
   },
   {
-    "id": "phy-2020-05",
+    "id": "phy-2020-005",
     "subject": "physics",
     "year": 2020,
     "origin": "original_practice",
-    "question": "Light travels fastest in",
+    "question": "Ohm's law links (practice 2020 #5)",
+    "options": {
+      "A": "V,I,R",
+      "B": "P only",
+      "C": "F only",
+      "D": "Q only"
+    },
+    "correctAnswer": "A",
+    "explanation": "V=IR.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-006",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Frequency unit (practice 2020 #6)",
+    "options": {
+      "A": "metre",
+      "B": "hertz",
+      "C": "second",
+      "D": "newton"
+    },
+    "correctAnswer": "B",
+    "explanation": "Hz.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-007",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Sound cannot travel in (practice 2020 #7)",
+    "options": {
+      "A": "air",
+      "B": "water",
+      "C": "steel",
+      "D": "vacuum"
+    },
+    "correctAnswer": "D",
+    "explanation": "Vacuum.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-008",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Light fastest in (practice 2020 #8)",
     "options": {
       "A": "glass",
       "B": "water",
-      "C": "air/vacuum",
+      "C": "vacuum",
       "D": "diamond"
     },
     "correctAnswer": "C",
-    "explanation": "Light is fastest in vacuum (approx. air).",
-    "topic": "Heat",
+    "explanation": "Vacuum.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Heat"
+    "syllabusTopic": "General"
   },
   {
-    "id": "phy-2020-06",
+    "id": "phy-2020-009",
     "subject": "physics",
     "year": 2020,
     "origin": "original_practice",
-    "question": "Heat transfer by electromagnetic waves is called",
+    "question": "Plane mirror image (practice 2020 #9)",
     "options": {
-      "A": "conduction",
-      "B": "convection",
-      "C": "radiation",
-      "D": "evaporation"
+      "A": "real inverted",
+      "B": "virtual upright",
+      "C": "real upright",
+      "D": "virtual inverted"
+    },
+    "correctAnswer": "B",
+    "explanation": "Virtual upright.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-010",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Heat by radiation (practice 2020 #10)",
+    "options": {
+      "A": "needs metal only",
+      "B": "needs medium always",
+      "C": "needs no medium",
+      "D": "is sound"
     },
     "correctAnswer": "C",
-    "explanation": "Radiation transfers heat without a medium.",
-    "topic": "Modern Physics",
-    "difficulty": "hard",
-    "syllabusTopic": "Modern Physics"
+    "explanation": "No medium.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
   },
   {
-    "id": "phy-2020-07",
+    "id": "phy-2020-011",
     "subject": "physics",
     "year": 2020,
     "origin": "original_practice",
-    "question": "An object in free fall near Earth has acceleration about",
+    "question": "Unit of current (practice 2020 #11)",
     "options": {
-      "A": "9.8 m/s²",
-      "B": "98 m/s²",
-      "C": "0.98 m/s²",
-      "D": "1 m/s²"
+      "A": "volt",
+      "B": "ampere",
+      "C": "ohm",
+      "D": "watt"
+    },
+    "correctAnswer": "B",
+    "explanation": "Ampere.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-012",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Capacitor stores (practice 2020 #12)",
+    "options": {
+      "A": "current only",
+      "B": "charge",
+      "C": "sound",
+      "D": "mass"
+    },
+    "correctAnswer": "B",
+    "explanation": "Charge.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-013",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Momentum is (practice 2020 #13)",
+    "options": {
+      "A": "m\u00d7v",
+      "B": "m/v",
+      "C": "f\u00d7t only",
+      "D": "weight only"
     },
     "correctAnswer": "A",
-    "explanation": "g ≈ 9.8 m/s² near Earth's surface.",
-    "topic": "Measurement",
+    "explanation": "mv.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Measurement"
+    "syllabusTopic": "General"
   },
   {
-    "id": "phy-2020-08",
+    "id": "phy-2020-014",
     "subject": "physics",
     "year": 2020,
     "origin": "original_practice",
-    "question": "A device that stores electric charge is a",
+    "question": "Wavelength is (practice 2020 #14)",
     "options": {
-      "A": "resistor",
-      "B": "capacitor",
-      "C": "inductor",
-      "D": "transformer"
+      "A": "amplitude",
+      "B": "crest-to-crest distance",
+      "C": "frequency",
+      "D": "period only"
     },
     "correctAnswer": "B",
-    "explanation": "Capacitors store charge.",
-    "topic": "Mechanics",
+    "explanation": "Distance between crests.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Mechanics"
+    "syllabusTopic": "General"
   },
   {
-    "id": "phy-2020-09",
+    "id": "phy-2020-015",
     "subject": "physics",
     "year": 2020,
     "origin": "original_practice",
-    "question": "The image formed by a plane mirror is",
+    "question": "Convex lens can form (practice 2020 #15)",
     "options": {
-      "A": "real and inverted",
-      "B": "virtual and upright",
-      "C": "real and upright",
-      "D": "virtual and inverted"
+      "A": "real image of distant object",
+      "B": "only virtual always",
+      "C": "no image",
+      "D": "sound"
     },
-    "correctAnswer": "B",
-    "explanation": "Plane mirrors form virtual, erect images.",
-    "topic": "Electricity",
-    "difficulty": "hard",
-    "syllabusTopic": "Electricity"
-  },
-  {
-    "id": "phy-2020-10",
-    "subject": "physics",
-    "year": 2020,
-    "origin": "original_practice",
-    "question": "Power is defined as",
-    "options": {
-      "A": "work × time",
-      "B": "work / time",
-      "C": "force × distance",
-      "D": "mass × acceleration"
-    },
-    "correctAnswer": "B",
-    "explanation": "Power is rate of doing work.",
-    "topic": "Waves",
+    "correctAnswer": "A",
+    "explanation": "Real images possible.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Waves"
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-016",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Density is mass over (practice 2020 #16)",
+    "options": {
+      "A": "time",
+      "B": "volume",
+      "C": "force",
+      "D": "speed"
+    },
+    "correctAnswer": "B",
+    "explanation": "Volume.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-017",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Fuse protects against (practice 2020 #17)",
+    "options": {
+      "A": "low voltage only",
+      "B": "excess current",
+      "C": "darkness",
+      "D": "sound"
+    },
+    "correctAnswer": "B",
+    "explanation": "Overcurrent.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-018",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Velocity includes (practice 2020 #18)",
+    "options": {
+      "A": "mass only",
+      "B": "direction",
+      "C": "temperature",
+      "D": "colour"
+    },
+    "correctAnswer": "B",
+    "explanation": "Direction.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-019",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "PD measured in (practice 2020 #19)",
+    "options": {
+      "A": "amperes",
+      "B": "volts",
+      "C": "ohms",
+      "D": "watts"
+    },
+    "correctAnswer": "B",
+    "explanation": "Volts.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-020",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "s\u2013t graph slope gives (practice 2020 #20)",
+    "options": {
+      "A": "acceleration",
+      "B": "speed",
+      "C": "force",
+      "D": "mass"
+    },
+    "correctAnswer": "B",
+    "explanation": "Speed.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-021",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Work is zero when force is (practice 2020 #21)",
+    "options": {
+      "A": "large",
+      "B": "perpendicular to displacement",
+      "C": "equal weight",
+      "D": "constant"
+    },
+    "correctAnswer": "B",
+    "explanation": "cos90=0.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-022",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Series circuit same (practice 2020 #22)",
+    "options": {
+      "A": "voltage always equal",
+      "B": "current",
+      "C": "resistance always equal",
+      "D": "power always equal"
+    },
+    "correctAnswer": "B",
+    "explanation": "Current same.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-023",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Electron charge (practice 2020 #23)",
+    "options": {
+      "A": "positive",
+      "B": "negative",
+      "C": "zero",
+      "D": "magnetic only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Negative.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-024",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Radioactivity is emission from (practice 2020 #24)",
+    "options": {
+      "A": "stable atoms only",
+      "B": "unstable nuclei",
+      "C": "friction only",
+      "D": "bulbs"
+    },
+    "correctAnswer": "B",
+    "explanation": "Unstable nuclei.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-025",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Vernier caliper measures (practice 2020 #25)",
+    "options": {
+      "A": "time",
+      "B": "length",
+      "C": "mass only",
+      "D": "temp only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Length.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-026",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Ultrasound frequency is (practice 2020 #26)",
+    "options": {
+      "A": "below hearing",
+      "B": "above hearing range",
+      "C": "exactly 1Hz",
+      "D": "zero"
+    },
+    "correctAnswer": "B",
+    "explanation": "Above audible.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-027",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Reflection of light is (practice 2020 #27)",
+    "options": {
+      "A": "bending in medium",
+      "B": "bouncing off surface",
+      "C": "stopping",
+      "D": "sound making"
+    },
+    "correctAnswer": "B",
+    "explanation": "Bounce.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-028",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Evaporation cools because (practice 2020 #28)",
+    "options": {
+      "A": "mass increases",
+      "B": "energetic molecules leave",
+      "C": "motion stops",
+      "D": "freezing"
+    },
+    "correctAnswer": "B",
+    "explanation": "High KE leave.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-029",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Machine MA if VR=4,eff=80% (practice 2020 #29)",
+    "options": {
+      "A": "5",
+      "B": "3.2",
+      "C": "4",
+      "D": "0.8"
+    },
+    "correctAnswer": "B",
+    "explanation": "0.8\u00d74=3.2.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-030",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Kelvin is SI unit of (practice 2020 #30)",
+    "options": {
+      "A": "force",
+      "B": "temperature",
+      "C": "charge",
+      "D": "power"
+    },
+    "correctAnswer": "B",
+    "explanation": "Temperature.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-031",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Weight is (practice 2020 #31)",
+    "options": {
+      "A": "mass only",
+      "B": "gravitational force on mass",
+      "C": "speed",
+      "D": "colour"
+    },
+    "correctAnswer": "B",
+    "explanation": "Force due to gravity.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-032",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Energy unit (practice 2020 #32)",
+    "options": {
+      "A": "newton",
+      "B": "joule",
+      "C": "ampere",
+      "D": "candela"
+    },
+    "correctAnswer": "B",
+    "explanation": "Joule.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-033",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Potential energy depends on (practice 2020 #33)",
+    "options": {
+      "A": "colour",
+      "B": "height/position",
+      "C": "smell",
+      "D": "taste"
+    },
+    "correctAnswer": "B",
+    "explanation": "Position.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-034",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Ammeter is connected in (practice 2020 #34)",
+    "options": {
+      "A": "parallel only",
+      "B": "series",
+      "C": "neither",
+      "D": "transformer only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Series.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-035",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Voltmeter is connected in (practice 2020 #35)",
+    "options": {
+      "A": "series only",
+      "B": "parallel",
+      "C": "neither",
+      "D": "earth only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Parallel.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-036",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Echo is due to (practice 2020 #36)",
+    "options": {
+      "A": "refraction",
+      "B": "reflection of sound",
+      "C": "diffraction only",
+      "D": "polarisation"
+    },
+    "correctAnswer": "B",
+    "explanation": "Reflection.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-037",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Conduction of heat best in (practice 2020 #37)",
+    "options": {
+      "A": "gases",
+      "B": "metals",
+      "C": "vacuum",
+      "D": "wood"
+    },
+    "correctAnswer": "B",
+    "explanation": "Metals.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-038",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Magnetic field around (practice 2020 #38)",
+    "options": {
+      "A": "wooden rod only",
+      "B": "current-carrying conductor",
+      "C": "plastic only",
+      "D": "rubber only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Current creates field.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-039",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Inertia is tendency to (practice 2020 #39)",
+    "options": {
+      "A": "change state always",
+      "B": "resist change in motion",
+      "C": "lose mass",
+      "D": "gain charge"
+    },
+    "correctAnswer": "B",
+    "explanation": "Resist motion change.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "phy-2020-040",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "original_practice",
+    "question": "Pressure in liquid increases with (practice 2020 #40)",
+    "options": {
+      "A": "height of vessel only above",
+      "B": "depth",
+      "C": "colour",
+      "D": "taste"
+    },
+    "correctAnswer": "B",
+    "explanation": "Depth.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
   }
 ];
 

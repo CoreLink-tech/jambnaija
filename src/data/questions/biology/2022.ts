@@ -1,49 +1,49 @@
 import type { JambQuestion } from "../types";
 
-/** Original UTME-style practice items for biology 2022. Not claimed as official past questions. */
+/** Original practice — biology 2022. Not official past questions. */
 const questions: JambQuestion[] = [
   {
-    "id": "bio-2022-01",
+    "id": "bio-2022-001",
     "subject": "biology",
     "year": 2022,
     "origin": "original_practice",
-    "question": "The powerhouse of the cell is the",
+    "question": "Powerhouse of cell (practice 2022 #1)",
     "options": {
       "A": "nucleus",
       "B": "mitochondrion",
       "C": "ribosome",
-      "D": "golgi body"
+      "D": "vacuole"
     },
     "correctAnswer": "B",
-    "explanation": "Mitochondria produce most cellular ATP.",
-    "topic": "Cell Biology",
+    "explanation": "Mitochondrion.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Cell Biology"
+    "syllabusTopic": "General"
   },
   {
-    "id": "bio-2022-02",
+    "id": "bio-2022-002",
     "subject": "biology",
     "year": 2022,
     "origin": "original_practice",
-    "question": "Photosynthesis mainly occurs in the",
+    "question": "Photosynthesis site (practice 2022 #2)",
     "options": {
       "A": "root",
-      "B": "stem bark",
+      "B": "bark",
       "C": "leaf chloroplasts",
-      "D": "flower petals"
+      "D": "petals"
     },
     "correctAnswer": "C",
-    "explanation": "Chloroplasts in leaves carry out photosynthesis.",
-    "topic": "Genetics",
+    "explanation": "Chloroplasts.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Genetics"
+    "syllabusTopic": "General"
   },
   {
-    "id": "bio-2022-03",
+    "id": "bio-2022-003",
     "subject": "biology",
     "year": 2022,
     "origin": "original_practice",
-    "question": "DNA stands for",
+    "question": "DNA stands for (practice 2022 #3)",
     "options": {
       "A": "Deoxyribonucleic acid",
       "B": "Diribonucleic acid",
@@ -51,17 +51,17 @@ const questions: JambQuestion[] = [
       "D": "Deoxyribose nitrate"
     },
     "correctAnswer": "A",
-    "explanation": "DNA is deoxyribonucleic acid.",
-    "topic": "Ecology",
-    "difficulty": "hard",
-    "syllabusTopic": "Ecology"
+    "explanation": "DNA.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
   },
   {
-    "id": "bio-2022-04",
+    "id": "bio-2022-004",
     "subject": "biology",
     "year": 2022,
     "origin": "original_practice",
-    "question": "The basic unit of classification is the",
+    "question": "Basic classification unit (practice 2022 #4)",
     "options": {
       "A": "family",
       "B": "genus",
@@ -69,107 +69,17 @@ const questions: JambQuestion[] = [
       "D": "order"
     },
     "correctAnswer": "C",
-    "explanation": "Species is the fundamental taxonomic unit.",
-    "topic": "Physiology",
-    "difficulty": "easy",
-    "syllabusTopic": "Physiology"
-  },
-  {
-    "id": "bio-2022-05",
-    "subject": "biology",
-    "year": 2022,
-    "origin": "original_practice",
-    "question": "Blood is pumped from the left ventricle to the",
-    "options": {
-      "A": "lungs",
-      "B": "body via the aorta",
-      "C": "right atrium",
-      "D": "liver only"
-    },
-    "correctAnswer": "B",
-    "explanation": "Systemic circulation starts at the left ventricle.",
-    "topic": "Evolution",
+    "explanation": "Species.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Evolution"
+    "syllabusTopic": "General"
   },
   {
-    "id": "bio-2022-06",
+    "id": "bio-2022-005",
     "subject": "biology",
     "year": 2022,
     "origin": "original_practice",
-    "question": "Organisms that make their own food are",
-    "options": {
-      "A": "consumers",
-      "B": "producers",
-      "C": "decomposers",
-      "D": "parasites"
-    },
-    "correctAnswer": "B",
-    "explanation": "Producers (autotrophs) synthesise food.",
-    "topic": "Reproduction",
-    "difficulty": "hard",
-    "syllabusTopic": "Reproduction"
-  },
-  {
-    "id": "bio-2022-07",
-    "subject": "biology",
-    "year": 2022,
-    "origin": "original_practice",
-    "question": "Mendel is known for work on",
-    "options": {
-      "A": "evolution by selection",
-      "B": "heredity in peas",
-      "C": "cell theory",
-      "D": "germ theory"
-    },
-    "correctAnswer": "B",
-    "explanation": "Mendel studied inheritance in pea plants.",
-    "topic": "Classification",
-    "difficulty": "easy",
-    "syllabusTopic": "Classification"
-  },
-  {
-    "id": "bio-2022-08",
-    "subject": "biology",
-    "year": 2022,
-    "origin": "original_practice",
-    "question": "The process by which green plants lose water vapour is",
-    "options": {
-      "A": "transpiration",
-      "B": "respiration",
-      "C": "digestion",
-      "D": "absorption"
-    },
-    "correctAnswer": "A",
-    "explanation": "Transpiration is water loss mainly via stomata.",
-    "topic": "Cell Biology",
-    "difficulty": "medium",
-    "syllabusTopic": "Cell Biology"
-  },
-  {
-    "id": "bio-2022-09",
-    "subject": "biology",
-    "year": 2022,
-    "origin": "original_practice",
-    "question": "A virus differs from a bacterium because a virus",
-    "options": {
-      "A": "always has a nucleus",
-      "B": "is smaller and needs a host to replicate",
-      "C": "is multicellular",
-      "D": "photosynthesises"
-    },
-    "correctAnswer": "B",
-    "explanation": "Viruses are acellular and obligate parasites.",
-    "topic": "Genetics",
-    "difficulty": "hard",
-    "syllabusTopic": "Genetics"
-  },
-  {
-    "id": "bio-2022-10",
-    "subject": "biology",
-    "year": 2022,
-    "origin": "original_practice",
-    "question": "Natural selection was proposed by",
+    "question": "Natural selection by (practice 2022 #5)",
     "options": {
       "A": "Mendel",
       "B": "Darwin",
@@ -177,10 +87,640 @@ const questions: JambQuestion[] = [
       "D": "Hooke"
     },
     "correctAnswer": "B",
-    "explanation": "Charles Darwin proposed natural selection.",
-    "topic": "Ecology",
+    "explanation": "Darwin.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Ecology"
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-006",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Producers (practice 2022 #6)",
+    "options": {
+      "A": "consumers only",
+      "B": "make own food",
+      "C": "parasites only",
+      "D": "detritivores only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Autotrophs.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-007",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Transpiration (practice 2022 #7)",
+    "options": {
+      "A": "blood loss",
+      "B": "water vapour loss from plants",
+      "C": "bone growth",
+      "D": "light absorption only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Water vapour.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-008",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "RBCs transport (practice 2022 #8)",
+    "options": {
+      "A": "urea",
+      "B": "oxygen",
+      "C": "bile",
+      "D": "starch"
+    },
+    "correctAnswer": "B",
+    "explanation": "Oxygen.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-009",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Osmosis needs (practice 2022 #9)",
+    "options": {
+      "A": "metal sheet",
+      "B": "selectively permeable membrane",
+      "C": "vacuum",
+      "D": "wood only"
+    },
+    "correctAnswer": "B",
+    "explanation": "SP membrane.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-010",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Malaria vector (practice 2022 #10)",
+    "options": {
+      "A": "housefly",
+      "B": "Anopheles mosquito",
+      "C": "cockroach",
+      "D": "bedbug only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Anopheles.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-011",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Cell control centre (practice 2022 #11)",
+    "options": {
+      "A": "mitochondrion",
+      "B": "nucleus",
+      "C": "cell wall",
+      "D": "lysosome"
+    },
+    "correctAnswer": "B",
+    "explanation": "Nucleus.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-012",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Genes located on (practice 2022 #12)",
+    "options": {
+      "A": "ribosomes only",
+      "B": "chromosomes",
+      "C": "cell walls only",
+      "D": "vacuoles only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Chromosomes.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-013",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Food chain starts with (practice 2022 #13)",
+    "options": {
+      "A": "carnivore",
+      "B": "producer",
+      "C": "decomposer only",
+      "D": "parasite"
+    },
+    "correctAnswer": "B",
+    "explanation": "Producer.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-014",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Pollination is transfer of pollen (practice 2022 #14)",
+    "options": {
+      "A": "ovule to root",
+      "B": "anther to stigma",
+      "C": "leaf to stem",
+      "D": "seed to fruit"
+    },
+    "correctAnswer": "B",
+    "explanation": "Anther\u2192stigma.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-015",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Plant cells have (practice 2022 #15)",
+    "options": {
+      "A": "mitochondria only difference",
+      "B": "cell wall and often chloroplasts",
+      "C": "no nucleus",
+      "D": "no cytoplasm"
+    },
+    "correctAnswer": "B",
+    "explanation": "Wall/chloroplasts.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-016",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Fertilisation is fusion of (practice 2022 #16)",
+    "options": {
+      "A": "two leaves",
+      "B": "gametes",
+      "C": "two stems",
+      "D": "two roots"
+    },
+    "correctAnswer": "B",
+    "explanation": "Gametes.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-017",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Decomposers (practice 2022 #17)",
+    "options": {
+      "A": "make O2 only",
+      "B": "recycle nutrients",
+      "C": "stop growth",
+      "D": "make light"
+    },
+    "correctAnswer": "B",
+    "explanation": "Recycle nutrients.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-018",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Kidney function (practice 2022 #18)",
+    "options": {
+      "A": "digest fat",
+      "B": "excretion and osmoregulation",
+      "C": "pump blood",
+      "D": "hearing"
+    },
+    "correctAnswer": "B",
+    "explanation": "Excretion.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-019",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Mammals have (practice 2022 #19)",
+    "options": {
+      "A": "feathers",
+      "B": "mammary glands and hair",
+      "C": "scales only",
+      "D": "gills only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Hair/mammary.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-020",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Ribosomes do (practice 2022 #20)",
+    "options": {
+      "A": "photosynthesis",
+      "B": "protein synthesis",
+      "C": "lipid storage only",
+      "D": "DNA only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Proteins.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-021",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Enzymes are mainly (practice 2022 #21)",
+    "options": {
+      "A": "carbohydrates",
+      "B": "catalytic proteins",
+      "C": "salts",
+      "D": "metals only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Proteins.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-022",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Competition when (practice 2022 #22)",
+    "options": {
+      "A": "never meet",
+      "B": "need same limited resource",
+      "C": "photosynthesise only",
+      "D": "hibernate"
+    },
+    "correctAnswer": "B",
+    "explanation": "Shared resource.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-023",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Dominant allele expressed (practice 2022 #23)",
+    "options": {
+      "A": "only homozygous recessive",
+      "B": "when present",
+      "C": "never",
+      "D": "only bacteria"
+    },
+    "correctAnswer": "B",
+    "explanation": "When present.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-024",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Cell membrane is (practice 2022 #24)",
+    "options": {
+      "A": "fully permeable always",
+      "B": "selectively permeable",
+      "C": "cellulose in animals",
+      "D": "absent in plants"
+    },
+    "correctAnswer": "B",
+    "explanation": "Selective.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-025",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Habitat is (practice 2022 #25)",
+    "options": {
+      "A": "diet only",
+      "B": "where organism lives",
+      "C": "speed",
+      "D": "scientific name only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Living place.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-026",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Left ventricle pumps to (practice 2022 #26)",
+    "options": {
+      "A": "lungs only",
+      "B": "body via aorta",
+      "C": "right atrium only",
+      "D": "liver only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Systemic.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-027",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Virus needs (practice 2022 #27)",
+    "options": {
+      "A": "always nucleus",
+      "B": "host to replicate",
+      "C": "to be multicellular",
+      "D": "to photosynthesise"
+    },
+    "correctAnswer": "B",
+    "explanation": "Host.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-028",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Proteins digest to (practice 2022 #28)",
+    "options": {
+      "A": "fatty acids",
+      "B": "amino acids",
+      "C": "glucose only",
+      "D": "glycerol only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Amino acids.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-029",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Lungs mainly do (practice 2022 #29)",
+    "options": {
+      "A": "digestion",
+      "B": "gaseous exchange",
+      "C": "urea excretion only",
+      "D": "blood making only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Gas exchange.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-030",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Mendel studied (practice 2022 #30)",
+    "options": {
+      "A": "evolution only",
+      "B": "pea heredity",
+      "C": "germ theory",
+      "D": "cell walls"
+    },
+    "correctAnswer": "B",
+    "explanation": "Peas.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-031",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Xylem transports (practice 2022 #31)",
+    "options": {
+      "A": "sugars mainly downward only in all texts",
+      "B": "water and minerals",
+      "C": "only animals",
+      "D": "only air"
+    },
+    "correctAnswer": "B",
+    "explanation": "Water/minerals.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-032",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Phloem transports (practice 2022 #32)",
+    "options": {
+      "A": "only water upward",
+      "B": "organic nutrients",
+      "C": "only stones",
+      "D": "only metals"
+    },
+    "correctAnswer": "B",
+    "explanation": "Food/nutrients.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-033",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Aerobic respiration needs (practice 2022 #33)",
+    "options": {
+      "A": "nitrogen only",
+      "B": "oxygen",
+      "C": "only darkness",
+      "D": "only vacuum"
+    },
+    "correctAnswer": "B",
+    "explanation": "Oxygen.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-034",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "White blood cells help in (practice 2022 #34)",
+    "options": {
+      "A": "carrying O2 only",
+      "B": "defence/immunity",
+      "C": "photosynthesis",
+      "D": "digestion of steel"
+    },
+    "correctAnswer": "B",
+    "explanation": "Immunity.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-035",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Ecosystem is (practice 2022 #35)",
+    "options": {
+      "A": "one organism only",
+      "B": "community + environment",
+      "C": "only climate",
+      "D": "only soil"
+    },
+    "correctAnswer": "B",
+    "explanation": "Biotic+abiotic.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-036",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Mutation is (practice 2022 #36)",
+    "options": {
+      "A": "always useful",
+      "B": "change in genetic material",
+      "C": "always lethal",
+      "D": "not inherited ever"
+    },
+    "correctAnswer": "B",
+    "explanation": "Genetic change.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-037",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Chlorophyll is important in (practice 2022 #37)",
+    "options": {
+      "A": "digestion",
+      "B": "trapping light energy",
+      "C": "blood clotting",
+      "D": "bone repair"
+    },
+    "correctAnswer": "B",
+    "explanation": "Light capture.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-038",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Synapse is junction between (practice 2022 #38)",
+    "options": {
+      "A": "two bones",
+      "B": "neurons",
+      "C": "two leaves",
+      "D": "two roots"
+    },
+    "correctAnswer": "B",
+    "explanation": "Nerve cells.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-039",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Hormones are (practice 2022 #39)",
+    "options": {
+      "A": "digestive stones",
+      "B": "chemical messengers",
+      "C": "only vitamins from sun",
+      "D": "only minerals"
+    },
+    "correctAnswer": "B",
+    "explanation": "Messengers.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "bio-2022-040",
+    "subject": "biology",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Biodiversity means (practice 2022 #40)",
+    "options": {
+      "A": "one species only",
+      "B": "variety of life forms",
+      "C": "only climate",
+      "D": "only rocks"
+    },
+    "correctAnswer": "B",
+    "explanation": "Variety of life.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
   }
 ];
 

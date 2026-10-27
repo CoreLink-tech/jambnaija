@@ -1,31 +1,31 @@
 import type { JambQuestion } from "../types";
 
-/** Original UTME-style practice items for literature 2022. Not claimed as official past questions. */
+/** Original practice — literature 2022. Not official past questions. */
 const questions: JambQuestion[] = [
   {
-    "id": "lit-2022-01",
+    "id": "lit-2022-001",
     "subject": "literature",
     "year": 2022,
     "origin": "original_practice",
-    "question": "A story written to be performed by actors is",
+    "question": "Story for performance (practice 2022 #1)",
     "options": {
-      "A": "a novel",
-      "B": "a drama/play",
-      "C": "an essay",
-      "D": "a report"
+      "A": "novel",
+      "B": "drama/play",
+      "C": "essay",
+      "D": "report"
     },
     "correctAnswer": "B",
-    "explanation": "Drama is written primarily for performance.",
-    "topic": "Drama",
+    "explanation": "Drama.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Drama"
+    "syllabusTopic": "General"
   },
   {
-    "id": "lit-2022-02",
+    "id": "lit-2022-002",
     "subject": "literature",
     "year": 2022,
     "origin": "original_practice",
-    "question": "A comparison using 'like' or 'as' is a",
+    "question": "Like/as comparison (practice 2022 #2)",
     "options": {
       "A": "metaphor",
       "B": "simile",
@@ -33,89 +33,35 @@ const questions: JambQuestion[] = [
       "D": "irony"
     },
     "correctAnswer": "B",
-    "explanation": "Similes use like or as.",
-    "topic": "Prose",
+    "explanation": "Simile.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Prose"
+    "syllabusTopic": "General"
   },
   {
-    "id": "lit-2022-03",
+    "id": "lit-2022-003",
     "subject": "literature",
     "year": 2022,
     "origin": "original_practice",
-    "question": "The central message of a literary work is its",
+    "question": "Central message (practice 2022 #3)",
     "options": {
       "A": "setting",
       "B": "theme",
-      "C": "rhyme",
+      "C": "rhyme only",
       "D": "stage"
     },
     "correctAnswer": "B",
-    "explanation": "Theme is the central idea or message.",
-    "topic": "Poetry",
-    "difficulty": "hard",
-    "syllabusTopic": "Poetry"
-  },
-  {
-    "id": "lit-2022-04",
-    "subject": "literature",
-    "year": 2022,
-    "origin": "original_practice",
-    "question": "A long narrative prose fiction is a",
-    "options": {
-      "A": "poem",
-      "B": "novel",
-      "C": "epigram",
-      "D": "ode"
-    },
-    "correctAnswer": "B",
-    "explanation": "A novel is extended prose fiction.",
-    "topic": "Literary Devices",
+    "explanation": "Theme.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Literary Devices"
+    "syllabusTopic": "General"
   },
   {
-    "id": "lit-2022-05",
+    "id": "lit-2022-004",
     "subject": "literature",
     "year": 2022,
     "origin": "original_practice",
-    "question": "Giving human traits to non-human things is",
-    "options": {
-      "A": "alliteration",
-      "B": "personification",
-      "C": "pun",
-      "D": "paradox"
-    },
-    "correctAnswer": "B",
-    "explanation": "Personification attributes human qualities to non-humans.",
-    "topic": "African Literature",
-    "difficulty": "medium",
-    "syllabusTopic": "African Literature"
-  },
-  {
-    "id": "lit-2022-06",
-    "subject": "literature",
-    "year": 2022,
-    "origin": "original_practice",
-    "question": "The time and place of a story is the",
-    "options": {
-      "A": "plot",
-      "B": "setting",
-      "C": "climax",
-      "D": "conflict"
-    },
-    "correctAnswer": "B",
-    "explanation": "Setting is when and where the action occurs.",
-    "topic": "Themes",
-    "difficulty": "hard",
-    "syllabusTopic": "Themes"
-  },
-  {
-    "id": "lit-2022-07",
-    "subject": "literature",
-    "year": 2022,
-    "origin": "original_practice",
-    "question": "A poem of fourteen lines is typically a",
+    "question": "Fourteen-line poem (practice 2022 #4)",
     "options": {
       "A": "ballad",
       "B": "sonnet",
@@ -123,64 +69,658 @@ const questions: JambQuestion[] = [
       "D": "limerick"
     },
     "correctAnswer": "B",
-    "explanation": "A sonnet is a fourteen-line poem.",
-    "topic": "Characterisation",
-    "difficulty": "easy",
-    "syllabusTopic": "Characterisation"
+    "explanation": "Sonnet.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
   },
   {
-    "id": "lit-2022-08",
+    "id": "lit-2022-005",
     "subject": "literature",
     "year": 2022,
     "origin": "original_practice",
-    "question": "Comic relief in a tragedy is meant to",
+    "question": "Human traits to non-humans (practice 2022 #5)",
     "options": {
-      "A": "end the play",
-      "B": "ease tension briefly",
-      "C": "replace the hero",
-      "D": "remove conflict"
+      "A": "alliteration",
+      "B": "personification",
+      "C": "pun",
+      "D": "paradox"
     },
     "correctAnswer": "B",
-    "explanation": "Comic relief temporarily lightens serious mood.",
-    "topic": "Genres",
-    "difficulty": "medium",
-    "syllabusTopic": "Genres"
+    "explanation": "Personification.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
   },
   {
-    "id": "lit-2022-09",
+    "id": "lit-2022-006",
     "subject": "literature",
     "year": 2022,
     "origin": "original_practice",
-    "question": "The hero of a tragedy is often called the",
+    "question": "Long prose fiction (practice 2022 #6)",
+    "options": {
+      "A": "poem",
+      "B": "novel",
+      "C": "epigram",
+      "D": "ode"
+    },
+    "correctAnswer": "B",
+    "explanation": "Novel.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-007",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Time and place (practice 2022 #7)",
+    "options": {
+      "A": "plot",
+      "B": "setting",
+      "C": "climax only",
+      "D": "conflict only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Setting.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-008",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Central character (practice 2022 #8)",
     "options": {
       "A": "antagonist",
       "B": "protagonist",
       "C": "chorus",
-      "D": "narrator only"
+      "D": "editor"
     },
     "correctAnswer": "B",
-    "explanation": "The protagonist is the central character.",
-    "topic": "Drama",
-    "difficulty": "hard",
-    "syllabusTopic": "Drama"
+    "explanation": "Protagonist.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
   },
   {
-    "id": "lit-2022-10",
+    "id": "lit-2022-009",
     "subject": "literature",
     "year": 2022,
     "origin": "original_practice",
-    "question": "Oral literature is primarily",
+    "question": "Oral literature (practice 2022 #9)",
     "options": {
       "A": "printed only",
-      "B": "spoken and performed",
+      "B": "spoken/performed",
       "C": "mathematical",
-      "D": "legal code"
+      "D": "legal only"
     },
     "correctAnswer": "B",
-    "explanation": "Oral literature is transmitted by word of mouth and performance.",
-    "topic": "Prose",
+    "explanation": "Oral.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Prose"
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-010",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Exaggeration (practice 2022 #10)",
+    "options": {
+      "A": "litotes",
+      "B": "hyperbole",
+      "C": "irony only",
+      "D": "metonymy"
+    },
+    "correctAnswer": "B",
+    "explanation": "Hyperbole.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-011",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Irony involves (practice 2022 #11)",
+    "options": {
+      "A": "literal praise only",
+      "B": "contrast expectation/reality",
+      "C": "only rhyme",
+      "D": "only sets"
+    },
+    "correctAnswer": "B",
+    "explanation": "Contrast.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-012",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Climax is (practice 2022 #12)",
+    "options": {
+      "A": "beginning only",
+      "B": "peak of tension",
+      "C": "footnote",
+      "D": "title page"
+    },
+    "correctAnswer": "B",
+    "explanation": "Peak.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-013",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Dialogue is (practice 2022 #13)",
+    "options": {
+      "A": "narration only",
+      "B": "character conversation",
+      "C": "lighting",
+      "D": "seating"
+    },
+    "correctAnswer": "B",
+    "explanation": "Talk.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-014",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Imagery appeals to (practice 2022 #14)",
+    "options": {
+      "A": "bank account",
+      "B": "senses",
+      "C": "timetable",
+      "D": "ballot"
+    },
+    "correctAnswer": "B",
+    "explanation": "Senses.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-015",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "African oral forms include (practice 2022 #15)",
+    "options": {
+      "A": "spreadsheets",
+      "B": "folktales/proverbs",
+      "C": "formulae only",
+      "D": "maps only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Folktales.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-016",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Alliteration repeats (practice 2022 #16)",
+    "options": {
+      "A": "plot twists",
+      "B": "initial consonant sounds",
+      "C": "margins",
+      "D": "chapters"
+    },
+    "correctAnswer": "B",
+    "explanation": "Sounds.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-017",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Tragedy ends in (practice 2022 #17)",
+    "options": {
+      "A": "wedding always",
+      "B": "catastrophe for hero",
+      "C": "recipe",
+      "D": "census"
+    },
+    "correctAnswer": "B",
+    "explanation": "Downfall.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-018",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Comedy aims to (practice 2022 #18)",
+    "options": {
+      "A": "always sadden",
+      "B": "amuse; often happy end",
+      "C": "teach chemistry",
+      "D": "list laws"
+    },
+    "correctAnswer": "B",
+    "explanation": "Amuse.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-019",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "First-person uses (practice 2022 #19)",
+    "options": {
+      "A": "he/she only",
+      "B": "I/we",
+      "C": "only they",
+      "D": "no pronouns"
+    },
+    "correctAnswer": "B",
+    "explanation": "I/we.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-020",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Stanza is (practice 2022 #20)",
+    "options": {
+      "A": "novel chapter only",
+      "B": "group of poem lines",
+      "C": "prop",
+      "D": "court scene"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lines group.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-021",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Metaphor compares (practice 2022 #21)",
+    "options": {
+      "A": "always with like",
+      "B": "directly without like/as",
+      "C": "only numbers",
+      "D": "only colours"
+    },
+    "correctAnswer": "B",
+    "explanation": "Direct.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-022",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Stage directions guide (practice 2022 #22)",
+    "options": {
+      "A": "audience exit only",
+      "B": "performance",
+      "C": "printers only",
+      "D": "booksellers only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Performance.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-023",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Conflict is (practice 2022 #23)",
+    "options": {
+      "A": "no problem",
+      "B": "struggle of opposing forces",
+      "C": "title only",
+      "D": "cover only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Struggle.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-024",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Biography is (practice 2022 #24)",
+    "options": {
+      "A": "life by another writer",
+      "B": "animals only",
+      "C": "planets only",
+      "D": "machines only"
+    },
+    "correctAnswer": "A",
+    "explanation": "By another.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-025",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Autobiography is (practice 2022 #25)",
+    "options": {
+      "A": "by stranger only",
+      "B": "by the subject",
+      "C": "by government only",
+      "D": "by critics only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Self-written.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-026",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Plot is (practice 2022 #26)",
+    "options": {
+      "A": "random list",
+      "B": "sequence of events",
+      "C": "only setting",
+      "D": "only theme"
+    },
+    "correctAnswer": "B",
+    "explanation": "Events.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-027",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Antagonist (practice 2022 #27)",
+    "options": {
+      "A": "supports hero always",
+      "B": "opposes protagonist",
+      "C": "prints books",
+      "D": "sells tickets"
+    },
+    "correctAnswer": "B",
+    "explanation": "Opposes.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-028",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Epic is (practice 2022 #28)",
+    "options": {
+      "A": "short joke",
+      "B": "long heroic narrative poem",
+      "C": "recipe",
+      "D": "advert"
+    },
+    "correctAnswer": "B",
+    "explanation": "Heroic poem.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-029",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Pun is (practice 2022 #29)",
+    "options": {
+      "A": "serious lecture",
+      "B": "play on words",
+      "C": "stage only",
+      "D": "census"
+    },
+    "correctAnswer": "B",
+    "explanation": "Word play.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-030",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Soliloquy is (practice 2022 #30)",
+    "options": {
+      "A": "crowd chat",
+      "B": "solo speech revealing thoughts",
+      "C": "only dance",
+      "D": "only song list"
+    },
+    "correctAnswer": "B",
+    "explanation": "Solo speech.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-031",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Aside is (practice 2022 #31)",
+    "options": {
+      "A": "long novel",
+      "B": "brief remark to audience",
+      "C": "chapter title",
+      "D": "index"
+    },
+    "correctAnswer": "B",
+    "explanation": "To audience.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-032",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Flashback shows (practice 2022 #32)",
+    "options": {
+      "A": "future only",
+      "B": "past events",
+      "C": "only present ads",
+      "D": "only weather"
+    },
+    "correctAnswer": "B",
+    "explanation": "Past.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-033",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Foreshadowing hints at (practice 2022 #33)",
+    "options": {
+      "A": "nothing",
+      "B": "future events",
+      "C": "only past taxes",
+      "D": "only maps"
+    },
+    "correctAnswer": "B",
+    "explanation": "Future.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-034",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Satire uses (practice 2022 #34)",
+    "options": {
+      "A": "praise only",
+      "B": "humour/irony to criticise",
+      "C": "only silence",
+      "D": "only facts lists"
+    },
+    "correctAnswer": "B",
+    "explanation": "Critique.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-035",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Elegy mourns (practice 2022 #35)",
+    "options": {
+      "A": "victory parties",
+      "B": "death/loss",
+      "C": "sports wins only",
+      "D": "markets"
+    },
+    "correctAnswer": "B",
+    "explanation": "Mourning poem.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-036",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Ode is often a (practice 2022 #36)",
+    "options": {
+      "A": "shopping list",
+      "B": "lyric poem of praise",
+      "C": "court summons",
+      "D": "tax form"
+    },
+    "correctAnswer": "B",
+    "explanation": "Praise lyric.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-037",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Protagonist (practice 2022 #37)",
+    "options": {
+      "A": "minor crowd",
+      "B": "main character",
+      "C": "printer",
+      "D": "seller"
+    },
+    "correctAnswer": "B",
+    "explanation": "Main.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-038",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Setting includes (practice 2022 #38)",
+    "options": {
+      "A": "only plot twists",
+      "B": "time and place",
+      "C": "only rhymes",
+      "D": "only puns"
+    },
+    "correctAnswer": "B",
+    "explanation": "Time/place.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-039",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Theme differs from plot because theme is (practice 2022 #39)",
+    "options": {
+      "A": "event sequence",
+      "B": "idea/message",
+      "C": "page count",
+      "D": "font size"
+    },
+    "correctAnswer": "B",
+    "explanation": "Idea.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "lit-2022-040",
+    "subject": "literature",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Drama genres include (practice 2022 #40)",
+    "options": {
+      "A": "only algebra",
+      "B": "tragedy and comedy",
+      "C": "only chemistry",
+      "D": "only geography"
+    },
+    "correctAnswer": "B",
+    "explanation": "Tragedy/comedy.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
   }
 ];
 

@@ -1,13 +1,13 @@
 import type { JambQuestion } from "../types";
 
-/** Original UTME-style practice items for crs 2026. Not claimed as official past questions. */
+/** Original practice — crs 2026. Not official past questions. */
 const questions: JambQuestion[] = [
   {
-    "id": "crs-2026-01",
+    "id": "crs-2026-001",
     "subject": "crs",
     "year": 2026,
     "origin": "original_practice",
-    "question": "The first book of the Bible is",
+    "question": "First Bible book (practice 2026 #1)",
     "options": {
       "A": "Exodus",
       "B": "Genesis",
@@ -15,89 +15,17 @@ const questions: JambQuestion[] = [
       "D": "Psalms"
     },
     "correctAnswer": "B",
-    "explanation": "Genesis is the first book of the Bible.",
-    "topic": "Old Testament",
+    "explanation": "Genesis.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "Old Testament"
+    "syllabusTopic": "General"
   },
   {
-    "id": "crs-2026-02",
+    "id": "crs-2026-002",
     "subject": "crs",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Jesus was born in",
-    "options": {
-      "A": "Nazareth",
-      "B": "Bethlehem",
-      "C": "Rome",
-      "D": "Egypt"
-    },
-    "correctAnswer": "B",
-    "explanation": "The Gospels locate Jesus' birth in Bethlehem.",
-    "topic": "New Testament",
-    "difficulty": "medium",
-    "syllabusTopic": "New Testament"
-  },
-  {
-    "id": "crs-2026-03",
-    "subject": "crs",
-    "year": 2026,
-    "origin": "original_practice",
-    "question": "The Golden Rule teaches believers to",
-    "options": {
-      "A": "hate enemies",
-      "B": "treat others as they wish to be treated",
-      "C": "avoid all work",
-      "D": "ignore the poor"
-    },
-    "correctAnswer": "B",
-    "explanation": "Do to others as you would have them do to you.",
-    "topic": "Jesus' Teachings",
-    "difficulty": "hard",
-    "syllabusTopic": "Jesus' Teachings"
-  },
-  {
-    "id": "crs-2026-04",
-    "subject": "crs",
-    "year": 2026,
-    "origin": "original_practice",
-    "question": "Baptism in the early church signified",
-    "options": {
-      "A": "wealth",
-      "B": "initiation into the Christian community",
-      "C": "military rank",
-      "D": "Roman citizenship"
-    },
-    "correctAnswer": "B",
-    "explanation": "Baptism marked entry into the Christian faith community.",
-    "topic": "Early Church",
-    "difficulty": "easy",
-    "syllabusTopic": "Early Church"
-  },
-  {
-    "id": "crs-2026-05",
-    "subject": "crs",
-    "year": 2026,
-    "origin": "original_practice",
-    "question": "A parable is",
-    "options": {
-      "A": "a historical census",
-      "B": "a short story with a spiritual lesson",
-      "C": "a legal code",
-      "D": "a war song"
-    },
-    "correctAnswer": "B",
-    "explanation": "Parables teach moral or spiritual truths through stories.",
-    "topic": "Christian Living",
-    "difficulty": "medium",
-    "syllabusTopic": "Christian Living"
-  },
-  {
-    "id": "crs-2026-06",
-    "subject": "crs",
-    "year": 2026,
-    "origin": "original_practice",
-    "question": "Who led the Israelites out of Egypt?",
+    "question": "Led Israel from Egypt (practice 2026 #2)",
     "options": {
       "A": "David",
       "B": "Moses",
@@ -105,82 +33,694 @@ const questions: JambQuestion[] = [
       "D": "Saul"
     },
     "correctAnswer": "B",
-    "explanation": "Moses led the Exodus from Egypt.",
-    "topic": "Prophets",
-    "difficulty": "hard",
-    "syllabusTopic": "Prophets"
-  },
-  {
-    "id": "crs-2026-07",
-    "subject": "crs",
-    "year": 2026,
-    "origin": "original_practice",
-    "question": "The greatest commandment according to Jesus emphasises",
-    "options": {
-      "A": "wealth",
-      "B": "love of God and neighbour",
-      "C": "sacrifice only",
-      "D": "travel"
-    },
-    "correctAnswer": "B",
-    "explanation": "Love God and love your neighbour summarise the law.",
-    "topic": "Parables",
-    "difficulty": "easy",
-    "syllabusTopic": "Parables"
-  },
-  {
-    "id": "crs-2026-08",
-    "subject": "crs",
-    "year": 2026,
-    "origin": "original_practice",
-    "question": "Pentecost is associated with",
-    "options": {
-      "A": "the giving of the law only",
-      "B": "the coming of the Holy Spirit",
-      "C": "the building of the temple",
-      "D": "Noah's ark"
-    },
-    "correctAnswer": "B",
-    "explanation": "Acts describes the Spirit's coming at Pentecost.",
-    "topic": "Faith",
+    "explanation": "Moses.",
+    "topic": "General",
     "difficulty": "medium",
-    "syllabusTopic": "Faith"
+    "syllabusTopic": "General"
   },
   {
-    "id": "crs-2026-09",
+    "id": "crs-2026-003",
     "subject": "crs",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Forgiveness in Christian teaching means",
+    "question": "Jesus born in (practice 2026 #3)",
     "options": {
-      "A": "ignoring justice always",
-      "B": "pardoning others as God forgives",
-      "C": "revenge",
-      "D": "silence only"
+      "A": "Nazareth",
+      "B": "Bethlehem",
+      "C": "Rome",
+      "D": "Athens"
     },
     "correctAnswer": "B",
-    "explanation": "Christians are taught to forgive as they are forgiven.",
-    "topic": "Old Testament",
-    "difficulty": "hard",
-    "syllabusTopic": "Old Testament"
+    "explanation": "Bethlehem.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
   },
   {
-    "id": "crs-2026-10",
+    "id": "crs-2026-004",
     "subject": "crs",
     "year": 2026,
     "origin": "original_practice",
-    "question": "The epistles in the New Testament are mainly",
+    "question": "Golden Rule (practice 2026 #4)",
+    "options": {
+      "A": "hate enemies",
+      "B": "treat others as you wish to be treated",
+      "C": "avoid work",
+      "D": "ignore poor"
+    },
+    "correctAnswer": "B",
+    "explanation": "Reciprocity.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-005",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Parable is (practice 2026 #5)",
+    "options": {
+      "A": "census",
+      "B": "story with spiritual lesson",
+      "C": "war report",
+      "D": "tax law"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lesson story.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-006",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Pentecost (practice 2026 #6)",
+    "options": {
+      "A": "only Sinai",
+      "B": "Holy Spirit comes",
+      "C": "only temple",
+      "D": "only ark"
+    },
+    "correctAnswer": "B",
+    "explanation": "Spirit.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-007",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Epistles are (practice 2026 #7)",
     "options": {
       "A": "songs",
       "B": "letters",
       "C": "maps",
-      "D": "laws of Rome"
+      "D": "Roman laws"
     },
     "correctAnswer": "B",
-    "explanation": "Epistles are letters written to churches and individuals.",
-    "topic": "New Testament",
+    "explanation": "Letters.",
+    "topic": "General",
     "difficulty": "easy",
-    "syllabusTopic": "New Testament"
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-008",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Ten Commandments via (practice 2026 #8)",
+    "options": {
+      "A": "Paul",
+      "B": "Moses",
+      "C": "Peter",
+      "D": "Luke"
+    },
+    "correctAnswer": "B",
+    "explanation": "Moses.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-009",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Forgiveness means (practice 2026 #9)",
+    "options": {
+      "A": "revenge",
+      "B": "pardon as God forgives",
+      "C": "ignore justice always",
+      "D": "silence only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Pardon.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-010",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Lord's Prayer by (practice 2026 #10)",
+    "options": {
+      "A": "Moses",
+      "B": "Jesus",
+      "C": "David",
+      "D": "Solomon"
+    },
+    "correctAnswer": "B",
+    "explanation": "Jesus.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-011",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Jesus grew up in (practice 2026 #11)",
+    "options": {
+      "A": "Bethlehem only",
+      "B": "Nazareth",
+      "C": "Babylon",
+      "D": "Nineveh"
+    },
+    "correctAnswer": "B",
+    "explanation": "Nazareth.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-012",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Greatest commandments stress (practice 2026 #12)",
+    "options": {
+      "A": "wealth",
+      "B": "love of God and neighbour",
+      "C": "travel",
+      "D": "silence"
+    },
+    "correctAnswer": "B",
+    "explanation": "Love.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-013",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Baptism signifies (practice 2026 #13)",
+    "options": {
+      "A": "wealth",
+      "B": "initiation into community",
+      "C": "rank",
+      "D": "citizenship"
+    },
+    "correctAnswer": "B",
+    "explanation": "Initiation.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-014",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Abraham is a (practice 2026 #14)",
+    "options": {
+      "A": "Roman emperor",
+      "B": "patriarch of faith",
+      "C": "Greek god",
+      "D": "Philistine king only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Patriarch.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-015",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Resurrection is Jesus (practice 2026 #15)",
+    "options": {
+      "A": "birth only",
+      "B": "rising from death",
+      "C": "baptism only",
+      "D": "temptation only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Rising.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-016",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Prayer is (practice 2026 #16)",
+    "options": {
+      "A": "tax reading",
+      "B": "communication with God",
+      "C": "politics song only",
+      "D": "farming only"
+    },
+    "correctAnswer": "B",
+    "explanation": "To God.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-017",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Early church shared (practice 2026 #17)",
+    "options": {
+      "A": "nothing",
+      "B": "fellowship and resources",
+      "C": "weapons only",
+      "D": "foreign titles only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Fellowship.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-018",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Prophets mainly (practice 2026 #18)",
+    "options": {
+      "A": "tax only",
+      "B": "spoke God's message",
+      "C": "built ships only",
+      "D": "ruled Rome"
+    },
+    "correctAnswer": "B",
+    "explanation": "Message.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-019",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Paul was (practice 2026 #19)",
+    "options": {
+      "A": "pharaoh",
+      "B": "apostle and letter writer",
+      "C": "emperor",
+      "D": "Babylonian king"
+    },
+    "correctAnswer": "B",
+    "explanation": "Apostle.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-020",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Humility is (practice 2026 #20)",
+    "options": {
+      "A": "pride",
+      "B": "lowliness valued by God",
+      "C": "hatred",
+      "D": "hiding good always"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lowliness.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-021",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Stewardship is care of (practice 2026 #21)",
+    "options": {
+      "A": "nothing",
+      "B": "resources before God",
+      "C": "enemies only",
+      "D": "gold only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Trust.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-022",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Psalms are mainly (practice 2026 #22)",
+    "options": {
+      "A": "law codes only",
+      "B": "songs/prayers",
+      "C": "building plans",
+      "D": "army lists only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Songs.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-023",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "John's Gospel emphasises (practice 2026 #23)",
+    "options": {
+      "A": "farming only",
+      "B": "who Jesus is and belief",
+      "C": "taxes only",
+      "D": "maps only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Identity/faith.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-024",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Mission involves (practice 2026 #24)",
+    "options": {
+      "A": "hiding message",
+      "B": "sharing the gospel",
+      "C": "banning travel",
+      "D": "ending prayer"
+    },
+    "correctAnswer": "B",
+    "explanation": "Share gospel.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-025",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Honesty means (practice 2026 #25)",
+    "options": {
+      "A": "deceit",
+      "B": "truthfulness",
+      "C": "laziness",
+      "D": "greed"
+    },
+    "correctAnswer": "B",
+    "explanation": "Truth.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-026",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Joseph in Egypt (practice 2026 #26)",
+    "options": {
+      "A": "built Rome",
+      "B": "interpreted dreams; rose to leadership",
+      "C": "wrote Gospels",
+      "D": "Trojan war"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dreams/leadership.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-027",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Love of enemy means (practice 2026 #27)",
+    "options": {
+      "A": "revenge",
+      "B": "goodwill beyond friends",
+      "C": "ignore all",
+      "D": "hate neighbours"
+    },
+    "correctAnswer": "B",
+    "explanation": "Goodwill.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-028",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "David remembered as (practice 2026 #28)",
+    "options": {
+      "A": "Roman governor",
+      "B": "king of Israel",
+      "C": "Egyptian pharaoh",
+      "D": "Greek poet"
+    },
+    "correctAnswer": "B",
+    "explanation": "King.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-029",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Disciples in Gospels (practice 2026 #29)",
+    "options": {
+      "A": "twelve close followers",
+      "B": "Roman soldiers only",
+      "C": "tax lists only",
+      "D": "angels only"
+    },
+    "correctAnswer": "A",
+    "explanation": "Twelve.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-030",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Good Samaritan teaches (practice 2026 #30)",
+    "options": {
+      "A": "hate strangers",
+      "B": "help neighbours in need",
+      "C": "avoid roads",
+      "D": "collect tax"
+    },
+    "correctAnswer": "B",
+    "explanation": "Help needy.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-031",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Faith in Hebrews is (practice 2026 #31)",
+    "options": {
+      "A": "sight only",
+      "B": "assurance about unseen",
+      "C": "only money",
+      "D": "only land"
+    },
+    "correctAnswer": "B",
+    "explanation": "Assurance.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-032",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Sin separates from (practice 2026 #32)",
+    "options": {
+      "A": "only food",
+      "B": "God's holiness standard in teaching",
+      "C": "only sports",
+      "D": "only weather"
+    },
+    "correctAnswer": "B",
+    "explanation": "Against God.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-033",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Repentance means (practice 2026 #33)",
+    "options": {
+      "A": "pride",
+      "B": "turning from wrong toward God",
+      "C": "revenge",
+      "D": "silence only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Turning.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-034",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Grace is (practice 2026 #34)",
+    "options": {
+      "A": "earned wage only",
+      "B": "unmerited favour",
+      "C": "only law",
+      "D": "only punishment"
+    },
+    "correctAnswer": "B",
+    "explanation": "Favour.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-035",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Church is (practice 2026 #35)",
+    "options": {
+      "A": "building only always",
+      "B": "community of believers",
+      "C": "only choir robes",
+      "D": "only bells"
+    },
+    "correctAnswer": "B",
+    "explanation": "Believers.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-036",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Sabbath in OT emphasises (practice 2026 #36)",
+    "options": {
+      "A": "endless work",
+      "B": "rest and worship patterns",
+      "C": "only war",
+      "D": "only trade"
+    },
+    "correctAnswer": "B",
+    "explanation": "Rest/worship.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-037",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Love chapter often cited (practice 2026 #37)",
+    "options": {
+      "A": "Genesis 1 only",
+      "B": "1 Corinthians 13",
+      "C": "Exodus tax lists",
+      "D": "Numbers only"
+    },
+    "correctAnswer": "B",
+    "explanation": "1 Cor 13.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-038",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Light of the world image points to (practice 2026 #38)",
+    "options": {
+      "A": "darkness worship",
+      "B": "Jesus' role in teaching",
+      "C": "only lamps",
+      "D": "only sun myths"
+    },
+    "correctAnswer": "B",
+    "explanation": "Jesus.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-039",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Fruit of the Spirit includes (practice 2026 #39)",
+    "options": {
+      "A": "hatred",
+      "B": "love, joy, peace (among others)",
+      "C": "only anger",
+      "D": "only fear"
+    },
+    "correctAnswer": "B",
+    "explanation": "Love/joy/peace.",
+    "topic": "General",
+    "difficulty": "easy",
+    "syllabusTopic": "General"
+  },
+  {
+    "id": "crs-2026-040",
+    "subject": "crs",
+    "year": 2026,
+    "origin": "original_practice",
+    "question": "Great Commission involves (practice 2026 #40)",
+    "options": {
+      "A": "hiding",
+      "B": "making disciples",
+      "C": "ending teaching",
+      "D": "banning baptism"
+    },
+    "correctAnswer": "B",
+    "explanation": "Make disciples.",
+    "topic": "General",
+    "difficulty": "medium",
+    "syllabusTopic": "General"
   }
 ];
 

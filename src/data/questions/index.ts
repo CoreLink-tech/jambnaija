@@ -116,6 +116,18 @@ export function filterQuestions(filter: QuestionFilter = {}): JambQuestion[] {
   });
 }
 
+function dedupeByStem(items: JambQuestion[]): JambQuestion[] {
+  const seen = new Set<string>();
+  const out: JambQuestion[] = [];
+  for (const q of items) {
+    const key = q.question.trim().toLowerCase().replace(/\s+/g, " ");
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(q);
+  }
+  return out;
+}
+
 /** Fisher–Yates shuffle copy */
 export function shuffle<T>(items: T[]): T[] {
   const arr = [...items];
@@ -141,13 +153,15 @@ export function selectQuestions(options: {
   yearTo?: number;
   origin?: QuestionOrigin | "all";
 }): { questions: JambQuestion[]; shortage: string | null } {
-  const pool = filterQuestions({
-    subjects: options.subjects,
-    years: options.years,
-    yearFrom: options.yearFrom,
-    yearTo: options.yearTo,
-    origin: options.origin,
-  });
+  const pool = dedupeByStem(
+    filterQuestions({
+      subjects: options.subjects,
+      years: options.years,
+      yearFrom: options.yearFrom,
+      yearTo: options.yearTo,
+      origin: options.origin,
+    }),
+  );
 
   if (pool.length === 0) {
     return { questions: [], shortage: "No questions match this configuration." };

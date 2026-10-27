@@ -9,6 +9,11 @@ import {
 describe("question bank", () => {
   const all = getAllQuestions();
 
+  it("has unique question stems", () => {
+    const stems = all.map((q) => q.question.trim().toLowerCase());
+    expect(new Set(stems).size).toBe(stems.length);
+  });
+
   it("has unique ids", () => {
     const ids = all.map((q) => q.id);
     expect(new Set(ids).size).toBe(ids.length);
