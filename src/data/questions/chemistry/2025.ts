@@ -1,4 +1,4 @@
-import type { JambQuestion } from "../../types";
+import type { JambQuestion } from "../types";
 
 /** Original UTME-style practice items for chemistry 2025. Not claimed as official past questions. */
 const questions: JambQuestion[] = [
