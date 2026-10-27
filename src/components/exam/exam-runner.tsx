@@ -24,6 +24,9 @@ const SUBJECT_LABELS: Record<string, string> = {
   physics: "Physics",
   chemistry: "Chemistry",
   biology: "Biology",
+  government: "Government",
+  literature: "Literature in English",
+  crs: "Christian Religious Studies",
 };
 
 function formatRemaining(ms: number): string {

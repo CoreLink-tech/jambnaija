@@ -44,6 +44,9 @@ async function ensureSubjectId(primary: JambSubject): Promise<string> {
     physics: "Physics",
     chemistry: "Chemistry",
     biology: "Biology",
+    government: "Government",
+    literature: "Literature in English",
+    crs: "Christian Religious Studies",
   };
   const name = nameMap[primary];
   const existing = await db.select().from(subjects).where(eq(subjects.name, name)).limit(1);
@@ -71,6 +74,9 @@ export async function startExamSession(raw: unknown) {
   const { questions, shortage } = selectQuestions({
     subjects: input.subjects,
     count: input.count,
+    countsPerSubject: input.countsPerSubject as
+      | Partial<Record<JambSubject, number>>
+      | undefined,
     years: input.years,
     yearFrom: input.yearFrom,
     yearTo: input.yearTo,

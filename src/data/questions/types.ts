@@ -5,7 +5,10 @@ export type JambSubject =
   | "mathematics"
   | "physics"
   | "chemistry"
-  | "biology";
+  | "biology"
+  | "government"
+  | "literature"
+  | "crs";
 
 export type AnswerKey = "A" | "B" | "C" | "D";
 
@@ -47,13 +50,29 @@ export const SUBJECT_META: Record<
   physics: { name: "Physics", short: "Physics", defaultCount: 40 },
   chemistry: { name: "Chemistry", short: "Chem", defaultCount: 40 },
   biology: { name: "Biology", short: "Bio", defaultCount: 40 },
+  government: { name: "Government", short: "Govt", defaultCount: 40 },
+  literature: { name: "Literature in English", short: "Lit", defaultCount: 40 },
+  crs: { name: "Christian Religious Studies", short: "CRS", defaultCount: 40 },
 };
 
 export const YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026] as const;
+
 export const SUBJECTS: JambSubject[] = [
   "english",
   "mathematics",
   "physics",
   "chemistry",
   "biology",
+  "government",
+  "literature",
+  "crs",
 ];
+
+/** Official-style per-subject allocation used for Full practice */
+export function fullPracticeCount(subject: JambSubject): number {
+  return SUBJECT_META[subject].defaultCount;
+}
+
+export function fullPracticeTotal(subjects: JambSubject[] = SUBJECTS): number {
+  return subjects.reduce((sum, s) => sum + fullPracticeCount(s), 0);
+}
