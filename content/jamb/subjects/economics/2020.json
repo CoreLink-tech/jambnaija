@@ -1,0 +1,2010 @@
+{
+  "subjectSlug": "economics",
+  "exam": "JAMB",
+  "source": "compiled-past-questions",
+  "verificationStatus": "unverified",
+  "notes": "JAMB Economics 2020 — 100 questions compiled from verified sources + style-matched items. Not official JAMB papers.",
+  "year": 2020,
+  "questions": [
+    {
+      "contentId": "eco-2020-q001",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Scarcity in economics means?",
+      "options": [
+        "Human wants are limitless",
+        "The economy has very few resources",
+        "The economy can scarcely produce anything",
+        "Resources are limited in relation to wants"
+      ],
+      "answerIndex": 3,
+      "explanation": "Scarcity refers to the gap between limited resources and theoretically limitless wants。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q002",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Economics is often described as a social science because?",
+      "options": [
+        "Laboratory experiments are performed",
+        "It makes use of controlled experiments",
+        "It uses scientific methods to explain an observed phenomenon and predict future events",
+        "It makes use of fieldwork"
+      ],
+      "answerIndex": 2,
+      "explanation": "Economics uses scientific methods to build theories explaining economic behaviour。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q003",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "In economic life, the choice among alternatives depends on the?",
+      "options": [
+        "Income of the decision maker",
+        "Scarcity of resources",
+        "The scale of preference of the decision-maker",
+        "Status of the decision maker"
+      ],
+      "answerIndex": 2,
+      "explanation": "Choice depends on the individual's scale of preference, which ranks wants by importance。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q004",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Economic growth is different from economic development because economic growth?",
+      "options": [
+        "Describes expansion and changes",
+        "Is not measurable",
+        "Describes expansion and not change",
+        "Is not objective"
+      ],
+      "answerIndex": 2,
+      "explanation": "Growth is quantitative increase in output; development involves qualitative positive changes in living standards。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q005",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Efficiency in production means?",
+      "options": [
+        "Reducing the size of the work force",
+        "Producing a given output with the lowest cost combination of factors of production",
+        "Adoption of capital intensive technology",
+        "Increasing the quantity of the fixed factors of production"
+      ],
+      "answerIndex": 1,
+      "explanation": "Efficiency means achieving output at minimum cost of factor combination。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q006",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The fundamental economic problem arises because?",
+      "options": [
+        "Resources are unlimited and wants are limited",
+        "Resources are limited and wants are unlimited",
+        "Government controls all resources",
+        "Money is scarce"
+      ],
+      "answerIndex": 1,
+      "explanation": "Scarcity of resources relative to unlimited wants is the basic economic problem。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q007",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Opportunity cost is best defined as?",
+      "options": [
+        "The money cost of a good",
+        "The next best alternative forgone",
+        "The total cost of production",
+        "The cost of producing one more unit"
+      ],
+      "answerIndex": 1,
+      "explanation": "Opportunity cost is the value of the next best alternative sacrificed。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q008",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A production possibility curve is concave to the origin because?",
+      "options": [
+        "Resources are equally efficient in all uses",
+        "Opportunity cost increases as more of one good is produced",
+        "Technology is constant",
+        "Demand is unlimited"
+      ],
+      "answerIndex": 1,
+      "explanation": "Increasing opportunity cost makes the PPC bow outward (concave)。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q009",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Which of the following is a normative economic statement?",
+      "options": [
+        "The inflation rate is 12%",
+        "Unemployment rose last year",
+        "Government should reduce taxes",
+        "Price of rice increased"
+      ],
+      "answerIndex": 2,
+      "explanation": "Normative statements express value judgments (“should”)。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q010",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A positive economic statement is?",
+      "options": [
+        "The poor should be taxed less",
+        "An increase in price reduces quantity demanded",
+        "Government ought to subsidise agriculture",
+        "The rich should pay more tax"
+      ],
+      "answerIndex": 1,
+      "explanation": "Positive statements are factual and testable。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q011",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The three basic questions of economics are?",
+      "options": [
+        "What, how, and for whom to produce",
+        "When, where, and why to produce",
+        "Who, which, and what to produce",
+        "How much, how often, and how long"
+      ],
+      "answerIndex": 0,
+      "explanation": "Every economy must decide what to produce, how to produce, and for whom。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q012",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A free market economy solves the allocation problem mainly through?",
+      "options": [
+        "Government planning",
+        "The price mechanism",
+        "Custom and tradition",
+        "Central bank directives"
+      ],
+      "answerIndex": 1,
+      "explanation": "In a free market, prices allocate scarce resources。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q013",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A mixed economy is one in which?",
+      "options": [
+        "Only the government owns resources",
+        "Only private individuals own resources",
+        "Both government and private individuals participate in production",
+        "There is no market"
+      ],
+      "answerIndex": 2,
+      "explanation": "A mixed economy combines public and private sectors。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q014",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Utility in economics means?",
+      "options": [
+        "The usefulness of a good",
+        "The satisfaction derived from consuming a good",
+        "The price of a good",
+        "The cost of producing a good"
+      ],
+      "answerIndex": 1,
+      "explanation": "Utility is the satisfaction obtained from consumption。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q015",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The law of diminishing marginal utility states that as consumption of a commodity increases continuously?",
+      "options": [
+        "Total utility must fall",
+        "Marginal utility must fall",
+        "Marginal utility may rise",
+        "Marginal utility may fall even though total utility may be rising"
+      ],
+      "answerIndex": 1,
+      "explanation": "Additional satisfaction from each extra unit eventually declines。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q016",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The law of demand states that, all things being equal, as price rises?",
+      "options": [
+        "Quantity demanded rises",
+        "Quantity demanded falls",
+        "Demand curve shifts right",
+        "Supply falls"
+      ],
+      "answerIndex": 1,
+      "explanation": "Price and quantity demanded are inversely related。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q017",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A movement along a demand curve is caused by a change in?",
+      "options": [
+        "Income",
+        "Taste",
+        "Price of the commodity",
+        "Population"
+      ],
+      "answerIndex": 2,
+      "explanation": "Only a change in the good's own price causes movement along the curve。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q018",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "An increase in consumer income will shift the demand curve for a normal good?",
+      "options": [
+        "To the left",
+        "To the right",
+        "Along the curve",
+        "Downward"
+      ],
+      "answerIndex": 1,
+      "explanation": "Higher income increases demand for normal goods。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q019",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "If the price of a commodity falls and the quantity purchased does not rise, the commodity can be described as?",
+      "options": [
+        "Scarce",
+        "Normal",
+        "Superior",
+        "Inferior"
+      ],
+      "answerIndex": 3,
+      "explanation": "For an inferior good, demand does not rise (and may fall) when price falls。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q020",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "If the quantity demanded of a commodity increases from 20 to 30 when price rises from N4 to N5, the elasticity of demand is?",
+      "options": [
+        "0.5",
+        "1",
+        "2",
+        "4"
+      ],
+      "answerIndex": 2,
+      "explanation": "%ΔQ = (30−20)/20 = 50%; %ΔP = (5−4)/4 = 25%. Elasticity = 50/25 = 2。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q021",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A demand curve that is perfectly inelastic is?",
+      "options": [
+        "Horizontal",
+        "Vertical",
+        "Downward sloping",
+        "Upward sloping"
+      ],
+      "answerIndex": 1,
+      "explanation": "Quantity demanded does not change with price, so the curve is vertical。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q022",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "In order to raise more revenue, government should impose higher taxes on goods whose demand is?",
+      "options": [
+        "Elastic",
+        "Inelastic",
+        "Perfectly elastic",
+        "Unitary elastic"
+      ],
+      "answerIndex": 1,
+      "explanation": "For inelastic goods, quantity purchased falls little when price rises due to tax, so revenue rises。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q023",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The law of supply states that as price rises?",
+      "options": [
+        "Quantity supplied falls",
+        "Quantity supplied rises",
+        "Supply curve shifts left",
+        "Demand falls"
+      ],
+      "answerIndex": 1,
+      "explanation": "Price and quantity supplied are directly related。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q024",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A rise in the cost of raw materials will cause the supply curve to?",
+      "options": [
+        "Shift right",
+        "Shift left",
+        "Remain unchanged",
+        "Become vertical"
+      ],
+      "answerIndex": 1,
+      "explanation": "Higher production costs reduce supply at every price。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q025",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Equilibrium price is the price at which?",
+      "options": [
+        "Demand exceeds supply",
+        "Supply exceeds demand",
+        "Quantity demanded equals quantity supplied",
+        "Government fixes price"
+      ],
+      "answerIndex": 2,
+      "explanation": "Market equilibrium occurs where demand and supply curves intersect。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q026",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A price floor set above equilibrium will result in?",
+      "options": [
+        "Shortage",
+        "Surplus",
+        "Equilibrium",
+        "Increased demand"
+      ],
+      "answerIndex": 1,
+      "explanation": "At a price above equilibrium, quantity supplied exceeds quantity demanded, creating a surplus。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q027",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A price ceiling set below equilibrium will result in?",
+      "options": [
+        "Surplus",
+        "Shortage",
+        "Equilibrium",
+        "Decreased supply"
+      ],
+      "answerIndex": 1,
+      "explanation": "At a price below equilibrium, quantity demanded exceeds quantity supplied, creating a shortage。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q028",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Cross elasticity of demand measures the responsiveness of demand for one good to a change in?",
+      "options": [
+        "Its own price",
+        "Income",
+        "Price of another good",
+        "Supply"
+      ],
+      "answerIndex": 2,
+      "explanation": "Cross elasticity relates demand for good X to price changes of good Y。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q029",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "If two goods are substitutes, their cross elasticity of demand is?",
+      "options": [
+        "Negative",
+        "Zero",
+        "Positive",
+        "Infinite"
+      ],
+      "answerIndex": 2,
+      "explanation": "A rise in the price of one substitute increases demand for the other, giving positive cross elasticity。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q030",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Income elasticity of demand for an inferior good is?",
+      "options": [
+        "Positive",
+        "Negative",
+        "Zero",
+        "Greater than one"
+      ],
+      "answerIndex": 1,
+      "explanation": "Demand for inferior goods falls as income rises, giving negative income elasticity。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q031",
+      "topicName": "Market Structure",
+      "topicSlug": "market-structure",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "What form of market is found in imperfect competition where there are few buyers and many sellers?",
+      "options": [
+        "Monopoly",
+        "Oligopoly",
+        "Duopoly",
+        "Oligopsony"
+      ],
+      "answerIndex": 3,
+      "explanation": "Oligopsony is a market with few buyers and many sellers。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q032",
+      "topicName": "Market Structure",
+      "topicSlug": "market-structure",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A market structure with a single seller is?",
+      "options": [
+        "Perfect competition",
+        "Monopoly",
+        "Oligopoly",
+        "Monopolistic competition"
+      ],
+      "answerIndex": 1,
+      "explanation": "Monopoly is a single-seller market with no close substitutes。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q033",
+      "topicName": "Market Structure",
+      "topicSlug": "market-structure",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Pricing and output decisions of sellers are highly interdependent in markets known as?",
+      "options": [
+        "Monopoly",
+        "Oligopoly",
+        "Monopolistic competition",
+        "Perfect competition"
+      ],
+      "answerIndex": 1,
+      "explanation": "In oligopoly, each firm must consider rivals' reactions。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q034",
+      "topicName": "Market Structure",
+      "topicSlug": "market-structure",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "One characteristic of perfect competition is?",
+      "options": [
+        "Product differentiation",
+        "Advertising",
+        "Many buyers and sellers",
+        "Barriers to entry"
+      ],
+      "answerIndex": 2,
+      "explanation": "Perfect competition features many buyers and sellers, homogeneous products, and free entry。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q035",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Which of the following is NOT a characteristic of perfect competition?",
+      "options": [
+        "Supply and demand are equal",
+        "Products are identical",
+        "There is perfect knowledge",
+        "There is no advertising"
+      ],
+      "answerIndex": 0,
+      "explanation": "Supply and demand equality is not a defining feature; the market price is determined by their interaction。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q036",
+      "topicName": "Market Structure",
+      "topicSlug": "market-structure",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "In monopolistic competition, firms compete mainly through?",
+      "options": [
+        "Price only",
+        "Product differentiation",
+        "Collusion",
+        "Government regulation"
+      ],
+      "answerIndex": 1,
+      "explanation": "Product differentiation (branding, quality) is the key form of competition。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q037",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A firm is at its optimum size when?",
+      "options": [
+        "It has a motive to increase output",
+        "It produces the greatest output at minimum cost",
+        "Marginal cost equals marginal revenue",
+        "Marginal cost is less than marginal revenue"
+      ],
+      "answerIndex": 1,
+      "explanation": "Optimum size is where output is maximised at minimum average cost。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q038",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A monopolist maximises profit where?",
+      "options": [
+        "Price equals marginal cost",
+        "Marginal cost equals marginal revenue",
+        "Average cost is falling",
+        "Total revenue is maximum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Profit maximisation occurs where MC = MR for all firms。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q039",
+      "topicName": "Market Structure",
+      "topicSlug": "market-structure",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A natural monopoly arises mainly because of?",
+      "options": [
+        "Government legislation",
+        "Ownership of a key raw material",
+        "Large economies of scale",
+        "Product differentiation"
+      ],
+      "answerIndex": 2,
+      "explanation": "High fixed costs make a single firm the most efficient producer。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q040",
+      "topicName": "Market Structure",
+      "topicSlug": "market-structure",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Price discrimination is possible only when?",
+      "options": [
+        "The market is perfectly competitive",
+        "The seller can separate markets and prevent resale",
+        "All buyers have identical demand",
+        "Government fixes prices"
+      ],
+      "answerIndex": 1,
+      "explanation": "Price discrimination requires market segmentation and no arbitrage。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q041",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "If aggregate income is N500 and aggregate consumption is N400, the average propensity to consume is?",
+      "options": [
+        "0.20",
+        "0.80",
+        "1.25",
+        "2.00"
+      ],
+      "answerIndex": 1,
+      "explanation": "APC = C/Y = 400/500 = 0.80。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q042",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The group of unemployed persons who are physically handicapped is generally classified as?",
+      "options": [
+        "Frictional",
+        "Cyclical",
+        "Residual",
+        "Hidden"
+      ],
+      "answerIndex": 2,
+      "explanation": "Residual unemployment covers those unable to work due to disability or personal characteristics。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q043",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "GDP differs from GNP because GDP?",
+      "options": [
+        "Includes net income from abroad",
+        "Excludes net income from abroad",
+        "Is always larger than GNP",
+        "Measures only government output"
+      ],
+      "answerIndex": 1,
+      "explanation": "GDP measures output within a country's borders; GNP adds net factor income from abroad。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q044",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The formula for national income by expenditure approach is?",
+      "options": [
+        "C + I + G + (X − M)",
+        "C + I + G",
+        "C + S + T",
+        "Y = C + I"
+      ],
+      "answerIndex": 0,
+      "explanation": "Expenditure approach sums consumption, investment, government spending, and net exports。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q045",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Disposable income is?",
+      "options": [
+        "Income before tax",
+        "Income after tax",
+        "National income",
+        "Personal saving"
+      ],
+      "answerIndex": 1,
+      "explanation": "Disposable income = personal income − direct taxes。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q046",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The multiplier is defined as?",
+      "options": [
+        "Change in income divided by change in investment",
+        "Change in investment divided by change in income",
+        "Total income divided by total investment",
+        "Saving divided by income"
+      ],
+      "answerIndex": 0,
+      "explanation": "Multiplier k = ΔY/ΔI = 1/(1−MPC)。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q047",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "If the marginal propensity to consume is 0.8, the multiplier is?",
+      "options": [
+        "1.25",
+        "2",
+        "4",
+        "5"
+      ],
+      "answerIndex": 3,
+      "explanation": "k = 1/(1−0.8) = 1/0.2 = 5。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q048",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Inflation is best defined as?",
+      "options": [
+        "A general rise in the price level",
+        "A fall in output",
+        "An increase in unemployment",
+        "A rise in the value of money"
+      ],
+      "answerIndex": 0,
+      "explanation": "Inflation is a sustained increase in the general price level。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q049",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Which of the following is likely to be inflationary?",
+      "options": [
+        "Taxes increase",
+        "Increase in unemployment",
+        "Budget surplus",
+        "Wages increase"
+      ],
+      "answerIndex": 3,
+      "explanation": "Wage increases raise production costs and can push up prices。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q050",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Demand-pull inflation is caused by?",
+      "options": [
+        "Rising production costs",
+        "Excess aggregate demand over supply",
+        "Government price controls",
+        "Fall in money supply"
+      ],
+      "answerIndex": 1,
+      "explanation": "Demand-pull inflation occurs when demand outstrips supply。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q051",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Cost-push inflation is caused by?",
+      "options": [
+        "Excess demand",
+        "Rising costs of production",
+        "High interest rates",
+        "Budget surplus"
+      ],
+      "answerIndex": 1,
+      "explanation": "Higher input costs push prices upward。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q052",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Inflation is likely to benefit?",
+      "options": [
+        "Creditors",
+        "Debtors",
+        "Fixed-income earners",
+        "Pensioners"
+      ],
+      "answerIndex": 1,
+      "explanation": "Debtors repay with money of lower real value during inflation。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q053",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A budget with projected revenue in excess of expenditure is?",
+      "options": [
+        "Balanced",
+        "Surplus",
+        "Deficit",
+        "Inflationary"
+      ],
+      "answerIndex": 1,
+      "explanation": "Revenue > expenditure = surplus budget。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q054",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A budget deficit is best financed by?",
+      "options": [
+        "Increasing imports",
+        "Borrowing",
+        "Reducing taxes",
+        "Increasing consumption"
+      ],
+      "answerIndex": 1,
+      "explanation": "Government borrows through bonds or external loans to cover deficits。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q055",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Fiscal policy involves the use of?",
+      "options": [
+        "Interest rates and money supply",
+        "Government spending and taxation",
+        "Exchange rates",
+        "Price controls"
+      ],
+      "answerIndex": 1,
+      "explanation": "Fiscal policy is government's use of taxation and spending。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q056",
+      "topicName": "Money and Banking",
+      "topicSlug": "money-and-banking",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A major factor affecting the value of money is the?",
+      "options": [
+        "Price level",
+        "Banking habits",
+        "Transaction motive",
+        "Divisible nature of money"
+      ],
+      "answerIndex": 0,
+      "explanation": "Changes in the general price level directly affect the purchasing power of money。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q057",
+      "topicName": "Money and Banking",
+      "topicSlug": "money-and-banking",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The Nigerian Bank for Commerce and Industry is?",
+      "options": [
+        "A commercial bank",
+        "A development bank",
+        "An industrial bank",
+        "A merchant bank"
+      ],
+      "answerIndex": 1,
+      "explanation": "It is a development finance institution providing medium- and long-term capital。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q058",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Which of the following is used by the central bank to control the rate of interest?",
+      "options": [
+        "Bill of exchange",
+        "Banker's order",
+        "Fixed deposit account",
+        "Open market operation"
+      ],
+      "answerIndex": 3,
+      "explanation": "Buying/selling government securities influences money supply and interest rates。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q059",
+      "topicName": "Money and Banking",
+      "topicSlug": "money-and-banking",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Fiduciary issue is that part of?",
+      "options": [
+        "Notes backed entirely by gold",
+        "Currency not negotiable",
+        "Notes not backed by gold",
+        "Currency officially issued"
+      ],
+      "answerIndex": 2,
+      "explanation": "Fiduciary issue is currency issued without full gold backing。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q060",
+      "topicName": "Money and Banking",
+      "topicSlug": "money-and-banking",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The most important attribute of money is?",
+      "options": [
+        "Portability",
+        "Durability",
+        "Divisibility",
+        "General acceptability"
+      ],
+      "answerIndex": 3,
+      "explanation": "General acceptability is the essential quality of money。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q061",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Money becomes a poor store of value during?",
+      "options": [
+        "Deflation",
+        "Inflation",
+        "Recession",
+        "Boom"
+      ],
+      "answerIndex": 1,
+      "explanation": "Inflation erodes the purchasing power of money over time。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q062",
+      "topicName": "Money and Banking",
+      "topicSlug": "money-and-banking",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The three motives for holding money according to Keynes are?",
+      "options": [
+        "Transaction, precautionary, speculative",
+        "Saving, investing, spending",
+        "Consumption, investment, government",
+        "Import, export, exchange"
+      ],
+      "answerIndex": 0,
+      "explanation": "Keynes identified transaction, precautionary, and speculative motives。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q063",
+      "topicName": "Money and Banking",
+      "topicSlug": "money-and-banking",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The apex bank in Nigeria is the?",
+      "options": [
+        "First Bank",
+        "Central Bank of Nigeria",
+        "Bank of Industry",
+        "Nigerian Stock Exchange"
+      ],
+      "answerIndex": 1,
+      "explanation": "CBN is the apex monetary authority。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q064",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Commercial banks create money through?",
+      "options": [
+        "Printing currency",
+        "Credit creation",
+        "Minting coins",
+        "Issuing treasury bills"
+      ],
+      "answerIndex": 1,
+      "explanation": "Banks create demand deposits by lending out a fraction of deposits。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q065",
+      "topicName": "Money and Banking",
+      "topicSlug": "money-and-banking",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The cash reserve ratio is the?",
+      "options": [
+        "Interest rate charged by CBN",
+        "Proportion of deposits banks must keep as reserves",
+        "Ratio of loans to deposits",
+        "Rate of exchange"
+      ],
+      "answerIndex": 1,
+      "explanation": "It is the minimum reserve fraction required by the central bank。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q066",
+      "topicName": "Money and Banking",
+      "topicSlug": "money-and-banking",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A banker's order is a?",
+      "options": [
+        "Cheque",
+        "Standing instruction to pay a fixed sum regularly",
+        "Bill of exchange",
+        "Promissory note"
+      ],
+      "answerIndex": 1,
+      "explanation": "It instructs the bank to make regular fixed payments。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q067",
+      "topicName": "Money and Banking",
+      "topicSlug": "money-and-banking",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The money market deals in?",
+      "options": [
+        "Long-term securities",
+        "Short-term funds",
+        "Foreign exchange only",
+        "Consumer goods"
+      ],
+      "answerIndex": 1,
+      "explanation": "Money market handles short-term financial instruments。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q068",
+      "topicName": "Money and Banking",
+      "topicSlug": "money-and-banking",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Treasury bills are?",
+      "options": [
+        "Long-term government bonds",
+        "Short-term government securities",
+        "Corporate debentures",
+        "Equities"
+      ],
+      "answerIndex": 1,
+      "explanation": "T-bills are short-term instruments used for government borrowing。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q069",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Inflation targeting is a policy framework used mainly by?",
+      "options": [
+        "Commercial banks",
+        "Central banks",
+        "Merchant banks",
+        "Development banks"
+      ],
+      "answerIndex": 1,
+      "explanation": "Central banks use inflation targeting to anchor monetary policy。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q070",
+      "topicName": "Money and Banking",
+      "topicSlug": "money-and-banking",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Which of the following is a function of money?",
+      "options": [
+        "Medium of exchange",
+        "Production of goods",
+        "Distribution of income",
+        "Provision of capital"
+      ],
+      "answerIndex": 0,
+      "explanation": "Money serves as a medium of exchange, unit of account, store of value, and standard of deferred payment。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q071",
+      "topicName": "Public Finance",
+      "topicSlug": "public-finance",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The relationship between tax rate and income relevant to progressive tax is shown by?",
+      "options": [
+        "Curve X",
+        "Curve Y",
+        "Curve Z",
+        "Curves X and Z"
+      ],
+      "answerIndex": 1,
+      "explanation": "Progressive tax has an upward-sloping rate–income relationship (curve Y)。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q072",
+      "topicName": "Public Finance",
+      "topicSlug": "public-finance",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The relationship between tax rate and income relevant to proportional tax is depicted by?",
+      "options": [
+        "Curves Z and Y",
+        "Curve X",
+        "Curve Z",
+        "Curve Y"
+      ],
+      "answerIndex": 2,
+      "explanation": "Proportional tax has a flat rate, represented by curve Z。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q073",
+      "topicName": "Public Finance",
+      "topicSlug": "public-finance",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A tax whose rate falls as income rises is?",
+      "options": [
+        "Progressive",
+        "Proportional",
+        "Regressive",
+        "Direct"
+      ],
+      "answerIndex": 2,
+      "explanation": "Regressive tax takes a larger proportion from lower incomes。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q074",
+      "topicName": "Public Finance",
+      "topicSlug": "public-finance",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "PAYE in Nigeria is an example of?",
+      "options": [
+        "Indirect tax",
+        "Progressive tax",
+        "Regressive tax",
+        "Proportional tax"
+      ],
+      "answerIndex": 1,
+      "explanation": "PAYE rates rise with income, making it progressive。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q075",
+      "topicName": "Public Finance",
+      "topicSlug": "public-finance",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "An example of indirect tax is?",
+      "options": [
+        "Personal income tax",
+        "Company income tax",
+        "Value Added Tax (VAT)",
+        "Capital gains tax"
+      ],
+      "answerIndex": 2,
+      "explanation": "VAT is levied on goods and services, hence indirect。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q076",
+      "topicName": "Demand and Supply",
+      "topicSlug": "demand-and-supply",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The incidence of a tax falls mainly on consumers when demand is?",
+      "options": [
+        "Elastic",
+        "Inelastic",
+        "Perfectly elastic",
+        "Unitary"
+      ],
+      "answerIndex": 1,
+      "explanation": "With inelastic demand, producers can pass most of the tax to consumers。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q077",
+      "topicName": "Public Finance",
+      "topicSlug": "public-finance",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Government expenditure on construction of roads is classified as?",
+      "options": [
+        "Recurrent expenditure",
+        "Capital expenditure",
+        "Transfer payment",
+        "Debt servicing"
+      ],
+      "answerIndex": 1,
+      "explanation": "Capital expenditure creates or improves assets。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q078",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Transfer payments are?",
+      "options": [
+        "Payments for productive services",
+        "Payments without corresponding goods or services",
+        "Capital projects",
+        "Interest on loans"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pensions and unemployment benefits are transfer payments。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q079",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A balanced budget means?",
+      "options": [
+        "Revenue exceeds expenditure",
+        "Expenditure exceeds revenue",
+        "Revenue equals expenditure",
+        "No taxation"
+      ],
+      "answerIndex": 2,
+      "explanation": "Balanced budget: projected revenue equals projected expenditure。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q080",
+      "topicName": "Public Finance",
+      "topicSlug": "public-finance",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Public debt is the?",
+      "options": [
+        "Debt owed by private firms",
+        "Accumulated borrowing by government",
+        "Bank overdraft",
+        "Trade deficit"
+      ],
+      "answerIndex": 1,
+      "explanation": "Public debt is the total outstanding obligations of government。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q081",
+      "topicName": "International Trade",
+      "topicSlug": "international-trade",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Which of the following is an example of an invisible item on the balance of payments account?",
+      "options": [
+        "Shipping and aviation",
+        "Exports and imports",
+        "Merchandise",
+        "Bullion"
+      ],
+      "answerIndex": 0,
+      "explanation": "Invisible items are trade in services, such as shipping and tourism。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q082",
+      "topicName": "International Trade",
+      "topicSlug": "international-trade",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A situation in which a commodity is sold abroad below its cost of production in the home country is?",
+      "options": [
+        "Dumping",
+        "Export subsidy",
+        "Tariff",
+        "Quota"
+      ],
+      "answerIndex": 0,
+      "explanation": "Dumping is selling exports below home production cost。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q083",
+      "topicName": "International Trade",
+      "topicSlug": "international-trade",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "When a nation's exports exceed its imports, there is?",
+      "options": [
+        "Trade deficit",
+        "Favourable balance of trade",
+        "Unfavourable balance of trade",
+        "Balanced trade"
+      ],
+      "answerIndex": 1,
+      "explanation": "Exports > imports = favourable balance of trade (trade surplus)。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q084",
+      "topicName": "International Trade",
+      "topicSlug": "international-trade",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "ECOWAS allows a Nigerian to stay in Ghana without a visa for?",
+      "options": [
+        "30 days",
+        "90 days",
+        "100 days",
+        "14 days"
+      ],
+      "answerIndex": 1,
+      "explanation": "Under ECOWAS free movement protocol, the period is 90 days。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q085",
+      "topicName": "International Trade",
+      "topicSlug": "international-trade",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Which of the following countries is NOT a member of ECOWAS?",
+      "options": [
+        "Nigeria",
+        "Ghana",
+        "Sudan",
+        "Senegal"
+      ],
+      "answerIndex": 2,
+      "explanation": "Sudan is not an ECOWAS member。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q086",
+      "topicName": "International Trade",
+      "topicSlug": "international-trade",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The most important goal of OPEC is to?",
+      "options": [
+        "Fix high prices for oil",
+        "Ensure strict compliance with production quotas",
+        "Promote non-oil exports",
+        "Regulate oil consumption"
+      ],
+      "answerIndex": 1,
+      "explanation": "OPEC coordinates production quotas among member countries。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q087",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The Economic Commission for Africa was set up by the?",
+      "options": [
+        "United Nations",
+        "ECOWAS",
+        "OAU",
+        "IMF"
+      ],
+      "answerIndex": 0,
+      "explanation": "ECA was established by the UN Economic and Social Council in 1958。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q088",
+      "topicName": "Public Finance",
+      "topicSlug": "public-finance",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A tariff is a?",
+      "options": [
+        "Tax on exports",
+        "Tax on imports",
+        "Quantity limit on imports",
+        "Subsidy on exports"
+      ],
+      "answerIndex": 1,
+      "explanation": "Tariffs are taxes levied on imported goods。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q089",
+      "topicName": "International Trade",
+      "topicSlug": "international-trade",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "An import quota is?",
+      "options": [
+        "A tax on imports",
+        "A physical limit on the quantity imported",
+        "A subsidy to exporters",
+        "A voluntary export restraint"
+      ],
+      "answerIndex": 1,
+      "explanation": "Quotas restrict the quantity of a good that can be imported。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q090",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The principle of comparative advantage states that a country should specialise in producing goods in which it has?",
+      "options": [
+        "Absolute advantage",
+        "The lowest opportunity cost",
+        "The highest money cost",
+        "The largest market"
+      ],
+      "answerIndex": 1,
+      "explanation": "Comparative advantage is based on lower opportunity cost。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q091",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Frictional unemployment is?",
+      "options": [
+        "Due to seasonal changes",
+        "Temporary unemployment while changing jobs",
+        "Caused by economic recession",
+        "Due to technological change"
+      ],
+      "answerIndex": 1,
+      "explanation": "Frictional unemployment occurs between jobs。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q092",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Cyclical unemployment is caused by?",
+      "options": [
+        "Changes in seasons",
+        "Downturns in the business cycle",
+        "Structural changes in the economy",
+        "Personal choice"
+      ],
+      "answerIndex": 1,
+      "explanation": "It rises during recessions and falls during expansions。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q093",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Structural unemployment results from?",
+      "options": [
+        "Temporary job search",
+        "Mismatch between skills and available jobs",
+        "Seasonal factors",
+        "Cyclical downturn"
+      ],
+      "answerIndex": 1,
+      "explanation": "Structural unemployment arises from changes in the structure of the economy。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q094",
+      "topicName": "National Income and Macroeconomics",
+      "topicSlug": "national-income-macro",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Full employment is a situation in which?",
+      "options": [
+        "Every adult is employed",
+        "Only the disabled are not employed",
+        "All adults who can work are employed",
+        "All those able and eligible can find employment"
+      ],
+      "answerIndex": 3,
+      "explanation": "Full employment means all who are able and willing to work can find jobs (allowing for frictional unemployment)。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q095",
+      "topicName": "Unemployment and Population",
+      "topicSlug": "unemployment-population",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The labour force consists of?",
+      "options": [
+        "All citizens",
+        "Employed and unemployed persons actively seeking work",
+        "Only employed persons",
+        "Only unemployed persons"
+      ],
+      "answerIndex": 1,
+      "explanation": "Labour force = employed + unemployed actively seeking work。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q096",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The factor of production with the highest degree of mobility is?",
+      "options": [
+        "Land",
+        "Labour",
+        "Capital",
+        "Entrepreneurship"
+      ],
+      "answerIndex": 1,
+      "explanation": "Labour is the most mobile factor of production。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q097",
+      "topicName": "Unemployment and Population",
+      "topicSlug": "unemployment-population",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A country experiencing increasing returns is said to be?",
+      "options": [
+        "Overpopulated",
+        "Underpopulated",
+        "Optimally populated",
+        "Sparsely populated"
+      ],
+      "answerIndex": 0,
+      "explanation": "When population growth yields increasing returns, the country is overpopulated relative to its resources。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q098",
+      "topicName": "Unemployment and Population",
+      "topicSlug": "unemployment-population",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Rural–urban migration tends to reduce the labour force in?",
+      "options": [
+        "Urban areas",
+        "Agriculture",
+        "Industry",
+        "Services"
+      ],
+      "answerIndex": 1,
+      "explanation": "Young people leave farms for cities, reducing agricultural labour。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q099",
+      "topicName": "Unemployment and Population",
+      "topicSlug": "unemployment-population",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The problem of conducting census in Nigeria includes?",
+      "options": [
+        "Adequate funding",
+        "Poor town planning in urban areas",
+        "High literacy rate",
+        "Efficient transport"
+      ],
+      "answerIndex": 1,
+      "explanation": "Poor urban planning and lack of street addressing make enumeration difficult。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eco-2020-q100",
+      "topicName": "Unemployment and Population",
+      "topicSlug": "unemployment-population",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A mono-product economy is one that?",
+      "options": [
+        "Produces many commodities",
+        "Produces one main commodity",
+        "Has a rich cultural heritage",
+        "Specialises in agriculture only"
+      ],
+      "answerIndex": 1,
+      "explanation": "Mono-product economies depend heavily on one commodity, often oil。",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    }
+  ]
+}
