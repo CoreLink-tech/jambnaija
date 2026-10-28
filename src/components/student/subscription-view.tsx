@@ -204,7 +204,7 @@ export function SubscriptionView() {
           <Card className="space-y-3">
             <h2 className="font-semibold text-primary-strong">Purchase a code</h2>
             <p className="text-sm text-muted">
-              Buy an activation code for ₦{{SUBSCRIPTION_PRICE_NGN.toLocaleString()}} on WhatsApp. After payment you will receive a code to enter above.
+              Buy an activation code for ₦{SUBSCRIPTION_PRICE_NGN.toLocaleString()} on WhatsApp. After payment you will receive a code to enter above.
             </p>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <Button className="w-full" type="button">
