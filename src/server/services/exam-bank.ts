@@ -14,7 +14,7 @@ import {
 import type { AnswerKey, JambSubject } from "@/data/questions/types";
 import { scoreExam, minutesForQuestionCount } from "@/lib/exam/scoring";
 import * as attemptRepo from "@/server/repositories/attempts";
-import { requireSession } from "@/server/policies/auth";
+import { requireStudentAccess } from "@/server/policies/auth";
 import { getDb, subjects } from "@/lib/db";
 import { eq } from "drizzle-orm";
 import { formatExamFocusLabel, parseFocusMeta } from "@/lib/exam/focus-label";
@@ -62,7 +62,7 @@ async function ensureSubjectId(primary: JambSubject): Promise<string> {
 }
 
 export async function startExamSession(raw: unknown) {
-  const session = await requireSession();
+  const { session } = await requireStudentAccess();
   const parsed = examStartSchema.safeParse(raw);
   if (!parsed.success) {
     throw new ValidationError("Invalid exam configuration.", parsed.error.flatten());
@@ -165,7 +165,7 @@ export async function saveExamProgress(raw: {
   attemptId: string;
   answers: { questionId: string; selectedIndex: number | null; flagged?: boolean }[];
 }) {
-  const session = await requireSession();
+  const { session } = await requireStudentAccess();
   const attempt = await attemptRepo.getAttemptById(raw.attemptId);
   if (!attempt || attempt.userId !== session.user.id) {
     throw new NotFoundError("Exam session not found.");
@@ -202,7 +202,7 @@ export async function submitExamSession(raw: {
   attemptId: string;
   answers?: { questionId: string; selectedIndex: number | null }[];
 }) {
-  const session = await requireSession();
+  const { session } = await requireStudentAccess();
   const attempt = await attemptRepo.getAttemptById(raw.attemptId);
   if (!attempt || attempt.userId !== session.user.id) {
     throw new NotFoundError("Exam session not found.");
@@ -263,7 +263,7 @@ export async function submitExamSession(raw: {
 }
 
 export async function getExamResult(attemptId: string) {
-  const session = await requireSession();
+  const { session } = await requireStudentAccess();
   const attempt = await attemptRepo.getAttemptById(attemptId);
   if (!attempt || attempt.userId !== session.user.id) {
     throw new NotFoundError("Exam session not found.");
@@ -349,7 +349,7 @@ export async function getExamResult(attemptId: string) {
 }
 
 export async function getInProgressExam(attemptId: string) {
-  const session = await requireSession();
+  const { session } = await requireStudentAccess();
   const attempt = await attemptRepo.getAttemptById(attemptId);
   if (!attempt || attempt.userId !== session.user.id) {
     throw new NotFoundError("Exam session not found.");

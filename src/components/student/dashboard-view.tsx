@@ -116,9 +116,15 @@ export function DashboardView({ user }: { user: User }) {
           <p className="text-sm text-muted">
             Timed exam-style practice with server-side scoring.
           </p>
-          <Link href="/cbt">
-            <Button className="w-full sm:w-auto">Start CBT</Button>
-          </Link>
+          {access.canAccess ? (
+            <Link href="/exams/setup">
+              <Button className="w-full sm:w-auto">Start CBT</Button>
+            </Link>
+          ) : (
+            <Link href="/subscription">
+              <Button className="w-full sm:w-auto">Activate to start CBT</Button>
+            </Link>
+          )}
         </Card>
       </section>
 

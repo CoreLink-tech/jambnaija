@@ -1,12 +1,12 @@
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { ExamSetupForm } from "@/components/exam/setup-form";
-import { requirePageSession } from "@/lib/auth/require-page-session";
+import { requirePracticeAccess } from "@/lib/auth/require-page-session";
 
 export const metadata = { title: "Exam setup" };
 
 export default async function ExamSetupPage() {
-  await requirePageSession("/exams/setup");
+  await requirePracticeAccess("/exams/setup");
 
   return (
     <div className="min-h-screen">

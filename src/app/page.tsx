@@ -5,6 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { LogoMark, IconBook, IconClock, IconChart } from "@/components/icons/brand";
 import { bankStats } from "@/data/questions";
+import {
+  SUBSCRIPTION_PRICE_NGN,
+  REFERRAL_REWARD_NGN,
+} from "@/lib/validation/auth";
+
+const TRIAL_DAYS = 3;
 
 const STREAMS = [
   {
@@ -47,12 +53,14 @@ export default function HomePage() {
               </h1>
               <p className="max-w-xl text-base text-muted sm:text-lg">
                 Choose subjects, set your year range, sit a timed paper, and review
-                every answer with explanations. Built for focused preparation — not
-                guesswork.
+                every answer with explanations. Start with a free trial, then unlock
+                full access with a one-time activation code.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Link href="/login?next=/exams/setup">
-                  <Button className="w-full sm:w-auto">Start practising</Button>
+                <Link href="/register">
+                  <Button className="w-full sm:w-auto">
+                    Start free {TRIAL_DAYS}-day trial
+                  </Button>
                 </Link>
                 <Link href="/subjects">
                   <Button variant="secondary" className="w-full sm:w-auto">
@@ -101,6 +109,65 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="border-b border-line bg-surface-warm" id="pricing">
+          <div className="mx-auto max-w-6xl px-4 py-14">
+            <div className="mb-8 space-y-2 text-center sm:text-left">
+              <h2 className="text-2xl font-bold text-primary-strong">
+                Pricing & rewards
+              </h2>
+              <p className="text-sm text-muted max-w-2xl">
+                Transparent fees. Try the platform free, then activate when you are
+                ready. Share your link and earn when friends subscribe.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              <Card className="space-y-3 border-primary/20">
+                <p className="text-xs font-semibold uppercase tracking-wide text-primary">
+                  Free trial
+                </p>
+                <p className="text-3xl font-bold text-primary-strong">
+                  {TRIAL_DAYS} days
+                </p>
+                <p className="text-sm text-muted leading-relaxed">
+                  Full Premium access from the moment you create an account. No card
+                  required. When the trial ends, redeem an activation code to continue.
+                </p>
+              </Card>
+              <Card className="space-y-3 border-primary/30 shadow-[var(--shadow-sm)]">
+                <p className="text-xs font-semibold uppercase tracking-wide text-primary">
+                  Subscription
+                </p>
+                <p className="text-3xl font-bold text-primary-strong">
+                  ₦{SUBSCRIPTION_PRICE_NGN.toLocaleString()}
+                </p>
+                <p className="text-sm text-muted leading-relaxed">
+                  One-time activation code for full platform access — timed CBT exams,
+                  score reviews, and subject practice. Buy via WhatsApp, then enter the
+                  code in your account.
+                </p>
+                <Link href="/register">
+                  <Button className="w-full sm:w-auto" type="button">
+                    Create account
+                  </Button>
+                </Link>
+              </Card>
+              <Card className="space-y-3">
+                <p className="text-xs font-semibold uppercase tracking-wide text-primary">
+                  Referral reward
+                </p>
+                <p className="text-3xl font-bold text-primary-strong">
+                  ₦{REFERRAL_REWARD_NGN.toLocaleString()}
+                </p>
+                <p className="text-sm text-muted leading-relaxed">
+                  Share your personal link from the Agent page. When someone you refer
+                  activates a paid subscription (₦{SUBSCRIPTION_PRICE_NGN.toLocaleString()}
+                  ), you earn ₦{REFERRAL_REWARD_NGN.toLocaleString()} in your wallet.
+                </p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         <section className="mx-auto max-w-6xl px-4 py-14" id="subjects">
           <div className="mb-8 space-y-2">
             <h2 className="text-2xl font-bold text-primary-strong">Subject areas</h2>
@@ -135,7 +202,7 @@ export default function HomePage() {
                 {
                   icon: <IconBook className="text-primary" />,
                   title: "Configure",
-                  text: "After login, pick subjects, year range, and question count before you start.",
+                  text: "After login, pick subjects, year, and question count. Start a timed CBT session in seconds.",
                 },
                 {
                   icon: <IconClock className="text-primary" />,
@@ -159,7 +226,9 @@ export default function HomePage() {
         </section>
 
         <section className="mx-auto max-w-6xl px-4 py-14">
-          <h2 className="mb-6 text-2xl font-bold text-primary-strong">Built for serious practice</h2>
+          <h2 className="mb-6 text-2xl font-bold text-primary-strong">
+            Built for serious practice
+          </h2>
           <ul className="grid gap-3 sm:grid-cols-2">
             {[
               "Multi-subject timed examinations",
@@ -167,7 +236,9 @@ export default function HomePage() {
               "Server-authoritative deadline (refresh-safe)",
               "Detailed answer review with explanations",
               "Subject-level score breakdown",
-              "Account required to start exams",
+              `${TRIAL_DAYS}-day free Premium trial on every new account`,
+              `Activation from ₦${SUBSCRIPTION_PRICE_NGN.toLocaleString()} after trial`,
+              `Earn ₦${REFERRAL_REWARD_NGN.toLocaleString()} per paid referral`,
             ].map((t) => (
               <li key={t} className="flex items-start gap-2 text-sm text-muted">
                 <LogoMark className="mt-0.5 h-5 w-5 shrink-0" />

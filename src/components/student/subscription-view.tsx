@@ -1,12 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { api } from "@/lib/client/api";
 import { ErrorState } from "@/components/ui/feedback";
+import {
+  SUBSCRIPTION_PRICE_NGN,
+  REFERRAL_REWARD_NGN,
+} from "@/lib/validation/auth";
+
+const TRIAL_DAYS = 3;
 
 const WHATSAPP_NUMBER = "2349168311809";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -29,6 +36,8 @@ type MeUser = {
 };
 
 export function SubscriptionView() {
+  const searchParams = useSearchParams();
+  const reason = searchParams.get("reason");
   const [user, setUser] = useState<MeUser | null>(null);
   const [code, setCode] = useState("");
   const [loading, setLoading] = useState(true);
@@ -109,9 +118,44 @@ export function SubscriptionView() {
       <div>
         <h1 className="text-2xl font-bold text-primary-strong">Subscription</h1>
         <p className="mt-1 text-sm text-muted">
-          Manage your plan or redeem an activation code from an admin.
+          {TRIAL_DAYS}-day free Premium trial on signup. After trial, activate with a
+          ₦{SUBSCRIPTION_PRICE_NGN.toLocaleString()} code. Refer friends and earn ₦
+          {REFERRAL_REWARD_NGN.toLocaleString()} when they pay.
         </p>
       </div>
+
+      <div className="grid gap-3 sm:grid-cols-3">
+        <Card className="space-y-1 !p-3">
+          <p className="text-xs font-semibold text-primary">Free trial</p>
+          <p className="text-lg font-bold text-primary-strong">{TRIAL_DAYS} days</p>
+        </Card>
+        <Card className="space-y-1 !p-3">
+          <p className="text-xs font-semibold text-primary">Activation</p>
+          <p className="text-lg font-bold text-primary-strong">
+            ₦{SUBSCRIPTION_PRICE_NGN.toLocaleString()}
+          </p>
+        </Card>
+        <Card className="space-y-1 !p-3">
+          <p className="text-xs font-semibold text-primary">Referral</p>
+          <p className="text-lg font-bold text-primary-strong">
+            ₦{REFERRAL_REWARD_NGN.toLocaleString()}
+          </p>
+        </Card>
+      </div>
+
+
+      {reason === "activation_required" || reason === "deactivated" ? (
+        <Card className="border-danger/30 bg-red-50 space-y-1">
+          <p className="text-sm font-semibold text-danger">
+            {reason === "deactivated"
+              ? "This account is deactivated."
+              : "Your free trial has ended (or access is not active)."}
+          </p>
+          <p className="text-sm text-muted">
+            Redeem an activation code below to continue using timed CBT and practice features.
+          </p>
+        </Card>
+      ) : null}
 
       <Card className="space-y-3">
         <div className="flex flex-wrap items-center gap-2">
@@ -160,7 +204,7 @@ export function SubscriptionView() {
           <Card className="space-y-3">
             <h2 className="font-semibold text-primary-strong">Purchase a code</h2>
             <p className="text-sm text-muted">
-              Buy an activation code on WhatsApp. After payment you will receive a code to enter above.
+              Buy an activation code for ₦{{SUBSCRIPTION_PRICE_NGN.toLocaleString()}} on WhatsApp. After payment you will receive a code to enter above.
             </p>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <Button className="w-full" type="button">
