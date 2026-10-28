@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { api } from "@/lib/client/api";
-import { REFERRAL_REWARD_NGN, SUBSCRIPTION_PRICE_NGN } from "@/lib/validation/auth";
+import { REFERRAL_REWARD_NGN, SUBSCRIPTION_PRICE_NGN, PUBLIC_SITE_URL } from "@/lib/validation/auth";
 
 type Referral = {
   id: string;
@@ -40,10 +40,27 @@ export function AgentView() {
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState("");
 
+  function canonicalLink(code: string | null | undefined): string {
+    if (!code) return `${PUBLIC_SITE_URL}/register`;
+    return `${PUBLIC_SITE_URL}/register?ref=${encodeURIComponent(code)}`;
+  }
+
   async function load() {
     const res = await api<Dash>("/api/agent");
-    if (res.error) setError(res.error);
-    else setData(res.data ?? null);
+    if (res.error) {
+      setError(res.error);
+      return;
+    }
+    const d = res.data;
+    if (d) {
+      // Always display production domain — ignore any preview host from the API.
+      setData({
+        ...d,
+        referralLink: canonicalLink(d.referralCode),
+      });
+    } else {
+      setData(null);
+    }
   }
 
   useEffect(() => {

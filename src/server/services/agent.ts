@@ -7,12 +7,7 @@ import {
   ForbiddenError,
   ValidationError,
 } from "@/lib/errors";
-import { withdrawalSchema } from "@/lib/validation/auth";
-
-/** Always use the public production domain for shareable links — never Vercel preview URLs. */
-function publicAppUrl(): string {
-  return "https://jambnaija.vercel.app";
-}
+import { withdrawalSchema, PUBLIC_SITE_URL } from "@/lib/validation/auth";
 
 function generateReferralCode(username: string | null): string {
   const base = (username || "user").replace(/[^a-z0-9]/gi, "").slice(0, 8);
@@ -79,11 +74,9 @@ export async function getAgentDashboard() {
     .orderBy(desc(withdrawals.createdAt))
     .limit(20);
 
-  const baseUrl = publicAppUrl();
-
   return {
     referralCode: code,
-    referralLink: `${baseUrl}/register?ref=${encodeURIComponent(code)}`,
+    referralLink: `${PUBLIC_SITE_URL}/register?ref=${encodeURIComponent(code)}`,
     walletBalance: me.walletBalance ?? 0,
     referralCount: referred.length,
     referrals: referred.map((r) => ({

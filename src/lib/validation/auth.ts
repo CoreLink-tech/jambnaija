@@ -90,3 +90,6 @@ export type AdminLoginInput = z.infer<typeof adminLoginSchema>;
 
 export const SUBSCRIPTION_PRICE_NGN = 2000;
 export const REFERRAL_REWARD_NGN = 500;
+
+/** Canonical public site — used for all referral / share links. Never use Vercel preview hosts. */
+export const PUBLIC_SITE_URL = "https://jambnaija.vercel.app";
