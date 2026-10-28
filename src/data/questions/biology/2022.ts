@@ -1,6 +1,6 @@
 import type { JambQuestion } from "../types";
 
-/** Biology 2022 — compiled JAMB-style past/mock questions. */
+/** Biology 2022 — JAMB past / mock questions (user-supplied bank). */
 const questions: JambQuestion[] = [
   {
     "id": "bio-2022-001",

@@ -1,6 +1,6 @@
 import type { JambQuestion } from "../types";
 
-/** Biology 2021 — compiled JAMB-style past/mock questions. */
+/** Biology 2021 — JAMB past / mock questions (user-supplied bank). */
 const questions: JambQuestion[] = [
   {
     "id": "bio-2021-001",
@@ -385,24 +385,6 @@ const questions: JambQuestion[] = [
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
-    "question": "Blood circulation in a mammal is said to be double because?",
-    "options": {
-      "A": "It passes twice through the heart in a complete circuit",
-      "B": "It moves in both arteries and veins",
-      "C": "It circulates in both the heart and other organs",
-      "D": "The heart contains auricles and ventricles"
-    },
-    "correctAnswer": "A",
-    "explanation": "(Duplicate of Q17) Double circulation: blood passes through the heart twice per complete circuit.",
-    "topic": "Biology",
-    "difficulty": "medium",
-    "syllabusTopic": "JAMB Biology"
-  },
-  {
-    "id": "bio-2021-023",
-    "subject": "biology",
-    "year": 2021,
-    "origin": "official_past_question",
     "question": "Mass of a crucible = 10g; Mass of crucible and soil before heating = 29g; Mass of crucible and soil after heating = 18g. Determine the percentage of water in the given soil sample.",
     "options": {
       "A": "20%",
@@ -417,7 +399,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-024",
+    "id": "bio-2021-023",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -435,7 +417,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-025",
+    "id": "bio-2021-024",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -453,7 +435,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-026",
+    "id": "bio-2021-025",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -471,7 +453,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-027",
+    "id": "bio-2021-026",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -489,7 +471,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-028",
+    "id": "bio-2021-027",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -507,7 +489,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-029",
+    "id": "bio-2021-028",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -525,7 +507,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-030",
+    "id": "bio-2021-029",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -543,7 +525,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-031",
+    "id": "bio-2021-030",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -561,7 +543,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-032",
+    "id": "bio-2021-031",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -579,7 +561,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-033",
+    "id": "bio-2021-032",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -597,7 +579,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-034",
+    "id": "bio-2021-033",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -615,7 +597,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-035",
+    "id": "bio-2021-034",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -633,7 +615,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-036",
+    "id": "bio-2021-035",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -651,7 +633,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-037",
+    "id": "bio-2021-036",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -669,7 +651,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-038",
+    "id": "bio-2021-037",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -687,7 +669,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-039",
+    "id": "bio-2021-038",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",
@@ -705,7 +687,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2021-040",
+    "id": "bio-2021-039",
     "subject": "biology",
     "year": 2021,
     "origin": "official_past_question",

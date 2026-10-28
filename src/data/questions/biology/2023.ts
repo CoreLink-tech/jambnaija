@@ -1,6 +1,6 @@
 import type { JambQuestion } from "../types";
 
-/** Biology 2023 — compiled JAMB-style past/mock questions. */
+/** Biology 2023 — JAMB past / mock questions (user-supplied bank). */
 const questions: JambQuestion[] = [
   {
     "id": "bio-2023-001",
@@ -385,78 +385,6 @@ const questions: JambQuestion[] = [
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",
-    "question": "Which of the following is an example of an adaptation for survival in social insects?",
-    "options": {
-      "A": "Division of labour",
-      "B": "Solitary living",
-      "C": "Hibernation",
-      "D": "Migration"
-    },
-    "correctAnswer": "A",
-    "explanation": "(Duplicate of Q5) Division of labour among castes enhances colony survival.",
-    "topic": "Biology",
-    "difficulty": "medium",
-    "syllabusTopic": "JAMB Biology"
-  },
-  {
-    "id": "bio-2023-023",
-    "subject": "biology",
-    "year": 2023,
-    "origin": "official_past_question",
-    "question": "Which of the following is evidence of evolution?",
-    "options": {
-      "A": "Homologous structures",
-      "B": "Identical habitats",
-      "C": "Similar feeding habits",
-      "D": "Same colouration"
-    },
-    "correctAnswer": "A",
-    "explanation": "(Duplicate of Q4) Homologous structures indicate common ancestry.",
-    "topic": "Biology",
-    "difficulty": "medium",
-    "syllabusTopic": "JAMB Biology"
-  },
-  {
-    "id": "bio-2023-024",
-    "subject": "biology",
-    "year": 2023,
-    "origin": "official_past_question",
-    "question": "The membrane around the vacuole is known as?",
-    "options": {
-      "A": "Cell membrane",
-      "B": "Tonoplast",
-      "C": "Nuclear membrane",
-      "D": "Plasmalemma"
-    },
-    "correctAnswer": "B",
-    "explanation": "(Duplicate of Q3) The tonoplast surrounds the vacuole.",
-    "topic": "Biology",
-    "difficulty": "medium",
-    "syllabusTopic": "JAMB Biology"
-  },
-  {
-    "id": "bio-2023-025",
-    "subject": "biology",
-    "year": 2023,
-    "origin": "official_past_question",
-    "question": "Which of the following is a characteristic of cells related to irritability?",
-    "options": {
-      "A": "Ability to respond to stimuli",
-      "B": "Ability to synthesize proteins",
-      "C": "Ability to generate energy",
-      "D": "Ability to replicate DNA"
-    },
-    "correctAnswer": "A",
-    "explanation": "(Duplicate of Q2) Irritability is responsiveness to stimuli.",
-    "topic": "Biology",
-    "difficulty": "medium",
-    "syllabusTopic": "JAMB Biology"
-  },
-  {
-    "id": "bio-2023-026",
-    "subject": "biology",
-    "year": 2023,
-    "origin": "official_past_question",
     "question": "What is the primary source of variation in a population?",
     "options": {
       "A": "Mutation",
@@ -471,7 +399,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2023-027",
+    "id": "bio-2023-023",
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",
@@ -489,7 +417,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2023-028",
+    "id": "bio-2023-024",
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",
@@ -507,7 +435,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2023-029",
+    "id": "bio-2023-025",
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",
@@ -525,7 +453,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2023-030",
+    "id": "bio-2023-026",
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",
@@ -543,7 +471,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2023-031",
+    "id": "bio-2023-027",
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",
@@ -561,25 +489,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2023-032",
-    "subject": "biology",
-    "year": 2023,
-    "origin": "official_past_question",
-    "question": "Which of the following represents an example of ecological management and conservation through a biological association?",
-    "options": {
-      "A": "Use of pesticides",
-      "B": "Biological control of pests",
-      "C": "Deforestation",
-      "D": "Monoculture"
-    },
-    "correctAnswer": "B",
-    "explanation": "(Duplicate of Q15) Biological control is a conservation-friendly pest management strategy.",
-    "topic": "Biology",
-    "difficulty": "medium",
-    "syllabusTopic": "JAMB Biology"
-  },
-  {
-    "id": "bio-2023-033",
+    "id": "bio-2023-028",
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",
@@ -597,7 +507,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2023-034",
+    "id": "bio-2023-029",
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",
@@ -615,7 +525,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2023-035",
+    "id": "bio-2023-030",
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",
@@ -633,7 +543,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2023-036",
+    "id": "bio-2023-031",
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",
@@ -651,7 +561,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2023-037",
+    "id": "bio-2023-032",
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",
@@ -669,7 +579,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2023-038",
+    "id": "bio-2023-033",
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",
@@ -687,25 +597,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2023-039",
-    "subject": "biology",
-    "year": 2023,
-    "origin": "official_past_question",
-    "question": "Most fishes do not sink in water because of the presence of?",
-    "options": {
-      "A": "Swim bladder",
-      "B": "Gills",
-      "C": "Scales",
-      "D": "Fins"
-    },
-    "correctAnswer": "A",
-    "explanation": "(Duplicate of Q11) The swim bladder provides buoyancy.",
-    "topic": "Biology",
-    "difficulty": "medium",
-    "syllabusTopic": "JAMB Biology"
-  },
-  {
-    "id": "bio-2023-040",
+    "id": "bio-2023-034",
     "subject": "biology",
     "year": 2023,
     "origin": "official_past_question",

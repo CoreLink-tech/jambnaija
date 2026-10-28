@@ -1,6 +1,6 @@
 import type { JambQuestion } from "../types";
 
-/** Biology 2026 — compiled JAMB-style past/mock questions. */
+/** Biology 2026 — JAMB past / mock questions (user-supplied bank). */
 const questions: JambQuestion[] = [
   {
     "id": "bio-2026-001",
@@ -717,7 +717,7 @@ const questions: JambQuestion[] = [
       "D": "Digestion"
     },
     "correctAnswer": "D",
-    "explanation": "Digestion is a function of the digestive system; the skeleton provides protection, support, and movement. --- You now have 280 copyable questions (40 per year) with options, answers, and explanations. Would you like me to focus on any specific topic area (e.g., genetics, ecology) for additional drilling, or provide the questions in a different format (e.g., plain text without markdown, or separated by topic)?",
+    "explanation": "Digestion is a function of the digestive system; the skeleton provides protection, support, and movement. ---",
     "topic": "Biology",
     "difficulty": "medium",
     "syllabusTopic": "JAMB Biology"

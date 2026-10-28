@@ -1,6 +1,6 @@
 import type { JambQuestion } from "../types";
 
-/** Biology 2020 — compiled JAMB-style past/mock questions. */
+/** Biology 2020 — JAMB past / mock questions (user-supplied bank). */
 const questions: JambQuestion[] = [
   {
     "id": "bio-2020-001",
@@ -453,7 +453,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2020-027",
+    "id": "bio-2020-026",
     "subject": "biology",
     "year": 2020,
     "origin": "official_past_question",
@@ -471,7 +471,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2020-028",
+    "id": "bio-2020-027",
     "subject": "biology",
     "year": 2020,
     "origin": "official_past_question",
@@ -489,61 +489,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2020-029",
-    "subject": "biology",
-    "year": 2020,
-    "origin": "official_past_question",
-    "question": "The villus in the small intestine is significant because it?",
-    "options": {
-      "A": "Increases the surface area for absorption",
-      "B": "Increases the surface area for digestion",
-      "C": "Assists in mixing digested food",
-      "D": "Assists in filtering undigested food"
-    },
-    "correctAnswer": "A",
-    "explanation": "(Duplicate of Q8 in this set; villi increase absorptive surface area.)",
-    "topic": "Biology",
-    "difficulty": "medium",
-    "syllabusTopic": "JAMB Biology"
-  },
-  {
-    "id": "bio-2020-030",
-    "subject": "biology",
-    "year": 2020,
-    "origin": "official_past_question",
-    "question": "What is the term used to describe biotic and abiotic factors in the environment of the organism?",
-    "options": {
-      "A": "Habitat",
-      "B": "Biome",
-      "C": "Ecosystem",
-      "D": "Ecological niche"
-    },
-    "correctAnswer": "C",
-    "explanation": "(Duplicate of Q11) An ecosystem includes all living and non-living components in an area.",
-    "topic": "Biology",
-    "difficulty": "medium",
-    "syllabusTopic": "JAMB Biology"
-  },
-  {
-    "id": "bio-2020-031",
-    "subject": "biology",
-    "year": 2020,
-    "origin": "official_past_question",
-    "question": "The bright colours of the comb and feathers in the peacock are for?",
-    "options": {
-      "A": "Sex differentiation",
-      "B": "Beauty",
-      "C": "Courtship",
-      "D": "Defence"
-    },
-    "correctAnswer": "C",
-    "explanation": "(Duplicate of Q10) Courtship display to attract mates.",
-    "topic": "Biology",
-    "difficulty": "medium",
-    "syllabusTopic": "JAMB Biology"
-  },
-  {
-    "id": "bio-2020-032",
+    "id": "bio-2020-028",
     "subject": "biology",
     "year": 2020,
     "origin": "official_past_question",
@@ -561,7 +507,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2020-033",
+    "id": "bio-2020-029",
     "subject": "biology",
     "year": 2020,
     "origin": "official_past_question",
@@ -579,7 +525,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2020-034",
+    "id": "bio-2020-030",
     "subject": "biology",
     "year": 2020,
     "origin": "official_past_question",
@@ -597,7 +543,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2020-035",
+    "id": "bio-2020-031",
     "subject": "biology",
     "year": 2020,
     "origin": "official_past_question",
@@ -615,7 +561,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2020-036",
+    "id": "bio-2020-032",
     "subject": "biology",
     "year": 2020,
     "origin": "official_past_question",
@@ -633,7 +579,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2020-037",
+    "id": "bio-2020-033",
     "subject": "biology",
     "year": 2020,
     "origin": "official_past_question",
@@ -651,7 +597,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2020-038",
+    "id": "bio-2020-034",
     "subject": "biology",
     "year": 2020,
     "origin": "official_past_question",
@@ -669,7 +615,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2020-039",
+    "id": "bio-2020-035",
     "subject": "biology",
     "year": 2020,
     "origin": "official_past_question",
@@ -687,7 +633,7 @@ const questions: JambQuestion[] = [
     "syllabusTopic": "JAMB Biology"
   },
   {
-    "id": "bio-2020-040",
+    "id": "bio-2020-036",
     "subject": "biology",
     "year": 2020,
     "origin": "official_past_question",
