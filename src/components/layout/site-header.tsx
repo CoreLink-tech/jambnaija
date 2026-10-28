@@ -47,6 +47,10 @@ export function SiteHeader() {
     };
   }, [pathname]);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   async function logout() {
     await api("/api/auth/logout", { method: "POST" });
     setAuthed(false);
