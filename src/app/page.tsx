@@ -67,6 +67,11 @@ export default function HomePage() {
                     Explore subjects
                   </Button>
                 </Link>
+                <a href="/jambnaija.apk" download>
+                  <Button variant="ghost" className="w-full sm:w-auto">
+                    Get the app
+                  </Button>
+                </a>
               </div>
               <p className="text-xs text-muted">
                 {stats.total} practice questions in the bank across science, arts,

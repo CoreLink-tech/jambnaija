@@ -97,6 +97,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
+          <a href="/jambnaija.apk" download>
+            <Button variant="secondary">Get App</Button>
+          </a>
           {authed ? (
             <>
               {label ? (
@@ -150,6 +153,14 @@ export function SiteHeader() {
                 </Link>
               );
             })}
+            <a
+              href="/jambnaija.apk"
+              download
+              className="rounded-lg px-3 py-2 text-sm font-semibold text-primary"
+              onClick={() => setOpen(false)}
+            >
+              Get App
+            </a>
             {authed ? (
               <button
                 type="button"
