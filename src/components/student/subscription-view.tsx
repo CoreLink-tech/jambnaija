@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { api } from "@/lib/client/api";
-import { LoadingState, ErrorState } from "@/components/ui/feedback";
+import { ErrorState } from "@/components/ui/feedback";
 
 const WHATSAPP_NUMBER = "2349168311809";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -82,7 +82,26 @@ export function SubscriptionView() {
     else await load();
   }
 
-  if (loading) return <LoadingState label="Loading subscription…" />;
+  if (loading) {
+    return (
+      <div className="mx-auto max-w-lg space-y-6 animate-pulse">
+        <div className="space-y-2">
+          <div className="h-8 w-48 rounded-lg bg-line/60" />
+          <div className="h-4 w-72 rounded bg-line/40" />
+        </div>
+        <div className="h-28 rounded-[var(--radius-md)] border border-line bg-white p-4">
+          <div className="h-4 w-32 rounded bg-line/50" />
+          <div className="mt-3 h-3 w-full rounded bg-line/30" />
+          <div className="mt-2 h-3 w-2/3 rounded bg-line/30" />
+        </div>
+        <div className="h-40 rounded-[var(--radius-md)] border border-line bg-white p-4">
+          <div className="h-4 w-40 rounded bg-line/50" />
+          <div className="mt-4 h-11 w-full rounded-lg bg-line/40" />
+          <div className="mt-3 h-11 w-full rounded-lg bg-line/30" />
+        </div>
+      </div>
+    );
+  }
   if (!user) return <ErrorState message={error || "Unable to load account."} />;
 
   return (
@@ -119,9 +138,6 @@ export function SubscriptionView() {
           <Card className="space-y-4">
             <div>
               <h2 className="font-semibold text-primary-strong">Enter activation code</h2>
-              <p className="mt-1 text-sm text-muted">
-                Codes are generated in the admin dashboard and work once per account.
-              </p>
             </div>
             <form className="space-y-3" onSubmit={redeem}>
               <Input

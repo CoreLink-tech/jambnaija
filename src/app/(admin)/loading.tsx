@@ -1,9 +1,5 @@
-import { LoadingState } from "@/components/ui/feedback";
+import { WorkspaceSkeleton } from "@/components/ui/skeleton";
 
 export default function AdminLoading() {
-  return (
-    <div className="mx-auto max-w-6xl px-4 py-10">
-      <LoadingState label="Loading admin…" />
-    </div>
-  );
+  return <WorkspaceSkeleton />;
 }
