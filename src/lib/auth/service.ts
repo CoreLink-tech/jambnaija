@@ -1,4 +1,3 @@
-import { eq } from "drizzle-orm";
 import { getDb, users } from "@/lib/db";
 import { hashPassword, verifyPassword } from "@/lib/auth/password";
 import { createSession, destroySession, getSession } from "@/lib/auth/session";
@@ -8,11 +7,14 @@ import {
   type AccessResult,
 } from "@/lib/auth/access";
 import { createId } from "@/lib/security/id";
+import { eq, or } from "drizzle-orm";
 import {
   studentRegisterSchema,
   loginSchema,
+  adminLoginSchema,
   type StudentRegisterInput,
   type LoginInput,
+  type AdminLoginInput,
 } from "@/lib/validation/auth";
 import {
   AppError,
@@ -98,6 +100,19 @@ export async function registerStudent(
   const passwordHash = await hashPassword(data.password);
   const id = createId("usr");
   const trialEnds = createTrialPremiumEndsAt();
+  const myReferralCode = `JN${data.username.replace(/[^a-z0-9]/gi, "").slice(0, 8).toUpperCase()}${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+
+  let referredById: string | null = null;
+  if (data.referralCode) {
+    const refRows = await db
+      .select({ id: users.id })
+      .from(users)
+      .where(eq(users.referralCode, data.referralCode.trim().toUpperCase()))
+      .limit(1);
+    if (refRows[0] && refRows[0].id !== id) {
+      referredById = refRows[0].id;
+    }
+  }
 
   await db.insert(users).values({
     id,
@@ -109,6 +124,11 @@ export async function registerStudent(
     planTier: null,
     trialPremiumEndsAt: trialEnds,
     deviceId: data.deviceId,
+    phone: data.phone,
+    age: data.age,
+    referralCode: myReferralCode,
+    referredById,
+    walletBalance: 0,
   });
 
   const user = {
@@ -135,29 +155,34 @@ export async function loginUser(
   }
   const data = parsed.data;
   const db = getDb();
+  const idLower = data.identifier.trim().toLowerCase();
 
   const rows = await db
     .select()
     .from(users)
-    .where(eq(users.email, data.email))
+    .where(or(eq(users.email, idLower), eq(users.username, idLower)))
     .limit(1);
 
   const user = rows[0];
-  // Generic error to avoid email enumeration
   if (!user) {
-    throw new UnauthorizedError("Invalid email or password.");
+    throw new UnauthorizedError("Invalid email/username or password.");
+  }
+
+  if (user.role === "ADMIN") {
+    throw new UnauthorizedError(
+      "Admins must sign in at the admin portal.",
+    );
   }
 
   const valid = await verifyPassword(data.password, user.passwordHash);
   if (!valid) {
-    throw new UnauthorizedError("Invalid email or password.");
+    throw new UnauthorizedError("Invalid email/username or password.");
   }
 
   if (user.status === "DEACTIVATED") {
     throw new AppError("This account has been deactivated.", "DEACTIVATED", 403);
   }
 
-  // Optional device check for students (preserve soft binding behaviour)
   if (
     user.role === "STUDENT" &&
     data.deviceId &&
@@ -169,6 +194,51 @@ export async function loginUser(
       "DEVICE_MISMATCH",
       403,
     );
+  }
+
+  await createSession(user.id);
+
+  return {
+    user: toPublicUser({
+      id: user.id,
+      email: user.email,
+      username: user.username,
+      role: user.role,
+      status: user.status,
+      planTier: user.planTier,
+      trialPremiumEndsAt: user.trialPremiumEndsAt,
+    }),
+  };
+}
+
+export async function loginAdmin(
+  raw: AdminLoginInput,
+): Promise<{ user: PublicUser }> {
+  const parsed = adminLoginSchema.safeParse(raw);
+  if (!parsed.success) {
+    throw new ValidationError("Invalid login data.", parsed.error.flatten());
+  }
+  const data = parsed.data;
+  const db = getDb();
+
+  const rows = await db
+    .select()
+    .from(users)
+    .where(eq(users.email, data.email))
+    .limit(1);
+
+  const user = rows[0];
+  if (!user || user.role !== "ADMIN") {
+    throw new UnauthorizedError("Invalid admin email or password.");
+  }
+
+  const valid = await verifyPassword(data.password, user.passwordHash);
+  if (!valid) {
+    throw new UnauthorizedError("Invalid admin email or password.");
+  }
+
+  if (user.status === "DEACTIVATED") {
+    throw new AppError("This account has been deactivated.", "DEACTIVATED", 403);
   }
 
   await createSession(user.id);

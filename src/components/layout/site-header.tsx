@@ -18,6 +18,7 @@ const authedLinks = [
   { href: "/subjects", label: "Subjects" },
   { href: "/study", label: "Study" },
   { href: "/subscription", label: "Subscription" },
+  { href: "/agent", label: "Agent" },
 ];
 
 export function SiteHeader() {

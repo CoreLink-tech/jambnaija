@@ -8,7 +8,8 @@ import {
   ValidationError,
 } from "@/lib/errors";
 import { resolveUserAccess } from "@/lib/auth/access";
-import { activationCodeSchema } from "@/lib/validation/auth";
+import { activationCodeSchema, REFERRAL_REWARD_NGN } from "@/lib/validation/auth";
+import { sql } from "drizzle-orm";
 
 const redeemSchema = z.object({
   code: activationCodeSchema,
@@ -96,6 +97,22 @@ export async function redeemActivationCode(raw: unknown) {
       updatedAt: now,
     })
     .where(eq(users.id, user.id));
+
+  if (user.referredById) {
+    const refRows = await db
+      .select({ walletBalance: users.walletBalance })
+      .from(users)
+      .where(eq(users.id, user.referredById))
+      .limit(1);
+    const bal = refRows[0]?.walletBalance ?? 0;
+    await db
+      .update(users)
+      .set({
+        walletBalance: bal + REFERRAL_REWARD_NGN,
+        updatedAt: now,
+      })
+      .where(eq(users.id, user.referredById));
+  }
 
   const updated = {
     id: user.id,

@@ -28,7 +28,7 @@ export function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const nextPath = safeNextPath(searchParams.get("next"));
-  const [email, setEmail] = useState("");
+  const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -40,7 +40,7 @@ export function LoginForm() {
     const res = await api("/api/auth/login", {
       method: "POST",
       body: JSON.stringify({
-        email,
+        identifier,
         password,
         deviceId: getOrCreateDeviceId(),
       }),
@@ -57,22 +57,20 @@ export function LoginForm() {
   return (
     <Card className="mx-auto w-full max-w-md space-y-4">
       <div>
-        <h1 className="font-[family-name:var(--font-display)] text-2xl font-bold text-primary-strong">
-          Log in
-        </h1>
+        <h1 className="text-2xl font-bold text-primary-strong">Log in</h1>
         <p className="text-sm text-muted">
-          Access your Jambnaija account to practise exams.
+          Use your email or username, then password.
         </p>
       </div>
       <form className="space-y-3" onSubmit={onSubmit}>
         <label className="block space-y-1">
-          <span className="text-sm font-semibold">Email</span>
+          <span className="text-sm font-semibold">Email or username</span>
           <Input
-            type="email"
-            autoComplete="email"
+            type="text"
+            autoComplete="username"
             required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={identifier}
+            onChange={(e) => setIdentifier(e.target.value)}
           />
         </label>
         <label className="block space-y-1">

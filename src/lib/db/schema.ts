@@ -34,6 +34,11 @@ export const users = sqliteTable(
     planTier: text("plan_tier", { enum: ["STANDARD", "PREMIUM"] }),
     trialPremiumEndsAt: integer("trial_premium_ends_at", { mode: "timestamp" }),
     deviceId: text("device_id"),
+    phone: text("phone"),
+    age: integer("age"),
+    referralCode: text("referral_code"),
+    referredById: text("referred_by_id"),
+    walletBalance: integer("wallet_balance").notNull().default(0),
     createdAt: integer("created_at", { mode: "timestamp" })
       .notNull()
       .default(sql`(unixepoch())`),
@@ -45,7 +50,36 @@ export const users = sqliteTable(
     uniqueIndex("users_email_unique").on(table.email),
     uniqueIndex("users_username_unique").on(table.username),
     uniqueIndex("users_device_id_unique").on(table.deviceId),
+    uniqueIndex("users_referral_code_unique").on(table.referralCode),
     index("users_role_status_idx").on(table.role, table.status),
+    index("users_referred_by_idx").on(table.referredById),
+  ],
+);
+
+export const withdrawals = sqliteTable(
+  "withdrawals",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    amount: integer("amount").notNull(),
+    accountNumber: text("account_number").notNull(),
+    accountName: text("account_name").notNull(),
+    status: text("status", {
+      enum: ["PENDING", "APPROVED", "REJECTED"],
+    })
+      .notNull()
+      .default("PENDING"),
+    adminNote: text("admin_note"),
+    createdAt: integer("created_at", { mode: "timestamp" })
+      .notNull()
+      .default(sql`(unixepoch())`),
+    processedAt: integer("processed_at", { mode: "timestamp" }),
+  },
+  (table) => [
+    index("withdrawals_user_id_idx").on(table.userId),
+    index("withdrawals_status_idx").on(table.status),
   ],
 );
 

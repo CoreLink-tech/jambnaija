@@ -56,7 +56,7 @@ export function UsersPanel() {
           Users
         </h1>
         <p className="text-sm text-muted">
-          Search, activate, set plan tier, or deactivate accounts.
+          Newest 5 users shown by default. Search by username or email.
         </p>
       </div>
 
