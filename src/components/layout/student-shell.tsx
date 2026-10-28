@@ -10,6 +10,7 @@ const nav = [
   { href: "/exams/setup", label: "Exams" },
   { href: "/subjects", label: "Subjects" },
   { href: "/study", label: "Study" },
+  { href: "/subscription", label: "Plan" },
 ];
 
 export function StudentShell({
@@ -28,6 +29,11 @@ export function StudentShell({
     router.refresh();
   }
 
+  function isActive(href: string) {
+    if (href === "/dashboard") return pathname === "/dashboard";
+    return pathname === href || pathname.startsWith(`${href}/`);
+  }
+
   return (
     <div className="min-h-screen">
       <header className="sticky top-0 z-20 border-b border-line bg-white/90 backdrop-blur">
@@ -40,15 +46,15 @@ export function StudentShell({
           </Link>
           <nav className="hidden items-center gap-1 sm:flex">
             {nav.map((item) => {
-              const active = pathname.startsWith(item.href.split("#")[0]);
+              const active = isActive(item.href);
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`rounded-lg px-3 py-1.5 text-sm font-semibold ${
+                  className={`rounded-lg px-3 py-1.5 text-sm font-semibold transition ${
                     active
-                      ? "bg-blue-50 text-primary"
-                      : "text-muted hover:bg-background"
+                      ? "bg-primary-soft text-primary"
+                      : "text-muted hover:bg-primary-soft/60 hover:text-primary"
                   }`}
                 >
                   {item.label}
@@ -58,7 +64,7 @@ export function StudentShell({
           </nav>
           <div className="flex items-center gap-2">
             {userLabel ? (
-              <span className="hidden text-xs font-medium text-muted sm:inline">
+              <span className="hidden max-w-[8rem] truncate text-xs font-medium text-muted sm:inline">
                 {userLabel}
               </span>
             ) : null}
@@ -68,17 +74,19 @@ export function StudentShell({
           </div>
         </div>
       </header>
+
       <main className="mx-auto max-w-5xl px-4 py-6 pb-24">{children}</main>
-      <nav className="fixed bottom-0 left-0 right-0 border-t border-line bg-white/95 backdrop-blur sm:hidden safe-bottom">
-        <div className="mx-auto flex max-w-5xl justify-around px-2 py-2">
+
+      <nav className="fixed bottom-0 left-0 right-0 z-20 border-t border-line bg-white/95 backdrop-blur sm:hidden">
+        <div className="mx-auto flex max-w-5xl justify-around px-1 py-2">
           {nav.map((item) => {
-            const active = pathname.startsWith(item.href.split("#")[0]);
+            const active = isActive(item.href);
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`min-h-11 min-w-16 rounded-lg px-3 py-2 text-center text-xs font-semibold ${
-                  active ? "bg-blue-50 text-primary" : "text-muted"
+                className={`min-w-0 flex-1 rounded-lg px-1 py-2 text-center text-[11px] font-semibold ${
+                  active ? "bg-primary-soft text-primary" : "text-muted"
                 }`}
               >
                 {item.label}

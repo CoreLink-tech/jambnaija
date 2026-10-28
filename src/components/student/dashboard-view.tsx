@@ -123,8 +123,8 @@ export function DashboardView({ user }: { user: User }) {
       </section>
 
       <div className="flex flex-wrap gap-2">
-        <Link href="/activation">
-          <Button variant="secondary">Redeem activation code</Button>
+        <Link href="/subscription">
+          <Button variant="secondary">Subscription & codes</Button>
         </Link>
       </div>
 

@@ -55,8 +55,8 @@ export function CodesPanel() {
           Activation codes
         </h1>
         <p className="text-sm text-muted">
-          Generate codes for STANDARD or PREMIUM access. Redemption is handled in
-          Phase 9 student flow.
+          Generate STANDARD or PREMIUM codes. Students redeem them on the
+          Subscription page. Share codes after WhatsApp payment (0916 831 1809).
         </p>
       </div>
 

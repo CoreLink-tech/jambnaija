@@ -1,11 +1,5 @@
-import { ActivationForm } from "@/components/student/activation-form";
-
-export const metadata = { title: "Activation" };
+import { redirect } from "next/navigation";
 
 export default function ActivationPage() {
-  return (
-    <div className="py-4">
-      <ActivationForm />
-    </div>
-  );
+  redirect("/subscription");
 }
