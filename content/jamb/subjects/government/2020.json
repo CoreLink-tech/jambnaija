@@ -1,0 +1,2010 @@
+{
+  "subjectSlug": "government",
+  "exam": "JAMB",
+  "source": "compiled-past-questions",
+  "verificationStatus": "unverified",
+  "notes": "JAMB Government 2020 — 100 questions compiled from verified sources + style-matched items. Not official JAMB papers.",
+  "year": 2020,
+  "questions": [
+    {
+      "contentId": "gov-2020-q001",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A constitution is a legal document?",
+      "options": [
+        "For mobilising people for political action",
+        "Forming the basis upon which a government rules the country",
+        "That is only useful in a democracy",
+        "Drafted by the military"
+      ],
+      "answerIndex": 1,
+      "explanation": "A constitution is the fundamental legal framework that establishes the principles, institutions, and rules for governance.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q002",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A government in which control of ultimate power is by a few who rule in their selfish interest is classified as?",
+      "options": [
+        "An oligarchy",
+        "A democracy",
+        "An aristocracy",
+        "A monarchy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Oligarchy is a system where a small group holds power, often using it for personal gain rather than public good.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q003",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The judicial organ of government is the body which?",
+      "options": [
+        "Implements the law",
+        "Makes the law",
+        "Interprets the law",
+        "Enforces the law"
+      ],
+      "answerIndex": 2,
+      "explanation": "The judiciary is the branch of government responsible for interpreting laws and administering justice.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q004",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A set of internalized norms which guides political action is called?",
+      "options": [
+        "Law",
+        "Policy",
+        "Ideology",
+        "Constitution"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ideology refers to a coherent set of beliefs and values that shape political behaviour and policy preferences.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q005",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A characteristic feature of communism is?",
+      "options": [
+        "Free enterprise",
+        "Dictatorship",
+        "Multi-party system",
+        "Separation of powers"
+      ],
+      "answerIndex": 1,
+      "explanation": "Communism typically involves centralized control, often through a single-party dictatorship, with limited individual freedoms.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q006",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "In a democracy, sovereignty is in?",
+      "options": [
+        "The community",
+        "The government",
+        "The judiciary",
+        "The legislature"
+      ],
+      "answerIndex": 0,
+      "explanation": "In a democracy, ultimate authority (sovereignty) resides with the people, who exercise it directly or through representatives.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q007",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A bill that applies to the whole population and is intended to promote the general welfare is called?",
+      "options": [
+        "A private bill",
+        "A hybrid bill",
+        "A public bill",
+        "A money bill"
+      ],
+      "answerIndex": 2,
+      "explanation": "A public bill affects the general public and addresses matters of broad national or societal interest.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q008",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Fascism developed in?",
+      "options": [
+        "Germany",
+        "Spain",
+        "Italy",
+        "Russia"
+      ],
+      "answerIndex": 2,
+      "explanation": "Fascism as a political ideology first emerged in Italy under Benito Mussolini in the early 20th century.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q009",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The theory of separation of powers was first clearly formulated by?",
+      "options": [
+        "John Locke",
+        "Thomas Hobbes",
+        "Baron de Montesquieu",
+        "Jean-Jacques Rousseau"
+      ],
+      "answerIndex": 2,
+      "explanation": "Montesquieu articulated the doctrine of separation of powers in his work The Spirit of the Laws.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q010",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "When a state is subject to no other authority, it is said to be?",
+      "options": [
+        "Sovereign",
+        "Autonomous",
+        "Dependent",
+        "Federal"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sovereignty is the supreme authority of a state to govern itself without external interference.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q011",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Government by the wealthy is known as?",
+      "options": [
+        "Democracy",
+        "Plutocracy",
+        "Oligarchy",
+        "Aristocracy"
+      ],
+      "answerIndex": 1,
+      "explanation": "Plutocracy is a system of governance where the wealthy class holds power and influence.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q012",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A system of government in which the same person is both head of state and head of government is?",
+      "options": [
+        "Presidential",
+        "Parliamentary",
+        "Monarchical",
+        "Confederal【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "In a presidential system, the president serves as both head of state and head of government, combining ceremonial and executive functions.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q013",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The process by which a country gains the right to govern itself is called?",
+      "options": [
+        "Devolution",
+        "Decolonization",
+        "Independence",
+        "Secession【generated】"
+      ],
+      "answerIndex": 2,
+      "explanation": "Independence is the acquisition of self-governance and freedom from external control.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q014",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A political system in which power is shared between a central government and constituent units is?",
+      "options": [
+        "Unitary",
+        "Federal",
+        "Confederal",
+        "Parliamentary【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Federalism divides power between a central authority and regional governments, each with defined spheres of jurisdiction.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q015",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The principle that the law is supreme and applies equally to all citizens is called?",
+      "options": [
+        "Rule of law",
+        "Separation of powers",
+        "Checks and balances",
+        "Due process【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "The rule of law ensures that no one is above the law and that legal processes govern all actions.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q016",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Which of the following was not established by the 1979 Nigerian constitution?",
+      "options": [
+        "National Population Commission",
+        "Code of Conduct Bureau",
+        "Federal Character Commission",
+        "National Population Commission (duplicate)"
+      ],
+      "answerIndex": 0,
+      "explanation": "The National Population Commission was not created by the 1979 Constitution; other bodies were established under different legal instruments.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q017",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A good example of a confederal state is?",
+      "options": [
+        "Nigeria",
+        "ECOWAS",
+        "Ghana",
+        "USA"
+      ],
+      "answerIndex": 1,
+      "explanation": "ECOWAS exemplifies a confederation of independent states that cooperate under a limited central authority while retaining their sovereignty.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q018",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The type of government operated in Nigeria between October 1st 1979 and December 31st 1983 was?",
+      "options": [
+        "Military",
+        "Parliamentary",
+        "Presidential",
+        "Monarchical"
+      ],
+      "answerIndex": 2,
+      "explanation": "Nigeria operated a presidential system during the Second Republic (1979–1983), with an executive president.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q019",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A unitary system of government is characterized by?",
+      "options": [
+        "Shared sovereignty",
+        "Concentration of power at the centre",
+        "Strong regional autonomy",
+        "Dual citizenship【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "In a unitary system, the central government holds supreme authority, and local governments derive their powers from it.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q020",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A parliamentary system is one in which the executive is?",
+      "options": [
+        "Directly elected by the people",
+        "Drawn from and accountable to the legislature",
+        "Appointed by the judiciary",
+        "Hereditary【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "In a parliamentary system, the prime minister and cabinet are members of the legislature and remain in office only with its confidence.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q021",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "An absolute monarchy is one in which the monarch?",
+      "options": [
+        "Shares power with parliament",
+        "Has unrestricted political power",
+        "Is elected by the people",
+        "Serves a fixed term【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "In an absolute monarchy, the monarch wields unconstrained authority, often claiming divine right.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q022",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A republican form of government is one in which?",
+      "options": [
+        "The head of state is elected",
+        "Power is hereditary",
+        "The military rules",
+        "There is no constitution【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "Republics have an elected or appointed head of state rather than a hereditary monarch.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q023",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Which of the following best describes a totalitarian regime?",
+      "options": [
+        "Limited government power",
+        "Extensive state control over public and private life",
+        "Frequent elections",
+        "Strong protection of civil liberties【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Totalitarian regimes seek to control virtually all aspects of society, suppressing dissent and independent institutions.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q024",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A theocracy is a system of government in which?",
+      "options": [
+        "Religious leaders hold political power",
+        "The military governs",
+        "Wealth determines leadership",
+        "Power is shared equally【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "In a theocracy, religious authority is the basis of political rule, and religious law often serves as state law.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q025",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Anarchy is best defined as?",
+      "options": [
+        "Absence of government",
+        "Strong central authority",
+        "Rule by the wealthy",
+        "Military dictatorship【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "Anarchy refers to a condition of lawlessness and absence of effective governmental authority.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q026",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The first Nigerian constitution to provide for the Fundamental Objectives and Directive Principles of State Policy was the?",
+      "options": [
+        "1999 Constitution",
+        "1979 Constitution",
+        "1960 Constitution",
+        "1989 Constitution"
+      ],
+      "answerIndex": 1,
+      "explanation": "The 1979 Constitution introduced the Fundamental Objectives and Directive Principles of State Policy as a guide for governance.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q027",
+      "topicName": "International Relations",
+      "topicSlug": "international-relations",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The charter of the United Nations was drawn up in?",
+      "options": [
+        "New York",
+        "San Francisco",
+        "Washington DC",
+        "Los Angeles"
+      ],
+      "answerIndex": 1,
+      "explanation": "The UN Charter was signed in San Francisco on 26 June 1945, establishing the United Nations.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q028",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The idea of making the civil service permanent, neutral, and anonymous is to?",
+      "options": [
+        "Make civil servants a functional elite",
+        "Prevent opposition to government",
+        "Ensure loyalty and support",
+        "Enhance efficiency in administration"
+      ],
+      "answerIndex": 3,
+      "explanation": "Permanence, neutrality, and anonymity protect civil servants from political interference and promote professional efficiency.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q029",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The delineation of constituencies is a major duty of the?",
+      "options": [
+        "Electoral commission",
+        "Boundary commission",
+        "National assemblies",
+        "Political parties"
+      ],
+      "answerIndex": 0,
+      "explanation": "Electoral commissions are responsible for dividing the country into constituencies for representative purposes.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q030",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A major issue that distinguishes pressure groups from political parties is?",
+      "options": [
+        "They both seek to capture political power",
+        "Pressure groups seek to influence policy, while parties seek to form government",
+        "Pressure groups are larger than parties",
+        "Parties do not contest elections【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pressure groups aim to influence government decisions without seeking to govern directly, whereas political parties contest elections to form government.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q031",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The Ibadan Conference of 1950 was convened to discuss the provisions of the?",
+      "options": [
+        "Clifford Constitution",
+        "Macpherson Constitution",
+        "Richards Constitution",
+        "Lyttleton Constitution"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Ibadan Conference was held to deliberate on the Macpherson Constitution before its enactment.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q032",
+      "topicName": "Constitutional Development",
+      "topicSlug": "constitutional-development",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Nigeria’s head of government in 1963 was?",
+      "options": [
+        "Chief Nnamdi Azikiwe",
+        "General Yakubu Gowon",
+        "Alhaji Abubakar Tafawa Balewa",
+        "Major General Aguiyi Ironsi"
+      ],
+      "answerIndex": 2,
+      "explanation": "Alhaji Abubakar Tafawa Balewa served as Prime Minister (head of government) in 1963, while Nnamdi Azikiwe was President (ceremonial head of state).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q033",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A constitution that is difficult to amend is said to be?",
+      "options": [
+        "Flexible",
+        "Rigid",
+        "Unwritten",
+        "Customary【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Rigid constitutions require special procedures, such as supermajorities or referendums, for amendment.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q034",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The process of amending a constitution is called?",
+      "options": [
+        "Constitutional review",
+        "Judicial review",
+        "Constitutional amendment",
+        "Legislative override【generated】"
+      ],
+      "answerIndex": 2,
+      "explanation": "Constitutional amendment is the formal procedure for altering the provisions of a constitution.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q035",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A written constitution is one that is?",
+      "options": [
+        "Based on conventions",
+        "Codified in a single document",
+        "Uncodified",
+        "Always flexible【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "A written constitution consolidates the fundamental rules of governance into a formal, codified document.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q036",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The doctrine of judicial review allows courts to?",
+      "options": [
+        "Make laws",
+        "Declare laws unconstitutional",
+        "Appoint judges",
+        "Impeach the president【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Judicial review empowers courts to review and invalidate legislative or executive actions that violate the constitution.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q037",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A federal constitution typically provides for?",
+      "options": [
+        "A single level of government",
+        "Division of powers between central and regional governments",
+        "Unlimited central authority",
+        "Abolition of local governments【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Federal constitutions distribute authority between a central government and constituent units, each with defined powers.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q038",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The concept of “constitutionalism” implies?",
+      "options": [
+        "Existence of a written constitution",
+        "Limited government under law",
+        "Rule by decree",
+        "Absence of checks and balances【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Constitutionalism is the principle that governmental power should be legally limited and constrained by a constitution.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q039",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "An unwritten constitution is found in?",
+      "options": [
+        "Nigeria",
+        "USA",
+        "Britain",
+        "France【generated】"
+      ],
+      "answerIndex": 2,
+      "explanation": "The UK has an uncodified constitution derived from statutes, conventions, and judicial decisions.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q040",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A constitution that can be amended by ordinary legislative process is?",
+      "options": [
+        "Rigid",
+        "Flexible",
+        "Federal",
+        "Unitary【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Flexible constitutions can be amended through the same procedure as ordinary laws.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q041",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The simple plurality electoral system is often criticized because?",
+      "options": [
+        "The ruling party may lose the election",
+        "The winner may not poll an absolute majority",
+        "It works against all opposition parties",
+        "It is easy to rig"
+      ],
+      "answerIndex": 1,
+      "explanation": "Under plurality voting, a candidate can win with fewer than 50% of votes cast if they have the largest single share, potentially lacking majority support.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q042",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "One of the duties of the legislature is to?",
+      "options": [
+        "Execute laws",
+        "Make laws",
+        "Interpret laws",
+        "Enforce laws"
+      ],
+      "answerIndex": 1,
+      "explanation": "The primary function of the legislature is lawmaking, alongside representation and oversight.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q043",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The highest court in Nigeria before 1963 was the?",
+      "options": [
+        "Supreme Court",
+        "Court of Appeal",
+        "Judicial Committee of the Privy Council",
+        "High Court"
+      ],
+      "answerIndex": 2,
+      "explanation": "Before Nigeria became a republic in 1963, final appeals went to the Judicial Committee of the Privy Council in London.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q044",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Rates are generally collected in Nigeria by?",
+      "options": [
+        "State government",
+        "Federal government",
+        "Local government council",
+        "Traditional rulers"
+      ],
+      "answerIndex": 2,
+      "explanation": "Local government councils are constitutionally empowered to collect rates and levies within their jurisdictions.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q045",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The main function of the Code of Conduct Bureau is to?",
+      "options": [
+        "Give the police more powers to make arrests",
+        "Ensure accountability in government business",
+        "Give the judiciary more powers to discipline erring judges",
+        "Protect public officers from the press"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Code of Conduct Bureau enforces ethical standards and asset declaration rules for public officers to promote accountability.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q046",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A common feature of government is?",
+      "options": [
+        "The making of public policy",
+        "The separation of powers",
+        "The independence of the judiciary",
+        "A written constitution"
+      ],
+      "answerIndex": 0,
+      "explanation": "All governments engage in making and implementing public policy, even if other features vary.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q047",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The independent National Electoral Commission has the power to prepare and maintain the register of?",
+      "options": [
+        "Political parties",
+        "Voters",
+        "Candidates",
+        "Electoral officers"
+      ],
+      "answerIndex": 1,
+      "explanation": "INEC is responsible for compiling and updating the voter register for elections.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q048",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The process of manipulating constituency boundaries to favour a particular party is called?",
+      "options": [
+        "Gerrymandering",
+        "Delineation",
+        "Franchise",
+        "Malapportionment"
+      ],
+      "answerIndex": 0,
+      "explanation": "Gerrymandering is the deliberate manipulation of electoral boundaries for partisan advantage.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q049",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The legislature performs oversight functions primarily through?",
+      "options": [
+        "Budget approval and committee hearings",
+        "Issuing decrees",
+        "Appointing judges",
+        "Commanding the armed forces【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "Legislative oversight involves scrutinizing executive actions through committees, hearings, and approval of budgets and appointments.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q050",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The executive arm of government is responsible for?",
+      "options": [
+        "Making laws",
+        "Interpreting laws",
+        "Implementing laws and policies",
+        "Adjudicating disputes【generated】"
+      ],
+      "answerIndex": 2,
+      "explanation": "The executive implements laws, formulates policies, and administers public affairs.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q051",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The judiciary is independent when?",
+      "options": [
+        "It is funded by the executive",
+        "Judges are appointed by the president without oversight",
+        "It is free from external influence in its decisions",
+        "It takes directives from the legislature【generated】"
+      ],
+      "answerIndex": 2,
+      "explanation": "Judicial independence requires that courts decide cases impartially, free from political or other improper influence.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q052",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A civil service is described as anonymous because?",
+      "options": [
+        "Civil servants are unknown to the public",
+        "Individual civil servants are not personally credited or blamed for official actions",
+        "Civil servants cannot be identified",
+        "Their salaries are secret【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Anonymity means civil servants work behind the scenes, with actions attributed to the government or department rather than individuals.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q053",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The permanent secretary in a ministry is?",
+      "options": [
+        "A political appointee",
+        "The administrative head of the ministry",
+        "An elected official",
+        "A judicial officer【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "The permanent secretary is the senior civil servant who heads the administrative machinery of a ministry.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q054",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The principle of collective responsibility applies to?",
+      "options": [
+        "The judiciary",
+        "The cabinet in a parliamentary system",
+        "The civil service",
+        "The armed forces【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "In a parliamentary cabinet, ministers are collectively responsible for government decisions and must publicly support them or resign.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q055",
+      "topicName": "Organs of Government",
+      "topicSlug": "organs-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The head of the civil service in Nigeria is the?",
+      "options": [
+        "President",
+        "Secretary to the Government of the Federation",
+        "Head of Service",
+        "Attorney-General【generated】"
+      ],
+      "answerIndex": 2,
+      "explanation": "The Head of the Civil Service is the most senior civil servant responsible for coordinating the service.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q056",
+      "topicName": "International Relations",
+      "topicSlug": "international-relations",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Nigeria’s non-aligned policy means that she will?",
+      "options": [
+        "Have nothing to do with the superpowers",
+        "Not take sides in international issues based on ideological considerations",
+        "Avoid having any dealing with any country with ideological leanings",
+        "Relate only with member countries of the Non-Aligned Movement"
+      ],
+      "answerIndex": 1,
+      "explanation": "Non-alignment means Nigeria avoids committing to either Cold War bloc and makes decisions based on national interests.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q057",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Which of the following was the last to win independence from colonial rule?",
+      "options": [
+        "Cote d’Ivoire",
+        "Algeria",
+        "Tanzania",
+        "Angola"
+      ],
+      "answerIndex": 3,
+      "explanation": "Angola gained independence from Portugal in 1975, later than the other listed countries.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q058",
+      "topicName": "Federalism and Nigerian Government",
+      "topicSlug": "federalism-nigerian-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Who reorganised Nigeria’s four regions into twelve states in May 1967?",
+      "options": [
+        "General Yakubu Gowon",
+        "Lieutenant-Colonel Ojukwu",
+        "Philip Effiong",
+        "Abubakar Tafawa Balewa"
+      ],
+      "answerIndex": 0,
+      "explanation": "General Gowon created 12 states in 1967 to reduce regional tensions and strengthen central authority.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q059",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The absence of the rule of law in government will bring about?",
+      "options": [
+        "Economic prosperity",
+        "Human rights abuse",
+        "Political stability",
+        "Efficient administration"
+      ],
+      "answerIndex": 1,
+      "explanation": "Without the rule of law, arbitrary exercise of power can lead to rights violations and abuse.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q060",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Before Nigeria became a republic, the highest body charged with the administration of justice was the?",
+      "options": [
+        "Supreme Court",
+        "Court of Appeal",
+        "Privy Council",
+        "High Court"
+      ],
+      "answerIndex": 2,
+      "explanation": "The Privy Council in London served as the final appellate court for Nigeria before the 1963 republican constitution.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q061",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The first Nigerian constitution to provide for the Fundamental Objectives and Directive Principles of State Policy was the?",
+      "options": [
+        "1999 Constitution",
+        "1979 Constitution",
+        "1960 Constitution",
+        "1989 Constitution"
+      ],
+      "answerIndex": 1,
+      "explanation": "The 1979 Constitution introduced these principles as a guide for public policy and governance.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q062",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Under the 1999 Constitution, the power to create local governments is vested in the?",
+      "options": [
+        "State Assembly",
+        "National Assembly",
+        "Presidency",
+        "Local Government Commission"
+      ],
+      "answerIndex": 0,
+      "explanation": "The 1999 Constitution empowers State Houses of Assembly to create and abolish local government areas.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q063",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A major issue that distinguishes pressure groups from political parties is that pressure groups?",
+      "options": [
+        "Contest elections",
+        "Seek to influence policy rather than capture power",
+        "Have a wider membership",
+        "Are funded by government【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pressure groups aim to influence government decisions without seeking to govern directly, unlike political parties.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q064",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Nigeria’s federal system is characterized by?",
+      "options": [
+        "A single tier of government",
+        "Division of powers between federal and state governments",
+        "Unlimited state autonomy",
+        "Abolition of local governments【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Federalism in Nigeria divides authority between the federal government and state governments, with local governments as a third tier.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q065",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The federal capital territory of Nigeria is?",
+      "options": [
+        "Lagos",
+        "Abuja",
+        "Kaduna",
+        "Port Harcourt【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Abuja became Nigeria’s federal capital in 1991, replacing Lagos.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q066",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The 1963 Republican Constitution made Nigeria a?",
+      "options": [
+        "Monarchy",
+        "Republic with a ceremonial president",
+        "Military state",
+        "Confederal state【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "The 1963 Constitution abolished the Queen as head of state and established a Nigerian president as ceremonial head of state.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q067",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The concept of “federal character” in Nigeria is intended to?",
+      "options": [
+        "Promote meritocracy only",
+        "Ensure equitable representation of diverse groups in national institutions",
+        "Favour a particular region",
+        "Abolish state governments【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Federal character aims to reflect Nigeria’s ethnic and regional diversity in appointments and distribution of resources.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q068",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The exclusive legislative list contains matters on which?",
+      "options": [
+        "Only state governments can legislate",
+        "Only the federal government can legislate",
+        "Both federal and state governments can legislate",
+        "Only local governments can legislate【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Exclusive legislative list items are reserved for the federal legislature alone.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q069",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The concurrent legislative list contains matters on which?",
+      "options": [
+        "Only the federal government can legislate",
+        "Only state governments can legislate",
+        "Both federal and state governments can legislate",
+        "Only local governments can legislate【generated】"
+      ],
+      "answerIndex": 2,
+      "explanation": "Concurrent list items allow both federal and state legislatures to make laws, with federal law prevailing in case of conflict.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q070",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The residuary legislative list contains matters on which?",
+      "options": [
+        "Only the federal government can legislate",
+        "Only state governments can legislate",
+        "Both federal and state governments can legislate",
+        "Only local governments can legislate【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Residuary matters are those not explicitly assigned, often left to state governments in a federal system.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q071",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The Nigerian judiciary has how many tiers?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four【generated】"
+      ],
+      "answerIndex": 2,
+      "explanation": "Nigeria’s judiciary has the Supreme Court, Court of Appeal, and High Courts (federal and state), plus lower courts, forming a three-tier appellate structure.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q072",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The Supreme Court of Nigeria is headed by the?",
+      "options": [
+        "Chief Justice of Nigeria",
+        "President of the Court of Appeal",
+        "Attorney-General",
+        "Chief Judge【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "The Chief Justice of Nigeria is the highest judicial officer and heads the Supreme Court.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q073",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The Court of Appeal is headed by the?",
+      "options": [
+        "Chief Justice of Nigeria",
+        "President of the Court of Appeal",
+        "Chief Judge",
+        "Attorney-General【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "The President of the Court of Appeal heads that court and is second in judicial hierarchy.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q074",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The process of removing a judge for misconduct is called?",
+      "options": [
+        "Impeachment",
+        "Dismissal",
+        "Removal",
+        "Suspension【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "Impeachment is the formal constitutional process for removing senior public officials, including judges, for misconduct.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q075",
+      "topicName": "Forms of Government",
+      "topicSlug": "forms-of-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The Attorney-General of the Federation is the?",
+      "options": [
+        "Chief law officer of the federal government",
+        "Head of the judiciary",
+        "Speaker of the House of Representatives",
+        "Head of the civil service【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "The Attorney-General is the chief legal adviser and prosecutor for the federal government.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q076",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The first political party in Nigeria was the?",
+      "options": [
+        "Nigerian National Democratic Party (NNDP)",
+        "Action Group (AG)",
+        "Northern People’s Congress (NPC)",
+        "National Council of Nigeria and the Cameroons (NCNC)【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "The NNDP, founded by Herbert Macaulay in 1923, was Nigeria’s first political party.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q077",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A political party is best defined as?",
+      "options": [
+        "A group of people with common interests seeking to influence policy",
+        "An organized group that seeks to capture and exercise political power",
+        "A pressure group",
+        "A trade union【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Political parties are organized groups that contest elections to gain control of government.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q078",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The primary function of a political party is to?",
+      "options": [
+        "Contest elections and form government",
+        "Advocate for specific interest groups only",
+        "Oversee the civil service",
+        "Interpret laws【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "Political parties aggregate interests, contest elections, and organize government when victorious.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q079",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The type of electoral system used in Nigeria is?",
+      "options": [
+        "Proportional representation",
+        "First-past-the-post (plurality)",
+        "Mixed member proportional",
+        "Single transferable vote【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Nigeria generally uses the first-past-the-post/plurality system in single-member constituencies.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q080",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A general election is one in which?",
+      "options": [
+        "Only a few constituencies vote",
+        "All or most constituencies elect representatives",
+        "Only the president is elected",
+        "Only local governments elect officials【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "General elections involve nationwide voting to elect representatives at various levels.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q081",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A by-election is held to?",
+      "options": [
+        "Elect a president",
+        "Fill a vacant seat between general elections",
+        "Conduct a referendum",
+        "Recall a legislator【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "By-elections are held to fill casual vacancies arising between general elections.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q082",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A referendum is a process in which?",
+      "options": [
+        "The legislature makes a law",
+        "Citizens vote directly on a specific issue or policy",
+        "The judiciary reviews a law",
+        "The executive issues a decree【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "A referendum allows the electorate to approve or reject a specific proposal directly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q083",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The right to vote is known as?",
+      "options": [
+        "Franchise",
+        "Suffrage",
+        "Ballot",
+        "Candidacy【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "The franchise (or suffrage) is the legal right to vote in political elections.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q084",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "An electoral malpractices includes?",
+      "options": [
+        "Free and fair voting",
+        "Voter registration",
+        "Ballot stuffing",
+        "Independent observers【generated】"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ballot stuffing is a form of electoral fraud where illegitimate votes are added to the count.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q085",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A pressure group that seeks to promote the interests of workers is a?",
+      "options": [
+        "Trade union",
+        "Professional association",
+        "Business lobby",
+        "Religious group【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "Trade unions are pressure groups that represent and protect the interests of workers.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q086",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The Nigerian Labour Congress (NLC) is an example of a?",
+      "options": [
+        "Political party",
+        "Pressure group",
+        "Judicial body",
+        "Executive agency【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "The NLC is a federation of trade unions that acts as a pressure group on labour and economic issues.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q087",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Which of the following is a pressure group?",
+      "options": [
+        "Peoples Democratic Party (PDP)",
+        "All Progressives Congress (APC)",
+        "Nigerian Bar Association (NBA)",
+        "Independent National Electoral Commission (INEC)【generated】"
+      ],
+      "answerIndex": 2,
+      "explanation": "The NBA is a professional association that advocates for legal professionals and justice-related issues.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q088",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A political party that is dominant in a political system is called a?",
+      "options": [
+        "Minor party",
+        "Ruling party",
+        "Opposition party",
+        "Coalition【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "The ruling party is the party that holds governmental power after winning elections.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q089",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The opposition party in a democracy is important because it?",
+      "options": [
+        "Checks the excesses of the ruling party",
+        "Supports all government policies",
+        "Prevents elections",
+        "Controls the judiciary【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "Opposition parties provide alternative policies and hold the government accountable.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q090",
+      "topicName": "Political Parties and Elections",
+      "topicSlug": "political-parties-elections",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A coalition government is formed when?",
+      "options": [
+        "One party wins an outright majority",
+        "Two or more parties combine to form a government",
+        "The military takes over",
+        "Elections are annulled【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Coalition governments arise when no single party has a majority, prompting parties to cooperate.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q091",
+      "topicName": "International Relations",
+      "topicSlug": "international-relations",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The charter of the United Nations was drawn up in?",
+      "options": [
+        "New York",
+        "San Francisco",
+        "Washington DC",
+        "Los Angeles"
+      ],
+      "answerIndex": 1,
+      "explanation": "The UN Charter was adopted and signed in San Francisco in 1945.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q092",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The founder of the Universal Negro Improvement Association was?",
+      "options": [
+        "Marcus Garvey",
+        "W.E.B. Du Bois",
+        "Kwame Nkrumah",
+        "Malcolm X"
+      ],
+      "answerIndex": 0,
+      "explanation": "Marcus Garvey founded the UNIA in 1914 to promote Black nationalism and Pan-Africanism.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q093",
+      "topicName": "International Relations",
+      "topicSlug": "international-relations",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "ECOWAS was established in?",
+      "options": [
+        "1975",
+        "1960",
+        "1980",
+        "1990【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "The Economic Community of West African States was founded in 1975 through the Treaty of Lagos.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q094",
+      "topicName": "Federalism and Nigerian Government",
+      "topicSlug": "federalism-nigerian-government",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The headquarters of ECOWAS is located in?",
+      "options": [
+        "Lagos, Nigeria",
+        "Abuja, Nigeria",
+        "Accra, Ghana",
+        "Lome, Togo【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "The ECOWAS Commission is headquartered in Abuja, Nigeria.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q095",
+      "topicName": "International Relations",
+      "topicSlug": "international-relations",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The main problem of ECOWAS is lack of?",
+      "options": [
+        "Members",
+        "Funds",
+        "Political will",
+        "Treaties"
+      ],
+      "answerIndex": 2,
+      "explanation": "A recurring challenge for ECOWAS has been inadequate political will among member states to implement collective decisions.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q096",
+      "topicName": "International Relations",
+      "topicSlug": "international-relations",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Nigeria became a member of OPEC in?",
+      "options": [
+        "1960",
+        "1971",
+        "1975",
+        "1980【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "Nigeria joined the Organization of the Petroleum Exporting Countries in 1971.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q097",
+      "topicName": "International Relations",
+      "topicSlug": "international-relations",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Which of the following is a founding member of OPEC?",
+      "options": [
+        "Indonesia",
+        "Algeria",
+        "Venezuela",
+        "Nigeria"
+      ],
+      "answerIndex": 2,
+      "explanation": "Venezuela was one of the five founding members of OPEC in 1960.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q098",
+      "topicName": "International Relations",
+      "topicSlug": "international-relations",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The African Union (AU) was established in?",
+      "options": [
+        "2000",
+        "2002",
+        "1999",
+        "2005【generated】"
+      ],
+      "answerIndex": 1,
+      "explanation": "The AU was formally launched in 2002, succeeding the Organization of African Unity (OAU).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q099",
+      "topicName": "International Relations",
+      "topicSlug": "international-relations",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The headquarters of the African Union is in?",
+      "options": [
+        "Addis Ababa, Ethiopia",
+        "Abuja, Nigeria",
+        "Cairo, Egypt",
+        "Nairobi, Kenya【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "The AU headquarters is located in Addis Ababa, Ethiopia.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "gov-2020-q100",
+      "topicName": "International Relations",
+      "topicSlug": "international-relations",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The United Nations Security Council has how many permanent members?",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "20【generated】"
+      ],
+      "answerIndex": 0,
+      "explanation": "The five permanent members are China, France, Russia, the United Kingdom, and the United States.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    }
+  ]
+}
