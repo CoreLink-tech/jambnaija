@@ -1,0 +1,2010 @@
+{
+  "subjectSlug": "literature",
+  "exam": "JAMB",
+  "source": "compiled-past-questions",
+  "verificationStatus": "unverified",
+  "notes": "JAMB Literature in English 2026 — 100 questions (mock/predicted for 2026 + style-matched items). Prescribed texts include The Marriage of Anansewa, Antony and Cleopatra, So the Path Does Not Die, Redemption Road. Not official JAMB papers.",
+  "year": 2026,
+  "questions": [
+    {
+      "contentId": "lit-2026-q001",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A play that ends with the downfall of the protagonist is a?",
+      "options": [
+        "Comedy",
+        "Tragedy",
+        "Farce",
+        "Melodrama"
+      ],
+      "answerIndex": 1,
+      "explanation": "A tragedy ends in the protagonist's downfall or death.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q002",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The purging of pity and fear in tragedy is called?",
+      "options": [
+        "Hubris",
+        "Catharsis",
+        "Hamartia",
+        "Nemesis"
+      ],
+      "answerIndex": 1,
+      "explanation": "Catharsis is the emotional purgation experienced by the audience.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q003",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A character who remains unchanged throughout a work is a?",
+      "options": [
+        "Round character",
+        "Dynamic character",
+        "Flat character",
+        "Foil character"
+      ],
+      "answerIndex": 2,
+      "explanation": "A flat or static character does not develop.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q004",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The repetition of initial consonant sounds in nearby words is?",
+      "options": [
+        "Assonance",
+        "Alliteration",
+        "Consonance",
+        "Onomatopoeia"
+      ],
+      "answerIndex": 1,
+      "explanation": "Alliteration is the repetition of initial consonant sounds.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q005",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A comparison using “like” or “as” is a?",
+      "options": [
+        "Metaphor",
+        "Simile",
+        "Personification",
+        "Apostrophe"
+      ],
+      "answerIndex": 1,
+      "explanation": "A simile uses “like” or “as” for comparison.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q006",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A part used to represent the whole is?",
+      "options": [
+        "Metonymy",
+        "Synecdoche",
+        "Metaphor",
+        "Simile"
+      ],
+      "answerIndex": 1,
+      "explanation": "Synecdoche uses a part to signify the whole.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q007",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A statement that seems contradictory but may reveal a truth is a?",
+      "options": [
+        "Irony",
+        "Paradox",
+        "Oxymoron",
+        "Epigram"
+      ],
+      "answerIndex": 1,
+      "explanation": "A paradox is an apparent contradiction.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q008",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The writer's attitude toward the subject matter is the?",
+      "options": [
+        "Mood",
+        "Tone",
+        "Theme",
+        "Diction"
+      ],
+      "answerIndex": 1,
+      "explanation": "Tone reflects the writer's attitude.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q009",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A 14-line poem is called a?",
+      "options": [
+        "Ode",
+        "Sonnet",
+        "Elegy",
+        "Ballad"
+      ],
+      "answerIndex": 1,
+      "explanation": "A sonnet has fourteen lines.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q010",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A poem that mourns the dead is an?",
+      "options": [
+        "Ode",
+        "Elegy",
+        "Epic",
+        "Satire"
+      ],
+      "answerIndex": 1,
+      "explanation": "An elegy is a mournful poem for the deceased.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q011",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A long narrative poem celebrating heroic deeds is an?",
+      "options": [
+        "Ballad",
+        "Epic",
+        "Lyric",
+        "Ode"
+      ],
+      "answerIndex": 1,
+      "explanation": "An epic celebrates the deeds of a hero.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q012",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A solo speech revealing inner thoughts is a?",
+      "options": [
+        "Aside",
+        "Soliloquy",
+        "Monologue",
+        "Dialogue"
+      ],
+      "answerIndex": 1,
+      "explanation": "A soliloquy is spoken alone on stage.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q013",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A brief remark heard by the audience but not by other characters is an?",
+      "options": [
+        "Soliloquy",
+        "Aside",
+        "Prologue",
+        "Epilogue"
+      ],
+      "answerIndex": 1,
+      "explanation": "An aside is a private remark to the audience.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q014",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The three unities of classical drama are?",
+      "options": [
+        "Action, time, and place",
+        "Plot, character, and theme",
+        "Beginning, middle, and end",
+        "Actor, audience, and stage"
+      ],
+      "answerIndex": 0,
+      "explanation": "The classical unities are action, time, and place.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q015",
+      "topicName": "Novel - So the Path Does Not Die",
+      "topicSlug": "novel-so-the-path-does-not-die",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The final resolution of a plot is the?",
+      "options": [
+        "Climax",
+        "Denouement",
+        "Exposition",
+        "Conflict"
+      ],
+      "answerIndex": 1,
+      "explanation": "The denouement is the final resolution.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q016",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A character who contrasts with the protagonist is a?",
+      "options": [
+        "Antagonist",
+        "Foil",
+        "Narrator",
+        "Villain"
+      ],
+      "answerIndex": 1,
+      "explanation": "A foil highlights the protagonist's traits by contrast.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q017",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The main idea of a literary work is its?",
+      "options": [
+        "Plot",
+        "Setting",
+        "Theme",
+        "Style"
+      ],
+      "answerIndex": 2,
+      "explanation": "The theme is the central idea.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q018",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A story within a story is a?",
+      "options": [
+        "Frame narrative",
+        "Subplot",
+        "Flashback",
+        "Allegory"
+      ],
+      "answerIndex": 0,
+      "explanation": "A frame narrative contains another story.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q019",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The struggle between opposing forces is?",
+      "options": [
+        "Climax",
+        "Conflict",
+        "Resolution",
+        "Exposition"
+      ],
+      "answerIndex": 1,
+      "explanation": "Conflict drives the plot.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q020",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A work that ridicules human folly is?",
+      "options": [
+        "Satire",
+        "Parody",
+        "Farce",
+        "Comedy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Satire uses humour to criticise.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q021",
+      "topicName": "Drama - The Marriage of Anansewa",
+      "topicSlug": "drama-marriage-of-anansewa",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Who wrote The Marriage of Anansewa?",
+      "options": [
+        "Ama Ata Aidoo",
+        "Efua Sutherland",
+        "Wole Soyinka",
+        "Femi Osofisan"
+      ],
+      "answerIndex": 1,
+      "explanation": "The play is by Ghanaian playwright Efua Sutherland.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q022",
+      "topicName": "Drama - The Marriage of Anansewa",
+      "topicSlug": "drama-marriage-of-anansewa",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Anansewa is the daughter of?",
+      "options": [
+        "Christie",
+        "Ananse",
+        "The Chief",
+        "A storyteller"
+      ],
+      "answerIndex": 1,
+      "explanation": "Anansewa is Ananse’s daughter.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q023",
+      "topicName": "Drama - The Marriage of Anansewa",
+      "topicSlug": "drama-marriage-of-anansewa",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Ananse’s main scheme in the play is to?",
+      "options": [
+        "Become a chief",
+        "Marry off his daughter to the highest bidder",
+        "Travel abroad",
+        "Overthrow the government"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ananse uses his daughter’s marriage as a scheme for material gain.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q024",
+      "topicName": "Drama - The Marriage of Anansewa",
+      "topicSlug": "drama-marriage-of-anansewa",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The four chiefs in the play represent?",
+      "options": [
+        "Different ethnic groups",
+        "Competing suitors for Anansewa",
+        "Government officials",
+        "Ananse’s relatives"
+      ],
+      "answerIndex": 1,
+      "explanation": "The four chiefs are suitors competing for Anansewa’s hand.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q025",
+      "topicName": "Drama - The Marriage of Anansewa",
+      "topicSlug": "drama-marriage-of-anansewa",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Ananse discovers who truly loves his daughter most through?",
+      "options": [
+        "The gifts they send",
+        "Their reactions to news of Anansewa’s death",
+        "Their letters",
+        "Their messengers’ words"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ananse tests the chiefs by spreading news of Anansewa’s death; their reactions reveal their sincerity.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q026",
+      "topicName": "Drama - The Marriage of Anansewa",
+      "topicSlug": "drama-marriage-of-anansewa",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Christie is Ananse’s?",
+      "options": [
+        "Wife",
+        "Secretary",
+        "Daughter",
+        "Sister"
+      ],
+      "answerIndex": 1,
+      "explanation": "Christie serves as Ananse’s secretary in the play.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q027",
+      "topicName": "Drama - The Marriage of Anansewa",
+      "topicSlug": "drama-marriage-of-anansewa",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The praise-name “Mighty-Tree-of-Ancient-Origin” in the play refers to?",
+      "options": [
+        "Ananse",
+        "A chief",
+        "Anansewa",
+        "The storyteller"
+      ],
+      "answerIndex": 2,
+      "explanation": "The praise-names are used to celebrate Anansewa.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q028",
+      "topicName": "Drama - The Marriage of Anansewa",
+      "topicSlug": "drama-marriage-of-anansewa",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The Marriage of Anansewa is built on the Ghanaian storytelling tradition known as?",
+      "options": [
+        "Anansegoro",
+        "Mbari",
+        "Griot",
+        "Egun"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sutherland uses the “Anansegoro” tradition.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q029",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The play satirises?",
+      "options": [
+        "Colonial rule",
+        "Greed and social status",
+        "Religious hypocrisy",
+        "War"
+      ],
+      "answerIndex": 1,
+      "explanation": "The play critiques greed and the pursuit of social status.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q030",
+      "topicName": "Drama - The Marriage of Anansewa",
+      "topicSlug": "drama-marriage-of-anansewa",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Anansewa’s marriage ultimately serves as a?",
+      "options": [
+        "Tragedy",
+        "Comic resolution",
+        "Moral lesson about greed",
+        "Political statement"
+      ],
+      "answerIndex": 2,
+      "explanation": "The play concludes with a moral commentary on Ananse’s greed.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q031",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The “storyteller” figure in the play functions as a?",
+      "options": [
+        "Narrator and commentator",
+        "Main antagonist",
+        "Love interest",
+        "Judge"
+      ],
+      "answerIndex": 0,
+      "explanation": "The storyteller frames and comments on the action.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q032",
+      "topicName": "Drama - The Marriage of Anansewa",
+      "topicSlug": "drama-marriage-of-anansewa",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Ananse’s use of proverbs in his speech is a feature of?",
+      "options": [
+        "Western drama",
+        "African oral tradition",
+        "Absurdist theatre",
+        "Shakespearean tragedy"
+      ],
+      "answerIndex": 1,
+      "explanation": "Proverbs are integral to the African oral storytelling tradition.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q033",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The play blends?",
+      "options": [
+        "Tragedy and farce",
+        "Tradition and modernity",
+        "Realism and fantasy",
+        "History and fiction"
+      ],
+      "answerIndex": 1,
+      "explanation": "The play draws on traditional storytelling while addressing modern social concerns.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q034",
+      "topicName": "Drama - The Marriage of Anansewa",
+      "topicSlug": "drama-marriage-of-anansewa",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The main conflict in The Marriage of Anansewa is between?",
+      "options": [
+        "Ananse and the chiefs",
+        "Tradition and individualism",
+        "Ananse’s greed and his fatherly duty",
+        "Rich and poor"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ananse’s scheming conflicts with his responsibilities as a father.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q035",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The play is classified as?",
+      "options": [
+        "Tragedy",
+        "Comedy",
+        "History",
+        "Romance"
+      ],
+      "answerIndex": 1,
+      "explanation": "It is a satirical comedy.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q036",
+      "topicName": "Drama - Antony and Cleopatra",
+      "topicSlug": "drama-antony-and-cleopatra",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Antony and Cleopatra is a?",
+      "options": [
+        "Comedy",
+        "Tragedy",
+        "History play",
+        "Romance"
+      ],
+      "answerIndex": 1,
+      "explanation": "It is one of Shakespeare’s great tragedies.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q037",
+      "topicName": "Drama - Antony and Cleopatra",
+      "topicSlug": "drama-antony-and-cleopatra",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The play explores the conflict between?",
+      "options": [
+        "Love and duty",
+        "Rich and poor",
+        "Young and old",
+        "East and West only"
+      ],
+      "answerIndex": 0,
+      "explanation": "Antony is torn between his love for Cleopatra and his Roman duties.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q038",
+      "topicName": "Drama - Antony and Cleopatra",
+      "topicSlug": "drama-antony-and-cleopatra",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Cleopatra is the Queen of?",
+      "options": [
+        "Rome",
+        "Egypt",
+        "Greece",
+        "Persia"
+      ],
+      "answerIndex": 1,
+      "explanation": "Cleopatra VII rules Egypt.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q039",
+      "topicName": "Drama - Antony and Cleopatra",
+      "topicSlug": "drama-antony-and-cleopatra",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Octavius Caesar is?",
+      "options": [
+        "Antony’s ally throughout",
+        "Antony’s rival and eventual victor",
+        "Cleopatra’s brother",
+        "A minor character"
+      ],
+      "answerIndex": 1,
+      "explanation": "Octavius becomes Antony’s political and military rival.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q040",
+      "topicName": "Drama - Antony and Cleopatra",
+      "topicSlug": "drama-antony-and-cleopatra",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Antony’s tragic flaw is often identified as?",
+      "options": [
+        "His jealousy",
+        "His infatuation with Cleopatra",
+        "His cowardice",
+        "His greed"
+      ],
+      "answerIndex": 1,
+      "explanation": "His passion for Cleopatra leads to his downfall.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q041",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The play is set in?",
+      "options": [
+        "Rome and Egypt",
+        "Greece and Persia",
+        "England and France",
+        "Italy and Spain"
+      ],
+      "answerIndex": 0,
+      "explanation": "The action moves between Rome and Egypt.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q042",
+      "topicName": "Drama - Antony and Cleopatra",
+      "topicSlug": "drama-antony-and-cleopatra",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Enobarbus is?",
+      "options": [
+        "Antony’s loyal soldier who eventually deserts him",
+        "Cleopatra’s servant",
+        "Caesar’s advisor",
+        "A messenger"
+      ],
+      "answerIndex": 0,
+      "explanation": "Enobarbus is a Roman soldier whose loyalty to Antony ultimately falters.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q043",
+      "topicName": "Drama - Antony and Cleopatra",
+      "topicSlug": "drama-antony-and-cleopatra",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The “infinite variety” speech describes?",
+      "options": [
+        "Rome",
+        "Cleopatra",
+        "The Nile",
+        "Antony"
+      ],
+      "answerIndex": 1,
+      "explanation": "Enobarbus describes Cleopatra’s infinite variety.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q044",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The theme of betrayal is central to the relationship between?",
+      "options": [
+        "Antony and Cleopatra",
+        "Antony and Caesar",
+        "Cleopatra and her servants",
+        "Enobarbus and Caesar"
+      ],
+      "answerIndex": 1,
+      "explanation": "Political betrayals dominate the Antony–Caesar conflict.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q045",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The play ends with?",
+      "options": [
+        "Antony and Cleopatra ruling together",
+        "The deaths of Antony and Cleopatra",
+        "Caesar’s assassination",
+        "A peace treaty"
+      ],
+      "answerIndex": 1,
+      "explanation": "Both protagonists die, and Caesar emerges victorious.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q046",
+      "topicName": "Novel - So the Path Does Not Die",
+      "topicSlug": "novel-so-the-path-does-not-die",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Who is the protagonist of So the Path Does Not Die?",
+      "options": [
+        "Cammy",
+        "Fina (Finaba)",
+        "Kumba Kargbo",
+        "Musudugu"
+      ],
+      "answerIndex": 1,
+      "explanation": "Fina is the central character of the novel.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q047",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The novel’s title symbolises?",
+      "options": [
+        "The continuity of tradition and identity",
+        "The inevitability of death",
+        "The triumph of colonialism",
+        "The end of a journey"
+      ],
+      "answerIndex": 0,
+      "explanation": "The title suggests that cultural paths and identity endure despite challenges.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q048",
+      "topicName": "Novel - So the Path Does Not Die",
+      "topicSlug": "novel-so-the-path-does-not-die",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The abandonment of Musudugu by many women before Kumba Kargbo’s birth reflects?",
+      "options": [
+        "The psychological cost of isolation",
+        "Weakness in the social fabric",
+        "Patriarchal encroachment",
+        "Economic hardship"
+      ],
+      "answerIndex": 2,
+      "explanation": "The question identifies patriarchal encroachment as the correct interpretation.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q049",
+      "topicName": "Novel - So the Path Does Not Die",
+      "topicSlug": "novel-so-the-path-does-not-die",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Which of the following is NOT a reason why Fina struggles in America?",
+      "options": [
+        "Financial hardship",
+        "Racism",
+        "Language barriers",
+        "Cultural isolation"
+      ],
+      "answerIndex": 2,
+      "explanation": "Fina faces racism, economic pressure, and identity crises, but language is not one of her obstacles.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q050",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A major theme of the novel is?",
+      "options": [
+        "Female genital mutilation as a harmful cultural practice",
+        "The glory of war",
+        "Romantic love",
+        "Technological progress"
+      ],
+      "answerIndex": 0,
+      "explanation": "FGM is a central thematic concern in the novel.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q051",
+      "topicName": "Novel - So the Path Does Not Die",
+      "topicSlug": "novel-so-the-path-does-not-die",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Finaba’s name is significant because?",
+      "options": [
+        "It links her to her cultural roots",
+        "It was given by her American husband",
+        "It has no meaning",
+        "It is a colonial name"
+      ],
+      "answerIndex": 0,
+      "explanation": "Finaba connects Fina to her African heritage.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q052",
+      "topicName": "Novel - So the Path Does Not Die",
+      "topicSlug": "novel-so-the-path-does-not-die",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Fina’s arrival in America marks?",
+      "options": [
+        "The end of her identity struggles",
+        "A new phase of cultural negotiation and challenge",
+        "Her return to tradition",
+        "A purely positive experience"
+      ],
+      "answerIndex": 1,
+      "explanation": "Migration brings new challenges as Fina navigates a foreign culture.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q053",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The novel is best classified as a?",
+      "options": [
+        "Postcolonial feminist novel",
+        "Historical romance",
+        "Science fiction",
+        "Detective story"
+      ],
+      "answerIndex": 0,
+      "explanation": "It engages with postcolonial and feminist themes.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q054",
+      "topicName": "Novel - So the Path Does Not Die",
+      "topicSlug": "novel-so-the-path-does-not-die",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Cammy is significant in Fina’s life as?",
+      "options": [
+        "Her antagonist",
+        "A romantic partner and source of support/conflict",
+        "Her employer",
+        "A minor character"
+      ],
+      "answerIndex": 1,
+      "explanation": "Cammy is Fina’s husband and a key figure in her emotional journey.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q055",
+      "topicName": "Novel - So the Path Does Not Die",
+      "topicSlug": "novel-so-the-path-does-not-die",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The novel’s setting moves between?",
+      "options": [
+        "Sierra Leone and the United States",
+        "Ghana and Nigeria",
+        "Liberia and England",
+        "Kenya and France"
+      ],
+      "answerIndex": 0,
+      "explanation": "The novel traces Fina’s journey from Sierra Leone to America.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q056",
+      "topicName": "Novel - So the Path Does Not Die",
+      "topicSlug": "novel-so-the-path-does-not-die",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The theme of tradition versus modernity is embodied in?",
+      "options": [
+        "Fina’s struggle to reconcile her heritage with her new life",
+        "The chiefs’ political disputes",
+        "The war narrative",
+        "The love story"
+      ],
+      "answerIndex": 0,
+      "explanation": "Fina’s internal conflict reflects the tension between tradition and modernity.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q057",
+      "topicName": "Novel - So the Path Does Not Die",
+      "topicSlug": "novel-so-the-path-does-not-die",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Kumba Kargbo is important as?",
+      "options": [
+        "Fina’s mother or maternal figure",
+        "The main villain",
+        "A colonial official",
+        "A love interest"
+      ],
+      "answerIndex": 0,
+      "explanation": "Kumba Kargbo is connected to Fina’s family and cultural background.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q058",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The novel critiques?",
+      "options": [
+        "Harmful cultural practices and social injustice",
+        "Technological advancement",
+        "Western democracy",
+        "African spirituality"
+      ],
+      "answerIndex": 0,
+      "explanation": "The novel interrogates practices such as FGM and gender inequality.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q059",
+      "topicName": "Novel - So the Path Does Not Die",
+      "topicSlug": "novel-so-the-path-does-not-die",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Fina’s identity crisis is primarily caused by?",
+      "options": [
+        "Her migration and cultural displacement",
+        "Her lack of education",
+        "Her poverty",
+        "Her family’s rejection"
+      ],
+      "answerIndex": 0,
+      "explanation": "Migration and cultural displacement drive her identity struggles.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q060",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The novel belongs to which genre?",
+      "options": [
+        "African prose fiction",
+        "Non-African drama",
+        "Epic poetry",
+        "Satirical play"
+      ],
+      "answerIndex": 0,
+      "explanation": "It is an African novel.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q061",
+      "topicName": "Novel - Redemption Road",
+      "topicSlug": "novel-redemption-road",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Redemption Road is set in?",
+      "options": [
+        "Post-war Liberia",
+        "Colonial Ghana",
+        "Modern Nigeria",
+        "Pre-war Sierra Leone"
+      ],
+      "answerIndex": 0,
+      "explanation": "The novel is set in post-war Liberia.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q062",
+      "topicName": "Novel - Redemption Road",
+      "topicSlug": "novel-redemption-road",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The female protagonist of Redemption Road is?",
+      "options": [
+        "Bendu",
+        "Agnes Jala",
+        "Fina",
+        "Siatta Lewis"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bendu is the central female character.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q063",
+      "topicName": "Novel - Redemption Road",
+      "topicSlug": "novel-redemption-road",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Bendu’s relationship with Calvin challenges gender norms because?",
+      "options": [
+        "They relate as equals without traditional gender roles",
+        "Calvin is financially dependent on Bendu",
+        "Bendu is the sole provider",
+        "They reverse parenting roles"
+      ],
+      "answerIndex": 0,
+      "explanation": "Their partnership is based on mutual respect without traditional gender roles.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q064",
+      "topicName": "Novel - Redemption Road",
+      "topicSlug": "novel-redemption-road",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Bendu’s abandonment of her child in the Duluma camp is significant because it?",
+      "options": [
+        "Highlights her rejection of Cobra’s authority",
+        "Exposes her lack of maternal instinct",
+        "Dramatises the horrors of war on motherhood and memory",
+        "Shows her desire to escape"
+      ],
+      "answerIndex": 2,
+      "explanation": "The act dramatises the trauma of war on motherhood and memory.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q065",
+      "topicName": "Novel - Redemption Road",
+      "topicSlug": "novel-redemption-road",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The core message of Redemption Road is that?",
+      "options": [
+        "Justice is always served",
+        "Healing is possible but depends on courageous confrontation",
+        "History should be forgotten",
+        "Only revenge brings peace"
+      ],
+      "answerIndex": 1,
+      "explanation": "Healing requires confronting the past courageously.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q066",
+      "topicName": "Novel - Redemption Road",
+      "topicSlug": "novel-redemption-road",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Benji’s story in the novel reveals that?",
+      "options": [
+        "Silence protects dignity",
+        "Silence fosters reconciliation",
+        "Silence can lead to invisibility and forgotten sacrifices",
+        "Silence secures promotions"
+      ],
+      "answerIndex": 2,
+      "explanation": "Benji’s story shows the long-term consequences of political silence.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q067",
+      "topicName": "Novel - Redemption Road",
+      "topicSlug": "novel-redemption-road",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The villain in Redemption Road is?",
+      "options": [
+        "Commander Cobra",
+        "Benji",
+        "Calvin",
+        "Agnes Jala"
+      ],
+      "answerIndex": 0,
+      "explanation": "Commander Cobra is the antagonist figure in the novel.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q068",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The novel explores themes of?",
+      "options": [
+        "Trauma, healing, and justice",
+        "Romance and comedy",
+        "Science and technology",
+        "Colonial adventure"
+      ],
+      "answerIndex": 0,
+      "explanation": "The novel focuses on post-war trauma, healing, and justice.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q069",
+      "topicName": "Novel - Redemption Road",
+      "topicSlug": "novel-redemption-road",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Elma Shaw is a writer from?",
+      "options": [
+        "Liberia",
+        "Ghana",
+        "Nigeria",
+        "Sierra Leone"
+      ],
+      "answerIndex": 0,
+      "explanation": "Elma Shaw is a Liberian author.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q070",
+      "topicName": "Novel - Redemption Road",
+      "topicSlug": "novel-redemption-road",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Redemption Road is best classified as?",
+      "options": [
+        "African prose fiction",
+        "Non-African poetry",
+        "Shakespearean drama",
+        "Satirical play"
+      ],
+      "answerIndex": 0,
+      "explanation": "It is an African novel.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q071",
+      "topicName": "Poetry - African",
+      "topicSlug": "poetry-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“Once Upon a Time” is written by?",
+      "options": [
+        "Gabriel Okara",
+        "Niyi Osundare",
+        "Wole Soyinka",
+        "Syl Cheney-Coker"
+      ],
+      "answerIndex": 0,
+      "explanation": "Gabriel Okara is the poet.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q072",
+      "topicName": "Poetry - African",
+      "topicSlug": "poetry-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The poem “Once Upon a Time” deals with the theme of?",
+      "options": [
+        "Loss of innocence and sincerity",
+        "War",
+        "Romantic love",
+        "Nature"
+      ],
+      "answerIndex": 0,
+      "explanation": "The poem laments the loss of childhood sincerity.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q073",
+      "topicName": "Poetry - African",
+      "topicSlug": "poetry-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“Night” is a poem by?",
+      "options": [
+        "Wole Soyinka",
+        "Gabriel Okara",
+        "Niyi Osundare",
+        "Elizabeth Kamara"
+      ],
+      "answerIndex": 0,
+      "explanation": "Wole Soyinka wrote “Night”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q074",
+      "topicName": "Poetry - African",
+      "topicSlug": "poetry-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“Not My Business” is written by?",
+      "options": [
+        "Niyi Osundare",
+        "Gabriel Okara",
+        "Wole Soyinka",
+        "Syl Cheney-Coker"
+      ],
+      "answerIndex": 0,
+      "explanation": "Niyi Osundare is the poet.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q075",
+      "topicName": "Poetry - African",
+      "topicSlug": "poetry-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“Not My Business” criticises?",
+      "options": [
+        "Indifference to injustice",
+        "Romantic love",
+        "Technological progress",
+        "Religious hypocrisy"
+      ],
+      "answerIndex": 0,
+      "explanation": "The poem condemns apathy in the face of oppression.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q076",
+      "topicName": "Poetry - African",
+      "topicSlug": "poetry-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“The bosom of the Sea” is by?",
+      "options": [
+        "Syl Cheney-Coker",
+        "Gabriel Okara",
+        "Niyi Osundare",
+        "Wole Soyinka"
+      ],
+      "answerIndex": 0,
+      "explanation": "Syl Cheney-Coker wrote the poem.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q077",
+      "topicName": "Poetry - African",
+      "topicSlug": "poetry-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“New Tongue” is written by?",
+      "options": [
+        "Elizabeth L.A. Kamara",
+        "Gabriel Okara",
+        "Wole Soyinka",
+        "Niyi Osundare"
+      ],
+      "answerIndex": 0,
+      "explanation": "Elizabeth Kamara is the poet.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q078",
+      "topicName": "Poetry - African",
+      "topicSlug": "poetry-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“Hearty Garlands” is by?",
+      "options": [
+        "S.O.H. Afriyie-Vidza",
+        "Gabriel Okara",
+        "Niyi Osundare",
+        "Syl Cheney-Coker"
+      ],
+      "answerIndex": 0,
+      "explanation": "S.O.H. Afriyie-Vidza wrote the poem.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q079",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A major theme in African poetry often includes?",
+      "options": [
+        "Cultural identity and colonial experience",
+        "Space exploration",
+        "Industrialisation",
+        "Digital technology"
+      ],
+      "answerIndex": 0,
+      "explanation": "African poetry frequently engages with identity and colonial legacies.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q080",
+      "topicName": "Poetry - African",
+      "topicSlug": "poetry-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The tone of “Not My Business” is best described as?",
+      "options": [
+        "Satirical and critical",
+        "Joyful",
+        "Romantic",
+        "Nostalgic"
+      ],
+      "answerIndex": 0,
+      "explanation": "The poem uses satire to criticise indifference.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q081",
+      "topicName": "Poetry - Non-African",
+      "topicSlug": "poetry-non-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“She Walks in Beauty” is written by?",
+      "options": [
+        "Lord Byron",
+        "William Wordsworth",
+        "John Keats",
+        "Percy Shelley"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lord Byron is the poet.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q082",
+      "topicName": "Poetry - Non-African",
+      "topicSlug": "poetry-non-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“Still I Rise” is written by?",
+      "options": [
+        "Maya Angelou",
+        "Emily Dickinson",
+        "Sylvia Plath",
+        "Fleur Adcock"
+      ],
+      "answerIndex": 0,
+      "explanation": "Maya Angelou wrote “Still I Rise”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q083",
+      "topicName": "Poetry - Non-African",
+      "topicSlug": "poetry-non-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“Digging” is a poem by?",
+      "options": [
+        "Seamus Heaney",
+        "W.B. Yeats",
+        "T.S. Eliot",
+        "Wilfred Gibson"
+      ],
+      "answerIndex": 0,
+      "explanation": "Seamus Heaney wrote “Digging”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q084",
+      "topicName": "Poetry - Non-African",
+      "topicSlug": "poetry-non-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“The Telephone Call” is by?",
+      "options": [
+        "Fleur Adcock",
+        "Maya Angelou",
+        "Seamus Heaney",
+        "Lord Byron"
+      ],
+      "answerIndex": 0,
+      "explanation": "Fleur Adcock is the poet.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q085",
+      "topicName": "Poetry - Non-African",
+      "topicSlug": "poetry-non-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“The Stone” is written by?",
+      "options": [
+        "Wilfred Wilson Gibson",
+        "Seamus Heaney",
+        "Lord Byron",
+        "Fleur Adcock"
+      ],
+      "answerIndex": 0,
+      "explanation": "Wilfred Wilson Gibson wrote “The Stone”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q086",
+      "topicName": "Poetry - Non-African",
+      "topicSlug": "poetry-non-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“She Walks in Beauty” celebrates?",
+      "options": [
+        "A woman’s beauty",
+        "Nature",
+        "War",
+        "Death"
+      ],
+      "answerIndex": 0,
+      "explanation": "The poem praises a woman’s harmonious beauty.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q087",
+      "topicName": "Poetry - Non-African",
+      "topicSlug": "poetry-non-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“Still I Rise” is a poem about?",
+      "options": [
+        "Resilience and defiance against oppression",
+        "Romantic love",
+        "Nature’s beauty",
+        "Religious devotion"
+      ],
+      "answerIndex": 0,
+      "explanation": "The poem asserts the speaker’s resilience and refusal to be oppressed.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q088",
+      "topicName": "Poetry - Non-African",
+      "topicSlug": "poetry-non-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“Digging” explores the poet’s relationship with?",
+      "options": [
+        "His family’s manual labour and his own writing",
+        "War",
+        "Politics",
+        "Religion"
+      ],
+      "answerIndex": 0,
+      "explanation": "Heaney reflects on his father’s and grandfather’s work while choosing writing.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q089",
+      "topicName": "Poetry - Non-African",
+      "topicSlug": "poetry-non-african",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "“The Telephone Call” deals with?",
+      "options": [
+        "A mysterious or unsettling phone call",
+        "A love letter",
+        "A funeral",
+        "A journey"
+      ],
+      "answerIndex": 0,
+      "explanation": "The poem centres on an unexpected telephone call.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q090",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A common feature of non-African poetry in the JAMB syllabus is?",
+      "options": [
+        "Engagement with universal human experiences",
+        "Sole focus on African traditions",
+        "Use of only oral forms",
+        "Avoidance of imagery"
+      ],
+      "answerIndex": 0,
+      "explanation": "Non-African poems address universal themes such as beauty, resilience, and memory.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q091",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A character who provides contrast to the protagonist is a?",
+      "options": [
+        "Foil",
+        "Antagonist",
+        "Narrator",
+        "Protagonist"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q092",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The purging of emotions in tragedy is?",
+      "options": [
+        "Hubris",
+        "Catharsis",
+        "Hamartia",
+        "Nemesis"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q093",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A deliberate exaggeration for emphasis is?",
+      "options": [
+        "Hyperbole",
+        "Litotes",
+        "Understatement",
+        "Irony"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q094",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The perspective from which a story is told is?",
+      "options": [
+        "Plot",
+        "Point of view",
+        "Theme",
+        "Setting"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q095",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A reference to a well-known person or work is an?",
+      "options": [
+        "Allusion",
+        "Illusion",
+        "Delusion",
+        "Elusion"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q096",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A story within a story is a?",
+      "options": [
+        "Frame narrative",
+        "Subplot",
+        "Flashback",
+        "Allegory"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q097",
+      "topicName": "Novel - So the Path Does Not Die",
+      "topicSlug": "novel-so-the-path-does-not-die",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The final outcome of a plot is the?",
+      "options": [
+        "Climax",
+        "Denouement",
+        "Exposition",
+        "Conflict"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q098",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Giving human qualities to nature is?",
+      "options": [
+        "Personification",
+        "Anthropomorphism",
+        "Apostrophe",
+        "Metonymy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q099",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "A narrator who knows everything is?",
+      "options": [
+        "Omniscient",
+        "Limited",
+        "Objective",
+        "Unreliable"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2026-q100",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The list of characters in a play is the?",
+      "options": [
+        "Prologue",
+        "Dramatis personae",
+        "Epilogue",
+        "Stage direction"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    }
+  ]
+}
