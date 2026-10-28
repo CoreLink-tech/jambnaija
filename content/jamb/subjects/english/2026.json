@@ -1,0 +1,2010 @@
+{
+  "subjectSlug": "english",
+  "exam": "JAMB",
+  "source": "compiled-past-questions",
+  "verificationStatus": "unverified",
+  "notes": "JAMB Use of English 2026 — 100 questions (mock/predicted for 2026 + style-matched items). Novel: The Lekki Headmaster. Not official JAMB papers.",
+  "year": 2026,
+  "questions": [
+    {
+      "contentId": "eng-2026-q001",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The word \"proliferation\" as used in the passage means?",
+      "options": [
+        "Decline",
+        "Rapid increase",
+        "Regulation",
+        "Standardization"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Proliferation\" means rapid increase or spread in number.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q002",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "What is the main barrier to technology integration in rural schools, according to the passage?",
+      "options": [
+        "Student resistance",
+        "Erratic electricity",
+        "Parental interference",
+        "Teacher enthusiasm"
+      ],
+      "answerIndex": 1,
+      "explanation": "The passage explicitly mentions rural schools grappling with \"erratic electricity and obsolete hardware\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q003",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The word \"stymied\" in the passage means?",
+      "options": [
+        "Encouraged",
+        "Hindered",
+        "Simplified",
+        "Funded"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Stymied\" means prevented or hindered from making progress.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q004",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "According to the passage, technology is?",
+      "options": [
+        "The sole solution",
+        "A tool, not a panacea",
+        "Irrelevant",
+        "Only for urban schools"
+      ],
+      "answerIndex": 1,
+      "explanation": "The passage states that technology is \"a tool, not a panacea, for educational reform\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q005",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The tone of the passage is best described as?",
+      "options": [
+        "Sarcastic",
+        "Analytical and balanced",
+        "Alarmist",
+        "Optimistic"
+      ],
+      "answerIndex": 1,
+      "explanation": "The passage presents both the benefits and limitations of technology in education in an objective manner.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q006",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The phrase \"existential threat\" as used in the passage means?",
+      "options": [
+        "A minor inconvenience",
+        "A threat to survival",
+        "An opportunity",
+        "A temporary problem"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Existential\" relates to existence or survival.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q007",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Eko Atlantic is described as?",
+      "options": [
+        "A natural island",
+        "A man-made peninsula",
+        "A slum upgrade project",
+        "A refugee camp"
+      ],
+      "answerIndex": 1,
+      "explanation": "The passage identifies Eko Atlantic as \"a man-made peninsula\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q008",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The main criticism of the Eko Atlantic project is that it?",
+      "options": [
+        "Is outdated technology",
+        "Prioritizes luxury over equity",
+        "Ignores climate change",
+        "Lacks funding"
+      ],
+      "answerIndex": 1,
+      "explanation": "Critics argue it \"exacerbates inequality by prioritizing luxury real estate over flood defenses\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q009",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The passage advocates for?",
+      "options": [
+        "Pro-development at all costs",
+        "Sustainable and equitable planning",
+        "Technology-focused solutions only",
+        "Exclusive urban development"
+      ],
+      "answerIndex": 1,
+      "explanation": "The passage concludes that planning \"must balance ecological preservation with social equity\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q010",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The word \"exacerbates\" in the passage means?",
+      "options": [
+        "Reduces",
+        "Worsens",
+        "Solves",
+        "Ignores"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Exacerbates\" means makes a problem worse.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q011",
+      "topicName": "Cloze",
+      "topicSlug": "cloze",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The Security ______ has primary responsibility for international peace.",
+      "options": [
+        "Council",
+        "Committee",
+        "Assembly",
+        "Court"
+      ],
+      "answerIndex": 0,
+      "explanation": "The UN Security Council has this primary responsibility.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q012",
+      "topicName": "Cloze",
+      "topicSlug": "cloze",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The Council has ______ members.",
+      "options": [
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Security Council has 15 members.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q013",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Each member has ______ vote.",
+      "options": [
+        "one",
+        "two",
+        "three",
+        "four"
+      ],
+      "answerIndex": 0,
+      "explanation": "Each member has one vote.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q014",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Member States are ______ to comply with Council decisions.",
+      "options": [
+        "requested",
+        "obligated",
+        "advised",
+        "encouraged"
+      ],
+      "answerIndex": 1,
+      "explanation": "Under the Charter, all Member States are obligated to comply.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q015",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The Council's responsibility is for the maintenance of international ______.",
+      "options": [
+        "trade",
+        "law",
+        "peace and security",
+        "relations"
+      ],
+      "answerIndex": 2,
+      "explanation": "The primary responsibility is the maintenance of international peace and security.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q016",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The manager's decision to sack the accountant was \"a bolt from the blue.\" This expression means?",
+      "options": [
+        "An expected decision",
+        "A shocking surprise",
+        "A wise judgment",
+        "A delayed reaction"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"A bolt from the blue\" refers to a sudden, unexpected shock.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q017",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "He was now the megaphone of the people's oppressors. This means he?",
+      "options": [
+        "Spoke on behalf of the oppressors",
+        "Opposed the oppressors",
+        "Was a victim of the oppressors",
+        "Remained silent"
+      ],
+      "answerIndex": 0,
+      "explanation": "Being a \"megaphone\" means acting as a mouthpiece or spokesperson.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q018",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "George let the cat out of the bag. This means he?",
+      "options": [
+        "Exposed the cat",
+        "Released the cat",
+        "Exposed the secret",
+        "Freed himself"
+      ],
+      "answerIndex": 2,
+      "explanation": "The idiom \"let the cat out of the bag\" means to reveal a secret.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q019",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The vice chancellor is riding the crest of the last quarter of his administration. This means he?",
+      "options": [
+        "Hopes to overcome criticism soon",
+        "Enjoys recognition of success",
+        "Does not talk about success",
+        "Dislikes criticism"
+      ],
+      "answerIndex": 1,
+      "explanation": "To \"ride the crest\" means to be at a peak of success or recognition.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q020",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "No sooner had the principal entered the hall ______ the students stood up.",
+      "options": [
+        "when",
+        "than",
+        "that",
+        "then"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"No sooner...than\" is the correct correlative conjunction.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q021",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The witness gave a candid account of what happened.",
+      "options": [
+        "Honest",
+        "Frank",
+        "Deceptive",
+        "Direct"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Candid\" means truthful and straightforward. (Note: the opposite is \"deceptive\").",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q022",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Choose the word nearest in meaning to alleviate.",
+      "options": [
+        "Worsen",
+        "Reduce",
+        "Increase",
+        "Complicate"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Alleviate\" means to make less severe; to reduce.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q023",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Choose the word nearest in meaning to optimistic.",
+      "options": [
+        "Doubtful",
+        "Hopeful",
+        "Careless",
+        "Fearful"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Optimistic\" means hopeful and confident about the future.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q024",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Pilferer means?",
+      "options": [
+        "Hypocrite",
+        "Thief",
+        "Liar",
+        "Criminal"
+      ],
+      "answerIndex": 1,
+      "explanation": "A \"pilferer\" is a person who steals small items; a thief.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q025",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Choose the word nearest in meaning to elusive.",
+      "options": [
+        "Easy to find",
+        "Difficult to catch",
+        "Obvious",
+        "Clear"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Elusive\" means difficult to find, catch, or achieve.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q026",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Choose the word most opposite in meaning to candid.",
+      "options": [
+        "Honest",
+        "Frank",
+        "Deceptive",
+        "Direct"
+      ],
+      "answerIndex": 2,
+      "explanation": "The opposite of candid (honest) is deceptive.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q027",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Choose the word most opposite in meaning to vague.",
+      "options": [
+        "Uncertain",
+        "Obscure",
+        "Precise",
+        "Ambiguous"
+      ],
+      "answerIndex": 2,
+      "explanation": "The opposite of vague (unclear) is precise.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q028",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The opposite of pacify is?",
+      "options": [
+        "Placate",
+        "Annoy",
+        "Appease",
+        "Ridicule"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Pacify\" means to calm; the opposite is to annoy or provoke.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q029",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The opposite of extemporaneous is?",
+      "options": [
+        "Fascinating",
+        "Unprepared",
+        "Unfavourable",
+        "Planned"
+      ],
+      "answerIndex": 3,
+      "explanation": "\"Extemporaneous\" means done without preparation; the opposite is planned.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q030",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The opposite of aggressive is?",
+      "options": [
+        "Hostile",
+        "Passive",
+        "Defensive",
+        "Reckless"
+      ],
+      "answerIndex": 1,
+      "explanation": "The opposite of aggressive (forceful) is passive.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q031",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "If I ______ the Managing Director, I would have promoted him immediately.",
+      "options": [
+        "am",
+        "was",
+        "were",
+        "be"
+      ],
+      "answerIndex": 2,
+      "explanation": "The subjunctive \"were\" is used in hypothetical conditional sentences.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q032",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The students were told to look ______ the difficult words in the dictionary.",
+      "options": [
+        "up",
+        "on",
+        "at",
+        "in"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Look up\" means to search for information in a reference book.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q033",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "He could not attend the meeting ______ he was ill.",
+      "options": [
+        "because",
+        "although",
+        "since",
+        "but"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Because\" introduces the reason for not attending.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q034",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The police ______ still investigating the broad daylight robbery that occurred at the bank yesterday.",
+      "options": [
+        "is",
+        "are",
+        "was",
+        "has been"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Police\" is treated as plural in British English, taking \"are\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q035",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Despite his repeated warnings, she continued to ignore the rules, _______ the consequences that followed.",
+      "options": [
+        "invites the consequences knowingly",
+        "evades all the consequences",
+        "risks facing what comes",
+        "unaware of any consequences"
+      ],
+      "answerIndex": 2,
+      "explanation": "The sentence implies she knowingly took the risk.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q036",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The driver ______ the lorry.",
+      "options": [
+        "reversed into",
+        "reversed back into",
+        "reversed to",
+        "reversed towards"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Reversed into\" is the correct phrasal verb for a vehicle backing into something.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q037",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "My shoes are worn out; I must see my ______.",
+      "options": [
+        "cobbler",
+        "hosier",
+        "tanner",
+        "grocer"
+      ],
+      "answerIndex": 0,
+      "explanation": "A cobbler repairs shoes.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q038",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Sporting ______.",
+      "options": [
+        "aids",
+        "equipment",
+        "equipments",
+        "costumes"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Equipment\" is an uncountable noun and does not take a plural \"s\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q039",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Each of the responses ______ correct.",
+      "options": [
+        "have been",
+        "were",
+        "is",
+        "are"
+      ],
+      "answerIndex": 2,
+      "explanation": "\"Each\" is singular and takes a singular verb.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q040",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The teacher, as well as the students, ______ expected to be at the assembly.",
+      "options": [
+        "are",
+        "were",
+        "is",
+        "have been"
+      ],
+      "answerIndex": 2,
+      "explanation": "The subject is \"the teacher\" (singular); \"as well as\" does not change the verb.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q041",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "\"The prefect reeled off the names of all the students who broke the library rules.\" This means the prefect?",
+      "options": [
+        "Gave a disjointed list",
+        "Omitted some names",
+        "Submitted a complete list",
+        "Gave an accurate list"
+      ],
+      "answerIndex": 3,
+      "explanation": "\"Reeled off\" means to recite quickly and accurately without hesitation.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q042",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "\"I owe you far less than you owe me.\" This means?",
+      "options": [
+        "My debt to you is greater than yours to me",
+        "Your debt is not much greater than mine",
+        "What we owe each other is approximately the same",
+        "I owe you something, but you owe me much more"
+      ],
+      "answerIndex": 3,
+      "explanation": "The sentence clearly states the speaker is owed more than they owe.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q043",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "\"The dispute over land acquisition has come to a head.\" This means the problem has?",
+      "options": [
+        "Reached crisis proportions",
+        "Been referred to headquarters",
+        "Been halted",
+        "Been solved"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Come to a head\" means reached a critical or crisis point.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q044",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "\"He had hardly spoken when the bell rang.\" This means?",
+      "options": [
+        "He found it difficult to speak",
+        "When the bell rang, he was still speaking",
+        "The bell rang very soon after he spoke",
+        "He spoke in a harsh manner"
+      ],
+      "answerIndex": 2,
+      "explanation": "\"Hardly...when\" indicates that one event happened immediately after another.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q045",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "\"I think she takes her guardian's support for granted.\" This means?",
+      "options": [
+        "Her guardian has been helping her, and she is very grateful",
+        "She wants her guardian to grant her more support",
+        "She thinks her guardian will no longer support her",
+        "Her guardian has been helping her, but she does not show enough gratitude"
+      ],
+      "answerIndex": 3,
+      "explanation": "To \"take for granted\" means to fail to appreciate something properly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q046",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Choose the word that has a different stress pattern from the others.",
+      "options": [
+        "Prepare",
+        "Record (Verb)",
+        "Teacher",
+        "Attend"
+      ],
+      "answerIndex": 2,
+      "explanation": "\"Teacher\" has first-syllable stress; the others have second-syllable stress.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q047",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Which of the following words has the same vowel sound as the underlined sound in cup?",
+      "options": [
+        "love",
+        "food",
+        "boot",
+        "coat"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Cup\" and \"love\" share the /ʌ/ vowel sound.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q048",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Which of the following words rhymes with vice?",
+      "options": [
+        "peace",
+        "price",
+        "vase",
+        "voice"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Vice\" and \"price\" rhyme /aɪs/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q049",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "In the sentence \"Aisha spoke French FLUENTLY\", the emphatic stress on fluently suggests that?",
+      "options": [
+        "Aisha spoke only a little French",
+        "Aisha spoke French with ease and skill",
+        "Aisha refused to speak French",
+        "Aisha wrote French very well"
+      ],
+      "answerIndex": 1,
+      "explanation": "Emphatic stress on \"fluently\" highlights the manner of speaking.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q050",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Different stress pattern from the others.",
+      "options": [
+        "contribute",
+        "embarrass",
+        "convenient",
+        "madam"
+      ],
+      "answerIndex": 3,
+      "explanation": "\"Madam\" is stressed on the first syllable; the others on the second.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q051",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Rhymes with GREAT.",
+      "options": [
+        "crate",
+        "knit",
+        "treat",
+        "creek"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Great\" and \"crate\" rhyme /eɪt/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q052",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Different vowel sound from the others.",
+      "options": [
+        "plait",
+        "bale",
+        "saint",
+        "gate"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Plait\" has /æ/; the others have /eɪ/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q053",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Same stress pattern as unfair.",
+      "options": [
+        "instant",
+        "towards",
+        "first class",
+        "insight"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Unfair\" and \"towards\" are both stressed on the second syllable.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q054",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Eye rhyme example.",
+      "options": [
+        "Prove – Love",
+        "Bear – Rare",
+        "Kite – Bite",
+        "Tough – Enough"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Prove\" and \"love\" look like they should rhyme but do not (eye rhyme).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q055",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Choose the word that has a different stress pattern.",
+      "options": [
+        "Basic",
+        "Behind",
+        "Between",
+        "Before"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Basic\" is stressed on the first syllable; the others on the second.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q056",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Which word has the same vowel sound as the \"ea\" in head?",
+      "options": [
+        "Bead",
+        "Bread",
+        "Heed",
+        "Seed"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Head\" and \"bread\" share the /e/ sound.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q057",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The primary stress in photographer is on the?",
+      "options": [
+        "First syllable",
+        "Second syllable",
+        "Third syllable",
+        "Fourth syllable"
+      ],
+      "answerIndex": 1,
+      "explanation": "pho-TOG-ra-pher.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q058",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Which word is stressed on the first syllable?",
+      "options": [
+        "Relax",
+        "Between",
+        "Sister",
+        "About"
+      ],
+      "answerIndex": 2,
+      "explanation": "\"Sister\" is stressed on the first syllable.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q059",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Choose the word that rhymes with sweet.",
+      "options": [
+        "Suite",
+        "Sweat",
+        "Swat",
+        "Set"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Sweet\" and \"suite\" rhyme /iːt/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q060",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The word lucrative has its primary stress on which syllable?",
+      "options": [
+        "First (LU-)",
+        "Second (-CRA-)",
+        "Third (-TIVE)",
+        "No stress"
+      ],
+      "answerIndex": 0,
+      "explanation": "LU-cra-tive.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q061",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Who is the author of the 2026 JAMB novel, The Lekki Headmaster?",
+      "options": [
+        "Khadijat Abubakar Jalli",
+        "Kabir Alabi Garba",
+        "Chinua Achebe",
+        "Wole Soyinka"
+      ],
+      "answerIndex": 1,
+      "explanation": "The 2026 novel is by Kabir Alabi Garba.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q062",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "What dramatic event opens the novel?",
+      "options": [
+        "A fire outbreak",
+        "A principal's speech",
+        "Mr Bepo bursting into tears",
+        "A student protest"
+      ],
+      "answerIndex": 2,
+      "explanation": "The novel opens with Mr Bepo bursting into tears at the assembly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q063",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Who instructed the Chemistry teacher to conclude the assembly after Mr Bepo's emotional outburst?",
+      "options": [
+        "The Principal",
+        "The Vice Principal",
+        "The Managing Director",
+        "The School Nurse"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Vice Principal gave this instruction.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q064",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "In what year was the Ikogosi Warm Springs discovered, according to the novel?",
+      "options": [
+        "1946",
+        "1952",
+        "1960",
+        "1970"
+      ],
+      "answerIndex": 0,
+      "explanation": "The novel states it was discovered in 1946.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q065",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "What role does Mrs. Gloss's family play in the novel?",
+      "options": [
+        "They are central to the plot",
+        "They are minor characters",
+        "They are antagonists",
+        "They are absent"
+      ],
+      "answerIndex": 0,
+      "explanation": "Based on the mock question, the role of Mrs. Gloss's family is a key plot element.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q066",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The character of the headmaster in the novel is best described as?",
+      "options": [
+        "Authoritarian and distant",
+        "Compassionate and dedicated",
+        "Indifferent and lazy",
+        "Corrupt and selfish"
+      ],
+      "answerIndex": 1,
+      "explanation": "The novel portrays the headmaster as caring about his students and staff, as evidenced by the emotional assembly scene【generated based on novel theme】.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q067",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "What is the central theme of The Lekki Headmaster?",
+      "options": [
+        "Corruption in government",
+        "The challenges and triumphs of educational leadership",
+        "A romantic love story",
+        "The history of Lagos"
+      ],
+      "answerIndex": 1,
+      "explanation": "The novel focuses on the life and challenges of a school headmaster.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q068",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The setting of the novel is primarily in?",
+      "options": [
+        "Abuja",
+        "Lekki, Lagos",
+        "Kano",
+        "Ibadan"
+      ],
+      "answerIndex": 1,
+      "explanation": "The title indicates the setting is Lekki, Lagos.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q069",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Mr Bepo's emotional outburst at the assembly reveals what about his character?",
+      "options": [
+        "He is mentally unstable",
+        "He is deeply passionate about the school",
+        "He is a strict disciplinarian",
+        "He dislikes the students"
+      ],
+      "answerIndex": 1,
+      "explanation": "His tears show his deep emotional investment in the school community.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q070",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The novel's narrative style is?",
+      "options": [
+        "First-person autobiographical",
+        "Third-person omniscient",
+        "Epistolary",
+        "Stream of consciousness"
+      ],
+      "answerIndex": 1,
+      "explanation": "The novel is narrated in the third person【generated based on typical JAMB novel style】.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q071",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Choose the word nearest in meaning to tenacious.",
+      "options": [
+        "Weak",
+        "Persistent",
+        "Yielding",
+        "Fragile"
+      ],
+      "answerIndex": 1,
+      "explanation": "Tenacious means persistent.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q072",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The antonym of frugal is?",
+      "options": [
+        "Thrifty",
+        "Economical",
+        "Extravagant",
+        "Careful"
+      ],
+      "answerIndex": 2,
+      "explanation": "Extravagant is the opposite of frugal.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q073",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "He prides himself ______ his honesty.",
+      "options": [
+        "on",
+        "at",
+        "in",
+        "for"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Pride oneself on\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q074",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The manager, together with his assistants, ______ coming.",
+      "options": [
+        "are",
+        "is",
+        "were",
+        "have been"
+      ],
+      "answerIndex": 1,
+      "explanation": "The subject is \"manager\" (singular).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q075",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The word lucid means?",
+      "options": [
+        "Confusing",
+        "Clear",
+        "Dark",
+        "Complex"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lucid means clear.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q076",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "She doesn't like coffee, ______?",
+      "options": [
+        "does she",
+        "doesn't she",
+        "is she",
+        "isn't she"
+      ],
+      "answerIndex": 0,
+      "explanation": "Negative statement takes positive tag.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q077",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The synonym of arduous is?",
+      "options": [
+        "Easy",
+        "Difficult",
+        "Quick",
+        "Simple"
+      ],
+      "answerIndex": 1,
+      "explanation": "Arduous means difficult.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q078",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The antonym of scarce is?",
+      "options": [
+        "Rare",
+        "Limited",
+        "Abundant",
+        "Few"
+      ],
+      "answerIndex": 2,
+      "explanation": "Abundant is the opposite of scarce.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q079",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Choose the correct spelling.",
+      "options": [
+        "Millennium",
+        "Milennium",
+        "Millenium",
+        "Milenium"
+      ],
+      "answerIndex": 0,
+      "explanation": "Double 'l' and double 'n'.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q080",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The idiom \"a stitch in time saves nine\" means?",
+      "options": [
+        "Take timely action to prevent bigger problems",
+        "Sewing is important",
+        "Time is money",
+        "Nine is a lucky number"
+      ],
+      "answerIndex": 0,
+      "explanation": "Act promptly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q081",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The word pragmatic means?",
+      "options": [
+        "Idealistic",
+        "Practical",
+        "Emotional",
+        "Theoretical"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pragmatic means practical.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q082",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "They have completed the project. (Passive)",
+      "options": [
+        "The project has been completed.",
+        "The project have been completed.",
+        "The project was completed.",
+        "The project is completed."
+      ],
+      "answerIndex": 0,
+      "explanation": "Present perfect passive.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q083",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The synonym of tenacious is?",
+      "options": [
+        "Weak",
+        "Persistent",
+        "Yielding",
+        "Fragile"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Repeat of Q71 for reinforcement).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q084",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The antonym of frugal is?",
+      "options": [
+        "Thrifty",
+        "Economical",
+        "Extravagant",
+        "Careful"
+      ],
+      "answerIndex": 2,
+      "explanation": "(Repeat of Q72 for reinforcement).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q085",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The ______ of the matter is that we need more funding.",
+      "options": [
+        "crux",
+        "crust",
+        "crooks",
+        "cruise"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Crux\" means the central point.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q086",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The word verbose means?",
+      "options": [
+        "Using few words",
+        "Using too many words",
+        "Being silent",
+        "Being rude"
+      ],
+      "answerIndex": 1,
+      "explanation": "Verbose means wordy.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q087",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "He is used to ______ up early.",
+      "options": [
+        "get",
+        "getting",
+        "got",
+        "gets"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Used to\" + gerund.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q088",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The synonym of resilient is?",
+      "options": [
+        "Fragile",
+        "Tough",
+        "Weak",
+        "Brittle"
+      ],
+      "answerIndex": 1,
+      "explanation": "Resilient means tough.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q089",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "Each of the students ______ a book.",
+      "options": [
+        "have",
+        "has",
+        "are having",
+        "were having"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Each\" is singular.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q090",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The word impeccable means?",
+      "options": [
+        "Faulty",
+        "Flawless",
+        "Imperfect",
+        "Damaged"
+      ],
+      "answerIndex": 1,
+      "explanation": "Impeccable means flawless.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q091",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "He is good ______ mathematics.",
+      "options": [
+        "at",
+        "in",
+        "on",
+        "for"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Good at\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q092",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The plural of phenomenon is?",
+      "options": [
+        "Phenomenons",
+        "Phenomena",
+        "Phenomenae",
+        "Phenomeni"
+      ],
+      "answerIndex": 1,
+      "explanation": "Greek plural is \"phenomena\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q093",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The idiom \"to turn a deaf ear\" means?",
+      "options": [
+        "To listen carefully",
+        "To refuse to listen",
+        "To hear clearly",
+        "To be deaf"
+      ],
+      "answerIndex": 1,
+      "explanation": "To ignore.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q094",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The word cordial means?",
+      "options": [
+        "Hostile",
+        "Friendly",
+        "Rude",
+        "Cold"
+      ],
+      "answerIndex": 1,
+      "explanation": "Cordial means friendly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q095",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "By the time we arrived, the film ______.",
+      "options": [
+        "started",
+        "had started",
+        "has started",
+        "was starting"
+      ],
+      "answerIndex": 1,
+      "explanation": "Past perfect for the earlier action.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q096",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The synonym of diligent is?",
+      "options": [
+        "Lazy",
+        "Hardworking",
+        "Careless",
+        "Slow"
+      ],
+      "answerIndex": 1,
+      "explanation": "Diligent means hardworking.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q097",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The company's profits have ______ significantly.",
+      "options": [
+        "risen",
+        "rose",
+        "raised",
+        "rised"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Rise\" is intransitive; past participle is \"risen\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q098",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The word volatile means?",
+      "options": [
+        "Stable",
+        "Unpredictable",
+        "Calm",
+        "Steady"
+      ],
+      "answerIndex": 1,
+      "explanation": "Volatile means liable to change rapidly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q099",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "______ you like some tea?",
+      "options": [
+        "Would",
+        "Do",
+        "Are",
+        "Will"
+      ],
+      "answerIndex": 0,
+      "explanation": "Polite offer.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2026-q100",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2026,
+      "exam": "JAMB",
+      "prompt": "The synonym of exemplary is?",
+      "options": [
+        "Poor",
+        "Outstanding",
+        "Average",
+        "Bad"
+      ],
+      "answerIndex": 1,
+      "explanation": "Exemplary means outstanding.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    }
+  ]
+}
