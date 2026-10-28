@@ -13,18 +13,18 @@ const subjectEnum = z.enum([
 ]);
 
 export const examStartSchema = z.object({
-  subjects: z.array(subjectEnum).min(1).max(8),
+  subjects: z.array(subjectEnum).min(1).max(4),
   yearFrom: z.number().int().min(2020).max(2026).optional(),
   yearTo: z.number().int().min(2020).max(2026).optional(),
-  years: z.array(z.number().int()).optional(),
+  years: z.array(z.number().int().min(2020).max(2026)).max(1).optional(),
   origin: z
     .enum(["all", "original_practice", "official_past_question"])
     .optional(),
-  count: z.number().int().min(5).max(400),
+  count: z.number().int().min(5).max(60),
   countsPerSubject: z
-    .record(z.string(), z.number().int().min(1).max(100))
+    .record(z.string(), z.number().int().min(1).max(60))
     .optional(),
-  durationMinutes: z.number().int().min(5).max(360).optional(),
+  durationMinutes: z.number().int().min(5).max(180).optional(),
   preset: z.enum(["single", "multi", "full"]).optional(),
 });
 

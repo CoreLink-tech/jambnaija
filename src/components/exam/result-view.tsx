@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { api } from "@/lib/client/api";
+import { SUBJECT_META, type JambSubject } from "@/data/questions/types";
 
 type Payload = {
   attempt: {
@@ -18,9 +19,20 @@ type Payload = {
     unanswered: number;
     incorrect: number;
     correct: number;
+    maxScore?: number;
+    scaledScore?: number;
+    rawCorrect?: number;
+    rawTotal?: number;
   };
-  bySubject: Record<string, { correct: number; total: number }>;
+  bySubject: Record<
+    string,
+    { correct: number; total: number; scoreOutOf100?: number }
+  >;
 };
+
+function subjectName(key: string): string {
+  return SUBJECT_META[key as JambSubject]?.name ?? key;
+}
 
 export function ExamResultView({ sessionId }: { sessionId: string }) {
   const [data, setData] = useState<Payload | null>(null);
@@ -38,6 +50,8 @@ export function ExamResultView({ sessionId }: { sessionId: string }) {
   if (!data) return <p className="text-sm text-muted">Loading results…</p>;
 
   const { attempt, bySubject } = data;
+  const maxScore = attempt.maxScore ?? attempt.total;
+  const scaled = attempt.scaledScore ?? attempt.score;
   const tone =
     attempt.percent >= 70 ? "ok" : attempt.percent >= 50 ? "warn" : "danger";
 
@@ -52,26 +66,45 @@ export function ExamResultView({ sessionId }: { sessionId: string }) {
 
       <Card className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p className="text-3xl font-bold text-primary-strong">{attempt.percent}%</p>
+          <p className="text-3xl font-bold text-primary-strong">
+            {scaled}/{maxScore}
+          </p>
           <p className="text-sm text-muted">
-            {attempt.correct} correct · {attempt.incorrect} incorrect ·{" "}
-            {attempt.unanswered} unanswered · {attempt.total} total
+            {attempt.percent}% overall · {attempt.rawCorrect ?? attempt.correct}{" "}
+            of {attempt.rawTotal ?? "—"} questions correct
+          </p>
+          <p className="mt-1 text-xs text-muted">
+            {attempt.incorrect} incorrect · {attempt.unanswered} unanswered
           </p>
         </div>
         <Badge tone={tone}>{attempt.status}</Badge>
       </Card>
 
       {Object.keys(bySubject).length > 0 ? (
-        <Card className="space-y-2">
-          <p className="text-sm font-semibold">By subject</p>
-          {Object.entries(bySubject).map(([s, v]) => (
-            <div key={s} className="flex justify-between text-sm">
-              <span className="capitalize text-muted">{s}</span>
-              <span className="font-semibold">
-                {v.correct}/{v.total}
-              </span>
-            </div>
-          ))}
+        <Card className="space-y-3">
+          <p className="text-sm font-semibold">Score by subject (each out of 100)</p>
+          {Object.entries(bySubject).map(([s, v]) => {
+            const outOf100 =
+              v.scoreOutOf100 ??
+              (v.total > 0 ? Math.round((v.correct / v.total) * 100) : 0);
+            return (
+              <div
+                key={s}
+                className="flex items-center justify-between gap-3 border-b border-line pb-2 last:border-0 last:pb-0"
+              >
+                <div>
+                  <p className="text-sm font-medium">{subjectName(s)}</p>
+                  <p className="text-xs text-muted">
+                    {v.correct}/{v.total} questions
+                  </p>
+                </div>
+                <p className="text-lg font-bold text-primary-strong">
+                  {outOf100}
+                  <span className="text-sm font-normal text-muted">/100</span>
+                </p>
+              </div>
+            );
+          })}
         </Card>
       ) : null}
 

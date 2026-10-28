@@ -275,7 +275,7 @@ export async function getExamResult(attemptId: string) {
   const rows = await attemptRepo.listAnswersForAttempt(attemptId);
   const meta = parseFocusMeta(attempt.focusLabel);
 
-  const bySubject: Record<string, { correct: number; total: number }> = {};
+  const bySubjectRaw: Record<string, { correct: number; total: number }> = {};
 
   const answers = rows
     .slice()
@@ -283,9 +283,9 @@ export async function getExamResult(attemptId: string) {
     .map((r) => {
       const bank = r.questionId ? getQuestionById(r.questionId) : undefined;
       const subject = bank?.subject || "unknown";
-      if (!bySubject[subject]) bySubject[subject] = { correct: 0, total: 0 };
-      bySubject[subject].total += 1;
-      if (r.isCorrect) bySubject[subject].correct += 1;
+      if (!bySubjectRaw[subject]) bySubjectRaw[subject] = { correct: 0, total: 0 };
+      bySubjectRaw[subject].total += 1;
+      if (r.isCorrect) bySubjectRaw[subject].correct += 1;
 
       return {
         questionId: r.questionId,
@@ -303,6 +303,22 @@ export async function getExamResult(attemptId: string) {
       };
     });
 
+  // Scale each subject to /100; overall out of 100 × number of subjects
+  const bySubject: Record<
+    string,
+    { correct: number; total: number; scoreOutOf100: number }
+  > = {};
+  let scaledTotal = 0;
+  let subjectCount = 0;
+  for (const [s, v] of Object.entries(bySubjectRaw)) {
+    const scoreOutOf100 =
+      v.total > 0 ? Math.round((v.correct / v.total) * 100) : 0;
+    bySubject[s] = { ...v, scoreOutOf100 };
+    scaledTotal += scoreOutOf100;
+    subjectCount += 1;
+  }
+  const maxScore = Math.max(subjectCount, 1) * 100;
+
   const unanswered = answers.filter((a) => a.selectedIndex == null).length;
   const incorrect = answers.filter(
     (a) => a.selectedIndex != null && !a.isCorrect,
@@ -311,17 +327,21 @@ export async function getExamResult(attemptId: string) {
   return {
     attempt: {
       id: attempt.id,
-      score: attempt.score,
-      total: attempt.total,
-      percent: attempt.percent,
+      score: scaledTotal,
+      total: maxScore,
+      percent: maxScore > 0 ? Math.round((scaledTotal / maxScore) * 100) : 0,
       status: attempt.status,
-      subjects: meta.subjects || [],
+      subjects: meta.subjects || Object.keys(bySubject),
       submittedAt: attempt.submittedAt?.toISOString?.() ?? null,
       createdAt: attempt.createdAt?.toISOString?.() ?? null,
       deadlineAt: attempt.deadlineAt?.toISOString?.() ?? null,
       unanswered,
       incorrect,
       correct: attempt.score,
+      rawCorrect: attempt.score,
+      rawTotal: attempt.total,
+      maxScore,
+      scaledScore: scaledTotal,
     },
     bySubject,
     answers,
