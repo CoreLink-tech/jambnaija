@@ -1,6 +1,6 @@
 import type { JambQuestion } from "../types";
 
-/** Chemistry 2021 — JAMB past questions (user-supplied bank). */
+/** Chemistry 2021 — JAMB past questions (Drive doc bank). */
 const questions: JambQuestion[] = [
   {
     "id": "chem-2021-001",
@@ -25,7 +25,7 @@ const questions: JambQuestion[] = [
     "subject": "chemistry",
     "year": 2021,
     "origin": "official_past_question",
-    "question": "220g of carbon dioxide contains ----- moles. [C = 12, O = 16]",
+    "question": "220g of carbon dioxide contains \\-\\-\\-\\-- moles. \\[C = 12, O = 16\\]",
     "options": {
       "A": "5 moles",
       "B": "6 moles",
@@ -97,7 +97,7 @@ const questions: JambQuestion[] = [
     "subject": "chemistry",
     "year": 2021,
     "origin": "official_past_question",
-    "question": "Give the common name for the following compound (CH₃)₂CHCH₂–Br.",
+    "question": "Give the common name for the following compound (CH₃)₂CHCH₂--Br.",
     "options": {
       "A": "Isobutyl bromide",
       "B": "Methyl bromide",
@@ -123,7 +123,7 @@ const questions: JambQuestion[] = [
       "D": "Max Planck"
     },
     "correctAnswer": "A",
-    "explanation": "Einstein's mass–energy equivalence is expressed by the equation E = mc².",
+    "explanation": "Einstein's mass--energy equivalence is expressed by the equation E = mc².",
     "topic": "Chemistry",
     "difficulty": "medium",
     "syllabusTopic": "JAMB Chemistry"
@@ -421,7 +421,7 @@ const questions: JambQuestion[] = [
     "subject": "chemistry",
     "year": 2021,
     "origin": "official_past_question",
-    "question": "The fourteen elements (atomic number 90–103) after actinium are called?",
+    "question": "The fourteen elements (atomic number 90--103) after actinium are called?",
     "options": {
       "A": "Lanthanides",
       "B": "Actinides",
@@ -429,7 +429,7 @@ const questions: JambQuestion[] = [
       "D": "Alkali metals"
     },
     "correctAnswer": "B",
-    "explanation": "The actinide series includes elements 90–103, following actinium (89).",
+    "explanation": "The actinide series includes elements 90--103, following actinium (89).",
     "topic": "Chemistry",
     "difficulty": "medium",
     "syllabusTopic": "JAMB Chemistry"
@@ -718,6 +718,60 @@ const questions: JambQuestion[] = [
     },
     "correctAnswer": "B",
     "explanation": "Seawater is a mixture of water and dissolved salts; the others are pure substances.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-041",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The nucleus of an atom consists of?",
+    "options": {
+      "A": "Protons and electrons",
+      "B": "Protons and neutrons",
+      "C": "Neutrons and electrons",
+      "D": "Electrons only"
+    },
+    "correctAnswer": "B",
+    "explanation": "The nucleus contains protons and neutrons; electrons orbit the nucleus.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-042",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The nucleus of a hydrogen atom consist of a?",
+    "options": {
+      "A": "Proton only",
+      "B": "Proton and neutron",
+      "C": "Neutron only",
+      "D": "Proton and electron"
+    },
+    "correctAnswer": "A",
+    "explanation": "(Duplicate of Q8) Hydrogen nucleus has only one proton.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-043",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The heat required to raise the temperature of the body by 1 K is called?",
+    "options": {
+      "A": "Specific heat capacity",
+      "B": "Heat capacity",
+      "C": "Latent heat",
+      "D": "Thermal conductivity"
+    },
+    "correctAnswer": "B",
+    "explanation": "(Duplicate of Q13) Heat capacity.",
     "topic": "Chemistry",
     "difficulty": "medium",
     "syllabusTopic": "JAMB Chemistry"

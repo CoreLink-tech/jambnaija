@@ -1,726 +1,276 @@
 import type { JambQuestion } from "../types";
 
-/** Original practice — physics 2023. Not official past questions. */
+/** Physics 2023 — JAMB past questions (Drive doc bank). */
 const questions: JambQuestion[] = [
   {
     "id": "phy-2023-001",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "SI unit of force (practice 2023 #1)",
+    "origin": "official_past_question",
+    "question": "A wire of radius 0.2 mm is extended by 0.5% of its length when supported by a load of 1.5 kg. Determine the Young's modulus for the material of the wire. \\[Take g = 10 ms⁻²\\]",
     "options": {
-      "A": "joule",
-      "B": "newton",
-      "C": "watt",
-      "D": "pascal"
+      "A": "2.4 × 10¹⁰ Nm⁻²",
+      "B": "1.5 × 10¹⁰ Nm⁻²",
+      "C": "2.4 × 10⁹ Nm⁻²",
+      "D": "1.3 × 10¹⁰ Nm⁻²"
     },
-    "correctAnswer": "B",
-    "explanation": "Newton.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Young's modulus Y = (F/A) / (e/L). F = mg = 1.5 × 10 = 15 N. A = πr² = π(2×10⁻⁴)² ≈ 1.26 × 10⁻⁷ m². Strain = 0.005. Y = (15 / 1.26×10⁻⁷) / 0.005 ≈ 2.4 × 10¹⁰ Nm⁻².",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-002",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Speed is a (practice 2023 #2)",
+    "origin": "official_past_question",
+    "question": "A simple pendulum has a period of 5.77 s. When the pendulum is shortened by 3 m, the period is 4.60 s. Calculate the new length of the pendulum.",
     "options": {
-      "A": "vector",
-      "B": "scalar",
-      "C": "force",
-      "D": "weight"
+      "A": "5.23 m",
+      "B": "6.42 m",
+      "C": "4.87 m",
+      "D": "7.26 m"
     },
-    "correctAnswer": "B",
-    "explanation": "Scalar.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "T² ∝ L. (5.77²)/(4.60²) = L/(L-3). Solving gives original L ≈ 8.23 m, new length = 8.23 − 3 = 5.23 m.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-003",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "g near Earth \u2248 (practice 2023 #3)",
+    "origin": "official_past_question",
+    "question": "A travelling wave of amplitude 0.80 m has a frequency of 16 Hz and a wave speed of 20 ms⁻¹. Calculate the wave number of the wave.",
     "options": {
-      "A": "9.8 m/s\u00b2",
-      "B": "98 m/s\u00b2",
-      "C": "0.98 m/s\u00b2",
-      "D": "1 m/s\u00b2"
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "2"
     },
-    "correctAnswer": "A",
-    "explanation": "9.8.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "λ = v/f = 20/16 = 1.25 m. Wave number k = 2π/λ = 2π/1.25 ≈ 5 m⁻¹.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-004",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Power is (practice 2023 #4)",
+    "origin": "official_past_question",
+    "question": "A parallel plate capacitor separated by an air gap is made of 0.8 m² tin plates and 20 mm apart. It is connected to a 120 V battery. What is the charge on the capacitor? (ε₀ = 8.85 × 10⁻¹² F/m)",
     "options": {
-      "A": "work\u00d7time",
-      "B": "work/time",
-      "C": "force\u00d7mass",
-      "D": "mass/time"
+      "A": "42.5 nC",
+      "B": "4.25 nC",
+      "C": "425 nC",
+      "D": "0.425 nC"
     },
-    "correctAnswer": "B",
-    "explanation": "Work/time.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "C = ε₀A/d = (8.85×10⁻¹² × 0.8) / 0.02 = 3.54 × 10⁻¹⁰ F. Q = CV = 3.54×10⁻¹⁰ × 120 ≈ 4.25 × 10⁻⁸ C = 42.5 nC.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-005",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Ohm's law links (practice 2023 #5)",
+    "origin": "official_past_question",
+    "question": "Which of the following statements regarding the application of electrical conduction via gases is/are correct? \\(i\\) It is used in fluorescent lamps \\(ii\\) It is used in neon signs \\(iii\\) It is used in cathode ray tubes \\(iv\\) It is used in electric heaters",
     "options": {
-      "A": "V,I,R",
-      "B": "P only",
-      "C": "F only",
-      "D": "Q only"
+      "A": "(i), (ii) and (iii) only",
+      "B": "(i), (ii) and (iv) only",
+      "C": "(ii), (iii) and (iv) only",
+      "D": "All of the above"
     },
     "correctAnswer": "A",
-    "explanation": "V=IR.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Electrical conduction through gases is used in fluorescent lamps, neon signs, and cathode ray tubes. Electric heaters use resistive heating, not gas conduction.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-006",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Frequency unit (practice 2023 #6)",
+    "origin": "official_past_question",
+    "question": "The property of the wave shown in the diagram above is? (Diagram shows bending of waves around an obstacle)",
     "options": {
-      "A": "metre",
-      "B": "hertz",
-      "C": "second",
-      "D": "newton"
+      "A": "Diffraction",
+      "B": "Refraction",
+      "C": "Reflection",
+      "D": "Interference"
     },
-    "correctAnswer": "B",
-    "explanation": "Hz.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Diffraction is the bending of waves around obstacles or through gaps.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-007",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Sound cannot travel in (practice 2023 #7)",
+    "origin": "official_past_question",
+    "question": "Which of the following is/are not true about the heat capacity of a substance? \\(i\\) It is an intensive property \\(ii\\) Its S.I unit is JK⁻¹ \\(iii\\) It is an extensive property \\(iv\\) Its S.I unit is Jkg⁻¹K⁻¹",
     "options": {
-      "A": "air",
-      "B": "water",
-      "C": "steel",
-      "D": "vacuum"
+      "A": "(i) and (iv) only",
+      "B": "(ii) and (iii) only",
+      "C": "(i) only",
+      "D": "(iv) only"
     },
-    "correctAnswer": "D",
-    "explanation": "Vacuum.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Heat capacity is an extensive property (depends on mass) with SI unit JK⁻¹. Therefore, statements (i) and (iv) are false.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-008",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Light fastest in (practice 2023 #8)",
+    "origin": "official_past_question",
+    "question": "Find the tension in the two cords shown in the figure above. Neglect the mass of the cords. (A diagram is usually provided; the standard answer is derived from equilibrium conditions.)",
     "options": {
-      "A": "glass",
-      "B": "water",
-      "C": "vacuum",
-      "D": "diamond"
+      "A": "3502 N",
+      "B": "2156 N",
+      "C": "4300 N",
+      "D": "1800 N"
     },
-    "correctAnswer": "C",
-    "explanation": "Vacuum.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "In the typical 2023 JAMB problem, a weight of 2156 N is supported by two cords at angles. Using resolution of forces, T₁ = 2156 / sin 38° ≈ 3502 N.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-009",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Plane mirror image (practice 2023 #9)",
+    "origin": "official_past_question",
+    "question": "On a particular hot day, the temperature is 40°C and the partial pressure of water vapor in the air is 38.8 mmHg. What is the relative humidity? (Saturation vapour pressure at 40°C is approximately 55.3 mmHg)",
     "options": {
-      "A": "real inverted",
-      "B": "virtual upright",
-      "C": "real upright",
-      "D": "virtual inverted"
+      "A": "70%",
+      "B": "60%",
+      "C": "80%",
+      "D": "50%"
     },
-    "correctAnswer": "B",
-    "explanation": "Virtual upright.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Relative humidity = (partial pressure / saturation pressure) × 100 = (38.8 / 55.3) × 100 ≈ 70%.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-010",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Heat by radiation (practice 2023 #10)",
+    "origin": "official_past_question",
+    "question": "In an AC circuit, resonance occurs when the impedance of the circuit is?",
     "options": {
-      "A": "needs metal only",
-      "B": "needs medium always",
-      "C": "needs no medium",
-      "D": "is sound"
+      "A": "Maximum",
+      "B": "Minimum",
+      "C": "Zero",
+      "D": "Infinite"
     },
-    "correctAnswer": "C",
-    "explanation": "No medium.",
-    "topic": "General",
+    "correctAnswer": "B",
+    "explanation": "At resonance, the inductive and capacitive reactances cancel each other, leaving only resistance, so impedance is minimum.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-011",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Unit of current (practice 2023 #11)",
+    "origin": "official_past_question",
+    "question": "Which process is responsible for the production of energy in stars?",
     "options": {
-      "A": "volt",
-      "B": "ampere",
-      "C": "ohm",
-      "D": "watt"
+      "A": "Nuclear fission",
+      "B": "Nuclear fusion",
+      "C": "Chemical combustion",
+      "D": "Radioactive decay"
     },
     "correctAnswer": "B",
-    "explanation": "Ampere.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Stars, including the Sun, produce energy through nuclear fusion of hydrogen into helium.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-012",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Capacitor stores (practice 2023 #12)",
+    "origin": "official_past_question",
+    "question": "A body of mass 5 kg moving at 4 m/s collides and sticks to a 3 kg stationary object. What is their common velocity?",
     "options": {
-      "A": "current only",
-      "B": "charge",
-      "C": "sound",
-      "D": "mass"
+      "A": "5 m/s",
+      "B": "3 m/s",
+      "C": "2.5 m/s",
+      "D": "1.5 m/s"
     },
-    "correctAnswer": "B",
-    "explanation": "Charge.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Momentum conservation: (5×4) = (5+3)v → 20 = 8v → v = 2.5 m/s.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-013",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Momentum is (practice 2023 #13)",
+    "origin": "official_past_question",
+    "question": "The range of a projectile launched at 45° is maximum. If the initial speed is 20 m/s and g = 10 m/s², the maximum range is?",
     "options": {
-      "A": "m\u00d7v",
-      "B": "m/v",
-      "C": "f\u00d7t only",
-      "D": "weight only"
+      "A": "40 m",
+      "B": "20 m",
+      "C": "80 m",
+      "D": "10 m"
     },
     "correctAnswer": "A",
-    "explanation": "mv.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "R_max = u²/g = (20²)/10 = 400/10 = 40 m.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-014",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Wavelength is (practice 2023 #14)",
+    "origin": "official_past_question",
+    "question": "An object moving in a circular path of radius 2 m at a speed of 4 m/s has a centripetal acceleration of?",
     "options": {
-      "A": "amplitude",
-      "B": "crest-to-crest distance",
-      "C": "frequency",
-      "D": "period only"
+      "A": "8 m/s²",
+      "B": "16 m/s²",
+      "C": "2 m/s²",
+      "D": "4 m/s²"
     },
-    "correctAnswer": "B",
-    "explanation": "Distance between crests.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "a = v²/r = (4²)/2 = 16/2 = 8 m/s².",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2023-015",
     "subject": "physics",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Convex lens can form (practice 2023 #15)",
+    "origin": "official_past_question",
+    "question": "A force of 10 N acts on a body of mass 2 kg for 3 s. What is the change in momentum?",
     "options": {
-      "A": "real image of distant object",
-      "B": "only virtual always",
-      "C": "no image",
-      "D": "sound"
+      "A": "30 Ns",
+      "B": "20 Ns",
+      "C": "60 Ns",
+      "D": "6 Ns"
     },
     "correctAnswer": "A",
-    "explanation": "Real images possible.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-016",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Density is mass over (practice 2023 #16)",
-    "options": {
-      "A": "time",
-      "B": "volume",
-      "C": "force",
-      "D": "speed"
-    },
-    "correctAnswer": "B",
-    "explanation": "Volume.",
-    "topic": "General",
+    "explanation": "Change in momentum = impulse = F × t = 10 × 3 = 30 Ns. \\-\\-- Reply \"Continue\" to receive the 2024 sets for Chemistry and Physics next. I will continue to avoid Chinese characters and provide options, answers, and explanations for each question. Here are the 2024 JAMB Chemistry and Physics questions, compiled from past-question sources. Each includes options, answers, and explanations. Note on question count: Compilations of the 2024 JAMB CBT vary by source. The sets below combine the verifiable 2024 questions available from Myschool, EduRev, SuperGB, and Academial. For Chemistry, 40 questions are provided; for Physics, 35 questions with detailed explanations. These cover the core 2024 patterns and recurring topics. \\-\\--",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-017",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Fuse protects against (practice 2023 #17)",
-    "options": {
-      "A": "low voltage only",
-      "B": "excess current",
-      "C": "darkness",
-      "D": "sound"
-    },
-    "correctAnswer": "B",
-    "explanation": "Overcurrent.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-018",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Velocity includes (practice 2023 #18)",
-    "options": {
-      "A": "mass only",
-      "B": "direction",
-      "C": "temperature",
-      "D": "colour"
-    },
-    "correctAnswer": "B",
-    "explanation": "Direction.",
-    "topic": "General",
-    "difficulty": "medium",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-019",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "PD measured in (practice 2023 #19)",
-    "options": {
-      "A": "amperes",
-      "B": "volts",
-      "C": "ohms",
-      "D": "watts"
-    },
-    "correctAnswer": "B",
-    "explanation": "Volts.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-020",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "s\u2013t graph slope gives (practice 2023 #20)",
-    "options": {
-      "A": "acceleration",
-      "B": "speed",
-      "C": "force",
-      "D": "mass"
-    },
-    "correctAnswer": "B",
-    "explanation": "Speed.",
-    "topic": "General",
-    "difficulty": "medium",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-021",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Work is zero when force is (practice 2023 #21)",
-    "options": {
-      "A": "large",
-      "B": "perpendicular to displacement",
-      "C": "equal weight",
-      "D": "constant"
-    },
-    "correctAnswer": "B",
-    "explanation": "cos90=0.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-022",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Series circuit same (practice 2023 #22)",
-    "options": {
-      "A": "voltage always equal",
-      "B": "current",
-      "C": "resistance always equal",
-      "D": "power always equal"
-    },
-    "correctAnswer": "B",
-    "explanation": "Current same.",
-    "topic": "General",
-    "difficulty": "medium",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-023",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Electron charge (practice 2023 #23)",
-    "options": {
-      "A": "positive",
-      "B": "negative",
-      "C": "zero",
-      "D": "magnetic only"
-    },
-    "correctAnswer": "B",
-    "explanation": "Negative.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-024",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Radioactivity is emission from (practice 2023 #24)",
-    "options": {
-      "A": "stable atoms only",
-      "B": "unstable nuclei",
-      "C": "friction only",
-      "D": "bulbs"
-    },
-    "correctAnswer": "B",
-    "explanation": "Unstable nuclei.",
-    "topic": "General",
-    "difficulty": "medium",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-025",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Vernier caliper measures (practice 2023 #25)",
-    "options": {
-      "A": "time",
-      "B": "length",
-      "C": "mass only",
-      "D": "temp only"
-    },
-    "correctAnswer": "B",
-    "explanation": "Length.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-026",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Ultrasound frequency is (practice 2023 #26)",
-    "options": {
-      "A": "below hearing",
-      "B": "above hearing range",
-      "C": "exactly 1Hz",
-      "D": "zero"
-    },
-    "correctAnswer": "B",
-    "explanation": "Above audible.",
-    "topic": "General",
-    "difficulty": "medium",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-027",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Reflection of light is (practice 2023 #27)",
-    "options": {
-      "A": "bending in medium",
-      "B": "bouncing off surface",
-      "C": "stopping",
-      "D": "sound making"
-    },
-    "correctAnswer": "B",
-    "explanation": "Bounce.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-028",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Evaporation cools because (practice 2023 #28)",
-    "options": {
-      "A": "mass increases",
-      "B": "energetic molecules leave",
-      "C": "motion stops",
-      "D": "freezing"
-    },
-    "correctAnswer": "B",
-    "explanation": "High KE leave.",
-    "topic": "General",
-    "difficulty": "medium",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-029",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Machine MA if VR=4,eff=80% (practice 2023 #29)",
-    "options": {
-      "A": "5",
-      "B": "3.2",
-      "C": "4",
-      "D": "0.8"
-    },
-    "correctAnswer": "B",
-    "explanation": "0.8\u00d74=3.2.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-030",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Kelvin is SI unit of (practice 2023 #30)",
-    "options": {
-      "A": "force",
-      "B": "temperature",
-      "C": "charge",
-      "D": "power"
-    },
-    "correctAnswer": "B",
-    "explanation": "Temperature.",
-    "topic": "General",
-    "difficulty": "medium",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-031",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Weight is (practice 2023 #31)",
-    "options": {
-      "A": "mass only",
-      "B": "gravitational force on mass",
-      "C": "speed",
-      "D": "colour"
-    },
-    "correctAnswer": "B",
-    "explanation": "Force due to gravity.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-032",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Energy unit (practice 2023 #32)",
-    "options": {
-      "A": "newton",
-      "B": "joule",
-      "C": "ampere",
-      "D": "candela"
-    },
-    "correctAnswer": "B",
-    "explanation": "Joule.",
-    "topic": "General",
-    "difficulty": "medium",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-033",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Potential energy depends on (practice 2023 #33)",
-    "options": {
-      "A": "colour",
-      "B": "height/position",
-      "C": "smell",
-      "D": "taste"
-    },
-    "correctAnswer": "B",
-    "explanation": "Position.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-034",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Ammeter is connected in (practice 2023 #34)",
-    "options": {
-      "A": "parallel only",
-      "B": "series",
-      "C": "neither",
-      "D": "transformer only"
-    },
-    "correctAnswer": "B",
-    "explanation": "Series.",
-    "topic": "General",
-    "difficulty": "medium",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-035",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Voltmeter is connected in (practice 2023 #35)",
-    "options": {
-      "A": "series only",
-      "B": "parallel",
-      "C": "neither",
-      "D": "earth only"
-    },
-    "correctAnswer": "B",
-    "explanation": "Parallel.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-036",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Echo is due to (practice 2023 #36)",
-    "options": {
-      "A": "refraction",
-      "B": "reflection of sound",
-      "C": "diffraction only",
-      "D": "polarisation"
-    },
-    "correctAnswer": "B",
-    "explanation": "Reflection.",
-    "topic": "General",
-    "difficulty": "medium",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-037",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Conduction of heat best in (practice 2023 #37)",
-    "options": {
-      "A": "gases",
-      "B": "metals",
-      "C": "vacuum",
-      "D": "wood"
-    },
-    "correctAnswer": "B",
-    "explanation": "Metals.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-038",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Magnetic field around (practice 2023 #38)",
-    "options": {
-      "A": "wooden rod only",
-      "B": "current-carrying conductor",
-      "C": "plastic only",
-      "D": "rubber only"
-    },
-    "correctAnswer": "B",
-    "explanation": "Current creates field.",
-    "topic": "General",
-    "difficulty": "medium",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-039",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Inertia is tendency to (practice 2023 #39)",
-    "options": {
-      "A": "change state always",
-      "B": "resist change in motion",
-      "C": "lose mass",
-      "D": "gain charge"
-    },
-    "correctAnswer": "B",
-    "explanation": "Resist motion change.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "phy-2023-040",
-    "subject": "physics",
-    "year": 2023,
-    "origin": "original_practice",
-    "question": "Pressure in liquid increases with (practice 2023 #40)",
-    "options": {
-      "A": "height of vessel only above",
-      "B": "depth",
-      "C": "colour",
-      "D": "taste"
-    },
-    "correctAnswer": "B",
-    "explanation": "Depth.",
-    "topic": "General",
-    "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   }
 ];
 

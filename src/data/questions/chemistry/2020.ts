@@ -1,6 +1,6 @@
 import type { JambQuestion } from "../types";
 
-/** Chemistry 2020 — JAMB past questions (user-supplied bank). */
+/** Chemistry 2020 — JAMB past questions (Drive doc bank). */
 const questions: JambQuestion[] = [
   {
     "id": "chem-2020-001",
@@ -259,7 +259,7 @@ const questions: JambQuestion[] = [
     "subject": "chemistry",
     "year": 2020,
     "origin": "official_past_question",
-    "question": "A gaseous metallic chloride MCl consists of 20.22% of M by mass. The formula of the chloride is? [M = 27, Cl = 35.5]",
+    "question": "A gaseous metallic chloride MCl consists of 20.22% of M by mass. The formula of the chloride is? \\[M = 27, Cl = 35.5\\]",
     "options": {
       "A": "MCl",
       "B": "MCl₂",
@@ -537,7 +537,7 @@ const questions: JambQuestion[] = [
       "D": "Ethanol"
     },
     "correctAnswer": "A",
-    "explanation": "A three-carbon chain with an –OH group on the terminal carbon is propan-1-ol.",
+    "explanation": "A three-carbon chain with an --OH group on the terminal carbon is propan-1-ol.",
     "topic": "Chemistry",
     "difficulty": "medium",
     "syllabusTopic": "JAMB Chemistry"
@@ -709,7 +709,7 @@ const questions: JambQuestion[] = [
     "subject": "chemistry",
     "year": 2020,
     "origin": "official_past_question",
-    "question": "The number of moles in 22 g of CO₂ is? [C = 12, O = 16]",
+    "question": "The number of moles in 22 g of CO₂ is? \\[C = 12, O = 16\\]",
     "options": {
       "A": "0.5 mol",
       "B": "1 mol",
@@ -907,7 +907,7 @@ const questions: JambQuestion[] = [
     "subject": "chemistry",
     "year": 2020,
     "origin": "official_past_question",
-    "question": "The relative molecular mass of CaCO₃ is? [Ca = 40, C = 12, O = 16]",
+    "question": "The relative molecular mass of CaCO₃ is? \\[Ca = 40, C = 12, O = 16\\]",
     "options": {
       "A": "68",
       "B": "100",

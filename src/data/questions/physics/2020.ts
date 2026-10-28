@@ -1,6 +1,6 @@
 import type { JambQuestion } from "../types";
 
-/** Physics 2020 — JAMB past questions (user-supplied bank). */
+/** Physics 2020 — JAMB past questions (Drive doc bank). */
 const questions: JambQuestion[] = [
   {
     "id": "phy-2020-001",
@@ -97,7 +97,7 @@ const questions: JambQuestion[] = [
     "subject": "physics",
     "year": 2020,
     "origin": "official_past_question",
-    "question": "Which of the following statements about radioactivity is true? (i) Alpha particle is positively charged (ii) Beta particle is negatively charged (iii) Gamma ray is neutral (iv) Beta particle has the same mass as helium atom (v) Gamma ray is charged",
+    "question": "Which of the following statements about radioactivity is true? \\(i\\) Alpha particle is positively charged \\(ii\\) Beta particle is negatively charged \\(iii\\) Gamma ray is neutral \\(iv\\) Beta particle has the same mass as helium atom \\(v\\) Gamma ray is charged",
     "options": {
       "A": "i, ii, iii, iv only",
       "B": "i, ii, iii only",
@@ -159,7 +159,7 @@ const questions: JambQuestion[] = [
       "D": "A and C only"
     },
     "correctAnswer": "D",
-    "explanation": "Both conditions are required: denser-to-less-dense and angle > critical angle.",
+    "explanation": "Both conditions are required: denser-to-less-dense and angle \\> critical angle.",
     "topic": "Physics",
     "difficulty": "medium",
     "syllabusTopic": "JAMB Physics"
@@ -385,7 +385,7 @@ const questions: JambQuestion[] = [
     "subject": "physics",
     "year": 2020,
     "origin": "official_past_question",
-    "question": "The slope of a displacement–time graph gives?",
+    "question": "The slope of a displacement--time graph gives?",
     "options": {
       "A": "Acceleration",
       "B": "Velocity",
@@ -393,7 +393,7 @@ const questions: JambQuestion[] = [
       "D": "Speed"
     },
     "correctAnswer": "B",
-    "explanation": "Gradient of displacement–time = velocity.",
+    "explanation": "Gradient of displacement--time = velocity.",
     "topic": "Physics",
     "difficulty": "medium",
     "syllabusTopic": "JAMB Physics"
@@ -403,7 +403,7 @@ const questions: JambQuestion[] = [
     "subject": "physics",
     "year": 2020,
     "origin": "official_past_question",
-    "question": "A body moving with uniform acceleration has a velocity–time graph that is?",
+    "question": "A body moving with uniform acceleration has a velocity--time graph that is?",
     "options": {
       "A": "Horizontal",
       "B": "Curved",
@@ -421,7 +421,7 @@ const questions: JambQuestion[] = [
     "subject": "physics",
     "year": 2020,
     "origin": "official_past_question",
-    "question": "Newton’s first law is also known as the law of?",
+    "question": "Newton's first law is also known as the law of?",
     "options": {
       "A": "Momentum",
       "B": "Inertia",
@@ -547,7 +547,7 @@ const questions: JambQuestion[] = [
     "subject": "physics",
     "year": 2020,
     "origin": "official_past_question",
-    "question": "Archimedes’ principle states that the upthrust on a body immersed in a fluid is equal to the?",
+    "question": "Archimedes' principle states that the upthrust on a body immersed in a fluid is equal to the?",
     "options": {
       "A": "Weight of the body",
       "B": "Weight of the fluid displaced",
@@ -907,7 +907,7 @@ const questions: JambQuestion[] = [
     "subject": "physics",
     "year": 2020,
     "origin": "official_past_question",
-    "question": "Ohm’s law states that current is proportional to?",
+    "question": "Ohm's law states that current is proportional to?",
     "options": {
       "A": "Resistance",
       "B": "Voltage",
@@ -999,10 +999,10 @@ const questions: JambQuestion[] = [
     "origin": "official_past_question",
     "question": "The direction of the magnetic field around a current-carrying conductor is given by?",
     "options": {
-      "A": "Fleming’s left-hand rule",
-      "B": "Fleming’s right-hand rule",
+      "A": "Fleming's left-hand rule",
+      "B": "Fleming's right-hand rule",
       "C": "Right-hand grip rule",
-      "D": "Lenz’s law"
+      "D": "Lenz's law"
     },
     "correctAnswer": "C",
     "explanation": "The right-hand grip rule gives the field direction.",
@@ -1077,7 +1077,7 @@ const questions: JambQuestion[] = [
       "D": "Alpha particle"
     },
     "correctAnswer": "C",
-    "explanation": "Beta decay emits an electron (β⁻) from the nucleus. ---",
+    "explanation": "Beta decay emits an electron (β⁻) from the nucleus. \\-\\-- Reply \"Continue\" to receive the complete 2021 sets (60 Chemistry + 60 Physics) next. I will then proceed year by year through 2026. Here are the complete 2021 JAMB Chemistry and Physics sets (60 questions each), with options, answers, and explanations. Important note: Providing all 840 questions (60 × 7 years × 2 subjects) in a single response is not possible due to length limits. I have delivered the complete 2021 sets below. Reply \"Continue\" and I will deliver 2022 next, then 2023, and so on. I have noted your instruction to apply this standard to other subjects as well. \\-\\--",
     "topic": "Physics",
     "difficulty": "medium",
     "syllabusTopic": "JAMB Physics"
