@@ -151,7 +151,6 @@ export function SubscriptionView() {
                 Purchase my code on WhatsApp
               </Button>
             </a>
-            <p className="text-center text-xs text-muted">WhatsApp · 0916 831 1809</p>
           </Card>
         </>
       ) : (
