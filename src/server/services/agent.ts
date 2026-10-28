@@ -9,6 +9,17 @@ import {
 } from "@/lib/errors";
 import { withdrawalSchema } from "@/lib/validation/auth";
 
+/** Always use the public production domain for shareable links — never Vercel preview URLs. */
+function publicAppUrl(): string {
+  return "https://jambnaija.vercel.app";
+}
+
+function generateReferralCode(username: string | null): string {
+  const base = (username || "user").replace(/[^a-z0-9]/gi, "").slice(0, 8);
+  const suffix = Math.random().toString(36).slice(2, 6);
+  return `JN${base}${suffix}`.toUpperCase();
+}
+
 export async function getAgentDashboard() {
   const session = await requireSession();
   if (session.user.role !== "STUDENT") {
@@ -28,10 +39,38 @@ export async function getAgentDashboard() {
   const me = rows[0];
   if (!me) throw new AppError("User not found.", "USER_MISSING", 404);
 
-  const referralCount = await db
-    .select({ id: users.id })
+  // Ensure every agent has a referral code (backfill older accounts)
+  let code = (me.referralCode || "").toUpperCase();
+  if (!code) {
+    code = generateReferralCode(me.username);
+    // Retry once on rare unique collision
+    try {
+      await db
+        .update(users)
+        .set({ referralCode: code, updatedAt: new Date() })
+        .where(eq(users.id, me.id));
+    } catch {
+      code = generateReferralCode(me.username);
+      await db
+        .update(users)
+        .set({ referralCode: code, updatedAt: new Date() })
+        .where(eq(users.id, me.id));
+    }
+  }
+
+  const referred = await db
+    .select({
+      id: users.id,
+      username: users.username,
+      email: users.email,
+      status: users.status,
+      planTier: users.planTier,
+      createdAt: users.createdAt,
+    })
     .from(users)
-    .where(eq(users.referredById, me.id));
+    .where(eq(users.referredById, me.id))
+    .orderBy(desc(users.createdAt))
+    .limit(100);
 
   const myWithdrawals = await db
     .select()
@@ -40,23 +79,31 @@ export async function getAgentDashboard() {
     .orderBy(desc(withdrawals.createdAt))
     .limit(20);
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_APP_URL ||
-    (process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "https://jambnaija.vercel.app");
-
-  const code = (me.referralCode || "").toUpperCase();
+  const baseUrl = publicAppUrl();
 
   return {
-    referralCode: code || null,
-    referralLink: code
-      ? `${String(baseUrl).replace(/\/$/, "")}/register?ref=${code}`
-      : `${String(baseUrl).replace(/\/$/, "")}/register`,
+    referralCode: code,
+    referralLink: `${baseUrl}/register?ref=${encodeURIComponent(code)}`,
     walletBalance: me.walletBalance ?? 0,
-    referralCount: referralCount.length,
+    referralCount: referred.length,
+    referrals: referred.map((r) => ({
+      id: r.id,
+      username: r.username,
+      // Mask email for privacy: a***@domain
+      email: maskEmail(r.email),
+      status: r.status,
+      planTier: r.planTier,
+      joinedAt: r.createdAt,
+    })),
     withdrawals: myWithdrawals,
   };
+}
+
+function maskEmail(email: string): string {
+  const [local, domain] = email.split("@");
+  if (!domain) return "***";
+  const shown = local.slice(0, 1);
+  return `${shown}***@${domain}`;
 }
 
 export async function requestWithdrawal(raw: unknown) {

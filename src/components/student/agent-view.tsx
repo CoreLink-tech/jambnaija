@@ -4,14 +4,25 @@ import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
 import { api } from "@/lib/client/api";
 import { REFERRAL_REWARD_NGN, SUBSCRIPTION_PRICE_NGN } from "@/lib/validation/auth";
+
+type Referral = {
+  id: string;
+  username: string | null;
+  email: string;
+  status: string;
+  planTier: string | null;
+  joinedAt: string | Date | null;
+};
 
 type Dash = {
   referralCode: string | null;
   referralLink: string;
   walletBalance: number;
   referralCount: number;
+  referrals: Referral[];
   withdrawals: {
     id: string;
     amount: number;
@@ -99,7 +110,11 @@ export function AgentView() {
       </Card>
 
       <Card className="space-y-2">
-        <p className="text-sm font-semibold">Your referral link</p>
+        <p className="text-sm font-semibold">Your referral code</p>
+        <code className="block rounded-lg bg-surface-warm px-3 py-2 text-sm font-semibold tracking-wide">
+          {data?.referralCode || "—"}
+        </code>
+        <p className="text-sm font-semibold pt-1">Your referral link</p>
         <code className="block break-all rounded-lg bg-surface-warm px-3 py-2 text-xs">
           {data?.referralLink}
         </code>
@@ -115,6 +130,53 @@ export function AgentView() {
         >
           Copy link
         </Button>
+      </Card>
+
+      <Card className="space-y-3">
+        <div className="flex items-center justify-between gap-2">
+          <p className="text-sm font-semibold">Your referrals</p>
+          <Badge tone="neutral">{data?.referralCount ?? 0}</Badge>
+        </div>
+        {!data?.referrals?.length ? (
+          <p className="text-sm text-muted">
+            No referrals yet. Share your link to start earning.
+          </p>
+        ) : (
+          <ul className="divide-y divide-line">
+            {data.referrals.map((r) => (
+              <li
+                key={r.id}
+                className="flex flex-col gap-0.5 py-2.5 first:pt-0 last:pb-0 sm:flex-row sm:items-center sm:justify-between"
+              >
+                <div>
+                  <p className="text-sm font-medium">
+                    {r.username || r.email}
+                  </p>
+                  <p className="text-xs text-muted">{r.email}</p>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-muted">
+                  <Badge
+                    tone={
+                      r.status === "ACTIVE"
+                        ? "ok"
+                        : r.status === "PENDING"
+                          ? "warn"
+                          : "neutral"
+                    }
+                  >
+                    {r.status}
+                  </Badge>
+                  {r.planTier ? <span>{r.planTier}</span> : null}
+                  {r.joinedAt ? (
+                    <span>
+                      {new Date(r.joinedAt).toLocaleDateString()}
+                    </span>
+                  ) : null}
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
       </Card>
 
       {data?.withdrawals?.length ? (
