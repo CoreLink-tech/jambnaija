@@ -74,8 +74,8 @@ export const adminLoginSchema = z.object({
 export const activationCodeSchema = z
   .string()
   .trim()
-  .toLowerCase()
-  .min(10)
+  .toUpperCase()
+  .min(8)
   .max(80);
 
 export const withdrawalSchema = z.object({

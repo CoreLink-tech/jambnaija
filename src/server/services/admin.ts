@@ -3,6 +3,9 @@ import { requireAdminSession } from "@/server/policies/auth";
 import { createActivationCode } from "@/lib/security/id";
 import { ValidationError, NotFoundError, AppError } from "@/lib/errors";
 import * as adminRepo from "@/server/repositories/admin";
+import { getDb, users } from "@/lib/db";
+import { eq } from "drizzle-orm";
+import { creditReferrerOnFirstActivation } from "@/server/services/activation";
 
 export async function getAdminStats() {
   await requireAdminSession();
@@ -36,6 +39,11 @@ export async function adminUpdateUser(id: string, raw: unknown) {
     throw new ValidationError("Invalid user action.", parsed.error.flatten());
   }
 
+  const db = getDb();
+  const beforeRows = await db.select().from(users).where(eq(users.id, id)).limit(1);
+  const before = beforeRows[0];
+  if (!before) throw new NotFoundError("User not found.");
+
   let patch: {
     status?: "PENDING" | "ACTIVE" | "DEACTIVATED";
     planTier?: "STANDARD" | "PREMIUM" | null;
@@ -43,7 +51,8 @@ export async function adminUpdateUser(id: string, raw: unknown) {
 
   switch (parsed.data.action) {
     case "activate":
-      patch = { status: "ACTIVE" };
+      // Admin activation without tier → STANDARD so access + referral rules apply
+      patch = { status: "ACTIVE", planTier: before.planTier ?? "STANDARD" };
       break;
     case "deactivate":
       patch = { status: "DEACTIVATED" };
@@ -54,6 +63,20 @@ export async function adminUpdateUser(id: string, raw: unknown) {
     case "set_premium":
       patch = { status: "ACTIVE", planTier: "PREMIUM" };
       break;
+  }
+
+  // Pay referrer on first paid/active plan assignment
+  if (
+    parsed.data.action === "activate" ||
+    parsed.data.action === "set_standard" ||
+    parsed.data.action === "set_premium"
+  ) {
+    await creditReferrerOnFirstActivation({
+      id: before.id,
+      referredById: before.referredById,
+      status: before.status,
+      planTier: before.planTier,
+    });
   }
 
   const user = await adminRepo.updateUserState(id, patch);
