@@ -31,8 +31,6 @@ export function ExamSetupForm() {
     }).length;
   }, [selected, year, origin]);
 
-  const maxScore = selected.length * 100;
-
   function toggle(s: JambSubject) {
     setSelected((prev) => {
       if (prev.includes(s)) {
@@ -71,10 +69,6 @@ export function ExamSetupForm() {
     <div className="mx-auto max-w-2xl space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-primary-strong">Exam setup</h1>
-        <p className="mt-1 text-sm text-muted">
-          Pick up to {MAX_SUBJECTS} subjects, one year, and up to {MAX_QUESTIONS}{" "}
-          questions. Score is out of {maxScore} ({selected.length} × 100).
-        </p>
       </div>
 
       <Card className="space-y-5">
@@ -159,17 +153,9 @@ export function ExamSetupForm() {
         </label>
 
         <div className="rounded-[var(--radius-md)] bg-primary-soft px-3 py-3 text-sm text-primary-strong">
-          <p className="font-semibold">Summary</p>
-          <p className="mt-1">
-            {selected.map((s) => SUBJECT_META[s].name).join(", ")} · {year}
-          </p>
-          <p className="mt-1">
-            Available: <strong>{available}</strong> · Requested{" "}
-            <strong>{count}</strong>
-          </p>
-          <p className="mt-1">
-            Marked out of <strong>{maxScore}</strong> (
-            {selected.length} subject{selected.length === 1 ? "" : "s"} × 100)
+          <p>
+            {selected.map((s) => SUBJECT_META[s].name).join(", ")} · {year} ·{" "}
+            {count} questions
           </p>
         </div>
 

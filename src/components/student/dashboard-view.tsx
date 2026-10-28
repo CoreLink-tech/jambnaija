@@ -105,9 +105,9 @@ export function DashboardView({ user }: { user: User }) {
           <p className="text-sm text-muted">
             Topic-based practice with explanations. Premium required.
           </p>
-          <Link href="/study">
-            <Button className="w-full sm:w-auto">Start studying</Button>
-          </Link>
+          <Button className="w-full sm:w-auto" disabled>
+            Coming soon
+          </Button>
         </Card>
         <Card className="space-y-3" id="cbt">
           <h2 className="font-[family-name:var(--font-display)] text-lg font-bold">

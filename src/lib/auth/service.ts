@@ -100,7 +100,7 @@ export async function registerStudent(
   const passwordHash = await hashPassword(data.password);
   const id = createId("usr");
   const trialEnds = createTrialPremiumEndsAt();
-  const myReferralCode = `JN${data.username.replace(/[^a-z0-9]/gi, "").slice(0, 8).toUpperCase()}${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+  const myReferralCode = `JN${data.username.replace(/[^a-z0-9]/gi, "").slice(0, 8)}${Math.random().toString(36).slice(2, 6)}`.toUpperCase();
 
   let referredById: string | null = null;
   if (data.referralCode) {

@@ -46,9 +46,13 @@ export async function getAgentDashboard() {
       ? `https://${process.env.VERCEL_URL}`
       : "https://jambnaija.vercel.app");
 
+  const code = (me.referralCode || "").toUpperCase();
+
   return {
-    referralCode: me.referralCode,
-    referralLink: `${String(baseUrl).replace(/\/$/, "")}/register?ref=${me.referralCode || ""}`,
+    referralCode: code || null,
+    referralLink: code
+      ? `${String(baseUrl).replace(/\/$/, "")}/register?ref=${code}`
+      : `${String(baseUrl).replace(/\/$/, "")}/register`,
     walletBalance: me.walletBalance ?? 0,
     referralCount: referralCount.length,
     withdrawals: myWithdrawals,
