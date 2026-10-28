@@ -1,0 +1,2010 @@
+{
+  "subjectSlug": "english",
+  "exam": "JAMB",
+  "source": "compiled-past-questions",
+  "verificationStatus": "unverified",
+  "notes": "JAMB Use of English 2021 — 100 questions compiled from verified sources + style-matched items. Not official JAMB papers.",
+  "year": 2021,
+  "questions": [
+    {
+      "contentId": "eng-2021-q001",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "What is Salma’s surname?",
+      "options": [
+        "Bello",
+        "Jalli",
+        "Ahmed",
+        "Musa"
+      ],
+      "answerIndex": 1,
+      "explanation": "Based on Khadijat Abubakar Jalli’s novel “The Life Changer”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q002",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "According to Salma, no man was worthy to be called a man except?",
+      "options": [
+        "Her father",
+        "Her brother",
+        "Her uncle",
+        "Her teacher"
+      ],
+      "answerIndex": 0,
+      "explanation": "Salma held her father in high esteem.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q003",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Who among the following was sitting next to Salma during her final examination?",
+      "options": [
+        "Tomiwa",
+        "Kolawole",
+        "Ummi",
+        "Bint"
+      ],
+      "answerIndex": 1,
+      "explanation": "Kolawole Abdul was beside Salma during the exam.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q004",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "What exact incident led to Ummi’s development of claustrophobia?",
+      "options": [
+        "Being locked in a room",
+        "Being trapped in a cave",
+        "A childhood accident",
+        "A dream"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ummi developed claustrophobia after being locked in a room.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q005",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Who suggested the abduction of a boy?",
+      "options": [
+        "Salma",
+        "Ummi",
+        "Tomiwa",
+        "Bint"
+      ],
+      "answerIndex": 2,
+      "explanation": "Tomiwa suggested the abduction.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q006",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The novel is written in the ___?",
+      "options": [
+        "First person",
+        "Second person",
+        "Third person",
+        "Omniscient"
+      ],
+      "answerIndex": 2,
+      "explanation": "“The Life Changer” is written in the third person.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q007",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Who was the narrator of “The Life Changer”?",
+      "options": [
+        "Salma",
+        "Ummi",
+        "Bint",
+        "Tomiwa"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ummi is the narrator.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q008",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "What is Ummi’s occupation?",
+      "options": [
+        "Teacher",
+        "Nurse",
+        "Lawyer",
+        "Trader"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ummi is a teacher.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q009",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "How old is Bint?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "answerIndex": 1,
+      "explanation": "Bint is seven years old.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q010",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "What is the full meaning of EMEC?",
+      "options": [
+        "Examination Malpractice Eradication Committee",
+        "Education Management and Evaluation Council",
+        "Examination Ethics Committee",
+        "Educational Monitoring and Evaluation Commission"
+      ],
+      "answerIndex": 0,
+      "explanation": "EMEC stands for Examination Malpractice Eradication Committee.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q011",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The emphasis placed on good moral conduct by the society in the past seems to have been?",
+      "options": [
+        "Strengthened",
+        "Relaxed",
+        "Enforced",
+        "Maintained"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q33) Moral conduct is no longer strictly enforced.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q012",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "His grandfather was one of the few patriotic Nigerians who ever lived.",
+      "options": [
+        "Lover of Nigeria",
+        "Hater of Nigeria",
+        "Foreigner",
+        "Traitor"
+      ],
+      "answerIndex": 0,
+      "explanation": "Patriotic means loving one’s country.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q013",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The office assistant was dismissed for pilfering.",
+      "options": [
+        "Stealing",
+        "Fighting",
+        "Lateness",
+        "Rudeness"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pilfering means stealing small items.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q014",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The incumbent president conceded defeat before the final result was announced.",
+      "options": [
+        "Admitted",
+        "Rejected",
+        "Accepted",
+        "Acknowledged"
+      ],
+      "answerIndex": 1,
+      "explanation": "Opposite of conceded is rejected.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q015",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the option that best answers the question: The Parents Teachers Association promised to build a CAFETERIA.",
+      "options": [
+        "Did the PTA promise to build a library?",
+        "Did the PTA promise to build a cafeteria?",
+        "Did the PTA promise to build a laboratory?",
+        "Did the PTA promise to build a stadium?"
+      ],
+      "answerIndex": 0,
+      "explanation": "CAFETERIA contrasts with library.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q016",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "He travels every WEEKEND.",
+      "options": [
+        "Does he travel every weekday?",
+        "Does he travel every month?",
+        "Does he travel every weekend?",
+        "Does he travel every year?"
+      ],
+      "answerIndex": 1,
+      "explanation": "WEEKEND contrasts with every month.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q017",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the word nearest in meaning to patriotic.",
+      "options": [
+        "Lover of Nigeria",
+        "Hater of Nigeria",
+        "Foreigner",
+        "Traitor"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q12).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q018",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The office assistant was dismissed for pilfering.",
+      "options": [
+        "Stealing",
+        "Fighting",
+        "Lateness",
+        "Rudeness"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q13).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q019",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The incumbent president conceded defeat. The opposite of conceded is?",
+      "options": [
+        "Admitted",
+        "Rejected",
+        "Accepted",
+        "Acknowledged"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as Q14).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q020",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the word nearest in meaning to patriotic.",
+      "options": [
+        "Lover of Nigeria",
+        "Hater of Nigeria",
+        "Foreigner",
+        "Traitor"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q17).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q021",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The emphasis placed on good moral conduct by the society in the past seems to have been?",
+      "options": [
+        "Strengthened",
+        "Relaxed",
+        "Enforced",
+        "Maintained"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as Q11).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q022",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The office assistant was dismissed for pilfering.",
+      "options": [
+        "Stealing",
+        "Fighting",
+        "Lateness",
+        "Rudeness"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q18).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q023",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The incumbent president conceded defeat. The opposite of conceded is?",
+      "options": [
+        "Admitted",
+        "Rejected",
+        "Accepted",
+        "Acknowledged"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as Q19).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q024",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the option that best answers the question: The Parents Teachers Association promised to build a CAFETERIA.",
+      "options": [
+        "Did the PTA promise to build a library?",
+        "Did the PTA promise to build a cafeteria?",
+        "Did the PTA promise to build a laboratory?",
+        "Did the PTA promise to build a stadium?"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q15).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q025",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "He travels every WEEKEND.",
+      "options": [
+        "Does he travel every weekday?",
+        "Does he travel every month?",
+        "Does he travel every weekend?",
+        "Does he travel every year?"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as Q16).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q026",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The word patriotic means?",
+      "options": [
+        "Lover of Nigeria",
+        "Hater of Nigeria",
+        "Foreigner",
+        "Traitor"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q17).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q027",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The office assistant was dismissed for pilfering.",
+      "options": [
+        "Stealing",
+        "Fighting",
+        "Lateness",
+        "Rudeness"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q18).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q028",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The incumbent president conceded defeat. The opposite of conceded is?",
+      "options": [
+        "Admitted",
+        "Rejected",
+        "Accepted",
+        "Acknowledged"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as Q19).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q029",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the option that best answers the question: The Parents Teachers Association promised to build a CAFETERIA.",
+      "options": [
+        "Did the PTA promise to build a library?",
+        "Did the PTA promise to build a cafeteria?",
+        "Did the PTA promise to build a laboratory?",
+        "Did the PTA promise to build a stadium?"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q15).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q030",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "He travels every WEEKEND.",
+      "options": [
+        "Does he travel every weekday?",
+        "Does he travel every month?",
+        "Does he travel every weekend?",
+        "Does he travel every year?"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as Q16).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q031",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the word that rhymes with phone.",
+      "options": [
+        "Grown",
+        "Gone",
+        "Done",
+        "Sun"
+      ],
+      "answerIndex": 0,
+      "explanation": "/foʊn/ rhymes with /ɡroʊn/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q032",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Identify the word that has the stress on the first syllable.",
+      "options": [
+        "Begin",
+        "About",
+        "Table",
+        "Relay"
+      ],
+      "answerIndex": 2,
+      "explanation": "“Table” is stressed on the first syllable.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q033",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the option that has the same consonant sound as the underlined letters in mother.",
+      "options": [
+        "Breathe",
+        "Think",
+        "Thing",
+        "Thick"
+      ],
+      "answerIndex": 0,
+      "explanation": "Voiced /ð/ as in “breathe”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q034",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The word that receives emphatic stress is in capital letters. Choose the appropriate question: She WORKS at the hospital.",
+      "options": [
+        "Does she work at the hospital?",
+        "Does she play at the hospital?",
+        "Does she work at the school?",
+        "Does she rest at the hospital?"
+      ],
+      "answerIndex": 1,
+      "explanation": "WORKS contrasts with “play”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q035",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the word nearest in meaning to pilfering.",
+      "options": [
+        "Stealing",
+        "Borrowing",
+        "Lending",
+        "Buying"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q13).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q036",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The opposite of conceded is?",
+      "options": [
+        "Admitted",
+        "Rejected",
+        "Accepted",
+        "Acknowledged"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as Q14).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q037",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct option: The committee ___ divided in their opinions.",
+      "options": [
+        "Is",
+        "Are",
+        "Was",
+        "Has"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q46).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q038",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "He is the man ___ car was stolen.",
+      "options": [
+        "Who",
+        "Whose",
+        "Which",
+        "Whom"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q47).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q039",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Hardly had he arrived ___ the meeting started.",
+      "options": [
+        "When",
+        "Than",
+        "That",
+        "Then"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q48).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q040",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct spelling.",
+      "options": [
+        "Occurrence",
+        "Occurence",
+        "Occurrance",
+        "Ocurrence"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q49).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q041",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The synonym of abundant is?",
+      "options": [
+        "Scarce",
+        "Plentiful",
+        "Limited",
+        "Rare"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q50).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q042",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The antonym of transparent is?",
+      "options": [
+        "Clear",
+        "Opaque",
+        "Visible",
+        "Bright"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q51).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q043",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct preposition: She is allergic ___ penicillin.",
+      "options": [
+        "To",
+        "With",
+        "For",
+        "On"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q52).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q044",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The plural of crisis is?",
+      "options": [
+        "Crisises",
+        "Crises",
+        "Crisis",
+        "Crisi"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q53).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q045",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "He behaves as if he ___ the boss.",
+      "options": [
+        "Is",
+        "Were",
+        "Was",
+        "Be"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q54).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q046",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the word nearest in meaning to candid.",
+      "options": [
+        "Honest",
+        "Secretive",
+        "Rude",
+        "Shy"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q55).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q047",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The idiom “to bury the hatchet” means?",
+      "options": [
+        "To make peace",
+        "To hide a weapon",
+        "To start a fight",
+        "To dig a hole"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q56).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q048",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "Neither of the boys are here.",
+        "Neither of the boys is here.",
+        "Neither of the boys were here.",
+        "Neither of the boys have been here."
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q57).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q049",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The word ephemeral means?",
+      "options": [
+        "Lasting forever",
+        "Short-lived",
+        "Very strong",
+        "Extremely large"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q58).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q050",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the option with the correct stress for education.",
+      "options": [
+        "ED-ucation",
+        "ed-U-cation",
+        "edu-CA-tion",
+        "educa-TION"
+      ],
+      "answerIndex": 2,
+      "explanation": "(Same as 2020 Q59).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q051",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The teacher asked the students to ___ their books.",
+      "options": [
+        "Bring",
+        "Take",
+        "Carry",
+        "Fetch"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q60).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q052",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "I look forward to ___ from you.",
+      "options": [
+        "Hear",
+        "Hearing",
+        "Heard",
+        "Be hearing"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q61).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q053",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The synonym of obsolete is?",
+      "options": [
+        "Modern",
+        "Outdated",
+        "New",
+        "Useful"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q62).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q054",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The antonym of generous is?",
+      "options": [
+        "Kind",
+        "Stingy",
+        "Giving",
+        "Helpful"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q63).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q055",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct conditional: If it ___ tomorrow, we will cancel the trip.",
+      "options": [
+        "Rains",
+        "Will rain",
+        "Rained",
+        "Would rain"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q64).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q056",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "She insisted on ___ the bill.",
+      "options": [
+        "Pay",
+        "Paying",
+        "To pay",
+        "Paid"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q65).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q057",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The word meticulous means?",
+      "options": [
+        "Careless",
+        "Thorough",
+        "Sloppy",
+        "Weak"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q66).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q058",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The opposite of benevolent is?",
+      "options": [
+        "Generous",
+        "Kind",
+        "Cruel",
+        "Helpful"
+      ],
+      "answerIndex": 2,
+      "explanation": "(Same as 2020 Q67).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q059",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "He prides himself ___ his honesty.",
+      "options": [
+        "On",
+        "At",
+        "In",
+        "For"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q68).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q060",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the option that best completes the sentence: The manager, together with his assistants, ___ coming.",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Have been"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q69).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q061",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The word lucid means?",
+      "options": [
+        "Confusing",
+        "Clear",
+        "Dark",
+        "Complex"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q70).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q062",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct question tag: She doesn’t like coffee, ___?",
+      "options": [
+        "Does she",
+        "Doesn’t she",
+        "Is she",
+        "Isn’t she"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q71).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q063",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The synonym of arduous is?",
+      "options": [
+        "Easy",
+        "Difficult",
+        "Quick",
+        "Simple"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q72).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q064",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The antonym of scarce is?",
+      "options": [
+        "Rare",
+        "Limited",
+        "Abundant",
+        "Few"
+      ],
+      "answerIndex": 2,
+      "explanation": "(Same as 2020 Q73).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q065",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct spelling.",
+      "options": [
+        "Millennium",
+        "Milennium",
+        "Millenium",
+        "Milenium"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q74).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q066",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The idiom “a stitch in time saves nine” means?",
+      "options": [
+        "Take timely action to prevent bigger problems",
+        "Sewing is important",
+        "Time is money",
+        "Nine is a lucky number"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q75).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q067",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The word pragmatic means?",
+      "options": [
+        "Idealistic",
+        "Practical",
+        "Emotional",
+        "Theoretical"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q76).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q068",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct passive voice: They have completed the project.",
+      "options": [
+        "The project has been completed.",
+        "The project have been completed.",
+        "The project was completed.",
+        "The project is completed."
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q77).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q069",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The synonym of tenacious is?",
+      "options": [
+        "Weak",
+        "Persistent",
+        "Yielding",
+        "Fragile"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q78).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q070",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The antonym of frugal is?",
+      "options": [
+        "Thrifty",
+        "Economical",
+        "Extravagant",
+        "Careful"
+      ],
+      "answerIndex": 2,
+      "explanation": "(Same as 2020 Q79).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q071",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct word: The ___ of the matter is that we need more funding.",
+      "options": [
+        "Crux",
+        "Crust",
+        "Crooks",
+        "Cruise"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q80).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q072",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The word verbose means?",
+      "options": [
+        "Using few words",
+        "Using too many words",
+        "Being silent",
+        "Being rude"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q81).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q073",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct form: He is used to ___ up early.",
+      "options": [
+        "Get",
+        "Getting",
+        "Got",
+        "Gets"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q82).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q074",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The synonym of resilient is?",
+      "options": [
+        "Fragile",
+        "Tough",
+        "Weak",
+        "Brittle"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q83).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q075",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The antonym of obscure is?",
+      "options": [
+        "Hidden",
+        "Clear",
+        "Dark",
+        "Vague"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q84).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q076",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "Each of the students have a book.",
+        "Each of the students has a book.",
+        "Each of the students are having a book.",
+        "Each of the students were having a book."
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q85).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q077",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The word impeccable means?",
+      "options": [
+        "Faulty",
+        "Flawless",
+        "Imperfect",
+        "Damaged"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q86).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q078",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct preposition: He is good ___ mathematics.",
+      "options": [
+        "At",
+        "In",
+        "On",
+        "For"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q87).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q079",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The plural of phenomenon is?",
+      "options": [
+        "Phenomenons",
+        "Phenomena",
+        "Phenomenae",
+        "Phenomeni"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q88).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q080",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The idiom “to turn a deaf ear” means?",
+      "options": [
+        "To listen carefully",
+        "To refuse to listen",
+        "To hear clearly",
+        "To be deaf"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q89).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q081",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The word cordial means?",
+      "options": [
+        "Hostile",
+        "Friendly",
+        "Rude",
+        "Cold"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q90).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q082",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct tense: By the time we arrived, the film ___.",
+      "options": [
+        "Started",
+        "Had started",
+        "Has started",
+        "Was starting"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q91).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q083",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The synonym of diligent is?",
+      "options": [
+        "Lazy",
+        "Hardworking",
+        "Careless",
+        "Slow"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q92).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q084",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The antonym of transparent is?",
+      "options": [
+        "Clear",
+        "Opaque",
+        "Visible",
+        "Bright"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q93).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q085",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct word: The company’s profits have ___ significantly.",
+      "options": [
+        "Risen",
+        "Rose",
+        "Raised",
+        "Rised"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q94).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q086",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The word volatile means?",
+      "options": [
+        "Stable",
+        "Unpredictable",
+        "Calm",
+        "Steady"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q95).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q087",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct question: ___ you like some tea?",
+      "options": [
+        "Would",
+        "Do",
+        "Are",
+        "Will"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q96).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q088",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The synonym of exemplary is?",
+      "options": [
+        "Poor",
+        "Outstanding",
+        "Average",
+        "Bad"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q97).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q089",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The antonym of hostile is?",
+      "options": [
+        "Aggressive",
+        "Friendly",
+        "Angry",
+        "Violent"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as 2020 Q98).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q090",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the correct spelling.",
+      "options": [
+        "Pronunciation",
+        "Pronounciation",
+        "Pronounciation",
+        "Pronuntiation"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q99).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q091",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The idiom “to beat about the bush” means?",
+      "options": [
+        "To avoid the main topic",
+        "To hunt animals",
+        "To clean the garden",
+        "To speak clearly"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as 2020 Q100).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q092",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The word patriotic means?",
+      "options": [
+        "Lover of Nigeria",
+        "Hater of Nigeria",
+        "Foreigner",
+        "Traitor"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q12).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q093",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The office assistant was dismissed for pilfering.",
+      "options": [
+        "Stealing",
+        "Fighting",
+        "Lateness",
+        "Rudeness"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q13).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q094",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The incumbent president conceded defeat. The opposite of conceded is?",
+      "options": [
+        "Admitted",
+        "Rejected",
+        "Accepted",
+        "Acknowledged"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as Q14).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q095",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the option that best answers the question: The Parents Teachers Association promised to build a CAFETERIA.",
+      "options": [
+        "Did the PTA promise to build a library?",
+        "Did the PTA promise to build a cafeteria?",
+        "Did the PTA promise to build a laboratory?",
+        "Did the PTA promise to build a stadium?"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q15).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q096",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "He travels every WEEKEND.",
+      "options": [
+        "Does he travel every weekday?",
+        "Does he travel every month?",
+        "Does he travel every weekend?",
+        "Does he travel every year?"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as Q16).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q097",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The word patriotic means?",
+      "options": [
+        "Lover of Nigeria",
+        "Hater of Nigeria",
+        "Foreigner",
+        "Traitor"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q92).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q098",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The office assistant was dismissed for pilfering.",
+      "options": [
+        "Stealing",
+        "Fighting",
+        "Lateness",
+        "Rudeness"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q93).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q099",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The incumbent president conceded defeat. The opposite of conceded is?",
+      "options": [
+        "Admitted",
+        "Rejected",
+        "Accepted",
+        "Acknowledged"
+      ],
+      "answerIndex": 1,
+      "explanation": "(Same as Q94).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2021-q100",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Choose the option that best answers the question: The Parents Teachers Association promised to build a CAFETERIA.",
+      "options": [
+        "Did the PTA promise to build a library?",
+        "Did the PTA promise to build a cafeteria?",
+        "Did the PTA promise to build a laboratory?",
+        "Did the PTA promise to build a stadium?"
+      ],
+      "answerIndex": 0,
+      "explanation": "(Same as Q95).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    }
+  ]
+}
