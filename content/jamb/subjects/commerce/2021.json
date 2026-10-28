@@ -1,0 +1,2010 @@
+{
+  "subjectSlug": "commerce",
+  "exam": "JAMB",
+  "source": "compiled-past-questions",
+  "verificationStatus": "unverified",
+  "notes": "JAMB Commerce 2021 — 100 questions compiled from verified sources + style-matched items. Not official JAMB papers.",
+  "year": 2021,
+  "questions": [
+    {
+      "contentId": "com-2021-q001",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Given: I. Retail II. Export III. Transport IV. Import V. Insurance VI. Banking and finance VII. Wholesale VIII. Communication. Which of the above are aids to trade?",
+      "options": [
+        "III, V, VI and VIII",
+        "I, II, IV and VII",
+        "III, IV, V and VI",
+        "I, III, VI and VII"
+      ],
+      "answerIndex": 0,
+      "explanation": "Aids to trade include transport, insurance, banking, and communication.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q002",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The instruments of credit include?",
+      "options": [
+        "Bills of exchange and promissory notes",
+        "Cheques and coins",
+        "Bank drafts and currency notes",
+        "Treasury bills and shares"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bills of exchange and promissory notes are credit instruments.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q003",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The main objective of a trade association is to?",
+      "options": [
+        "Maximize profit",
+        "Protect and promote the interests of members",
+        "Regulate government policy",
+        "Eliminate competition"
+      ],
+      "answerIndex": 1,
+      "explanation": "Trade associations protect and promote members’ interests.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q004",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Which of the following countries are members of the Lake Chad Basin Commission?",
+      "options": [
+        "Niger, Cameroon, Chad, Nigeria, and Benin",
+        "Nigeria, Ghana, Togo, and Benin",
+        "Chad, Sudan, Libya, and Niger",
+        "Cameroon, Gabon, Congo, and Chad"
+      ],
+      "answerIndex": 0,
+      "explanation": "Members include Niger, Cameroon, Chad, Nigeria, and Benin.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q005",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The major objective of corporate mergers is to?",
+      "options": [
+        "Increase financial advantage",
+        "Reduce competition only",
+        "Minimize taxation only",
+        "Eliminate employees"
+      ],
+      "answerIndex": 0,
+      "explanation": "Mergers primarily aim to increase financial advantage.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q006",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A form of money with face value greater than the value of the metal content is?",
+      "options": [
+        "Token money",
+        "Commodity money",
+        "Paper money",
+        "Bank money"
+      ],
+      "answerIndex": 0,
+      "explanation": "Token money has a face value higher than its intrinsic value.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q007",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Services rendered to the public are provided by?",
+      "options": [
+        "Civil servants",
+        "Private companies only",
+        "Trade unions",
+        "Cooperatives"
+      ],
+      "answerIndex": 0,
+      "explanation": "Civil servants are employed by government to provide public services.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q008",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The conversion of raw materials into finished products creates?",
+      "options": [
+        "Form utility",
+        "Place utility",
+        "Time utility",
+        "Possession utility"
+      ],
+      "answerIndex": 0,
+      "explanation": "Form utility is created by transforming raw materials into finished goods.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q009",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A provision in the charter of a company which gives holders of common stock the first option to purchase additional issues of the firm's common stock is the?",
+      "options": [
+        "Pre-emptive right",
+        "Proxy right",
+        "Cumulative right",
+        "Participating right"
+      ],
+      "answerIndex": 0,
+      "explanation": "The pre-emptive right gives existing shareholders first refusal on new issues.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q010",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Hire purchase is advantageous to the seller in that?",
+      "options": [
+        "It increases patronage",
+        "It reduces risk",
+        "It eliminates bad debts",
+        "It speeds up payment"
+      ],
+      "answerIndex": 0,
+      "explanation": "Hire purchase allows more customers to buy, increasing patronage.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q011",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "An activity that involves the buying and selling of goods and services is?",
+      "options": [
+        "Trade",
+        "Production",
+        "Consumption",
+        "Exchange"
+      ],
+      "answerIndex": 0,
+      "explanation": "Trade is the buying and selling of goods and services.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q012",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The primary motive behind an individual engaging in production is to?",
+      "options": [
+        "Maximize profit",
+        "Create utility",
+        "Satisfy wants",
+        "Increase output"
+      ],
+      "answerIndex": 0,
+      "explanation": "Profit is the primary motive for production.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q013",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Which of the following is a factor of production?",
+      "options": [
+        "Money",
+        "Capital",
+        "Profit",
+        "Interest"
+      ],
+      "answerIndex": 1,
+      "explanation": "Capital is a factor of production; money, profit, and interest are not.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q014",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The reward for entrepreneurship is?",
+      "options": [
+        "Rent",
+        "Wages",
+        "Profit",
+        "Interest"
+      ],
+      "answerIndex": 2,
+      "explanation": "Profit is the reward for entrepreneurship.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q015",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The reward for land as a factor of production is?",
+      "options": [
+        "Rent",
+        "Wages",
+        "Profit",
+        "Interest"
+      ],
+      "answerIndex": 0,
+      "explanation": "Rent is the reward for land.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q016",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The principle of management that emphasizes the number of subordinates under the direct supervision of a manager is?",
+      "options": [
+        "Span of control",
+        "Unity of command",
+        "Division of labour",
+        "Delegation"
+      ],
+      "answerIndex": 0,
+      "explanation": "Span of control refers to the number of subordinates a manager supervises.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q017",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "An employee should report to only one superior according to the principle of?",
+      "options": [
+        "Unity of command",
+        "Span of control",
+        "Division of labour",
+        "Delegation"
+      ],
+      "answerIndex": 0,
+      "explanation": "Unity of command means one superior per employee.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q018",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Managers must demand accountability from their subordinates according to?",
+      "options": [
+        "Authority",
+        "Responsibility",
+        "Accountability",
+        "Delegation"
+      ],
+      "answerIndex": 2,
+      "explanation": "Accountability requires subordinates to answer for their actions.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q019",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A partner who contributes capital and also takes active part in management is a?",
+      "options": [
+        "General partner",
+        "Limited partner",
+        "Nominal partner",
+        "Dormant partner"
+      ],
+      "answerIndex": 0,
+      "explanation": "A general partner participates fully in management.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q020",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The document that states the name, address, and objects of a company is the?",
+      "options": [
+        "Memorandum of Association",
+        "Articles of Association",
+        "Prospectus",
+        "Certificate of Incorporation"
+      ],
+      "answerIndex": 0,
+      "explanation": "The Memorandum of Association is the primary constitutional document.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q021",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A private limited liability company has a minimum of how many shareholders?",
+      "options": [
+        "1",
+        "2",
+        "7",
+        "50"
+      ],
+      "answerIndex": 1,
+      "explanation": "A private company requires a minimum of 2 shareholders.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q022",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The maximum number of shareholders in a public limited liability company is?",
+      "options": [
+        "20",
+        "50",
+        "100",
+        "Unlimited"
+      ],
+      "answerIndex": 3,
+      "explanation": "A public company can have unlimited shareholders.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q023",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A cooperative society is owned and controlled by?",
+      "options": [
+        "The government",
+        "Its members",
+        "Foreign investors",
+        "A single proprietor"
+      ],
+      "answerIndex": 1,
+      "explanation": "Cooperatives are democratically controlled by members.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q024",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A business unit owned by one person is called?",
+      "options": [
+        "Partnership",
+        "Sole proprietorship",
+        "Corporation",
+        "Cooperative"
+      ],
+      "answerIndex": 1,
+      "explanation": "A sole proprietorship is owned by one person.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q025",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Which of the following is a disadvantage of a sole proprietorship?",
+      "options": [
+        "Unlimited liability",
+        "Quick decision-making",
+        "Personal relationship with customers",
+        "Business secrecy"
+      ],
+      "answerIndex": 0,
+      "explanation": "The owner has unlimited liability for business debts.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q026",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A partner whose liability is limited to the capital he has contributed is a?",
+      "options": [
+        "General partner",
+        "Limited partner",
+        "Active partner",
+        "Nominal partner"
+      ],
+      "answerIndex": 1,
+      "explanation": "A limited partner’s liability is restricted to their capital contribution.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q027",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The legal document that contains the rules and regulations for the internal management of a company is the?",
+      "options": [
+        "Memorandum of Association",
+        "Articles of Association",
+        "Prospectus",
+        "Statutory Declaration"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Articles of Association govern internal management.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q028",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The certificate that gives a company the right to commence business is the?",
+      "options": [
+        "Certificate of Incorporation",
+        "Certificate of Trading",
+        "Prospectus",
+        "Memorandum"
+      ],
+      "answerIndex": 1,
+      "explanation": "A trading certificate is required for a public company to start business.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q029",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A situation where a company expands by buying another company is called?",
+      "options": [
+        "Merger",
+        "Acquisition",
+        "Amalgamation",
+        "Consortium"
+      ],
+      "answerIndex": 1,
+      "explanation": "Acquisition is the purchase of one company by another.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q030",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The process of dividing tasks into jobs and departments and delegating authority is known as?",
+      "options": [
+        "Directing",
+        "Leading",
+        "Organizing",
+        "Staffing"
+      ],
+      "answerIndex": 2,
+      "explanation": "Organizing involves dividing work and allocating authority.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q031",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The best mode of ensuring that items posted get to the named addresses is through?",
+      "options": [
+        "Recorded delivery",
+        "Certificate of posting",
+        "Registered mail",
+        "Express mail"
+      ],
+      "answerIndex": 2,
+      "explanation": "Registered mail provides a record and requires a signature on delivery.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q032",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The function of a merchant wholesaler is to?",
+      "options": [
+        "Sell directly to consumers",
+        "Buy in bulk from producers and sell to retailers",
+        "Manufacture goods",
+        "Provide credit to consumers only"
+      ],
+      "answerIndex": 1,
+      "explanation": "Merchant wholesalers buy in bulk and resell to retailers.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q033",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A face-to-face communication with customers is?",
+      "options": [
+        "Advertising",
+        "Personal selling",
+        "Sales promotion",
+        "Publicity"
+      ],
+      "answerIndex": 1,
+      "explanation": "Personal selling involves direct interaction with customers.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q034",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The medium through which a message is transmitted in communication is?",
+      "options": [
+        "Sender",
+        "Receiver",
+        "Channel",
+        "Feedback"
+      ],
+      "answerIndex": 2,
+      "explanation": "The channel is the medium through which a message travels.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q035",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The type of communication from a superior to a subordinate in an organization is referred to as?",
+      "options": [
+        "Upward communication",
+        "Downward communication",
+        "Horizontal communication",
+        "Informal communication"
+      ],
+      "answerIndex": 1,
+      "explanation": "Downward communication flows from superiors to subordinates.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q036",
+      "topicName": "Basic Concepts",
+      "topicSlug": "basic-concepts",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The internet is an example of?",
+      "options": [
+        "A communication satellite",
+        "An international facility",
+        "Interconnectivity",
+        "Internet services"
+      ],
+      "answerIndex": 1,
+      "explanation": "The internet is an international communication facility.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q037",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Which of the following is an example of invisible trade?",
+      "options": [
+        "Export of cocoa",
+        "Import of machinery",
+        "Banking services",
+        "Export of crude oil"
+      ],
+      "answerIndex": 2,
+      "explanation": "Invisible trade involves services, such as banking.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q038",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The balance of trade is the difference between?",
+      "options": [
+        "Visible exports and visible imports",
+        "Total exports and total imports",
+        "Visible exports and invisible imports",
+        "Total receipts and total payments"
+      ],
+      "answerIndex": 0,
+      "explanation": "Balance of trade compares visible goods exports and imports.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q039",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The document sent by a seller to a buyer detailing the goods and price is called?",
+      "options": [
+        "Invoice",
+        "Proforma invoice",
+        "Credit note",
+        "Debit note"
+      ],
+      "answerIndex": 0,
+      "explanation": "An invoice details goods sold and their prices.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q040",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A proforma invoice is sent?",
+      "options": [
+        "After goods are sold",
+        "Before goods are supplied, to show price",
+        "To correct an overcharge",
+        "To demand payment"
+      ],
+      "answerIndex": 1,
+      "explanation": "A proforma invoice is a preliminary bill showing cost before a sale.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q041",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A credit note is issued by a seller when?",
+      "options": [
+        "The buyer returns goods or is overcharged",
+        "The seller undercharges",
+        "Goods are sold on credit",
+        "Payment is overdue"
+      ],
+      "answerIndex": 0,
+      "explanation": "A credit note reduces the amount owed, often due to returns or overcharges.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q042",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Which of the following is a form of home trade?",
+      "options": [
+        "Import trade",
+        "Export trade",
+        "Wholesale trade",
+        "Entrepot trade"
+      ],
+      "answerIndex": 2,
+      "explanation": "Wholesale and retail trade are forms of home trade.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q043",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The document that serves as a contract of carriage of goods by sea is the?",
+      "options": [
+        "Bill of lading",
+        "Manifest",
+        "Charter party",
+        "Air waybill"
+      ],
+      "answerIndex": 0,
+      "explanation": "A bill of lading is both a receipt and a contract for sea carriage.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q044",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "An agent who sells goods on behalf of another for a commission is a?",
+      "options": [
+        "Broker",
+        "Factor",
+        "Auctioneer",
+        "Del credere agent"
+      ],
+      "answerIndex": 1,
+      "explanation": "A factor sells goods in their own name for a commission.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q045",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The term \"CIF\" in international trade stands for?",
+      "options": [
+        "Cost, Insurance, and Freight",
+        "Cost, Import, and Freight",
+        "Carriage, Insurance, and Freight",
+        "Cost, Invoice, and Freight"
+      ],
+      "answerIndex": 0,
+      "explanation": "CIF means the seller covers cost, insurance, and freight to the destination port.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q046",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Fluctuations in the supply of goods may be eliminated if the distribution system maintains?",
+      "options": [
+        "Modern technology",
+        "A team of retailers",
+        "Warehouse services",
+        "Sufficient middlemen"
+      ],
+      "answerIndex": 2,
+      "explanation": "Warehousing helps stabilize supply by storing goods.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q047",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Which of the following is a disadvantage of rail transport?",
+      "options": [
+        "Bulk carriage",
+        "Fixed routes",
+        "Low cost over long distances",
+        "Speed"
+      ],
+      "answerIndex": 1,
+      "explanation": "Rail transport is limited to fixed routes.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q048",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The fastest mode of transport for urgent documents is?",
+      "options": [
+        "Sea",
+        "Rail",
+        "Air",
+        "Road"
+      ],
+      "answerIndex": 2,
+      "explanation": "Air transport is the fastest for urgent items.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q049",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The process of moving goods from the producer to the consumer is called?",
+      "options": [
+        "Production",
+        "Distribution",
+        "Consumption",
+        "Storage"
+      ],
+      "answerIndex": 1,
+      "explanation": "Distribution involves moving goods to consumers.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q050",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A retailer who sells goods directly to final consumers is the?",
+      "options": [
+        "Last link in the chain of distribution",
+        "First link",
+        "Middle link",
+        "Producer"
+      ],
+      "answerIndex": 0,
+      "explanation": "Retailers are the last link between producers and consumers.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q051",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A customer with ABC Plc sent money through his account to his sister's account in another branch. This is an example of?",
+      "options": [
+        "Electronic funds transfer",
+        "Standing order",
+        "Direct debit",
+        "Bank overdraft"
+      ],
+      "answerIndex": 0,
+      "explanation": "Transferring funds between accounts electronically is an EFT.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q052",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The unit through which the result of processed data is displayed is the?",
+      "options": [
+        "Logic unit",
+        "Display unit",
+        "Control unit",
+        "Output unit"
+      ],
+      "answerIndex": 3,
+      "explanation": "The output unit displays processed data.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q053",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The agency that regulates the Nigerian capital market is the?",
+      "options": [
+        "Central Bank of Nigeria",
+        "Securities and Exchange Commission",
+        "Nigerian Stock Exchange",
+        "Bureau of Public Enterprises"
+      ],
+      "answerIndex": 1,
+      "explanation": "SEC is the apex regulator of the Nigerian capital market.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q054",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Treasury bills are?",
+      "options": [
+        "Long-term government securities",
+        "Short-term government securities",
+        "Corporate bonds",
+        "Equities"
+      ],
+      "answerIndex": 1,
+      "explanation": "Treasury bills are short-term debt instruments.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q055",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The apex bank in Nigeria is the?",
+      "options": [
+        "First Bank",
+        "Central Bank of Nigeria",
+        "Bank of Industry",
+        "Nigerian Stock Exchange"
+      ],
+      "answerIndex": 1,
+      "explanation": "CBN is the apex monetary authority.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q056",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Commercial banks create money through?",
+      "options": [
+        "Printing currency",
+        "Credit creation",
+        "Minting coins",
+        "Issuing treasury bills"
+      ],
+      "answerIndex": 1,
+      "explanation": "Banks create demand deposits through lending.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q057",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The rate at which the central bank lends to commercial banks is the?",
+      "options": [
+        "Interest rate",
+        "Discount rate",
+        "Exchange rate",
+        "Inflation rate"
+      ],
+      "answerIndex": 1,
+      "explanation": "The discount rate is the central bank’s lending rate to banks.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q058",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A current account is operated by?",
+      "options": [
+        "Businessmen and companies",
+        "Salaried workers only",
+        "Students only",
+        "Farmers only"
+      ],
+      "answerIndex": 0,
+      "explanation": "Current accounts are mainly for businesses.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q059",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A savings account usually attracts?",
+      "options": [
+        "Higher interest than fixed deposit",
+        "Lower interest than current account",
+        "Interest and withdrawals with a passbook",
+        "No interest"
+      ],
+      "answerIndex": 2,
+      "explanation": "Savings accounts earn interest and use a passbook.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q060",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The money market deals in?",
+      "options": [
+        "Long-term securities",
+        "Short-term funds",
+        "Foreign exchange only",
+        "Consumer goods"
+      ],
+      "answerIndex": 1,
+      "explanation": "The money market handles short-term financial instruments.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q061",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The capital market deals in?",
+      "options": [
+        "Short-term funds",
+        "Long-term securities",
+        "Consumer goods",
+        "Agricultural produce"
+      ],
+      "answerIndex": 1,
+      "explanation": "The capital market trades long-term securities.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q062",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Shares that carry a fixed rate of dividend are?",
+      "options": [
+        "Ordinary shares",
+        "Preference shares",
+        "Deferred shares",
+        "Founders’ shares"
+      ],
+      "answerIndex": 1,
+      "explanation": "Preference shares have a fixed dividend rate.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q063",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The nominal value of a share is also called?",
+      "options": [
+        "Market value",
+        "Par value",
+        "Book value",
+        "Intrinsic value"
+      ],
+      "answerIndex": 1,
+      "explanation": "Nominal (par) value is the stated face value of a share.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q064",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A stock exchange is a market for?",
+      "options": [
+        "New issues of securities",
+        "Existing securities",
+        "Agricultural produce",
+        "Consumer goods"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stock exchanges facilitate trading in existing securities.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q065",
+      "topicName": "Money Banking and Finance",
+      "topicSlug": "money-banking-finance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The process of bringing a new company to the stock exchange for the first time is?",
+      "options": [
+        "Initial Public Offer (IPO)",
+        "Secondary offering",
+        "Rights issue",
+        "Bonus issue"
+      ],
+      "answerIndex": 0,
+      "explanation": "An IPO is the first sale of shares to the public.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q066",
+      "topicName": "Insurance",
+      "topicSlug": "insurance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The type of insurance that covers loss of profit due to fire is?",
+      "options": [
+        "Consequential loss insurance",
+        "Fire insurance",
+        "Marine insurance",
+        "Fidelity insurance"
+      ],
+      "answerIndex": 0,
+      "explanation": "Consequential loss insurance covers profits lost due to fire.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q067",
+      "topicName": "Insurance",
+      "topicSlug": "insurance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The principle of insurance that states the insured cannot profit from a loss is?",
+      "options": [
+        "Indemnity",
+        "Utmost good faith",
+        "Insurable interest",
+        "Subrogation"
+      ],
+      "answerIndex": 0,
+      "explanation": "Indemnity ensures the insured is restored to their pre-loss position.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q068",
+      "topicName": "Insurance",
+      "topicSlug": "insurance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The principle that requires full disclosure of all material facts is?",
+      "options": [
+        "Indemnity",
+        "Utmost good faith",
+        "Contribution",
+        "Proximate cause"
+      ],
+      "answerIndex": 1,
+      "explanation": "Utmost good faith requires full disclosure.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q069",
+      "topicName": "Insurance",
+      "topicSlug": "insurance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The person who assesses the value of a loss in insurance is an?",
+      "options": [
+        "Actuary",
+        "Underwriter",
+        "Loss adjuster",
+        "Broker"
+      ],
+      "answerIndex": 2,
+      "explanation": "A loss adjuster assesses the extent of a loss.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q070",
+      "topicName": "Insurance",
+      "topicSlug": "insurance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Which of the following is not an insurable risk?",
+      "options": [
+        "Fire",
+        "Theft",
+        "Market fluctuations",
+        "Accident"
+      ],
+      "answerIndex": 2,
+      "explanation": "Market fluctuations are speculative risks and not insurable.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q071",
+      "topicName": "Insurance",
+      "topicSlug": "insurance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The amount paid by an insured to the insurer is called?",
+      "options": [
+        "Claim",
+        "Premium",
+        "Commission",
+        "Dividend"
+      ],
+      "answerIndex": 1,
+      "explanation": "The premium is the payment for insurance cover.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q072",
+      "topicName": "Insurance",
+      "topicSlug": "insurance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The document issued by an insurer as evidence of cover is the?",
+      "options": [
+        "Cover note",
+        "Policy",
+        "Proposal form",
+        "Certificate"
+      ],
+      "answerIndex": 1,
+      "explanation": "The insurance policy is the formal contract.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q073",
+      "topicName": "Insurance",
+      "topicSlug": "insurance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The type of insurance that covers goods in transit by sea is?",
+      "options": [
+        "Fire insurance",
+        "Marine insurance",
+        "Motor insurance",
+        "Fidelity insurance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Marine insurance covers goods and vessels in sea transit.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q074",
+      "topicName": "Insurance",
+      "topicSlug": "insurance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The principle that prevents an insured from recovering more than the actual loss is?",
+      "options": [
+        "Utmost good faith",
+        "Indemnity",
+        "Contribution",
+        "Subrogation"
+      ],
+      "answerIndex": 1,
+      "explanation": "Indemnity prevents over-insurance.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q075",
+      "topicName": "Insurance",
+      "topicSlug": "insurance",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The type of insurance that covers employees who handle cash is?",
+      "options": [
+        "Fidelity guarantee insurance",
+        "Burglary insurance",
+        "Fire insurance",
+        "Marine insurance"
+      ],
+      "answerIndex": 0,
+      "explanation": "Fidelity guarantee covers employers against dishonest employees.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q076",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The formula for rate of stock turnover is?",
+      "options": [
+        "Cost of goods sold ÷ Average stock",
+        "Sales ÷ Closing stock",
+        "Gross profit ÷ Sales",
+        "Net profit ÷ Capital"
+      ],
+      "answerIndex": 0,
+      "explanation": "Rate of turnover = COGS / Average stock.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q077",
+      "topicName": "Business Calculations",
+      "topicSlug": "business-calculations",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Gross profit is calculated as?",
+      "options": [
+        "Sales − Cost of goods sold",
+        "Sales − Expenses",
+        "Purchases − Closing stock",
+        "Net profit + Tax"
+      ],
+      "answerIndex": 0,
+      "explanation": "Gross profit = Sales − COGS.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q078",
+      "topicName": "Business Calculations",
+      "topicSlug": "business-calculations",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Net profit is calculated as?",
+      "options": [
+        "Gross profit − Expenses",
+        "Sales − Purchases",
+        "Gross profit + Expenses",
+        "Sales − Cost of goods sold"
+      ],
+      "answerIndex": 0,
+      "explanation": "Net profit = Gross profit − Operating expenses.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q079",
+      "topicName": "Business Calculations",
+      "topicSlug": "business-calculations",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "If opening stock is ₦5,600, purchases ₦9,700, and closing stock ₦4,400, the cost of goods sold is?",
+      "options": [
+        "₦10,900",
+        "₦15,000",
+        "₦8,500",
+        "₦10,000"
+      ],
+      "answerIndex": 0,
+      "explanation": "COGS = 5,600 + 9,700 − 4,400 = ₦10,900.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q080",
+      "topicName": "Business Calculations",
+      "topicSlug": "business-calculations",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "If sales are ₦15,000 and COGS is ₦10,900, the gross profit is?",
+      "options": [
+        "₦4,100",
+        "₦4,500",
+        "₦5,000",
+        "₦3,500"
+      ],
+      "answerIndex": 0,
+      "explanation": "Gross profit = 15,000 − 10,900 = ₦4,100.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q081",
+      "topicName": "Business Calculations",
+      "topicSlug": "business-calculations",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "If gross profit is ₦4,500 and expenses are ₦2,500, net profit is?",
+      "options": [
+        "₦2,000",
+        "₦7,000",
+        "₦4,500",
+        "₦2,500"
+      ],
+      "answerIndex": 0,
+      "explanation": "Net profit = 4,500 − 2,500 = ₦2,000.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q082",
+      "topicName": "Business Calculations",
+      "topicSlug": "business-calculations",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The accounting equation is?",
+      "options": [
+        "Assets = Liabilities + Capital",
+        "Assets = Capital − Liabilities",
+        "Capital = Assets + Liabilities",
+        "Liabilities = Assets + Capital"
+      ],
+      "answerIndex": 0,
+      "explanation": "Assets = Liabilities + Owner’s Equity (Capital).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q083",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "If assets are ₦50,000 and liabilities are ₦20,000, capital is?",
+      "options": [
+        "₦30,000",
+        "₦70,000",
+        "₦20,000",
+        "₦50,000"
+      ],
+      "answerIndex": 0,
+      "explanation": "Capital = 50,000 − 20,000 = ₦30,000.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q084",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The document that shows the financial position of a business at a particular date is the?",
+      "options": [
+        "Trading account",
+        "Profit and loss account",
+        "Balance sheet",
+        "Cash flow statement"
+      ],
+      "answerIndex": 2,
+      "explanation": "The balance sheet shows assets, liabilities, and capital at a specific date.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q085",
+      "topicName": "Business Calculations",
+      "topicSlug": "business-calculations",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The excess of current assets over current liabilities is?",
+      "options": [
+        "Working capital",
+        "Fixed capital",
+        "Share capital",
+        "Loan capital"
+      ],
+      "answerIndex": 0,
+      "explanation": "Working capital = Current assets − Current liabilities.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q086",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The agency that currently oversees the privatization and commercialization processes in Nigeria is the?",
+      "options": [
+        "Nigerian Stock Exchange",
+        "Technical Committee on Privatization and Commercialization",
+        "Securities and Exchange Commission",
+        "Bureau of Public Enterprises"
+      ],
+      "answerIndex": 3,
+      "explanation": "The BPE oversees privatization in Nigeria.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q087",
+      "topicName": "Business Environment",
+      "topicSlug": "business-environment",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The major participants in the stock market when stock prices are falling are the?",
+      "options": [
+        "Bulls",
+        "Bears",
+        "Registrars",
+        "Brokers"
+      ],
+      "answerIndex": 1,
+      "explanation": "\"Bears\" sell in anticipation of falling prices.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q088",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The privatization exercise in Nigeria is aimed at?",
+      "options": [
+        "Increasing government control",
+        "Reducing government involvement in business",
+        "Nationalizing private companies",
+        "Banning foreign investment"
+      ],
+      "answerIndex": 1,
+      "explanation": "Privatization transfers ownership to private investors.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q089",
+      "topicName": "Business Environment",
+      "topicSlug": "business-environment",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The agency responsible for consumer protection in Nigeria is the?",
+      "options": [
+        "Consumer Protection Council",
+        "Standards Organisation of Nigeria",
+        "National Agency for Food and Drug Administration and Control",
+        "All of the above"
+      ],
+      "answerIndex": 3,
+      "explanation": "CPC, SON, and NAFDAC all play roles in consumer protection.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q090",
+      "topicName": "Business Environment",
+      "topicSlug": "business-environment",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The business environment that includes competitors, suppliers, and customers is the?",
+      "options": [
+        "Internal environment",
+        "Micro environment",
+        "Macro environment",
+        "Legal environment"
+      ],
+      "answerIndex": 1,
+      "explanation": "The micro environment consists of immediate stakeholders.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q091",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The macro environment includes all except?",
+      "options": [
+        "Political factors",
+        "Economic factors",
+        "Employees",
+        "Technological factors"
+      ],
+      "answerIndex": 2,
+      "explanation": "Employees are part of the internal environment.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q092",
+      "topicName": "Business Environment",
+      "topicSlug": "business-environment",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A business that operates in more than one country is a?",
+      "options": [
+        "Multinational corporation",
+        "Partnership",
+        "Sole proprietorship",
+        "Cooperative"
+      ],
+      "answerIndex": 0,
+      "explanation": "Multinational corporations operate across borders.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q093",
+      "topicName": "Business Environment",
+      "topicSlug": "business-environment",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The main source of short-term finance for a business is?",
+      "options": [
+        "Bank overdraft",
+        "Debentures",
+        "Equity shares",
+        "Retained earnings"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bank overdrafts provide short-term financing.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q094",
+      "topicName": "Business Organisation",
+      "topicSlug": "business-organisation",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The process of converting a public company to a private company is called?",
+      "options": [
+        "Nationalization",
+        "Privatization",
+        "Commercialization",
+        "Deregulation"
+      ],
+      "answerIndex": 1,
+      "explanation": "Privatization transfers ownership from public to private.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q095",
+      "topicName": "Trade and Aids to Trade",
+      "topicSlug": "trade-aids-to-trade",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The regulatory body for telecommunications in Nigeria is the?",
+      "options": [
+        "Nigerian Communications Commission",
+        "Nigerian Broadcasting Commission",
+        "National Broadcasting Commission",
+        "Nigerian Postal Service"
+      ],
+      "answerIndex": 0,
+      "explanation": "NCC regulates telecommunications.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q096",
+      "topicName": "Business Environment",
+      "topicSlug": "business-environment",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A tax imposed on imports to protect local industries is called?",
+      "options": [
+        "Tariff",
+        "Quota",
+        "Embargo",
+        "Subsidy"
+      ],
+      "answerIndex": 0,
+      "explanation": "A tariff is a tax on imports.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q097",
+      "topicName": "Business Calculations",
+      "topicSlug": "business-calculations",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The document that shows the financial position of a business at a particular date is the?",
+      "options": [
+        "Trading account",
+        "Profit and loss account",
+        "Balance sheet",
+        "Cash flow statement"
+      ],
+      "answerIndex": 2,
+      "explanation": "The balance sheet shows financial position.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q098",
+      "topicName": "Business Calculations",
+      "topicSlug": "business-calculations",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The excess of current assets over current liabilities is?",
+      "options": [
+        "Working capital",
+        "Fixed capital",
+        "Share capital",
+        "Loan capital"
+      ],
+      "answerIndex": 0,
+      "explanation": "Working capital = Current assets − Current liabilities.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q099",
+      "topicName": "Business Calculations",
+      "topicSlug": "business-calculations",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The process of recording business transactions in books of account is?",
+      "options": [
+        "Bookkeeping",
+        "Auditing",
+        "Accounting",
+        "Costing"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bookkeeping is the systematic recording of transactions.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "com-2021-q100",
+      "topicName": "Business Environment",
+      "topicSlug": "business-environment",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The last link in the chain of distribution is the?",
+      "options": [
+        "Producer",
+        "Wholesaler",
+        "Retailer",
+        "Consumer"
+      ],
+      "answerIndex": 2,
+      "explanation": "The retailer is the last intermediary before the consumer.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    }
+  ]
+}
