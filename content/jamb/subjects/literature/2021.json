@@ -1,0 +1,2010 @@
+{
+  "subjectSlug": "literature",
+  "exam": "JAMB",
+  "source": "compiled-past-questions",
+  "verificationStatus": "unverified",
+  "notes": "JAMB Literature in English 2021 — 100 questions compiled from verified sources + style-matched items. Not official JAMB papers.",
+  "year": 2021,
+  "questions": [
+    {
+      "contentId": "lit-2021-q001",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "An elegy is a poem that mourns for the?",
+      "options": [
+        "Deceased",
+        "Bereaved",
+        "Accused",
+        "King"
+      ],
+      "answerIndex": 0,
+      "explanation": "An elegy mourns the deceased.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q002",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "\"If Winter comes, can Spring be far behind?\" The literary device used here is?",
+      "options": [
+        "Apostrophe",
+        "Rhetorical question",
+        "Paradox",
+        "Irony"
+      ],
+      "answerIndex": 1,
+      "explanation": "The line is a rhetorical question used for emphasis.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q003",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Poems that are not written in meter or regular line length are called?",
+      "options": [
+        "Short verses",
+        "Rhythmic verses",
+        "Free verses",
+        "Irregular verses"
+      ],
+      "answerIndex": 2,
+      "explanation": "Free verse lacks regular meter.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q004",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A situation where an actor addresses the audience without the other actors hearing him is called?",
+      "options": [
+        "Soliloquy",
+        "Chorus",
+        "Aside",
+        "Solo"
+      ],
+      "answerIndex": 2,
+      "explanation": "An aside is heard by the audience but not by other characters.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q005",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The repetition of a consonant sound in quick succession for sound effect is?",
+      "options": [
+        "Alliteration",
+        "Pun",
+        "Onomatopoeia",
+        "Assonance"
+      ],
+      "answerIndex": 0,
+      "explanation": "Alliteration is the repetition of consonant sounds.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q006",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A play in which the acts succeed one another without probable or necessary sequence is?",
+      "options": [
+        "Episodic",
+        "Simple",
+        "Linear",
+        "Convoluted"
+      ],
+      "answerIndex": 0,
+      "explanation": "An episodic play has a loose structure.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q007",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A technique by which a previous scene or action is recalled in a play to shed light on the present action is?",
+      "options": [
+        "Climax",
+        "Flashback",
+        "Interlude",
+        "Catharsis"
+      ],
+      "answerIndex": 1,
+      "explanation": "Flashback recalls past events.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q008",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Criticism is a literary activity which seeks to?",
+      "options": [
+        "Find faults in a literary work",
+        "Analyze and evaluate a literary work",
+        "Compare and contrast novels",
+        "Discover the beauty of a literary work"
+      ],
+      "answerIndex": 1,
+      "explanation": "Literary criticism analyzes and evaluates.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q009",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A band of singers and dancers in drama who act as a link between the play and the audience is the?",
+      "options": [
+        "Chorus",
+        "Clown",
+        "Playwright",
+        "Cast"
+      ],
+      "answerIndex": 0,
+      "explanation": "The chorus bridges the play and audience.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q010",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Persona refers to the?",
+      "options": [
+        "Central character in a play",
+        "Voice of the character",
+        "Image a character presents",
+        "Personality of a character"
+      ],
+      "answerIndex": 1,
+      "explanation": "Persona is the voice of the character.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q011",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The three main unities in drama are those of?",
+      "options": [
+        "Action, time and place",
+        "Time, space and action",
+        "Place, time and space",
+        "Space, action and time"
+      ],
+      "answerIndex": 0,
+      "explanation": "The classical unities are action, time, and place.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q012",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "In drama, a conspicuous weakness in the character of the protagonist contributing to his downfall is referred to as?",
+      "options": [
+        "Anagnorisis",
+        "A tragic flaw",
+        "Hubris",
+        "Catharsis"
+      ],
+      "answerIndex": 1,
+      "explanation": "A tragic flaw (hamartia) leads to the protagonist's downfall.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q013",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A melodramatic play is based on?",
+      "options": [
+        "Subtle character development",
+        "Exaggerated emotions and sensational events",
+        "Realistic dialogue",
+        "Minimal conflict"
+      ],
+      "answerIndex": 1,
+      "explanation": "Melodrama relies on exaggerated emotions.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q014",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "When two statements or comparisons are apparently contradictory, we have an example of?",
+      "options": [
+        "Irony",
+        "Paradox",
+        "Contrast",
+        "Parallelism"
+      ],
+      "answerIndex": 1,
+      "explanation": "A paradox seems contradictory but may be true.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q015",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A literary work in which characters and events are used as symbols is?",
+      "options": [
+        "Characterization",
+        "Allegory",
+        "Metaphor",
+        "Parallelism"
+      ],
+      "answerIndex": 1,
+      "explanation": "An allegory uses symbols to convey meaning.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q016",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A literary device wherein the author places a person, concept, idea or theme parallel to another is?",
+      "options": [
+        "Allusion",
+        "Juxtaposition",
+        "Symbolism",
+        "Memoir"
+      ],
+      "answerIndex": 1,
+      "explanation": "Juxtaposition places things side by side for comparison.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q017",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The repetition of vowel sounds in nearby words is called?",
+      "options": [
+        "Alliteration",
+        "Assonance",
+        "Consonance",
+        "Onomatopoeia"
+      ],
+      "answerIndex": 1,
+      "explanation": "Assonance is the repetition of vowel sounds.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q018",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A poem that celebrates a person or event is called?",
+      "options": [
+        "Elegy",
+        "Ode",
+        "Sonnet",
+        "Epic"
+      ],
+      "answerIndex": 1,
+      "explanation": "An ode celebrates a person or event.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q019",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The use of words whose sounds imitate their meanings is called?",
+      "options": [
+        "Onomatopoeia",
+        "Alliteration",
+        "Simile",
+        "Metaphor"
+      ],
+      "answerIndex": 0,
+      "explanation": "Onomatopoeia imitates sounds.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q020",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A group of lines forming a unit in a poem is called a?",
+      "options": [
+        "Stanza",
+        "Canto",
+        "Refrain",
+        "Couplet"
+      ],
+      "answerIndex": 0,
+      "explanation": "A stanza is a grouped set of lines.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q021",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Titubi joins the farmer's revolt because?",
+      "options": [
+        "She is forced by her parents",
+        "She sympathizes with the oppressed farmers",
+        "She wants to become a leader",
+        "She is seeking revenge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Titubi is moved by the plight of the farmers and joins their revolt.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q022",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The character of Titubi represents?",
+      "options": [
+        "Elite privilege",
+        "Revolutionary consciousness",
+        "Foreign influence",
+        "Traditional authority"
+      ],
+      "answerIndex": 1,
+      "explanation": "Titubi transforms from a privileged background to a revolutionary figure.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q023",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The play Morountodun is based on?",
+      "options": [
+        "A historical Yoruba revolt",
+        "A Greek myth",
+        "A colonial adventure",
+        "A romantic comedy"
+      ],
+      "answerIndex": 0,
+      "explanation": "The play draws on the historical Moremi legend and the Agbekoya revolt.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q024",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The theme of Morountodun includes?",
+      "options": [
+        "Class struggle and social justice",
+        "Romantic love",
+        "Religious conflict",
+        "Technological progress"
+      ],
+      "answerIndex": 0,
+      "explanation": "The play explores class struggle and the fight for justice.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q025",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The character of Marshal is?",
+      "options": [
+        "A farmer leader",
+        "A government official",
+        "Titubi's father",
+        "A soldier"
+      ],
+      "answerIndex": 0,
+      "explanation": "Marshal is one of the leaders of the farmers' revolt.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q026",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The title Morountodun refers to?",
+      "options": [
+        "A goddess",
+        "A place",
+        "A person",
+        "A festival"
+      ],
+      "answerIndex": 2,
+      "explanation": "Morountodun is a character, a legendary woman associated with sacrifice and resistance.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q027",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The play uses the technique of?",
+      "options": [
+        "Flashback",
+        "Stream of consciousness",
+        "Absurdist dialogue",
+        "Epic theatre"
+      ],
+      "answerIndex": 0,
+      "explanation": "Morountodun employs flashbacks to connect past and present struggles.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q028",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The conflict in Morountodun is between?",
+      "options": [
+        "Tradition and modernity",
+        "The rich and the poor",
+        "Men and women",
+        "Town and country"
+      ],
+      "answerIndex": 1,
+      "explanation": "The central conflict is between the oppressive elite and the impoverished farmers.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q029",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Titubi's initial attitude toward the revolt is?",
+      "options": [
+        "Sympathetic",
+        "Hostile",
+        "Indifferent",
+        "Enthusiastic"
+      ],
+      "answerIndex": 1,
+      "explanation": "She initially sees the farmers as lawbreakers but later changes her view.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q030",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The play Morountodun was written by?",
+      "options": [
+        "Femi Osofisan",
+        "Wole Soyinka",
+        "J.C. Graft",
+        "Frank Ogodo Ogbeche"
+      ],
+      "answerIndex": 0,
+      "explanation": "Femi Osofisan is the playwright.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q031",
+      "topicName": "Novel - Witnesses to Tears",
+      "topicSlug": "novel-witnesses-to-tears",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The witnesses to the tears in the novel are?",
+      "options": [
+        "The poor and oppressed",
+        "The rich and powerful",
+        "The government officials",
+        "The foreign observers"
+      ],
+      "answerIndex": 0,
+      "explanation": "The novel focuses on the suffering of the common people, who are witnesses to tears.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q032",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The novel is largely set in?",
+      "options": [
+        "Lagos",
+        "A fictional northern Nigerian city",
+        "London",
+        "Accra"
+      ],
+      "answerIndex": 1,
+      "explanation": "The setting reflects northern Nigerian urban life.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q033",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The message of the novel is that?",
+      "options": [
+        "Corruption is inevitable",
+        "The oppressed must rise against injustice",
+        "Wealth brings happiness",
+        "Tradition should be preserved"
+      ],
+      "answerIndex": 1,
+      "explanation": "The novel calls for resistance against oppression and corruption.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q034",
+      "topicName": "Novel - Witnesses to Tears",
+      "topicSlug": "novel-witnesses-to-tears",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The character of Labo is?",
+      "options": [
+        "A corrupt politician",
+        "A struggling ordinary citizen",
+        "A wealthy merchant",
+        "A religious leader"
+      ],
+      "answerIndex": 1,
+      "explanation": "Labo represents the suffering common man.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q035",
+      "topicName": "Novel - Witnesses to Tears",
+      "topicSlug": "novel-witnesses-to-tears",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The novel Witnesses to Tears was written by?",
+      "options": [
+        "Abubakar Gimba",
+        "Femi Osofisan",
+        "Wole Soyinka",
+        "Thomas Hardy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Abubakar Gimba is the author.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q036",
+      "topicName": "Drama - Twelfth Night",
+      "topicSlug": "drama-twelfth-night",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Viola disguises herself as a man named?",
+      "options": [
+        "Orsino",
+        "Cesario",
+        "Sebastian",
+        "Malvolio"
+      ],
+      "answerIndex": 1,
+      "explanation": "Viola dresses as a young man called Cesario.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q037",
+      "topicName": "Drama - Twelfth Night",
+      "topicSlug": "drama-twelfth-night",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Orsino is in love with?",
+      "options": [
+        "Olivia",
+        "Viola",
+        "Maria",
+        "Feste"
+      ],
+      "answerIndex": 0,
+      "explanation": "Duke Orsino pines for Lady Olivia.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q038",
+      "topicName": "Drama - Twelfth Night",
+      "topicSlug": "drama-twelfth-night",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Olivia falls in love with Cesario, who is actually?",
+      "options": [
+        "Viola",
+        "Sebastian",
+        "Orsino",
+        "Malvolio"
+      ],
+      "answerIndex": 0,
+      "explanation": "Olivia is attracted to Cesario, unaware that he is Viola in disguise.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q039",
+      "topicName": "Drama - Twelfth Night",
+      "topicSlug": "drama-twelfth-night",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The play Twelfth Night is a?",
+      "options": [
+        "Tragedy",
+        "Comedy",
+        "History",
+        "Romance"
+      ],
+      "answerIndex": 1,
+      "explanation": "It is a romantic comedy.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q040",
+      "topicName": "Drama - Twelfth Night",
+      "topicSlug": "drama-twelfth-night",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The character of Malvolio is?",
+      "options": [
+        "A clown",
+        "A puritanical steward",
+        "A sea captain",
+        "A duke"
+      ],
+      "answerIndex": 1,
+      "explanation": "Malvolio is Olivia's strict, puritanical steward.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q041",
+      "topicName": "Drama - Twelfth Night",
+      "topicSlug": "drama-twelfth-night",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The subplot involves a trick played on?",
+      "options": [
+        "Orsino",
+        "Viola",
+        "Malvolio",
+        "Sebastian"
+      ],
+      "answerIndex": 2,
+      "explanation": "Maria and others trick Malvolio into believing Olivia loves him.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q042",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The play is set in?",
+      "options": [
+        "Illyria",
+        "Venice",
+        "Athens",
+        "Rome"
+      ],
+      "answerIndex": 0,
+      "explanation": "The imaginary setting is Illyria.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q043",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The animals rebel against?",
+      "options": [
+        "Mr Jones",
+        "Napoleon",
+        "Snowball",
+        "Boxer"
+      ],
+      "answerIndex": 0,
+      "explanation": "The animals overthrow their human farmer, Mr Jones.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q044",
+      "topicName": "Novel - Animal Farm",
+      "topicSlug": "novel-animal-farm",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The pigs that emerge as leaders are?",
+      "options": [
+        "Napoleon and Snowball",
+        "Boxer and Clover",
+        "Benjamin and Moses",
+        "Mollie and Muriel"
+      ],
+      "answerIndex": 0,
+      "explanation": "Napoleon and Snowball are the prominent pig leaders.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q045",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The Seven Commandments are eventually?",
+      "options": [
+        "Upheld",
+        "Abolished and replaced by a single commandment",
+        "Expanded",
+        "Forgotten"
+      ],
+      "answerIndex": 1,
+      "explanation": "The commandments are gradually altered and finally replaced by \"All animals are equal, but some animals are more equal than others.\"",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q046",
+      "topicName": "Novel - Animal Farm",
+      "topicSlug": "novel-animal-farm",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Boxer's fate symbolizes?",
+      "options": [
+        "The betrayal of the working class",
+        "The triumph of the revolution",
+        "The power of education",
+        "The dangers of alcohol"
+      ],
+      "answerIndex": 0,
+      "explanation": "The loyal horse Boxer is sold to the knacker, representing the exploitation of workers.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q047",
+      "topicName": "Novel - Animal Farm",
+      "topicSlug": "novel-animal-farm",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The novel is an allegory of?",
+      "options": [
+        "The Russian Revolution",
+        "The French Revolution",
+        "The American Civil War",
+        "World War II"
+      ],
+      "answerIndex": 0,
+      "explanation": "Animal Farm is a satirical allegory of the Russian Revolution and the rise of Stalinism.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q048",
+      "topicName": "Novel - Witnesses to Tears",
+      "topicSlug": "novel-witnesses-to-tears",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The windmill represents?",
+      "options": [
+        "Industrialization and progress",
+        "The pigs' deception",
+        "The animals' unity",
+        "Foreign aid"
+      ],
+      "answerIndex": 0,
+      "explanation": "The windmill symbolizes technological progress and the pigs' manipulation of the animals' labor.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q049",
+      "topicName": "Novel - The Life Changer",
+      "topicSlug": "novel-life-changer",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Who published the book The Life Changer?",
+      "options": [
+        "Bolaji Abdullahi",
+        "Khadijat Abubakar Jalli",
+        "Chinua Achebe",
+        "Wole Soyinka"
+      ],
+      "answerIndex": 1,
+      "explanation": "The novel is by Khadijat Abubakar Jalli.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q050",
+      "topicName": "Novel - The Life Changer",
+      "topicSlug": "novel-life-changer",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The novel is divided into how many chapters?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "answerIndex": 2,
+      "explanation": "The Life Changer has nine chapters.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q051",
+      "topicName": "Novel - The Life Changer",
+      "topicSlug": "novel-life-changer",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The narrator of the novel is?",
+      "options": [
+        "Ummi",
+        "Bint",
+        "Omar",
+        "Salma"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ummi is the narrator.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q052",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "At what age did Talle lose his father and stepmother?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "answerIndex": 1,
+      "explanation": "Talle lost his parents at a young age, as referenced in the novel.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q053",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Talle was imprisoned for?",
+      "options": [
+        "Theft",
+        "Murder",
+        "Examination malpractice",
+        "Political dissent"
+      ],
+      "answerIndex": 2,
+      "explanation": "Talle was imprisoned for examination malpractice.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q054",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "What brand of phone did Salim buy?",
+      "options": [
+        "Nokia",
+        "Samsung",
+        "iPhone",
+        "Tecno"
+      ],
+      "answerIndex": 0,
+      "explanation": "Salim bought a Nokia phone.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q055",
+      "topicName": "Novel - The Life Changer",
+      "topicSlug": "novel-life-changer",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Who is described as meddlesome in the novel?",
+      "options": [
+        "Bint's Social Studies teacher",
+        "Ummi",
+        "Omar",
+        "Salma"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bint's Social Studies teacher is described as meddlesome.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q056",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A play that ends with the downfall or death of the protagonist is called a?",
+      "options": [
+        "Comedy",
+        "Tragedy",
+        "Farce",
+        "Melodrama"
+      ],
+      "answerIndex": 1,
+      "explanation": "A tragedy ends with the protagonist's downfall.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q057",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The use of hints or clues about future events in a story is called?",
+      "options": [
+        "Flashback",
+        "Foreshadowing",
+        "Suspense",
+        "Irony"
+      ],
+      "answerIndex": 1,
+      "explanation": "Foreshadowing gives hints about later events.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q058",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A character who opposes the protagonist is called?",
+      "options": [
+        "Foil",
+        "Antagonist",
+        "Protagonist",
+        "Narrator"
+      ],
+      "answerIndex": 1,
+      "explanation": "The antagonist opposes the protagonist.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q059",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The perspective from which a story is told is called?",
+      "options": [
+        "Point of view",
+        "Plot",
+        "Theme",
+        "Setting"
+      ],
+      "answerIndex": 0,
+      "explanation": "Point of view is the narrative perspective.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q060",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A brief reference to a well-known person, event, or literary work is called?",
+      "options": [
+        "Allusion",
+        "Illusion",
+        "Delusion",
+        "Elusion"
+      ],
+      "answerIndex": 0,
+      "explanation": "An allusion is an indirect reference.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q061",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The main idea or underlying meaning of a literary work is its?",
+      "options": [
+        "Plot",
+        "Setting",
+        "Theme",
+        "Structure"
+      ],
+      "answerIndex": 2,
+      "explanation": "The theme is the central idea.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q062",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A story within a story is called a?",
+      "options": [
+        "Frame narrative",
+        "Subplot",
+        "Flashback",
+        "Allegory"
+      ],
+      "answerIndex": 0,
+      "explanation": "A frame narrative contains another story.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q063",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The struggle between opposing forces in a story is called?",
+      "options": [
+        "Climax",
+        "Conflict",
+        "Resolution",
+        "Exposition"
+      ],
+      "answerIndex": 1,
+      "explanation": "Conflict drives the plot.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q064",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The turning point of a story, where the action reaches its highest intensity, is the?",
+      "options": [
+        "Exposition",
+        "Climax",
+        "Falling action",
+        "Resolution"
+      ],
+      "answerIndex": 1,
+      "explanation": "The climax is the point of maximum tension.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q065",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A humorous play with a happy ending is called a?",
+      "options": [
+        "Tragedy",
+        "Comedy",
+        "History",
+        "Romance"
+      ],
+      "answerIndex": 1,
+      "explanation": "A comedy is humorous and ends happily.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q066",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A long narrative poem celebrating the deeds of a hero is an?",
+      "options": [
+        "Ode",
+        "Elegy",
+        "Epic",
+        "Sonnet"
+      ],
+      "answerIndex": 2,
+      "explanation": "An epic celebrates heroic deeds.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q067",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The repetition of consonant sounds, especially at the ends of words, is called?",
+      "options": [
+        "Alliteration",
+        "Assonance",
+        "Consonance",
+        "Rhyme"
+      ],
+      "answerIndex": 2,
+      "explanation": "Consonance is the repetition of consonant sounds.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q068",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A figure of speech in which a part is used to represent the whole is called?",
+      "options": [
+        "Metonymy",
+        "Synecdoche",
+        "Metaphor",
+        "Simile"
+      ],
+      "answerIndex": 1,
+      "explanation": "Synecdoche uses a part for the whole.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q069",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The attitude of a writer toward a subject or audience is called?",
+      "options": [
+        "Tone",
+        "Mood",
+        "Theme",
+        "Diction"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tone reflects the writer's attitude.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q070",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A speech given by a character alone on stage, revealing their inner thoughts, is a?",
+      "options": [
+        "Aside",
+        "Soliloquy",
+        "Monologue",
+        "Dialogue"
+      ],
+      "answerIndex": 1,
+      "explanation": "A soliloquy is a solo speech.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q071",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "In Morountodun, Titubi's transformation is from?",
+      "options": [
+        "Farmer to soldier",
+        "Elite to revolutionary",
+        "Rich to poor",
+        "Student to teacher"
+      ],
+      "answerIndex": 1,
+      "explanation": "Titubi moves from a privileged background to revolutionary consciousness.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q072",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The character of Marshal in Morountodun is a?",
+      "options": [
+        "Government official",
+        "Farmer leader",
+        "Soldier",
+        "Priest"
+      ],
+      "answerIndex": 1,
+      "explanation": "Marshal leads the farmers' revolt.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q073",
+      "topicName": "Novel - Witnesses to Tears",
+      "topicSlug": "novel-witnesses-to-tears",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "In Witnesses to Tears, the novel criticizes?",
+      "options": [
+        "Religious hypocrisy",
+        "Social injustice and corruption",
+        "Romantic love",
+        "Technological progress"
+      ],
+      "answerIndex": 1,
+      "explanation": "The novel critiques social injustice.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q074",
+      "topicName": "Drama - Twelfth Night",
+      "topicSlug": "drama-twelfth-night",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "In Twelfth Night, Viola is shipwrecked and believes her twin brother is?",
+      "options": [
+        "Dead",
+        "Alive",
+        "Married",
+        "Lost"
+      ],
+      "answerIndex": 0,
+      "explanation": "Viola believes Sebastian has drowned.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q075",
+      "topicName": "Novel - Animal Farm",
+      "topicSlug": "novel-animal-farm",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "In Animal Farm, the pigs gradually adopt human behaviors, such as?",
+      "options": [
+        "Walking on two legs",
+        "Sleeping in beds",
+        "Drinking alcohol",
+        "All of the above"
+      ],
+      "answerIndex": 3,
+      "explanation": "The pigs adopt all these human vices.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q076",
+      "topicName": "Novel - Animal Farm",
+      "topicSlug": "novel-animal-farm",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The character of Napoleon in Animal Farm represents?",
+      "options": [
+        "Leon Trotsky",
+        "Joseph Stalin",
+        "Karl Marx",
+        "Vladimir Lenin"
+      ],
+      "answerIndex": 1,
+      "explanation": "Napoleon is an allegory for Stalin.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q077",
+      "topicName": "Novel - Animal Farm",
+      "topicSlug": "novel-animal-farm",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Snowball represents?",
+      "options": [
+        "Stalin",
+        "Trotsky",
+        "Lenin",
+        "Marx"
+      ],
+      "answerIndex": 1,
+      "explanation": "Snowball represents Trotsky.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q078",
+      "topicName": "Novel - The Life Changer",
+      "topicSlug": "novel-life-changer",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "In The Life Changer, Ummi's husband is?",
+      "options": [
+        "A teacher",
+        "A lawyer",
+        "A doctor",
+        "A politician"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ummi's husband is a teacher.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q079",
+      "topicName": "Novel - The Life Changer",
+      "topicSlug": "novel-life-changer",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Omar's achievement in The Life Changer is?",
+      "options": [
+        "Gaining university admission",
+        "Winning a scholarship",
+        "Becoming a prefect",
+        "Passing his exams"
+      ],
+      "answerIndex": 0,
+      "explanation": "Omar gains admission to university.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q080",
+      "topicName": "Novel - The Life Changer",
+      "topicSlug": "novel-life-changer",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "Salma's offence in the novel is?",
+      "options": [
+        "Examination malpractice",
+        "Theft",
+        "Assault",
+        "Truancy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Salma is involved in examination malpractice.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q081",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A poetic foot consisting of one unstressed syllable followed by one stressed syllable is an?",
+      "options": [
+        "Iamb",
+        "Trochee",
+        "Anapest",
+        "Dactyl"
+      ],
+      "answerIndex": 0,
+      "explanation": "An iamb is unstressed-stressed.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q082",
+      "topicName": "Drama - Twelfth Night",
+      "topicSlug": "drama-twelfth-night",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The rhyme scheme ABAB CDCD EFEF GG is characteristic of a?",
+      "options": [
+        "Petrarchan sonnet",
+        "Shakespearean sonnet",
+        "Spenserian sonnet",
+        "Miltonic sonnet"
+      ],
+      "answerIndex": 1,
+      "explanation": "This is the Shakespearean sonnet rhyme scheme.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q083",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A comparison using \"like\" or \"as\" is a?",
+      "options": [
+        "Metaphor",
+        "Simile",
+        "Personification",
+        "Apostrophe"
+      ],
+      "answerIndex": 1,
+      "explanation": "A simile uses \"like\" or \"as\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q084",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The attribution of human qualities to non-human things is?",
+      "options": [
+        "Personification",
+        "Anthropomorphism",
+        "Apostrophe",
+        "Metonymy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Personification gives human traits to non-human entities.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q085",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A very short poem, often with a single idea or image, is called?",
+      "options": [
+        "Sonnet",
+        "Haiku",
+        "Ode",
+        "Epic"
+      ],
+      "answerIndex": 1,
+      "explanation": "A haiku is a short poetic form.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q086",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A literary work that ridicules human folly or vice is called?",
+      "options": [
+        "Satire",
+        "Parody",
+        "Farce",
+        "Comedy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Satire uses humor to criticize.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q087",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The use of a deliberate exaggeration for emphasis is?",
+      "options": [
+        "Hyperbole",
+        "Litotes",
+        "Understatement",
+        "Irony"
+      ],
+      "answerIndex": 0,
+      "explanation": "Hyperbole is exaggeration.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q088",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The final resolution of the plot in a story is called?",
+      "options": [
+        "Climax",
+        "Denouement",
+        "Exposition",
+        "Conflict"
+      ],
+      "answerIndex": 1,
+      "explanation": "The denouement is the final outcome.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q089",
+      "topicName": "Drama - Morountodun",
+      "topicSlug": "drama-morountodun",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "In Morountodun, the farmers' revolt is against?",
+      "options": [
+        "Foreign domination",
+        "Oppressive taxation and exploitation",
+        "Religious persecution",
+        "Technological change"
+      ],
+      "answerIndex": 1,
+      "explanation": "The revolt is against exploitation.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q090",
+      "topicName": "Novel - Witnesses to Tears",
+      "topicSlug": "novel-witnesses-to-tears",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The character of Alhaja in Witnesses to Tears is?",
+      "options": [
+        "A wealthy businesswoman",
+        "A poor widow",
+        "A government official",
+        "A teacher"
+      ],
+      "answerIndex": 0,
+      "explanation": "Alhaja is a wealthy businesswoman.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q091",
+      "topicName": "Drama - Twelfth Night",
+      "topicSlug": "drama-twelfth-night",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "In Twelfth Night, the character of Feste is a?",
+      "options": [
+        "Duke",
+        "Clown",
+        "Steward",
+        "Captain"
+      ],
+      "answerIndex": 1,
+      "explanation": "Feste is the clown or fool.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q092",
+      "topicName": "Novel - Animal Farm",
+      "topicSlug": "novel-animal-farm",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "In Animal Farm, the anthem \"Beasts of England\" is?",
+      "options": [
+        "A song of rebellion and hope",
+        "A lullaby",
+        "A funeral dirge",
+        "A love song"
+      ],
+      "answerIndex": 0,
+      "explanation": "The anthem inspires the animals to rebel.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q093",
+      "topicName": "Novel - Animal Farm",
+      "topicSlug": "novel-animal-farm",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The character of Benjamin in Animal Farm is a?",
+      "options": [
+        "Hardworking horse",
+        "Cynical donkey",
+        "Loyal sheep",
+        "Clever pig"
+      ],
+      "answerIndex": 1,
+      "explanation": "Benjamin is a cynical donkey.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q094",
+      "topicName": "Novel - The Life Changer",
+      "topicSlug": "novel-life-changer",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "In The Life Changer, Bint is Ummi's?",
+      "options": [
+        "Daughter",
+        "Niece",
+        "Student",
+        "Neighbour"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bint is Ummi's daughter.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q095",
+      "topicName": "Novel - The Life Changer",
+      "topicSlug": "novel-life-changer",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The novel The Life Changer is set in?",
+      "options": [
+        "Lagos",
+        "A university town",
+        "Abuja",
+        "Kano"
+      ],
+      "answerIndex": 1,
+      "explanation": "The novel is set in a university environment.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q096",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A literary genre that tells a story through letters is called?",
+      "options": [
+        "Epistolary",
+        "Historical",
+        "Picaresque",
+        "Gothic"
+      ],
+      "answerIndex": 0,
+      "explanation": "An epistolary novel is told through letters.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q097",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The term \"denouement\" refers to?",
+      "options": [
+        "The opening of a story",
+        "The final resolution",
+        "The climax",
+        "The conflict"
+      ],
+      "answerIndex": 1,
+      "explanation": "Denouement is the final resolution.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q098",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "A character who provides contrast to the protagonist is a?",
+      "options": [
+        "Foil",
+        "Antagonist",
+        "Narrator",
+        "Protagonist"
+      ],
+      "answerIndex": 0,
+      "explanation": "A foil contrasts with the protagonist.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q099",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The use of irony involves?",
+      "options": [
+        "A discrepancy between expectation and reality",
+        "Direct statement",
+        "Exaggeration",
+        "Repetition"
+      ],
+      "answerIndex": 0,
+      "explanation": "Irony is a discrepancy between expectation and reality.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2021-q100",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2021,
+      "exam": "JAMB",
+      "prompt": "The central message or insight about life conveyed by a literary work is its?",
+      "options": [
+        "Plot",
+        "Setting",
+        "Theme",
+        "Style"
+      ],
+      "answerIndex": 2,
+      "explanation": "The theme is the central message.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    }
+  ]
+}

@@ -1,0 +1,2010 @@
+{
+  "subjectSlug": "literature",
+  "exam": "JAMB",
+  "source": "compiled-past-questions",
+  "verificationStatus": "unverified",
+  "notes": "JAMB Literature in English 2020 — 100 questions compiled from verified sources + style-matched items. Not official JAMB papers.",
+  "year": 2020,
+  "questions": [
+    {
+      "contentId": "lit-2020-q001",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Empathy is achieved when the audience?",
+      "options": [
+        "Feels betrayed by the director",
+        "Vicariously participates in the stage experience",
+        "Denounces and humiliates the protagonist",
+        "Attacks the character foil"
+      ],
+      "answerIndex": 1,
+      "explanation": "Empathy is achieved when the audience vicariously participates in the stage experience, connecting emotionally with the characters.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q002",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "\"He is a faithful liar.\" The line above is an example of?",
+      "options": [
+        "Euphemism",
+        "Antithesis",
+        "Epigram",
+        "Oxymoron"
+      ],
+      "answerIndex": 3,
+      "explanation": "The combination of contradictory terms \"faithful\" and \"liar\" creates an oxymoron.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q003",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A poem of 14 lines is known as a?",
+      "options": [
+        "Ode",
+        "Sonnet",
+        "Elegy",
+        "Ballad"
+      ],
+      "answerIndex": 1,
+      "explanation": "A sonnet is a 14-line poem, typically following a specific rhyme scheme and meter.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q004",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A literary work in which the characters and events are used as symbols is known as?",
+      "options": [
+        "Characterization",
+        "Allegory",
+        "Metaphor",
+        "Parallelism"
+      ],
+      "answerIndex": 1,
+      "explanation": "An allegory uses symbolic characters and events to convey a deeper moral or political meaning.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q005",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A literary device wherein the author places a person, concept, idea or theme parallel to another is?",
+      "options": [
+        "Allusion",
+        "Juxtaposition",
+        "Symbolism",
+        "Memoir"
+      ],
+      "answerIndex": 1,
+      "explanation": "Juxtaposition is the placement of two things side by side for contrast or comparison.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q006",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The repetition of a consonant sound in quick succession for sound effect is?",
+      "options": [
+        "Alliteration",
+        "Pun",
+        "Onomatopoeia",
+        "Assonance"
+      ],
+      "answerIndex": 0,
+      "explanation": "Alliteration is the repetition of initial consonant sounds in nearby words.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q007",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A play in which the acts succeed one another without probable or necessary sequence is?",
+      "options": [
+        "Episodic",
+        "Simple",
+        "Linear",
+        "Convoluted"
+      ],
+      "answerIndex": 0,
+      "explanation": "An episodic play has a loose structure where acts are not necessarily causally linked.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q008",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A technique by which a previous scene or action is recalled in a play to shed light on the present action is?",
+      "options": [
+        "Climax",
+        "Flashback",
+        "Interlude",
+        "Catharsis"
+      ],
+      "answerIndex": 1,
+      "explanation": "Flashback is a narrative device that presents events from the past.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q009",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A situation where an actor addresses the audience without the other actors hearing him is called?",
+      "options": [
+        "Soliloquy",
+        "Chorus",
+        "Aside",
+        "Solo"
+      ],
+      "answerIndex": 2,
+      "explanation": "An aside is a brief remark by a character intended to be heard by the audience but not by other characters on stage.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q010",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A band of singers and dancers in drama who act as a link between the play and the audience is the?",
+      "options": [
+        "Chorus",
+        "Clown",
+        "Playwright",
+        "Cast"
+      ],
+      "answerIndex": 0,
+      "explanation": "The chorus comments on the action and bridges the gap between the performance and the audience.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q011",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Persona refers to the?",
+      "options": [
+        "Central character in a play",
+        "Voice of the character",
+        "Image a character presents",
+        "Personality of a character"
+      ],
+      "answerIndex": 1,
+      "explanation": "The persona is the voice or mask through which the poet speaks.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q012",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The three main unities in drama are those of?",
+      "options": [
+        "Action, time and place",
+        "Time, space and action",
+        "Place, time and space",
+        "Space, action and time"
+      ],
+      "answerIndex": 0,
+      "explanation": "The classical unities are unity of action, unity of time, and unity of place.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q013",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Poems that are not written in meter or regular line length are called?",
+      "options": [
+        "Short verses",
+        "Rhythmic verses",
+        "Free verses",
+        "Irregular verses"
+      ],
+      "answerIndex": 2,
+      "explanation": "Free verse lacks a fixed meter or rhyme scheme.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q014",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "An elegy is a poem that mourns for the?",
+      "options": [
+        "Deceased",
+        "Bereaved",
+        "Accused",
+        "King"
+      ],
+      "answerIndex": 0,
+      "explanation": "An elegy is a mournful poem written for someone who has died.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q015",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A melodramatic play is based on?",
+      "options": [
+        "Subtle character development",
+        "Exaggerated emotions and sensational events",
+        "Realistic dialogue",
+        "Minimal conflict"
+      ],
+      "answerIndex": 1,
+      "explanation": "Melodrama relies on heightened emotions, sensational plot twists, and clearly polarized good and evil characters.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q016",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "When two statements or comparisons are apparently contradictory, we have an example of?",
+      "options": [
+        "Irony",
+        "Paradox",
+        "Contrast",
+        "Parallelism"
+      ],
+      "answerIndex": 1,
+      "explanation": "A paradox is a statement that seems self-contradictory but may reveal a deeper truth.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q017",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Criticism is a literary activity which seeks to?",
+      "options": [
+        "Find faults in a literary work",
+        "Analyze and evaluate a literary work",
+        "Compare and contrast novels",
+        "Discover the beauty of a literary work"
+      ],
+      "answerIndex": 1,
+      "explanation": "Literary criticism involves the analysis and evaluation of literary works.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q018",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A conspicuous weakness in the character of the protagonist contributing to his downfall is referred to as?",
+      "options": [
+        "Anagnorisis",
+        "A tragic flaw",
+        "Hubris",
+        "Catharsis"
+      ],
+      "answerIndex": 1,
+      "explanation": "A tragic flaw (hamartia) is a personal defect that leads to the protagonist's downfall.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q019",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The writer of the passage \"They came for him that Sunday...\" arrests the interest of the reader by employing?",
+      "options": [
+        "A suspenseful opening",
+        "An appropriate setting",
+        "Short clear sentences",
+        "Images of violence"
+      ],
+      "answerIndex": 0,
+      "explanation": "The opening creates mystery and tension, making the reader curious.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q020",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "In the passage, the term \"theatre\" and \"drama\" are used?",
+      "options": [
+        "Differently",
+        "Concurrently",
+        "Interchangeably",
+        "Sparingly"
+      ],
+      "answerIndex": 2,
+      "explanation": "The passage uses the terms interchangeably to refer to the same concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q021",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "One of the arguments in the passage is that academic playwrights?",
+      "options": [
+        "Express themselves only in foreign languages",
+        "Focus on indigenous cultures",
+        "Avoid political themes",
+        "Write exclusively for the elite"
+      ],
+      "answerIndex": 0,
+      "explanation": "The passage argues that academic playwrights express themselves only in foreign languages.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q022",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "\"Serrated shadows, through dark leaves...\" The dominant mood in the lines is one of?",
+      "options": [
+        "Apprehension",
+        "Defiance",
+        "Joy",
+        "Indifference"
+      ],
+      "answerIndex": 0,
+      "explanation": "The imagery of shadows and night creates a mood of apprehension and unease.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q023",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The statement \"Time the magician, had wrought much here\" is made when?",
+      "options": [
+        "Susan Newson sees Henchard at Casterbridge",
+        "Elizabeth-Jane discovers her true father",
+        "Farfrae gets married to Elizabeth-Jane",
+        "Farfrae becomes the Mayor of Casterbridge"
+      ],
+      "answerIndex": 0,
+      "explanation": "The statement is made when Susan Newson returns to Casterbridge and observes the changes time has brought.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q024",
+      "topicName": "Novel - The Old Man and the Sea",
+      "topicSlug": "novel-old-man-and-the-sea",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Based on Ernest Hemingway's The Old Man and the Sea, Santiago's second dream occurs?",
+      "options": [
+        "When he sleeps on the boat for a few hours",
+        "The night before his fishing expedition",
+        "In his house",
+        "At the end of the book"
+      ],
+      "answerIndex": 0,
+      "explanation": "Santiago's second dream of the lions occurs while he sleeps on the boat.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q025",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Lakunle is presented as a?",
+      "options": [
+        "Traditionalist",
+        "Modernist who rejects tradition",
+        "Wealthy merchant",
+        "Village elder"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lakunle represents modernity and criticizes traditional practices, especially bride price.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q026",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "What are the pupils chanting at the beginning of the play?",
+      "options": [
+        "A song about the railway",
+        "A song about Sidi's beauty",
+        "A song about Baroka's wisdom",
+        "A song about the village"
+      ],
+      "answerIndex": 0,
+      "explanation": "The play opens with pupils chanting about the railway line.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q027",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "How old is Lakunle?",
+      "options": [
+        "18",
+        "21",
+        "23",
+        "25"
+      ],
+      "answerIndex": 2,
+      "explanation": "Lakunle is described as twenty-three years old in the play.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q028",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The indication that Soyinka's The Lion and the Jewel is culturally set is its use of?",
+      "options": [
+        "Dance and songs",
+        "Flashback",
+        "Foreign languages",
+        "Modern technology"
+      ],
+      "answerIndex": 0,
+      "explanation": "Dance and songs are integral to the cultural setting of the play.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q029",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "What custom does Lakunle refer to as \"a savage custom\"?",
+      "options": [
+        "Bride price",
+        "Polygamy",
+        "Farming",
+        "Wrestling"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lakunle condemns the traditional bride price as a savage custom.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q030",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "What is the nature of the balm referred to by the speaker?",
+      "options": [
+        "An antiseptic ointment",
+        "A special method of massage",
+        "News about Sidi",
+        "A magical potion"
+      ],
+      "answerIndex": 2,
+      "explanation": "The \"balm\" is metaphorical, referring to news about Sidi.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q031",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The character of Baroka represents?",
+      "options": [
+        "Youth and modernity",
+        "Tradition and cunning wisdom",
+        "Foreign influence",
+        "Innocence"
+      ],
+      "answerIndex": 1,
+      "explanation": "Baroka, the Lion, embodies traditional authority and uses cunning to achieve his goals.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q032",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Sidi is initially attracted to?",
+      "options": [
+        "Lakunle's modern ideas",
+        "Baroka's wealth",
+        "The photographer's camera",
+        "The village chief"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sidi is initially drawn to Lakunle and his modern ways.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q033",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The climax of the play is reached when?",
+      "options": [
+        "Sidi agrees to marry Baroka",
+        "Lakunle is chased out of the village",
+        "The railway is completed",
+        "Baroka dies"
+      ],
+      "answerIndex": 0,
+      "explanation": "The climax occurs when Sidi decides to marry Baroka, resolving the central conflict.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q034",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The play satirizes?",
+      "options": [
+        "The British colonial administration",
+        "The conflict between tradition and modernity",
+        "The Nigerian civil war",
+        "The education system"
+      ],
+      "answerIndex": 1,
+      "explanation": "The play humorously examines the tension between traditional values and modern influences.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q035",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Lakunle's language is characterized by?",
+      "options": [
+        "Simple, proverbial speech",
+        "Bombastic, flowery English",
+        "Yoruba idioms",
+        "Silence"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lakunle speaks in pretentious, overly elaborate English, which is a source of comedy.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q036",
+      "topicName": "Drama - Harvest of Corruption",
+      "topicSlug": "drama-harvest-of-corruption",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The play portrays the judiciary as?",
+      "options": [
+        "Unserious and lenient",
+        "Consistent and just",
+        "Corrupt and weak",
+        "Patronising and self-righteous"
+      ],
+      "answerIndex": 2,
+      "explanation": "Harvest of Corruption depicts the judiciary as corrupt and weak.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q037",
+      "topicName": "Drama - Harvest of Corruption",
+      "topicSlug": "drama-harvest-of-corruption",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Chief Haladu is a symbol of?",
+      "options": [
+        "Integrity",
+        "Corruption",
+        "Poverty",
+        "Justice"
+      ],
+      "answerIndex": 1,
+      "explanation": "Chief Haladu represents the pervasive corruption in the society depicted in the play.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q038",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The play is set in?",
+      "options": [
+        "Lagos",
+        "A fictional African country",
+        "London",
+        "Abuja"
+      ],
+      "answerIndex": 1,
+      "explanation": "The play is set in a fictional African country, highlighting universal themes of corruption.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q039",
+      "topicName": "Drama - Harvest of Corruption",
+      "topicSlug": "drama-harvest-of-corruption",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The title Harvest of Corruption suggests that corruption is?",
+      "options": [
+        "Seasonal",
+        "Reaped or rewarded",
+        "Rare",
+        "Punished"
+      ],
+      "answerIndex": 1,
+      "explanation": "The title implies that corruption yields a \"harvest,\" meaning it is cultivated and rewarded.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q040",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The character of Justice Okoi is?",
+      "options": [
+        "A righteous judge",
+        "A corrupt judicial officer",
+        "A victim of corruption",
+        "A foreign observer"
+      ],
+      "answerIndex": 1,
+      "explanation": "Justice Okoi is implicated in corrupt practices, reflecting the play's theme.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q041",
+      "topicName": "Drama - Sons and Daughters",
+      "topicSlug": "drama-sons-and-daughters",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "\"Now look what we have: a permanent bloom of ugly paper flowers!\" The device used by Aaron in the excerpt above is?",
+      "options": [
+        "Suspense",
+        "Rhetorical questions",
+        "Oxymoron",
+        "Allegory"
+      ],
+      "answerIndex": 2,
+      "explanation": "\"Permanent bloom of ugly paper flowers\" combines contradictory ideas, creating an oxymoron.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q042",
+      "topicName": "Drama - Sons and Daughters",
+      "topicSlug": "drama-sons-and-daughters",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The play Sons and Daughters explores themes of?",
+      "options": [
+        "War and peace",
+        "Generational conflict and social change",
+        "Religious revival",
+        "Rural poverty"
+      ],
+      "answerIndex": 1,
+      "explanation": "The play focuses on the tension between generations and the impact of social change on family dynamics.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q043",
+      "topicName": "Drama - Sons and Daughters",
+      "topicSlug": "drama-sons-and-daughters",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Aaron is a character who represents?",
+      "options": [
+        "Traditional authority",
+        "Modern, progressive values",
+        "Foreign influence",
+        "Religious hypocrisy"
+      ],
+      "answerIndex": 1,
+      "explanation": "Aaron often challenges traditional norms, representing a modern outlook.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q044",
+      "topicName": "Drama - Sons and Daughters",
+      "topicSlug": "drama-sons-and-daughters",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The \"paper flowers\" mentioned by Aaron symbolize?",
+      "options": [
+        "Artificiality and pretence",
+        "Natural beauty",
+        "Agricultural prosperity",
+        "Religious devotion"
+      ],
+      "answerIndex": 0,
+      "explanation": "The paper flowers are a metaphor for superficiality and artificial values.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q045",
+      "topicName": "Drama - Sons and Daughters",
+      "topicSlug": "drama-sons-and-daughters",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The play is a critique of?",
+      "options": [
+        "Colonial rule",
+        "Patriarchal traditions and social hypocrisy",
+        "Military dictatorship",
+        "Educational system"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sons and Daughters critiques patriarchal traditions and the hypocrisy of so-called respectable society.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q046",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "\"The silence of the battlefield heralds the widow's anguish.\" The widow in the lines from Launko's End of the War is in anguish because of?",
+      "options": [
+        "Confirmation of her husband's death",
+        "Uncertainty over husband returning alive",
+        "Delay in the husband's return from the battlefield",
+        "Death of all the soldiers in the battlefield"
+      ],
+      "answerIndex": 1,
+      "explanation": "The widow's anguish stems from the uncertainty of whether her husband will return alive.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q047",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The repetition of vowel sounds in nearby words is called?",
+      "options": [
+        "Alliteration",
+        "Assonance",
+        "Consonance",
+        "Onomatopoeia"
+      ],
+      "answerIndex": 1,
+      "explanation": "Assonance is the repetition of vowel sounds.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q048",
+      "topicName": "Novel - Witnesses to Tears",
+      "topicSlug": "novel-witnesses-to-tears",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A poem that celebrates a person or event is called?",
+      "options": [
+        "Elegy",
+        "Ode",
+        "Sonnet",
+        "Epic"
+      ],
+      "answerIndex": 1,
+      "explanation": "An ode is a lyric poem of elaborate or elevated style, often celebrating a person or event.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q049",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The use of words whose sounds imitate their meanings is called?",
+      "options": [
+        "Onomatopoeia",
+        "Alliteration",
+        "Simile",
+        "Metaphor"
+      ],
+      "answerIndex": 0,
+      "explanation": "Onomatopoeia refers to words like \"buzz\" or \"hiss\" that imitate natural sounds.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q050",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A group of lines forming a unit in a poem is called a?",
+      "options": [
+        "Stanza",
+        "Canto",
+        "Refrain",
+        "Couplet"
+      ],
+      "answerIndex": 0,
+      "explanation": "A stanza is a grouped set of lines within a poem, often separated by a blank line.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q051",
+      "topicName": "Novel - The Mayor of Casterbridge",
+      "topicSlug": "novel-mayor-of-casterbridge",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Henchard's tragic flaw is?",
+      "options": [
+        "His generosity",
+        "His stubborn pride and temper",
+        "His love for Elizabeth-Jane",
+        "His business acumen"
+      ],
+      "answerIndex": 1,
+      "explanation": "Henchard's pride and impulsive temper lead to his downfall.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q052",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The novel is set in?",
+      "options": [
+        "London",
+        "Casterbridge (a fictional rural town)",
+        "Paris",
+        "New York"
+      ],
+      "answerIndex": 1,
+      "explanation": "The story is set in Casterbridge, a fictional town in Wessex.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q053",
+      "topicName": "Novel - The Mayor of Casterbridge",
+      "topicSlug": "novel-mayor-of-casterbridge",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Henchard sells his wife at the beginning of the novel because?",
+      "options": [
+        "He is drunk and jealous",
+        "He needs money",
+        "He wants to marry another woman",
+        "He is forced by the law"
+      ],
+      "answerIndex": 0,
+      "explanation": "In a drunken state, Henchard auctions off his wife Susan to Newson.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q054",
+      "topicName": "Novel - The Mayor of Casterbridge",
+      "topicSlug": "novel-mayor-of-casterbridge",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Farfrae becomes Henchard's?",
+      "options": [
+        "Business partner and eventual rival",
+        "Lawyer",
+        "Servant",
+        "Son-in-law"
+      ],
+      "answerIndex": 0,
+      "explanation": "Farfrae initially works for Henchard but later becomes his business rival and eventually marries Elizabeth-Jane.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q055",
+      "topicName": "Novel - The Mayor of Casterbridge",
+      "topicSlug": "novel-mayor-of-casterbridge",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The theme of fate versus free will is central to?",
+      "options": [
+        "The Mayor of Casterbridge",
+        "The Lion and the Jewel",
+        "Harvest of Corruption",
+        "Sons and Daughters"
+      ],
+      "answerIndex": 0,
+      "explanation": "Hardy's novel explores how chance and fate shape human lives.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q056",
+      "topicName": "Novel - The Old Man and the Sea",
+      "topicSlug": "novel-old-man-and-the-sea",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Santiago is a?",
+      "options": [
+        "Young fisherman",
+        "Old, experienced fisherman",
+        "Rich merchant",
+        "Village teacher"
+      ],
+      "answerIndex": 1,
+      "explanation": "Santiago is an aging Cuban fisherman who has gone 84 days without catching a fish.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q057",
+      "topicName": "Novel - The Old Man and the Sea",
+      "topicSlug": "novel-old-man-and-the-sea",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Santiago's struggle is mainly with a?",
+      "options": [
+        "Giant marlin",
+        "Shark",
+        "Storm",
+        "Rival fisherman"
+      ],
+      "answerIndex": 0,
+      "explanation": "He battles a giant marlin far out at sea.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q058",
+      "topicName": "Novel - The Old Man and the Sea",
+      "topicSlug": "novel-old-man-and-the-sea",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The novel is an allegory of?",
+      "options": [
+        "Human perseverance against nature",
+        "Political revolution",
+        "Romantic love",
+        "Urbanization"
+      ],
+      "answerIndex": 0,
+      "explanation": "Santiago's ordeal symbolizes the human struggle against the forces of nature.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q059",
+      "topicName": "Novel - The Old Man and the Sea",
+      "topicSlug": "novel-old-man-and-the-sea",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Manolin is Santiago's?",
+      "options": [
+        "Son",
+        "Young apprentice and friend",
+        "Enemy",
+        "Brother"
+      ],
+      "answerIndex": 1,
+      "explanation": "Manolin is a young boy who looks up to Santiago and assists him.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q060",
+      "topicName": "Novel - The Old Man and the Sea",
+      "topicSlug": "novel-old-man-and-the-sea",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "Santiago's first dream is about?",
+      "options": [
+        "Lions on a beach",
+        "A giant fish",
+        "His wife",
+        "The village"
+      ],
+      "answerIndex": 0,
+      "explanation": "Santiago dreams of lions playing on an African beach, symbolizing youth and strength.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q061",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A play that ends with the downfall or death of the protagonist is called a?",
+      "options": [
+        "Comedy",
+        "Tragedy",
+        "Farce",
+        "Melodrama"
+      ],
+      "answerIndex": 1,
+      "explanation": "A tragedy typically ends with the protagonist's downfall or death.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q062",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The use of hints or clues about future events in a story is called?",
+      "options": [
+        "Flashback",
+        "Foreshadowing",
+        "Suspense",
+        "Irony"
+      ],
+      "answerIndex": 1,
+      "explanation": "Foreshadowing gives readers hints about events that will happen later.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q063",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A character who opposes the protagonist is called?",
+      "options": [
+        "Foil",
+        "Antagonist",
+        "Protagonist",
+        "Narrator"
+      ],
+      "answerIndex": 1,
+      "explanation": "The antagonist works against the protagonist.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q064",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The perspective from which a story is told is called?",
+      "options": [
+        "Point of view",
+        "Plot",
+        "Theme",
+        "Setting"
+      ],
+      "answerIndex": 0,
+      "explanation": "Point of view refers to the narrative perspective.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q065",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A brief reference to a well-known person, event, or literary work is called?",
+      "options": [
+        "Allusion",
+        "Illusion",
+        "Delusion",
+        "Elusion"
+      ],
+      "answerIndex": 0,
+      "explanation": "An allusion is an indirect reference.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q066",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The main idea or underlying meaning of a literary work is its?",
+      "options": [
+        "Plot",
+        "Setting",
+        "Theme",
+        "Structure"
+      ],
+      "answerIndex": 2,
+      "explanation": "The theme is the central idea or message.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q067",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A story within a story is called a?",
+      "options": [
+        "Frame narrative",
+        "Subplot",
+        "Flashback",
+        "Allegory"
+      ],
+      "answerIndex": 0,
+      "explanation": "A frame narrative is a story that contains another story within it.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q068",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The struggle between opposing forces in a story is called?",
+      "options": [
+        "Climax",
+        "Conflict",
+        "Resolution",
+        "Exposition"
+      ],
+      "answerIndex": 1,
+      "explanation": "Conflict is the central struggle that drives the plot.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q069",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The turning point of a story, where the action reaches its highest intensity, is the?",
+      "options": [
+        "Exposition",
+        "Climax",
+        "Falling action",
+        "Resolution"
+      ],
+      "answerIndex": 1,
+      "explanation": "The climax is the point of maximum tension.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q070",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A humorous play with a happy ending is called a?",
+      "options": [
+        "Tragedy",
+        "Comedy",
+        "History",
+        "Romance"
+      ],
+      "answerIndex": 1,
+      "explanation": "A comedy is intended to be humorous and typically ends happily.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q071",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A long narrative poem celebrating the deeds of a hero is an?",
+      "options": [
+        "Ode",
+        "Elegy",
+        "Epic",
+        "Sonnet"
+      ],
+      "answerIndex": 2,
+      "explanation": "An epic is a lengthy narrative poem about heroic deeds.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q072",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The repetition of consonant sounds, especially at the ends of words, is called?",
+      "options": [
+        "Alliteration",
+        "Assonance",
+        "Consonance",
+        "Rhyme"
+      ],
+      "answerIndex": 2,
+      "explanation": "Consonance is the repetition of consonant sounds.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q073",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A figure of speech in which a part is used to represent the whole is called?",
+      "options": [
+        "Metonymy",
+        "Synecdoche",
+        "Metaphor",
+        "Simile"
+      ],
+      "answerIndex": 1,
+      "explanation": "Synecdoche uses a part to represent the whole (e.g., \"all hands on deck\").",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q074",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The attitude of a writer toward a subject or audience is called?",
+      "options": [
+        "Tone",
+        "Mood",
+        "Theme",
+        "Diction"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tone reflects the writer's attitude.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q075",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A speech given by a character alone on stage, revealing their inner thoughts, is a?",
+      "options": [
+        "Aside",
+        "Soliloquy",
+        "Monologue",
+        "Dialogue"
+      ],
+      "answerIndex": 1,
+      "explanation": "A soliloquy is a solo speech revealing a character's private thoughts.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q076",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "In The Lion and the Jewel, the \"jewel\" refers to?",
+      "options": [
+        "Baroka's throne",
+        "Sidi",
+        "The village",
+        "The railway"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sidi is the \"jewel\" of the title.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q077",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The \"lion\" in The Lion and the Jewel is?",
+      "options": [
+        "Lakunle",
+        "Baroka",
+        "Sadiku",
+        "The wrestler"
+      ],
+      "answerIndex": 1,
+      "explanation": "Baroka is the lion, representing traditional authority.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q078",
+      "topicName": "Drama - Harvest of Corruption",
+      "topicSlug": "drama-harvest-of-corruption",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "In Harvest of Corruption, Chief Haladu's daughter is?",
+      "options": [
+        "Ogeyi",
+        "Aloho",
+        "Sidi",
+        "Sadiku"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ogeyi is Chief Haladu's daughter, who becomes a victim of corruption.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q079",
+      "topicName": "Drama - Harvest of Corruption",
+      "topicSlug": "drama-harvest-of-corruption",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The character of Aloho in Harvest of Corruption is?",
+      "options": [
+        "A corrupt judge",
+        "A young woman forced into prostitution",
+        "A politician",
+        "A journalist"
+      ],
+      "answerIndex": 1,
+      "explanation": "Aloho is a young woman who is trafficked into prostitution.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q080",
+      "topicName": "Drama - Sons and Daughters",
+      "topicSlug": "drama-sons-and-daughters",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "In Sons and Daughters, the generational conflict is mainly between?",
+      "options": [
+        "Aaron and his father",
+        "Aaron and his mother",
+        "Aaron and his sister",
+        "Aaron and his teacher"
+      ],
+      "answerIndex": 0,
+      "explanation": "Aaron clashes with his father over traditional expectations.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q081",
+      "topicName": "Drama - Sons and Daughters",
+      "topicSlug": "drama-sons-and-daughters",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The \"paper flowers\" in Sons and Daughters represent?",
+      "options": [
+        "Natural beauty",
+        "Artificiality and hypocrisy",
+        "Religious faith",
+        "Love"
+      ],
+      "answerIndex": 1,
+      "explanation": "They symbolize superficiality and pretence.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q082",
+      "topicName": "Novel - The Mayor of Casterbridge",
+      "topicSlug": "novel-mayor-of-casterbridge",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "In The Mayor of Casterbridge, Henchard becomes the Mayor of Casterbridge through?",
+      "options": [
+        "Inheritance",
+        "Hard work and determination",
+        "Marriage",
+        "Election"
+      ],
+      "answerIndex": 1,
+      "explanation": "Henchard rises from a hay-trusser to Mayor through hard work.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q083",
+      "topicName": "Novel - The Mayor of Casterbridge",
+      "topicSlug": "novel-mayor-of-casterbridge",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The character of Newson in The Mayor of Casterbridge is?",
+      "options": [
+        "Henchard's business rival",
+        "Susan's first husband",
+        "Elizabeth-Jane's biological father",
+        "A sailor"
+      ],
+      "answerIndex": 2,
+      "explanation": "Newson is revealed to be Elizabeth-Jane's biological father.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q084",
+      "topicName": "Novel - The Old Man and the Sea",
+      "topicSlug": "novel-old-man-and-the-sea",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "In The Old Man and the Sea, Santiago's catch is eventually eaten by?",
+      "options": [
+        "Sharks",
+        "Birds",
+        "Other fishermen",
+        "Manolin"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sharks devour the marlin before Santiago can bring it ashore.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q085",
+      "topicName": "Novel - The Old Man and the Sea",
+      "topicSlug": "novel-old-man-and-the-sea",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The novel The Old Man and the Sea is written in?",
+      "options": [
+        "First-person narrative",
+        "Third-person omniscient",
+        "Second-person",
+        "Epistolary"
+      ],
+      "answerIndex": 1,
+      "explanation": "The narrator is third-person omniscient, though focused on Santiago.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q086",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A poetic foot consisting of one unstressed syllable followed by one stressed syllable is an?",
+      "options": [
+        "Iamb",
+        "Trochee",
+        "Anapest",
+        "Dactyl"
+      ],
+      "answerIndex": 0,
+      "explanation": "An iamb is an unstressed syllable followed by a stressed one.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q087",
+      "topicName": "Drama - Twelfth Night",
+      "topicSlug": "drama-twelfth-night",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The rhyme scheme ABAB CDCD EFEF GG is characteristic of a?",
+      "options": [
+        "Petrarchan sonnet",
+        "Shakespearean sonnet",
+        "Spenserian sonnet",
+        "Miltonic sonnet"
+      ],
+      "answerIndex": 1,
+      "explanation": "This is the Shakespearean sonnet rhyme scheme.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q088",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A comparison using \"like\" or \"as\" is a?",
+      "options": [
+        "Metaphor",
+        "Simile",
+        "Personification",
+        "Apostrophe"
+      ],
+      "answerIndex": 1,
+      "explanation": "A simile makes an explicit comparison using \"like\" or \"as\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q089",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The attribution of human qualities to non-human things is?",
+      "options": [
+        "Personification",
+        "Anthropomorphism",
+        "Apostrophe",
+        "Metonymy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Personification gives human traits to non-human entities.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q090",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A very short poem, often with a single idea or image, is called?",
+      "options": [
+        "Sonnet",
+        "Haiku",
+        "Ode",
+        "Epic"
+      ],
+      "answerIndex": 1,
+      "explanation": "A haiku is a short Japanese poetic form, often about nature.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q091",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The character of Sadiku in The Lion and the Jewel is?",
+      "options": [
+        "Baroka's first wife",
+        "Lakunle's mother",
+        "Sidi's friend",
+        "The village elder"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sadiku is Baroka's senior wife and a significant character in the play.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q092",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "In The Lion and the Jewel, the \"stranger\" is?",
+      "options": [
+        "Lakunle",
+        "A photographer",
+        "Baroka",
+        "Sadiku"
+      ],
+      "answerIndex": 1,
+      "explanation": "The photographer who takes pictures of Sidi is referred to as the stranger.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q093",
+      "topicName": "Drama - Harvest of Corruption",
+      "topicSlug": "drama-harvest-of-corruption",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The character of Ogeyi in Harvest of Corruption is?",
+      "options": [
+        "A corrupt official",
+        "A principled young woman",
+        "A prostitute",
+        "A judge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ogeyi represents integrity and resistance to corruption.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q094",
+      "topicName": "Drama - Sons and Daughters",
+      "topicSlug": "drama-sons-and-daughters",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "In Sons and Daughters, Aaron's father is a?",
+      "options": [
+        "Teacher",
+        "Traditional ruler",
+        "Lawyer",
+        "Doctor"
+      ],
+      "answerIndex": 1,
+      "explanation": "Aaron's father is a traditional ruler who insists on traditional values.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q095",
+      "topicName": "Drama - Sons and Daughters",
+      "topicSlug": "drama-sons-and-daughters",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The play Sons and Daughters was written by?",
+      "options": [
+        "Wole Soyinka",
+        "J.C. Graft",
+        "Frank Ogodo Ogbeche",
+        "Femi Osofisan"
+      ],
+      "answerIndex": 1,
+      "explanation": "J.C. Graft is the author of Sons and Daughters.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q096",
+      "topicName": "Novel - The Mayor of Casterbridge",
+      "topicSlug": "novel-mayor-of-casterbridge",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The novel The Mayor of Casterbridge was written by?",
+      "options": [
+        "Thomas Hardy",
+        "Charles Dickens",
+        "George Orwell",
+        "Ernest Hemingway"
+      ],
+      "answerIndex": 0,
+      "explanation": "Thomas Hardy is the author.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q097",
+      "topicName": "Novel - The Old Man and the Sea",
+      "topicSlug": "novel-old-man-and-the-sea",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The novel The Old Man and the Sea was written by?",
+      "options": [
+        "Ernest Hemingway",
+        "George Orwell",
+        "Abubakar Gimba",
+        "Thomas Hardy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ernest Hemingway wrote the novella.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q098",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "A literary work that ridicules human folly or vice is called?",
+      "options": [
+        "Satire",
+        "Parody",
+        "Farce",
+        "Comedy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Satire uses humor and irony to criticize.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q099",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The use of a deliberate exaggeration for emphasis is?",
+      "options": [
+        "Hyperbole",
+        "Litotes",
+        "Understatement",
+        "Irony"
+      ],
+      "answerIndex": 0,
+      "explanation": "Hyperbole is an exaggeration.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2020-q100",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2020,
+      "exam": "JAMB",
+      "prompt": "The final resolution of the plot in a story is called?",
+      "options": [
+        "Climax",
+        "Denouement",
+        "Exposition",
+        "Conflict"
+      ],
+      "answerIndex": 1,
+      "explanation": "The denouement is the final outcome or resolution.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    }
+  ]
+}
