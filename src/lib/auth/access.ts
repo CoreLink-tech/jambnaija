@@ -1,6 +1,6 @@
 /**
- * Port of the legacy resolveUserAccess business rules.
- * Do not change trial duration or entitlement logic without approval.
+ * resolveUserAccess — entitlement rules for students.
+ * Priority: deactivated → paid plan → active trial → admin ACTIVE → activation required.
  */
 
 const THREE_DAYS_MS = 3 * 24 * 60 * 60 * 1000;
@@ -45,13 +45,30 @@ export function resolveUserAccess(
     !Number.isNaN(trialEndsAt.getTime()) &&
     trialEndsAt.getTime() > now.getTime();
 
+  const trialEndsIso = trialEndsAt ? trialEndsAt.toISOString() : null;
+
   if (status === "DEACTIVATED") {
     return {
       canAccess: false,
       effectiveTier: null,
       source: "deactivated",
       trialActive: false,
-      trialEndsAt: trialEndsAt ? trialEndsAt.toISOString() : null,
+      trialEndsAt: trialEndsIso,
+      status,
+    };
+  }
+
+  // Paid / assigned plan always wins over an unused trial window
+  if (
+    status === "ACTIVE" &&
+    (planTierRaw === "STANDARD" || planTierRaw === "PREMIUM")
+  ) {
+    return {
+      canAccess: true,
+      effectiveTier: planTierRaw as PlanTier,
+      source: "plan",
+      trialActive: false,
+      trialEndsAt: trialEndsIso,
       status,
     };
   }
@@ -67,27 +84,14 @@ export function resolveUserAccess(
     };
   }
 
-  if (
-    status === "ACTIVE" &&
-    (planTierRaw === "STANDARD" || planTierRaw === "PREMIUM")
-  ) {
-    return {
-      canAccess: true,
-      effectiveTier: planTierRaw as PlanTier,
-      source: "plan",
-      trialActive: false,
-      trialEndsAt: trialEndsAt ? trialEndsAt.toISOString() : null,
-      status,
-    };
-  }
-
+  // ACTIVE without a stored tier (legacy / admin edge case)
   if (status === "ACTIVE") {
     return {
       canAccess: true,
       effectiveTier: "STANDARD",
       source: "admin",
       trialActive: false,
-      trialEndsAt: trialEndsAt ? trialEndsAt.toISOString() : null,
+      trialEndsAt: trialEndsIso,
       status,
     };
   }
@@ -97,7 +101,7 @@ export function resolveUserAccess(
     effectiveTier: null,
     source: "activation_required",
     trialActive: false,
-    trialEndsAt: trialEndsAt ? trialEndsAt.toISOString() : null,
+    trialEndsAt: trialEndsIso,
     status,
   };
 }

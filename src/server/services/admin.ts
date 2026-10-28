@@ -47,21 +47,26 @@ export async function adminUpdateUser(id: string, raw: unknown) {
   let patch: {
     status?: "PENDING" | "ACTIVE" | "DEACTIVATED";
     planTier?: "STANDARD" | "PREMIUM" | null;
+    trialPremiumEndsAt?: Date | null;
   } = {};
 
   switch (parsed.data.action) {
     case "activate":
       // Admin activation without tier → STANDARD so access + referral rules apply
-      patch = { status: "ACTIVE", planTier: before.planTier ?? "STANDARD" };
+      patch = {
+        status: "ACTIVE",
+        planTier: before.planTier ?? "STANDARD",
+        trialPremiumEndsAt: null,
+      };
       break;
     case "deactivate":
       patch = { status: "DEACTIVATED" };
       break;
     case "set_standard":
-      patch = { status: "ACTIVE", planTier: "STANDARD" };
+      patch = { status: "ACTIVE", planTier: "STANDARD", trialPremiumEndsAt: null };
       break;
     case "set_premium":
-      patch = { status: "ACTIVE", planTier: "PREMIUM" };
+      patch = { status: "ACTIVE", planTier: "PREMIUM", trialPremiumEndsAt: null };
       break;
   }
 

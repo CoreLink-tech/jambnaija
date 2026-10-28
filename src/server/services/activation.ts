@@ -156,6 +156,8 @@ export async function redeemActivationCode(raw: unknown) {
     .set({
       status: "ACTIVE",
       planTier: code.tier,
+      // End trial so UI shows paid plan, not "Premium trial"
+      trialPremiumEndsAt: null,
       updatedAt: now,
     })
     .where(eq(users.id, user.id));

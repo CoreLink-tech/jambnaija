@@ -53,6 +53,7 @@ export async function updateUserState(
   patch: {
     status?: "PENDING" | "ACTIVE" | "DEACTIVATED";
     planTier?: "STANDARD" | "PREMIUM" | null;
+    trialPremiumEndsAt?: Date | null;
   },
 ) {
   const db = getDb();

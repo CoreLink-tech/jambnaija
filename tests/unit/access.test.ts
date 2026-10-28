@@ -52,3 +52,16 @@ describe("resolveUserAccess", () => {
     expect(access.source).toBe("activation_required");
   });
 });
+
+  it("paid plan beats active trial window", () => {
+    const access = resolveUserAccess({
+      status: "ACTIVE",
+      planTier: "PREMIUM",
+      trialPremiumEndsAt: createTrialPremiumEndsAt(),
+    });
+    expect(access.canAccess).toBe(true);
+    expect(access.effectiveTier).toBe("PREMIUM");
+    expect(access.source).toBe("plan");
+    expect(access.trialActive).toBe(false);
+  });
+
