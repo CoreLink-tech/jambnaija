@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -19,8 +19,15 @@ function getOrCreateDeviceId() {
   return id;
 }
 
+function safeNextPath(raw: string | null): string {
+  if (!raw || !raw.startsWith("/") || raw.startsWith("//")) return "/dashboard";
+  return raw;
+}
+
 export function LoginForm() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const nextPath = safeNextPath(searchParams.get("next"));
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -43,7 +50,7 @@ export function LoginForm() {
       setError(res.error);
       return;
     }
-    router.push("/dashboard");
+    router.push(nextPath);
     router.refresh();
   }
 
@@ -53,7 +60,9 @@ export function LoginForm() {
         <h1 className="font-[family-name:var(--font-display)] text-2xl font-bold text-primary-strong">
           Log in
         </h1>
-        <p className="text-sm text-muted">Access your Jambnaija account.</p>
+        <p className="text-sm text-muted">
+          Access your Jambnaija account to practise exams.
+        </p>
       </div>
       <form className="space-y-3" onSubmit={onSubmit}>
         <label className="block space-y-1">
@@ -84,7 +93,10 @@ export function LoginForm() {
       </form>
       <p className="text-sm text-muted">
         No account?{" "}
-        <Link href="/register" className="font-semibold text-primary">
+        <Link
+          href={`/register?next=${encodeURIComponent(nextPath)}`}
+          className="font-semibold text-primary"
+        >
           Register
         </Link>
       </p>

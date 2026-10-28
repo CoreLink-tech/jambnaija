@@ -4,8 +4,30 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { LogoMark, IconBook, IconClock, IconChart } from "@/components/icons/brand";
-import { SUBJECT_META, SUBJECTS } from "@/data/questions/types";
 import { bankStats } from "@/data/questions";
+
+const STREAMS = [
+  {
+    key: "sciences",
+    title: "Subjects in sciences",
+    description: "Physics, Chemistry, Biology, and related science practice.",
+  },
+  {
+    key: "arts",
+    title: "Subjects in arts",
+    description: "Literature in English, CRS, and arts-oriented preparation.",
+  },
+  {
+    key: "social-sciences",
+    title: "Subjects in social sciences",
+    description: "Government and social-science focused practice.",
+  },
+  {
+    key: "commercial",
+    title: "Subjects in commercial studies",
+    description: "Mathematics and commercial-stream practice pathways.",
+  },
+] as const;
 
 export default function HomePage() {
   const stats = bankStats();
@@ -14,7 +36,6 @@ export default function HomePage() {
     <div className="min-h-screen">
       <SiteHeader />
       <main>
-        {/* Hero */}
         <section className="border-b border-line bg-white">
           <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2 md:items-center md:py-20">
             <div className="space-y-6">
@@ -30,7 +51,7 @@ export default function HomePage() {
                 guesswork.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Link href="/exams/setup">
+                <Link href="/login?next=/exams/setup">
                   <Button className="w-full sm:w-auto">Start practising</Button>
                 </Link>
                 <Link href="/subjects">
@@ -40,8 +61,8 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="text-xs text-muted">
-                {stats.total} practice questions in the bank · Use of English, Maths,
-                Physics, Chemistry, Biology
+                {stats.total} practice questions in the bank across science, arts,
+                social science, and commercial pathways.
               </p>
             </div>
             <Card className="space-y-4 border-primary/15 shadow-[var(--shadow-md)]">
@@ -80,27 +101,24 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Subjects */}
         <section className="mx-auto max-w-6xl px-4 py-14" id="subjects">
           <div className="mb-8 space-y-2">
-            <h2 className="text-2xl font-bold text-primary-strong">Subjects</h2>
+            <h2 className="text-2xl font-bold text-primary-strong">Subject areas</h2>
             <p className="text-sm text-muted">
-              Practise one subject or combine several in a single timed session.
+              Practise by stream. Sign in to start a timed session.
             </p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {SUBJECTS.map((s) => (
-              <Link key={s} href={`/subjects/${s}`}>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {STREAMS.map((stream) => (
+              <Link key={stream.key} href={`/subjects?stream=${stream.key}`}>
                 <Card className="h-full transition hover:border-primary/30 hover:shadow-[var(--shadow-sm)]">
                   <div className="flex items-start gap-3">
                     <div className="rounded-lg bg-primary-soft p-2 text-primary">
                       <IconBook />
                     </div>
                     <div>
-                      <h3 className="font-semibold">{SUBJECT_META[s].name}</h3>
-                      <p className="mt-1 text-sm text-muted">
-                        Years 2020–2026 · practice items
-                      </p>
+                      <h3 className="font-semibold">{stream.title}</h3>
+                      <p className="mt-1 text-sm text-muted">{stream.description}</p>
                     </div>
                   </div>
                 </Card>
@@ -109,7 +127,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* How it works */}
         <section className="border-y border-line bg-white">
           <div className="mx-auto max-w-6xl px-4 py-14">
             <h2 className="mb-8 text-2xl font-bold text-primary-strong">How it works</h2>
@@ -118,17 +135,17 @@ export default function HomePage() {
                 {
                   icon: <IconBook className="text-primary" />,
                   title: "Configure",
-                  text: "Pick subjects, year range, and question count. See how many items are available before you start.",
+                  text: "After login, pick subjects, year range, and question count before you start.",
                 },
                 {
                   icon: <IconClock className="text-primary" />,
                   title: "Sit the paper",
-                  text: "Answer under a server-backed timer. Navigate, flag questions, and submit when ready — or when time ends.",
+                  text: "Answer under a server-backed timer. Navigate, flag questions, and submit when ready.",
                 },
                 {
                   icon: <IconChart className="text-primary" />,
                   title: "Review",
-                  text: "See scores by subject, open explanations, and filter correct, wrong, or unanswered items.",
+                  text: "See scores by subject, open explanations, and filter correct or wrong items.",
                 },
               ].map((item) => (
                 <Card key={item.title} className="space-y-3">
@@ -141,7 +158,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Features */}
         <section className="mx-auto max-w-6xl px-4 py-14">
           <h2 className="mb-6 text-2xl font-bold text-primary-strong">Built for serious practice</h2>
           <ul className="grid gap-3 sm:grid-cols-2">
@@ -151,7 +167,7 @@ export default function HomePage() {
               "Server-authoritative deadline (refresh-safe)",
               "Detailed answer review with explanations",
               "Subject-level score breakdown",
-              "Version-controlled practice question bank",
+              "Account required to start exams",
             ].map((t) => (
               <li key={t} className="flex items-start gap-2 text-sm text-muted">
                 <LogoMark className="mt-0.5 h-5 w-5 shrink-0" />
@@ -161,7 +177,6 @@ export default function HomePage() {
           </ul>
         </section>
 
-        {/* FAQ teaser */}
         <section className="border-t border-line bg-white">
           <div className="mx-auto max-w-6xl px-4 py-14">
             <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
