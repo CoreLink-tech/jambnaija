@@ -1,0 +1,4009 @@
+{
+  "subjectSlug": "literature",
+  "exam": "JAMB",
+  "source": "compiled-past-questions",
+  "verificationStatus": "unverified",
+  "notes": "JAMB Literature in English 2022-2023 compiled questions.",
+  "questions": [
+    {
+      "contentId": "lit-2022-q001",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A hero whose weakness contributes to his downfall is called?",
+      "options": [
+        "A villain",
+        "A tragic hero",
+        "An antagonist",
+        "A foil"
+      ],
+      "answerIndex": 1,
+      "explanation": "A tragic hero is a noble character whose tragic flaw (hamartia) leads to his downfall.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q002",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The purging of emotions in tragedy is called?",
+      "options": [
+        "Hubris",
+        "Peripeteia",
+        "Catharsis",
+        "Nemesis"
+      ],
+      "answerIndex": 2,
+      "explanation": "Catharsis is the purgation of pity and fear experienced by the audience.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q003",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "\"Tolu is my bitter friend\" illustrates the use of?",
+      "options": [
+        "Simile",
+        "Oxymoron",
+        "Metaphor",
+        "Irony"
+      ],
+      "answerIndex": 1,
+      "explanation": "The contradictory words \"bitter\" and \"friend\" form an oxymoron.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q004",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The combination of two or more metaphors is called?",
+      "options": [
+        "Mixed metaphor",
+        "Dead metaphor",
+        "Extended metaphor",
+        "Implied metaphor"
+      ],
+      "answerIndex": 0,
+      "explanation": "A mixed metaphor combines incompatible metaphors.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q005",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A reference to a work of art, person or place, whether directly or indirectly, is called?",
+      "options": [
+        "Illusion",
+        "Allusion",
+        "Delusion",
+        "Elusion"
+      ],
+      "answerIndex": 1,
+      "explanation": "An allusion is an indirect reference to a well-known person, place, or work.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q006",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The literary device that describes the year a novel is written is?",
+      "options": [
+        "Setting",
+        "Plot",
+        "Theme",
+        "Tone"
+      ],
+      "answerIndex": 0,
+      "explanation": "Setting refers to the time and place in which a literary work occurs.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q007",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A narrative poem must?",
+      "options": [
+        "Tell a story",
+        "Rhyme",
+        "Be short",
+        "Be humorous"
+      ],
+      "answerIndex": 0,
+      "explanation": "A narrative poem tells a story.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q008",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "\"The hunter dies and leaves his poverty to his gun; The blacksmith dies and leaves his poverty to his anvil.\" This extract is an example of?",
+      "options": [
+        "Epic",
+        "Eulogy",
+        "Ballad",
+        "Elegy"
+      ],
+      "answerIndex": 3,
+      "explanation": "An elegy mourns the dead; the passage laments the death of workers.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q009",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "\"A time to sow, A time to reap, A time to born, A time to die.\" This exemplifies the use of?",
+      "options": [
+        "Repetition",
+        "Parallelism",
+        "Assonance",
+        "Alliteration"
+      ],
+      "answerIndex": 1,
+      "explanation": "The repeated grammatical structure illustrates parallelism.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q010",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "An image in poetry usually gives a clue to one of the following?",
+      "options": [
+        "Rhyme",
+        "Assonance",
+        "Meaning",
+        "Meter"
+      ],
+      "answerIndex": 2,
+      "explanation": "Imagery contributes to the overall meaning and sensory experience of a poem.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q011",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Dramatis personae in a play refers to?",
+      "options": [
+        "Cast list",
+        "List of characters",
+        "Protagonist and antagonist",
+        "Order of appearance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Dramatis personae is the list of characters in a play.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q012",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A speech in which a character reveals his thoughts to the audience but not to other characters is?",
+      "options": [
+        "Dialogue",
+        "Monologue",
+        "Soliloquy",
+        "Aside"
+      ],
+      "answerIndex": 2,
+      "explanation": "A soliloquy is a solo speech revealing inner thoughts.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q013",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The overwhelming pride that destroys the tragic hero is called?",
+      "options": [
+        "Nemesis",
+        "Catharsis",
+        "Hubris",
+        "Tragedy"
+      ],
+      "answerIndex": 2,
+      "explanation": "Hubris is excessive pride that leads to downfall.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q014",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A formal dignified speech praising a person or thing is?",
+      "options": [
+        "Eulogy",
+        "Elegy",
+        "Ode",
+        "Epic"
+      ],
+      "answerIndex": 0,
+      "explanation": "A eulogy is a speech or writing in praise of someone.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q015",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A character always against the interest of the protagonist is?",
+      "options": [
+        "Foil",
+        "Antagonist",
+        "Narrator",
+        "Protagonist"
+      ],
+      "answerIndex": 1,
+      "explanation": "The antagonist opposes the protagonist.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q016",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The sides of a stage are called?",
+      "options": [
+        "Wings",
+        "Apron",
+        "Flies",
+        "Pit"
+      ],
+      "answerIndex": 0,
+      "explanation": "Wings are the offstage areas to the sides of the stage.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q017",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Which of these is the oldest genre of literature?",
+      "options": [
+        "Drama",
+        "Poetry",
+        "Novel",
+        "Essay"
+      ],
+      "answerIndex": 1,
+      "explanation": "Poetry is considered the oldest literary genre, predating written drama and prose fiction.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q018",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A limerick has?",
+      "options": [
+        "5 lines",
+        "4 lines",
+        "14 lines",
+        "3 lines"
+      ],
+      "answerIndex": 0,
+      "explanation": "A limerick is a five-line humorous poem.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q019",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The process of creating characters in a literary work is called?",
+      "options": [
+        "Characterization",
+        "Personification",
+        "Narration",
+        "Dramatization"
+      ],
+      "answerIndex": 0,
+      "explanation": "Characterization is the creation and development of characters.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q020",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A trilogy is a?",
+      "options": [
+        "Set of three literary works",
+        "Set of two works",
+        "Single long work",
+        "Poem of three stanzas"
+      ],
+      "answerIndex": 0,
+      "explanation": "A trilogy is a group of three related works.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q021",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The opening act in The Lion and the Jewel takes place at?",
+      "options": [
+        "The village market",
+        "The roadside to the farm",
+        "The baale's room",
+        "By the village stream"
+      ],
+      "answerIndex": 1,
+      "explanation": "The play opens by the roadside leading to the farm.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q022",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Lakunle is presented as a?",
+      "options": [
+        "Traditionalist",
+        "Modernist who rejects tradition",
+        "Wealthy merchant",
+        "Village elder"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lakunle criticizes traditional practices such as bride price.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q023",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Baroka is known as the?",
+      "options": [
+        "Lion",
+        "Jewel",
+        "Fox",
+        "Wrestler"
+      ],
+      "answerIndex": 0,
+      "explanation": "Baroka is the Lion in the title.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q024",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Sidi is referred to as the?",
+      "options": [
+        "Lion",
+        "Jewel",
+        "Fox",
+        "Stranger"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sidi is the Jewel of the title.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q025",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Lakunle's language is characterized by?",
+      "options": [
+        "Simple proverbial speech",
+        "Bombastic, flowery English",
+        "Yoruba idioms",
+        "Silence"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lakunle's pretentious English is a source of comedy.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q026",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The \"stranger\" in the play is?",
+      "options": [
+        "Lakunle",
+        "A photographer",
+        "Baroka",
+        "Sadiku"
+      ],
+      "answerIndex": 1,
+      "explanation": "The stranger is the photographer who takes Sidi's pictures.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q027",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Sadiku is?",
+      "options": [
+        "Baroka's first wife",
+        "Sidi's friend",
+        "Lakunle's mother",
+        "A village elder"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sadiku is Baroka's senior wife.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q028",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The theme of the play is?",
+      "options": [
+        "Tradition versus modernity",
+        "War and peace",
+        "Romantic love",
+        "Religious conflict"
+      ],
+      "answerIndex": 0,
+      "explanation": "The central conflict is between traditional and modern values.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q029",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The play ends with Sidi?",
+      "options": [
+        "Marrying Lakunle",
+        "Marrying Baroka",
+        "Leaving the village",
+        "Becoming a teacher"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sidi chooses Baroka over Lakunle.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q030",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Baroka uses what to win Sidi over?",
+      "options": [
+        "Money",
+        "His cunning and storytelling",
+        "Physical force",
+        "Magic"
+      ],
+      "answerIndex": 1,
+      "explanation": "Baroka uses his wit and narrative skill to seduce Sidi.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q031",
+      "topicName": "Drama - Look Back in Anger",
+      "topicSlug": "drama-look-back-in-anger",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Look Back in Anger is a?",
+      "options": [
+        "Comedy",
+        "Kitchen-sink drama",
+        "Historical play",
+        "Musical"
+      ],
+      "answerIndex": 1,
+      "explanation": "The play is a landmark of kitchen-sink realism.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q032",
+      "topicName": "Drama - Look Back in Anger",
+      "topicSlug": "drama-look-back-in-anger",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The protagonist of the play is?",
+      "options": [
+        "Jimmy Porter",
+        "Cliff Lewis",
+        "Alison Porter",
+        "Colonel Redfern"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jimmy Porter is the angry young man at the center of the play.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q033",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Jimmy's anger is directed at?",
+      "options": [
+        "The British class system and establishment",
+        "His wife's family only",
+        "Foreigners",
+        "Religion"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jimmy rails against social injustice and class privilege.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q034",
+      "topicName": "Drama - Look Back in Anger",
+      "topicSlug": "drama-look-back-in-anger",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Alison is from?",
+      "options": [
+        "A working-class background",
+        "An upper-middle-class family",
+        "A foreign country",
+        "The same background as Jimmy"
+      ],
+      "answerIndex": 1,
+      "explanation": "Alison comes from a privileged background.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q035",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The play is set in?",
+      "options": [
+        "London",
+        "A Midlands attic flat",
+        "Paris",
+        "New York"
+      ],
+      "answerIndex": 1,
+      "explanation": "The setting is a cramped attic flat in the Midlands.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q036",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "\"The Song of the Women of My Land\" is a poem that deals with?",
+      "options": [
+        "The oppression of women",
+        "The joy of motherhood",
+        "Colonization",
+        "All of the above"
+      ],
+      "answerIndex": 3,
+      "explanation": "The poem explores oppression, motherhood, and colonial legacies.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q037",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "\"Black Woman\" is written by?",
+      "options": [
+        "Leopold Sedar Senghor",
+        "Niyi Osundare",
+        "Birago Diop",
+        "Gbemisola Adeoti"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Black Woman\" is by Leopold Sedar Senghor.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q038",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "\"The Leader and the Led\" is written by?",
+      "options": [
+        "Niyi Osundare",
+        "Leopold Senghor",
+        "Birago Diop",
+        "Wole Soyinka"
+      ],
+      "answerIndex": 0,
+      "explanation": "The poem is by Niyi Osundare.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q039",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "\"Vanity\" is a poem by?",
+      "options": [
+        "Birago Diop",
+        "Niyi Osundare",
+        "Gbemisola Adeoti",
+        "Leopold Senghor"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Vanity\" is by Birago Diop.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q040",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "\"Ambush\" is a poem by?",
+      "options": [
+        "Gbemisola Adeoti",
+        "Birago Diop",
+        "Niyi Osundare",
+        "Leopold Senghor"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Ambush\" is by Gbemisola Adeoti.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q041",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "\"The Grieved Lands\" is a poem that expresses?",
+      "options": [
+        "Colonial suffering and loss",
+        "Romantic love",
+        "Nature's beauty",
+        "Technological progress"
+      ],
+      "answerIndex": 0,
+      "explanation": "The poem laments the grief of colonized lands.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q042",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "\"Raider of the Treasure Trove\" is a poem about?",
+      "options": [
+        "A historical conqueror",
+        "A mythical figure",
+        "A modern leader",
+        "A thief"
+      ],
+      "answerIndex": 1,
+      "explanation": "The poem explores myth and heritage.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q043",
+      "topicName": "Novel - Second Class Citizen",
+      "topicSlug": "novel-second-class-citizen",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Who is Mr Cole?",
+      "options": [
+        "A black tenant at the first apartment in England",
+        "Adah's colleague at the Consulate",
+        "Adah's nephew",
+        "Adah's elementary school teacher"
+      ],
+      "answerIndex": 3,
+      "explanation": "Mr Cole is Adah's elementary school teacher.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q044",
+      "topicName": "Novel - Second Class Citizen",
+      "topicSlug": "novel-second-class-citizen",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Adah's husband is?",
+      "options": [
+        "Francis",
+        "Boy",
+        "Mr Cole",
+        "Pa"
+      ],
+      "answerIndex": 1,
+      "explanation": "Adah's husband is referred to as Boy.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q045",
+      "topicName": "Novel - Second Class Citizen",
+      "topicSlug": "novel-second-class-citizen",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The novel is set mainly in?",
+      "options": [
+        "Lagos and London",
+        "Abuja and Paris",
+        "Accra and London",
+        "Lagos and New York"
+      ],
+      "answerIndex": 0,
+      "explanation": "The novel traces Adah's life from Lagos to London.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q046",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "\"She swallowed it all, just like a nasty pill.\" The literary device is?",
+      "options": [
+        "Simile",
+        "Metaphor",
+        "Personification",
+        "Hyperbole"
+      ],
+      "answerIndex": 0,
+      "explanation": "The comparison using \"like\" is a simile.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q047",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The novel deals with themes of?",
+      "options": [
+        "Racial and gender discrimination",
+        "War",
+        "Religion",
+        "Politics"
+      ],
+      "answerIndex": 0,
+      "explanation": "The novel explores racism, sexism, and the immigrant experience.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q048",
+      "topicName": "Novel - Second Class Citizen",
+      "topicSlug": "novel-second-class-citizen",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Adah's ambition is to?",
+      "options": [
+        "Become a writer",
+        "Become a doctor",
+        "Travel the world",
+        "Own a business"
+      ],
+      "answerIndex": 0,
+      "explanation": "Adah aspires to be a writer.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q049",
+      "topicName": "Novel - Unexpected Joy at Dawn",
+      "topicSlug": "novel-unexpected-joy-at-dawn",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "What distinguishes Nii Tackie from every other Ghanaian?",
+      "options": [
+        "His accent",
+        "His face",
+        "His tribal mark",
+        "His skin"
+      ],
+      "answerIndex": 0,
+      "explanation": "Nii Tackie's accent sets him apart.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q050",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The novel is set in?",
+      "options": [
+        "Ghana and Nigeria",
+        "Ghana and Togo",
+        "Nigeria and Benin",
+        "Ghana and Ivory Coast"
+      ],
+      "answerIndex": 0,
+      "explanation": "The novel is set in Ghana and Nigeria.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q051",
+      "topicName": "Novel - Unexpected Joy at Dawn",
+      "topicSlug": "novel-unexpected-joy-at-dawn",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The central viewpoint character is?",
+      "options": [
+        "Nii Tackie",
+        "Mama Orojo",
+        "Joe",
+        "Sara"
+      ],
+      "answerIndex": 0,
+      "explanation": "Nii Tackie provides the central viewpoint.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q052",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A major theme of the novel is?",
+      "options": [
+        "Xenophobia and survival",
+        "Romance",
+        "War",
+        "Religion"
+      ],
+      "answerIndex": 0,
+      "explanation": "The novel explores xenophobic hostility and survival.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q053",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A play that ends with the downfall or death of the protagonist is a?",
+      "options": [
+        "Comedy",
+        "Tragedy",
+        "Farce",
+        "Melodrama"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q054",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A story within a story is called a?",
+      "options": [
+        "Frame narrative",
+        "Subplot",
+        "Flashback",
+        "Allegory"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q055",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The struggle between opposing forces in a story is?",
+      "options": [
+        "Climax",
+        "Conflict",
+        "Resolution",
+        "Exposition"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q056",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The turning point of a story is the?",
+      "options": [
+        "Exposition",
+        "Climax",
+        "Falling action",
+        "Resolution"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q057",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A humorous play with a happy ending is a?",
+      "options": [
+        "Tragedy",
+        "Comedy",
+        "History",
+        "Romance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q058",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A long narrative poem celebrating heroic deeds is an?",
+      "options": [
+        "Ode",
+        "Elegy",
+        "Epic",
+        "Sonnet"
+      ],
+      "answerIndex": 2,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q059",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The repetition of consonant sounds at the ends of words is?",
+      "options": [
+        "Alliteration",
+        "Assonance",
+        "Consonance",
+        "Rhyme"
+      ],
+      "answerIndex": 2,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q060",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A part used to represent the whole is?",
+      "options": [
+        "Metonymy",
+        "Synecdoche",
+        "Metaphor",
+        "Simile"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q061",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The writer's attitude toward a subject is?",
+      "options": [
+        "Tone",
+        "Mood",
+        "Theme",
+        "Diction"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q062",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A solo speech revealing inner thoughts is a?",
+      "options": [
+        "Aside",
+        "Soliloquy",
+        "Monologue",
+        "Dialogue"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q063",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "In The Lion and the Jewel, the \"jewel\" is?",
+      "options": [
+        "Baroka's throne",
+        "Sidi",
+        "The village",
+        "The railway"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q064",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The \"lion\" in The Lion and the Jewel is?",
+      "options": [
+        "Lakunle",
+        "Baroka",
+        "Sadiku",
+        "The wrestler"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q065",
+      "topicName": "Drama - Look Back in Anger",
+      "topicSlug": "drama-look-back-in-anger",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "In Look Back in Anger, Alison's father is?",
+      "options": [
+        "Colonel Redfern",
+        "Jimmy Porter",
+        "Cliff Lewis",
+        "Hugh Tanner"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q066",
+      "topicName": "Drama - Look Back in Anger",
+      "topicSlug": "drama-look-back-in-anger",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Jimmy Porter's anger is a reaction to?",
+      "options": [
+        "Class inequality and social stagnation",
+        "His wife's infidelity",
+        "His job",
+        "The weather"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q067",
+      "topicName": "Novel - Second Class Citizen",
+      "topicSlug": "novel-second-class-citizen",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Second Class Citizen is a?",
+      "options": [
+        "Semi-autobiographical novel",
+        "Historical romance",
+        "Science fiction",
+        "Detective story"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q068",
+      "topicName": "Novel - Second Class Citizen",
+      "topicSlug": "novel-second-class-citizen",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Adah's husband, Boy, is?",
+      "options": [
+        "Supportive and kind",
+        "Abusive and irresponsible",
+        "Absent",
+        "A wealthy businessman"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q069",
+      "topicName": "Novel - Unexpected Joy at Dawn",
+      "topicSlug": "novel-unexpected-joy-at-dawn",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "In Unexpected Joy at Dawn, Nii Tackie is originally from?",
+      "options": [
+        "Ghana",
+        "Nigeria",
+        "Togo",
+        "Benin"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q070",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A poetic foot with one unstressed followed by one stressed syllable is an?",
+      "options": [
+        "Iamb",
+        "Trochee",
+        "Anapest",
+        "Dactyl"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q071",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The rhyme scheme ABAB CDCD EFEF GG is characteristic of a?",
+      "options": [
+        "Petrarchan sonnet",
+        "Shakespearean sonnet",
+        "Spenserian sonnet",
+        "Miltonic sonnet"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q072",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A comparison using \"like\" or \"as\" is a?",
+      "options": [
+        "Metaphor",
+        "Simile",
+        "Personification",
+        "Apostrophe"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q073",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Giving human qualities to non-human things is?",
+      "options": [
+        "Personification",
+        "Anthropomorphism",
+        "Apostrophe",
+        "Metonymy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q074",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A very short poem with a single idea is a?",
+      "options": [
+        "Sonnet",
+        "Haiku",
+        "Ode",
+        "Epic"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q075",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A work that ridicules human folly is?",
+      "options": [
+        "Satire",
+        "Parody",
+        "Farce",
+        "Comedy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q076",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A deliberate exaggeration for emphasis is?",
+      "options": [
+        "Hyperbole",
+        "Litotes",
+        "Understatement",
+        "Irony"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q077",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The final resolution of a plot is the?",
+      "options": [
+        "Climax",
+        "Denouement",
+        "Exposition",
+        "Conflict"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q078",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A character who contrasts with the protagonist is a?",
+      "options": [
+        "Foil",
+        "Antagonist",
+        "Narrator",
+        "Protagonist"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q079",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Irony involves?",
+      "options": [
+        "A discrepancy between expectation and reality",
+        "Direct statement",
+        "Exaggeration",
+        "Repetition"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q080",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The central message of a literary work is its?",
+      "options": [
+        "Plot",
+        "Setting",
+        "Theme",
+        "Style"
+      ],
+      "answerIndex": 2,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q081",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A literary genre told through letters is?",
+      "options": [
+        "Epistolary",
+        "Historical",
+        "Picaresque",
+        "Gothic"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q082",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A 14-line poem is a?",
+      "options": [
+        "Ode",
+        "Sonnet",
+        "Elegy",
+        "Ballad"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q083",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The repetition of vowel sounds is?",
+      "options": [
+        "Alliteration",
+        "Assonance",
+        "Consonance",
+        "Onomatopoeia"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q084",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Words that imitate sounds are?",
+      "options": [
+        "Onomatopoeia",
+        "Alliteration",
+        "Simile",
+        "Metaphor"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q085",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A group of lines in a poem is a?",
+      "options": [
+        "Stanza",
+        "Canto",
+        "Refrain",
+        "Couplet"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q086",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A play with exaggerated emotions is a?",
+      "options": [
+        "Melodrama",
+        "Tragedy",
+        "Comedy",
+        "Farce"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q087",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A statement that seems contradictory but may be true is a?",
+      "options": [
+        "Irony",
+        "Paradox",
+        "Contrast",
+        "Parallelism"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q088",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A literary work using symbols to convey meaning is an?",
+      "options": [
+        "Allegory",
+        "Metaphor",
+        "Parallelism",
+        "Characterization"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q089",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Juxtaposition is the placement of?",
+      "options": [
+        "Two things side by side for comparison",
+        "A single image",
+        "A repeated sound",
+        "A hidden meaning"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q090",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A chorus in drama?",
+      "options": [
+        "Comments on the action",
+        "Is the main character",
+        "Is the villain",
+        "Writes the play"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q091",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The three unities of drama are?",
+      "options": [
+        "Action, time and place",
+        "Time, space and action",
+        "Place, time and space",
+        "Space, action and time"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q092",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A tragic flaw is also called?",
+      "options": [
+        "Hamartia",
+        "Hubris",
+        "Catharsis",
+        "Nemesis"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q093",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Flashback is a technique that?",
+      "options": [
+        "Recalls past events",
+        "Predicts the future",
+        "Describes the setting",
+        "Introduces characters"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q094",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "An episodic play?",
+      "options": [
+        "Has acts without necessary sequence",
+        "Has a strict linear plot",
+        "Has no characters",
+        "Is a musical"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q095",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "The persona in a poem is?",
+      "options": [
+        "The voice of the character",
+        "The poet's real self always",
+        "The main character in a novel",
+        "The setting"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q096",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "\"Faithful liar\" is an example of?",
+      "options": [
+        "Oxymoron",
+        "Euphemism",
+        "Antithesis",
+        "Epigram"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q097",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A poem mourning the dead is an?",
+      "options": [
+        "Ode",
+        "Elegy",
+        "Sonnet",
+        "Epic"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q098",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "Free verse is poetry without?",
+      "options": [
+        "Regular meter or rhyme",
+        "Meaning",
+        "Imagery",
+        "Theme"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q099",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A narrative technique where the narrator knows all is?",
+      "options": [
+        "Omniscient narrator",
+        "Participatory narrator",
+        "Objective narrator",
+        "Subjective narrator"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2022-q100",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2022,
+      "exam": "JAMB",
+      "prompt": "A cast list in a play is called?",
+      "options": [
+        "Dramatis personae",
+        "Prologue",
+        "Epilogue",
+        "Stage direction"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q001",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The overwhelming pride that destroys the tragic hero is called?",
+      "options": [
+        "Nemesis",
+        "Catharsis",
+        "Hubris",
+        "Tragedy"
+      ],
+      "answerIndex": 2,
+      "explanation": "Hubris is excessive pride.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q002",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"Fierce harmattan sun on innocent tendrils; torrential downpour on leaking thatch roofs...\" The sonority and rhythm are achieved through a pause-pattern called?",
+      "options": [
+        "Scansion",
+        "Enjambment",
+        "Caesura",
+        "Apostrophe"
+      ],
+      "answerIndex": 2,
+      "explanation": "Caesura is a pause within a line of poetry.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q003",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"Fruit with firm flesh\" illustrates the use of?",
+      "options": [
+        "Onomatopoeia",
+        "Consonance",
+        "Assonance",
+        "Alliteration"
+      ],
+      "answerIndex": 3,
+      "explanation": "The repetition of the 'f' sound is alliteration.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q004",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"If ever any beauty I did see, Which I desired, and got, 'twas but a dream of thee.\" The excerpt evokes the use of?",
+      "options": [
+        "Olfactory imagery",
+        "Tactile imagery",
+        "Auditory imagery",
+        "Visual imagery"
+      ],
+      "answerIndex": 3,
+      "explanation": "The passage appeals to sight (beauty).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q005",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A limerick has?",
+      "options": [
+        "5 lines",
+        "4 lines",
+        "14 lines",
+        "3 lines"
+      ],
+      "answerIndex": 0,
+      "explanation": "A limerick is a five-line poem.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q006",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The process of creating characters is?",
+      "options": [
+        "Characterization",
+        "Personification",
+        "Narration",
+        "Dramatization"
+      ],
+      "answerIndex": 0,
+      "explanation": "Characterization is the creation of characters.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q007",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A formal dignified speech praising a person is?",
+      "options": [
+        "Eulogy",
+        "Elegy",
+        "Ode",
+        "Epic"
+      ],
+      "answerIndex": 0,
+      "explanation": "A eulogy praises someone.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q008",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A character always against the protagonist is?",
+      "options": [
+        "Foil",
+        "Antagonist",
+        "Narrator",
+        "Protagonist"
+      ],
+      "answerIndex": 1,
+      "explanation": "The antagonist opposes the protagonist.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q009",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A trilogy is?",
+      "options": [
+        "A set of three works",
+        "A set of two works",
+        "A single long work",
+        "A poem of three stanzas"
+      ],
+      "answerIndex": 0,
+      "explanation": "A trilogy is a group of three related works.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q010",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Cast in a play refers to?",
+      "options": [
+        "The actors",
+        "The characters",
+        "The list of characters",
+        "The stage crew"
+      ],
+      "answerIndex": 2,
+      "explanation": "The cast is the list of characters in a play.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q011",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A reference to a work of art, person or place is?",
+      "options": [
+        "Illusion",
+        "Allusion",
+        "Delusion",
+        "Elusion"
+      ],
+      "answerIndex": 1,
+      "explanation": "An allusion is an indirect reference.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q012",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"Be him English, Be him African, Be him Nigerian\" is an example of?",
+      "options": [
+        "Anaphora",
+        "Epistrophe",
+        "Asyndeton",
+        "Polysyndeton"
+      ],
+      "answerIndex": 0,
+      "explanation": "The repetition of \"Be him\" at the beginning of successive clauses is anaphora.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q013",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"Don't panic. Be calm...\" The speaker in the excerpt is?",
+      "options": [
+        "Hopeless",
+        "Afraid",
+        "Confident",
+        "Uncertain"
+      ],
+      "answerIndex": 2,
+      "explanation": "The speaker's calm tone shows confidence.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q014",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"When he gave me the bottle, and I opened it, I was shocked by the odour...\" The reaction is that of?",
+      "options": [
+        "Disgust",
+        "Joy",
+        "Indifference",
+        "Curiosity"
+      ],
+      "answerIndex": 0,
+      "explanation": "The reaction is disgust at the odour.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q015",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The theme of \"The Song of the Women of My Land\" is?",
+      "options": [
+        "All of the above",
+        "The oppression of women",
+        "Joys of motherhood",
+        "Colonization"
+      ],
+      "answerIndex": 0,
+      "explanation": "The poem addresses oppression, motherhood, and colonization.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q016",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"The hyena says the crown is made for him.\" The use of \"crown\" is a deployment of?",
+      "options": [
+        "Metaphor",
+        "Simile",
+        "Metonymy",
+        "Synecdoche"
+      ],
+      "answerIndex": 2,
+      "explanation": "The crown represents royal power (metonymy).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q017",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"As virtuous men pass mildly away\" is from?",
+      "options": [
+        "A Valediction",
+        "The Good Morrow",
+        "Black Woman",
+        "The Leader and the Led"
+      ],
+      "answerIndex": 0,
+      "explanation": "The line is from John Donne's \"A Valediction: Forbidding Mourning\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q018",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The sides of a stage are called?",
+      "options": [
+        "Wings",
+        "Apron",
+        "Flies",
+        "Pit"
+      ],
+      "answerIndex": 0,
+      "explanation": "Wings are the offstage sides.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q019",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Dramatis personae in a play refers to?",
+      "options": [
+        "Cast list",
+        "List of characters",
+        "Protagonist and antagonist",
+        "Order of appearance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Dramatis personae is the list of characters.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q020",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The opening act in The Lion and the Jewel takes place at?",
+      "options": [
+        "The village market",
+        "The roadside to the farm",
+        "The baale's room",
+        "By the village stream"
+      ],
+      "answerIndex": 1,
+      "explanation": "The play opens by the roadside.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q021",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Lakunle represents?",
+      "options": [
+        "Modernity",
+        "Tradition",
+        "Foreign influence",
+        "Religious authority"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lakunle champions modern ways.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q022",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Baroka represents?",
+      "options": [
+        "Tradition and cunning",
+        "Modernity",
+        "Innocence",
+        "Foreign influence"
+      ],
+      "answerIndex": 0,
+      "explanation": "Baroka embodies traditional authority.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q023",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Sidi is initially attracted to?",
+      "options": [
+        "Lakunle's modern ideas",
+        "Baroka's wealth",
+        "The photographer",
+        "The village chief"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sidi is drawn to Lakunle's modernity.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q024",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The climax of the play is reached when?",
+      "options": [
+        "Sidi agrees to marry Baroka",
+        "Lakunle leaves the village",
+        "The railway is completed",
+        "Baroka dies"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sidi's decision resolves the conflict.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q025",
+      "topicName": "Drama - Look Back in Anger",
+      "topicSlug": "drama-look-back-in-anger",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "From the novel Look Back in Anger, the play is a?",
+      "options": [
+        "Comedy",
+        "Kitchen-sink drama",
+        "Historical play",
+        "Musical"
+      ],
+      "answerIndex": 1,
+      "explanation": "It is a kitchen-sink drama.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q026",
+      "topicName": "Drama - Look Back in Anger",
+      "topicSlug": "drama-look-back-in-anger",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Jimmy Porter is?",
+      "options": [
+        "The protagonist",
+        "The antagonist",
+        "A minor character",
+        "The narrator"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jimmy is the angry protagonist.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q027",
+      "topicName": "Drama - Look Back in Anger",
+      "topicSlug": "drama-look-back-in-anger",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Alison is?",
+      "options": [
+        "Jimmy's wife",
+        "Jimmy's sister",
+        "A friend",
+        "A stranger"
+      ],
+      "answerIndex": 0,
+      "explanation": "Alison is Jimmy's long-suffering wife.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q028",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Jimmy's anger is directed at?",
+      "options": [
+        "The class system",
+        "His wife",
+        "His job",
+        "The weather"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jimmy attacks social inequality.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q029",
+      "topicName": "Novel - Second Class Citizen",
+      "topicSlug": "novel-second-class-citizen",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Who is Mr Cole?",
+      "options": [
+        "A black tenant at the first apartment",
+        "Adah's colleague",
+        "Adah's nephew",
+        "Adah's elementary school teacher"
+      ],
+      "answerIndex": 3,
+      "explanation": "Mr Cole is Adah's teacher.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q030",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"She swallowed it all, just like a nasty pill.\" The literary device is?",
+      "options": [
+        "Simile",
+        "Metaphor",
+        "Personification",
+        "Hyperbole"
+      ],
+      "answerIndex": 0,
+      "explanation": "The comparison uses \"like\".",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q031",
+      "topicName": "Novel - Second Class Citizen",
+      "topicSlug": "novel-second-class-citizen",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Adah's husband is?",
+      "options": [
+        "Francis",
+        "Boy",
+        "Mr Cole",
+        "Pa"
+      ],
+      "answerIndex": 1,
+      "explanation": "Adah's husband is Boy.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q032",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The novel explores?",
+      "options": [
+        "Racial and gender discrimination",
+        "War",
+        "Religion",
+        "Politics"
+      ],
+      "answerIndex": 0,
+      "explanation": "The novel deals with racism and sexism.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q033",
+      "topicName": "Novel - Unexpected Joy at Dawn",
+      "topicSlug": "novel-unexpected-joy-at-dawn",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "What distinguishes Nii Tackie from every other Ghanaian?",
+      "options": [
+        "His accent",
+        "His face",
+        "His tribal mark",
+        "His skin"
+      ],
+      "answerIndex": 0,
+      "explanation": "His accent sets him apart.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q034",
+      "topicName": "Novel - Unexpected Joy at Dawn",
+      "topicSlug": "novel-unexpected-joy-at-dawn",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Which character provides the central viewpoint?",
+      "options": [
+        "Nii Tackie",
+        "Mama Orojo",
+        "Joe",
+        "Sara"
+      ],
+      "answerIndex": 0,
+      "explanation": "Nii Tackie is the central viewpoint.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q035",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The novel is set in?",
+      "options": [
+        "Ghana and Nigeria",
+        "Ghana and Togo",
+        "Nigeria and Benin",
+        "Ghana and Ivory Coast"
+      ],
+      "answerIndex": 0,
+      "explanation": "The novel is set in Ghana and Nigeria.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q036",
+      "topicName": "Novel - Wuthering Heights",
+      "topicSlug": "novel-wuthering-heights",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "What gift did Mr Earnshaw promise to bring Nelly Dean from Liverpool?",
+      "options": [
+        "A bridle for her horse",
+        "A fiddle",
+        "Fruit",
+        "A set of paints"
+      ],
+      "answerIndex": 1,
+      "explanation": "Mr Earnshaw promised Nelly a fiddle.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q037",
+      "topicName": "Novel - Wuthering Heights",
+      "topicSlug": "novel-wuthering-heights",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Which character dies last?",
+      "options": [
+        "Catherine",
+        "Heathcliff",
+        "Linton",
+        "Mr Linton"
+      ],
+      "answerIndex": 1,
+      "explanation": "Heathcliff dies last in the novel.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q038",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The novel is set in?",
+      "options": [
+        "Yorkshire moors",
+        "London",
+        "Liverpool",
+        "Scotland"
+      ],
+      "answerIndex": 0,
+      "explanation": "The setting is the Yorkshire moors.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q039",
+      "topicName": "Novel - Wuthering Heights",
+      "topicSlug": "novel-wuthering-heights",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Heathcliff's love interest is?",
+      "options": [
+        "Catherine Earnshaw",
+        "Nelly Dean",
+        "Isabella Linton",
+        "Cathy Linton"
+      ],
+      "answerIndex": 0,
+      "explanation": "Heathcliff loves Catherine Earnshaw.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q040",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"Black Woman\" is written by?",
+      "options": [
+        "Leopold Sedar Senghor",
+        "Niyi Osundare",
+        "Birago Diop",
+        "Gbemisola Adeoti"
+      ],
+      "answerIndex": 0,
+      "explanation": "\"Black Woman\" is by Senghor.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q041",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"The Leader and the Led\" is by?",
+      "options": [
+        "Niyi Osundare",
+        "Leopold Senghor",
+        "Birago Diop",
+        "Wole Soyinka"
+      ],
+      "answerIndex": 0,
+      "explanation": "The poem is by Niyi Osundare.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q042",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"The Song of the Women of My Land\" deals with?",
+      "options": [
+        "Oppression and motherhood",
+        "Romance",
+        "War",
+        "Nature"
+      ],
+      "answerIndex": 0,
+      "explanation": "The poem explores oppression and motherhood.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q043",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A play ending with the protagonist's downfall is a?",
+      "options": [
+        "Comedy",
+        "Tragedy",
+        "Farce",
+        "Melodrama"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q044",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A story within a story is a?",
+      "options": [
+        "Frame narrative",
+        "Subplot",
+        "Flashback",
+        "Allegory"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q045",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The struggle between opposing forces is?",
+      "options": [
+        "Climax",
+        "Conflict",
+        "Resolution",
+        "Exposition"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q046",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The turning point of a story is the?",
+      "options": [
+        "Exposition",
+        "Climax",
+        "Falling action",
+        "Resolution"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q047",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A humorous play with a happy ending is a?",
+      "options": [
+        "Tragedy",
+        "Comedy",
+        "History",
+        "Romance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q048",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A long narrative poem celebrating heroic deeds is an?",
+      "options": [
+        "Ode",
+        "Elegy",
+        "Epic",
+        "Sonnet"
+      ],
+      "answerIndex": 2,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q049",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The repetition of consonant sounds at the ends of words is?",
+      "options": [
+        "Alliteration",
+        "Assonance",
+        "Consonance",
+        "Rhyme"
+      ],
+      "answerIndex": 2,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q050",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A part used to represent the whole is?",
+      "options": [
+        "Metonymy",
+        "Synecdoche",
+        "Metaphor",
+        "Simile"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q051",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The writer's attitude is?",
+      "options": [
+        "Tone",
+        "Mood",
+        "Theme",
+        "Diction"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q052",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A solo speech revealing inner thoughts is a?",
+      "options": [
+        "Aside",
+        "Soliloquy",
+        "Monologue",
+        "Dialogue"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q053",
+      "topicName": "Drama - The Lion and the Jewel",
+      "topicSlug": "drama-lion-and-the-jewel",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "In The Lion and the Jewel, the \"jewel\" is?",
+      "options": [
+        "Baroka's throne",
+        "Sidi",
+        "The village",
+        "The railway"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q054",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The \"lion\" is?",
+      "options": [
+        "Lakunle",
+        "Baroka",
+        "Sadiku",
+        "The wrestler"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q055",
+      "topicName": "Drama - Look Back in Anger",
+      "topicSlug": "drama-look-back-in-anger",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "In Look Back in Anger, Alison's father is?",
+      "options": [
+        "Colonel Redfern",
+        "Jimmy Porter",
+        "Cliff Lewis",
+        "Hugh Tanner"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q056",
+      "topicName": "Drama - Look Back in Anger",
+      "topicSlug": "drama-look-back-in-anger",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Jimmy Porter is angry at?",
+      "options": [
+        "Class inequality",
+        "His wife's infidelity",
+        "His job",
+        "The weather"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q057",
+      "topicName": "Novel - Second Class Citizen",
+      "topicSlug": "novel-second-class-citizen",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Second Class Citizen is?",
+      "options": [
+        "Semi-autobiographical",
+        "Historical romance",
+        "Science fiction",
+        "Detective story"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q058",
+      "topicName": "Novel - Second Class Citizen",
+      "topicSlug": "novel-second-class-citizen",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Adah's husband Boy is?",
+      "options": [
+        "Supportive",
+        "Abusive",
+        "Absent",
+        "Wealthy"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q059",
+      "topicName": "Novel - Unexpected Joy at Dawn",
+      "topicSlug": "novel-unexpected-joy-at-dawn",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "In Unexpected Joy at Dawn, Nii Tackie is originally from?",
+      "options": [
+        "Ghana",
+        "Nigeria",
+        "Togo",
+        "Benin"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q060",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A poetic foot with one unstressed followed by one stressed syllable is an?",
+      "options": [
+        "Iamb",
+        "Trochee",
+        "Anapest",
+        "Dactyl"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q061",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The rhyme scheme ABAB CDCD EFEF GG is characteristic of a?",
+      "options": [
+        "Petrarchan sonnet",
+        "Shakespearean sonnet",
+        "Spenserian sonnet",
+        "Miltonic sonnet"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q062",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A comparison using \"like\" or \"as\" is a?",
+      "options": [
+        "Metaphor",
+        "Simile",
+        "Personification",
+        "Apostrophe"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q063",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Giving human qualities to non-human things is?",
+      "options": [
+        "Personification",
+        "Anthropomorphism",
+        "Apostrophe",
+        "Metonymy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q064",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A very short poem with a single idea is a?",
+      "options": [
+        "Sonnet",
+        "Haiku",
+        "Ode",
+        "Epic"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q065",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A work that ridicules human folly is?",
+      "options": [
+        "Satire",
+        "Parody",
+        "Farce",
+        "Comedy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q066",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A deliberate exaggeration for emphasis is?",
+      "options": [
+        "Hyperbole",
+        "Litotes",
+        "Understatement",
+        "Irony"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q067",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The final resolution of a plot is the?",
+      "options": [
+        "Climax",
+        "Denouement",
+        "Exposition",
+        "Conflict"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q068",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A character who contrasts with the protagonist is a?",
+      "options": [
+        "Foil",
+        "Antagonist",
+        "Narrator",
+        "Protagonist"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q069",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Irony involves?",
+      "options": [
+        "A discrepancy between expectation and reality",
+        "Direct statement",
+        "Exaggeration",
+        "Repetition"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q070",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The central message of a work is its?",
+      "options": [
+        "Plot",
+        "Setting",
+        "Theme",
+        "Style"
+      ],
+      "answerIndex": 2,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q071",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A literary genre told through letters is?",
+      "options": [
+        "Epistolary",
+        "Historical",
+        "Picaresque",
+        "Gothic"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q072",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A 14-line poem is a?",
+      "options": [
+        "Ode",
+        "Sonnet",
+        "Elegy",
+        "Ballad"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q073",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The repetition of vowel sounds is?",
+      "options": [
+        "Alliteration",
+        "Assonance",
+        "Consonance",
+        "Onomatopoeia"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q074",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Words that imitate sounds are?",
+      "options": [
+        "Onomatopoeia",
+        "Alliteration",
+        "Simile",
+        "Metaphor"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q075",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A group of lines in a poem is a?",
+      "options": [
+        "Stanza",
+        "Canto",
+        "Refrain",
+        "Couplet"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q076",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A play with exaggerated emotions is a?",
+      "options": [
+        "Melodrama",
+        "Tragedy",
+        "Comedy",
+        "Farce"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q077",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A statement that seems contradictory but may be true is a?",
+      "options": [
+        "Irony",
+        "Paradox",
+        "Contrast",
+        "Parallelism"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q078",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A work using symbols to convey meaning is an?",
+      "options": [
+        "Allegory",
+        "Metaphor",
+        "Parallelism",
+        "Characterization"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q079",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Juxtaposition is the placement of?",
+      "options": [
+        "Two things side by side for comparison",
+        "A single image",
+        "A repeated sound",
+        "A hidden meaning"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q080",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A chorus in drama?",
+      "options": [
+        "Comments on the action",
+        "Is the main character",
+        "Is the villain",
+        "Writes the play"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q081",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The three unities of drama are?",
+      "options": [
+        "Action, time and place",
+        "Time, space and action",
+        "Place, time and space",
+        "Space, action and time"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q082",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A tragic flaw is also called?",
+      "options": [
+        "Hamartia",
+        "Hubris",
+        "Catharsis",
+        "Nemesis"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q083",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Flashback is a technique that?",
+      "options": [
+        "Recalls past events",
+        "Predicts the future",
+        "Describes the setting",
+        "Introduces characters"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q084",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "An episodic play?",
+      "options": [
+        "Has acts without necessary sequence",
+        "Has a strict linear plot",
+        "Has no characters",
+        "Is a musical"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q085",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The persona in a poem is?",
+      "options": [
+        "The voice of the character",
+        "The poet's real self always",
+        "The main character in a novel",
+        "The setting"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q086",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "\"Faithful liar\" is an example of?",
+      "options": [
+        "Oxymoron",
+        "Euphemism",
+        "Antithesis",
+        "Epigram"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q087",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A poem mourning the dead is an?",
+      "options": [
+        "Ode",
+        "Elegy",
+        "Sonnet",
+        "Epic"
+      ],
+      "answerIndex": 1,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q088",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Free verse is poetry without?",
+      "options": [
+        "Regular meter or rhyme",
+        "Meaning",
+        "Imagery",
+        "Theme"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q089",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A narrator who knows all is?",
+      "options": [
+        "Omniscient narrator",
+        "Participatory narrator",
+        "Objective narrator",
+        "Subjective narrator"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q090",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A cast list is called?",
+      "options": [
+        "Dramatis personae",
+        "Prologue",
+        "Epilogue",
+        "Stage direction"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q091",
+      "topicName": "Novel - Wuthering Heights",
+      "topicSlug": "novel-wuthering-heights",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "In Wuthering Heights, Heathcliff is?",
+      "options": [
+        "A foundling",
+        "A wealthy heir",
+        "Catherine's brother",
+        "A servant"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q092",
+      "topicName": "Novel - Wuthering Heights",
+      "topicSlug": "novel-wuthering-heights",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "Catherine Earnshaw marries?",
+      "options": [
+        "Edgar Linton",
+        "Heathcliff",
+        "Hindley",
+        "Mr Lockwood"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q093",
+      "topicName": "Novel - Second Class Citizen",
+      "topicSlug": "novel-second-class-citizen",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "In Second Class Citizen, Adah works as?",
+      "options": [
+        "A librarian",
+        "A teacher",
+        "A nurse",
+        "A writer"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q094",
+      "topicName": "Novel - Unexpected Joy at Dawn",
+      "topicSlug": "novel-unexpected-joy-at-dawn",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "In Unexpected Joy at Dawn, the theme of survival is linked to?",
+      "options": [
+        "Curfews and hardship",
+        "Wealth",
+        "Romance",
+        "Education"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q095",
+      "topicName": "Poetry",
+      "topicSlug": "poetry",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The \"crown\" in The Leader and the Led symbolizes?",
+      "options": [
+        "Power",
+        "Wealth",
+        "Beauty",
+        "Wisdom"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q096",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A sonnet typically has?",
+      "options": [
+        "14 lines",
+        "10 lines",
+        "20 lines",
+        "5 lines"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q097",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "An ode is a poem that?",
+      "options": [
+        "Praises or celebrates",
+        "Mourns",
+        "Tells a story",
+        "Satirizes"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q098",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "A ballad is a?",
+      "options": [
+        "Narrative poem",
+        "Lyric poem",
+        "Dramatic poem",
+        "Epic"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q099",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The antagonist is?",
+      "options": [
+        "The opponent of the protagonist",
+        "The main character",
+        "The narrator",
+        "The author"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "lit-2023-q100",
+      "topicName": "General Literary Principles",
+      "topicSlug": "general-literary-principles",
+      "mode": "CBT",
+      "year": 2023,
+      "exam": "JAMB",
+      "prompt": "The setting of a literary work refers to?",
+      "options": [
+        "Time and place",
+        "Plot",
+        "Theme",
+        "Characters"
+      ],
+      "answerIndex": 0,
+      "explanation": "Standard JAMB literary concept.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    }
+  ]
+}
