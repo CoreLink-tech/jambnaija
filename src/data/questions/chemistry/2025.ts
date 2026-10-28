@@ -1,6 +1,6 @@
 import type { JambQuestion } from "../types";
 
-/** Chemistry 2025 — JAMB past questions (Drive doc bank). */
+/** Chemistry 2025 — past bank + generated fillers to 60. */
 const questions: JambQuestion[] = [
   {
     "id": "chem-2025-001",
@@ -898,6 +898,186 @@ const questions: JambQuestion[] = [
     },
     "correctAnswer": "D",
     "explanation": "Strong hydrogen bonding between water molecules keeps water liquid at room temperature.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2025-051",
+    "subject": "chemistry",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "The oxidation number of chromium in K₂Cr₂O₇ is?",
+    "options": {
+      "A": "+3",
+      "B": "+6",
+      "C": "+2",
+      "D": "+7"
+    },
+    "correctAnswer": "B",
+    "explanation": "Each K is +1 (×2), each O is −2 (×7). Let Cr = x: 2 + 2x − 14 = 0 → 2x = 12 → x = +6.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2025-052",
+    "subject": "chemistry",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Which gas is produced when zinc reacts with dilute H₂SO₄?",
+    "options": {
+      "A": "Oxygen",
+      "B": "Hydrogen",
+      "C": "Sulphur dioxide",
+      "D": "Nitrogen"
+    },
+    "correctAnswer": "B",
+    "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Active metals liberate hydrogen from dilute acids.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2025-053",
+    "subject": "chemistry",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "The shape of the methane molecule is?",
+    "options": {
+      "A": "Linear",
+      "B": "Trigonal planar",
+      "C": "Tetrahedral",
+      "D": "Octahedral"
+    },
+    "correctAnswer": "C",
+    "explanation": "Carbon in CH₄ is sp³ hybridised, giving a tetrahedral geometry.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2025-054",
+    "subject": "chemistry",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Hardness of water is mainly due to the presence of?",
+    "options": {
+      "A": "Na⁺ and K⁺",
+      "B": "Ca²⁺ and Mg²⁺",
+      "C": "Fe²⁺ only",
+      "D": "Cl⁻ only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Ca²⁺ and Mg²⁺ form insoluble salts with soap, causing hardness.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2025-055",
+    "subject": "chemistry",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "The catalyst used in the Haber process is?",
+    "options": {
+      "A": "V₂O₅",
+      "B": "Iron",
+      "C": "Nickel",
+      "D": "Platinum"
+    },
+    "correctAnswer": "B",
+    "explanation": "Finely divided iron is the catalyst for N₂ + 3H₂ ⇌ 2NH₃.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2025-056",
+    "subject": "chemistry",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "An aqueous solution of Na₂CO₃ is?",
+    "options": {
+      "A": "Acidic",
+      "B": "Neutral",
+      "C": "Basic",
+      "D": "Amphoteric"
+    },
+    "correctAnswer": "C",
+    "explanation": "Carbonate ion hydrolyses to give OH⁻, making the solution alkaline.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2025-057",
+    "subject": "chemistry",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "The functional group in alkanols is?",
+    "options": {
+      "A": "–CHO",
+      "B": "–COOH",
+      "C": "–OH",
+      "D": "–NH₂"
+    },
+    "correctAnswer": "C",
+    "explanation": "Alkanols (alcohols) contain the hydroxyl (–OH) functional group.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2025-058",
+    "subject": "chemistry",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Which of the following is a noble gas?",
+    "options": {
+      "A": "Nitrogen",
+      "B": "Neon",
+      "C": "Chlorine",
+      "D": "Fluorine"
+    },
+    "correctAnswer": "B",
+    "explanation": "Neon is in Group 0 and is chemically inert under normal conditions.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2025-059",
+    "subject": "chemistry",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "The number of moles in 11.2 dm³ of oxygen at s.t.p. is?",
+    "options": {
+      "A": "0.25",
+      "B": "0.5",
+      "C": "1.0",
+      "D": "2.0"
+    },
+    "correctAnswer": "B",
+    "explanation": "1 mole of gas occupies 22.4 dm³ at s.t.p.; 11.2/22.4 = 0.5 mol.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2025-060",
+    "subject": "chemistry",
+    "year": 2025,
+    "origin": "original_practice",
+    "question": "Soap is produced by the reaction of fats with?",
+    "options": {
+      "A": "Acid",
+      "B": "Alkali",
+      "C": "Alcohol",
+      "D": "Salt"
+    },
+    "correctAnswer": "B",
+    "explanation": "Saponification is the alkaline hydrolysis of fats/oils to soap and glycerol.",
     "topic": "Chemistry",
     "difficulty": "medium",
     "syllabusTopic": "JAMB Chemistry"

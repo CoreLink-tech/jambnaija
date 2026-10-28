@@ -1,6 +1,6 @@
 import type { JambQuestion } from "../types";
 
-/** Physics 2024 — JAMB past questions (Drive doc bank). */
+/** Physics 2024 — past bank + generated fillers to 60. */
 const questions: JambQuestion[] = [
   {
     "id": "phy-2024-001",
@@ -628,6 +628,456 @@ const questions: JambQuestion[] = [
     },
     "correctAnswer": "A",
     "explanation": "Number of images = (360/θ) − 1. 8 = 360/θ − 1 → 360/θ = 9 → θ = 40°. \\-\\-- Reply \"Continue\" to receive the 2025 sets for Chemistry and Physics next. Here are the 2025 JAMB Chemistry and Physics questions, compiled from the past-question sources found. Each question includes options, the correct answer, and a clear explanation. \\-\\--",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-036",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "The SI unit of force is the?",
+    "options": {
+      "A": "Joule",
+      "B": "Newton",
+      "C": "Watt",
+      "D": "Pascal"
+    },
+    "correctAnswer": "B",
+    "explanation": "Force is measured in newtons (N = kg·m/s²).",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-037",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "A body of mass 2 kg accelerates at 3 m/s². The force acting on it is?",
+    "options": {
+      "A": "1.5 N",
+      "B": "5 N",
+      "C": "6 N",
+      "D": "0.67 N"
+    },
+    "correctAnswer": "C",
+    "explanation": "F = ma = 2 × 3 = 6 N.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-038",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "Which of the following is a vector quantity?",
+    "options": {
+      "A": "Mass",
+      "B": "Speed",
+      "C": "Velocity",
+      "D": "Time"
+    },
+    "correctAnswer": "C",
+    "explanation": "Velocity has both magnitude and direction.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-039",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "The work done when a force of 5 N moves an object 2 m in its direction is?",
+    "options": {
+      "A": "2.5 J",
+      "B": "10 J",
+      "C": "7 J",
+      "D": "3 J"
+    },
+    "correctAnswer": "B",
+    "explanation": "W = F × d = 5 × 2 = 10 J.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-040",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "Power is defined as?",
+    "options": {
+      "A": "Force × distance",
+      "B": "Work done per unit time",
+      "C": "Mass × acceleration",
+      "D": "Energy × time"
+    },
+    "correctAnswer": "B",
+    "explanation": "Power = work/time.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-041",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "The kinetic energy of a 4 kg mass moving at 3 m/s is?",
+    "options": {
+      "A": "18 J",
+      "B": "36 J",
+      "C": "12 J",
+      "D": "6 J"
+    },
+    "correctAnswer": "A",
+    "explanation": "KE = ½mv² = ½ × 4 × 9 = 18 J.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-042",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "Potential energy of a 2 kg object at 5 m height (g = 10 m/s²) is?",
+    "options": {
+      "A": "100 J",
+      "B": "50 J",
+      "C": "20 J",
+      "D": "10 J"
+    },
+    "correctAnswer": "A",
+    "explanation": "PE = mgh = 2 × 10 × 5 = 100 J.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-043",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "Which of the following is a renewable energy source?",
+    "options": {
+      "A": "Coal",
+      "B": "Petroleum",
+      "C": "Wind",
+      "D": "Natural gas"
+    },
+    "correctAnswer": "C",
+    "explanation": "Wind energy is continuously replenished.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-044",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "Heat transfer through a solid occurs mainly by?",
+    "options": {
+      "A": "Convection",
+      "B": "Conduction",
+      "C": "Radiation",
+      "D": "Evaporation"
+    },
+    "correctAnswer": "B",
+    "explanation": "Conduction is the transfer of heat through molecular vibration in solids.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-045",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "The temperature at which water freezes at standard pressure is?",
+    "options": {
+      "A": "0 °C",
+      "B": "32 °C",
+      "C": "100 °C",
+      "D": "−10 °C"
+    },
+    "correctAnswer": "A",
+    "explanation": "The freezing point of pure water at 1 atm is 0 °C.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-046",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "Sound waves are?",
+    "options": {
+      "A": "Transverse",
+      "B": "Longitudinal",
+      "C": "Electromagnetic",
+      "D": "Static"
+    },
+    "correctAnswer": "B",
+    "explanation": "Sound consists of compressions and rarefactions along the direction of travel.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-047",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "The speed of a wave of frequency 50 Hz and wavelength 2 m is?",
+    "options": {
+      "A": "25 m/s",
+      "B": "100 m/s",
+      "C": "52 m/s",
+      "D": "0.04 m/s"
+    },
+    "correctAnswer": "B",
+    "explanation": "v = fλ = 50 × 2 = 100 m/s.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-048",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "Refraction is the change in direction of a wave when it?",
+    "options": {
+      "A": "Bounces off a surface",
+      "B": "Passes from one medium to another",
+      "C": "Spreads around an obstacle",
+      "D": "Is absorbed"
+    },
+    "correctAnswer": "B",
+    "explanation": "Refraction occurs due to a change in wave speed at a boundary.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-049",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "A convex lens is used to?",
+    "options": {
+      "A": "Diverge light rays",
+      "B": "Converge light rays",
+      "C": "Reflect light",
+      "D": "Absorb light"
+    },
+    "correctAnswer": "B",
+    "explanation": "A convex (converging) lens focuses parallel rays to a real focus.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-050",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "The unit of electric current is the?",
+    "options": {
+      "A": "Volt",
+      "B": "Ohm",
+      "C": "Ampere",
+      "D": "Coulomb"
+    },
+    "correctAnswer": "C",
+    "explanation": "Current is measured in amperes.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-051",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "Ohm’s law states that V is proportional to I when?",
+    "options": {
+      "A": "Temperature is constant",
+      "B": "Pressure varies",
+      "C": "Mass changes",
+      "D": "Volume is constant"
+    },
+    "correctAnswer": "A",
+    "explanation": "Ohm’s law holds for metallic conductors at constant temperature.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-052",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "Three 3 Ω resistors in series have total resistance?",
+    "options": {
+      "A": "1 Ω",
+      "B": "3 Ω",
+      "C": "6 Ω",
+      "D": "9 Ω"
+    },
+    "correctAnswer": "D",
+    "explanation": "Series: R = 3 + 3 + 3 = 9 Ω.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-053",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "Two 4 Ω resistors in parallel have equivalent resistance?",
+    "options": {
+      "A": "8 Ω",
+      "B": "2 Ω",
+      "C": "4 Ω",
+      "D": "1 Ω"
+    },
+    "correctAnswer": "B",
+    "explanation": "1/R = 1/4 + 1/4 = 1/2 → R = 2 Ω.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-054",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "A magnetic field is produced by?",
+    "options": {
+      "A": "A stationary charge",
+      "B": "A moving charge",
+      "C": "An insulator",
+      "D": "A neutral atom"
+    },
+    "correctAnswer": "B",
+    "explanation": "Electric currents (moving charges) produce magnetic fields.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-055",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "A device that converts mechanical energy to electrical energy is a?",
+    "options": {
+      "A": "Motor",
+      "B": "Generator",
+      "C": "Transformer",
+      "D": "Battery"
+    },
+    "correctAnswer": "B",
+    "explanation": "A generator uses electromagnetic induction to produce emf.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-056",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "A step-up transformer has?",
+    "options": {
+      "A": "More turns in the secondary",
+      "B": "Fewer turns in the secondary",
+      "C": "Equal turns",
+      "D": "No secondary"
+    },
+    "correctAnswer": "A",
+    "explanation": "Step-up increases voltage; Ns > Np.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-057",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "The half-life of a radioisotope is the time for?",
+    "options": {
+      "A": "All nuclei to decay",
+      "B": "Half the nuclei to decay",
+      "C": "Activity to double",
+      "D": "Mass to become zero"
+    },
+    "correctAnswer": "B",
+    "explanation": "Half-life is the time for half of the radioactive nuclei to decay.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-058",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "Alpha particles are?",
+    "options": {
+      "A": "Electrons",
+      "B": "Helium nuclei",
+      "C": "Protons only",
+      "D": "Neutrons only"
+    },
+    "correctAnswer": "B",
+    "explanation": "An alpha particle is a ⁴He nucleus (2p + 2n).",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-059",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "The pressure of a gas is due to?",
+    "options": {
+      "A": "Attraction between molecules",
+      "B": "Collisions of molecules with the walls",
+      "C": "Weight of the gas only",
+      "D": "Chemical bonds"
+    },
+    "correctAnswer": "B",
+    "explanation": "Pressure arises from molecular impacts on the container walls.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2024-060",
+    "subject": "physics",
+    "year": 2024,
+    "origin": "original_practice",
+    "question": "Archimedes’ principle states that upthrust equals?",
+    "options": {
+      "A": "Weight of the object",
+      "B": "Weight of fluid displaced",
+      "C": "Volume of the object",
+      "D": "Density of the fluid only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Upthrust = weight of the fluid displaced by the immersed part.",
     "topic": "Physics",
     "difficulty": "medium",
     "syllabusTopic": "JAMB Physics"

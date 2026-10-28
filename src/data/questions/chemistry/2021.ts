@@ -1,6 +1,6 @@
 import type { JambQuestion } from "../types";
 
-/** Chemistry 2021 — JAMB past questions (Drive doc bank). */
+/** Chemistry 2021 — past bank + generated fillers to 60. */
 const questions: JambQuestion[] = [
   {
     "id": "chem-2021-001",
@@ -772,6 +772,312 @@ const questions: JambQuestion[] = [
     },
     "correctAnswer": "B",
     "explanation": "(Duplicate of Q13) Heat capacity.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-044",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "The oxidation number of chromium in K₂Cr₂O₇ is?",
+    "options": {
+      "A": "+3",
+      "B": "+6",
+      "C": "+2",
+      "D": "+7"
+    },
+    "correctAnswer": "B",
+    "explanation": "Each K is +1 (×2), each O is −2 (×7). Let Cr = x: 2 + 2x − 14 = 0 → 2x = 12 → x = +6.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-045",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "Which gas is produced when zinc reacts with dilute H₂SO₄?",
+    "options": {
+      "A": "Oxygen",
+      "B": "Hydrogen",
+      "C": "Sulphur dioxide",
+      "D": "Nitrogen"
+    },
+    "correctAnswer": "B",
+    "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Active metals liberate hydrogen from dilute acids.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-046",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "The shape of the methane molecule is?",
+    "options": {
+      "A": "Linear",
+      "B": "Trigonal planar",
+      "C": "Tetrahedral",
+      "D": "Octahedral"
+    },
+    "correctAnswer": "C",
+    "explanation": "Carbon in CH₄ is sp³ hybridised, giving a tetrahedral geometry.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-047",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "Hardness of water is mainly due to the presence of?",
+    "options": {
+      "A": "Na⁺ and K⁺",
+      "B": "Ca²⁺ and Mg²⁺",
+      "C": "Fe²⁺ only",
+      "D": "Cl⁻ only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Ca²⁺ and Mg²⁺ form insoluble salts with soap, causing hardness.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-048",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "The catalyst used in the Haber process is?",
+    "options": {
+      "A": "V₂O₅",
+      "B": "Iron",
+      "C": "Nickel",
+      "D": "Platinum"
+    },
+    "correctAnswer": "B",
+    "explanation": "Finely divided iron is the catalyst for N₂ + 3H₂ ⇌ 2NH₃.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-049",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "An aqueous solution of Na₂CO₃ is?",
+    "options": {
+      "A": "Acidic",
+      "B": "Neutral",
+      "C": "Basic",
+      "D": "Amphoteric"
+    },
+    "correctAnswer": "C",
+    "explanation": "Carbonate ion hydrolyses to give OH⁻, making the solution alkaline.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-050",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "The functional group in alkanols is?",
+    "options": {
+      "A": "–CHO",
+      "B": "–COOH",
+      "C": "–OH",
+      "D": "–NH₂"
+    },
+    "correctAnswer": "C",
+    "explanation": "Alkanols (alcohols) contain the hydroxyl (–OH) functional group.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-051",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "Which of the following is a noble gas?",
+    "options": {
+      "A": "Nitrogen",
+      "B": "Neon",
+      "C": "Chlorine",
+      "D": "Fluorine"
+    },
+    "correctAnswer": "B",
+    "explanation": "Neon is in Group 0 and is chemically inert under normal conditions.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-052",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "The number of moles in 11.2 dm³ of oxygen at s.t.p. is?",
+    "options": {
+      "A": "0.25",
+      "B": "0.5",
+      "C": "1.0",
+      "D": "2.0"
+    },
+    "correctAnswer": "B",
+    "explanation": "1 mole of gas occupies 22.4 dm³ at s.t.p.; 11.2/22.4 = 0.5 mol.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-053",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "Soap is produced by the reaction of fats with?",
+    "options": {
+      "A": "Acid",
+      "B": "Alkali",
+      "C": "Alcohol",
+      "D": "Salt"
+    },
+    "correctAnswer": "B",
+    "explanation": "Saponification is the alkaline hydrolysis of fats/oils to soap and glycerol.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-054",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "Which of these is an endothermic process?",
+    "options": {
+      "A": "Combustion of methane",
+      "B": "Neutralisation of HCl with NaOH",
+      "C": "Photosynthesis",
+      "D": "Respiration"
+    },
+    "correctAnswer": "C",
+    "explanation": "Photosynthesis absorbs energy from sunlight; the others release heat.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-055",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "The IUPAC name of CH₃CH₂COOH is?",
+    "options": {
+      "A": "Ethanoic acid",
+      "B": "Propanoic acid",
+      "C": "Butanoic acid",
+      "D": "Methanoic acid"
+    },
+    "correctAnswer": "B",
+    "explanation": "Three-carbon carboxylic acid is propanoic acid.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-056",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "Temporary hardness of water can be removed by?",
+    "options": {
+      "A": "Boiling",
+      "B": "Adding sugar",
+      "C": "Freezing",
+      "D": "Filtration only"
+    },
+    "correctAnswer": "A",
+    "explanation": "Boiling decomposes soluble bicarbonates of Ca and Mg to insoluble carbonates.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-057",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "The bond between sodium and chlorine in NaCl is?",
+    "options": {
+      "A": "Covalent",
+      "B": "Ionic",
+      "C": "Metallic",
+      "D": "Hydrogen"
+    },
+    "correctAnswer": "B",
+    "explanation": "Na transfers an electron to Cl, forming Na⁺ and Cl⁻ held by electrostatic attraction.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-058",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "Which allotrope of carbon is the hardest?",
+    "options": {
+      "A": "Graphite",
+      "B": "Diamond",
+      "C": "Fullerene",
+      "D": "Coke"
+    },
+    "correctAnswer": "B",
+    "explanation": "Diamond’s three-dimensional covalent network makes it the hardest natural substance.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-059",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "The pH of pure water at 25 °C is?",
+    "options": {
+      "A": "0",
+      "B": "7",
+      "C": "14",
+      "D": "1"
+    },
+    "correctAnswer": "B",
+    "explanation": "[H⁺] = 1×10⁻⁷ mol/dm³ in pure water, so pH = 7.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-060",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "original_practice",
+    "question": "Which of the following is a reducing agent?",
+    "options": {
+      "A": "KMnO₄",
+      "B": "H₂",
+      "C": "Cl₂",
+      "D": "O₂"
+    },
+    "correctAnswer": "B",
+    "explanation": "Hydrogen can be oxidised (lose electrons), so it acts as a reducing agent.",
     "topic": "Chemistry",
     "difficulty": "medium",
     "syllabusTopic": "JAMB Chemistry"

@@ -1,6 +1,6 @@
 import type { JambQuestion } from "../types";
 
-/** Physics 2022 — JAMB past questions (Drive doc bank). */
+/** Physics 2022 — past bank + generated fillers to 60. */
 const questions: JambQuestion[] = [
   {
     "id": "phy-2022-001",
@@ -772,6 +772,312 @@ const questions: JambQuestion[] = [
     },
     "correctAnswer": "A",
     "explanation": "Same as Q2; cutting a magnet produces two smaller magnets. \\-\\-- 以上为 2022年JAMB化学40题 + 物理45题，全部可复制，含选项、答案和解析。回复\"Continue\" 将进入 2023年 的化学与物理题集。 Here are the 2023 JAMB Chemistry and Physics questions, with options, answers, and explanations. I have compiled a robust set for each subject based on the available 2023 past-question compilations. Note on question count: The 2023 JAMB UTME drew from a large question bank, and public compilations vary in length. The sets below represent the verifiable 2023 questions available from sources like Myschool, EduRev, and SuperGB. For Chemistry, I have provided 40 questions; for Physics, 15 questions with detailed explanations. You can use these to master the 2023 patterns and recurring topics. \\-\\--",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-044",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "The SI unit of force is the?",
+    "options": {
+      "A": "Joule",
+      "B": "Newton",
+      "C": "Watt",
+      "D": "Pascal"
+    },
+    "correctAnswer": "B",
+    "explanation": "Force is measured in newtons (N = kg·m/s²).",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-045",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "A body of mass 2 kg accelerates at 3 m/s². The force acting on it is?",
+    "options": {
+      "A": "1.5 N",
+      "B": "5 N",
+      "C": "6 N",
+      "D": "0.67 N"
+    },
+    "correctAnswer": "C",
+    "explanation": "F = ma = 2 × 3 = 6 N.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-046",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Which of the following is a vector quantity?",
+    "options": {
+      "A": "Mass",
+      "B": "Speed",
+      "C": "Velocity",
+      "D": "Time"
+    },
+    "correctAnswer": "C",
+    "explanation": "Velocity has both magnitude and direction.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-047",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "The work done when a force of 5 N moves an object 2 m in its direction is?",
+    "options": {
+      "A": "2.5 J",
+      "B": "10 J",
+      "C": "7 J",
+      "D": "3 J"
+    },
+    "correctAnswer": "B",
+    "explanation": "W = F × d = 5 × 2 = 10 J.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-048",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Power is defined as?",
+    "options": {
+      "A": "Force × distance",
+      "B": "Work done per unit time",
+      "C": "Mass × acceleration",
+      "D": "Energy × time"
+    },
+    "correctAnswer": "B",
+    "explanation": "Power = work/time.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-049",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "The kinetic energy of a 4 kg mass moving at 3 m/s is?",
+    "options": {
+      "A": "18 J",
+      "B": "36 J",
+      "C": "12 J",
+      "D": "6 J"
+    },
+    "correctAnswer": "A",
+    "explanation": "KE = ½mv² = ½ × 4 × 9 = 18 J.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-050",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Potential energy of a 2 kg object at 5 m height (g = 10 m/s²) is?",
+    "options": {
+      "A": "100 J",
+      "B": "50 J",
+      "C": "20 J",
+      "D": "10 J"
+    },
+    "correctAnswer": "A",
+    "explanation": "PE = mgh = 2 × 10 × 5 = 100 J.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-051",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Which of the following is a renewable energy source?",
+    "options": {
+      "A": "Coal",
+      "B": "Petroleum",
+      "C": "Wind",
+      "D": "Natural gas"
+    },
+    "correctAnswer": "C",
+    "explanation": "Wind energy is continuously replenished.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-052",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Heat transfer through a solid occurs mainly by?",
+    "options": {
+      "A": "Convection",
+      "B": "Conduction",
+      "C": "Radiation",
+      "D": "Evaporation"
+    },
+    "correctAnswer": "B",
+    "explanation": "Conduction is the transfer of heat through molecular vibration in solids.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-053",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "The temperature at which water freezes at standard pressure is?",
+    "options": {
+      "A": "0 °C",
+      "B": "32 °C",
+      "C": "100 °C",
+      "D": "−10 °C"
+    },
+    "correctAnswer": "A",
+    "explanation": "The freezing point of pure water at 1 atm is 0 °C.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-054",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Sound waves are?",
+    "options": {
+      "A": "Transverse",
+      "B": "Longitudinal",
+      "C": "Electromagnetic",
+      "D": "Static"
+    },
+    "correctAnswer": "B",
+    "explanation": "Sound consists of compressions and rarefactions along the direction of travel.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-055",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "The speed of a wave of frequency 50 Hz and wavelength 2 m is?",
+    "options": {
+      "A": "25 m/s",
+      "B": "100 m/s",
+      "C": "52 m/s",
+      "D": "0.04 m/s"
+    },
+    "correctAnswer": "B",
+    "explanation": "v = fλ = 50 × 2 = 100 m/s.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-056",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Refraction is the change in direction of a wave when it?",
+    "options": {
+      "A": "Bounces off a surface",
+      "B": "Passes from one medium to another",
+      "C": "Spreads around an obstacle",
+      "D": "Is absorbed"
+    },
+    "correctAnswer": "B",
+    "explanation": "Refraction occurs due to a change in wave speed at a boundary.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-057",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "A convex lens is used to?",
+    "options": {
+      "A": "Diverge light rays",
+      "B": "Converge light rays",
+      "C": "Reflect light",
+      "D": "Absorb light"
+    },
+    "correctAnswer": "B",
+    "explanation": "A convex (converging) lens focuses parallel rays to a real focus.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-058",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "The unit of electric current is the?",
+    "options": {
+      "A": "Volt",
+      "B": "Ohm",
+      "C": "Ampere",
+      "D": "Coulomb"
+    },
+    "correctAnswer": "C",
+    "explanation": "Current is measured in amperes.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-059",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Ohm’s law states that V is proportional to I when?",
+    "options": {
+      "A": "Temperature is constant",
+      "B": "Pressure varies",
+      "C": "Mass changes",
+      "D": "Volume is constant"
+    },
+    "correctAnswer": "A",
+    "explanation": "Ohm’s law holds for metallic conductors at constant temperature.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2022-060",
+    "subject": "physics",
+    "year": 2022,
+    "origin": "original_practice",
+    "question": "Three 3 Ω resistors in series have total resistance?",
+    "options": {
+      "A": "1 Ω",
+      "B": "3 Ω",
+      "C": "6 Ω",
+      "D": "9 Ω"
+    },
+    "correctAnswer": "D",
+    "explanation": "Series: R = 3 + 3 + 3 = 9 Ω.",
     "topic": "Physics",
     "difficulty": "medium",
     "syllabusTopic": "JAMB Physics"
