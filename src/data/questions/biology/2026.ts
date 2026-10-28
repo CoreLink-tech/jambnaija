@@ -1,726 +1,726 @@
 import type { JambQuestion } from "../types";
 
-/** Original practice — biology 2026. Not official past questions. */
+/** Biology 2026 — compiled JAMB-style past/mock questions. */
 const questions: JambQuestion[] = [
   {
     "id": "bio-2026-001",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Powerhouse of cell (practice 2026 #1)",
+    "question": "Which of the following organisms exhibit cellular level of organization only?",
     "options": {
-      "A": "nucleus",
-      "B": "mitochondrion",
-      "C": "ribosome",
-      "D": "vacuole"
+      "A": "Sponges",
+      "B": "Hydra",
+      "C": "Earthworm",
+      "D": "Fish"
     },
-    "correctAnswer": "B",
-    "explanation": "Mitochondrion.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Sponges (Porifera) have a cellular level of organization without true tissues; Hydra has tissue-level organization.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-002",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Photosynthesis site (practice 2026 #2)",
+    "question": "The organelle directly responsible for the synthesis of proteins within a eukaryotic cell is the?",
     "options": {
-      "A": "root",
-      "B": "bark",
-      "C": "leaf chloroplasts",
-      "D": "petals"
+      "A": "Mitochondrion",
+      "B": "Ribosome",
+      "C": "Lysosome",
+      "D": "Golgi apparatus"
     },
-    "correctAnswer": "C",
-    "explanation": "Chloroplasts.",
-    "topic": "General",
+    "correctAnswer": "B",
+    "explanation": "Ribosomes are the site of translation, where proteins are assembled from amino acids.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-003",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "DNA stands for (practice 2026 #3)",
+    "question": "Which of the following processes requires ATP energy to move molecules against a concentration gradient?",
     "options": {
-      "A": "Deoxyribonucleic acid",
-      "B": "Diribonucleic acid",
-      "C": "Dicarboxylic acid",
-      "D": "Deoxyribose nitrate"
+      "A": "Diffusion",
+      "B": "Osmosis",
+      "C": "Active transport",
+      "D": "Facilitated diffusion"
     },
-    "correctAnswer": "A",
-    "explanation": "DNA.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Active transport uses ATP to pump substances against their concentration gradient.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-004",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Basic classification unit (practice 2026 #4)",
+    "question": "Red blood cells placed in a hypotonic solution will experience water influx and eventually burst. This phenomenon is known as?",
     "options": {
-      "A": "family",
-      "B": "genus",
-      "C": "species",
-      "D": "order"
+      "A": "Plasmolysis",
+      "B": "Hemolysis",
+      "C": "Turgidity",
+      "D": "Crenation"
     },
-    "correctAnswer": "C",
-    "explanation": "Species.",
-    "topic": "General",
+    "correctAnswer": "B",
+    "explanation": "Hemolysis is the bursting of red blood cells due to excessive water uptake in a hypotonic medium.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-005",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Natural selection by (practice 2026 #5)",
+    "question": "Which of the following organelles is known as the “powerhouse” of the cell?",
     "options": {
-      "A": "Mendel",
-      "B": "Darwin",
-      "C": "Pasteur",
-      "D": "Hooke"
+      "A": "Nucleus",
+      "B": "Mitochondrion",
+      "C": "Chloroplast",
+      "D": "Ribosome"
     },
     "correctAnswer": "B",
-    "explanation": "Darwin.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Mitochondria generate ATP through aerobic respiration, earning the nickname “powerhouse.”",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-006",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Producers (practice 2026 #6)",
+    "question": "Which of the following best distinguishes a living organism from a non-living object?",
     "options": {
-      "A": "consumers only",
-      "B": "make own food",
-      "C": "parasites only",
-      "D": "detritivores only"
+      "A": "Ability to move",
+      "B": "Ability to reproduce",
+      "C": "Presence of carbon",
+      "D": "Ability to grow"
     },
     "correctAnswer": "B",
-    "explanation": "Autotrophs.",
-    "topic": "General",
+    "explanation": "Reproduction is a fundamental characteristic of living organisms; non-living things do not reproduce.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-007",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Transpiration (practice 2026 #7)",
+    "question": "Spines in xerophytic plants help chiefly in?",
     "options": {
-      "A": "blood loss",
-      "B": "water vapour loss from plants",
-      "C": "bone growth",
-      "D": "light absorption only"
+      "A": "Photosynthesis",
+      "B": "Reducing water loss",
+      "C": "Attracting pollinators",
+      "D": "Absorbing nutrients"
     },
     "correctAnswer": "B",
-    "explanation": "Water vapour.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Spines are modified leaves that reduce surface area for transpiration, conserving water in arid environments.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-008",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "RBCs transport (practice 2026 #8)",
+    "question": "A pair of lungs found in mammals excrete?",
     "options": {
-      "A": "urea",
-      "B": "oxygen",
-      "C": "bile",
-      "D": "starch"
+      "A": "Urea",
+      "B": "Carbon dioxide and water vapour",
+      "C": "Uric acid",
+      "D": "Ammonia"
     },
     "correctAnswer": "B",
-    "explanation": "Oxygen.",
-    "topic": "General",
+    "explanation": "Lungs excrete CO₂ and water vapour as gaseous waste products of respiration.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-009",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Osmosis needs (practice 2026 #9)",
+    "question": "Which of the following best explains the flow of energy in an ecosystem?",
     "options": {
-      "A": "metal sheet",
-      "B": "selectively permeable membrane",
-      "C": "vacuum",
-      "D": "wood only"
+      "A": "It is cyclic",
+      "B": "It is unidirectional",
+      "C": "It is bidirectional",
+      "D": "It is random"
     },
     "correctAnswer": "B",
-    "explanation": "SP membrane.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Energy flows in one direction—from the sun → producers → consumers → decomposers—and is lost as heat at each trophic level.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-010",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Malaria vector (practice 2026 #10)",
+    "question": "In a food chain, organisms that manufacture their own food are?",
     "options": {
-      "A": "housefly",
-      "B": "Anopheles mosquito",
-      "C": "cockroach",
-      "D": "bedbug only"
+      "A": "Consumers",
+      "B": "Producers",
+      "C": "Decomposers",
+      "D": "Predators"
     },
     "correctAnswer": "B",
-    "explanation": "Anopheles.",
-    "topic": "General",
+    "explanation": "Producers (autotrophs) synthesize organic food from inorganic substances using energy from the sun.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-011",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Cell control centre (practice 2026 #11)",
+    "question": "If all the predators in an ecosystem are removed, the immediate effect will be?",
     "options": {
-      "A": "mitochondrion",
-      "B": "nucleus",
-      "C": "cell wall",
-      "D": "lysosome"
+      "A": "Increase in prey population",
+      "B": "Decrease in prey population",
+      "C": "No change",
+      "D": "Increase in producers"
     },
-    "correctAnswer": "B",
-    "explanation": "Nucleus.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Without predators, prey populations can grow rapidly, potentially exceeding carrying capacity.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-012",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Genes located on (practice 2026 #12)",
+    "question": "The maximum number of individuals an environment can support is known as?",
     "options": {
-      "A": "ribosomes only",
-      "B": "chromosomes",
-      "C": "cell walls only",
-      "D": "vacuoles only"
+      "A": "Population density",
+      "B": "Carrying capacity",
+      "C": "Biotic potential",
+      "D": "Ecological niche"
     },
     "correctAnswer": "B",
-    "explanation": "Chromosomes.",
-    "topic": "General",
+    "explanation": "Carrying capacity (K) is the maximum population size an ecosystem can sustain indefinitely.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-013",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Food chain starts with (practice 2026 #13)",
+    "question": "Which of the following interactions benefits both organisms?",
     "options": {
-      "A": "carnivore",
-      "B": "producer",
-      "C": "decomposer only",
-      "D": "parasite"
+      "A": "Parasitism",
+      "B": "Commensalism",
+      "C": "Mutualism",
+      "D": "Predation"
     },
-    "correctAnswer": "B",
-    "explanation": "Producer.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Mutualism is a symbiotic relationship where both species benefit (e.g., bees and flowers).",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-014",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Pollination is transfer of pollen (practice 2026 #14)",
+    "question": "Which of the following leads to eutrophication in water bodies?",
     "options": {
-      "A": "ovule to root",
-      "B": "anther to stigma",
-      "C": "leaf to stem",
-      "D": "seed to fruit"
+      "A": "Excess nitrogen and phosphorus runoff",
+      "B": "Decreased nutrient levels",
+      "C": "Increased oxygen levels",
+      "D": "Reduced algal growth"
     },
-    "correctAnswer": "B",
-    "explanation": "Anther\u2192stigma.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Nutrient runoff (fertilizers) causes algal blooms, which deplete oxygen when they decompose, leading to eutrophication.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-015",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Plant cells have (practice 2026 #15)",
+    "question": "The basic unit of inheritance is the?",
     "options": {
-      "A": "mitochondria only difference",
-      "B": "cell wall and often chloroplasts",
-      "C": "no nucleus",
-      "D": "no cytoplasm"
+      "A": "Chromosome",
+      "B": "Gene",
+      "C": "DNA",
+      "D": "Allele"
     },
     "correctAnswer": "B",
-    "explanation": "Wall/chloroplasts.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "A gene is the fundamental unit of heredity; it is a segment of DNA that codes for a trait.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-016",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Fertilisation is fusion of (practice 2026 #16)",
+    "question": "The sudden change in a gene or chromosome is referred to as?",
     "options": {
-      "A": "two leaves",
-      "B": "gametes",
-      "C": "two stems",
-      "D": "two roots"
+      "A": "Mutation",
+      "B": "Variation",
+      "C": "Adaptation",
+      "D": "Evolution"
     },
-    "correctAnswer": "B",
-    "explanation": "Gametes.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "A mutation is a sudden, heritable change in the DNA sequence of a gene or chromosome.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-017",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Decomposers (practice 2026 #17)",
+    "question": "A person with blood group O is regarded as a universal donor because?",
     "options": {
-      "A": "make O2 only",
-      "B": "recycle nutrients",
-      "C": "stop growth",
-      "D": "make light"
+      "A": "Has both A and B antigens",
+      "B": "Has no A or B antigens on red cells",
+      "C": "Has anti-A and anti-B antibodies",
+      "D": "Can receive any blood type"
     },
     "correctAnswer": "B",
-    "explanation": "Recycle nutrients.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Group O red cells lack A and B surface antigens, so they are not attacked by recipient antibodies.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-018",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Kidney function (practice 2026 #18)",
+    "question": "The part of the brain responsible for balance and posture is the?",
     "options": {
-      "A": "digest fat",
-      "B": "excretion and osmoregulation",
-      "C": "pump blood",
-      "D": "hearing"
+      "A": "Cerebrum",
+      "B": "Cerebellum",
+      "C": "Medulla oblongata",
+      "D": "Thalamus"
     },
     "correctAnswer": "B",
-    "explanation": "Excretion.",
-    "topic": "General",
+    "explanation": "The cerebellum coordinates equilibrium, posture, and smooth muscular movements.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-019",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Mammals have (practice 2026 #19)",
+    "question": "Which of the following is a function of the liver?",
     "options": {
-      "A": "feathers",
-      "B": "mammary glands and hair",
-      "C": "scales only",
-      "D": "gills only"
+      "A": "Production of insulin",
+      "B": "Detoxification of harmful substances",
+      "C": "Pumping blood",
+      "D": "Gas exchange"
     },
     "correctAnswer": "B",
-    "explanation": "Hair/mammary.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "The liver detoxifies drugs and toxins, stores glycogen, and produces bile; insulin is produced by the pancreas.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-020",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Ribosomes do (practice 2026 #20)",
+    "question": "The deficiency of Vitamin C leads to a disease called?",
     "options": {
-      "A": "photosynthesis",
-      "B": "protein synthesis",
-      "C": "lipid storage only",
-      "D": "DNA only"
+      "A": "Rickets",
+      "B": "Scurvy",
+      "C": "Beri-beri",
+      "D": "Pellagra"
     },
     "correctAnswer": "B",
-    "explanation": "Proteins.",
-    "topic": "General",
+    "explanation": "Vitamin C deficiency causes scurvy, characterized by bleeding gums and poor wound healing.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-021",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Enzymes are mainly (practice 2026 #21)",
+    "question": "Which of the following is a vestigial organ in humans?",
     "options": {
-      "A": "carbohydrates",
-      "B": "catalytic proteins",
-      "C": "salts",
-      "D": "metals only"
+      "A": "Liver",
+      "B": "Appendix",
+      "C": "Kidney",
+      "D": "Pancreas"
     },
     "correctAnswer": "B",
-    "explanation": "Proteins.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "The vermiform appendix is considered vestigial—it has lost most of its original function during evolution.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-022",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Competition when (practice 2026 #22)",
+    "question": "Which of the following is a characteristic of Kingdom Monera?",
     "options": {
-      "A": "never meet",
-      "B": "need same limited resource",
-      "C": "photosynthesise only",
-      "D": "hibernate"
+      "A": "Presence of a nuclear membrane",
+      "B": "Presence of chlorophyll in all members",
+      "C": "Prokaryotic cell organization",
+      "D": "Multicellular body"
     },
-    "correctAnswer": "B",
-    "explanation": "Shared resource.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Monera (bacteria) are prokaryotes—they lack a membrane-bound nucleus and organelles.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-023",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Dominant allele expressed (practice 2026 #23)",
+    "question": "In the binomial system of nomenclature, the first name represents the?",
     "options": {
-      "A": "only homozygous recessive",
-      "B": "when present",
-      "C": "never",
-      "D": "only bacteria"
+      "A": "Species",
+      "B": "Genus",
+      "C": "Family",
+      "D": "Order"
     },
     "correctAnswer": "B",
-    "explanation": "When present.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "The binomial name consists of the genus (capitalized) followed by the species (lowercase).",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-024",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Cell membrane is (practice 2026 #24)",
+    "question": "Euglena is significant in the study of living organisms because it?",
     "options": {
-      "A": "fully permeable always",
-      "B": "selectively permeable",
-      "C": "cellulose in animals",
-      "D": "absent in plants"
+      "A": "Is purely autotrophic",
+      "B": "Is purely heterotrophic",
+      "C": "Exhibits both plant and animal characteristics",
+      "D": "Is a virus"
     },
-    "correctAnswer": "B",
-    "explanation": "Selective.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Euglena has chloroplasts (plant-like) but can also move and ingest food (animal-like), blurring kingdom boundaries.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-025",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Habitat is (practice 2026 #25)",
+    "question": "A feature common to bacteria and blue-green algae is that both?",
     "options": {
-      "A": "diet only",
-      "B": "where organism lives",
-      "C": "speed",
-      "D": "scientific name only"
+      "A": "Are eukaryotic",
+      "B": "Have a nuclear membrane",
+      "C": "Are prokaryotic",
+      "D": "Are multicellular"
     },
-    "correctAnswer": "B",
-    "explanation": "Living place.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Both bacteria and cyanobacteria are prokaryotes, lacking a true nucleus.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-026",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Left ventricle pumps to (practice 2026 #26)",
+    "question": "Rhizopus is classified under fungi mainly because it?",
     "options": {
-      "A": "lungs only",
-      "B": "body via aorta",
-      "C": "right atrium only",
-      "D": "liver only"
+      "A": "Is photosynthetic",
+      "B": "Has chitinous cell walls and is heterotrophic",
+      "C": "Is unicellular",
+      "D": "Has flagella"
     },
     "correctAnswer": "B",
-    "explanation": "Systemic.",
-    "topic": "General",
+    "explanation": "Fungi have chitinous cell walls and obtain nutrients heterotrophically (saprophytically or parasitically).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-027",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Virus needs (practice 2026 #27)",
+    "question": "A characteristic feature of bryophytes is that they?",
     "options": {
-      "A": "always nucleus",
-      "B": "host to replicate",
-      "C": "to be multicellular",
-      "D": "to photosynthesise"
+      "A": "Have vascular tissue",
+      "B": "Require water for fertilization",
+      "C": "Produce seeds",
+      "D": "Have true roots"
     },
     "correctAnswer": "B",
-    "explanation": "Host.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Bryophytes (mosses, liverworts) have flagellated sperm that require a film of water to swim to the egg.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-028",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Proteins digest to (practice 2026 #28)",
+    "question": "The flippers of a whale and the fins of a fish are examples of?",
     "options": {
-      "A": "fatty acids",
-      "B": "amino acids",
-      "C": "glucose only",
-      "D": "glycerol only"
+      "A": "Homologous structures",
+      "B": "Analogous structures",
+      "C": "Vestigial structures",
+      "D": "Atavistic structures"
     },
     "correctAnswer": "B",
-    "explanation": "Amino acids.",
-    "topic": "General",
+    "explanation": "Analogous structures have similar functions (swimming) but different evolutionary origins; they are not homologous.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-029",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Lungs mainly do (practice 2026 #29)",
+    "question": "Which of the following statements is incorrect about the plasma membrane?",
     "options": {
-      "A": "digestion",
-      "B": "gaseous exchange",
-      "C": "urea excretion only",
-      "D": "blood making only"
+      "A": "It is selectively permeable",
+      "B": "It contains proteins and lipids",
+      "C": "It is a rigid, non-living structure",
+      "D": "It regulates the movement of substances into and out of the cell"
     },
-    "correctAnswer": "B",
-    "explanation": "Gas exchange.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "The plasma membrane is flexible and living, not rigid; it is selectively permeable and composed of a phospholipid bilayer with embedded proteins.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-030",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Mendel studied (practice 2026 #30)",
+    "question": "The water cycle is maintained mainly by?",
     "options": {
-      "A": "evolution only",
-      "B": "pea heredity",
-      "C": "germ theory",
-      "D": "cell walls"
+      "A": "Evaporation and precipitation",
+      "B": "Photosynthesis and respiration",
+      "C": "Transpiration only",
+      "D": "Condensation only"
     },
-    "correctAnswer": "B",
-    "explanation": "Peas.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "The water cycle is driven by evaporation (from water bodies) and precipitation (rain, snow), with transpiration and condensation as key sub-processes.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-031",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Xylem transports (practice 2026 #31)",
+    "question": "Plants of temperate origin can be grown in tropical areas in the vegetation zones of?",
     "options": {
-      "A": "sugars mainly downward only in all texts",
-      "B": "water and minerals",
-      "C": "only animals",
-      "D": "only air"
+      "A": "Rainforest",
+      "B": "Savanna",
+      "C": "Montane (highland) regions",
+      "D": "Desert"
     },
-    "correctAnswer": "B",
-    "explanation": "Water/minerals.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Montane (highland) regions in the tropics have cooler temperatures suitable for temperate crops.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-032",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Phloem transports (practice 2026 #32)",
+    "question": "Which of the following is the basic unit of life?",
     "options": {
-      "A": "only water upward",
-      "B": "organic nutrients",
-      "C": "only stones",
-      "D": "only metals"
+      "A": "Tissue",
+      "B": "Organ",
+      "C": "Cell",
+      "D": "System"
     },
-    "correctAnswer": "B",
-    "explanation": "Food/nutrients.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "The cell is the smallest structural and functional unit of living organisms.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-033",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Aerobic respiration needs (practice 2026 #33)",
+    "question": "The main function of the stem is to?",
     "options": {
-      "A": "nitrogen only",
-      "B": "oxygen",
-      "C": "only darkness",
-      "D": "only vacuum"
+      "A": "Absorb water",
+      "B": "Produce seeds",
+      "C": "Support the plant",
+      "D": "Manufacture food"
     },
-    "correctAnswer": "B",
-    "explanation": "Oxygen.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "The stem supports leaves, flowers, and fruits, and conducts water and nutrients.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-034",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "White blood cells help in (practice 2026 #34)",
+    "question": "Which process involves the loss of water through the skin?",
     "options": {
-      "A": "carrying O2 only",
-      "B": "defence/immunity",
-      "C": "photosynthesis",
-      "D": "digestion of steel"
+      "A": "Respiration",
+      "B": "Transpiration",
+      "C": "Perspiration",
+      "D": "Excretion"
     },
-    "correctAnswer": "B",
-    "explanation": "Immunity.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Perspiration (sweating) is the loss of water through the skin, aiding temperature regulation.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-035",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Ecosystem is (practice 2026 #35)",
+    "question": "The female reproductive cell in humans is the?",
     "options": {
-      "A": "one organism only",
-      "B": "community + environment",
-      "C": "only climate",
-      "D": "only soil"
+      "A": "Sperm",
+      "B": "Zygote",
+      "C": "Ovum",
+      "D": "Embryo"
     },
-    "correctAnswer": "B",
-    "explanation": "Biotic+abiotic.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "The ovum (egg) is the female gamete; the sperm is male, and the zygote is the fertilized egg.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-036",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Mutation is (practice 2026 #36)",
+    "question": "Which of the following is a non-renewable resource?",
     "options": {
-      "A": "always useful",
-      "B": "change in genetic material",
-      "C": "always lethal",
-      "D": "not inherited ever"
+      "A": "Wind",
+      "B": "Water",
+      "C": "Sunlight",
+      "D": "Coal"
     },
-    "correctAnswer": "B",
-    "explanation": "Genetic change.",
-    "topic": "General",
+    "correctAnswer": "D",
+    "explanation": "Coal is a finite fossil fuel; wind, water, and sunlight are renewable.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-037",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Chlorophyll is important in (practice 2026 #37)",
+    "question": "The breakdown of food into simpler substances is called?",
     "options": {
-      "A": "digestion",
-      "B": "trapping light energy",
-      "C": "blood clotting",
-      "D": "bone repair"
+      "A": "Assimilation",
+      "B": "Digestion",
+      "C": "Absorption",
+      "D": "Respiration"
     },
     "correctAnswer": "B",
-    "explanation": "Light capture.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Digestion is the mechanical and chemical breakdown of food into absorbable nutrients.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-038",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Synapse is junction between (practice 2026 #38)",
+    "question": "Which of the following organisms carries out photosynthesis?",
     "options": {
-      "A": "two bones",
-      "B": "neurons",
-      "C": "two leaves",
-      "D": "two roots"
+      "A": "Mushroom",
+      "B": "Bacteria",
+      "C": "Green plant",
+      "D": "Virus"
     },
-    "correctAnswer": "B",
-    "explanation": "Nerve cells.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Green plants contain chlorophyll and carry out photosynthesis; mushrooms are fungi, and viruses are non-living.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-039",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Hormones are (practice 2026 #39)",
+    "question": "The movement of pollen grains from the anther to the stigma is known as?",
     "options": {
-      "A": "digestive stones",
-      "B": "chemical messengers",
-      "C": "only vitamins from sun",
-      "D": "only minerals"
+      "A": "Fertilization",
+      "B": "Germination",
+      "C": "Pollination",
+      "D": "Reproduction"
     },
-    "correctAnswer": "B",
-    "explanation": "Messengers.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Pollination is the transfer of pollen from the male anther to the female stigma.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2026-040",
     "subject": "biology",
     "year": 2026,
     "origin": "original_practice",
-    "question": "Biodiversity means (practice 2026 #40)",
+    "question": "Which of the following is NOT a function of the skeleton?",
     "options": {
-      "A": "one species only",
-      "B": "variety of life forms",
-      "C": "only climate",
-      "D": "only rocks"
+      "A": "Protection",
+      "B": "Support",
+      "C": "Movement",
+      "D": "Digestion"
     },
-    "correctAnswer": "B",
-    "explanation": "Variety of life.",
-    "topic": "General",
+    "correctAnswer": "D",
+    "explanation": "Digestion is a function of the digestive system; the skeleton provides protection, support, and movement. --- You now have 280 copyable questions (40 per year) with options, answers, and explanations. Would you like me to focus on any specific topic area (e.g., genetics, ecology) for additional drilling, or provide the questions in a different format (e.g., plain text without markdown, or separated by topic)?",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   }
 ];
 

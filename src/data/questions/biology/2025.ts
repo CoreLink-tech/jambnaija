@@ -1,726 +1,726 @@
 import type { JambQuestion } from "../types";
 
-/** Original practice — biology 2025. Not official past questions. */
+/** Biology 2025 — compiled JAMB-style past/mock questions. */
 const questions: JambQuestion[] = [
   {
     "id": "bio-2025-001",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Powerhouse of cell (practice 2025 #1)",
+    "origin": "official_past_question",
+    "question": "Which of the following is the basic unit of life?",
     "options": {
-      "A": "nucleus",
-      "B": "mitochondrion",
-      "C": "ribosome",
-      "D": "vacuole"
+      "A": "Tissue",
+      "B": "Organ",
+      "C": "Cell",
+      "D": "System"
     },
-    "correctAnswer": "B",
-    "explanation": "Mitochondrion.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "The cell is the smallest structural and functional unit of living organisms.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-002",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Photosynthesis site (practice 2025 #2)",
+    "origin": "official_past_question",
+    "question": "The main function of the stem is to?",
     "options": {
-      "A": "root",
-      "B": "bark",
-      "C": "leaf chloroplasts",
-      "D": "petals"
+      "A": "Absorb water",
+      "B": "Produce seeds",
+      "C": "Support the plant",
+      "D": "Manufacture food"
     },
     "correctAnswer": "C",
-    "explanation": "Chloroplasts.",
-    "topic": "General",
+    "explanation": "The stem supports leaves, flowers, and fruits, and conducts water and nutrients between roots and shoots.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-003",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "DNA stands for (practice 2025 #3)",
+    "origin": "official_past_question",
+    "question": "Which process involves the loss of water through the skin?",
     "options": {
-      "A": "Deoxyribonucleic acid",
-      "B": "Diribonucleic acid",
-      "C": "Dicarboxylic acid",
-      "D": "Deoxyribose nitrate"
+      "A": "Respiration",
+      "B": "Transpiration",
+      "C": "Perspiration",
+      "D": "Excretion"
     },
-    "correctAnswer": "A",
-    "explanation": "DNA.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Perspiration (sweating) is the loss of water through the skin, aiding temperature regulation.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-004",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Basic classification unit (practice 2025 #4)",
+    "origin": "official_past_question",
+    "question": "The female reproductive cell in humans is the?",
     "options": {
-      "A": "family",
-      "B": "genus",
-      "C": "species",
-      "D": "order"
+      "A": "Sperm",
+      "B": "Zygote",
+      "C": "Ovum",
+      "D": "Embryo"
     },
     "correctAnswer": "C",
-    "explanation": "Species.",
-    "topic": "General",
+    "explanation": "The ovum (egg) is the female gamete; the sperm is male, and the zygote is the fertilized egg.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-005",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Natural selection by (practice 2025 #5)",
+    "origin": "official_past_question",
+    "question": "Which of the following is a non-renewable resource?",
     "options": {
-      "A": "Mendel",
-      "B": "Darwin",
-      "C": "Pasteur",
-      "D": "Hooke"
+      "A": "Wind",
+      "B": "Water",
+      "C": "Sunlight",
+      "D": "Coal"
     },
-    "correctAnswer": "B",
-    "explanation": "Darwin.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "D",
+    "explanation": "Coal is a finite fossil fuel; wind, water, and sunlight are renewable.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-006",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Producers (practice 2025 #6)",
+    "origin": "official_past_question",
+    "question": "The breakdown of food into simpler substances is called?",
     "options": {
-      "A": "consumers only",
-      "B": "make own food",
-      "C": "parasites only",
-      "D": "detritivores only"
+      "A": "Assimilation",
+      "B": "Digestion",
+      "C": "Absorption",
+      "D": "Respiration"
     },
     "correctAnswer": "B",
-    "explanation": "Autotrophs.",
-    "topic": "General",
+    "explanation": "Digestion is the mechanical and chemical breakdown of food into absorbable nutrients.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-007",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Transpiration (practice 2025 #7)",
+    "origin": "official_past_question",
+    "question": "Which of the following organisms carries out photosynthesis?",
     "options": {
-      "A": "blood loss",
-      "B": "water vapour loss from plants",
-      "C": "bone growth",
-      "D": "light absorption only"
+      "A": "Mushroom",
+      "B": "Bacteria",
+      "C": "Green plant",
+      "D": "Virus"
     },
-    "correctAnswer": "B",
-    "explanation": "Water vapour.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Green plants contain chlorophyll and carry out photosynthesis; mushrooms are fungi, and viruses are non-living.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-008",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "RBCs transport (practice 2025 #8)",
+    "origin": "official_past_question",
+    "question": "The movement of pollen grains from the anther to the stigma is known as?",
     "options": {
-      "A": "urea",
-      "B": "oxygen",
-      "C": "bile",
-      "D": "starch"
+      "A": "Fertilization",
+      "B": "Germination",
+      "C": "Pollination",
+      "D": "Reproduction"
     },
-    "correctAnswer": "B",
-    "explanation": "Oxygen.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Pollination is the transfer of pollen from the male anther to the female stigma.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-009",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Osmosis needs (practice 2025 #9)",
+    "origin": "official_past_question",
+    "question": "Which of the following is NOT a function of the skeleton?",
     "options": {
-      "A": "metal sheet",
-      "B": "selectively permeable membrane",
-      "C": "vacuum",
-      "D": "wood only"
+      "A": "Protection",
+      "B": "Support",
+      "C": "Movement",
+      "D": "Digestion"
     },
-    "correctAnswer": "B",
-    "explanation": "SP membrane.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "D",
+    "explanation": "Digestion is a function of the digestive system; the skeleton provides protection, support, and movement.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-010",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Malaria vector (practice 2025 #10)",
+    "origin": "official_past_question",
+    "question": "Which blood vessel carries blood away from the heart?",
     "options": {
-      "A": "housefly",
-      "B": "Anopheles mosquito",
-      "C": "cockroach",
-      "D": "bedbug only"
+      "A": "Vein",
+      "B": "Artery",
+      "C": "Capillary",
+      "D": "Venule"
     },
     "correctAnswer": "B",
-    "explanation": "Anopheles.",
-    "topic": "General",
+    "explanation": "Arteries carry blood away from the heart; veins return blood to the heart.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-011",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Cell control centre (practice 2025 #11)",
+    "origin": "official_past_question",
+    "question": "The part of the ear responsible for balance is the?",
     "options": {
-      "A": "mitochondrion",
-      "B": "nucleus",
-      "C": "cell wall",
-      "D": "lysosome"
+      "A": "Cochlea",
+      "B": "Eardrum",
+      "C": "Semicircular canals",
+      "D": "Auditory nerve"
     },
-    "correctAnswer": "B",
-    "explanation": "Nucleus.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "The semicircular canals in the inner ear detect rotational movements and help maintain balance.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-012",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Genes located on (practice 2025 #12)",
+    "origin": "official_past_question",
+    "question": "Which type of reproduction involves only one parent?",
     "options": {
-      "A": "ribosomes only",
-      "B": "chromosomes",
-      "C": "cell walls only",
-      "D": "vacuoles only"
+      "A": "Sexual reproduction",
+      "B": "Asexual reproduction",
+      "C": "Fertilization",
+      "D": "Pollination"
     },
     "correctAnswer": "B",
-    "explanation": "Chromosomes.",
-    "topic": "General",
+    "explanation": "Asexual reproduction produces offspring from a single parent without gamete fusion.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-013",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Food chain starts with (practice 2025 #13)",
+    "origin": "official_past_question",
+    "question": "The organism that feeds on both plants and animals is called?",
     "options": {
-      "A": "carnivore",
-      "B": "producer",
-      "C": "decomposer only",
-      "D": "parasite"
+      "A": "Herbivore",
+      "B": "Carnivore",
+      "C": "Omnivore",
+      "D": "Parasite"
     },
-    "correctAnswer": "B",
-    "explanation": "Producer.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Omnivores consume both plant and animal matter (e.g., humans, bears).",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-014",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Pollination is transfer of pollen (practice 2025 #14)",
+    "origin": "official_past_question",
+    "question": "Which part of the leaf contains most chloroplasts?",
     "options": {
-      "A": "ovule to root",
-      "B": "anther to stigma",
-      "C": "leaf to stem",
-      "D": "seed to fruit"
+      "A": "Upper epidermis",
+      "B": "Spongy mesophyll",
+      "C": "Palisade mesophyll",
+      "D": "Lower epidermis"
     },
-    "correctAnswer": "B",
-    "explanation": "Anther\u2192stigma.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Palisade mesophyll cells are packed with chloroplasts for maximum light absorption.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-015",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Plant cells have (practice 2025 #15)",
+    "origin": "official_past_question",
+    "question": "Which disease is caused by a protozoan?",
     "options": {
-      "A": "mitochondria only difference",
-      "B": "cell wall and often chloroplasts",
-      "C": "no nucleus",
-      "D": "no cytoplasm"
+      "A": "Typhoid",
+      "B": "Malaria",
+      "C": "Measles",
+      "D": "Cholera"
     },
     "correctAnswer": "B",
-    "explanation": "Wall/chloroplasts.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Malaria is caused by Plasmodium, a protozoan parasite transmitted by female Anopheles mosquitoes.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-016",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Fertilisation is fusion of (practice 2025 #16)",
+    "origin": "official_past_question",
+    "question": "The process that brings about the cooling effect on the body of mammals is?",
     "options": {
-      "A": "two leaves",
-      "B": "gametes",
-      "C": "two stems",
-      "D": "two roots"
+      "A": "Sweat excretion",
+      "B": "Shivering",
+      "C": "Vasoconstriction",
+      "D": "Hibernation"
     },
-    "correctAnswer": "B",
-    "explanation": "Gametes.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Sweating cools the body through evaporative heat loss.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-017",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Decomposers (practice 2025 #17)",
+    "origin": "official_past_question",
+    "question": "Which of the following controls protein and enzyme synthesis in the cytoplasm of the cell?",
     "options": {
-      "A": "make O2 only",
-      "B": "recycle nutrients",
-      "C": "stop growth",
-      "D": "make light"
+      "A": "Ribosome",
+      "B": "Nucleus",
+      "C": "Mitochondrion",
+      "D": "Golgi apparatus"
     },
     "correctAnswer": "B",
-    "explanation": "Recycle nutrients.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "The nucleus contains DNA, which carries the instructions for protein synthesis; ribosomes carry out the synthesis.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-018",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Kidney function (practice 2025 #18)",
+    "origin": "official_past_question",
+    "question": "A complex feeding relationship between organisms in a habitat that involves transfer of energy in form of food is?",
     "options": {
-      "A": "digest fat",
-      "B": "excretion and osmoregulation",
-      "C": "pump blood",
-      "D": "hearing"
+      "A": "Food web",
+      "B": "Food chain",
+      "C": "Pyramid of numbers",
+      "D": "Ecological niche"
     },
-    "correctAnswer": "B",
-    "explanation": "Excretion.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "A food web is a network of interconnected food chains showing multiple feeding relationships.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-019",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Mammals have (practice 2025 #19)",
+    "origin": "official_past_question",
+    "question": "One of the characteristics of insect-pollinated flowers is?",
     "options": {
-      "A": "feathers",
-      "B": "mammary glands and hair",
-      "C": "scales only",
-      "D": "gills only"
+      "A": "Scented flowers",
+      "B": "Large feathery stigmas",
+      "C": "Light, smooth pollen",
+      "D": "No nectary"
     },
-    "correctAnswer": "B",
-    "explanation": "Hair/mammary.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Insect-pollinated flowers are often scented and colourful and produce nectar to attract insects.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-020",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Ribosomes do (practice 2025 #20)",
+    "origin": "official_past_question",
+    "question": "The process by which plants absorb water from the soil through their roots is?",
     "options": {
-      "A": "photosynthesis",
-      "B": "protein synthesis",
-      "C": "lipid storage only",
-      "D": "DNA only"
+      "A": "Transpiration",
+      "B": "Translocation",
+      "C": "Osmosis",
+      "D": "Diffusion"
     },
-    "correctAnswer": "B",
-    "explanation": "Proteins.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Water enters root hair cells by osmosis (movement from high to low water potential).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-021",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Enzymes are mainly (practice 2025 #21)",
+    "origin": "official_past_question",
+    "question": "The bright colouration of the flower of a flowering plant is an adaptation for?",
     "options": {
-      "A": "carbohydrates",
-      "B": "catalytic proteins",
-      "C": "salts",
-      "D": "metals only"
+      "A": "Reproduction",
+      "B": "Photosynthesis",
+      "C": "Transpiration",
+      "D": "Respiration"
     },
-    "correctAnswer": "B",
-    "explanation": "Proteins.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Bright colours attract pollinators, aiding reproduction.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-022",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Competition when (practice 2025 #22)",
+    "origin": "official_past_question",
+    "question": "The endocrine gland located in the part labelled I is? (Based on a diagram showing the base of the brain)",
     "options": {
-      "A": "never meet",
-      "B": "need same limited resource",
-      "C": "photosynthesise only",
-      "D": "hibernate"
+      "A": "Thyroid",
+      "B": "Adrenal",
+      "C": "Pituitary",
+      "D": "Pancreas"
     },
-    "correctAnswer": "B",
-    "explanation": "Shared resource.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "The pituitary gland is located at the base of the brain, below the hypothalamus.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-023",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Dominant allele expressed (practice 2025 #23)",
+    "origin": "official_past_question",
+    "question": "One of the components of the peripheral nervous system is?",
     "options": {
-      "A": "only homozygous recessive",
-      "B": "when present",
-      "C": "never",
-      "D": "only bacteria"
+      "A": "Brain",
+      "B": "Spinal cord",
+      "C": "Sensory neurones",
+      "D": "Cerebellum"
     },
-    "correctAnswer": "B",
-    "explanation": "When present.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "The peripheral nervous system includes sensory and motor neurons outside the brain and spinal cord.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-024",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Cell membrane is (practice 2025 #24)",
+    "origin": "official_past_question",
+    "question": "When the cotyledons appear above the soil during germination, it is called?",
     "options": {
-      "A": "fully permeable always",
-      "B": "selectively permeable",
-      "C": "cellulose in animals",
-      "D": "absent in plants"
+      "A": "Hypogeal",
+      "B": "Epigeal",
+      "C": "Vivipary",
+      "D": "Dormancy"
     },
     "correctAnswer": "B",
-    "explanation": "Selective.",
-    "topic": "General",
+    "explanation": "Epigeal germination pushes the cotyledons above the soil surface (e.g., beans).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-025",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Habitat is (practice 2025 #25)",
+    "origin": "official_past_question",
+    "question": "Which of these animals creates its natural habitat in burrows?",
     "options": {
-      "A": "diet only",
-      "B": "where organism lives",
-      "C": "speed",
-      "D": "scientific name only"
+      "A": "Bush rat",
+      "B": "Monkey",
+      "C": "Eagle",
+      "D": "Frog"
     },
-    "correctAnswer": "B",
-    "explanation": "Living place.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Bush rats dig burrows for shelter and nesting.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-026",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Left ventricle pumps to (practice 2025 #26)",
+    "origin": "official_past_question",
+    "question": "The green-brown colour of a grasshopper’s body in a dry grass field is an adaptation for?",
     "options": {
-      "A": "lungs only",
-      "B": "body via aorta",
-      "C": "right atrium only",
-      "D": "liver only"
+      "A": "Camouflage",
+      "B": "Warning",
+      "C": "Courtship",
+      "D": "Mimicry"
     },
-    "correctAnswer": "B",
-    "explanation": "Systemic.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "The grasshopper’s colour blends with dry grass, providing camouflage from predators.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-027",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Virus needs (practice 2025 #27)",
+    "origin": "official_past_question",
+    "question": "Which of the following is an advantage of cross-fertilization?",
     "options": {
-      "A": "always nucleus",
-      "B": "host to replicate",
-      "C": "to be multicellular",
-      "D": "to photosynthesise"
+      "A": "It leads to the production of healthier offspring",
+      "B": "It reduces genetic diversity",
+      "C": "It requires less energy",
+      "D": "It ensures identical offspring"
     },
-    "correctAnswer": "B",
-    "explanation": "Host.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Cross-fertilization increases genetic variation, often producing more robust and adaptable offspring.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-028",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Proteins digest to (practice 2025 #28)",
+    "origin": "official_past_question",
+    "question": "In most vertebrates, the common basic plan with a skull, vertebral column and a pair of girdles is evidence of evolution from?",
     "options": {
-      "A": "fatty acids",
-      "B": "amino acids",
-      "C": "glucose only",
-      "D": "glycerol only"
+      "A": "Comparative embryology",
+      "B": "Fossil records",
+      "C": "Comparative anatomy",
+      "D": "Biochemical evidence"
     },
-    "correctAnswer": "B",
-    "explanation": "Amino acids.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Homologous skeletal structures across vertebrates provide evidence from comparative anatomy for common ancestry.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-029",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Lungs mainly do (practice 2025 #29)",
+    "origin": "official_past_question",
+    "question": "An example of an animal exhibiting mating colouration is?",
     "options": {
-      "A": "digestion",
-      "B": "gaseous exchange",
-      "C": "urea excretion only",
-      "D": "blood making only"
+      "A": "Agama lizard",
+      "B": "Housefly",
+      "C": "Earthworm",
+      "D": "Snail"
     },
-    "correctAnswer": "B",
-    "explanation": "Gas exchange.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Male agama lizards display bright colours during the mating season to attract females.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-030",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Mendel studied (practice 2025 #30)",
+    "origin": "official_past_question",
+    "question": "Which of the following is the excretory organ in birds?",
     "options": {
-      "A": "evolution only",
-      "B": "pea heredity",
-      "C": "germ theory",
-      "D": "cell walls"
+      "A": "Liver",
+      "B": "Kidneys",
+      "C": "Lungs",
+      "D": "Skin"
     },
     "correctAnswer": "B",
-    "explanation": "Peas.",
-    "topic": "General",
+    "explanation": "Kidneys filter blood and excrete nitrogenous waste (uric acid) in birds.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-031",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Xylem transports (practice 2025 #31)",
+    "origin": "official_past_question",
+    "question": "Whose theory of evolution supports that characters acquired through use or disuse are transmitted to offspring?",
     "options": {
-      "A": "sugars mainly downward only in all texts",
-      "B": "water and minerals",
-      "C": "only animals",
-      "D": "only air"
+      "A": "Darwin",
+      "B": "Mendel",
+      "C": "Hugo de Vries",
+      "D": "Lamarck"
     },
-    "correctAnswer": "B",
-    "explanation": "Water/minerals.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "D",
+    "explanation": "Lamarck proposed the theory of inheritance of acquired characteristics (use and disuse).",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-032",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Phloem transports (practice 2025 #32)",
+    "origin": "official_past_question",
+    "question": "The most suitable soil for crop cultivation in Nigeria is?",
     "options": {
-      "A": "only water upward",
-      "B": "organic nutrients",
-      "C": "only stones",
-      "D": "only metals"
+      "A": "Sandy soil",
+      "B": "Loamy soil",
+      "C": "Clay soil",
+      "D": "Laterite soil"
     },
     "correctAnswer": "B",
-    "explanation": "Food/nutrients.",
-    "topic": "General",
+    "explanation": "Loamy soil is a balanced mixture of sand, silt, and clay, making it fertile and well-drained for agriculture.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-033",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Aerobic respiration needs (practice 2025 #33)",
+    "origin": "official_past_question",
+    "question": "When the calyx of a flower is joined together, it is called?",
     "options": {
-      "A": "nitrogen only",
-      "B": "oxygen",
-      "C": "only darkness",
-      "D": "only vacuum"
+      "A": "Gamosepalous",
+      "B": "Polysepalous",
+      "C": "Gamopetalous",
+      "D": "Polypetalous"
     },
-    "correctAnswer": "B",
-    "explanation": "Oxygen.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Gamosepalous refers to fused sepals; polysepalous refers to free sepals.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-034",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "White blood cells help in (practice 2025 #34)",
+    "origin": "official_past_question",
+    "question": "Which of the following statements about poliomyelitis is correct?",
     "options": {
-      "A": "carrying O2 only",
-      "B": "defence/immunity",
-      "C": "photosynthesis",
-      "D": "digestion of steel"
+      "A": "It is caused by a bacterium",
+      "B": "It is transmitted by mosquitoes",
+      "C": "It can be prevented by vaccination",
+      "D": "It is capable of paralysing the limbs"
     },
-    "correctAnswer": "B",
-    "explanation": "Immunity.",
-    "topic": "General",
+    "correctAnswer": "D",
+    "explanation": "Poliomyelitis (polio) is caused by a virus and can cause paralysis; vaccination is the primary prevention.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-035",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Ecosystem is (practice 2025 #35)",
+    "origin": "official_past_question",
+    "question": "The most advanced spermatophyte that forms the largest group of the plant kingdom is the?",
     "options": {
-      "A": "one organism only",
-      "B": "community + environment",
-      "C": "only climate",
-      "D": "only soil"
+      "A": "Gymnosperm",
+      "B": "Angiosperm",
+      "C": "Bryophyte",
+      "D": "Pteridophyte"
     },
     "correctAnswer": "B",
-    "explanation": "Biotic+abiotic.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Angiosperms (flowering plants) are the most advanced and diverse group of plants.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-036",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Mutation is (practice 2025 #36)",
+    "origin": "official_past_question",
+    "question": "Which of the following is a medium of transportation in animal cells?",
     "options": {
-      "A": "always useful",
-      "B": "change in genetic material",
-      "C": "always lethal",
-      "D": "not inherited ever"
+      "A": "Xylem",
+      "B": "Phloem",
+      "C": "Blood",
+      "D": "Lymph"
     },
-    "correctAnswer": "B",
-    "explanation": "Genetic change.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Blood transports gases, nutrients, hormones, and wastes in animal cells.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-037",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Chlorophyll is important in (practice 2025 #37)",
+    "origin": "official_past_question",
+    "question": "The mouthparts of a grasshopper are adapted for?",
     "options": {
-      "A": "digestion",
-      "B": "trapping light energy",
-      "C": "blood clotting",
-      "D": "bone repair"
+      "A": "Sucking",
+      "B": "Piercing",
+      "C": "Biting and chewing",
+      "D": "Lapping"
     },
-    "correctAnswer": "B",
-    "explanation": "Light capture.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Grasshoppers have mandibles adapted for biting and chewing plant material.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-038",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Synapse is junction between (practice 2025 #38)",
+    "origin": "official_past_question",
+    "question": "The following are factors that affect the population growth of an organism EXCEPT?",
     "options": {
-      "A": "two bones",
-      "B": "neurons",
-      "C": "two leaves",
-      "D": "two roots"
+      "A": "Natality",
+      "B": "Mortality",
+      "C": "Natality (duplicate)",
+      "D": "Emigration"
     },
-    "correctAnswer": "B",
-    "explanation": "Nerve cells.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Natality (birth rate), mortality (death rate), immigration, and emigration affect population size; “natality” listed twice makes the duplicate the exception in this flawed set.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-039",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Hormones are (practice 2025 #39)",
+    "origin": "official_past_question",
+    "question": "In ecological succession, the final stable community is called?",
     "options": {
-      "A": "digestive stones",
-      "B": "chemical messengers",
-      "C": "only vitamins from sun",
-      "D": "only minerals"
+      "A": "Climax community",
+      "B": "Pioneer community",
+      "C": "Seral community",
+      "D": "Primary community"
     },
-    "correctAnswer": "B",
-    "explanation": "Messengers.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "The climax community is the stable, self-sustaining end-stage of ecological succession.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2025-040",
     "subject": "biology",
     "year": 2025,
-    "origin": "original_practice",
-    "question": "Biodiversity means (practice 2025 #40)",
+    "origin": "official_past_question",
+    "question": "The innermost layer of the mammalian epidermis is?",
     "options": {
-      "A": "one species only",
-      "B": "variety of life forms",
-      "C": "only climate",
-      "D": "only rocks"
+      "A": "Cornified layer",
+      "B": "Granular layer",
+      "C": "Malpighian layer",
+      "D": "Basal layer"
     },
-    "correctAnswer": "B",
-    "explanation": "Variety of life.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "The Malpighian layer (stratum basale/germinativum) is the innermost epidermal layer where cell division occurs.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   }
 ];
 

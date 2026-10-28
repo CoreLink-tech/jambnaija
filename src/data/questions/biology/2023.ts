@@ -1,726 +1,726 @@
 import type { JambQuestion } from "../types";
 
-/** Original practice — biology 2023. Not official past questions. */
+/** Biology 2023 — compiled JAMB-style past/mock questions. */
 const questions: JambQuestion[] = [
   {
     "id": "bio-2023-001",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Powerhouse of cell (practice 2023 #1)",
+    "origin": "official_past_question",
+    "question": "Which of the following is an example of a microorganism in action as a disease vector?",
     "options": {
-      "A": "nucleus",
-      "B": "mitochondrion",
-      "C": "ribosome",
-      "D": "vacuole"
+      "A": "Fungi decomposing dead plant material",
+      "B": "Mosquito transmitting malaria",
+      "C": "Bacteria causing food poisoning",
+      "D": "Algae producing oxygen through photosynthesis"
     },
     "correctAnswer": "B",
-    "explanation": "Mitochondrion.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "A vector transmits a pathogen from one host to another. The mosquito transmits the Plasmodium parasite that causes malaria.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-002",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Photosynthesis site (practice 2023 #2)",
+    "origin": "official_past_question",
+    "question": "Which of the following is a characteristic of cells related to irritability?",
     "options": {
-      "A": "root",
-      "B": "bark",
-      "C": "leaf chloroplasts",
-      "D": "petals"
+      "A": "Ability to respond to stimuli",
+      "B": "Ability to synthesize proteins",
+      "C": "Ability to generate energy",
+      "D": "Ability to replicate DNA"
     },
-    "correctAnswer": "C",
-    "explanation": "Chloroplasts.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Irritability (responsiveness) is the ability of cells to detect and respond to environmental changes (stimuli).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-003",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "DNA stands for (practice 2023 #3)",
+    "origin": "official_past_question",
+    "question": "The membrane around the vacuole is known as?",
     "options": {
-      "A": "Deoxyribonucleic acid",
-      "B": "Diribonucleic acid",
-      "C": "Dicarboxylic acid",
-      "D": "Deoxyribose nitrate"
+      "A": "Cell membrane",
+      "B": "Tonoplast",
+      "C": "Nuclear membrane",
+      "D": "Plasmalemma"
     },
-    "correctAnswer": "A",
-    "explanation": "DNA.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "B",
+    "explanation": "The tonoplast is the membrane that surrounds the plant cell vacuole.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-004",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Basic classification unit (practice 2023 #4)",
+    "origin": "official_past_question",
+    "question": "Which of the following is evidence of evolution?",
     "options": {
-      "A": "family",
-      "B": "genus",
-      "C": "species",
-      "D": "order"
+      "A": "Homologous structures",
+      "B": "Identical habitats",
+      "C": "Similar feeding habits",
+      "D": "Same colouration"
     },
-    "correctAnswer": "C",
-    "explanation": "Species.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Homologous structures (e.g., pentadactyl limbs) indicate common ancestry, providing evidence for evolution.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-005",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Natural selection by (practice 2023 #5)",
+    "origin": "official_past_question",
+    "question": "Which of the following is an example of an adaptation for survival in social insects?",
     "options": {
-      "A": "Mendel",
-      "B": "Darwin",
-      "C": "Pasteur",
-      "D": "Hooke"
+      "A": "Division of labour",
+      "B": "Solitary living",
+      "C": "Hibernation",
+      "D": "Migration"
     },
-    "correctAnswer": "B",
-    "explanation": "Darwin.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Social insects (bees, termites, ants) exhibit division of labour among castes (queen, workers, soldiers) for colony survival.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-006",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Producers (practice 2023 #6)",
+    "origin": "official_past_question",
+    "question": "Behavioral adaptation for dealing with a hot climate could include?",
     "options": {
-      "A": "consumers only",
-      "B": "make own food",
-      "C": "parasites only",
-      "D": "detritivores only"
+      "A": "Growing thick fur",
+      "B": "Being active at night (nocturnal)",
+      "C": "Having a large body size",
+      "D": "Storing fat"
     },
     "correctAnswer": "B",
-    "explanation": "Autotrophs.",
-    "topic": "General",
+    "explanation": "Nocturnal behavior avoids the heat of the day; thick fur and fat storage are adaptations for cold climates.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-007",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Transpiration (practice 2023 #7)",
+    "origin": "official_past_question",
+    "question": "Which of the following processes is involved in the reproduction of developing organisms?",
     "options": {
-      "A": "blood loss",
-      "B": "water vapour loss from plants",
-      "C": "bone growth",
-      "D": "light absorption only"
+      "A": "Mitosis",
+      "B": "Meiosis",
+      "C": "Fertilization",
+      "D": "Budding"
     },
-    "correctAnswer": "B",
-    "explanation": "Water vapour.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Mitosis is responsible for growth and repair (somatic cell division); meiosis produces gametes, and fertilization is gamete fusion.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-008",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "RBCs transport (practice 2023 #8)",
+    "origin": "official_past_question",
+    "question": "Which of the following is an example of an abiotic ecological factor?",
     "options": {
-      "A": "urea",
-      "B": "oxygen",
-      "C": "bile",
-      "D": "starch"
+      "A": "Predation",
+      "B": "Temperature",
+      "C": "Competition",
+      "D": "Parasitism"
     },
     "correctAnswer": "B",
-    "explanation": "Oxygen.",
-    "topic": "General",
+    "explanation": "Temperature is a non-living (abiotic) factor; predation, competition, and parasitism are biotic factors.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-009",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Osmosis needs (practice 2023 #9)",
+    "origin": "official_past_question",
+    "question": "What is the tissue responsible for transporting water and minerals from the roots to the rest of the plant?",
     "options": {
-      "A": "metal sheet",
-      "B": "selectively permeable membrane",
-      "C": "vacuum",
-      "D": "wood only"
+      "A": "Phloem",
+      "B": "Xylem",
+      "C": "Cambium",
+      "D": "Cortex"
     },
     "correctAnswer": "B",
-    "explanation": "SP membrane.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Xylem tissue conducts water and dissolved minerals upward from roots to shoots.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-010",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Malaria vector (practice 2023 #10)",
+    "origin": "official_past_question",
+    "question": "In monohybrid inheritance, if an organism carries two different alleles for a particular gene, it is called?",
     "options": {
-      "A": "housefly",
-      "B": "Anopheles mosquito",
-      "C": "cockroach",
-      "D": "bedbug only"
+      "A": "Homozygous",
+      "B": "Heterozygous",
+      "C": "Hemizygous",
+      "D": "Autosomal"
     },
     "correctAnswer": "B",
-    "explanation": "Anopheles.",
-    "topic": "General",
+    "explanation": "Heterozygous describes an organism with two different alleles for a trait (e.g., Tt).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-011",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Cell control centre (practice 2023 #11)",
+    "origin": "official_past_question",
+    "question": "Most fishes do not sink in water because of the presence of?",
     "options": {
-      "A": "mitochondrion",
-      "B": "nucleus",
-      "C": "cell wall",
-      "D": "lysosome"
+      "A": "Swim bladder",
+      "B": "Gills",
+      "C": "Scales",
+      "D": "Fins"
     },
-    "correctAnswer": "B",
-    "explanation": "Nucleus.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "The swim bladder regulates buoyancy, allowing fish to maintain depth without sinking.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-012",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Genes located on (practice 2023 #12)",
+    "origin": "official_past_question",
+    "question": "Which gland is responsible for producing the hormone insulin?",
     "options": {
-      "A": "ribosomes only",
-      "B": "chromosomes",
-      "C": "cell walls only",
-      "D": "vacuoles only"
+      "A": "Thyroid gland",
+      "B": "Adrenal gland",
+      "C": "Pancreas",
+      "D": "Pituitary gland"
     },
-    "correctAnswer": "B",
-    "explanation": "Chromosomes.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Insulin is produced by the beta cells of the islets of Langerhans in the pancreas.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-013",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Food chain starts with (practice 2023 #13)",
+    "origin": "official_past_question",
+    "question": "Which of the following is the primary organ involved in gas exchange during respiration in humans?",
     "options": {
-      "A": "carnivore",
-      "B": "producer",
-      "C": "decomposer only",
-      "D": "parasite"
+      "A": "Trachea",
+      "B": "Bronchus",
+      "C": "Lungs",
+      "D": "Diaphragm"
     },
-    "correctAnswer": "B",
-    "explanation": "Producer.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "The lungs contain alveoli where gas exchange (O₂ and CO₂ diffusion) occurs.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-014",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Pollination is transfer of pollen (practice 2023 #14)",
+    "origin": "official_past_question",
+    "question": "The term cell was given by?",
     "options": {
-      "A": "ovule to root",
-      "B": "anther to stigma",
-      "C": "leaf to stem",
-      "D": "seed to fruit"
+      "A": "Robert Hooke",
+      "B": "Robert Brown",
+      "C": "Schleiden",
+      "D": "Schwann"
     },
-    "correctAnswer": "B",
-    "explanation": "Anther\u2192stigma.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Robert Hooke coined the term “cell” in 1665 after observing cork under a microscope.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-015",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Plant cells have (practice 2023 #15)",
+    "origin": "official_past_question",
+    "question": "Which of the following represents an example of ecological management and conservation through a biological association?",
     "options": {
-      "A": "mitochondria only difference",
-      "B": "cell wall and often chloroplasts",
-      "C": "no nucleus",
-      "D": "no cytoplasm"
+      "A": "Use of pesticides",
+      "B": "Biological control of pests",
+      "C": "Deforestation",
+      "D": "Monoculture"
     },
     "correctAnswer": "B",
-    "explanation": "Wall/chloroplasts.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Biological control uses natural predators/parasites to manage pests, reducing chemical use and conserving ecosystems.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-016",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Fertilisation is fusion of (practice 2023 #16)",
+    "origin": "official_past_question",
+    "question": "Which of the following are components of the skeletal system in humans?",
     "options": {
-      "A": "two leaves",
-      "B": "gametes",
-      "C": "two stems",
-      "D": "two roots"
+      "A": "Heart and lungs",
+      "B": "Bones and cartilage",
+      "C": "Muscles and tendons",
+      "D": "Skin and hair"
     },
     "correctAnswer": "B",
-    "explanation": "Gametes.",
-    "topic": "General",
+    "explanation": "The skeletal system includes bones, cartilage, ligaments, and joints.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-017",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Decomposers (practice 2023 #17)",
+    "origin": "official_past_question",
+    "question": "Which of the following is an example of physiological variation in organisms?",
     "options": {
-      "A": "make O2 only",
-      "B": "recycle nutrients",
-      "C": "stop growth",
-      "D": "make light"
+      "A": "Blood group",
+      "B": "Skin colour",
+      "C": "Height",
+      "D": "Ability to roll the tongue"
     },
-    "correctAnswer": "B",
-    "explanation": "Recycle nutrients.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Blood group is a discontinuous physiological trait; skin colour and height are continuous morphological traits.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-018",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Kidney function (practice 2023 #18)",
+    "origin": "official_past_question",
+    "question": "A biome characterized by hot summer, cold winter and treeless vegetation is?",
     "options": {
-      "A": "digest fat",
-      "B": "excretion and osmoregulation",
-      "C": "pump blood",
-      "D": "hearing"
+      "A": "Tropical rainforest",
+      "B": "Savanna",
+      "C": "Tundra",
+      "D": "Temperate grassland"
     },
-    "correctAnswer": "B",
-    "explanation": "Excretion.",
-    "topic": "General",
+    "correctAnswer": "D",
+    "explanation": "Temperate grasslands have hot summers, cold winters, and are dominated by grasses with few or no trees.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-019",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Mammals have (practice 2023 #19)",
+    "origin": "official_past_question",
+    "question": "Which of the following is a characteristic feature of Kingdom Plantae?",
     "options": {
-      "A": "feathers",
-      "B": "mammary glands and hair",
-      "C": "scales only",
-      "D": "gills only"
+      "A": "Heterotrophic nutrition",
+      "B": "Cell walls made of chitin",
+      "C": "Autotrophic nutrition",
+      "D": "Lack of chlorophyll"
     },
-    "correctAnswer": "B",
-    "explanation": "Hair/mammary.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Plants are autotrophic (photosynthetic), and their cell walls contain cellulose.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-020",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Ribosomes do (practice 2023 #20)",
+    "origin": "official_past_question",
+    "question": "Which of the following is an evolutionary trend commonly observed in organisms?",
     "options": {
-      "A": "photosynthesis",
-      "B": "protein synthesis",
-      "C": "lipid storage only",
-      "D": "DNA only"
+      "A": "Increase in complexity",
+      "B": "Decrease in complexity",
+      "C": "No change over time",
+      "D": "Random changes without direction"
     },
-    "correctAnswer": "B",
-    "explanation": "Proteins.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Evolutionary trends often show increasing complexity and specialization over time.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-021",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Enzymes are mainly (practice 2023 #21)",
+    "origin": "official_past_question",
+    "question": "Which of the following is NOT a part of the alimentary canal?",
     "options": {
-      "A": "carbohydrates",
-      "B": "catalytic proteins",
-      "C": "salts",
-      "D": "metals only"
+      "A": "Oesophagus",
+      "B": "Stomach",
+      "C": "Liver",
+      "D": "Small intestine"
     },
-    "correctAnswer": "B",
-    "explanation": "Proteins.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "The liver is an accessory digestive organ, not part of the alimentary canal (the continuous tube from mouth to anus).",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-022",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Competition when (practice 2023 #22)",
+    "origin": "official_past_question",
+    "question": "Which of the following is an example of an adaptation for survival in social insects?",
     "options": {
-      "A": "never meet",
-      "B": "need same limited resource",
-      "C": "photosynthesise only",
-      "D": "hibernate"
+      "A": "Division of labour",
+      "B": "Solitary living",
+      "C": "Hibernation",
+      "D": "Migration"
     },
-    "correctAnswer": "B",
-    "explanation": "Shared resource.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "(Duplicate of Q5) Division of labour among castes enhances colony survival.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-023",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Dominant allele expressed (practice 2023 #23)",
+    "origin": "official_past_question",
+    "question": "Which of the following is evidence of evolution?",
     "options": {
-      "A": "only homozygous recessive",
-      "B": "when present",
-      "C": "never",
-      "D": "only bacteria"
+      "A": "Homologous structures",
+      "B": "Identical habitats",
+      "C": "Similar feeding habits",
+      "D": "Same colouration"
     },
-    "correctAnswer": "B",
-    "explanation": "When present.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "(Duplicate of Q4) Homologous structures indicate common ancestry.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-024",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Cell membrane is (practice 2023 #24)",
+    "origin": "official_past_question",
+    "question": "The membrane around the vacuole is known as?",
     "options": {
-      "A": "fully permeable always",
-      "B": "selectively permeable",
-      "C": "cellulose in animals",
-      "D": "absent in plants"
+      "A": "Cell membrane",
+      "B": "Tonoplast",
+      "C": "Nuclear membrane",
+      "D": "Plasmalemma"
     },
     "correctAnswer": "B",
-    "explanation": "Selective.",
-    "topic": "General",
+    "explanation": "(Duplicate of Q3) The tonoplast surrounds the vacuole.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-025",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Habitat is (practice 2023 #25)",
+    "origin": "official_past_question",
+    "question": "Which of the following is a characteristic of cells related to irritability?",
     "options": {
-      "A": "diet only",
-      "B": "where organism lives",
-      "C": "speed",
-      "D": "scientific name only"
+      "A": "Ability to respond to stimuli",
+      "B": "Ability to synthesize proteins",
+      "C": "Ability to generate energy",
+      "D": "Ability to replicate DNA"
     },
-    "correctAnswer": "B",
-    "explanation": "Living place.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "(Duplicate of Q2) Irritability is responsiveness to stimuli.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-026",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Left ventricle pumps to (practice 2023 #26)",
+    "origin": "official_past_question",
+    "question": "What is the primary source of variation in a population?",
     "options": {
-      "A": "lungs only",
-      "B": "body via aorta",
-      "C": "right atrium only",
-      "D": "liver only"
+      "A": "Mutation",
+      "B": "Genetic drift",
+      "C": "Gene flow",
+      "D": "Natural selection"
     },
-    "correctAnswer": "B",
-    "explanation": "Systemic.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Mutation is the ultimate source of new genetic variation; other mechanisms redistribute existing variation.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-027",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Virus needs (practice 2023 #27)",
+    "origin": "official_past_question",
+    "question": "Which component of blood is responsible for carrying oxygen to the body tissues?",
     "options": {
-      "A": "always nucleus",
-      "B": "host to replicate",
-      "C": "to be multicellular",
-      "D": "to photosynthesise"
+      "A": "White blood cells",
+      "B": "Platelets",
+      "C": "Red blood cells",
+      "D": "Plasma"
     },
-    "correctAnswer": "B",
-    "explanation": "Host.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Red blood cells contain hemoglobin, which binds and transports oxygen.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-028",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Proteins digest to (practice 2023 #28)",
+    "origin": "official_past_question",
+    "question": "What are the primary products of photosynthesis?",
     "options": {
-      "A": "fatty acids",
-      "B": "amino acids",
-      "C": "glucose only",
-      "D": "glycerol only"
+      "A": "Glucose and oxygen",
+      "B": "Carbon dioxide and water",
+      "C": "ATP and NADPH",
+      "D": "Starch and cellulose"
     },
-    "correctAnswer": "B",
-    "explanation": "Amino acids.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Photosynthesis produces glucose (and other carbohydrates) and releases oxygen as a byproduct.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-029",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Lungs mainly do (practice 2023 #29)",
+    "origin": "official_past_question",
+    "question": "The alternate form of a gene is a?",
     "options": {
-      "A": "digestion",
-      "B": "gaseous exchange",
-      "C": "urea excretion only",
-      "D": "blood making only"
+      "A": "Allele",
+      "B": "Chromosome",
+      "C": "Genotype",
+      "D": "Phenotype"
     },
-    "correctAnswer": "B",
-    "explanation": "Gas exchange.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Alleles are different versions of the same gene (e.g., T and t for plant height).",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-030",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Mendel studied (practice 2023 #30)",
+    "origin": "official_past_question",
+    "question": "Which organs are part of the alimentary canal in the human digestive system?",
     "options": {
-      "A": "evolution only",
-      "B": "pea heredity",
-      "C": "germ theory",
-      "D": "cell walls"
+      "A": "Mouth, oesophagus, stomach, small intestine, large intestine",
+      "B": "Liver, pancreas, gallbladder",
+      "C": "Kidneys, ureters, bladder",
+      "D": "Lungs, trachea, bronchi"
     },
-    "correctAnswer": "B",
-    "explanation": "Peas.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "The alimentary canal is the continuous tube from mouth to anus; the liver, pancreas, and gallbladder are accessory organs.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-031",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Xylem transports (practice 2023 #31)",
+    "origin": "official_past_question",
+    "question": "Which of the following statements is true regarding sex-linked traits?",
     "options": {
-      "A": "sugars mainly downward only in all texts",
-      "B": "water and minerals",
-      "C": "only animals",
-      "D": "only air"
+      "A": "They are carried on autosomes",
+      "B": "They are more common in females",
+      "C": "They are carried on sex chromosomes",
+      "D": "They affect only males"
     },
-    "correctAnswer": "B",
-    "explanation": "Water/minerals.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Sex-linked traits are determined by genes on sex chromosomes (typically the X chromosome).",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-032",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Phloem transports (practice 2023 #32)",
+    "origin": "official_past_question",
+    "question": "Which of the following represents an example of ecological management and conservation through a biological association?",
     "options": {
-      "A": "only water upward",
-      "B": "organic nutrients",
-      "C": "only stones",
-      "D": "only metals"
+      "A": "Use of pesticides",
+      "B": "Biological control of pests",
+      "C": "Deforestation",
+      "D": "Monoculture"
     },
     "correctAnswer": "B",
-    "explanation": "Food/nutrients.",
-    "topic": "General",
+    "explanation": "(Duplicate of Q15) Biological control is a conservation-friendly pest management strategy.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-033",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Aerobic respiration needs (practice 2023 #33)",
+    "origin": "official_past_question",
+    "question": "Which of the following eye defects is caused by the inability of the eye to focus light on the retina?",
     "options": {
-      "A": "nitrogen only",
-      "B": "oxygen",
-      "C": "only darkness",
-      "D": "only vacuum"
+      "A": "Myopia",
+      "B": "Hypermetropia",
+      "C": "Astigmatism",
+      "D": "Presbyopia"
     },
-    "correctAnswer": "B",
-    "explanation": "Oxygen.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Myopia (short-sightedness) occurs when the image focuses in front of the retina; hypermetropia focuses behind it.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-034",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "White blood cells help in (practice 2023 #34)",
+    "origin": "official_past_question",
+    "question": "Which of the following is the correct classification of carbohydrates?",
     "options": {
-      "A": "carrying O2 only",
-      "B": "defence/immunity",
-      "C": "photosynthesis",
-      "D": "digestion of steel"
+      "A": "Monosaccharides, disaccharides, polysaccharides",
+      "B": "Proteins, lipids, nucleic acids",
+      "C": "Vitamins, minerals, water",
+      "D": "Amino acids, fatty acids, glycerol"
     },
-    "correctAnswer": "B",
-    "explanation": "Immunity.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Carbohydrates are classified by the number of sugar units: monosaccharides (glucose), disaccharides (sucrose), and polysaccharides (starch).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-035",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Ecosystem is (practice 2023 #35)",
+    "origin": "official_past_question",
+    "question": "Which of the following diseases could be exclusively associated with a river basin?",
     "options": {
-      "A": "one organism only",
-      "B": "community + environment",
-      "C": "only climate",
-      "D": "only soil"
+      "A": "Malaria",
+      "B": "Schistosomiasis",
+      "C": "Tuberculosis",
+      "D": "Cholera"
     },
     "correctAnswer": "B",
-    "explanation": "Biotic+abiotic.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Schistosomiasis (bilharzia) is transmitted by freshwater snails in river basins and requires contact with contaminated water.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-036",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Mutation is (practice 2023 #36)",
+    "origin": "official_past_question",
+    "question": "In mammals, the function of the sebaceous gland is to?",
     "options": {
-      "A": "always useful",
-      "B": "change in genetic material",
-      "C": "always lethal",
-      "D": "not inherited ever"
+      "A": "Produce sweat",
+      "B": "Secrete oil to lubricate skin and hair",
+      "C": "Produce milk",
+      "D": "Secrete digestive enzymes"
     },
     "correctAnswer": "B",
-    "explanation": "Genetic change.",
-    "topic": "General",
+    "explanation": "Sebaceous glands secrete sebum (oil) to waterproof and lubricate skin and hair.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-037",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Chlorophyll is important in (practice 2023 #37)",
+    "origin": "official_past_question",
+    "question": "Osteoporosis is a disease of the?",
     "options": {
-      "A": "digestion",
-      "B": "trapping light energy",
-      "C": "blood clotting",
-      "D": "bone repair"
+      "A": "Heart",
+      "B": "Bones",
+      "C": "Lungs",
+      "D": "Kidneys"
     },
     "correctAnswer": "B",
-    "explanation": "Light capture.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Osteoporosis is characterized by loss of bone density, making bones fragile and prone to fracture.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-038",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Synapse is junction between (practice 2023 #38)",
+    "origin": "official_past_question",
+    "question": "Which of the following is the most inclusive level of classification in the Linnaean system?",
     "options": {
-      "A": "two bones",
-      "B": "neurons",
-      "C": "two leaves",
-      "D": "two roots"
+      "A": "Kingdom",
+      "B": "Phylum",
+      "C": "Class",
+      "D": "Order"
     },
-    "correctAnswer": "B",
-    "explanation": "Nerve cells.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Kingdom is the broadest (most inclusive) taxonomic rank in the Linnaean hierarchy.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-039",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Hormones are (practice 2023 #39)",
+    "origin": "official_past_question",
+    "question": "Most fishes do not sink in water because of the presence of?",
     "options": {
-      "A": "digestive stones",
-      "B": "chemical messengers",
-      "C": "only vitamins from sun",
-      "D": "only minerals"
+      "A": "Swim bladder",
+      "B": "Gills",
+      "C": "Scales",
+      "D": "Fins"
     },
-    "correctAnswer": "B",
-    "explanation": "Messengers.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "(Duplicate of Q11) The swim bladder provides buoyancy.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2023-040",
     "subject": "biology",
     "year": 2023,
-    "origin": "original_practice",
-    "question": "Biodiversity means (practice 2023 #40)",
+    "origin": "official_past_question",
+    "question": "Which of the following soil types becomes less fertile due to the intense leaching caused by tropical rains?",
     "options": {
-      "A": "one species only",
-      "B": "variety of life forms",
-      "C": "only climate",
-      "D": "only rocks"
+      "A": "Sandy soil",
+      "B": "Clay soil",
+      "C": "Laterite soil",
+      "D": "Loamy soil"
     },
-    "correctAnswer": "B",
-    "explanation": "Variety of life.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Laterite soils are heavily leached in tropical climates, losing nutrients and becoming less fertile.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   }
 ];
 

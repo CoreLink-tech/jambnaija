@@ -1,726 +1,708 @@
 import type { JambQuestion } from "../types";
 
-/** Original practice — biology 2020. Not official past questions. */
+/** Biology 2020 — compiled JAMB-style past/mock questions. */
 const questions: JambQuestion[] = [
   {
     "id": "bio-2020-001",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Powerhouse of cell (practice 2020 #1)",
+    "origin": "official_past_question",
+    "question": "The hormone which regulates the amount of glucose in the blood is called?",
     "options": {
-      "A": "nucleus",
-      "B": "mitochondrion",
-      "C": "ribosome",
-      "D": "vacuole"
+      "A": "Adrenalin",
+      "B": "Auxin",
+      "C": "Insulin",
+      "D": "Thyroxine"
     },
-    "correctAnswer": "B",
-    "explanation": "Mitochondrion.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Insulin, secreted by the pancreas, lowers blood glucose by promoting its uptake into cells. Adrenalin raises glucose; auxin is a plant hormone; thyroxine regulates metabolism.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-002",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Photosynthesis site (practice 2020 #2)",
+    "origin": "official_past_question",
+    "question": "Deamination occurs in the?",
     "options": {
-      "A": "root",
-      "B": "bark",
-      "C": "leaf chloroplasts",
-      "D": "petals"
+      "A": "Kidney",
+      "B": "Pancreas",
+      "C": "Spleen",
+      "D": "Liver"
     },
-    "correctAnswer": "C",
-    "explanation": "Chloroplasts.",
-    "topic": "General",
+    "correctAnswer": "D",
+    "explanation": "Deamination is the removal of the amino group from excess amino acids, forming ammonia and urea. This process occurs primarily in the liver.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-003",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "DNA stands for (practice 2020 #3)",
+    "origin": "official_past_question",
+    "question": "In an agricultural ecosystem, the biotic component consists of?",
     "options": {
-      "A": "Deoxyribonucleic acid",
-      "B": "Diribonucleic acid",
-      "C": "Dicarboxylic acid",
-      "D": "Deoxyribose nitrate"
+      "A": "Crops, pests and beneficial insects",
+      "B": "Crops, temperature and humidity",
+      "C": "Pests, beneficial insects and water",
+      "D": "Crops, water and soil"
     },
     "correctAnswer": "A",
-    "explanation": "DNA.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Biotic components are living parts of an ecosystem. Temperature, humidity, water, and soil are abiotic (non-living) factors.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-004",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Basic classification unit (practice 2020 #4)",
+    "origin": "official_past_question",
+    "question": "Epiphytes growing on the branches of trees provide an example of the relationship known as?",
     "options": {
-      "A": "family",
-      "B": "genus",
-      "C": "species",
-      "D": "order"
+      "A": "Parasitism",
+      "B": "Commensalism",
+      "C": "Saprophytism",
+      "D": "Holophytism"
     },
-    "correctAnswer": "C",
-    "explanation": "Species.",
-    "topic": "General",
+    "correctAnswer": "B",
+    "explanation": "Epiphytes grow on trees for physical support without harming or benefiting the host tree—a classic commensal relationship.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-005",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Natural selection by (practice 2020 #5)",
+    "origin": "official_past_question",
+    "question": "The hypha of Rhizopus is said to be non-septate because it?",
     "options": {
-      "A": "Mendel",
-      "B": "Darwin",
-      "C": "Pasteur",
-      "D": "Hooke"
+      "A": "Does not contain chlorophyll",
+      "B": "Has no cross wall",
+      "C": "Is vacuoled",
+      "D": "Stores oil globules"
     },
     "correctAnswer": "B",
-    "explanation": "Darwin.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Non-septate (coenocytic) hyphae lack cross walls, resulting in a continuous multinucleate cytoplasm.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-006",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Producers (practice 2020 #6)",
+    "origin": "official_past_question",
+    "question": "The function of ribosomes in cells is?",
     "options": {
-      "A": "consumers only",
-      "B": "make own food",
-      "C": "parasites only",
-      "D": "detritivores only"
+      "A": "Protein synthesis",
+      "B": "Starch synthesis",
+      "C": "Transport of material",
+      "D": "Lipid storage"
     },
-    "correctAnswer": "B",
-    "explanation": "Autotrophs.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Ribosomes are the site of translation, where mRNA is decoded into polypeptide chains (proteins).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-007",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Transpiration (practice 2020 #7)",
+    "origin": "official_past_question",
+    "question": "In which of the following does external fertilization take place?",
     "options": {
-      "A": "blood loss",
-      "B": "water vapour loss from plants",
-      "C": "bone growth",
-      "D": "light absorption only"
+      "A": "Toad",
+      "B": "Lizard",
+      "C": "Bird",
+      "D": "Cockroach"
     },
-    "correctAnswer": "B",
-    "explanation": "Water vapour.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Amphibians like toads release eggs and sperm into water, where fertilization occurs externally.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-008",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "RBCs transport (practice 2020 #8)",
+    "origin": "official_past_question",
+    "question": "The villus in the small intestine is significant because it?",
     "options": {
-      "A": "urea",
-      "B": "oxygen",
-      "C": "bile",
-      "D": "starch"
+      "A": "Increases the surface area for absorption",
+      "B": "Increases the surface area for digestion",
+      "C": "Assists in mixing digested food",
+      "D": "Assists in filtering undigested food"
     },
-    "correctAnswer": "B",
-    "explanation": "Oxygen.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Villi are finger-like projections that greatly increase the surface area for nutrient absorption.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-009",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Osmosis needs (practice 2020 #9)",
+    "origin": "official_past_question",
+    "question": "The butterfly is of great economic importance because?",
     "options": {
-      "A": "metal sheet",
-      "B": "selectively permeable membrane",
-      "C": "vacuum",
-      "D": "wood only"
+      "A": "Of its use in scientific studies",
+      "B": "It sucks nectar from flowers",
+      "C": "It adds to the beauty of the environment",
+      "D": "It pollinates flowers of crops and other plants"
     },
-    "correctAnswer": "B",
-    "explanation": "SP membrane.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "D",
+    "explanation": "Butterflies are important pollinators, transferring pollen between flowers as they feed on nectar.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-010",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Malaria vector (practice 2020 #10)",
+    "origin": "official_past_question",
+    "question": "The bright colours of the comb and feathers in the peacock are for?",
     "options": {
-      "A": "housefly",
-      "B": "Anopheles mosquito",
-      "C": "cockroach",
-      "D": "bedbug only"
+      "A": "Sex differentiation",
+      "B": "Beauty",
+      "C": "Courtship",
+      "D": "Defence"
     },
-    "correctAnswer": "B",
-    "explanation": "Anopheles.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Male peacocks display bright plumage to attract females during courtship (sexual selection).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-011",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Cell control centre (practice 2020 #11)",
+    "origin": "official_past_question",
+    "question": "What is the term used to describe biotic and abiotic factors in the environment of the organism?",
     "options": {
-      "A": "mitochondrion",
-      "B": "nucleus",
-      "C": "cell wall",
-      "D": "lysosome"
+      "A": "Habitat",
+      "B": "Biome",
+      "C": "Ecosystem",
+      "D": "Ecological niche"
     },
-    "correctAnswer": "B",
-    "explanation": "Nucleus.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "An ecosystem comprises both the living (biotic) and non-living (abiotic) components interacting in a given area.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-012",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Genes located on (practice 2020 #12)",
+    "origin": "official_past_question",
+    "question": "Which of the following instruments is NOT used in measuring abiotic factors in any habitat?",
     "options": {
-      "A": "ribosomes only",
-      "B": "chromosomes",
-      "C": "cell walls only",
-      "D": "vacuoles only"
+      "A": "Microscope",
+      "B": "Thermometer",
+      "C": "Hygrometer",
+      "D": "Windvane"
     },
-    "correctAnswer": "B",
-    "explanation": "Chromosomes.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "A microscope is used to view microscopic organisms, not to measure abiotic factors like temperature, humidity, or wind.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-013",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Food chain starts with (practice 2020 #13)",
+    "origin": "official_past_question",
+    "question": "The smallest living organism which share the characteristics of both living and non-living matter are?",
     "options": {
-      "A": "carnivore",
-      "B": "producer",
-      "C": "decomposer only",
-      "D": "parasite"
+      "A": "Bacteria",
+      "B": "Fungi",
+      "C": "Viruses",
+      "D": "Protozoa"
     },
-    "correctAnswer": "B",
-    "explanation": "Producer.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Viruses exhibit characteristics of both living (reproduction inside a host) and non-living (crystallizable, no metabolism outside a host) entities.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-014",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Pollination is transfer of pollen (practice 2020 #14)",
+    "origin": "official_past_question",
+    "question": "The process by which a red blood cell placed in distilled water absorbs water until it bursts and releases its content into the surrounding is known as?",
     "options": {
-      "A": "ovule to root",
-      "B": "anther to stigma",
-      "C": "leaf to stem",
-      "D": "seed to fruit"
+      "A": "Osmosis",
+      "B": "Plasmolysis",
+      "C": "Turgidity",
+      "D": "Hemolysis"
     },
-    "correctAnswer": "B",
-    "explanation": "Anther\u2192stigma.",
-    "topic": "General",
+    "correctAnswer": "D",
+    "explanation": "Hemolysis is the bursting of red blood cells due to excessive water uptake in a hypotonic solution.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-015",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Plant cells have (practice 2020 #15)",
+    "origin": "official_past_question",
+    "question": "Which of the following waste products in plants is excreted through the stomata and lenticels?",
     "options": {
-      "A": "mitochondria only difference",
-      "B": "cell wall and often chloroplasts",
-      "C": "no nucleus",
-      "D": "no cytoplasm"
+      "A": "Carbon dioxide",
+      "B": "Alkaloids",
+      "C": "Tannins",
+      "D": "Anthocyanins"
     },
-    "correctAnswer": "B",
-    "explanation": "Wall/chloroplasts.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Carbon dioxide is a gaseous waste product of respiration and is released through stomata and lenticels.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-016",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Fertilisation is fusion of (practice 2020 #16)",
+    "origin": "official_past_question",
+    "question": "The vertebra illustrated is?",
     "options": {
-      "A": "two leaves",
-      "B": "gametes",
-      "C": "two stems",
-      "D": "two roots"
+      "A": "Lumbar",
+      "B": "Thoracic",
+      "C": "Caudal",
+      "D": "Cervical"
     },
     "correctAnswer": "B",
-    "explanation": "Gametes.",
-    "topic": "General",
+    "explanation": "(Based on standard diagram) The presence of facets for rib attachment identifies it as a thoracic vertebra.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-017",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Decomposers (practice 2020 #17)",
+    "origin": "official_past_question",
+    "question": "The neural arch is labelled?",
     "options": {
-      "A": "make O2 only",
-      "B": "recycle nutrients",
-      "C": "stop growth",
-      "D": "make light"
+      "A": "i",
+      "B": "ii",
+      "C": "iii",
+      "D": "iv"
     },
     "correctAnswer": "B",
-    "explanation": "Recycle nutrients.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "(Based on diagram) The neural arch forms the posterior part of the vertebra enclosing the spinal cord.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-018",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Kidney function (practice 2020 #18)",
+    "origin": "official_past_question",
+    "question": "The excretory structure in the earthworm is the?",
     "options": {
-      "A": "digest fat",
-      "B": "excretion and osmoregulation",
-      "C": "pump blood",
-      "D": "hearing"
+      "A": "Malpighian tubule",
+      "B": "Flame cell",
+      "C": "Nephridium",
+      "D": "Kidney"
     },
-    "correctAnswer": "B",
-    "explanation": "Excretion.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Earthworms possess nephridia, which are segmentally arranged excretory organs.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-019",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Mammals have (practice 2020 #19)",
+    "origin": "official_past_question",
+    "question": "In which of the following vertebrates does the skin function as a respiratory surface?",
     "options": {
-      "A": "feathers",
-      "B": "mammary glands and hair",
-      "C": "scales only",
-      "D": "gills only"
+      "A": "Rat",
+      "B": "Lizard",
+      "C": "Fish",
+      "D": "Frog"
     },
-    "correctAnswer": "B",
-    "explanation": "Hair/mammary.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "D",
+    "explanation": "Frogs can respire through their moist, permeable skin (cutaneous respiration), especially when submerged.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-020",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Ribosomes do (practice 2020 #20)",
+    "origin": "official_past_question",
+    "question": "The process of walking is under the control of the part of the brain called?",
     "options": {
-      "A": "photosynthesis",
-      "B": "protein synthesis",
-      "C": "lipid storage only",
-      "D": "DNA only"
+      "A": "Cerebrum",
+      "B": "Cerebellum",
+      "C": "Medulla oblongata",
+      "D": "Hypothalamus"
     },
     "correctAnswer": "B",
-    "explanation": "Proteins.",
-    "topic": "General",
+    "explanation": "The cerebellum coordinates voluntary movements, balance, and posture, including walking.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-021",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Enzymes are mainly (practice 2020 #21)",
+    "origin": "official_past_question",
+    "question": "The noticeable adaptation of the animal to its aquatic habitat is the possession of?",
     "options": {
-      "A": "carbohydrates",
-      "B": "catalytic proteins",
-      "C": "salts",
-      "D": "metals only"
+      "A": "Webbed feet",
+      "B": "Sharp claws",
+      "C": "Long legs",
+      "D": "Strong teeth"
     },
-    "correctAnswer": "B",
-    "explanation": "Proteins.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Webbed feet increase surface area for swimming, a key adaptation in aquatic animals like ducks and frogs.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-022",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Competition when (practice 2020 #22)",
+    "origin": "official_past_question",
+    "question": "Paternity disputes can most accurately be resolved through the use of?",
     "options": {
-      "A": "never meet",
-      "B": "need same limited resource",
-      "C": "photosynthesise only",
-      "D": "hibernate"
+      "A": "Blood group analysis",
+      "B": "DNA fingerprinting",
+      "C": "Fingerprinting",
+      "D": "Pedigree analysis"
     },
     "correctAnswer": "B",
-    "explanation": "Shared resource.",
-    "topic": "General",
+    "explanation": "DNA fingerprinting is highly specific and can definitively establish biological parentage.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-023",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Dominant allele expressed (practice 2020 #23)",
+    "origin": "official_past_question",
+    "question": "A worker in a termite colony is?",
     "options": {
-      "A": "only homozygous recessive",
-      "B": "when present",
-      "C": "never",
-      "D": "only bacteria"
+      "A": "Sterile and wingless",
+      "B": "Fertile and winged",
+      "C": "The reproductive individual",
+      "D": "The soldier"
     },
-    "correctAnswer": "B",
-    "explanation": "When present.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Worker termites are sterile, wingless individuals that perform tasks like foraging and nest maintenance.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-024",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Cell membrane is (practice 2020 #24)",
+    "origin": "official_past_question",
+    "question": "Both parents possess genes for shortness. This is an example of?",
     "options": {
-      "A": "fully permeable always",
-      "B": "selectively permeable",
-      "C": "cellulose in animals",
-      "D": "absent in plants"
+      "A": "Homozygosity",
+      "B": "Heterozygosity",
+      "C": "Dominance",
+      "D": "Recessiveness"
     },
     "correctAnswer": "B",
-    "explanation": "Selective.",
-    "topic": "General",
+    "explanation": "If both parents carry the gene for shortness (e.g., Tt), they are heterozygous for that trait.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-025",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Habitat is (practice 2020 #25)",
+    "origin": "official_past_question",
+    "question": "Warning colouration is a form of?",
     "options": {
-      "A": "diet only",
-      "B": "where organism lives",
-      "C": "speed",
-      "D": "scientific name only"
+      "A": "Camouflage",
+      "B": "Mimicry",
+      "C": "Defence mechanism",
+      "D": "Courtship display"
     },
-    "correctAnswer": "B",
-    "explanation": "Living place.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "bio-2020-026",
-    "subject": "biology",
-    "year": 2020,
-    "origin": "original_practice",
-    "question": "Left ventricle pumps to (practice 2020 #26)",
-    "options": {
-      "A": "lungs only",
-      "B": "body via aorta",
-      "C": "right atrium only",
-      "D": "liver only"
-    },
-    "correctAnswer": "B",
-    "explanation": "Systemic.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Bright warning colours (aposematism) signal toxicity or unpalatability to predators, serving as a defence mechanism.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-027",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Virus needs (practice 2020 #27)",
+    "origin": "official_past_question",
+    "question": "Kidney is to excretion as pancreas is to?",
     "options": {
-      "A": "always nucleus",
-      "B": "host to replicate",
-      "C": "to be multicellular",
-      "D": "to photosynthesise"
+      "A": "Digestion",
+      "B": "Secretion",
+      "C": "Absorption",
+      "D": "Respiration"
     },
     "correctAnswer": "B",
-    "explanation": "Host.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "The kidney excretes waste; the pancreas secretes hormones (insulin, glucagon) and digestive enzymes.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-028",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Proteins digest to (practice 2020 #28)",
+    "origin": "official_past_question",
+    "question": "The photosensitive cell in the eye is?",
     "options": {
-      "A": "fatty acids",
-      "B": "amino acids",
-      "C": "glucose only",
-      "D": "glycerol only"
+      "A": "Rod and cone",
+      "B": "Cornea",
+      "C": "Iris",
+      "D": "Pupil"
     },
-    "correctAnswer": "B",
-    "explanation": "Amino acids.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Rods detect light intensity (dim vision); cones detect colour and detail (bright vision).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-029",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Lungs mainly do (practice 2020 #29)",
+    "origin": "official_past_question",
+    "question": "The villus in the small intestine is significant because it?",
     "options": {
-      "A": "digestion",
-      "B": "gaseous exchange",
-      "C": "urea excretion only",
-      "D": "blood making only"
+      "A": "Increases the surface area for absorption",
+      "B": "Increases the surface area for digestion",
+      "C": "Assists in mixing digested food",
+      "D": "Assists in filtering undigested food"
     },
-    "correctAnswer": "B",
-    "explanation": "Gas exchange.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "(Duplicate of Q8 in this set; villi increase absorptive surface area.)",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-030",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Mendel studied (practice 2020 #30)",
+    "origin": "official_past_question",
+    "question": "What is the term used to describe biotic and abiotic factors in the environment of the organism?",
     "options": {
-      "A": "evolution only",
-      "B": "pea heredity",
-      "C": "germ theory",
-      "D": "cell walls"
+      "A": "Habitat",
+      "B": "Biome",
+      "C": "Ecosystem",
+      "D": "Ecological niche"
     },
-    "correctAnswer": "B",
-    "explanation": "Peas.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "(Duplicate of Q11) An ecosystem includes all living and non-living components in an area.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-031",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Xylem transports (practice 2020 #31)",
+    "origin": "official_past_question",
+    "question": "The bright colours of the comb and feathers in the peacock are for?",
     "options": {
-      "A": "sugars mainly downward only in all texts",
-      "B": "water and minerals",
-      "C": "only animals",
-      "D": "only air"
+      "A": "Sex differentiation",
+      "B": "Beauty",
+      "C": "Courtship",
+      "D": "Defence"
     },
-    "correctAnswer": "B",
-    "explanation": "Water/minerals.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "(Duplicate of Q10) Courtship display to attract mates.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-032",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Phloem transports (practice 2020 #32)",
+    "origin": "official_past_question",
+    "question": "Which of the following is a characteristic of Kingdom Monera?",
     "options": {
-      "A": "only water upward",
-      "B": "organic nutrients",
-      "C": "only stones",
-      "D": "only metals"
+      "A": "Presence of a nuclear membrane",
+      "B": "Presence of chlorophyll in all members",
+      "C": "Prokaryotic cell organization",
+      "D": "Multicellular body"
     },
-    "correctAnswer": "B",
-    "explanation": "Food/nutrients.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Monera (bacteria) are prokaryotes—they lack a membrane-bound nucleus and membrane-bound organelles.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-033",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Aerobic respiration needs (practice 2020 #33)",
+    "origin": "official_past_question",
+    "question": "In the binomial system of nomenclature, the first name represents the?",
     "options": {
-      "A": "nitrogen only",
-      "B": "oxygen",
-      "C": "only darkness",
-      "D": "only vacuum"
+      "A": "Species",
+      "B": "Genus",
+      "C": "Family",
+      "D": "Order"
     },
     "correctAnswer": "B",
-    "explanation": "Oxygen.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "The binomial name consists of the genus (capitalized) followed by the species (lowercase).",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-034",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "White blood cells help in (practice 2020 #34)",
+    "origin": "official_past_question",
+    "question": "Euglena is significant in the study of living organisms because it?",
     "options": {
-      "A": "carrying O2 only",
-      "B": "defence/immunity",
-      "C": "photosynthesis",
-      "D": "digestion of steel"
+      "A": "Is purely autotrophic",
+      "B": "Is purely heterotrophic",
+      "C": "Exhibits both plant and animal characteristics",
+      "D": "Is a virus"
     },
-    "correctAnswer": "B",
-    "explanation": "Immunity.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Euglena has chloroplasts (plant-like) but can also move and ingest food (animal-like), blurring the line between kingdoms.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-035",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Ecosystem is (practice 2020 #35)",
+    "origin": "official_past_question",
+    "question": "A feature common to bacteria and blue-green algae is that both?",
     "options": {
-      "A": "one organism only",
-      "B": "community + environment",
-      "C": "only climate",
-      "D": "only soil"
+      "A": "Are eukaryotic",
+      "B": "Have a nuclear membrane",
+      "C": "Are prokaryotic",
+      "D": "Are multicellular"
     },
-    "correctAnswer": "B",
-    "explanation": "Biotic+abiotic.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Both bacteria and cyanobacteria (blue-green algae) are prokaryotes, lacking a true nucleus.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-036",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Mutation is (practice 2020 #36)",
+    "origin": "official_past_question",
+    "question": "Rhizopus is classified under fungi mainly because it?",
     "options": {
-      "A": "always useful",
-      "B": "change in genetic material",
-      "C": "always lethal",
-      "D": "not inherited ever"
+      "A": "Is photosynthetic",
+      "B": "Has chitinous cell walls and is heterotrophic",
+      "C": "Is unicellular",
+      "D": "Has flagella"
     },
     "correctAnswer": "B",
-    "explanation": "Genetic change.",
-    "topic": "General",
+    "explanation": "Fungi have chitinous cell walls and obtain nutrients heterotrophically (saprophytically or parasitically).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-037",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Chlorophyll is important in (practice 2020 #37)",
+    "origin": "official_past_question",
+    "question": "A characteristic feature of bryophytes is that they?",
     "options": {
-      "A": "digestion",
-      "B": "trapping light energy",
-      "C": "blood clotting",
-      "D": "bone repair"
+      "A": "Have vascular tissue",
+      "B": "Require water for fertilization",
+      "C": "Produce seeds",
+      "D": "Have true roots"
     },
     "correctAnswer": "B",
-    "explanation": "Light capture.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Bryophytes (mosses, liverworts) have flagellated sperm that require a film of water to swim to the egg.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-038",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Synapse is junction between (practice 2020 #38)",
+    "origin": "official_past_question",
+    "question": "A person with blood group O is regarded as a universal donor because?",
     "options": {
-      "A": "two bones",
-      "B": "neurons",
-      "C": "two leaves",
-      "D": "two roots"
+      "A": "Has both A and B antigens",
+      "B": "Has no A or B antigens on red cells",
+      "C": "Has anti-A and anti-B antibodies",
+      "D": "Can receive any blood type"
     },
     "correctAnswer": "B",
-    "explanation": "Nerve cells.",
-    "topic": "General",
+    "explanation": "Group O red cells lack A and B surface antigens, so they are not attacked by recipient antibodies.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-039",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Hormones are (practice 2020 #39)",
+    "origin": "official_past_question",
+    "question": "The part of the brain responsible for balance and posture is the?",
     "options": {
-      "A": "digestive stones",
-      "B": "chemical messengers",
-      "C": "only vitamins from sun",
-      "D": "only minerals"
+      "A": "Cerebrum",
+      "B": "Cerebellum",
+      "C": "Medulla oblongata",
+      "D": "Thalamus"
     },
     "correctAnswer": "B",
-    "explanation": "Messengers.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "The cerebellum coordinates equilibrium, posture, and smooth muscular movements.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2020-040",
     "subject": "biology",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Biodiversity means (practice 2020 #40)",
+    "origin": "official_past_question",
+    "question": "The deficiency of Vitamin C leads to a disease called?",
     "options": {
-      "A": "one species only",
-      "B": "variety of life forms",
-      "C": "only climate",
-      "D": "only rocks"
+      "A": "Rickets",
+      "B": "Scurvy",
+      "C": "Beri-beri",
+      "D": "Pellagra"
     },
     "correctAnswer": "B",
-    "explanation": "Variety of life.",
-    "topic": "General",
+    "explanation": "Vitamin C (ascorbic acid) is essential for collagen synthesis; deficiency causes scurvy (bleeding gums, poor wound healing).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   }
 ];
 

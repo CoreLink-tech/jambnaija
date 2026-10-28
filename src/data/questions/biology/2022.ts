@@ -1,726 +1,726 @@
 import type { JambQuestion } from "../types";
 
-/** Original practice — biology 2022. Not official past questions. */
+/** Biology 2022 — compiled JAMB-style past/mock questions. */
 const questions: JambQuestion[] = [
   {
     "id": "bio-2022-001",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Powerhouse of cell (practice 2022 #1)",
+    "origin": "official_past_question",
+    "question": "Sources of air pollutants are?",
     "options": {
-      "A": "nucleus",
-      "B": "mitochondrion",
-      "C": "ribosome",
-      "D": "vacuole"
+      "A": "Industrial chimneys, burning fossil fuels and river dams",
+      "B": "Sulphur dioxide, vehicle exhausts and aerosols",
+      "C": "Oxygen, nitrogen and carbon dioxide",
+      "D": "Water vapour, ozone and helium"
     },
     "correctAnswer": "B",
-    "explanation": "Mitochondrion.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "SO₂, vehicle exhausts, and aerosols are major air pollutants; the other options include natural atmospheric gases or non-pollutants.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-002",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Photosynthesis site (practice 2022 #2)",
+    "origin": "official_past_question",
+    "question": "The body of a snail is divided into head?",
     "options": {
-      "A": "root",
-      "B": "bark",
-      "C": "leaf chloroplasts",
-      "D": "petals"
+      "A": "Thorax and abdomen",
+      "B": "Cephalothorax and abdomen",
+      "C": "Visceral mass and foot",
+      "D": "Mantle and foot"
     },
-    "correctAnswer": "C",
-    "explanation": "Chloroplasts.",
-    "topic": "General",
+    "correctAnswer": "D",
+    "explanation": "The snail body consists of a head, a visceral mass (containing organs), a muscular foot for locomotion, and a mantle.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-003",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "DNA stands for (practice 2022 #3)",
+    "origin": "official_past_question",
+    "question": "An adaptation for defense in animals is?",
     "options": {
-      "A": "Deoxyribonucleic acid",
-      "B": "Diribonucleic acid",
-      "C": "Dicarboxylic acid",
-      "D": "Deoxyribose nitrate"
+      "A": "Spines in porcupine fish",
+      "B": "Camouflage in chameleon",
+      "C": "Migration in birds",
+      "D": "Hibernation in bears"
     },
     "correctAnswer": "A",
-    "explanation": "DNA.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Spines are a physical defense mechanism; camouflage is concealment, migration and hibernation are behavioral/seasonal adaptations.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-004",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Basic classification unit (practice 2022 #4)",
+    "origin": "official_past_question",
+    "question": "The movement of Euglena towards the source of light is a?",
     "options": {
-      "A": "family",
-      "B": "genus",
-      "C": "species",
-      "D": "order"
+      "A": "Tropic movement",
+      "B": "Tactic movement",
+      "C": "Nastic movement",
+      "D": "Tropism"
     },
-    "correctAnswer": "C",
-    "explanation": "Species.",
-    "topic": "General",
+    "correctAnswer": "B",
+    "explanation": "Euglena exhibits positive phototaxis—a directional movement of the whole organism toward light.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-005",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Natural selection by (practice 2022 #5)",
+    "origin": "official_past_question",
+    "question": "During mitosis, the stage at which chromosomes line up around the equator is?",
     "options": {
-      "A": "Mendel",
-      "B": "Darwin",
-      "C": "Pasteur",
-      "D": "Hooke"
+      "A": "Prophase",
+      "B": "Metaphase",
+      "C": "Anaphase",
+      "D": "Telophase"
     },
     "correctAnswer": "B",
-    "explanation": "Darwin.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "In metaphase, chromosomes align at the metaphase plate (equator) of the cell.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-006",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Producers (practice 2022 #6)",
+    "origin": "official_past_question",
+    "question": "The waste product of insects is?",
     "options": {
-      "A": "consumers only",
-      "B": "make own food",
-      "C": "parasites only",
-      "D": "detritivores only"
+      "A": "Uric acid",
+      "B": "Urea",
+      "C": "Ammonia",
+      "D": "Creatinine"
     },
-    "correctAnswer": "B",
-    "explanation": "Autotrophs.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Insects excrete nitrogenous waste as uric acid (uricotelic), conserving water.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-007",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Transpiration (practice 2022 #7)",
+    "origin": "official_past_question",
+    "question": "Succession that occurs on an abandoned farm land is?",
     "options": {
-      "A": "blood loss",
-      "B": "water vapour loss from plants",
-      "C": "bone growth",
-      "D": "light absorption only"
+      "A": "Primary succession",
+      "B": "Secondary succession",
+      "C": "Climax succession",
+      "D": "Hydrosere"
     },
     "correctAnswer": "B",
-    "explanation": "Water vapour.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Secondary succession occurs on previously occupied but disturbed land where soil already exists.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-008",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "RBCs transport (practice 2022 #8)",
+    "origin": "official_past_question",
+    "question": "In Nigeria, Southern Guinea Savanna is found in?",
     "options": {
-      "A": "urea",
-      "B": "oxygen",
-      "C": "bile",
-      "D": "starch"
+      "A": "Sokoto and Kano",
+      "B": "Kogi and Kwara",
+      "C": "Lagos and Ogun",
+      "D": "Calabar and Uyo"
     },
     "correctAnswer": "B",
-    "explanation": "Oxygen.",
-    "topic": "General",
+    "explanation": "The Southern Guinea Savanna zone in Nigeria includes parts of Kogi, Kwara, and other middle-belt states.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-009",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Osmosis needs (practice 2022 #9)",
+    "origin": "official_past_question",
+    "question": "Which of the following is associated with the dark stage of photosynthesis?",
     "options": {
-      "A": "metal sheet",
-      "B": "selectively permeable membrane",
-      "C": "vacuum",
-      "D": "wood only"
+      "A": "Assimilation of carbon(IV) oxide",
+      "B": "Splitting of water",
+      "C": "Production of oxygen",
+      "D": "Absorption of light"
     },
-    "correctAnswer": "B",
-    "explanation": "SP membrane.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "The dark (light-independent) reactions (Calvin cycle) fix CO₂ into organic molecules; water splitting and O₂ production occur in the light reactions.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-010",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Malaria vector (practice 2022 #10)",
+    "origin": "official_past_question",
+    "question": "The part of mammalian skin that excretes metabolic wastes is?",
     "options": {
-      "A": "housefly",
-      "B": "Anopheles mosquito",
-      "C": "cockroach",
-      "D": "bedbug only"
+      "A": "Sweat gland",
+      "B": "Sebaceous gland",
+      "C": "Hair follicle",
+      "D": "Epidermis"
     },
-    "correctAnswer": "B",
-    "explanation": "Anopheles.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Sweat glands excrete water, salts, and urea through sweat.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-011",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Cell control centre (practice 2022 #11)",
+    "origin": "official_past_question",
+    "question": "The feeding relationship that exists between a tick and a cow is?",
     "options": {
-      "A": "mitochondrion",
-      "B": "nucleus",
-      "C": "cell wall",
-      "D": "lysosome"
+      "A": "Parasitism",
+      "B": "Commensalism",
+      "C": "Mutualism",
+      "D": "Predation"
     },
-    "correctAnswer": "B",
-    "explanation": "Nucleus.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "The tick benefits by feeding on the cow’s blood while harming the host.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-012",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Genes located on (practice 2022 #12)",
+    "origin": "official_past_question",
+    "question": "The type of fruit that is formed from a single flower having several free carpels is?",
     "options": {
-      "A": "ribosomes only",
-      "B": "chromosomes",
-      "C": "cell walls only",
-      "D": "vacuoles only"
+      "A": "Simple fruit",
+      "B": "Aggregate fruit",
+      "C": "Multiple fruit",
+      "D": "Accessory fruit"
     },
     "correctAnswer": "B",
-    "explanation": "Chromosomes.",
-    "topic": "General",
+    "explanation": "An aggregate fruit (e.g., raspberry) develops from multiple free carpels of a single flower.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-013",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Food chain starts with (practice 2022 #13)",
+    "origin": "official_past_question",
+    "question": "The part that performs urinogenital function in the male reproductive system is the?",
     "options": {
-      "A": "carnivore",
-      "B": "producer",
-      "C": "decomposer only",
-      "D": "parasite"
+      "A": "Prostate gland",
+      "B": "Vas deferens",
+      "C": "Urethra",
+      "D": "Seminal vesicle"
     },
-    "correctAnswer": "B",
-    "explanation": "Producer.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "The urethra serves both urinary (urine) and genital (semen) functions in males.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-014",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Pollination is transfer of pollen (practice 2022 #14)",
+    "origin": "official_past_question",
+    "question": "The components of blood in man are?",
     "options": {
-      "A": "ovule to root",
-      "B": "anther to stigma",
-      "C": "leaf to stem",
-      "D": "seed to fruit"
+      "A": "Red blood cells, white blood cells, and platelets",
+      "B": "Plasma and serum",
+      "C": "Red blood cells, white blood cells, plasma, and platelets",
+      "D": "Lymph and plasma"
     },
-    "correctAnswer": "B",
-    "explanation": "Anther\u2192stigma.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Blood consists of plasma and formed elements (RBCs, WBCs, platelets).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-015",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Plant cells have (practice 2022 #15)",
+    "origin": "official_past_question",
+    "question": "The development of big muscles by a wrestler is an example of?",
     "options": {
-      "A": "mitochondria only difference",
-      "B": "cell wall and often chloroplasts",
-      "C": "no nucleus",
-      "D": "no cytoplasm"
+      "A": "Acquired characteristics",
+      "B": "Inherited characteristics",
+      "C": "Mutation",
+      "D": "Genetic drift"
     },
-    "correctAnswer": "B",
-    "explanation": "Wall/chloroplasts.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Acquired traits (like muscle bulk from exercise) are not inherited; they are developed during an individual’s lifetime.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-016",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Fertilisation is fusion of (practice 2022 #16)",
+    "origin": "official_past_question",
+    "question": "Lack of nucleus is a feature in?",
     "options": {
-      "A": "two leaves",
-      "B": "gametes",
-      "C": "two stems",
-      "D": "two roots"
+      "A": "Leucocyte",
+      "B": "Thrombocyte",
+      "C": "Erythrocyte",
+      "D": "Lymphocyte"
     },
-    "correctAnswer": "B",
-    "explanation": "Gametes.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Mature mammalian red blood cells (erythrocytes) lack a nucleus, maximizing space for hemoglobin.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-017",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Decomposers (practice 2022 #17)",
+    "origin": "official_past_question",
+    "question": "A universal recipient of blood belongs to blood group?",
     "options": {
-      "A": "make O2 only",
-      "B": "recycle nutrients",
-      "C": "stop growth",
-      "D": "make light"
+      "A": "O",
+      "B": "AB",
+      "C": "A",
+      "D": "B"
     },
     "correctAnswer": "B",
-    "explanation": "Recycle nutrients.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Blood group AB has no anti-A or anti-B antibodies, so it can receive blood from any ABO group.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-018",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Kidney function (practice 2022 #18)",
+    "origin": "official_past_question",
+    "question": "The internal structure of a leaf that has larger air space is?",
     "options": {
-      "A": "digest fat",
-      "B": "excretion and osmoregulation",
-      "C": "pump blood",
-      "D": "hearing"
+      "A": "Palisade mesophyll",
+      "B": "Epidermis",
+      "C": "Spongy mesophyll",
+      "D": "Vein"
     },
-    "correctAnswer": "B",
-    "explanation": "Excretion.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Spongy mesophyll cells are loosely arranged with large intercellular air spaces for gas exchange.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-019",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Mammals have (practice 2022 #19)",
+    "origin": "official_past_question",
+    "question": "An example of an arboreal animal is?",
     "options": {
-      "A": "feathers",
-      "B": "mammary glands and hair",
-      "C": "scales only",
-      "D": "gills only"
+      "A": "Squirrels",
+      "B": "Whales",
+      "C": "Earthworms",
+      "D": "Toads"
     },
-    "correctAnswer": "B",
-    "explanation": "Hair/mammary.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Arboreal animals live in trees; squirrels are adapted for climbing and living in trees.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-020",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Ribosomes do (practice 2022 #20)",
+    "origin": "official_past_question",
+    "question": "The movement of sugars from the leaf to other parts of the plant is?",
     "options": {
-      "A": "photosynthesis",
-      "B": "protein synthesis",
-      "C": "lipid storage only",
-      "D": "DNA only"
+      "A": "Transpiration",
+      "B": "Guttation",
+      "C": "Osmosis",
+      "D": "Translocation"
     },
-    "correctAnswer": "B",
-    "explanation": "Proteins.",
-    "topic": "General",
+    "correctAnswer": "D",
+    "explanation": "Translocation is the movement of organic solutes (sugars) through the phloem from source (leaves) to sink (roots, fruits).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-021",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Enzymes are mainly (practice 2022 #21)",
+    "origin": "official_past_question",
+    "question": "Gaseous exchange in annelids is more advanced and efficient compared to flatworms because?",
     "options": {
-      "A": "carbohydrates",
-      "B": "catalytic proteins",
-      "C": "salts",
-      "D": "metals only"
+      "A": "Annelids have gills",
+      "B": "Annelids have a closed circulatory system",
+      "C": "Their cylindrical shape gives high surface area to volume ratio",
+      "D": "Flatworms lack a respiratory pigment"
     },
-    "correctAnswer": "B",
-    "explanation": "Proteins.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "The cylindrical body of annelids provides a greater surface area for diffusion, and their closed circulatory system transports gases efficiently.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-022",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Competition when (practice 2022 #22)",
+    "origin": "official_past_question",
+    "question": "The structure that joins the two strands of a chromosome together is the?",
     "options": {
-      "A": "never meet",
-      "B": "need same limited resource",
-      "C": "photosynthesise only",
-      "D": "hibernate"
+      "A": "Chromatid",
+      "B": "Centriole",
+      "C": "Centromere",
+      "D": "Spindle fibre"
     },
-    "correctAnswer": "B",
-    "explanation": "Shared resource.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "The centromere is the region where sister chromatids are joined and to which spindle fibres attach.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-023",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Dominant allele expressed (practice 2022 #23)",
+    "origin": "official_past_question",
+    "question": "When a colour blind woman marries a normal man, what is the probability of their son being colour blind?",
     "options": {
-      "A": "only homozygous recessive",
-      "B": "when present",
-      "C": "never",
-      "D": "only bacteria"
+      "A": "0%",
+      "B": "100%",
+      "C": "50%",
+      "D": "25%"
     },
     "correctAnswer": "B",
-    "explanation": "When present.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Colour blindness is X-linked recessive. A colour-blind woman (XᶜXᶜ) passes Xᶜ to all sons, making them colour blind (XᶜY).",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-024",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Cell membrane is (practice 2022 #24)",
+    "origin": "official_past_question",
+    "question": "The correct pathway for blood flow from the heart to the tissues of mammals is?",
     "options": {
-      "A": "fully permeable always",
-      "B": "selectively permeable",
-      "C": "cellulose in animals",
-      "D": "absent in plants"
+      "A": "Heart → vein → arteriole → tissue",
+      "B": "Heart → artery → arteriole → tissue",
+      "C": "Heart → capillary → artery → tissue",
+      "D": "Heart → arteriole → artery → tissue"
     },
     "correctAnswer": "B",
-    "explanation": "Selective.",
-    "topic": "General",
+    "explanation": "Blood leaves the heart via arteries, which branch into arterioles and then capillaries in the tissues.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-025",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Habitat is (practice 2022 #25)",
+    "origin": "official_past_question",
+    "question": "Tall trees with buttress roots and evergreen leaves are characteristic features of?",
     "options": {
-      "A": "diet only",
-      "B": "where organism lives",
-      "C": "speed",
-      "D": "scientific name only"
+      "A": "Savanna",
+      "B": "Desert",
+      "C": "Tropical rain forests",
+      "D": "Tundra"
     },
-    "correctAnswer": "B",
-    "explanation": "Living place.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Tropical rainforests are characterized by tall trees, buttress roots, and evergreen foliage due to high rainfall and humidity.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-026",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Left ventricle pumps to (practice 2022 #26)",
+    "origin": "official_past_question",
+    "question": "The genes crossing over occurs during?",
     "options": {
-      "A": "lungs only",
-      "B": "body via aorta",
-      "C": "right atrium only",
-      "D": "liver only"
+      "A": "Mitosis",
+      "B": "Meiosis",
+      "C": "Fertilization",
+      "D": "Budding"
     },
     "correctAnswer": "B",
-    "explanation": "Systemic.",
-    "topic": "General",
+    "explanation": "Crossing over (exchange of genetic material between homologous chromosomes) occurs during prophase I of meiosis.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-027",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Virus needs (practice 2022 #27)",
+    "origin": "official_past_question",
+    "question": "In genetic counselling, a man with haemoglobin formation HbA HbS is most preferred to marry a woman of?",
     "options": {
-      "A": "always nucleus",
-      "B": "host to replicate",
-      "C": "to be multicellular",
-      "D": "to photosynthesise"
+      "A": "HbA HbA",
+      "B": "HbA HbS",
+      "C": "HbS HbS",
+      "D": "HbA HbC"
     },
-    "correctAnswer": "B",
-    "explanation": "Host.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "HbA HbS is the sickle cell trait. Marrying HbA HbA (normal) avoids producing HbS HbS (sickle cell disease) offspring.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-028",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Proteins digest to (practice 2022 #28)",
+    "origin": "official_past_question",
+    "question": "An ecological instrument used to measure wind direction is?",
     "options": {
-      "A": "fatty acids",
-      "B": "amino acids",
-      "C": "glucose only",
-      "D": "glycerol only"
+      "A": "Anemometer",
+      "B": "Wind vane",
+      "C": "Hygrometer",
+      "D": "Barometer"
     },
     "correctAnswer": "B",
-    "explanation": "Amino acids.",
-    "topic": "General",
+    "explanation": "A wind vane indicates wind direction; an anemometer measures wind speed.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-029",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Lungs mainly do (practice 2022 #29)",
+    "origin": "official_past_question",
+    "question": "The growth of mucor on a piece of bread is?",
     "options": {
-      "A": "digestion",
-      "B": "gaseous exchange",
-      "C": "urea excretion only",
-      "D": "blood making only"
+      "A": "Parasitism",
+      "B": "Commensalism",
+      "C": "Mutualism",
+      "D": "Saprophytism"
     },
-    "correctAnswer": "B",
-    "explanation": "Gas exchange.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "D",
+    "explanation": "Mucor is a saprophyte that obtains nutrients from dead organic matter (bread).",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-030",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Mendel studied (practice 2022 #30)",
+    "origin": "official_past_question",
+    "question": "Conversion of atmospheric carbon into chemical bond energy occurs during the process of?",
     "options": {
-      "A": "evolution only",
-      "B": "pea heredity",
-      "C": "germ theory",
-      "D": "cell walls"
+      "A": "Respiration",
+      "B": "Photosynthesis",
+      "C": "Decomposition",
+      "D": "Combustion"
     },
     "correctAnswer": "B",
-    "explanation": "Peas.",
-    "topic": "General",
+    "explanation": "Photosynthesis fixes atmospheric CO₂ into glucose, storing energy in chemical bonds.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-031",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Xylem transports (practice 2022 #31)",
+    "origin": "official_past_question",
+    "question": "The display of male agama lizard is to?",
     "options": {
-      "A": "sugars mainly downward only in all texts",
-      "B": "water and minerals",
-      "C": "only animals",
-      "D": "only air"
+      "A": "Warn predators",
+      "B": "Mark territory",
+      "C": "Attract female for mate",
+      "D": "Regulate body temperature"
     },
-    "correctAnswer": "B",
-    "explanation": "Water/minerals.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Male agama lizards display bright colours and head-bobbing to attract females during courtship.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-032",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Phloem transports (practice 2022 #32)",
+    "origin": "official_past_question",
+    "question": "The end product of the digestion of carbohydrate is?",
     "options": {
-      "A": "only water upward",
-      "B": "organic nutrients",
-      "C": "only stones",
-      "D": "only metals"
+      "A": "Amino acid",
+      "B": "Fatty acid",
+      "C": "Glucose",
+      "D": "Glycerol"
     },
-    "correctAnswer": "B",
-    "explanation": "Food/nutrients.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Carbohydrates are broken down into monosaccharides, primarily glucose.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-033",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Aerobic respiration needs (practice 2022 #33)",
+    "origin": "official_past_question",
+    "question": "The sum total of all observable features of an organism is?",
     "options": {
-      "A": "nitrogen only",
-      "B": "oxygen",
-      "C": "only darkness",
-      "D": "only vacuum"
+      "A": "Phenotype",
+      "B": "Genotype",
+      "C": "Allele",
+      "D": "Gene"
     },
-    "correctAnswer": "B",
-    "explanation": "Oxygen.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Phenotype refers to the observable physical and physiological traits of an organism.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-034",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "White blood cells help in (practice 2022 #34)",
+    "origin": "official_past_question",
+    "question": "Pentadactyl plan of the fore limbs of frog, bird, horse, whale and man is a proof of?",
     "options": {
-      "A": "carrying O2 only",
-      "B": "defence/immunity",
-      "C": "photosynthesis",
-      "D": "digestion of steel"
+      "A": "Creation",
+      "B": "Evolution",
+      "C": "Mutation",
+      "D": "Adaptation"
     },
     "correctAnswer": "B",
-    "explanation": "Immunity.",
-    "topic": "General",
+    "explanation": "The pentadactyl limb is homologous across these vertebrates, indicating a common ancestor—evidence of evolution.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-035",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Ecosystem is (practice 2022 #35)",
+    "origin": "official_past_question",
+    "question": "The under-secretion of thyroxine in children results in?",
     "options": {
-      "A": "one organism only",
-      "B": "community + environment",
-      "C": "only climate",
-      "D": "only soil"
+      "A": "Gigantism",
+      "B": "Acromegaly",
+      "C": "Dwarfism",
+      "D": "Cretinism"
     },
-    "correctAnswer": "B",
-    "explanation": "Biotic+abiotic.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "D",
+    "explanation": "Thyroxine deficiency in children causes cretinism (stunted physical and mental development).",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-036",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Mutation is (practice 2022 #36)",
+    "origin": "official_past_question",
+    "question": "Petaloid sepals are found in?",
     "options": {
-      "A": "always useful",
-      "B": "change in genetic material",
-      "C": "always lethal",
-      "D": "not inherited ever"
+      "A": "Hibiscus",
+      "B": "Pride of Barbados",
+      "C": "Flame of the forest",
+      "D": "Morning glory"
     },
     "correctAnswer": "B",
-    "explanation": "Genetic change.",
-    "topic": "General",
+    "explanation": "In Pride of Barbados (Caesalpinia pulcherrima), the sepals are brightly coloured and petal-like (petaloid).",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-037",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Chlorophyll is important in (practice 2022 #37)",
+    "origin": "official_past_question",
+    "question": "The part of the male reproductive system that produces sperm is the?",
     "options": {
-      "A": "digestion",
-      "B": "trapping light energy",
-      "C": "blood clotting",
-      "D": "bone repair"
+      "A": "Prostate gland",
+      "B": "Epididymis",
+      "C": "Testis",
+      "D": "Vas deferens"
     },
-    "correctAnswer": "B",
-    "explanation": "Light capture.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Sperm are produced in the seminiferous tubules of the testes.",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-038",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Synapse is junction between (practice 2022 #38)",
+    "origin": "official_past_question",
+    "question": "A characteristic of wind-dispersed seeds is?",
     "options": {
-      "A": "two bones",
-      "B": "neurons",
-      "C": "two leaves",
-      "D": "two roots"
+      "A": "Heavy and fleshy",
+      "B": "Light with wings or hairs",
+      "C": "Sticky and spiny",
+      "D": "Large and colourful"
     },
     "correctAnswer": "B",
-    "explanation": "Nerve cells.",
-    "topic": "General",
+    "explanation": "Wind-dispersed seeds are lightweight and often have wings or hairs to catch the wind.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-039",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Hormones are (practice 2022 #39)",
+    "origin": "official_past_question",
+    "question": "The ecological relationship in which one organism benefits and the other is unaffected is?",
     "options": {
-      "A": "digestive stones",
-      "B": "chemical messengers",
-      "C": "only vitamins from sun",
-      "D": "only minerals"
+      "A": "Mutualism",
+      "B": "Parasitism",
+      "C": "Commensalism",
+      "D": "Amensalism"
     },
-    "correctAnswer": "B",
-    "explanation": "Messengers.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Commensalism benefits one organism while the other is neither helped nor harmed (e.g., epiphytes on trees).",
+    "topic": "Biology",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Biology"
   },
   {
     "id": "bio-2022-040",
     "subject": "biology",
     "year": 2022,
-    "origin": "original_practice",
-    "question": "Biodiversity means (practice 2022 #40)",
+    "origin": "official_past_question",
+    "question": "One of the functions of water in seed germination is to?",
     "options": {
-      "A": "one species only",
-      "B": "variety of life forms",
-      "C": "only climate",
-      "D": "only rocks"
+      "A": "Supply oxygen",
+      "B": "Activate enzymes",
+      "C": "Provide warmth",
+      "D": "Supply minerals"
     },
     "correctAnswer": "B",
-    "explanation": "Variety of life.",
-    "topic": "General",
+    "explanation": "Water imbibition activates enzymes that break down stored food reserves for the growing embryo.",
+    "topic": "Biology",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Biology"
   }
 ];
 
