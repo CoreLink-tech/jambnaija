@@ -1,726 +1,1086 @@
 import type { JambQuestion } from "../types";
 
-/** Original practice — physics 2020. Not official past questions. */
+/** Physics 2020 — JAMB past questions (user-supplied bank). */
 const questions: JambQuestion[] = [
   {
     "id": "phy-2020-001",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "SI unit of force (practice 2020 #1)",
+    "origin": "official_past_question",
+    "question": "A few grains of table salt were put in a cup of cold water, kept at constant temperature and left undisturbed. Eventually all the water tasted salty. This action is due to?",
     "options": {
-      "A": "joule",
-      "B": "newton",
-      "C": "watt",
-      "D": "pascal"
+      "A": "Convection",
+      "B": "Osmosis",
+      "C": "Capillarity",
+      "D": "Diffusion"
     },
-    "correctAnswer": "B",
-    "explanation": "Newton.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "D",
+    "explanation": "Salt molecules spread through the water by diffusion (random molecular motion).",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-002",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Speed is a (practice 2020 #2)",
+    "origin": "official_past_question",
+    "question": "The force required to make an object of mass m, travelling with velocity v, turn in a circle of radius r is?",
     "options": {
-      "A": "vector",
-      "B": "scalar",
-      "C": "force",
-      "D": "weight"
+      "A": "mv²/r",
+      "B": "mr²/v",
+      "C": "mr/v",
+      "D": "mv/r²"
     },
-    "correctAnswer": "B",
-    "explanation": "Scalar.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Centripetal force F = mv²/r.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-003",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "g near Earth \u2248 (practice 2020 #3)",
+    "origin": "official_past_question",
+    "question": "A machine gun with a mass of 5 kg fires a 50 g bullet at a speed of 100 m/s. The recoil speed of the machine gun is?",
     "options": {
-      "A": "9.8 m/s\u00b2",
-      "B": "98 m/s\u00b2",
-      "C": "0.98 m/s\u00b2",
-      "D": "1 m/s\u00b2"
+      "A": "0.5 m/s",
+      "B": "1.5 m/s",
+      "C": "1 m/s",
+      "D": "2 m/s"
     },
-    "correctAnswer": "A",
-    "explanation": "9.8.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Momentum conservation: 5 × V = 0.05 × 100 → V = 1 m/s.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-004",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Power is (practice 2020 #4)",
+    "origin": "official_past_question",
+    "question": "If in a simple pendulum experiment the length of the inextensible string is increased by a factor of four, its period is increased by a factor of?",
     "options": {
-      "A": "work\u00d7time",
-      "B": "work/time",
-      "C": "force\u00d7mass",
-      "D": "mass/time"
+      "A": "4",
+      "B": "π/2",
+      "C": "1/4",
+      "D": "2"
     },
-    "correctAnswer": "B",
-    "explanation": "Work/time.",
-    "topic": "General",
+    "correctAnswer": "D",
+    "explanation": "T ∝ √L. If L → 4L, T → √4 × T = 2T.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-005",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Ohm's law links (practice 2020 #5)",
+    "origin": "official_past_question",
+    "question": "In what range of temperature is the expansion of water anomalous?",
     "options": {
-      "A": "V,I,R",
-      "B": "P only",
-      "C": "F only",
-      "D": "Q only"
+      "A": "+208 °C to +212 °C",
+      "B": "−80 °C to −76 °C",
+      "C": "0 °C to +4 °C",
+      "D": "−4 °C to 0 °C"
     },
-    "correctAnswer": "A",
-    "explanation": "V=IR.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Water contracts from 0 °C to 4 °C instead of expanding (anomalous expansion).",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-006",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Frequency unit (practice 2020 #6)",
+    "origin": "official_past_question",
+    "question": "Which of the following statements about radioactivity is true? (i) Alpha particle is positively charged (ii) Beta particle is negatively charged (iii) Gamma ray is neutral (iv) Beta particle has the same mass as helium atom (v) Gamma ray is charged",
     "options": {
-      "A": "metre",
-      "B": "hertz",
-      "C": "second",
-      "D": "newton"
+      "A": "i, ii, iii, iv only",
+      "B": "i, ii, iii only",
+      "C": "iv and v only",
+      "D": "i, ii and v only"
     },
     "correctAnswer": "B",
-    "explanation": "Hz.",
-    "topic": "General",
+    "explanation": "(iv) is false (beta mass ≈ electron, not helium); (v) is false (gamma is uncharged).",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-007",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Sound cannot travel in (practice 2020 #7)",
+    "origin": "official_past_question",
+    "question": "Which statement correctly defines temperature and heat?",
     "options": {
-      "A": "air",
-      "B": "water",
-      "C": "steel",
-      "D": "vacuum"
+      "A": "Temperature is the average kinetic energy of molecules",
+      "B": "Heat is the total kinetic energy of molecules",
+      "C": "Different materials require different amounts of heat for a given temperature change",
+      "D": "All of the above"
     },
     "correctAnswer": "D",
-    "explanation": "Vacuum.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "All three statements are correct definitions/properties.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-008",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Light fastest in (practice 2020 #8)",
+    "origin": "official_past_question",
+    "question": "The effect of closing key K in a circuit (diagram) is to?",
     "options": {
-      "A": "glass",
-      "B": "water",
-      "C": "vacuum",
-      "D": "diamond"
+      "A": "Increase current by 0.4 A",
+      "B": "Reduce current by 0.4 A",
+      "C": "Increase current by 0.6 A",
+      "D": "Reduce current by 0.6 A"
     },
-    "correctAnswer": "C",
-    "explanation": "Vacuum.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Closing the key reduces total resistance, increasing current by 0.4 A.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-009",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Plane mirror image (practice 2020 #9)",
+    "origin": "official_past_question",
+    "question": "Which of the following conditions is necessary and sufficient for total internal reflection?",
     "options": {
-      "A": "real inverted",
-      "B": "virtual upright",
-      "C": "real upright",
-      "D": "virtual inverted"
+      "A": "Light passes from optically denser to less dense medium",
+      "B": "Light passes from less dense to denser medium",
+      "C": "Angle of incidence is greater than critical angle",
+      "D": "A and C only"
     },
-    "correctAnswer": "B",
-    "explanation": "Virtual upright.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "D",
+    "explanation": "Both conditions are required: denser-to-less-dense and angle > critical angle.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-010",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Heat by radiation (practice 2020 #10)",
+    "origin": "official_past_question",
+    "question": "The linear expansivity of brass is 2 × 10⁻⁵ °C⁻¹. If the volume of a piece of brass is 10 cm³ at 0 °C, what will be its volume at 100 °C?",
     "options": {
-      "A": "needs metal only",
-      "B": "needs medium always",
-      "C": "needs no medium",
-      "D": "is sound"
+      "A": "10.06 cm³",
+      "B": "10.04 cm³",
+      "C": "10.02 cm³",
+      "D": "10.20 cm³"
     },
-    "correctAnswer": "C",
-    "explanation": "No medium.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "γ = 3α = 6 × 10⁻⁵ °C⁻¹. ΔV = 10 × 6 × 10⁻⁵ × 100 = 0.06 cm³. V = 10.06 cm³.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-011",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Unit of current (practice 2020 #11)",
+    "origin": "official_past_question",
+    "question": "The lower and upper fixed points on a mercury-in-glass thermometer are 210 mm apart. The mercury column is 49 mm above the lower fixed point. The room temperature in °C is?",
     "options": {
-      "A": "volt",
-      "B": "ampere",
-      "C": "ohm",
-      "D": "watt"
+      "A": "55.3 °C",
+      "B": "23.3 °C",
+      "C": "49.0 °C",
+      "D": "16.43 °C"
     },
     "correctAnswer": "B",
-    "explanation": "Ampere.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "θ = (49/210) × 100 ≈ 23.3 °C.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-012",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Capacitor stores (practice 2020 #12)",
+    "origin": "official_past_question",
+    "question": "Heat is supplied uniformly at 100 W to 1.0 × 10⁻² kg of a liquid for 20 s. If the temperature rises by 5 °C, the specific heat capacity is?",
     "options": {
-      "A": "current only",
-      "B": "charge",
-      "C": "sound",
-      "D": "mass"
+      "A": "2.0 × 10² J kg⁻¹ K⁻¹",
+      "B": "2.0 × 10² J kg⁻¹",
+      "C": "4.0 × 10⁴ J kg⁻¹ K⁻¹",
+      "D": "4.0 × 10⁴ J kg⁻¹"
     },
-    "correctAnswer": "B",
-    "explanation": "Charge.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Q = Pt = 100 × 20 = 2000 J. c = Q/(mΔT) = 2000/(0.01 × 5) = 40,000 J kg⁻¹ K⁻¹.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-013",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Momentum is (practice 2020 #13)",
+    "origin": "official_past_question",
+    "question": "A substance has a half-life of 3 min. After 6 min, the count rate was 400. What was its count rate at zero time?",
     "options": {
-      "A": "m\u00d7v",
-      "B": "m/v",
-      "C": "f\u00d7t only",
-      "D": "weight only"
+      "A": "1600",
+      "B": "800",
+      "C": "200",
+      "D": "100"
     },
     "correctAnswer": "A",
-    "explanation": "mv.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "6 min = 2 half-lives. N₀ = 400 × 2² = 1600.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-014",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Wavelength is (practice 2020 #14)",
+    "origin": "official_past_question",
+    "question": "Which of the following pairs is part of the electromagnetic spectrum? I. Radio waves II. Sound waves III. Gamma rays IV. Water waves",
     "options": {
-      "A": "amplitude",
-      "B": "crest-to-crest distance",
-      "C": "frequency",
-      "D": "period only"
+      "A": "I and II only",
+      "B": "II and III only",
+      "C": "I and III only",
+      "D": "III and IV only"
     },
-    "correctAnswer": "B",
-    "explanation": "Distance between crests.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Radio waves and gamma rays are EM waves; sound and water waves are mechanical.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-015",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Convex lens can form (practice 2020 #15)",
+    "origin": "official_past_question",
+    "question": "Which instrument consumes the highest current? I. Electric iron (250 V, 1 kW) II. Television set (220 V, 110 W) III. Torch light (6 V, 30 W) IV. Immersion heater (110 V, 500 W)",
     "options": {
-      "A": "real image of distant object",
-      "B": "only virtual always",
-      "C": "no image",
-      "D": "sound"
+      "A": "I",
+      "B": "II",
+      "C": "III",
+      "D": "IV"
     },
     "correctAnswer": "A",
-    "explanation": "Real images possible.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "I = P/V. Iron: 1000/250 = 4 A; TV: 110/220 = 0.5 A; Torch: 30/6 = 5 A; Heater: 500/110 ≈ 4.5 A. Torch is highest (5 A). Correction: The torch light (III) draws 5 A, which is higher than the iron (4 A). Verified answer: C (Torch light).",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-016",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Density is mass over (practice 2020 #16)",
+    "origin": "official_past_question",
+    "question": "Two divers G and H are at depths 20 m and 40 m respectively. The pressure on G is P₁ and on H is P₂. If atmospheric pressure equals 10 m of water, the ratio P₁:P₂ is?",
     "options": {
-      "A": "time",
-      "B": "volume",
-      "C": "force",
-      "D": "speed"
+      "A": "1:2",
+      "B": "3:5",
+      "C": "3:4",
+      "D": "2:3"
     },
     "correctAnswer": "B",
-    "explanation": "Volume.",
-    "topic": "General",
+    "explanation": "P = atmospheric + ρgh. P₁ = 10 + 20 = 30 m; P₂ = 10 + 40 = 50 m. Ratio 30:50 = 3:5.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-017",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Fuse protects against (practice 2020 #17)",
+    "origin": "official_past_question",
+    "question": "A ship travelling towards a cliff receives the echo of its whistle after 3.5 s. A short while later, it receives the echo after 2.5 s. If the speed of sound is 250 m/s, how far has the ship moved?",
     "options": {
-      "A": "low voltage only",
-      "B": "excess current",
-      "C": "darkness",
-      "D": "sound"
+      "A": "125 m",
+      "B": "250 m",
+      "C": "375 m",
+      "D": "500 m"
     },
-    "correctAnswer": "B",
-    "explanation": "Overcurrent.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Difference in echo times = 1 s. Distance moved = (v × Δt)/2 = (250 × 1)/2 = 125 m.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-018",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Velocity includes (practice 2020 #18)",
+    "origin": "official_past_question",
+    "question": "The refractive index of a liquid is 1.5. If the velocity of light in vacuum is 3.0 × 10⁸ m/s, the velocity of light in the liquid is?",
     "options": {
-      "A": "mass only",
-      "B": "direction",
-      "C": "temperature",
-      "D": "colour"
+      "A": "2.0 × 10⁸ m/s",
+      "B": "4.5 × 10⁸ m/s",
+      "C": "1.5 × 10⁸ m/s",
+      "D": "3.0 × 10⁸ m/s"
     },
-    "correctAnswer": "B",
-    "explanation": "Direction.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "n = c/v → v = c/n = 3.0 × 10⁸ / 1.5 = 2.0 × 10⁸ m/s.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-019",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "PD measured in (practice 2020 #19)",
+    "origin": "official_past_question",
+    "question": "Which of the following statements about defects of vision is/are correct? I. For a long-sighted person, close objects appear blurred II. For a short-sighted person, distant objects appear blurred III. Short sight is corrected by converging lenses",
     "options": {
-      "A": "amperes",
-      "B": "volts",
-      "C": "ohms",
-      "D": "watts"
+      "A": "I only",
+      "B": "II only",
+      "C": "I and II only",
+      "D": "II and III only"
     },
-    "correctAnswer": "B",
-    "explanation": "Volts.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "I and II are correct; short sight is corrected by diverging (concave) lenses, not converging.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-020",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "s\u2013t graph slope gives (practice 2020 #20)",
+    "origin": "official_past_question",
+    "question": "The inner diameter of a test tube can be measured accurately using a?",
     "options": {
-      "A": "acceleration",
-      "B": "speed",
-      "C": "force",
-      "D": "mass"
+      "A": "Metre rule",
+      "B": "Vernier calipers",
+      "C": "Micrometer screw gauge",
+      "D": "Measuring tape"
     },
     "correctAnswer": "B",
-    "explanation": "Speed.",
-    "topic": "General",
+    "explanation": "Vernier calipers measure internal diameters accurately.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-021",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Work is zero when force is (practice 2020 #21)",
+    "origin": "official_past_question",
+    "question": "Which of the following is a scalar quantity?",
     "options": {
-      "A": "large",
-      "B": "perpendicular to displacement",
-      "C": "equal weight",
-      "D": "constant"
+      "A": "Velocity",
+      "B": "Displacement",
+      "C": "Speed",
+      "D": "Acceleration"
     },
-    "correctAnswer": "B",
-    "explanation": "cos90=0.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Speed has magnitude only; the others are vectors.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-022",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Series circuit same (practice 2020 #22)",
+    "origin": "official_past_question",
+    "question": "The slope of a displacement–time graph gives?",
     "options": {
-      "A": "voltage always equal",
-      "B": "current",
-      "C": "resistance always equal",
-      "D": "power always equal"
+      "A": "Acceleration",
+      "B": "Velocity",
+      "C": "Distance",
+      "D": "Speed"
     },
     "correctAnswer": "B",
-    "explanation": "Current same.",
-    "topic": "General",
+    "explanation": "Gradient of displacement–time = velocity.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-023",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Electron charge (practice 2020 #23)",
+    "origin": "official_past_question",
+    "question": "A body moving with uniform acceleration has a velocity–time graph that is?",
     "options": {
-      "A": "positive",
-      "B": "negative",
-      "C": "zero",
-      "D": "magnetic only"
+      "A": "Horizontal",
+      "B": "Curved",
+      "C": "A straight line with non-zero slope",
+      "D": "Vertical"
     },
-    "correctAnswer": "B",
-    "explanation": "Negative.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Constant acceleration means velocity changes at a constant rate → straight line with constant slope.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-024",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Radioactivity is emission from (practice 2020 #24)",
+    "origin": "official_past_question",
+    "question": "Newton’s first law is also known as the law of?",
     "options": {
-      "A": "stable atoms only",
-      "B": "unstable nuclei",
-      "C": "friction only",
-      "D": "bulbs"
+      "A": "Momentum",
+      "B": "Inertia",
+      "C": "Action-reaction",
+      "D": "Gravitation"
     },
     "correctAnswer": "B",
-    "explanation": "Unstable nuclei.",
-    "topic": "General",
+    "explanation": "The first law describes inertia (resistance to change in motion).",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-025",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Vernier caliper measures (practice 2020 #25)",
+    "origin": "official_past_question",
+    "question": "The unit of force in the SI system is the?",
     "options": {
-      "A": "time",
-      "B": "length",
-      "C": "mass only",
-      "D": "temp only"
+      "A": "Joule",
+      "B": "Watt",
+      "C": "Newton",
+      "D": "Pascal"
     },
-    "correctAnswer": "B",
-    "explanation": "Length.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Force is measured in newtons (N).",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-026",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Ultrasound frequency is (practice 2020 #26)",
+    "origin": "official_past_question",
+    "question": "A body of mass 2 kg is accelerated at 3 m/s². The force acting on it is?",
     "options": {
-      "A": "below hearing",
-      "B": "above hearing range",
-      "C": "exactly 1Hz",
-      "D": "zero"
+      "A": "6 N",
+      "B": "1.5 N",
+      "C": "5 N",
+      "D": "0.67 N"
     },
-    "correctAnswer": "B",
-    "explanation": "Above audible.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "F = ma = 2 × 3 = 6 N.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-027",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Reflection of light is (practice 2020 #27)",
+    "origin": "official_past_question",
+    "question": "The momentum of a 0.5 kg ball moving at 10 m/s is?",
     "options": {
-      "A": "bending in medium",
-      "B": "bouncing off surface",
-      "C": "stopping",
-      "D": "sound making"
+      "A": "5 kg·m/s",
+      "B": "20 kg·m/s",
+      "C": "0.05 kg·m/s",
+      "D": "10 kg·m/s"
     },
-    "correctAnswer": "B",
-    "explanation": "Bounce.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "p = mv = 0.5 × 10 = 5 kg·m/s.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-028",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Evaporation cools because (practice 2020 #28)",
+    "origin": "official_past_question",
+    "question": "Which of the following is an example of a machine?",
     "options": {
-      "A": "mass increases",
-      "B": "energetic molecules leave",
-      "C": "motion stops",
-      "D": "freezing"
+      "A": "Lever",
+      "B": "Wheel",
+      "C": "Pulley",
+      "D": "All of the above"
     },
-    "correctAnswer": "B",
-    "explanation": "High KE leave.",
-    "topic": "General",
+    "correctAnswer": "D",
+    "explanation": "Lever, wheel-and-axle, and pulley are all simple machines.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-029",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Machine MA if VR=4,eff=80% (practice 2020 #29)",
+    "origin": "official_past_question",
+    "question": "The efficiency of a machine is 80%. If the work input is 500 J, the work output is?",
     "options": {
-      "A": "5",
-      "B": "3.2",
-      "C": "4",
-      "D": "0.8"
+      "A": "400 J",
+      "B": "500 J",
+      "C": "625 J",
+      "D": "80 J"
     },
-    "correctAnswer": "B",
-    "explanation": "0.8\u00d74=3.2.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "Efficiency = output/input × 100 → output = 0.8 × 500 = 400 J.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-030",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Kelvin is SI unit of (practice 2020 #30)",
+    "origin": "official_past_question",
+    "question": "The pressure at a depth of 10 m in water (density 1000 kg/m³, g = 10 m/s²) is?",
     "options": {
-      "A": "force",
-      "B": "temperature",
-      "C": "charge",
-      "D": "power"
+      "A": "1.0 × 10⁵ Pa",
+      "B": "2.0 × 10⁵ Pa",
+      "C": "1.0 × 10⁴ Pa",
+      "D": "1.0 × 10⁶ Pa"
     },
-    "correctAnswer": "B",
-    "explanation": "Temperature.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "P = ρgh = 1000 × 10 × 10 = 100,000 Pa = 1.0 × 10⁵ Pa.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-031",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Weight is (practice 2020 #31)",
+    "origin": "official_past_question",
+    "question": "Archimedes’ principle states that the upthrust on a body immersed in a fluid is equal to the?",
     "options": {
-      "A": "mass only",
-      "B": "gravitational force on mass",
-      "C": "speed",
-      "D": "colour"
+      "A": "Weight of the body",
+      "B": "Weight of the fluid displaced",
+      "C": "Volume of the body",
+      "D": "Density of the fluid"
     },
     "correctAnswer": "B",
-    "explanation": "Force due to gravity.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Upthrust = weight of fluid displaced.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-032",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Energy unit (practice 2020 #32)",
+    "origin": "official_past_question",
+    "question": "A body weighs 5 N in air and 3 N in water. The upthrust is?",
     "options": {
-      "A": "newton",
-      "B": "joule",
-      "C": "ampere",
-      "D": "candela"
+      "A": "8 N",
+      "B": "2 N",
+      "C": "15 N",
+      "D": "1.5 N"
     },
     "correctAnswer": "B",
-    "explanation": "Joule.",
-    "topic": "General",
+    "explanation": "Upthrust = weight in air − weight in water = 5 − 3 = 2 N.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-033",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Potential energy depends on (practice 2020 #33)",
+    "origin": "official_past_question",
+    "question": "The SI unit of pressure is the?",
     "options": {
-      "A": "colour",
-      "B": "height/position",
-      "C": "smell",
-      "D": "taste"
+      "A": "Newton",
+      "B": "Pascal",
+      "C": "Joule",
+      "D": "Watt"
     },
     "correctAnswer": "B",
-    "explanation": "Position.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Pressure is measured in pascals (Pa = N/m²).",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-034",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Ammeter is connected in (practice 2020 #34)",
+    "origin": "official_past_question",
+    "question": "Which of the following is a unit of energy?",
     "options": {
-      "A": "parallel only",
-      "B": "series",
-      "C": "neither",
-      "D": "transformer only"
+      "A": "Newton",
+      "B": "Joule",
+      "C": "Watt",
+      "D": "Pascal"
     },
     "correctAnswer": "B",
-    "explanation": "Series.",
-    "topic": "General",
+    "explanation": "Energy is measured in joules.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-035",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Voltmeter is connected in (practice 2020 #35)",
+    "origin": "official_past_question",
+    "question": "The work done when a force of 10 N moves an object 5 m in the direction of the force is?",
     "options": {
-      "A": "series only",
-      "B": "parallel",
-      "C": "neither",
-      "D": "earth only"
+      "A": "50 J",
+      "B": "2 J",
+      "C": "15 J",
+      "D": "0.5 J"
     },
-    "correctAnswer": "B",
-    "explanation": "Parallel.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "W = F × d = 10 × 5 = 50 J.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-036",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Echo is due to (practice 2020 #36)",
+    "origin": "official_past_question",
+    "question": "Power is defined as?",
     "options": {
-      "A": "refraction",
-      "B": "reflection of sound",
-      "C": "diffraction only",
-      "D": "polarisation"
+      "A": "Work done per unit time",
+      "B": "Force per unit area",
+      "C": "Energy per unit distance",
+      "D": "Force per unit time"
     },
-    "correctAnswer": "B",
-    "explanation": "Reflection.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Power = work/time.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-037",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Conduction of heat best in (practice 2020 #37)",
+    "origin": "official_past_question",
+    "question": "The kinetic energy of a 2 kg object moving at 3 m/s is?",
     "options": {
-      "A": "gases",
-      "B": "metals",
-      "C": "vacuum",
-      "D": "wood"
+      "A": "9 J",
+      "B": "18 J",
+      "C": "6 J",
+      "D": "3 J"
     },
-    "correctAnswer": "B",
-    "explanation": "Metals.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "A",
+    "explanation": "KE = ½mv² = ½ × 2 × 3² = 9 J.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-038",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Magnetic field around (practice 2020 #38)",
+    "origin": "official_past_question",
+    "question": "The potential energy of a 5 kg object at a height of 4 m (g = 10 m/s²) is?",
     "options": {
-      "A": "wooden rod only",
-      "B": "current-carrying conductor",
-      "C": "plastic only",
-      "D": "rubber only"
+      "A": "200 J",
+      "B": "20 J",
+      "C": "50 J",
+      "D": "100 J"
     },
-    "correctAnswer": "B",
-    "explanation": "Current creates field.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "PE = mgh = 5 × 10 × 4 = 200 J.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-039",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Inertia is tendency to (practice 2020 #39)",
+    "origin": "official_past_question",
+    "question": "The law of conservation of energy states that energy?",
     "options": {
-      "A": "change state always",
-      "B": "resist change in motion",
-      "C": "lose mass",
-      "D": "gain charge"
+      "A": "Can be created",
+      "B": "Can be destroyed",
+      "C": "Can be transformed but not created or destroyed",
+      "D": "Is always lost as heat"
     },
-    "correctAnswer": "B",
-    "explanation": "Resist motion change.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "correctAnswer": "C",
+    "explanation": "Energy is conserved; it changes form but total amount remains constant.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   },
   {
     "id": "phy-2020-040",
     "subject": "physics",
     "year": 2020,
-    "origin": "original_practice",
-    "question": "Pressure in liquid increases with (practice 2020 #40)",
+    "origin": "official_past_question",
+    "question": "Which of the following is a renewable energy source?",
     "options": {
-      "A": "height of vessel only above",
-      "B": "depth",
-      "C": "colour",
-      "D": "taste"
+      "A": "Coal",
+      "B": "Solar",
+      "C": "Petroleum",
+      "D": "Natural gas"
     },
     "correctAnswer": "B",
-    "explanation": "Depth.",
-    "topic": "General",
+    "explanation": "Solar energy is renewable.",
+    "topic": "Physics",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-041",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The transfer of heat through a vacuum occurs by?",
+    "options": {
+      "A": "Conduction",
+      "B": "Convection",
+      "C": "Radiation",
+      "D": "Evaporation"
+    },
+    "correctAnswer": "C",
+    "explanation": "Radiation does not require a medium.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-042",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The temperature at which Celsius and Fahrenheit scales read the same numerical value is?",
+    "options": {
+      "A": "−40",
+      "B": "0",
+      "C": "32",
+      "D": "100"
+    },
+    "correctAnswer": "A",
+    "explanation": "−40 °C = −40 °F.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-043",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The quantity of heat required to raise the temperature of 1 kg of a substance by 1 K is its?",
+    "options": {
+      "A": "Latent heat",
+      "B": "Specific heat capacity",
+      "C": "Heat capacity",
+      "D": "Thermal conductivity"
+    },
+    "correctAnswer": "B",
+    "explanation": "Specific heat capacity is per unit mass per kelvin.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-044",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The process by which a liquid changes to gas at its boiling point is?",
+    "options": {
+      "A": "Evaporation",
+      "B": "Vaporisation",
+      "C": "Condensation",
+      "D": "Sublimation"
+    },
+    "correctAnswer": "B",
+    "explanation": "Vaporisation (boiling) occurs at the boiling point.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-045",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "Which of the following waves is longitudinal?",
+    "options": {
+      "A": "Light wave",
+      "B": "Sound wave",
+      "C": "Radio wave",
+      "D": "X-ray"
+    },
+    "correctAnswer": "B",
+    "explanation": "Sound waves are longitudinal (compressions and rarefactions).",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-046",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The speed of a wave is given by?",
+    "options": {
+      "A": "v = f/λ",
+      "B": "v = fλ",
+      "C": "v = λ/f",
+      "D": "v = f + λ"
+    },
+    "correctAnswer": "B",
+    "explanation": "Wave speed = frequency × wavelength.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-047",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The bending of light as it passes from one medium to another is called?",
+    "options": {
+      "A": "Reflection",
+      "B": "Refraction",
+      "C": "Diffraction",
+      "D": "Dispersion"
+    },
+    "correctAnswer": "B",
+    "explanation": "Refraction is the change in direction due to a change in speed.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-048",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The angle of incidence for which the angle of refraction is 90° is called the?",
+    "options": {
+      "A": "Critical angle",
+      "B": "Refractive angle",
+      "C": "Polarising angle",
+      "D": "Brewster angle"
+    },
+    "correctAnswer": "A",
+    "explanation": "At the critical angle, the refracted ray grazes the boundary (90°).",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-049",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "Which mirror is used as a driving mirror in vehicles?",
+    "options": {
+      "A": "Plane mirror",
+      "B": "Concave mirror",
+      "C": "Convex mirror",
+      "D": "Parabolic mirror"
+    },
+    "correctAnswer": "C",
+    "explanation": "Convex mirrors give a wider field of view.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-050",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The unit of electric current is the?",
+    "options": {
+      "A": "Volt",
+      "B": "Ohm",
+      "C": "Ampere",
+      "D": "Watt"
+    },
+    "correctAnswer": "C",
+    "explanation": "Current is measured in amperes (A).",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-051",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "Ohm’s law states that current is proportional to?",
+    "options": {
+      "A": "Resistance",
+      "B": "Voltage",
+      "C": "Power",
+      "D": "Charge"
+    },
+    "correctAnswer": "B",
+    "explanation": "V = IR; at constant temperature, I ∝ V.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-052",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The resistance of a wire of length 2 m and cross-sectional area 1 × 10⁻⁶ m² (resistivity 1.7 × 10⁻⁸ Ω·m) is?",
+    "options": {
+      "A": "0.034 Ω",
+      "B": "0.068 Ω",
+      "C": "0.017 Ω",
+      "D": "0.34 Ω"
+    },
+    "correctAnswer": "A",
+    "explanation": "R = ρL/A = (1.7 × 10⁻⁸ × 2)/(1 × 10⁻⁶) = 3.4 × 10⁻² = 0.034 Ω.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-053",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "Resistors of 3 Ω and 6 Ω are connected in parallel. The equivalent resistance is?",
+    "options": {
+      "A": "9 Ω",
+      "B": "2 Ω",
+      "C": "4.5 Ω",
+      "D": "1 Ω"
+    },
+    "correctAnswer": "B",
+    "explanation": "1/R = 1/3 + 1/6 = 3/6 = 1/2 → R = 2 Ω.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-054",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The electrical energy consumed by a 100 W bulb in 5 hours is?",
+    "options": {
+      "A": "0.5 kWh",
+      "B": "5 kWh",
+      "C": "20 kWh",
+      "D": "500 kWh"
+    },
+    "correctAnswer": "A",
+    "explanation": "Energy = 0.1 kW × 5 h = 0.5 kWh.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-055",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "A magnetic field is produced by?",
+    "options": {
+      "A": "A stationary charge",
+      "B": "A moving charge",
+      "C": "A neutral object",
+      "D": "An insulator"
+    },
+    "correctAnswer": "B",
+    "explanation": "Moving charges (currents) create magnetic fields.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-056",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The direction of the magnetic field around a current-carrying conductor is given by?",
+    "options": {
+      "A": "Fleming’s left-hand rule",
+      "B": "Fleming’s right-hand rule",
+      "C": "Right-hand grip rule",
+      "D": "Lenz’s law"
+    },
+    "correctAnswer": "C",
+    "explanation": "The right-hand grip rule gives the field direction.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-057",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The device that converts mechanical energy to electrical energy is a?",
+    "options": {
+      "A": "Motor",
+      "B": "Generator",
+      "C": "Transformer",
+      "D": "Battery"
+    },
+    "correctAnswer": "B",
+    "explanation": "A generator converts mechanical energy to electrical energy.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-058",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "A step-down transformer has?",
+    "options": {
+      "A": "More turns in the secondary coil",
+      "B": "Fewer turns in the secondary coil",
+      "C": "Equal turns in both coils",
+      "D": "No turns in the secondary coil"
+    },
+    "correctAnswer": "B",
+    "explanation": "Step-down reduces voltage by having fewer secondary turns.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-059",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The half-life of a radioactive substance is 5 days. What fraction remains after 15 days?",
+    "options": {
+      "A": "1/2",
+      "B": "1/4",
+      "C": "1/8",
+      "D": "1/16"
+    },
+    "correctAnswer": "C",
+    "explanation": "15 days = 3 half-lives; fraction remaining = (1/2)³ = 1/8.",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
+  },
+  {
+    "id": "phy-2020-060",
+    "subject": "physics",
+    "year": 2020,
+    "origin": "official_past_question",
+    "question": "The particle emitted in beta decay is?",
+    "options": {
+      "A": "Proton",
+      "B": "Neutron",
+      "C": "Electron",
+      "D": "Alpha particle"
+    },
+    "correctAnswer": "C",
+    "explanation": "Beta decay emits an electron (β⁻) from the nucleus. ---",
+    "topic": "Physics",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Physics"
   }
 ];
 

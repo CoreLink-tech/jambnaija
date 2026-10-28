@@ -1,726 +1,726 @@
 import type { JambQuestion } from "../types";
 
-/** Original practice — chemistry 2021. Not official past questions. */
+/** Chemistry 2021 — JAMB past questions (user-supplied bank). */
 const questions: JambQuestion[] = [
   {
-    "id": "che-2021-001",
+    "id": "chem-2021-001",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Atomic number = number of (practice 2021 #1)",
+    "origin": "official_past_question",
+    "question": "A solution contains 20g of solute in 180g of solvent. If the solvent is water, what is the concentration of the solution in terms of mass by mass percentage?",
     "options": {
-      "A": "neutrons",
-      "B": "protons",
-      "C": "molecules",
-      "D": "bonds"
+      "A": "10%",
+      "B": "20%",
+      "C": "22.2%",
+      "D": "25%"
     },
-    "correctAnswer": "B",
-    "explanation": "Protons.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-002",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Covalent bond is (practice 2021 #2)",
-    "options": {
-      "A": "electron transfer",
-      "B": "electron sharing",
-      "C": "proton sharing",
-      "D": "neutron transfer"
-    },
-    "correctAnswer": "B",
-    "explanation": "Sharing.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Mass of solution = 20g + 180g = 200g. Mass percent = (20/200) × 100 = 10%.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-003",
+    "id": "chem-2021-002",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Neutral pH at 25\u00b0C (practice 2021 #3)",
+    "origin": "official_past_question",
+    "question": "220g of carbon dioxide contains ----- moles. [C = 12, O = 16]",
     "options": {
-      "A": "0",
-      "B": "7",
-      "C": "14",
-      "D": "1"
+      "A": "5 moles",
+      "B": "6 moles",
+      "C": "4 moles",
+      "D": "10 moles"
+    },
+    "correctAnswer": "A",
+    "explanation": "Molar mass of CO₂ = 44 g/mol. Moles = 220 / 44 = 5 moles.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-003",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The compounds made up of only carbon and hydrogen are called?",
+    "options": {
+      "A": "Carbohydrates",
+      "B": "Hydrocarbons",
+      "C": "Alkanols",
+      "D": "Aldehydes"
     },
     "correctAnswer": "B",
-    "explanation": "7.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Hydrocarbons are organic compounds consisting solely of carbon and hydrogen atoms.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-004",
+    "id": "chem-2021-004",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Sodium symbol (practice 2021 #4)",
+    "origin": "official_past_question",
+    "question": "An element having the atomic number 17 will resemble which of the following elements having atomic number as given below?",
     "options": {
-      "A": "S",
-      "B": "So",
-      "C": "Na",
-      "D": "Sd"
+      "A": "9",
+      "B": "35",
+      "C": "53",
+      "D": "85"
+    },
+    "correctAnswer": "B",
+    "explanation": "Atomic number 17 is chlorine (a halogen). Bromine (atomic number 35) is in the same group and has similar chemical properties.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-005",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "Neutrons were discovered by?",
+    "options": {
+      "A": "J.J. Thomson",
+      "B": "James Chadwick",
+      "C": "Ernest Rutherford",
+      "D": "Niels Bohr"
+    },
+    "correctAnswer": "B",
+    "explanation": "James Chadwick discovered the neutron in 1932 through experiments bombarding elements with alpha particles.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-006",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "Give the common name for the following compound (CH₃)₂CHCH₂–Br.",
+    "options": {
+      "A": "Isobutyl bromide",
+      "B": "Methyl bromide",
+      "C": "Butyl bromide",
+      "D": "sec-Butyl bromide"
+    },
+    "correctAnswer": "A",
+    "explanation": "The structure is 1-bromo-2-methylpropane, commonly called isobutyl bromide.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-007",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The scientist who stated that matter can be converted into energy is?",
+    "options": {
+      "A": "Albert Einstein",
+      "B": "Isaac Newton",
+      "C": "Marie Curie",
+      "D": "Max Planck"
+    },
+    "correctAnswer": "A",
+    "explanation": "Einstein's mass–energy equivalence is expressed by the equation E = mc².",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-008",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The nucleus of a hydrogen atom consists of a?",
+    "options": {
+      "A": "Proton only",
+      "B": "Proton and neutron",
+      "C": "Neutron only",
+      "D": "Proton and electron"
+    },
+    "correctAnswer": "A",
+    "explanation": "The hydrogen nucleus contains only one proton; it has no neutrons.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-009",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The reactions involving simultaneous oxidation and reduction are called?",
+    "options": {
+      "A": "Redox reactions",
+      "B": "Hydrolysis reactions",
+      "C": "Neutralisation reactions",
+      "D": "Precipitation reactions"
+    },
+    "correctAnswer": "A",
+    "explanation": "In redox reactions, one species loses electrons (oxidation) while another gains electrons (reduction) simultaneously.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-010",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The atomic weight of nitrogen is?",
+    "options": {
+      "A": "14",
+      "B": "12",
+      "C": "16",
+      "D": "7"
+    },
+    "correctAnswer": "A",
+    "explanation": "The atomic mass of nitrogen is approximately 14 amu (most abundant isotope ¹⁴N).",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-011",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "Which one of the following is not a mixture?",
+    "options": {
+      "A": "Air",
+      "B": "Seawater",
+      "C": "Mercury",
+      "D": "Brass"
     },
     "correctAnswer": "C",
-    "explanation": "Na.",
-    "topic": "General",
+    "explanation": "Mercury is a chemical element (pure substance); air, seawater, and brass are mixtures.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-005",
+    "id": "chem-2021-012",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Most abundant dry-air gas (practice 2021 #5)",
+    "origin": "official_past_question",
+    "question": "Which of the following is a form of calcium carbonate? I. limestone II. marble III. chalk IV. egg-shells",
     "options": {
-      "A": "oxygen",
-      "B": "nitrogen",
-      "C": "CO2",
-      "D": "argon"
+      "A": "I and II only",
+      "B": "I, II, and III only",
+      "C": "I, II, III, and IV",
+      "D": "II and III only"
     },
-    "correctAnswer": "B",
-    "explanation": "Nitrogen.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-006",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Alkanes general formula (practice 2021 #6)",
-    "options": {
-      "A": "CnH2n",
-      "B": "CnH2n+2",
-      "C": "CnH2n-2",
-      "D": "CnHn"
-    },
-    "correctAnswer": "B",
-    "explanation": "CnH2n+2.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Limestone, marble, chalk, and eggshells are all forms of calcium carbonate (CaCO₃).",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-007",
+    "id": "chem-2021-013",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Oxidation is (practice 2021 #7)",
+    "origin": "official_past_question",
+    "question": "The heat required to raise the temperature of a body by 1 K is called?",
     "options": {
-      "A": "gain of e-",
-      "B": "loss of e-",
-      "C": "gain of p+",
-      "D": "loss of n0"
+      "A": "Specific heat capacity",
+      "B": "Heat capacity",
+      "C": "Latent heat",
+      "D": "Thermal conductivity"
     },
     "correctAnswer": "B",
-    "explanation": "Loss of electrons.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Heat capacity (thermal capacity) is the heat required to raise the temperature of the entire body by 1 K.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-008",
+    "id": "chem-2021-014",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Avogadro \u2248 (practice 2021 #8)",
+    "origin": "official_past_question",
+    "question": "Which of the following is a non-metal that remains liquid at room temperature?",
     "options": {
-      "A": "6.02e23",
-      "B": "3.14e8",
-      "C": "9.8e3",
-      "D": "1.6e-19"
+      "A": "Mercury",
+      "B": "Bromine",
+      "C": "Chlorine",
+      "D": "Iodine"
+    },
+    "correctAnswer": "B",
+    "explanation": "Bromine (Br₂) is a non-metal that is liquid at room temperature (the other liquid element is mercury, a metal).",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-015",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The enzyme that converts glucose to ethyl alcohol is?",
+    "options": {
+      "A": "Zymase",
+      "B": "Invertase",
+      "C": "Maltase",
+      "D": "Diastase"
     },
     "correctAnswer": "A",
-    "explanation": "6.02\u00d710^23.",
-    "topic": "General",
+    "explanation": "Zymase (from yeast) catalyses the fermentation of glucose to ethanol and CO₂.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-009",
+    "id": "chem-2021-016",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Galvanisation uses (practice 2021 #9)",
+    "origin": "official_past_question",
+    "question": "The only metal that is anti-bacterial is?",
     "options": {
-      "A": "copper",
-      "B": "zinc",
-      "C": "silver",
-      "D": "gold"
+      "A": "Silver",
+      "B": "Copper",
+      "C": "Gold",
+      "D": "Zinc"
     },
     "correctAnswer": "B",
-    "explanation": "Zinc.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
+    "explanation": "Copper has scientifically proven antibacterial properties, killing bacteria by damaging their cell walls.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-010",
+    "id": "chem-2021-017",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Acid+base yields (practice 2021 #10)",
+    "origin": "official_past_question",
+    "question": "A 'breath test' used by traffic police to check drunken driving uses?",
     "options": {
-      "A": "salt+water",
-      "B": "gas only",
-      "C": "metal only",
-      "D": "O2 only"
+      "A": "Potassium dichromate",
+      "B": "Lime water",
+      "C": "Silver nitrate",
+      "D": "Sodium hydroxide"
     },
     "correctAnswer": "A",
-    "explanation": "Salt and water.",
-    "topic": "General",
+    "explanation": "The breathalyser uses potassium dichromate in acidic medium, which changes colour (orange to green) when ethanol is present.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-011",
+    "id": "chem-2021-018",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Ionic bond often between (practice 2021 #11)",
+    "origin": "official_past_question",
+    "question": "Oxygen is absent in?",
     "options": {
-      "A": "two non-metals",
-      "B": "metal and non-metal",
-      "C": "two nobles",
-      "D": "two neutrons"
+      "A": "Soil",
+      "B": "Glass",
+      "C": "Kerosene",
+      "D": "Cement"
     },
-    "correctAnswer": "B",
-    "explanation": "Metal-nonmetal.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-012",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Isotopes have same (practice 2021 #12)",
-    "options": {
-      "A": "neutrons",
-      "B": "protons",
-      "C": "nucleons always",
-      "D": "molecules"
-    },
-    "correctAnswer": "B",
-    "explanation": "Protons.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Kerosene is a hydrocarbon fuel composed only of carbon and hydrogen; it contains no oxygen.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-013",
+    "id": "chem-2021-019",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Electrons are (practice 2021 #13)",
+    "origin": "official_past_question",
+    "question": "The gas which causes global warming is?",
     "options": {
-      "A": "in nucleus only",
-      "B": "outside nucleus",
-      "C": "only in neutrons",
-      "D": "only in protons"
+      "A": "Oxygen",
+      "B": "Nitrogen",
+      "C": "Carbon dioxide",
+      "D": "Hydrogen"
     },
-    "correctAnswer": "B",
-    "explanation": "Outside nucleus.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-014",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Strong acid (practice 2021 #14)",
-    "options": {
-      "A": "never dissolves",
-      "B": "ionises almost fully",
-      "C": "always solid",
-      "D": "pH 14"
-    },
-    "correctAnswer": "B",
-    "explanation": "Fully ionises.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "CO₂ is a greenhouse gas that traps heat in the atmosphere, contributing to global warming.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-015",
+    "id": "chem-2021-020",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Ethene is an (practice 2021 #15)",
+    "origin": "official_past_question",
+    "question": "Soaps clean surfaces on the principle based on?",
     "options": {
-      "A": "alkane",
-      "B": "alkene",
-      "C": "alcohol",
-      "D": "ester only"
+      "A": "Surface tension",
+      "B": "Osmosis",
+      "C": "Diffusion",
+      "D": "Capillarity"
     },
-    "correctAnswer": "B",
-    "explanation": "Alkene.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-016",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Reduction is (practice 2021 #16)",
-    "options": {
-      "A": "loss of e-",
-      "B": "gain of e-",
-      "C": "loss of p+",
-      "D": "gain of n0"
-    },
-    "correctAnswer": "B",
-    "explanation": "Gain of electrons.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Soap molecules reduce the surface tension of water, allowing it to penetrate and lift dirt and oils.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-017",
+    "id": "chem-2021-021",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Mole measures (practice 2021 #17)",
+    "origin": "official_past_question",
+    "question": "A sample of any of the following substances disappears after some time when exposed to air like camphor, naphthalene, or dry ice. This phenomenon is called?",
     "options": {
-      "A": "volume only",
-      "B": "amount of substance",
-      "C": "pressure only",
-      "D": "temp only"
+      "A": "Sublimation",
+      "B": "Evaporation",
+      "C": "Melting",
+      "D": "Condensation"
     },
-    "correctAnswer": "B",
-    "explanation": "Amount.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-018",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Cations move to (practice 2021 #18)",
-    "options": {
-      "A": "anode",
-      "B": "cathode",
-      "C": "air",
-      "D": "filter"
-    },
-    "correctAnswer": "B",
-    "explanation": "Cathode.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Sublimation is the direct change from solid to gas without passing through the liquid state.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-019",
+    "id": "chem-2021-022",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Rusting needs (practice 2021 #19)",
+    "origin": "official_past_question",
+    "question": "What is the chemical name for the compound CuCO₃?",
     "options": {
-      "A": "nitrogen only",
-      "B": "air and moisture",
-      "C": "dark only",
-      "D": "vacuum"
+      "A": "Copper(I) carbonate",
+      "B": "Copper(II) carbonate",
+      "C": "Copper(III) carbonate",
+      "D": "Copper carbonate"
     },
     "correctAnswer": "B",
-    "explanation": "O2 + water.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-020",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Polymers from (practice 2021 #20)",
-    "options": {
-      "A": "metals only",
-      "B": "monomers",
-      "C": "nobles",
-      "D": "neutrons"
-    },
-    "correctAnswer": "B",
-    "explanation": "Monomers.",
-    "topic": "General",
+    "explanation": "Copper in CuCO₃ has an oxidation state of +2, so the name is copper(II) carbonate.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-021",
+    "id": "chem-2021-023",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Litmus red in (practice 2021 #21)",
+    "origin": "official_past_question",
+    "question": "The most abundant rare gas in the atmosphere is?",
     "options": {
-      "A": "bases",
-      "B": "acids",
-      "C": "pure water only",
-      "D": "oils"
+      "A": "Helium",
+      "B": "Neon",
+      "C": "Argon",
+      "D": "Krypton"
     },
-    "correctAnswer": "B",
-    "explanation": "Acids.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-022",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Mass number is (practice 2021 #22)",
-    "options": {
-      "A": "p only",
-      "B": "p+n",
-      "C": "e only",
-      "D": "n-p"
-    },
-    "correctAnswer": "B",
-    "explanation": "Protons+neutrons.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Argon makes up approximately 0.934% of the atmosphere, making it the most abundant noble gas.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-023",
+    "id": "chem-2021-024",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Ammonia process (practice 2021 #23)",
+    "origin": "official_past_question",
+    "question": "The fourteen elements (atomic number 90–103) after actinium are called?",
     "options": {
-      "A": "Contact",
-      "B": "Haber",
-      "C": "Bessemer",
-      "D": "Ostwald only"
+      "A": "Lanthanides",
+      "B": "Actinides",
+      "C": "Halogens",
+      "D": "Alkali metals"
     },
     "correctAnswer": "B",
-    "explanation": "Haber.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-024",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Sublimation is (practice 2021 #24)",
-    "options": {
-      "A": "liquid\u2192gas",
-      "B": "solid\u2192gas",
-      "C": "gas\u2192liquid",
-      "D": "solid\u2192liquid"
-    },
-    "correctAnswer": "B",
-    "explanation": "Solid to gas.",
-    "topic": "General",
+    "explanation": "The actinide series includes elements 90–103, following actinium (89).",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-025",
+    "id": "chem-2021-025",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Hard water has (practice 2021 #25)",
+    "origin": "official_past_question",
+    "question": "The mass of one Avogadro number of helium atoms is?",
     "options": {
-      "A": "sugar only",
-      "B": "Ca/Mg salts",
-      "C": "N2 only",
-      "D": "O2 only"
+      "A": "4.00 g",
+      "B": "2.00 g",
+      "C": "1.00 g",
+      "D": "8.00 g"
     },
-    "correctAnswer": "B",
-    "explanation": "Ca2+/Mg2+.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-026",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Group 0 are (practice 2021 #26)",
-    "options": {
-      "A": "reactive metals",
-      "B": "noble gases",
-      "C": "halogens only",
-      "D": "alkali metals"
-    },
-    "correctAnswer": "B",
-    "explanation": "Nobles.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "One mole (Avogadro number) of helium atoms has a mass equal to its atomic mass, approximately 4 g.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-027",
+    "id": "chem-2021-026",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Metals form ions that are (practice 2021 #27)",
+    "origin": "official_past_question",
+    "question": "The mass number of a nucleus is?",
     "options": {
-      "A": "negative",
-      "B": "positive",
-      "C": "neutral always",
-      "D": "gaseous only"
+      "A": "The number of protons only",
+      "B": "The number of neutrons only",
+      "C": "The sum of protons and neutrons",
+      "D": "The number of electrons"
     },
-    "correctAnswer": "B",
-    "explanation": "Cations.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-028",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Fermentation can yield (practice 2021 #28)",
-    "options": {
-      "A": "salt only",
-      "B": "ethanol+CO2",
-      "C": "O2 only",
-      "D": "iron"
-    },
-    "correctAnswer": "B",
-    "explanation": "Ethanol+CO2.",
-    "topic": "General",
+    "correctAnswer": "C",
+    "explanation": "Mass number (A) = number of protons (Z) + number of neutrons (N).",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-029",
+    "id": "chem-2021-027",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Chlorine is a (practice 2021 #29)",
+    "origin": "official_past_question",
+    "question": "Which of the following are chemical changes? I. cooking of food II. digestion of food III. freezing of water IV. water is heated up",
     "options": {
-      "A": "alkali metal",
-      "B": "halogen",
-      "C": "noble gas",
-      "D": "alkaline earth"
+      "A": "I and II only",
+      "B": "I, II, and III",
+      "C": "III and IV only",
+      "D": "I only"
     },
-    "correctAnswer": "B",
-    "explanation": "Halogen.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-030",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Boiling when vapour pressure (practice 2021 #30)",
-    "options": {
-      "A": "is zero",
-      "B": "equals external pressure",
-      "C": "exceeds solid pressure only",
-      "D": "is negative"
-    },
-    "correctAnswer": "B",
-    "explanation": "Equals external P.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Cooking and digestion involve chemical reactions forming new substances. Freezing and heating water are physical changes.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-031",
+    "id": "chem-2021-028",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Contact process makes (practice 2021 #31)",
+    "origin": "official_past_question",
+    "question": "The inherited traits of an organism are controlled by?",
     "options": {
-      "A": "ammonia",
-      "B": "sulphuric acid",
-      "C": "iron",
-      "D": "plastic only"
+      "A": "Proteins",
+      "B": "DNA",
+      "C": "Lipids",
+      "D": "Carbohydrates"
     },
     "correctAnswer": "B",
-    "explanation": "H2SO4.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-032",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "pH of strong acid is (practice 2021 #32)",
-    "options": {
-      "A": "near 14",
-      "B": "low (e.g. 1)",
-      "C": "exactly 7",
-      "D": "exactly 0 always"
-    },
-    "correctAnswer": "B",
-    "explanation": "Low pH.",
-    "topic": "General",
+    "explanation": "DNA stores genetic information in the sequence of nucleotides, which determines inherited traits.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-033",
+    "id": "chem-2021-029",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Endothermic reactions (practice 2021 #33)",
+    "origin": "official_past_question",
+    "question": "In the troposphere, the two types of pollutants are?",
     "options": {
-      "A": "release heat",
-      "B": "absorb heat",
-      "C": "never occur",
-      "D": "are always combustion"
+      "A": "Gaseous and particulate pollutants",
+      "B": "Primary and secondary pollutants",
+      "C": "Organic and inorganic pollutants",
+      "D": "Biodegradable and non-biodegradable pollutants"
     },
-    "correctAnswer": "B",
-    "explanation": "Absorb heat.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-034",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Catalyst (practice 2021 #34)",
-    "options": {
-      "A": "is consumed fully",
-      "B": "speeds reaction, not consumed net",
-      "C": "stops reaction",
-      "D": "changes \u0394H a lot always"
-    },
-    "correctAnswer": "B",
-    "explanation": "Speeds, regenerated.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "Tropospheric pollutants are classified as gaseous (e.g., CO, SO₂) and particulate (e.g., dust, soot).",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-035",
+    "id": "chem-2021-030",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Water formula (practice 2021 #35)",
+    "origin": "official_past_question",
+    "question": "What is the IUPAC name for the compound HC≡CCH₃?",
     "options": {
-      "A": "HO",
-      "B": "H2O",
-      "C": "H2O2",
-      "D": "O2H"
+      "A": "Propyne",
+      "B": "Propene",
+      "C": "Propane",
+      "D": "Butyne"
     },
-    "correctAnswer": "B",
-    "explanation": "H2O.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-036",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "CO2 turns limewater (practice 2021 #36)",
-    "options": {
-      "A": "blue",
-      "B": "milky",
-      "C": "green",
-      "D": "black"
-    },
-    "correctAnswer": "B",
-    "explanation": "Milky.",
-    "topic": "General",
+    "correctAnswer": "A",
+    "explanation": "HC≡CCH₃ is propyne (methylacetylene), a three-carbon alkyne.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-037",
+    "id": "chem-2021-031",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Allotropes of carbon include (practice 2021 #37)",
+    "origin": "official_past_question",
+    "question": "A chemical process in which there is a gain of electrons is known as?",
     "options": {
-      "A": "only CO2",
-      "B": "diamond and graphite",
-      "C": "only water",
-      "D": "only salt"
+      "A": "Oxidation",
+      "B": "Reduction",
+      "C": "Neutralisation",
+      "D": "Hydrolysis"
     },
     "correctAnswer": "B",
-    "explanation": "Diamond/graphite.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-038",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Neutralisation indicator example (practice 2021 #38)",
-    "options": {
-      "A": "iron filings",
-      "B": "phenolphthalein",
-      "C": "sand",
-      "D": "oil"
-    },
-    "correctAnswer": "B",
-    "explanation": "Indicator.",
-    "topic": "General",
+    "explanation": "Reduction is the gain of electrons; oxidation is the loss of electrons.",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
   },
   {
-    "id": "che-2021-039",
+    "id": "chem-2021-032",
     "subject": "chemistry",
     "year": 2021,
-    "origin": "original_practice",
-    "question": "Saturated solution (practice 2021 #39)",
+    "origin": "official_past_question",
+    "question": "The metal used to recover copper from a solution of copper sulphate is?",
     "options": {
-      "A": "can dissolve unlimited solute",
-      "B": "holds max solute at that T",
-      "C": "is always gas",
-      "D": "has no solvent"
+      "A": "Zinc",
+      "B": "Iron",
+      "C": "Silver",
+      "D": "Lead"
     },
     "correctAnswer": "B",
-    "explanation": "Max solute.",
-    "topic": "General",
-    "difficulty": "easy",
-    "syllabusTopic": "General"
-  },
-  {
-    "id": "che-2021-040",
-    "subject": "chemistry",
-    "year": 2021,
-    "origin": "original_practice",
-    "question": "Electrolysis of acidified water yields (practice 2021 #40)",
-    "options": {
-      "A": "only salt",
-      "B": "H2 and O2",
-      "C": "only N2",
-      "D": "only CO2"
-    },
-    "correctAnswer": "B",
-    "explanation": "H2 and O2.",
-    "topic": "General",
+    "explanation": "Iron is more reactive than copper and displaces it from copper sulphate solution (Fe + CuSO₄ → FeSO₄ + Cu).",
+    "topic": "Chemistry",
     "difficulty": "medium",
-    "syllabusTopic": "General"
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-033",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "A binary compound of oxygen with another element is referred to as?",
+    "options": {
+      "A": "An oxide",
+      "B": "A hydroxide",
+      "C": "A peroxide",
+      "D": "A superoxide"
+    },
+    "correctAnswer": "A",
+    "explanation": "An oxide is a compound containing oxygen and one other element (e.g., H₂O, CO₂).",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-034",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "One of the following is not a physical property of monosaccharides?",
+    "options": {
+      "A": "They are sweet",
+      "B": "They are water-soluble",
+      "C": "They are highly vital to the exploration of metals",
+      "D": "They get charred when heated"
+    },
+    "correctAnswer": "C",
+    "explanation": "\"Vital to the exploration of metals\" is not a physical property of monosaccharides; the other options are physical properties.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-035",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The molar enthalpy change accompanying the removal of an electron from a gas phase atom or ion in its ground state is called?",
+    "options": {
+      "A": "Electron affinity",
+      "B": "Ionization enthalpy",
+      "C": "Lattice energy",
+      "D": "Hydration energy"
+    },
+    "correctAnswer": "B",
+    "explanation": "Ionization enthalpy is the energy required to remove an electron from a gaseous atom or ion.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-036",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The maximum number of electrons in the N shell is?",
+    "options": {
+      "A": "18",
+      "B": "32",
+      "C": "8",
+      "D": "50"
+    },
+    "correctAnswer": "B",
+    "explanation": "The N shell (n = 4) can hold a maximum of 2n² = 2(4²) = 32 electrons.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-037",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The process by which salt and water reacted in a limited way to form an acid or a base is?",
+    "options": {
+      "A": "Neutralisation",
+      "B": "Hydrolysis",
+      "C": "Dissociation",
+      "D": "Ionization"
+    },
+    "correctAnswer": "B",
+    "explanation": "Hydrolysis is the reaction of a salt with water to form an acidic or basic solution.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-038",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The process or act of extracting a metal from its ore and refining it is called?",
+    "options": {
+      "A": "Metallurgy",
+      "B": "Electrolysis",
+      "C": "Calcination",
+      "D": "Roasting"
+    },
+    "correctAnswer": "A",
+    "explanation": "Metallurgy is the science and technology of extracting metals from ores and refining them.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-039",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "The reactivity of fluorine is due to?",
+    "options": {
+      "A": "Its high electronegativity",
+      "B": "Its low ionization energy",
+      "C": "Its large atomic radius",
+      "D": "Its metallic nature"
+    },
+    "correctAnswer": "A",
+    "explanation": "Fluorine has the highest electronegativity of all elements, making it highly reactive.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
+  },
+  {
+    "id": "chem-2021-040",
+    "subject": "chemistry",
+    "year": 2021,
+    "origin": "official_past_question",
+    "question": "Which of the following is a mixture?",
+    "options": {
+      "A": "Sodium chloride",
+      "B": "Seawater",
+      "C": "Iron filings",
+      "D": "Copper(II) sulphate"
+    },
+    "correctAnswer": "B",
+    "explanation": "Seawater is a mixture of water and dissolved salts; the others are pure substances.",
+    "topic": "Chemistry",
+    "difficulty": "medium",
+    "syllabusTopic": "JAMB Chemistry"
   }
 ];
 
