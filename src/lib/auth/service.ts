@@ -169,9 +169,8 @@ export async function loginUser(
   }
 
   if (user.role === "ADMIN") {
-    throw new UnauthorizedError(
-      "Admins must sign in at the admin portal.",
-    );
+    // Do not reveal that this is an admin account
+    throw new UnauthorizedError("Invalid email/username or password.");
   }
 
   const valid = await verifyPassword(data.password, user.passwordHash);
