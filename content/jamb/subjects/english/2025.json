@@ -1,0 +1,2010 @@
+{
+  "subjectSlug": "english",
+  "exam": "JAMB",
+  "source": "compiled-past-questions",
+  "verificationStatus": "unverified",
+  "notes": "JAMB Use of English 2025 — 100 questions compiled from verified sources + style-matched items. Not official JAMB papers.",
+  "year": 2025,
+  "questions": [
+    {
+      "contentId": "eng-2025-q001",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "One of the first things a child notices in birds is ______.",
+      "options": [
+        "Noise",
+        "Nests",
+        "Feeding trait",
+        "Colour"
+      ],
+      "answerIndex": 0,
+      "explanation": "The passage states, “One of the first things that a child notices is how noisy many kinds of birds are”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q002",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "What makes it easy to identify a species of birds in the wood?",
+      "options": [
+        "The shape of their beaks",
+        "Their characteristic calls with practice",
+        "Their mode of feeding",
+        "The colour of their feathers"
+      ],
+      "answerIndex": 1,
+      "explanation": "The passage explains that with practice, one can identify birds “just from these calls without seeing the birds at all”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q003",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Flocks of finches could easily become separated ______.",
+      "options": [
+        "When they get injured by other birds",
+        "When they get hungry after being separated",
+        "When they see predators hovering in the sky",
+        "When they hunt for insects or seeds on the branches of trees"
+      ],
+      "answerIndex": 3,
+      "explanation": "The passage says, “When flocks of finches are looking for insects or seeds on the branches of trees, they could easily become separated”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q004",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The small birds have ______.",
+      "options": [
+        "A particular type of call",
+        "Different alarm calls",
+        "A similar alarm call",
+        "Sonorous songs"
+      ],
+      "answerIndex": 0,
+      "explanation": "The passage refers to “its flying predator call,” showing that the call is specific.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q005",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "When a bird of prey is sighted, a small bird ______.",
+      "options": [
+        "Flies away",
+        "Starts making a nest",
+        "Hides in its nest",
+        "Calls its mates"
+      ],
+      "answerIndex": 3,
+      "explanation": "The bird gives a predator call as an alarm to other birds in the neighbourhood.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q006",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Based on the novel The Lekki Headmaster, who instructed the Chemistry teacher to conclude the assembly after Mr Bepo burst into tears?",
+      "options": [
+        "The Principal",
+        "The Vice Principal",
+        "The Managing Director",
+        "The School Nurse"
+      ],
+      "answerIndex": 1,
+      "explanation": "It was the Vice Principal who instructed the Chemistry teacher to conclude the assembly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q007",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Based on the novel, what year was the Ikogosi Warm Springs discovered?",
+      "options": [
+        "1946",
+        "1952",
+        "1960",
+        "1970"
+      ],
+      "answerIndex": 0,
+      "explanation": "According to the novel, the Ikogosi Warm Springs was discovered in 1946.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q008",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The Security ______ has a primary responsibility, under the UN Charter, for the maintenance of international peace and security.",
+      "options": [
+        "Council",
+        "Committee",
+        "Assembly",
+        "Court"
+      ],
+      "answerIndex": 0,
+      "explanation": "The UN Security Council has primary responsibility for international peace and security.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q009",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "…for the maintenance of international ______.",
+      "options": [
+        "relations",
+        "peace",
+        "trade",
+        "law"
+      ],
+      "answerIndex": 1,
+      "explanation": "The phrase is “maintenance of international peace and security”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q010",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "He was praised for the ______ achievement.",
+      "options": [
+        "loudable",
+        "laudable",
+        "loudeble",
+        "loudible"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Laudable” means deserving praise.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q011",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Complete the familiar saying: “What goes around ______ around.”",
+      "options": [
+        "is coming",
+        "comes",
+        "came",
+        "come"
+      ],
+      "answerIndex": 1,
+      "explanation": "The fixed expression is “What goes around comes around”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q012",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Each of the responses ______ correct.",
+      "options": [
+        "have been",
+        "were",
+        "is",
+        "are"
+      ],
+      "answerIndex": 2,
+      "explanation": "“Each” is singular; the verb should be “is”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q013",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Reports show that the ______ of theft has increased this year.",
+      "options": [
+        "accidence",
+        "accident",
+        "incident",
+        "incidence"
+      ],
+      "answerIndex": 3,
+      "explanation": "“Incidence” means the rate at which something happens.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q014",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Yesterday, the doctor ______ the patient to take the medicine regularly.",
+      "options": [
+        "adviced",
+        "advised",
+        "advise",
+        "advice"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Advised” is the past tense of the verb “advise”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q015",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The volunteers were praised for their ______ effort.",
+      "options": [
+        "loudable",
+        "laudable",
+        "loudeble",
+        "loudible"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Laudable” is correctly spelled and means deserving praise.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q016",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "If I had revised more, I ______ a higher mark.",
+      "options": [
+        "would have score",
+        "will score",
+        "would have scored",
+        "can score"
+      ],
+      "answerIndex": 2,
+      "explanation": "Third conditional: “would have + past participle”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q017",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "He made a facile generalisation. (Choose the opposite.)",
+      "options": [
+        "Broad",
+        "Complex",
+        "Quiet",
+        "Careful"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Facile” means simplistic or superficial; the opposite is “complex”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q018",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The manager became flexible on critical matters. (Choose the opposite.)",
+      "options": [
+        "Rigid",
+        "Evasive",
+        "Serious",
+        "Unbendable"
+      ],
+      "answerIndex": 0,
+      "explanation": "The opposite of flexible is rigid.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q019",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The gear is immanent in a car. (Choose the opposite.)",
+      "options": [
+        "Available",
+        "Necessary",
+        "Functional",
+        "Transcendent"
+      ],
+      "answerIndex": 3,
+      "explanation": "“Immanent” means inherent or indwelling; the opposite is “transcendent”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q020",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Andrew is the protagonist in the play. (Choose the opposite.)",
+      "options": [
+        "Enemy",
+        "Antagonist",
+        "Progressive",
+        "Opponent"
+      ],
+      "answerIndex": 1,
+      "explanation": "The opposite of protagonist is antagonist.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q021",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The robbers gained access to the bank because of their porous security network. (Choose the opposite.)",
+      "options": [
+        "Amorphous",
+        "Impermeable",
+        "Gorgeous",
+        "Pervious"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Porous” means permeable; the opposite is “impermeable”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q022",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Musa vehemently opposed his son’s political ambition. (Choose the opposite.)",
+      "options": [
+        "Coldly",
+        "Strongly",
+        "Quietly",
+        "Angrily"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Vehemently” implies passion; “coldly” implies a lack of emotion.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q023",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the option that rhymes with home.",
+      "options": [
+        "Come",
+        "Groan",
+        "Comb",
+        "Horn"
+      ],
+      "answerIndex": 2,
+      "explanation": "“Home” /hoʊm/ rhymes with “comb” /koʊm/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q024",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the appropriate stress pattern for laudable.",
+      "options": [
+        "LAU-dable",
+        "lau-DA-ble",
+        "lau-da-BLE",
+        "LAU-da-BLE"
+      ],
+      "answerIndex": 0,
+      "explanation": "Stress falls on the first syllable: LAU-da-ble【generated based on standard pronunciation】.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q025",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The teacher, as well as the students, ______ expected to be at the assembly.",
+      "options": [
+        "are",
+        "were",
+        "is",
+        "have been"
+      ],
+      "answerIndex": 2,
+      "explanation": "The subject is “the teacher” (singular).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q026",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "I have not seen him ______ the beginning of the year.",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "by"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Since” is used with a point in time.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q027",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Which word has the same vowel sound as in seat?",
+      "options": [
+        "Sit",
+        "Key",
+        "Set",
+        "Cat"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Seat” and “key” share /iː/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q028",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the word that has the same consonant sound as the underlined letter in think.",
+      "options": [
+        "These",
+        "Thought",
+        "There",
+        "This"
+      ],
+      "answerIndex": 1,
+      "explanation": "Voiceless /θ/ in both “think” and “thought”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q029",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the option nearest in meaning to candid.",
+      "options": [
+        "Honest",
+        "Secretive",
+        "Rude",
+        "Shy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Candid means truthful.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q030",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the option opposite in meaning to obscure.",
+      "options": [
+        "Hidden",
+        "Clear",
+        "Dark",
+        "Vague"
+      ],
+      "answerIndex": 1,
+      "explanation": "Clear is the opposite of obscure.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q031",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "He is the man ______ car was stolen.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "whom"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Whose” shows possession.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q032",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Hardly had he arrived ______ the meeting started.",
+      "options": [
+        "when",
+        "than",
+        "that",
+        "then"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Hardly…when”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q033",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the correct spelling.",
+      "options": [
+        "Occurrence",
+        "Occurence",
+        "Occurrance",
+        "Ocurrence"
+      ],
+      "answerIndex": 0,
+      "explanation": "Correct spelling is “occurrence”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q034",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The synonym of abundant is?",
+      "options": [
+        "Scarce",
+        "Plentiful",
+        "Limited",
+        "Rare"
+      ],
+      "answerIndex": 1,
+      "explanation": "Plentiful.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q035",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The antonym of transparent is?",
+      "options": [
+        "Clear",
+        "Opaque",
+        "Visible",
+        "Bright"
+      ],
+      "answerIndex": 1,
+      "explanation": "Opaque.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q036",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "She is allergic ______ penicillin.",
+      "options": [
+        "to",
+        "with",
+        "for",
+        "on"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Allergic to”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q037",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The plural of crisis is?",
+      "options": [
+        "Crisises",
+        "Crises",
+        "Crisis",
+        "Crisi"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Crises”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q038",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "He behaves as if he ______ the boss.",
+      "options": [
+        "is",
+        "were",
+        "was",
+        "be"
+      ],
+      "answerIndex": 1,
+      "explanation": "Subjunctive “were”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q039",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The idiom “to bury the hatchet” means?",
+      "options": [
+        "To make peace",
+        "To hide a weapon",
+        "To start a fight",
+        "To dig a hole"
+      ],
+      "answerIndex": 0,
+      "explanation": "Make peace.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q040",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "Neither of the boys are here.",
+        "Neither of the boys is here.",
+        "Neither of the boys were here.",
+        "Neither of the boys have been here."
+      ],
+      "answerIndex": 1,
+      "explanation": "“Neither” is singular.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q041",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The word ephemeral means?",
+      "options": [
+        "Lasting forever",
+        "Short-lived",
+        "Very strong",
+        "Extremely large"
+      ],
+      "answerIndex": 1,
+      "explanation": "Short-lived.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q042",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "I look forward to ______ from you.",
+      "options": [
+        "hear",
+        "hearing",
+        "heard",
+        "be hearing"
+      ],
+      "answerIndex": 1,
+      "explanation": "Gerund after “look forward to”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q043",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The synonym of obsolete is?",
+      "options": [
+        "Modern",
+        "Outdated",
+        "New",
+        "Useful"
+      ],
+      "answerIndex": 1,
+      "explanation": "Outdated.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q044",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The antonym of generous is?",
+      "options": [
+        "Kind",
+        "Stingy",
+        "Giving",
+        "Helpful"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stingy.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q045",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "If it ______ tomorrow, we will cancel the trip.",
+      "options": [
+        "rains",
+        "will rain",
+        "rained",
+        "would rain"
+      ],
+      "answerIndex": 0,
+      "explanation": "First conditional.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q046",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "She insisted on ______ the bill.",
+      "options": [
+        "pay",
+        "paying",
+        "to pay",
+        "paid"
+      ],
+      "answerIndex": 1,
+      "explanation": "Gerund.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q047",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The word meticulous means?",
+      "options": [
+        "Careless",
+        "Thorough",
+        "Sloppy",
+        "Weak"
+      ],
+      "answerIndex": 1,
+      "explanation": "Thorough.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q048",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The opposite of benevolent is?",
+      "options": [
+        "Generous",
+        "Kind",
+        "Cruel",
+        "Helpful"
+      ],
+      "answerIndex": 2,
+      "explanation": "Cruel.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q049",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "He prides himself ______ his honesty.",
+      "options": [
+        "on",
+        "at",
+        "in",
+        "for"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Pride oneself on”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q050",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The manager, together with his assistants, ______ coming.",
+      "options": [
+        "are",
+        "is",
+        "were",
+        "have been"
+      ],
+      "answerIndex": 1,
+      "explanation": "Singular subject “manager”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q051",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The word lucid means?",
+      "options": [
+        "Confusing",
+        "Clear",
+        "Dark",
+        "Complex"
+      ],
+      "answerIndex": 1,
+      "explanation": "Clear.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q052",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "She doesn’t like coffee, ______?",
+      "options": [
+        "does she",
+        "doesn’t she",
+        "is she",
+        "isn’t she"
+      ],
+      "answerIndex": 0,
+      "explanation": "Positive tag.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q053",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The synonym of arduous is?",
+      "options": [
+        "Easy",
+        "Difficult",
+        "Quick",
+        "Simple"
+      ],
+      "answerIndex": 1,
+      "explanation": "Difficult.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q054",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The antonym of scarce is?",
+      "options": [
+        "Rare",
+        "Limited",
+        "Abundant",
+        "Few"
+      ],
+      "answerIndex": 2,
+      "explanation": "Abundant.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q055",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the correct spelling.",
+      "options": [
+        "Millennium",
+        "Milennium",
+        "Millenium",
+        "Milenium"
+      ],
+      "answerIndex": 0,
+      "explanation": "Double ‘l’ and ‘n’.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q056",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The idiom “a stitch in time saves nine” means?",
+      "options": [
+        "Take timely action to prevent bigger problems",
+        "Sewing is important",
+        "Time is money",
+        "Nine is a lucky number"
+      ],
+      "answerIndex": 0,
+      "explanation": "Act promptly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q057",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The word pragmatic means?",
+      "options": [
+        "Idealistic",
+        "Practical",
+        "Emotional",
+        "Theoretical"
+      ],
+      "answerIndex": 1,
+      "explanation": "Practical.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q058",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "They have completed the project. (Passive)",
+      "options": [
+        "The project has been completed.",
+        "The project have been completed.",
+        "The project was completed.",
+        "The project is completed."
+      ],
+      "answerIndex": 0,
+      "explanation": "Present perfect passive.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q059",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The synonym of tenacious is?",
+      "options": [
+        "Weak",
+        "Persistent",
+        "Yielding",
+        "Fragile"
+      ],
+      "answerIndex": 1,
+      "explanation": "Persistent.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q060",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The antonym of frugal is?",
+      "options": [
+        "Thrifty",
+        "Economical",
+        "Extravagant",
+        "Careful"
+      ],
+      "answerIndex": 2,
+      "explanation": "Extravagant.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q061",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The ______ of the matter is that we need more funding.",
+      "options": [
+        "crux",
+        "crust",
+        "crooks",
+        "cruise"
+      ],
+      "answerIndex": 0,
+      "explanation": "Crux.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q062",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The word verbose means?",
+      "options": [
+        "Using few words",
+        "Using too many words",
+        "Being silent",
+        "Being rude"
+      ],
+      "answerIndex": 1,
+      "explanation": "Wordy.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q063",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "He is used to ______ up early.",
+      "options": [
+        "get",
+        "getting",
+        "got",
+        "gets"
+      ],
+      "answerIndex": 1,
+      "explanation": "Gerund.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q064",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The synonym of resilient is?",
+      "options": [
+        "Fragile",
+        "Tough",
+        "Weak",
+        "Brittle"
+      ],
+      "answerIndex": 1,
+      "explanation": "Tough.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q065",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Each of the students ______ a book.",
+      "options": [
+        "have",
+        "has",
+        "are having",
+        "were having"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Each” is singular.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q066",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The word impeccable means?",
+      "options": [
+        "Faulty",
+        "Flawless",
+        "Imperfect",
+        "Damaged"
+      ],
+      "answerIndex": 1,
+      "explanation": "Flawless.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q067",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "He is good ______ mathematics.",
+      "options": [
+        "at",
+        "in",
+        "on",
+        "for"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Good at”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q068",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The plural of phenomenon is?",
+      "options": [
+        "Phenomenons",
+        "Phenomena",
+        "Phenomenae",
+        "Phenomeni"
+      ],
+      "answerIndex": 1,
+      "explanation": "Phenomena.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q069",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The idiom “to turn a deaf ear” means?",
+      "options": [
+        "To listen carefully",
+        "To refuse to listen",
+        "To hear clearly",
+        "To be deaf"
+      ],
+      "answerIndex": 1,
+      "explanation": "Refuse to listen.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q070",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The word cordial means?",
+      "options": [
+        "Hostile",
+        "Friendly",
+        "Rude",
+        "Cold"
+      ],
+      "answerIndex": 1,
+      "explanation": "Friendly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q071",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "By the time we arrived, the film ______.",
+      "options": [
+        "started",
+        "had started",
+        "has started",
+        "was starting"
+      ],
+      "answerIndex": 1,
+      "explanation": "Past perfect.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q072",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The synonym of diligent is?",
+      "options": [
+        "Lazy",
+        "Hardworking",
+        "Careless",
+        "Slow"
+      ],
+      "answerIndex": 1,
+      "explanation": "Hardworking.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q073",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The company’s profits have ______ significantly.",
+      "options": [
+        "risen",
+        "rose",
+        "raised",
+        "rised"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Risen”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q074",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The word volatile means?",
+      "options": [
+        "Stable",
+        "Unpredictable",
+        "Calm",
+        "Steady"
+      ],
+      "answerIndex": 1,
+      "explanation": "Unpredictable.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q075",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "______ you like some tea?",
+      "options": [
+        "Would",
+        "Do",
+        "Are",
+        "Will"
+      ],
+      "answerIndex": 0,
+      "explanation": "Polite offer.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q076",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The synonym of exemplary is?",
+      "options": [
+        "Poor",
+        "Outstanding",
+        "Average",
+        "Bad"
+      ],
+      "answerIndex": 1,
+      "explanation": "Outstanding.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q077",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The antonym of hostile is?",
+      "options": [
+        "Aggressive",
+        "Friendly",
+        "Angry",
+        "Violent"
+      ],
+      "answerIndex": 1,
+      "explanation": "Friendly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q078",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the correct spelling.",
+      "options": [
+        "Pronunciation",
+        "Pronounciation",
+        "Pronounciation",
+        "Pronuntiation"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pronunciation.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q079",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The idiom “to beat about the bush” means?",
+      "options": [
+        "To avoid the main topic",
+        "To hunt animals",
+        "To clean the garden",
+        "To speak clearly"
+      ],
+      "answerIndex": 0,
+      "explanation": "Avoid the main topic.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q080",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The word patriotic means?",
+      "options": [
+        "Lover of Nigeria",
+        "Hater of Nigeria",
+        "Foreigner",
+        "Traitor"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lover of one’s country.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q081",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The office assistant was dismissed for pilfering.",
+      "options": [
+        "Stealing",
+        "Fighting",
+        "Lateness",
+        "Rudeness"
+      ],
+      "answerIndex": 0,
+      "explanation": "Stealing.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q082",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The incumbent president conceded defeat. (Antonym)",
+      "options": [
+        "Admitted",
+        "Rejected",
+        "Accepted",
+        "Acknowledged"
+      ],
+      "answerIndex": 1,
+      "explanation": "Rejected.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q083",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the correct option: The PTA promised to build a CAFETERIA. (Emphatic stress)",
+      "options": [
+        "Did the PTA promise to build a library?",
+        "Did the PTA promise to build a cafeteria?",
+        "Did the PTA promise to build a laboratory?",
+        "Did the PTA promise to build a stadium?"
+      ],
+      "answerIndex": 0,
+      "explanation": "Contrast with “library”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q084",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "He travels every WEEKEND. (Emphatic stress)",
+      "options": [
+        "Does he travel every weekday?",
+        "Does he travel every month?",
+        "Does he travel every weekend?",
+        "Does he travel every year?"
+      ],
+      "answerIndex": 1,
+      "explanation": "Contrast with “every month”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q085",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the word that rhymes with Prison.",
+      "options": [
+        "Rising",
+        "Risen",
+        "Potion",
+        "Motion"
+      ],
+      "answerIndex": 1,
+      "explanation": "Risen.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q086",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the word that rhymes with Crate.",
+      "options": [
+        "Great",
+        "Mint",
+        "Creek",
+        "Treat"
+      ],
+      "answerIndex": 0,
+      "explanation": "Great.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q087",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the word that has a different stress pattern.",
+      "options": [
+        "Embrace",
+        "Suspect (verb)",
+        "Member",
+        "Project (verb)"
+      ],
+      "answerIndex": 2,
+      "explanation": "Member.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q088",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Identify the word that has the stress on the first syllable.",
+      "options": [
+        "Begin",
+        "About",
+        "Table",
+        "Relay"
+      ],
+      "answerIndex": 2,
+      "explanation": "Table.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q089",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "John’s watch is made of GOLD. (Emphatic stress)",
+      "options": [
+        "Is John’s watch made of silver?",
+        "Is John’s watch made of gold?",
+        "Is Mary’s watch made of gold?",
+        "Is John’s car made of gold?"
+      ],
+      "answerIndex": 0,
+      "explanation": "GOLD contrasts with “silver”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q090",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "She WORKS at the hospital. (Emphatic stress)",
+      "options": [
+        "Does she work at the hospital?",
+        "Does she play at the hospital?",
+        "Does she work at the school?",
+        "What does she do at the hospital?"
+      ],
+      "answerIndex": 3,
+      "explanation": "Source indicates D for this item.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q091",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Aderonke STATED she had a right to her privacy.",
+      "options": [
+        "Did Aderonke lament she had a right to her privacy?",
+        "Did Aderonke state she had a right to her privacy?",
+        "Did Aderonke state she had a right to her property?",
+        "Did Aderonke deny she had a right to her privacy?"
+      ],
+      "answerIndex": 0,
+      "explanation": "STATED contrasts with “lament”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q092",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the word that has a different stress pattern.",
+      "options": [
+        "Basic",
+        "Behind",
+        "Between",
+        "Before"
+      ],
+      "answerIndex": 0,
+      "explanation": "Basic.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q093",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the option that has the same consonant sound as the underlined letters in Foot.",
+      "options": [
+        "Traffic",
+        "Sugar",
+        "Letter",
+        "Basic"
+      ],
+      "answerIndex": 0,
+      "explanation": "/f/ sound.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q094",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the option that has a different vowel sound from the others.",
+      "options": [
+        "Head",
+        "Bread",
+        "Bed",
+        "Bead"
+      ],
+      "answerIndex": 3,
+      "explanation": "“Bead” has /iː/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q095",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the option that has a different vowel sound from the others.",
+      "options": [
+        "Sit",
+        "Bit",
+        "Be",
+        "Hit"
+      ],
+      "answerIndex": 2,
+      "explanation": "“Be” has /iː/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q096",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Choose the word that rhymes with sweet.",
+      "options": [
+        "Suite",
+        "Sweat",
+        "Swat",
+        "Set"
+      ],
+      "answerIndex": 0,
+      "explanation": "Suite.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q097",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The primary stress in photographer is on the?",
+      "options": [
+        "First syllable",
+        "Second syllable",
+        "Third syllable",
+        "Fourth syllable"
+      ],
+      "answerIndex": 1,
+      "explanation": "pho-TOG-ra-pher.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q098",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Which word is stressed on the first syllable?",
+      "options": [
+        "Relax",
+        "Between",
+        "Sister",
+        "About"
+      ],
+      "answerIndex": 2,
+      "explanation": "Sister.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q099",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "Which word has the same vowel sound as the “ea” in head?",
+      "options": [
+        "Bead",
+        "Bread",
+        "Heed",
+        "Seed"
+      ],
+      "answerIndex": 1,
+      "explanation": "Bread /e/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2025-q100",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2025,
+      "exam": "JAMB",
+      "prompt": "The word lucrative has its primary stress on which syllable?",
+      "options": [
+        "First (LU-)",
+        "Second (-CRA-)",
+        "Third (-TIVE)",
+        "No stress"
+      ],
+      "answerIndex": 0,
+      "explanation": "LU-cra-tive.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    }
+  ]
+}

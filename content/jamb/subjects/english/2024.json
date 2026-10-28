@@ -1,0 +1,2010 @@
+{
+  "subjectSlug": "english",
+  "exam": "JAMB",
+  "source": "compiled-past-questions",
+  "verificationStatus": "unverified",
+  "notes": "JAMB Use of English 2024 — 100 questions compiled from verified sources + style-matched items. Not official JAMB papers.",
+  "year": 2024,
+  "questions": [
+    {
+      "contentId": "eng-2024-q001",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "From the passage, what is the primary reason breast milk is considered ideal for infants during their first six months?",
+      "options": [
+        "It contains unique vitamins not found in other foods",
+        "It is tailored to meet their specific nutritional needs",
+        "It is less expensive than formula feeding",
+        "It promotes faster physical growth"
+      ],
+      "answerIndex": 1,
+      "explanation": "The passage states breast milk contains vitamins, proteins, and fats “perfectly tailored to meet an infant’s nutritional needs” during the first six months.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q002",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "According to the passage, what is the primary role of breast milk in protecting infants?",
+      "options": [
+        "It offers psychological comfort",
+        "It provides a source of entertainment",
+        "It prevents infections and diseases",
+        "It promotes postpartum recovery"
+      ],
+      "answerIndex": 2,
+      "explanation": "The passage says breast milk contains antibodies “that protect infants from infections and diseases”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q003",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Based on the passage, what is the primary reason skin-to-skin contact during breastfeeding is essential?",
+      "options": [
+        "It prevents postpartum depression",
+        "It fosters emotional bonding",
+        "It boosts the infant’s IQ",
+        "It reduces the risk of breast cancer"
+      ],
+      "answerIndex": 1,
+      "explanation": "The passage states skin-to-skin contact “fosters emotional security and attachment”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q004",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "What is the ultimate goal of promoting and supporting breastfeeding, according to the passage?",
+      "options": [
+        "To encourage mothers to breastfeed exclusively for the first year",
+        "To ensure infants gain weight rapidly",
+        "To improve the emotional well-being of mothers",
+        "To enhance the overall health and well-being of both infants and mothers"
+      ],
+      "answerIndex": 3,
+      "explanation": "The passage concludes that promoting breastfeeding is important “for the overall well-being of both infants and mothers”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q005",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "In the context of the passage, why is breastfeeding considered a ‘natural practice’?",
+      "options": [
+        "Because it involves feeding an infant with any available milk",
+        "Because it is recommended by healthcare professionals",
+        "Because it has been practiced since the dawn of humanity",
+        "Because it is the only way to provide nutrition to infants"
+      ],
+      "answerIndex": 2,
+      "explanation": "The passage notes breastfeeding “has been an integral part of human evolution”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q006",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Only those who have the calling to ______ knowledge are called great teachers.",
+      "options": [
+        "impact",
+        "impart",
+        "infer",
+        "confer"
+      ],
+      "answerIndex": 1,
+      "explanation": "To “impart knowledge” means to communicate or pass on knowledge to others.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q007",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "They teach students various topics and ______.",
+      "options": [
+        "formula",
+        "courses",
+        "classes",
+        "subjects"
+      ],
+      "answerIndex": 3,
+      "explanation": "The appropriate collocation is “teach students various topics and subjects”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q008",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The teacher listens to their students express their worries and fears, yet the teacher has to pacify and ______ them through the right paths.",
+      "options": [
+        "care",
+        "guide",
+        "beat",
+        "guard"
+      ],
+      "answerIndex": 1,
+      "explanation": "The teacher pacifies and “guides” students through the right paths.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q009",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "As a ______ in the field of education, the teacher ensures that teaching-learning takes place.",
+      "options": [
+        "stakeholder",
+        "shareholder",
+        "officeholder",
+        "cardholder"
+      ],
+      "answerIndex": 0,
+      "explanation": "A “stakeholder” in education is someone with an interest or concern in the field.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q010",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The teacher ensures that teaching-learning ______ takes place in and out of the classroom.",
+      "options": [
+        "habit",
+        "function",
+        "process",
+        "policy"
+      ],
+      "answerIndex": 2,
+      "explanation": "“Teaching-learning process” is the standard educational term for the ongoing activities of imparting and acquiring knowledge.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q011",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "He/she is fast enough to move at the speed of the ______.",
+      "options": [
+        "guiness",
+        "genius",
+        "heinous",
+        "spacious"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Speed of the genius” contrasts with the slow learner later in the sentence.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q012",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "In his care are the ______, the mark book and every other document which must be duly filled.",
+      "options": [
+        "book",
+        "diary",
+        "register",
+        "attendance"
+      ],
+      "answerIndex": 2,
+      "explanation": "The “register” is the document teachers fill for attendance and records.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q013",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "While at home, the teacher still plans his lesson and prepares his teaching ______.",
+      "options": [
+        "books",
+        "steps",
+        "maps",
+        "aids"
+      ],
+      "answerIndex": 3,
+      "explanation": "“Teaching aids” are materials used to support instruction.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q014",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Teachers should not be brushed aside in the society as teaching is the profession that ______ other professions.",
+      "options": [
+        "birthed",
+        "delivered",
+        "approached",
+        "positioned"
+      ],
+      "answerIndex": 0,
+      "explanation": "The metaphor “birthed” means teaching gave rise to other professions.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q015",
+      "topicName": "Comprehension",
+      "topicSlug": "comprehension",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Teachers should be given a great ______ in the society.",
+      "options": [
+        "attention",
+        "honour",
+        "privilege",
+        "care"
+      ],
+      "answerIndex": 1,
+      "explanation": "The passage calls for teachers to be given “great honour” in society.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q016",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The manager’s tacit agreement was enough for the project to proceed.",
+      "options": [
+        "Loud",
+        "Unspoken",
+        "Written",
+        "Formal"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Tacit” means understood or implied without being stated; unspoken.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q017",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The witness gave a vivid account of the accident.",
+      "options": [
+        "Blurred",
+        "Graphic",
+        "Dull",
+        "Brief"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Vivid” means producing powerful feelings or clear images; graphic.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q018",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the option nearest in meaning to austere.",
+      "options": [
+        "Prosperous",
+        "Severe",
+        "Strict",
+        "Simple"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Austere” means severe or stern in manner.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q019",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The principal was lenient with the students who came late.",
+      "options": [
+        "Kind",
+        "Strict",
+        "Patient",
+        "Calm"
+      ],
+      "answerIndex": 1,
+      "explanation": "The opposite of lenient (permissive) is strict.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q020",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "His extravagant lifestyle led to his bankruptcy.",
+      "options": [
+        "Frugal",
+        "Lavish",
+        "Expensive",
+        "Careless"
+      ],
+      "answerIndex": 0,
+      "explanation": "The opposite of extravagant (spending too much) is frugal (sparing).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q021",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Jemila’s austere reaction kept everyone on their toes. (Choose the opposite.)",
+      "options": [
+        "Harsh",
+        "Ambitious",
+        "Disgusting",
+        "Benign"
+      ],
+      "answerIndex": 3,
+      "explanation": "“Austere” means severe; “benign” means kind and gentle—the opposite.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q022",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The teacher, as well as the students, ______ expected to be at the assembly.",
+      "options": [
+        "are",
+        "were",
+        "is",
+        "have been"
+      ],
+      "answerIndex": 2,
+      "explanation": "The subject is “the teacher” (singular); “as well as the students” does not change the verb.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q023",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "I have not seen him ______ the beginning of the year.",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "by"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Since” is used with a point in time (the beginning of the year).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q024",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Which of the following words has the same vowel sound as in seat?",
+      "options": [
+        "Sit",
+        "Key",
+        "Set",
+        "Cat"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Seat” and “key” both contain the /iː/ vowel sound.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q025",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the word that has the same consonant sound as the underlined letter in think.",
+      "options": [
+        "These",
+        "Thought",
+        "There",
+        "This"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Think” and “thought” both begin with the voiceless /θ/ sound.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q026",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the option that rhymes with taciturn.",
+      "options": [
+        "Rerun",
+        "Tarn",
+        "Around",
+        "Burn"
+      ],
+      "answerIndex": 3,
+      "explanation": "“Taciturn” /tæsɪtɜːn/ rhymes with “burn” /bɜːn/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q027",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the appropriate stress pattern for embodiment.",
+      "options": [
+        "EMbodiment",
+        "emBODiment",
+        "embodIment",
+        "embodiMENT"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stress falls on the second syllable: em-BOD-i-ment.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q028",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the appropriate stress pattern for declamation.",
+      "options": [
+        "DEclamation",
+        "deCLAmation",
+        "declaMAtion",
+        "declamaTION"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stress falls on the second syllable: de-CLAM-a-tion.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q029",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The architect did the DESIGN. (Emphatic stress)",
+      "options": [
+        "Who did the design?",
+        "Was the design done by the engineer?",
+        "Did the architect destroy the design?",
+        "Did the architect do the draft?"
+      ],
+      "answerIndex": 0,
+      "explanation": "The stress on DESIGN asks “Who did the design?”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q030",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "My only SON speaks like an orator. (Emphatic stress)",
+      "options": [
+        "Does my only son speak like an illiterate?",
+        "Does my only daughter speak like an orator?",
+        "Does my only son read like an orator?",
+        "Does your only son speak like an orator?"
+      ],
+      "answerIndex": 1,
+      "explanation": "SON contrasts with “daughter”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q031",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the option that rhymes with permit.",
+      "options": [
+        "Rerun",
+        "Commit",
+        "Around",
+        "Tarn"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Permit” and “commit” rhyme.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q032",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the option that rhymes with boys.",
+      "options": [
+        "Moist",
+        "Elbows",
+        "Noise",
+        "Stays"
+      ],
+      "answerIndex": 2,
+      "explanation": "“Boys” /bɔɪz/ rhymes with “noise” /nɔɪz/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q033",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the most appropriate stress pattern for productivity.",
+      "options": [
+        "PROductivity",
+        "proDUCtivity",
+        "producTIvity",
+        "productiVITY"
+      ],
+      "answerIndex": 2,
+      "explanation": "Stress falls on the third syllable: produc-TIV-i-ty.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q034",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the option that has the same vowel sound as the underlined letter in busy.",
+      "options": [
+        "Vineyard",
+        "Automobile",
+        "Twilight",
+        "Island"
+      ],
+      "answerIndex": 0,
+      "explanation": "The “u” in “busy” is /ɪ/, as in the first syllable of “vineyard”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q035",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the option that has the same consonant sound as the underlined letters in archbishop.",
+      "options": [
+        "Christian",
+        "Church",
+        "Kite",
+        "Cat"
+      ],
+      "answerIndex": 0,
+      "explanation": "The “ch” in “archbishop” is /k/; “Christian” also begins with /k/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q036",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Who is the narrator of the story in the novel The Life Changer?",
+      "options": [
+        "Ummi",
+        "Bint",
+        "Omar",
+        "Salma"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ummi is the narrator of the novel.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q037",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "What was the name of the university Omar gained admission into?",
+      "options": [
+        "Ahmadu Bello University",
+        "University of Lagos",
+        "Bayero University Kano",
+        "University of Ibadan"
+      ],
+      "answerIndex": 0,
+      "explanation": "Omar gained admission into Ahmadu Bello University.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q038",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "What exactly is the “Note of Salvation” from Ummi’s narration?",
+      "options": [
+        "A religious tract",
+        "The cheat notes Kolawole Abdul passed to Salma",
+        "A medical prescription",
+        "A letter from the Vice-Chancellor"
+      ],
+      "answerIndex": 1,
+      "explanation": "The “Note of Salvation” refers to the cheat notes Kolawole passed to Salma during an exam.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q039",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The quiet one in the text is ______.",
+      "options": [
+        "Bint",
+        "Omar",
+        "Talle",
+        "Salma"
+      ],
+      "answerIndex": 2,
+      "explanation": "Talle is identified as the quiet one in the novel.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q040",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The character referred to as the quiet one was named Talle because ______.",
+      "options": [
+        "He was born silent",
+        "His mother died shortly after he was born",
+        "He never spoke in class",
+        "He was an orphan"
+      ],
+      "answerIndex": 1,
+      "explanation": "Talle’s mother died shortly after his birth, hence the name.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q041",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "What is the status of Habib Lawal in the House of Assembly?",
+      "options": [
+        "Member",
+        "Deputy Speaker",
+        "Clerk",
+        "Speaker"
+      ],
+      "answerIndex": 3,
+      "explanation": "Habib Lawal is the Speaker of the House of Assembly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q042",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "At first, Salma did not like the ______.",
+      "options": [
+        "University environment",
+        "Composition of her roommates in the hostel",
+        "Course she was offered",
+        "Food in the cafeteria"
+      ],
+      "answerIndex": 1,
+      "explanation": "Salma initially disliked the composition of her roommates.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q043",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The use of the expression “Notes of Salvation” is ______.",
+      "options": [
+        "Literal",
+        "Euphemistic",
+        "Sarcastic",
+        "Hyperbolic"
+      ],
+      "answerIndex": 1,
+      "explanation": "It is a euphemism for cheat notes.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q044",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The acronym “EMEC” as used in the novel means ______.",
+      "options": [
+        "Examination Management and Ethics Council",
+        "Education Monitoring and Evaluation Commission",
+        "Examination Malpractice and Ethics Committee",
+        "Examination Malpractice Eradication Committee"
+      ],
+      "answerIndex": 2,
+      "explanation": "EMEC stands for Examination Malpractice and Ethics Committee.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q045",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "How much did Dr Kabir Mohammed collect from Salma to cover up her EMAL offence?",
+      "options": [
+        "One hundred thousand naira",
+        "Fifty thousand naira",
+        "Two hundred thousand naira",
+        "Ten thousand naira"
+      ],
+      "answerIndex": 0,
+      "explanation": "Dr Kabir collected ₦100,000 from Salma.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q046",
+      "topicName": "Novel",
+      "topicSlug": "novel",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "According to the novel, Bint’s Social Studies teacher is ______.",
+      "options": [
+        "Strict",
+        "Meddlesome",
+        "Kind",
+        "Absent-minded"
+      ],
+      "answerIndex": 1,
+      "explanation": "Bint’s Social Studies teacher is described as meddlesome.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q047",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The narrator and her children sat ______ because the room was stuffy.",
+      "options": [
+        "In the classroom",
+        "On the veranda",
+        "Under the mango tree",
+        "In the kitchen"
+      ],
+      "answerIndex": 2,
+      "explanation": "They sat under the mango tree because the room was stuffy.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q048",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "It’s essential to pay attention to the ______ signals your body sends when you experience neck pain.",
+      "options": [
+        "subtle",
+        "loud",
+        "obvious",
+        "painful"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Subtle signals” fits the context of paying attention to early warning signs.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q049",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "While neck pain can result from minor ______ such as poor posture or muscle strain…",
+      "options": [
+        "accidents",
+        "causes",
+        "issues",
+        "problems"
+      ],
+      "answerIndex": 2,
+      "explanation": "“Minor issues” is the most appropriate collocation.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q050",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the word that rhymes with comb.",
+      "options": [
+        "Come",
+        "Groan",
+        "Home",
+        "Horn"
+      ],
+      "answerIndex": 2,
+      "explanation": "“Comb” /koʊm/ rhymes with “home” /hoʊm/.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q051",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the word that has the same vowel sound as the underlined letters in hear.",
+      "options": [
+        "There",
+        "Bear",
+        "Heard",
+        "Heart"
+      ],
+      "answerIndex": 2,
+      "explanation": "“Hear” and “heard” share the /ɜː/ sound in many varieties.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q052",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the word that has the same consonant sound as the underlined letters in smooth.",
+      "options": [
+        "Cloth",
+        "Clothe",
+        "Both",
+        "Mouth"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Smooth” and “clothe” both contain the voiced /ð/ sound.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q053",
+      "topicName": "Oral English",
+      "topicSlug": "oral-english",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the word that has the same vowel sound as the underlined letter in h(e)arse.",
+      "options": [
+        "Hear",
+        "There",
+        "Bear",
+        "Near"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Hearse” has /ɜː/, as in “there” in some analyses.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q054",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the option nearest in meaning to candid.",
+      "options": [
+        "Honest",
+        "Secretive",
+        "Rude",
+        "Shy"
+      ],
+      "answerIndex": 0,
+      "explanation": "Candid means truthful and straightforward.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q055",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the option opposite in meaning to obscure.",
+      "options": [
+        "Hidden",
+        "Clear",
+        "Dark",
+        "Vague"
+      ],
+      "answerIndex": 1,
+      "explanation": "Obscure means unclear; clear is the opposite.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q056",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "He is the man ______ car was stolen.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "whom"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Whose” shows possession.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q057",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Hardly had he arrived ______ the meeting started.",
+      "options": [
+        "when",
+        "than",
+        "that",
+        "then"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Hardly…when” is the correct correlative conjunction.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q058",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the correct spelling.",
+      "options": [
+        "Occurrence",
+        "Occurence",
+        "Occurrance",
+        "Ocurrence"
+      ],
+      "answerIndex": 0,
+      "explanation": "Correct spelling is “occurrence”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q059",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The synonym of abundant is?",
+      "options": [
+        "Scarce",
+        "Plentiful",
+        "Limited",
+        "Rare"
+      ],
+      "answerIndex": 1,
+      "explanation": "Abundant means plentiful.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q060",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The antonym of transparent is?",
+      "options": [
+        "Clear",
+        "Opaque",
+        "Visible",
+        "Bright"
+      ],
+      "answerIndex": 1,
+      "explanation": "Opaque means not see-through.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q061",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "She is allergic ______ penicillin.",
+      "options": [
+        "to",
+        "with",
+        "for",
+        "on"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Allergic to” is the correct collocation.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q062",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The plural of crisis is?",
+      "options": [
+        "Crisises",
+        "Crises",
+        "Crisis",
+        "Crisi"
+      ],
+      "answerIndex": 1,
+      "explanation": "Greek-derived plural is “crises”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q063",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "He behaves as if he ______ the boss.",
+      "options": [
+        "is",
+        "were",
+        "was",
+        "be"
+      ],
+      "answerIndex": 1,
+      "explanation": "Subjunctive “were” after “as if”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q064",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The idiom “to bury the hatchet” means?",
+      "options": [
+        "To make peace",
+        "To hide a weapon",
+        "To start a fight",
+        "To dig a hole"
+      ],
+      "answerIndex": 0,
+      "explanation": "It means to end a quarrel.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q065",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "Neither of the boys are here.",
+        "Neither of the boys is here.",
+        "Neither of the boys were here.",
+        "Neither of the boys have been here."
+      ],
+      "answerIndex": 1,
+      "explanation": "“Neither” is singular.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q066",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The word ephemeral means?",
+      "options": [
+        "Lasting forever",
+        "Short-lived",
+        "Very strong",
+        "Extremely large"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ephemeral means short-lived.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q067",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "I look forward to ______ from you.",
+      "options": [
+        "hear",
+        "hearing",
+        "heard",
+        "be hearing"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Look forward to” + gerund.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q068",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The synonym of obsolete is?",
+      "options": [
+        "Modern",
+        "Outdated",
+        "New",
+        "Useful"
+      ],
+      "answerIndex": 1,
+      "explanation": "Obsolete means outdated.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q069",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The antonym of generous is?",
+      "options": [
+        "Kind",
+        "Stingy",
+        "Giving",
+        "Helpful"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stingy means unwilling to give.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q070",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "If it ______ tomorrow, we will cancel the trip.",
+      "options": [
+        "rains",
+        "will rain",
+        "rained",
+        "would rain"
+      ],
+      "answerIndex": 0,
+      "explanation": "First conditional uses present simple.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q071",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "She insisted on ______ the bill.",
+      "options": [
+        "pay",
+        "paying",
+        "to pay",
+        "paid"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Insist on” + gerund.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q072",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The word meticulous means?",
+      "options": [
+        "Careless",
+        "Thorough",
+        "Sloppy",
+        "Weak"
+      ],
+      "answerIndex": 1,
+      "explanation": "Meticulous means showing great attention to detail.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q073",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The opposite of benevolent is?",
+      "options": [
+        "Generous",
+        "Kind",
+        "Cruel",
+        "Helpful"
+      ],
+      "answerIndex": 2,
+      "explanation": "Benevolent means kind; cruel is the opposite.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q074",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "He prides himself ______ his honesty.",
+      "options": [
+        "on",
+        "at",
+        "in",
+        "for"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Pride oneself on”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q075",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The manager, together with his assistants, ______ coming.",
+      "options": [
+        "are",
+        "is",
+        "were",
+        "have been"
+      ],
+      "answerIndex": 1,
+      "explanation": "The subject is “manager” (singular).",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q076",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The word lucid means?",
+      "options": [
+        "Confusing",
+        "Clear",
+        "Dark",
+        "Complex"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lucid means clear.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q077",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "She doesn’t like coffee, ______?",
+      "options": [
+        "does she",
+        "doesn’t she",
+        "is she",
+        "isn’t she"
+      ],
+      "answerIndex": 0,
+      "explanation": "Negative statement takes positive tag.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q078",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The synonym of arduous is?",
+      "options": [
+        "Easy",
+        "Difficult",
+        "Quick",
+        "Simple"
+      ],
+      "answerIndex": 1,
+      "explanation": "Arduous means difficult.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q079",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The antonym of scarce is?",
+      "options": [
+        "Rare",
+        "Limited",
+        "Abundant",
+        "Few"
+      ],
+      "answerIndex": 2,
+      "explanation": "Abundant is the opposite of scarce.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q080",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Choose the correct spelling.",
+      "options": [
+        "Millennium",
+        "Milennium",
+        "Millenium",
+        "Milenium"
+      ],
+      "answerIndex": 0,
+      "explanation": "Double ‘l’ and double ‘n’.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q081",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The idiom “a stitch in time saves nine” means?",
+      "options": [
+        "Take timely action to prevent bigger problems",
+        "Sewing is important",
+        "Time is money",
+        "Nine is a lucky number"
+      ],
+      "answerIndex": 0,
+      "explanation": "Act promptly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q082",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The word pragmatic means?",
+      "options": [
+        "Idealistic",
+        "Practical",
+        "Emotional",
+        "Theoretical"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pragmatic means practical.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q083",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "They have completed the project. (Passive)",
+      "options": [
+        "The project has been completed.",
+        "The project have been completed.",
+        "The project was completed.",
+        "The project is completed."
+      ],
+      "answerIndex": 0,
+      "explanation": "Present perfect passive.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q084",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The synonym of tenacious is?",
+      "options": [
+        "Weak",
+        "Persistent",
+        "Yielding",
+        "Fragile"
+      ],
+      "answerIndex": 1,
+      "explanation": "Tenacious means persistent.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q085",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The antonym of frugal is?",
+      "options": [
+        "Thrifty",
+        "Economical",
+        "Extravagant",
+        "Careful"
+      ],
+      "answerIndex": 2,
+      "explanation": "Extravagant is the opposite.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q086",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The ______ of the matter is that we need more funding.",
+      "options": [
+        "crux",
+        "crust",
+        "crooks",
+        "cruise"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Crux” means the central point.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q087",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The word verbose means?",
+      "options": [
+        "Using few words",
+        "Using too many words",
+        "Being silent",
+        "Being rude"
+      ],
+      "answerIndex": 1,
+      "explanation": "Verbose means wordy.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q088",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "He is used to ______ up early.",
+      "options": [
+        "get",
+        "getting",
+        "got",
+        "gets"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Used to” + gerund.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q089",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The synonym of resilient is?",
+      "options": [
+        "Fragile",
+        "Tough",
+        "Weak",
+        "Brittle"
+      ],
+      "answerIndex": 1,
+      "explanation": "Resilient means tough.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q090",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "Each of the students ______ a book.",
+      "options": [
+        "have",
+        "has",
+        "are having",
+        "were having"
+      ],
+      "answerIndex": 1,
+      "explanation": "“Each” is singular.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q091",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The word impeccable means?",
+      "options": [
+        "Faulty",
+        "Flawless",
+        "Imperfect",
+        "Damaged"
+      ],
+      "answerIndex": 1,
+      "explanation": "Impeccable means flawless.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q092",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "He is good ______ mathematics.",
+      "options": [
+        "at",
+        "in",
+        "on",
+        "for"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Good at”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q093",
+      "topicName": "Structure",
+      "topicSlug": "structure",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The plural of phenomenon is?",
+      "options": [
+        "Phenomenons",
+        "Phenomena",
+        "Phenomenae",
+        "Phenomeni"
+      ],
+      "answerIndex": 1,
+      "explanation": "Greek plural is “phenomena”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q094",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The idiom “to turn a deaf ear” means?",
+      "options": [
+        "To listen carefully",
+        "To refuse to listen",
+        "To hear clearly",
+        "To be deaf"
+      ],
+      "answerIndex": 1,
+      "explanation": "To ignore.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q095",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The word cordial means?",
+      "options": [
+        "Hostile",
+        "Friendly",
+        "Rude",
+        "Cold"
+      ],
+      "answerIndex": 1,
+      "explanation": "Cordial means friendly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q096",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "By the time we arrived, the film ______.",
+      "options": [
+        "started",
+        "had started",
+        "has started",
+        "was starting"
+      ],
+      "answerIndex": 1,
+      "explanation": "Past perfect for the earlier action.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q097",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The synonym of diligent is?",
+      "options": [
+        "Lazy",
+        "Hardworking",
+        "Careless",
+        "Slow"
+      ],
+      "answerIndex": 1,
+      "explanation": "Diligent means hardworking.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q098",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The company’s profits have ______ significantly.",
+      "options": [
+        "risen",
+        "rose",
+        "raised",
+        "rised"
+      ],
+      "answerIndex": 0,
+      "explanation": "“Rise” is intransitive; past participle is “risen”.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q099",
+      "topicName": "Lexis",
+      "topicSlug": "lexis",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "The word volatile means?",
+      "options": [
+        "Stable",
+        "Unpredictable",
+        "Calm",
+        "Steady"
+      ],
+      "answerIndex": 1,
+      "explanation": "Volatile means liable to change rapidly.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    },
+    {
+      "contentId": "eng-2024-q100",
+      "topicName": "General",
+      "topicSlug": "general",
+      "mode": "CBT",
+      "year": 2024,
+      "exam": "JAMB",
+      "prompt": "______ you like some tea?",
+      "options": [
+        "Would",
+        "Do",
+        "Are",
+        "Will"
+      ],
+      "answerIndex": 0,
+      "explanation": "Polite offer.",
+      "source": "compiled-past-questions",
+      "verificationStatus": "unverified",
+      "contentVersion": 1
+    }
+  ]
+}
