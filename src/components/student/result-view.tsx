@@ -1,3 +1,4 @@
+import { displayFocusLabel } from "@/lib/exam/focus-label";
 "use client";
 
 import { useEffect, useState } from "react";
@@ -68,7 +69,7 @@ export function ResultView({ attemptId }: { attemptId: string }) {
           Exam result
         </h1>
         <p className="text-sm text-muted">
-          {attempt.subjectName || attempt.focusLabel || "CBT"} · {attempt.status}
+          {attempt.subjectName || displayFocusLabel(attempt.focusLabel, "CBT")} · {attempt.status}
         </p>
       </div>
 

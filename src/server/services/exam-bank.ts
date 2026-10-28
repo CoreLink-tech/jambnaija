@@ -17,6 +17,7 @@ import * as attemptRepo from "@/server/repositories/attempts";
 import { requireSession } from "@/server/policies/auth";
 import { getDb, subjects } from "@/lib/db";
 import { eq } from "drizzle-orm";
+import { formatExamFocusLabel, parseFocusMeta } from "@/lib/exam/focus-label";
 
 const OPTION_KEYS: AnswerKey[] = ["A", "B", "C", "D"];
 
@@ -96,12 +97,19 @@ export async function startExamSession(raw: unknown) {
   const attemptId = createId("att");
   const deadlineAt = new Date(Date.now() + duration * 60 * 1000);
   const subjectId = await ensureSubjectId(input.subjects[0]);
-  const focusLabel = JSON.stringify({
-    subjects: input.subjects,
-    yearFrom: input.yearFrom ?? 2020,
-    yearTo: input.yearTo ?? 2026,
-    origin: input.origin ?? "all",
-  });
+  const focusLabel = [
+    formatExamFocusLabel({
+      subjects: input.subjects,
+      yearFrom: input.yearFrom ?? 2020,
+      yearTo: input.yearTo ?? 2026,
+    }),
+    JSON.stringify({
+      subjects: input.subjects,
+      yearFrom: input.yearFrom ?? 2020,
+      yearTo: input.yearTo ?? 2026,
+      origin: input.origin ?? "all",
+    }),
+  ].join("\n");
 
   await attemptRepo.createAttempt({
     id: attemptId,
@@ -265,12 +273,7 @@ export async function getExamResult(attemptId: string) {
   }
 
   const rows = await attemptRepo.listAnswersForAttempt(attemptId);
-  let meta: { subjects?: string[] } = {};
-  try {
-    meta = JSON.parse(attempt.focusLabel || "{}");
-  } catch {
-    meta = {};
-  }
+  const meta = parseFocusMeta(attempt.focusLabel);
 
   const bySubject: Record<string, { correct: number; total: number }> = {};
 
@@ -336,12 +339,7 @@ export async function getInProgressExam(attemptId: string) {
   }
 
   const rows = await attemptRepo.listAnswersForAttempt(attemptId);
-  let meta: { subjects?: string[] } = {};
-  try {
-    meta = JSON.parse(attempt.focusLabel || "{}");
-  } catch {
-    meta = {};
-  }
+  const meta = parseFocusMeta(attempt.focusLabel);
 
   return {
     attempt: {

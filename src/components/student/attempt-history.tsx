@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { api } from "@/lib/client/api";
 import { LoadingState, EmptyState, ErrorState } from "@/components/ui/feedback";
+import { displayFocusLabel } from "@/lib/exam/focus-label";
 
 type AttemptRow = {
   id: string;
@@ -61,10 +62,16 @@ export function AttemptHistory() {
               >
                 <div>
                   <p className="font-semibold">
-                    {a.focusLabel || a.mode}
+                    {displayFocusLabel(a.focusLabel, a.mode)}
                   </p>
                   <p className="text-xs text-muted">
-                    {a.status}
+                    {a.status === "IN_PROGRESS"
+                      ? "In progress"
+                      : a.status === "SUBMITTED"
+                        ? "Submitted"
+                        : a.status === "EXPIRED"
+                          ? "Expired"
+                          : a.status}
                     {a.submittedAt
                       ? ` · ${new Date(a.submittedAt).toLocaleString()}`
                       : ""}
@@ -82,7 +89,15 @@ export function AttemptHistory() {
                       </Link>
                     </>
                   ) : (
-                    <Badge tone="neutral">{a.status}</Badge>
+                    <Badge tone="neutral">
+                      {a.status === "IN_PROGRESS" ? "In progress" : a.status}
+                    </Badge>
+                    <Link
+                      href={`/exams/${a.id}`}
+                      className="text-sm font-semibold text-primary"
+                    >
+                      Continue
+                    </Link>
                   )}
                 </div>
               </Card>
