@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { HideInNativeApp } from "@/components/layout/hide-in-native-app";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { LogoMark, IconBook, IconClock, IconChart } from "@/components/icons/brand";
@@ -67,11 +68,13 @@ export default function HomePage() {
                     Explore subjects
                   </Button>
                 </Link>
-                <a href="/jambnaija.apk" download>
-                  <Button variant="ghost" className="w-full sm:w-auto">
-                    Get the app
-                  </Button>
-                </a>
+                <HideInNativeApp>
+                  <a href="/jambnaija.apk" download>
+                    <Button variant="ghost" className="w-full sm:w-auto">
+                      Get the app
+                    </Button>
+                  </a>
+                </HideInNativeApp>
               </div>
               <p className="text-xs text-muted">
                 {stats.total} practice questions in the bank across science, arts,

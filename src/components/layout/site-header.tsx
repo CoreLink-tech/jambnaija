@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { LogoMark } from "@/components/icons/brand";
 import { Button } from "@/components/ui/button";
 import { api } from "@/lib/client/api";
+import { HideInNativeApp } from "@/components/layout/hide-in-native-app";
 
 const guestLinks = [
   { href: "/subjects", label: "Subjects" },
@@ -97,9 +98,11 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
-          <a href="/jambnaija.apk" download>
-            <Button variant="secondary">Get App</Button>
-          </a>
+          <HideInNativeApp>
+            <a href="/jambnaija.apk" download>
+              <Button variant="secondary">Get App</Button>
+            </a>
+          </HideInNativeApp>
           {authed ? (
             <>
               {label ? (
@@ -153,14 +156,16 @@ export function SiteHeader() {
                 </Link>
               );
             })}
-            <a
-              href="/jambnaija.apk"
-              download
-              className="rounded-lg px-3 py-2 text-sm font-semibold text-primary"
-              onClick={() => setOpen(false)}
-            >
-              Get App
-            </a>
+            <HideInNativeApp>
+              <a
+                href="/jambnaija.apk"
+                download
+                className="rounded-lg px-3 py-2 text-sm font-semibold text-primary"
+                onClick={() => setOpen(false)}
+              >
+                Get App
+              </a>
+            </HideInNativeApp>
             {authed ? (
               <button
                 type="button"
