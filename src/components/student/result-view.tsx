@@ -1,5 +1,6 @@
-import { displayFocusLabel } from "@/lib/exam/focus-label";
 "use client";
+
+import { displayFocusLabel } from "@/lib/exam/focus-label";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";

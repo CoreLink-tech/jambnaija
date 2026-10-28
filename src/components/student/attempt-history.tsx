@@ -20,6 +20,13 @@ type AttemptRow = {
   submittedAt: string | Date | null;
 };
 
+function statusLabel(status: string): string {
+  if (status === "IN_PROGRESS") return "In progress";
+  if (status === "SUBMITTED") return "Submitted";
+  if (status === "EXPIRED") return "Expired";
+  return status;
+}
+
 export function AttemptHistory() {
   const [items, setItems] = useState<AttemptRow[]>([]);
   const [error, setError] = useState("");
@@ -51,8 +58,7 @@ export function AttemptHistory() {
       ) : (
         <div className="space-y-2">
           {items.map((a) => {
-            const done =
-              a.status === "SUBMITTED" || a.status === "EXPIRED";
+            const done = a.status === "SUBMITTED" || a.status === "EXPIRED";
             const tone =
               a.percent >= 70 ? "ok" : a.percent >= 50 ? "warn" : "danger";
             return (
@@ -65,13 +71,7 @@ export function AttemptHistory() {
                     {displayFocusLabel(a.focusLabel, a.mode)}
                   </p>
                   <p className="text-xs text-muted">
-                    {a.status === "IN_PROGRESS"
-                      ? "In progress"
-                      : a.status === "SUBMITTED"
-                        ? "Submitted"
-                        : a.status === "EXPIRED"
-                          ? "Expired"
-                          : a.status}
+                    {statusLabel(a.status)}
                     {a.submittedAt
                       ? ` · ${new Date(a.submittedAt).toLocaleString()}`
                       : ""}
@@ -89,15 +89,15 @@ export function AttemptHistory() {
                       </Link>
                     </>
                   ) : (
-                    <Badge tone="neutral">
-                      {a.status === "IN_PROGRESS" ? "In progress" : a.status}
-                    </Badge>
-                    <Link
-                      href={`/exams/${a.id}`}
-                      className="text-sm font-semibold text-primary"
-                    >
-                      Continue
-                    </Link>
+                    <>
+                      <Badge tone="neutral">{statusLabel(a.status)}</Badge>
+                      <Link
+                        href={`/exams/${a.id}`}
+                        className="text-sm font-semibold text-primary"
+                      >
+                        Continue
+                      </Link>
+                    </>
                   )}
                 </div>
               </Card>
